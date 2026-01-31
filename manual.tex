@@ -1900,41 +1900,39 @@ The program uses Qt's translation system for internationalization:
 \begin{center}
 \begin{minipage}{\textwidth}
 \begin{verbatim}
-desktop-icon-backup-manager/
-│
-├── Python Modules
-│   ├── main.py                Entry point (run this!)
-│   ├── config.py              Configuration & constants
-│   ├── icon_manager.py        Core functionality
-│   │
-│   ├── ui/                    User interface
-│   │   ├── main_window.py     - Main window
-│   │   ├── backup_dialog.py   - Backup manager
-│   │   └── preview_widget.py  - Icon preview
-│   │
-│   └── utils/                 Utilities
-│       ├── helpers.py         - Helper functions
-│       └── threads.py         - Worker threads
-│
-├── Localization
-│   └── i18n/                  Translations (Italian, etc.)
-│
-├── Resources
-│   ├── images/                Screenshots for docs
-│   ├── icon.ico               Icon file
-│   └── icon.png               Icon file
-│
-└── Configuration
-│    ├── requirements.txt      Python dependencies
-│    ├── compile.spec          PyInstaller config
-│    ├── version.txt           Version number
-│    └── LICENSE               MIT License
-│
-├── Documentation
-│   ├── README.md              Project overview
-│   ├── manual.tex             Latex User Manual
-│   └── about.txt              Quick info
-│
+
+desktop-icon-backup-manager
+├── about.txt                    Quick info
+├── compile.spec                 PyInstaller config
+├── config.py                    Configuration & constants
+├── i18n                         Localization
+│   ├── it_IT.qm                 Binary translation file
+│   └── it_IT.ts                 Translation source
+├── icon.ico                     Windows icon file
+├── icon_manager.py              Core functionality
+├── icon.png                     Portable network graphic icon
+├── images                       Screenshots for docs
+│   ├── DIBM_1.png               Screenshot 1
+│   ├── DIBM_2.png               Screenshot 2
+│   ├── DIBM_3.png               Screenshot 3
+│   ├── DIBM_4.png               Screenshot 4
+│   └── DIBM_5.png               Screenshot 5
+├── LICENSE                      MIT license
+├── main.py                      Entry point (run this!)
+├── manual.tex                   Latex user manual
+├── README.md                    Project overview
+├── requirements.txt             Python dependencies
+├── ui                           User interface
+│   ├── backup_dialog.py         Backup manager
+│   ├── __init__.py              Initialization script:
+│   ├── main_window.py           Main window
+│   └── preview_widget.py        Icon preview
+├── utils                        Utilities
+│   ├── helpers.py               Helper functions
+│   ├── __init__.py              Initialization script:
+│   └── threads.py               Worker threads
+└── version.txt                  Version number
+
 \end{verbatim}
 \end{minipage}
 \end{center}
