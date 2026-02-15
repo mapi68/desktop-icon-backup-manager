@@ -1,22 +1,27 @@
 # Desktop Icon Backup Manager
 
-A powerful Windows application to save and restore your desktop icon positions with advanced features like automatic backups, system tray integration, and adaptive scaling for multi-monitor setups.
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+[![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
+[![GitHub release](https://img.shields.io/github/v/release/mapi68/desktop-icon-backup-manager?style=for-the-badge&logo=github&color=2ea44f)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
+[![GitHub All Releases](https://img.shields.io/github/downloads/mapi68/desktop-icon-backup-manager/total?style=for-the-badge&logo=github-actions&color=6f42c1)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
+[![License](https://img.shields.io/badge/License-MIT-41AD49?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org)
-[![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?style=flat&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
-![License](https://img.shields.io/badge/license-MIT-green)
-[![GitHub release](https://img.shields.io/github/release/mapi68/desktop-icon-backup-manager.svg)](releases)
-[![GitHub release date](https://img.shields.io/github/release-date/mapi68/desktop-icon-backup-manager.svg)](releases)
-[![GitHub last commit](https://img.shields.io/github/last-commit/mapi68/desktop-icon-backup-manager.svg)](commits/master)
-[![GitHub All Releases](https://img.shields.io/github/downloads/mapi68/desktop-icon-backup-manager/total.svg)](releases)
 ---
 
 ## 📖 Documentation
 
-[![User Manual](https://img.shields.io/badge/manual-PDF-orange.svg?style=for-the-badge&logo=adobeacrobatreader)](https://mapi68.github.io/desktop-icon-backup-manager/manual.pdf)
+[![User Manual](https://img.shields.io/badge/Manual-PDF-EC1C24?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://mapi68.github.io/desktop-icon-backup-manager/manual.pdf)
 
 > [!TIP]
 > You can always access the latest updated documentation at the following link: [User Manual (PDF)](https://mapi68.github.io/desktop-icon-backup-manager/manual.pdf)
+
+---
+
+## 🛠️ Development Status
+
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge&logo=github)](https://github.com/mapi68/desktop-icon-backup-manager/graphs/commit-activity)
+[![GitHub last commit](https://img.shields.io/github/last-commit/mapi68/desktop-icon-backup-manager?style=for-the-badge&logo=git&color=f05032)](https://github.com/mapi68/desktop-icon-backup-manager/commits/master)
+[![GitHub release date](https://img.shields.io/github/release-date/mapi68/desktop-icon-backup-manager?style=for-the-badge&logo=clock&color=007ec6)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
 
 ---
 
