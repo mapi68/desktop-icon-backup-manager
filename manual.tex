@@ -9,7 +9,6 @@
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{fancyhdr}
-\usepackage{tcolorbox}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{fontawesome5}
@@ -18,18 +17,17 @@
 \usepackage{parskip}
 \usepackage{needspace}
 \usepackage{pmboxdraw}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
 
 \DeclareUnicodeCharacter{2194}{\ensuremath{\leftrightarrow}}
 
 % Page setup
 \geometry{margin=2.5cm}
-\setlength{\headheight}{13.6pt}
-\addtolength{\topmargin}{-1.6pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\leftmark}
-\fancyhead[R]{Desktop Icon Backup Manager}
 \fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
 
 % Colors
 \definecolor{primary}{RGB}{0,120,215}
@@ -93,29 +91,185 @@
 
 \begin{document}
 
-% Title page
+% Title page with modern design
 \begin{titlepage}
-  \centering
+  \pagecolor{white}
+  \begin{tikzpicture}[remember picture,overlay]
+    % Background geometric design
+    \fill[blue!70!black] (current page.north west) rectangle
+    ([yshift=-8cm]current page.north east);
+    \fill[blue!50!cyan!30] ([yshift=-8cm]current page.north west)
+    rectangle ([yshift=-10cm]current page.north east);
+
+    % Decorative circles
+    \foreach \i in {1,...,8}
+    \fill[white,opacity=0.05] ([xshift=-2cm+\i cm,yshift=-3cm]current
+    page.north west) circle (1.5cm);
+  \end{tikzpicture}
+
   \vspace*{2cm}
 
-  {\Huge\bfseries Desktop Icon Backup Manager\par}
-  \vspace{0.5cm}
-  {\Large User Manual\par}
-  \vspace{2cm}
+  % Logo at top
+  \begin{center}
+    \includegraphics[width=0.25\textwidth]{icon.png}
+  \end{center}
 
-  {\Large\itshape Software Version: \input{version.txt}\par}
+  \vspace{1.5cm}
+
+  % Main title with color box
+  \begin{center}
+    \begin{tcolorbox}[
+        colback=white,
+        colframe=blue!70!black,
+        width=0.9\textwidth,
+        arc=8mm,
+        boxrule=2pt,
+        enhanced,
+        drop shadow={black!50!white}
+      ]
+      \centering
+      {\Huge\bfseries\color{blue!70!black} Desktop Icon\\[0.3cm]
+      Backup Manager\par}
+    \end{tcolorbox}
+  \end{center}
+
   \vspace{1cm}
 
-  {\large Developed by: \textbf{mapi68}\par}
-  \vspace{3cm}
+  % Subtitle
+  \begin{center}
+    {\LARGE\color{blue!60!black}\textsc{User Manual}\par}
+  \end{center}
 
-  \includegraphics[width=0.2\textwidth]{icon.png}
   \vspace{2cm}
 
-  {\large \today\par}
+  % Information boxes
+  \begin{center}
+    \begin{tcolorbox}[
+        colback=blue!5,
+        colframe=blue!40,
+        width=0.7\textwidth,
+        arc=3mm,
+        boxrule=1pt
+      ]
+      \centering
+      {\Large\itshape Software Version: \textbf{\input{version.txt}}\par}
+      \vspace{0.5cm}
+      {\large Developed by: \textbf{\textcolor{blue!70!black}{mapi68}}\par}
+      \vspace{0.3cm}
+      {\large\color{gray} \today\par}
+    \end{tcolorbox}
+  \end{center}
 
   \vfill
+
 \end{titlepage}
+
+% Set counter so next pages start from 0
+\setcounter{page}{0}
+
+% Copyright and document information page
+\newpage
+\thispagestyle{empty}
+
+\vspace{1cm}
+
+\begin{center}
+
+  % Document title section
+  \begin{tcolorbox}[
+      colback=white,
+      colframe=blue!30,
+      width=0.75\textwidth,
+      arc=5mm,
+      boxrule=1pt,
+      left=20pt,
+      right=20pt,
+      top=15pt,
+      bottom=15pt
+    ]
+    \centering
+    {\Large\textbf{\color{blue!70!black}Desktop Icon Backup Manager}}\\[0.4cm]
+    {\large\textit{User Manual}}
+  \end{tcolorbox}
+
+  \vspace{2cm}
+
+  % Version info
+  {\small\color{gray}
+    \begin{tabular}{rl}
+      \textbf{Document Version:} & 1.0 \\[0.2cm]
+      \textbf{Release Date:} & \today \\[0.2cm]
+      \textbf{Software Version:} & \input{version.txt} \\
+    \end{tabular}
+  }
+
+  \vspace{2.5cm}
+
+  % Copyright section
+  \begin{minipage}{0.7\textwidth}
+    \centering
+
+    {\color{blue!70!black}\rule{0.8\textwidth}{0.5pt}}\\[0.5cm]
+
+    {\small\textbf{Copyright \copyright\ 2025 mapi68}}\\[0.2cm]
+    {\footnotesize All rights reserved}\\[0.5cm]
+
+    {\color{blue!70!black}\rule{0.8\textwidth}{0.5pt}}\\[1cm]
+
+    % Legal text
+    {\footnotesize\color{gray}
+      \begin{flushleft}
+        This document and the software described herein are provided
+        under license and may be used
+        or copied only in accordance with the terms of such license.\\[0.4cm]
+
+        No part of this publication may be reproduced, stored in a
+        retrieval system, or transmitted
+        in any form or by any means, electronic, mechanical,
+        photocopying, recording, or otherwise,
+        without the prior written permission of the copyright holder.\\[0.4cm]
+
+        \textbf{Disclaimer:} The information contained in this
+        document is subject to change without notice.
+        While every effort has been made to ensure accuracy, the
+        author makes no warranty of any kind with
+        regard to this material and assumes no responsibility for
+        errors or omissions.
+      \end{flushleft}
+    }
+
+  \end{minipage}
+
+\end{center}
+
+\vfill
+
+% Footer
+\begin{center}
+  \begin{tcolorbox}[
+      enhanced,
+      frame hidden,
+      colback=blue!8,
+      width=0.85\textwidth,
+      arc=3mm,
+      left=15pt,
+      right=15pt,
+      top=12pt,
+      bottom=12pt
+    ]
+    \centering
+    {\small\color{blue!70!black}\textbf{Support \& Updates}}\\[0.3cm]
+    {\footnotesize\color{gray}Please visit the project repository:}\\[0.1cm]
+    {\small\color{blue!60}%
+      \href{https://github.com/mapi68/desktop-icon-backup-manager}{%
+        \raisebox{-0.15em}{\faGithub}\ %
+        \texttt{github.com/mapi68/desktop-icon-backup-manager}%
+      }%
+    }
+  \end{tcolorbox}
+\end{center}
+
+\vspace{1cm}
 
 % Table of contents
 \tableofcontents
