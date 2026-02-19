@@ -308,9 +308,9 @@ desktop-icon-backup-manager/
 </p>
 
 <p align="center">
-  <img src="images/DIBM_3.png" width="50%" title="Confirmation dialog before restoring a backup">
+  <img src="images/DIBM_3.png" width="50%" title="Loading Desktop Backup Manager...">
   <br><br>
-  <em>Confirmation dialog before restoring a backup</em>
+  <em>Loading Desktop Backup Manager...</em>
   <br><br><br>
 </p>
 
@@ -325,5 +325,12 @@ desktop-icon-backup-manager/
   <img src="images/DIBM_5.png" width="80%" title="Detailed view of the comparison interface">
   <br><br>
   <em>Detailed view of the comparison interface</em>
+  <br><br><br>
+</p>
+
+<p align="center">
+  <img src="images/DIBM_6.png" width="50%" title="Confirmation dialog before restoring a backup">
+  <br><br>
+  <em>Confirmation dialog before restoring a backup</em>
   <br><br><br>
 </p>

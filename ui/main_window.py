@@ -27,7 +27,7 @@ from PyQt6.QtWidgets import (
 )
 
 from PyQt6.QtCore import QSettings, QTranslator, QLocale, QCoreApplication, QRect
-from PyQt6.QtGui import QAction, QKeySequence, QIcon, QDesktopServices
+from PyQt6.QtGui import QAction, QKeySequence, QIcon, QDesktopServices, QCursor
 from PyQt6.QtCore import QUrl
 
 import win32gui

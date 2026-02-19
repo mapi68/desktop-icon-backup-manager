@@ -103,10 +103,13 @@ if __name__ == "__main__":
     app.setQuitOnLastWindowClosed(False)
     app.setStyle("Fusion")
 
+    start_minimized = settings.value("start_minimized", False, type=bool)
+
     try:
+        # Create the main window (hidden for now so we can read its geometry)
         window = MainWindow()
 
-        if settings.value("start_minimized", False, type=bool):
+        if start_minimized:
             window.hide()
             window.tray_icon.showMessage(
                 window.tr("Desktop Icon Manager"),
@@ -115,7 +118,21 @@ if __name__ == "__main__":
                 Config.TRAY_NOTIFICATION_DURATION,
             )
         else:
-            window.show()
+            # Show splash centered on the (still hidden) main window, then
+            # reveal the main window after SPLASH_DURATION_MS milliseconds.
+            from ui.splash_screen import SplashScreen, SPLASH_DURATION_MS
+            from PyQt6.QtCore import QTimer
+
+            splash = SplashScreen()
+            splash.center_on_window(window)
+            splash.show()
+            QApplication.processEvents()
+
+            def _show_main():
+                splash.finish(window)
+                window.show()
+
+            QTimer.singleShot(SPLASH_DURATION_MS, _show_main)
 
         sys.exit(app.exec())
     except Exception as e:
