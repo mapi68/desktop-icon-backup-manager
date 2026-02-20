@@ -2,9 +2,9 @@
 
 from PyQt6.QtWidgets import QSplashScreen, QApplication
 from PyQt6.QtGui import QPixmap, QPainter, QColor, QFont, QLinearGradient
-from PyQt6.QtCore import Qt, QRect, QTimer
+from PyQt6.QtCore import Qt, QRect, QTimer, QCoreApplication
 
-from config import Config, resource_path
+from core.config import Config, resource_path
 
 # Duration in milliseconds
 SPLASH_DURATION_MS = 2000
@@ -91,8 +91,21 @@ class SplashScreen(QSplashScreen):
         p.drawText(
             QRect(tx, iy + 84, tw, 22),
             Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
-            f"Version {Config.VERSION}  \u00b7  by mapi68",
+            QCoreApplication.translate(
+                "SplashScreen", "Version: %1  \u00b7  Development: mapi68"
+            ).replace("%1", Config.VERSION),
         )
+
+        # Translator credit (shown only if translated)
+        translator_line = QCoreApplication.translate("SplashScreen", "Translation: %1")
+        if translator_line != "Translation: %1":
+            p.setPen(QColor("#5A8EAB"))
+            p.setFont(QFont("Segoe UI", 8))
+            p.drawText(
+                QRect(tx, iy + 104, tw, 18),
+                Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
+                translator_line,
+            )
 
         # Bottom status
         p.setPen(QColor("#3A6A8A"))
@@ -100,7 +113,7 @@ class SplashScreen(QSplashScreen):
         p.drawText(
             QRect(20, H - 32, W - 40, 18),
             Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
-            "Loading\u2026",
+            QCoreApplication.translate("SplashScreen", "Loading\u2026"),
         )
 
         # Bottom border

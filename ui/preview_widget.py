@@ -6,7 +6,7 @@ from PyQt6.QtWidgets import QWidget, QToolTip
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPainter, QColor
 
-from config import Config
+from core.config import Config
 
 
 class IconPreviewWidget(QWidget):

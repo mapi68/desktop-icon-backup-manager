@@ -2077,22 +2077,24 @@ geometry=@Rect(100 100 800 650)
   \begin{minipage}{\textwidth}
 \begin{verbatim}
 
-desktop-icon-backup-manager
+.
 ├── about.txt                    Quick info
 ├── compile.spec                 PyInstaller config
-├── config.py                    Configuration & constants
+├── core                         Icon backup engine & app configuration
+│   ├── config.py                Configuration & constants
+│   └── icon_manager.py          Core functionality
 ├── i18n                         Localization
 │   ├── it_IT.qm                 Binary translation file
 │   └── it_IT.ts                 Translation source
 ├── icon.ico                     Windows icon file
-├── icon_manager.py              Core functionality
 ├── icon.png                     Portable network graphic icon
 ├── images                       Screenshots for docs
 │   ├── DIBM_1.png               Screenshot 1
 │   ├── DIBM_2.png               Screenshot 2
 │   ├── DIBM_3.png               Screenshot 3
 │   ├── DIBM_4.png               Screenshot 4
-│   └── DIBM_5.png               Screenshot 5
+│   ├── DIBM_5.png               Screenshot 5
+│   └── DIBM_6.png               Screenshot 6
 ├── LICENSE                      MIT license
 ├── main.py                      Entry point (run this!)
 ├── manual.tex                   Latex user manual
@@ -2102,7 +2104,8 @@ desktop-icon-backup-manager
 │   ├── backup_dialog.py         Backup manager
 │   ├── __init__.py              Initialization script
 │   ├── main_window.py           Main window
-│   └── preview_widget.py        Icon preview
+│   ├── preview_widget.py        Icon preview
+│   └── splash_screen.py         Startup splash screen
 ├── utils                        Utilities
 │   ├── helpers.py               Helper functions
 │   ├── __init__.py              Initialization script

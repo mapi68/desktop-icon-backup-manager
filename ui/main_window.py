@@ -33,8 +33,8 @@ from PyQt6.QtCore import QUrl
 import win32gui
 import win32con
 
-from config import Config, resource_path
-from icon_manager import DesktopIconManager
+from core.config import Config, resource_path
+from core.icon_manager import DesktopIconManager
 from utils.threads import IconWorker
 from utils.helpers import (
     get_display_metadata,

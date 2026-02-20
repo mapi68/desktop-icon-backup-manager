@@ -7,7 +7,7 @@ import win32gui
 
 from PyQt6.QtCore import QThread, pyqtSignal
 
-from icon_manager import DesktopIconManager
+from core.icon_manager import DesktopIconManager
 
 
 class SaveThread(QThread):

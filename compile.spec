@@ -20,6 +20,7 @@ a = Analysis(
     binaries=[],
     datas=[
         ('icon.ico', '.'),
+        ('icon.png', '.'),
         ('i18n/*.qm', 'i18n'),
         ('version.txt', '.')
     ],

@@ -16,7 +16,7 @@ import win32process
 
 from PyQt6.QtCore import QCoreApplication
 
-from config import Config, Win32Constants, LVITEMW
+from core.config import Config, Win32Constants, LVITEMW
 from utils.helpers import (
     get_display_metadata,
     parse_backup_filename,
@@ -250,8 +250,11 @@ class DesktopIconManager:
             )
             log_callback(
                 QCoreApplication.translate(
-                    "DesktopIconManager", "Found %1 icons. Starting scan..."
-                ).replace("%1", str(count))
+                    "DesktopIconManager",
+                    "Found %n icon(s). Starting scan...",
+                    None,
+                    count,
+                )
             )
 
             for i in range(count):
@@ -308,10 +311,11 @@ class DesktopIconManager:
 
             log_callback(
                 QCoreApplication.translate(
-                    "DesktopIconManager", "✓ Saved %1 icons to backup file '%2'"
-                )
-                .replace("%1", str(len(icons)))
-                .replace("%2", str(filename))
+                    "DesktopIconManager",
+                    "✓ Saved %n icon(s) to backup file '%1'",
+                    None,
+                    len(icons),
+                ).replace("%1", str(filename))
             )
 
             if description:
@@ -521,15 +525,17 @@ class DesktopIconManager:
 
             log_callback(
                 QCoreApplication.translate(
-                    "DesktopIconManager", "✓ Restored %1 icons"
-                ).replace("%1", str(moved_count))
+                    "DesktopIconManager", "✓ Restored %n icon(s)", None, moved_count
+                )
             )
             if skipped_count > 0:
                 log_callback(
                     QCoreApplication.translate(
                         "DesktopIconManager",
-                        "⚠ Skipped %1 icons (not found on desktop)",
-                    ).replace("%1", str(skipped_count))
+                        "⚠ Skipped %n icon(s) (not found on desktop)",
+                        None,
+                        skipped_count,
+                    )
                 )
 
             if progress_callback:
@@ -577,8 +583,10 @@ class DesktopIconManager:
             log_callback(
                 QCoreApplication.translate(
                     "DesktopIconManager",
-                    "Found %1 icons. Starting random positioning...",
-                ).replace("%1", str(count))
+                    "Found %n icon(s). Starting random positioning...",
+                    None,
+                    count,
+                )
             )
 
             for i in range(count):
@@ -595,8 +603,11 @@ class DesktopIconManager:
 
             log_callback(
                 QCoreApplication.translate(
-                    "DesktopIconManager", "✓ Scrambled positions for %1 icons."
-                ).replace("%1", str(count))
+                    "DesktopIconManager",
+                    "✓ Scrambled positions for %n icon(s).",
+                    None,
+                    count,
+                )
             )
 
             if progress_callback:
@@ -670,26 +681,26 @@ class BackupComparator:
             )
             report += (
                 QCoreApplication.translate(
-                    "BackupComparator", "Icon(s) Added: %1", None, num_added
-                ).replace("%1", str(num_added))
+                    "BackupComparator", "Icon(s) Added: %n", None, num_added
+                )
                 + "\n"
             )
             report += (
                 QCoreApplication.translate(
-                    "BackupComparator", "Icon(s) Removed: %1", None, num_removed
-                ).replace("%1", str(num_removed))
+                    "BackupComparator", "Icon(s) Removed: %n", None, num_removed
+                )
                 + "\n"
             )
             report += (
                 QCoreApplication.translate(
-                    "BackupComparator", "Icon(s) Moved: %1", None, num_moved
-                ).replace("%1", str(num_moved))
+                    "BackupComparator", "Icon(s) Moved: %n", None, num_moved
+                )
                 + "\n"
             )
             report += (
                 QCoreApplication.translate(
-                    "BackupComparator", "Icon(s) Unchanged: %1", None, num_unchanged
-                ).replace("%1", str(num_unchanged))
+                    "BackupComparator", "Icon(s) Unchanged: %n", None, num_unchanged
+                )
                 + "\n\n"
             )
 

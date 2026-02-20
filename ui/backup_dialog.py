@@ -20,10 +20,10 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtGui import QAction
 
-from config import Config
+from core.config import Config
 from utils.helpers import parse_backup_filename, parse_resolution_string
 from ui.preview_widget import IconPreviewWidget
-from icon_manager import BackupComparator
+from core.icon_manager import BackupComparator
 
 
 class BackupManagerWindow(QDialog):

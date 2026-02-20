@@ -9,8 +9,8 @@ from PyQt6.QtWidgets import QApplication, QMessageBox
 from PyQt6.QtCore import QSettings, QTranslator, QLocale, QCoreApplication
 from PyQt6.QtGui import QIcon
 
-from config import Config, resource_path
-from icon_manager import DesktopIconManager
+from core.config import Config, resource_path
+from core.icon_manager import DesktopIconManager
 from utils.helpers import setup_cli_parser
 from ui.main_window import MainWindow
 
