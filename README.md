@@ -257,32 +257,6 @@ The program accesses Windows Explorer's memory to read and write icon positions 
 
 ---
 
-## 📂 Directory Structure
-
-```
-desktop-icon-backup-manager/
-├── main.py                      Entry point
-├── config.py                    Configuration & constants
-├── icon_manager.py              Core save/restore/scramble logic
-├── icon_backups/                Backup files (created automatically)
-├── i18n/
-│   ├── it_IT.qm                 Italian translation (compiled)
-│   └── it_IT.ts                 Italian translation (source)
-├── ui/
-│   ├── main_window.py           Main application window
-│   ├── backup_dialog.py         Backup Manager dialog
-│   └── preview_widget.py        Icon layout preview widget
-├── utils/
-│   ├── helpers.py               Display metadata, filename parsing
-│   └── threads.py               Worker threads (IconWorker)
-├── images/                      Screenshots for documentation
-├── settings.ini                 User settings (created automatically)
-├── version.txt                  Current version number
-└── requirements.txt             Python dependencies
-```
-
----
-
 ## 🙏 Acknowledgments
 
 - Built with [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) for the GUI
