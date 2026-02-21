@@ -1,21 +1,69 @@
 # -*- mode: python ; coding: utf-8 -*-
 import os
-import glob
 
-block_cipher = None
-
-# --- VERSIONING (Read from version.txt) ---
+# --- 1. VERSIONING ---
 try:
     with open("version.txt", "r", encoding="utf-8") as f:
         VERSIONE = f.read().strip()
 except Exception:
     VERSIONE = "0.0.0"
-# ------------------------------------------
 
-py_files = glob.glob("**/*.py", recursive=True)
+def get_version_tuple(v_str):
+    try:
+        parts = [int(x) for x in v_str.split('.')]
+        while len(parts) < 4:
+            parts.append(0)
+        return tuple(parts[:4])
+    except Exception:
+        return (0, 0, 0, 0)
 
+v_tuple = get_version_tuple(VERSIONE)
+
+# --- 2. VERSION INFO FILE GENERATION ---
+FILE_DESCRIPTION = (
+    'Desktop Icon Backup Manager is a utility that allows users'
+    ' to save, restore, and manage the positions of Windows desktop icons'
+)
+
+version_info_content = (
+    "# UTF-8\n"
+    "VSVersionInfo(\n"
+    "  ffi=FixedFileInfo(\n"
+    f"    filevers={v_tuple},\n"
+    f"    prodvers={v_tuple},\n"
+    "    mask=0x3f,\n"
+    "    flags=0x0,\n"
+    "    OS=0x4,\n"
+    "    fileType=0x1,\n"
+    "    subtype=0x0,\n"
+    "    date=(0, 0)\n"
+    "    ),\n"
+    "  kids=[\n"
+    "    StringFileInfo(\n"
+    "      [\n"
+    "      StringTable(\n"
+    "        '040904b0',\n"
+    "        [StringStruct('CompanyName', 'mapi68'),\n"
+    f"        StringStruct('FileDescription', '{FILE_DESCRIPTION}'),\n"
+    f"        StringStruct('FileVersion', '{VERSIONE}'),\n"
+    "        StringStruct('InternalName', 'desktop-icon-backup-manager'),\n"
+    f"        StringStruct('LegalCopyright', '\xa9 2026 mapi68'),\n"
+    f"        StringStruct('OriginalFilename', 'desktop-icon-backup-manager_{VERSIONE}.exe'),\n"
+    "        StringStruct('ProductName', 'Desktop Icon Backup Manager'),\n"
+    f"        StringStruct('ProductVersion', '{VERSIONE}')])\n"
+    "      ]),\n"
+    "    VarFileInfo([VarStruct('Translation', [0, 1200])])\n"
+    "  ]\n"
+    ")\n"
+)
+
+VERSION_INFO_PATH = 'version_info.txt'
+with open(VERSION_INFO_PATH, 'w', encoding='utf-8', newline='\n') as f:
+    f.write(version_info_content)
+
+# --- 3. ANALYSIS ---
 a = Analysis(
-    py_files,
+    ['main.py'],
     pathex=[],
     binaries=[],
     datas=[
@@ -31,11 +79,10 @@ a = Analysis(
     excludes=[],
     win_no_prefer_redirects=False,
     win_private_assemblies=False,
-    cipher=block_cipher,
     noarchive=False,
 )
 
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+pyz = PYZ(a.pure, a.zipped_data)
 
 exe = EXE(
     pyz,
@@ -44,7 +91,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name=f'desktop-icon-backup-manager_{VERSIONE}.exe',
+    name=f'desktop-icon-backup-manager_{VERSIONE}',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -58,4 +105,5 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
     icon='icon.ico',
+    version=VERSION_INFO_PATH,
 )
