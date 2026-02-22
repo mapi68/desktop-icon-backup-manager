@@ -21,8 +21,7 @@ v_tuple = get_version_tuple(VERSIONE)
 
 # --- 2. VERSION INFO FILE GENERATION ---
 FILE_DESCRIPTION = (
-    'Desktop Icon Backup Manager is a utility that allows users'
-    ' to save, restore, and manage the positions of Windows desktop icons'
+    'A utility that allows to manage the positions of Windows desktop icons'
 )
 
 version_info_content = (

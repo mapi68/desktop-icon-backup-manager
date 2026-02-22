@@ -91,18 +91,23 @@ class SplashScreen(QSplashScreen):
         p.drawText(
             QRect(tx, iy + 84, tw, 22),
             Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
-            QCoreApplication.translate(
-                "SplashScreen", "Version: %1  \u00b7  Development: mapi68"
-            ).replace("%1", Config.VERSION),
+            QCoreApplication.translate("SplashScreen", "Version: %1").replace(
+                "%1", Config.VERSION
+            ),
+        )
+        p.drawText(
+            QRect(tx, iy + 104, tw, 22),
+            Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
+            QCoreApplication.translate("SplashScreen", "Development: mapi68"),
         )
 
         # Translator credit (shown only if translated)
-        translator_line = QCoreApplication.translate("SplashScreen", "Translation: %1")
+        translator_line = QCoreApplication.translate("Common", "Translation: %1")
         if translator_line != "Translation: %1":
             p.setPen(QColor("#5A8EAB"))
             p.setFont(QFont("Segoe UI", 8))
             p.drawText(
-                QRect(tx, iy + 104, tw, 18),
+                QRect(tx, iy + 124, tw, 18),
                 Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
                 translator_line,
             )

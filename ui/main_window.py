@@ -480,26 +480,35 @@ class MainWindow(QMainWindow):
         self._start_restore(filename)
 
     def show_about_dialog(self):
-        QMessageBox.about(
-            self,
-            self.tr("About Desktop Icon Backup Manager"),
-            self.tr(
-                "<h2>Desktop Icon Backup Manager</h2>"
-                "<p>A simple yet powerful tool to save and restore Windows desktop icon positions.</p>"
-                "<h3>Key Features:</h3>"
-                "<ul>"
-                "<li>**Quick Save:** Save icons with an optional descriptive tag.</li>"
-                "<li>**Backup Management:** Select, restore, or delete specific backups.</li>"
-                "<li>**Visual Preview:** See a mini-map of your layout.</li>"
-                "<li>**Adaptive Scaling:** Automatic adjustment for different resolutions.</li>"
-                "<li>**Automatic Cleanup:** Set a limit on backups to keep.</li>"
-                "<li>**Random Scramble:** Randomize icon positions after backup.</li>"
-                "<li>**Tray Integration:** Quick access via system tray.</li>"
-                "</ul>"
-                "<p><b>Version:</b> %1</p>"
-                "<p>Developed by: <b>mapi68</b></p>"
-            ).replace("%1", Config.VERSION),
+        translator_line = QCoreApplication.translate("Common", "Translation: %1")
+        translator_name = (
+            translator_line.split(": ", 1)[-1]
+            if translator_line != "Translation: %1"
+            else ""
         )
+        translation_html = (
+            f"<b>{self.tr('Translation:')}</b> {translator_name}<br>"
+            if translator_name
+            else ""
+        )
+        html = (
+            f"<h2>Desktop Icon Backup Manager</h2>"
+            f"<p>{self.tr('A simple yet powerful tool to save and restore Windows desktop icon positions.')}</p>"
+            f"<h3>{self.tr('Key Features:')}</h3>"
+            f"<ul>"
+            f"<li><b>{self.tr('Quick Save:')}</b> {self.tr('Save icons with an optional descriptive tag.')}</li>"
+            f"<li><b>{self.tr('Backup Management:')}</b> {self.tr('Select, restore, or delete specific backups.')}</li>"
+            f"<li><b>{self.tr('Visual Preview:')}</b> {self.tr('See a mini-map of your layout.')}</li>"
+            f"<li><b>{self.tr('Adaptive Scaling:')}</b> {self.tr('Automatic adjustment for different resolutions.')}</li>"
+            f"<li><b>{self.tr('Automatic Cleanup:')}</b> {self.tr('Set a limit on backups to keep.')}</li>"
+            f"<li><b>{self.tr('Random Scramble:')}</b> {self.tr('Randomize icon positions after backup.')}</li>"
+            f"<li><b>{self.tr('Tray Integration:')}</b> {self.tr('Quick access via tray.')}</li>"
+            f"</ul>"
+            f"<p><b>{self.tr('Version:')}</b> {Config.VERSION}<br>"
+            f"<b>{self.tr('Development:')}</b> mapi68<br>" + translation_html + f"</p>"
+            f"<p><a href='https://ko-fi.com/mapi68'>{self.tr('Support this project on Ko-fi')}</a></p>"
+        )
+        QMessageBox.about(self, self.tr("About Desktop Icon Backup Manager"), html)
 
     def confirm_and_delete_all_backups(self):
         backup_count = len(self.manager.get_all_backup_filenames())
@@ -768,7 +777,7 @@ class MainWindow(QMainWindow):
             self.tray_icon.showMessage(
                 self.tr("Desktop Icon Manager"),
                 self.tr(
-                    "Application minimized to system tray. Click or double-click to restore."
+                    "Application minimized to tray. Click or double-click to restore."
                 ),
                 QSystemTrayIcon.MessageIcon.Information,
                 Config.TRAY_NOTIFICATION_DURATION,
