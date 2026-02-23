@@ -235,6 +235,12 @@ class MainWindow(QMainWindow):
         action_about.triggered.connect(self.show_about_dialog)
         help_menu.addAction(action_about)
 
+        help_menu.addSeparator()
+
+        action_kofi = QAction(self.tr("Support on Ko-fi..."), self)
+        action_kofi.triggered.connect(self.open_kofi)
+        help_menu.addAction(action_kofi)
+
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout(central_widget)
@@ -312,6 +318,13 @@ class MainWindow(QMainWindow):
 
         log_button_layout.addStretch(1)
 
+        kofi_label = QLabel(
+            f'<a href="https://ko-fi.com/mapi68" style="color: #FF5E5B; text-decoration: none;">{self.tr("Support on Ko-fi")}</a>'
+        )
+        kofi_label.setOpenExternalLinks(True)
+        kofi_label.setToolTip("https://ko-fi.com/mapi68")
+        log_button_layout.addWidget(kofi_label)
+
         self.btn_clear_log = QPushButton(self.tr("Clear Log"))
         self.btn_clear_log.clicked.connect(self.log_area.clear)
         self.btn_clear_log.setMaximumWidth(150)
@@ -355,6 +368,9 @@ class MainWindow(QMainWindow):
             settings_menu.exec(cursor_pos)
         else:
             self.log(self.tr("Settings menu not found"))
+
+    def open_kofi(self):
+        QDesktopServices.openUrl(QUrl("https://ko-fi.com/mapi68"))
 
     def open_online_manual(self):
         manual_url = QUrl(

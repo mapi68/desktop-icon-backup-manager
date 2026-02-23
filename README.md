@@ -1,5 +1,7 @@
 # Desktop Icon Backup Manager
 
+[![☕ Liked this tool? Buy me a coffee! — ko-fi.com/mapi68](https://img.shields.io/badge/-%E2%98%95%20Liked%20this%20tool%3F%20%20Buy%20me%20a%20coffee!%20%E2%80%94%20ko--fi.com%2Fmapi68-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=1a1a2e)](https://ko-fi.com/mapi68)
+
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
 [![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
 [![GitHub release](https://img.shields.io/github/v/release/mapi68/desktop-icon-backup-manager?style=for-the-badge&logo=github&color=2ea44f)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
@@ -22,7 +24,6 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge&logo=github)](https://github.com/mapi68/desktop-icon-backup-manager/graphs/commit-activity)
 [![GitHub last commit](https://img.shields.io/github/last-commit/mapi68/desktop-icon-backup-manager?style=for-the-badge&logo=git&color=f05032)](https://github.com/mapi68/desktop-icon-backup-manager/commits/master)
 [![GitHub release date](https://img.shields.io/github/release-date/mapi68/desktop-icon-backup-manager?style=for-the-badge&logo=clock&color=007ec6)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
-[![Ko-fi](https://img.shields.io/badge/Support-Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/mapi68)
 
 ---
 
@@ -263,6 +264,14 @@ The program accesses Windows Explorer's memory to read and write icon positions 
 - Built with [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) for the GUI
 - Uses [pywin32](https://github.com/mhammond/pywin32) for Win32 API access to desktop icon positions
 - Internationalization via Qt's translation system (`pylupdate6` / `lrelease`)
+
+---
+
+## ☕ Support
+
+If this tool saved you even 5 minutes of frustration, consider buying me a coffee — it helps keep the project alive and growing!
+
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/mapi68)
 
 ---
 
