@@ -1,126 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS language="tr_TR" version="2.1">
-    <context>
+<TS version="2.1" language="ja_JP">
+<context>
     <name>BackupComparator</name>
     <message>
         <location filename="..\core\comparator.py" line="37" />
         <source>=== COMPARISON RESULTS ===</source>
-        <translation>=== KARŞILAŞTIRMA SONUÇLARI ===</translation>
+        <translation>=== 比較結果 ===</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="43" />
         <source>Icon(s) Added: %n</source>
         <translation>
-            <numerusform>%n simge eklendi</numerusform>
+            <numerusform>追加されたアイコン: %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="49" />
         <source>Icon(s) Removed: %n</source>
         <translation>
-            <numerusform>%n simge kaldırıldı</numerusform>
+            <numerusform>削除されたアイコン: %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="55" />
         <source>Icon(s) Moved: %n</source>
         <translation>
-            <numerusform>%n simge taşındı</numerusform>
+            <numerusform>移動されたアイコン: %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="61" />
         <source>Icon(s) Unchanged: %n</source>
         <translation>
-            <numerusform>%n simge değişmedi</numerusform>
+            <numerusform>変更なしのアイコン: %n</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="69" />
         <source>--- ADDED ICONS ---</source>
-        <translation>--- EKLENEN SİMGELER ---</translation>
+        <translation>--- 追加されたアイコン ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="80" />
         <source>--- REMOVED ICONS ---</source>
-        <translation>--- KALDIRILAN SİMGELER ---</translation>
+        <translation>--- 削除されたアイコン ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="91" />
         <source>--- MOVED ICONS ---</source>
-        <translation>--- TAŞINAN SİMGELER ---</translation>
+        <translation>--- 移動されたアイコン ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="101" />
         <source>✓ No differences - backups are identical!</source>
-        <translation>✓ Fark yok – yedekler özdeş!</translation>
+        <translation>✓ 差異なし - バックアップは同一です！</translation>
     </message>
 </context><context>
     <name>BackupManagerWindow</name>
     <message>
         <location filename="..\ui\backup_dialog.py" line="38" />
         <source>Select, Restore, or Delete Backup</source>
-        <translation>Yedek seç, geri yükle veya sil</translation>
+        <translation>バックアップの選択・復元・削除</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="48" />
         <source>Select a backup to restore or right-click for options.</source>
-        <translation>Geri yüklemek için bir yedek seçin veya seçenekler için sağ tıklayın.</translation>
+        <translation>復元するバックアップを選択するか、右クリックでオプションを表示します。</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="54" />
         <source>Search by tag, resolution, or date...</source>
-        <translation>Etiket, çözünürlük veya tarihe göre ara...</translation>
+        <translation>タグ、解像度、または日付で検索...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="71" />
         <source>Tag / Description</source>
-        <translation>Etiket / Açıklama</translation>
+        <translation>タグ / 説明</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="272" />
         <location filename="..\ui\backup_dialog.py" line="72" />
         <source>Resolution</source>
-        <translation>Çözünürlük</translation>
+        <translation>解像度</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="271" />
         <location filename="..\ui\backup_dialog.py" line="73" />
         <source>Icons</source>
-        <translation>Simgeler</translation>
+        <translation>アイコン</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="274" />
         <location filename="..\ui\backup_dialog.py" line="74" />
         <source>Timestamp</source>
-        <translation>Zaman damgası</translation>
+        <translation>タイムスタンプ</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="118" />
         <source>Layout Preview (saved positions vs current):</source>
-        <translation>Düzen Önizlemesi (kaydedilen konumlar vs. güncel):</translation>
+        <translation>レイアウトプレビュー（保存済み vs 現在）:</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="239" />
         <location filename="..\ui\backup_dialog.py" line="128" />
         <source>Select a backup to see details.</source>
-        <translation>Ayrıntıları görmek için bir yedek seçin.</translation>
+        <translation>詳細を表示するにはバックアップを選択してください。</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="154" />
         <source>Restore Selected Layout</source>
-        <translation>Seçilen düzeni geri yükle</translation>
+        <translation>選択したレイアウトを復元</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="158" />
         <source>📊 Compare Two Selected...</source>
-        <translation>📊 İki seçileni karşılaştır...</translation>
+        <translation>📊 選択した2つを比較...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="162" />
         <source>Close</source>
-        <translation>Kapat</translation>
+        <translation>閉じる</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="335" />
@@ -129,27 +129,27 @@
         <location filename="..\ui\backup_dialog.py" line="195" />
         <location filename="..\ui\backup_dialog.py" line="189" />
         <source>N/A</source>
-        <translation>Yok</translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="222" />
         <source>No backups found.</source>
-        <translation>Yedek bulunamadı.</translation>
+        <translation>バックアップが見つかりません。</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="260" />
         <source>None</source>
-        <translation>Hiçbiri</translation>
+        <translation>なし</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="270" />
         <source>File</source>
-        <translation>Dosya</translation>
+        <translation>ファイル</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="273" />
         <source>Description</source>
-        <translation>Açıklama</translation>
+        <translation>説明</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="457" />
@@ -158,27 +158,27 @@
         <location filename="..\ui\backup_dialog.py" line="364" />
         <location filename="..\ui\backup_dialog.py" line="280" />
         <source>Error</source>
-        <translation>Hata</translation>
+        <translation>エラー</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="305" />
         <source>🔄 Restore Selected</source>
-        <translation>🔄 Seçileni geri yükle</translation>
+        <translation>🔄 選択を復元</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="308" />
         <source>🗑️ Delete Selected</source>
-        <translation>🗑️ Seçileni sil</translation>
+        <translation>🗑️ 選択を削除</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="312" />
         <source>📊 Compare with Latest</source>
-        <translation>📊 En son ile karşılaştır</translation>
+        <translation>📊 最新と比較</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="339" />
         <source>Confirm Restore</source>
-        <translation>Geri yüklemeyi onayla</translation>
+        <translation>復元の確認</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="340" />
@@ -191,164 +191,164 @@ Tag: %4
 Timestamp: %5
 
 Are you sure you want to proceed?</source>
-        <translation>Seçilen yedek dosyasından simge konumlarını geri yükle:
+        <translation>選択したバックアップファイルからアイコン位置を復元します:
 
-Dosya: %1
-Çözünürlük: %2
-Simgeler: %3
-Etiket: %4
-Zaman damgası: %5
+ファイル: %1
+解像度: %2
+アイコン数: %3
+タグ: %4
+タイムスタンプ: %5
 
-Devam etmek istediğinizden emin misiniz?</translation>
+続行してもよろしいですか？</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="365" />
         <source>Failed to load backup file:
 %1</source>
-        <translation>Yedek dosyası yüklenemedi:
+        <translation>バックアップファイルの読み込みに失敗しました:
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="375" />
         <source>Confirm Delete</source>
-        <translation>Silmeyi onayla</translation>
+        <translation>削除の確認</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="376" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
-        <translation>Bu yedeği silmek istediğinizden emin misiniz?
+        <translation>このバックアップを削除してもよろしいですか？
 
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="387" />
         <source>Success</source>
-        <translation>Başarılı</translation>
+        <translation>成功</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="387" />
         <source>Backup deleted successfully.</source>
-        <translation>Yedek başarıyla silindi.</translation>
+        <translation>バックアップを正常に削除しました。</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="391" />
         <source>Failed to delete backup file.</source>
-        <translation>Yedek dosyası silinemedi.</translation>
+        <translation>バックアップファイルの削除に失敗しました。</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="431" />
         <location filename="..\ui\backup_dialog.py" line="400" />
         <source>No Selection</source>
-        <translation>Seçim yok</translation>
+        <translation>未選択</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="401" />
         <source>Please select a backup to compare.</source>
-        <translation>Karşılaştırmak için bir yedek seçin.</translation>
+        <translation>比較するバックアップを選択してください。</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="408" />
         <source>No latest backup found</source>
-        <translation>En son yedek bulunamadı</translation>
+        <translation>最新のバックアップが見つかりません</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="415" />
         <source>Same Backup</source>
-        <translation>Aynı yedek</translation>
+        <translation>同じバックアップ</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="416" />
         <source>You selected the latest backup. Nothing to compare.</source>
-        <translation>En son yedeği seçtiniz. Karşılaştırılacak bir şey yok.</translation>
+        <translation>最新のバックアップが選択されています。比較するものがありません。</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="432" />
         <source>Please select a backup first.</source>
-        <translation>Lütfen önce bir yedek seçin.</translation>
+        <translation>まずバックアップを選択してください。</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="441" />
         <source>Not Enough Backups</source>
-        <translation>Yeterli yedek yok</translation>
+        <translation>バックアップが不足しています</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="442" />
         <source>There is only one backup. Nothing to compare against.</source>
-        <translation>Yalnızca bir yedek var. Karşılaştırılacak bir şey yok.</translation>
+        <translation>バックアップが1つしかありません。比較対象がありません。</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="457" />
         <source>Failed to compare backups</source>
-        <translation>Yedekler karşılaştırılamadı</translation>
+        <translation>バックアップの比較に失敗しました</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="461" />
         <source>latest</source>
-        <translation>en son</translation>
+        <translation>最新</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="464" />
         <source>Comparison Results</source>
-        <translation>Karşılaştırma sonuçları</translation>
+        <translation>比較結果</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="484" />
         <source>Comparing Backups:</source>
-        <translation>Yedekler karşılaştırılıyor:</translation>
+        <translation>バックアップを比較中:</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="495" />
         <source>✓ Close</source>
-        <translation>✓ Kapat</translation>
+        <translation>✓ 閉じる</translation>
     </message>
 </context><context>
     <name>CLI</name>
     <message>
         <location filename="..\main.py" line="221" />
         <source>Desktop Icon Backup Manager CLI</source>
-        <translation>Masaüstü Simge Yedek Yöneticisi CLI</translation>
+        <translation>デスクトップアイコンバックアップマネージャー CLI</translation>
     </message>
     <message>
         <location filename="..\main.py" line="226" />
         <source>Perform a backup</source>
-        <translation>Yedek al</translation>
+        <translation>バックアップを実行</translation>
     </message>
     <message>
         <location filename="..\main.py" line="232" />
         <source>Restore a specific backup or latest</source>
-        <translation>Belirli bir yedeği veya en sonuncuyu geri yükle</translation>
+        <translation>特定のバックアップまたは最新を復元</translation>
     </message>
     <message>
         <location filename="..\main.py" line="237" />
         <source>Run without showing the GUI</source>
-        <translation>Grafik arayüz göstermeden çalıştır</translation>
+        <translation>GUIを表示せずに実行</translation>
     </message>
     <message>
         <location filename="..\main.py" line="258" />
         <source>[SILENT]</source>
-        <translation>[SESİZ]</translation>
+        <translation>[サイレント]</translation>
     </message>
     <message>
         <location filename="..\main.py" line="263" />
         <source>Starting silent backup...</source>
-        <translation>Sessiz yedekleme başlatılıyor...</translation>
+        <translation>サイレントバックアップを開始しています...</translation>
     </message>
     <message>
         <location filename="..\main.py" line="266" />
         <source>Silent CLI Backup</source>
-        <translation>Sessiz CLI yedeklemesi</translation>
+        <translation>サイレント CLIバックアップ</translation>
     </message>
     <message>
         <location filename="..\main.py" line="280" />
         <source>Error: No backup files found for latest restore.</source>
-        <translation>Hata: En son geri yükleme için yedek dosyası bulunamadı.</translation>
+        <translation>エラー: 最新の復元用バックアップファイルが見つかりません。</translation>
     </message>
     <message>
         <location filename="..\main.py" line="288" />
         <source>Starting silent restore from: %1</source>
-        <translation>Sessiz geri yükleme başlatılıyor: %1</translation>
+        <translation>サイレント復元を開始しています: %1</translation>
     </message>
 </context><context>
     <name>Common</name>
@@ -356,268 +356,268 @@ Devam etmek istediğinizden emin misiniz?</translation>
         <location filename="..\ui\splash_screen.py" line="158" />
         <location filename="..\ui\main_window.py" line="506" />
         <source>Translation: %1</source>
-        <translation>Çeviri: mapi68</translation>
+        <translation>翻訳: mapi68</translation>
     </message>
 </context><context>
     <name>DesktopIconManager</name>
     <message>
         <location filename="..\core\icon_manager.py" line="76" />
         <source>Unable to find desktop ListView control. Make sure desktop icons are visible.</source>
-        <translation>Masaüstü ListView denetimi bulunamıyor. Masaüstü simgelerinin görünür olduğundan emin olun.</translation>
+        <translation>デスクトップの ListView コントロールが見つかりません。デスクトップアイコンが表示されていることを確認してください。</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="117" />
         <source>No backup files found to delete.</source>
-        <translation>Silinecek yedek dosyası bulunamadı.</translation>
+        <translation>削除するバックアップファイルが見つかりません。</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="133" />
         <source>✓ Successfully deleted %n backup file(s).</source>
         <translation>
-            <numerusform>✓ %n yedek dosyası başarıyla silindi.</numerusform>
+            <numerusform>✓ バックアップファイルを %n 件削除しました。</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="142" />
         <source>✗ Failed to delete %n backup file(s).</source>
         <translation>
-            <numerusform>✗ %n yedek dosyası silinemedi.</numerusform>
+            <numerusform>✗ バックアップファイル %n 件の削除に失敗しました。</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="158" />
         <source>Automatic cleanup skipped: max_count is disabled (0).</source>
-        <translation>Otomatik temizleme atlandı: max_count devre dışı (0).</translation>
+        <translation>自動クリーンアップをスキップしました: max_count が無効 (0) です。</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="170" />
         <source>Cleanup skipped: Current count (%n) is within the limit (%1).</source>
         <translation>
-            <numerusform>Temizleme atlandı: Mevcut sayı (%n) limit içinde (%1).</numerusform>
+            <numerusform>クリーンアップをスキップしました: 現在の件数 (%n) は上限 (%1) 以内です。</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="183" />
         <source>Cleanup needed: Current count (%1) exceeds limit (%2). Deleting %n oldest file(s).</source>
         <translation>
-            <numerusform>Temizleme gerekiyor: Mevcut sayı (%1) limiti aşıyor (%2). %n en eski dosya siliniyor.</numerusform>
+            <numerusform>クリーンアップが必要です: 現在の件数 (%1) が上限 (%2) を超えています。最も古いファイルを %n 件削除します。</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="197" />
         <source>  Deleted oldest backup: %1</source>
-        <translation>  En eski yedek silindi: %1</translation>
+        <translation>  最も古いバックアップを削除しました: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="203" />
         <source>  Failed to delete: %1</source>
-        <translation>  Silme başarısız: %1</translation>
+        <translation>  削除に失敗しました: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="209" />
         <source>Cleanup complete. Total deleted: %n file(s).</source>
         <translation>
-            <numerusform>Temizleme tamamlandı. Toplam silinen: %n dosya.</numerusform>
+            <numerusform>クリーンアップ完了。合計削除数: %n 件。</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="328" />
         <source>Monitor Resolution: %1</source>
-        <translation>Monitör çözünürlüğü: %1</translation>
+        <translation>モニター解像度: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="333" />
         <source>Found %n icon(s). Starting scan...</source>
         <translation>
-            <numerusform>%n simge bulundu. Tarama başlatılıyor...</numerusform>
+            <numerusform>%n 個のアイコンが見つかりました。スキャンを開始しています...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="396" />
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
-            <numerusform>✓ %n simge '%1' yedek dosyasına kaydedildi</numerusform>
+            <numerusform>✓ %n 個のアイコンをバックアップファイル「%1」に保存しました</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="406" />
         <source>  (Description: %1)</source>
-        <translation>  (Açıklama: %1)</translation>
+        <translation>  (説明: %1)</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="419" />
         <source>✗ Error saving (I/O): %1</source>
-        <translation>✗ Kaydetme hatası (G/Ç): %1</translation>
+        <translation>✗ 保存エラー (I/O): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="426" />
         <source>✗ Error saving: %1</source>
-        <translation>✗ Kaydetme hatası: %1</translation>
+        <translation>✗ 保存エラー: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="454" />
         <source>✗ Error: Backup file not found.</source>
-        <translation>✗ Hata: Yedek dosyası bulunamadı.</translation>
+        <translation>✗ エラー: バックアップファイルが見つかりません。</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="464" />
         <source>Attempting to restore from backup: '%1'</source>
-        <translation>Yedekten geri yükleme deneniyor: '%1'</translation>
+        <translation>バックアップから復元を試みています: 「%1」</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="469" />
         <source>Saved Resolution (from filename): %1</source>
-        <translation>Kaydedilen çözünürlük (dosya adından): %1</translation>
+        <translation>保存済み解像度（ファイル名より）: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="486" />
         <source>Restoring layout (saved: %1)</source>
-        <translation>Düzen geri yükleniyor (kaydedilen: %1)</translation>
+        <translation>レイアウトを復元中（保存日時: %1）</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="491" />
         <source>  Description: %1</source>
-        <translation>  Açıklama: %1</translation>
+        <translation>  説明: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="498" />
         <source>Restoring layout (Old format, no timestamp and metadata)</source>
-        <translation>Düzen geri yükleniyor (Eski format, zaman damgası ve meta veri yok)</translation>
+        <translation>レイアウトを復元中（旧形式、タイムスタンプとメタデータなし）</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="506" />
         <source>✗ Error: Invalid backup file format: %1</source>
-        <translation>✗ Hata: Geçersiz yedek dosyası biçimi: %1</translation>
+        <translation>✗ エラー: バックアップファイルの形式が無効です: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="513" />
         <source>✗ Error reading backup file (I/O): %1</source>
-        <translation>✗ Yedek dosyası okunurken hata (G/Ç): %1</translation>
+        <translation>✗ バックアップファイルの読み込みエラー (I/O): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="530" />
         <source>⚠ Warning: Resolution mismatch!</source>
-        <translation>⚠ Uyarı: Çözünürlük uyumsuzluğu!</translation>
+        <translation>⚠ 警告: 解像度が一致しません！</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="540" />
         <source>✓ Adaptive Scaling enabled: X=%1, Y=%2</source>
-        <translation>✓ Uyarlamalı ölçeklendirme etkin: X=%1, Y=%2</translation>
+        <translation>✓ アダプティブスケーリングが有効: X=%1, Y=%2</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="625" />
         <source>✓ Restored %n icon(s)</source>
         <translation>
-            <numerusform>✓ %n simge geri yüklendi</numerusform>
+            <numerusform>✓ %n 個のアイコンを復元しました</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="631" />
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
-            <numerusform>⚠ %n simge atlandı (masaüstünde bulunamadı)</numerusform>
+            <numerusform>⚠ %n 個のアイコンをスキップしました（デスクトップ上に見つかりません）</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="645" />
         <source>✗ Error restoring (I/O): %1</source>
-        <translation>✗ Geri yükleme hatası (G/Ç): %1</translation>
+        <translation>✗ 復元エラー (I/O): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="652" />
         <source>✗ Error restoring: %1</source>
-        <translation>✗ Geri yükleme hatası: %1</translation>
+        <translation>✗ 復元エラー: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="680" />
         <source>Redrawing disabled for scrambling...</source>
-        <translation>Karıştırma için yeniden çizme devre dışı...</translation>
+        <translation>スクランブル中は再描画を無効化しています...</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="689" />
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
-            <numerusform>%n simge bulundu. Rastgele konumlandırma başlatılıyor...</numerusform>
+            <numerusform>%n 個のアイコンが見つかりました。ランダム配置を開始しています...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="710" />
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
-            <numerusform>✓ %n simge için konumlar karıştırıldı.</numerusform>
+            <numerusform>✓ %n 個のアイコンの位置をランダムに変更しました。</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="724" />
         <source>✗ Error scrambling icons: %1</source>
-        <translation>✗ Simgeler karıştırılırken hata: %1</translation>
+        <translation>✗ アイコンのスクランブルエラー: %1</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="423" />
         <source>No Preview Available</source>
-        <translation>Önizleme mevcut değil</translation>
+        <translation>プレビューを利用できません</translation>
     </message>
 </context><context>
     <name>IconWorker</name>
     <message>
         <location filename="..\utils\threads.py" line="52" />
         <source>Forcing desktop refresh...</source>
-        <translation>Masaüstü yenileme zorlanıyor...</translation>
+        <translation>デスクトップを強制更新しています...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="67" />
         <source>Desktop refresh signal sent successfully.</source>
-        <translation>Masaüstü yenileme sinyali başarıyla gönderildi.</translation>
+        <translation>デスクトップ更新シグナルを正常に送信しました。</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="71" />
         <source>Warning: Failed to send desktop refresh signals: %1</source>
-        <translation>Uyarı: Masaüstü yenileme sinyalleri gönderilemedi: %1</translation>
+        <translation>警告: デスクトップ更新シグナルの送信に失敗しました: %1</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="84" />
         <source>Performing mandatory quick backup before scrambling...</source>
-        <translation>Karıştırmadan önce zorunlu hızlı yedekleme yapılıyor...</translation>
+        <translation>スクランブル前に必須のクイックバックアップを実行しています...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="88" />
         <source>  [Pre-Scramble Backup] %1</source>
-        <translation>  [Karıştırma öncesi yedek] %1</translation>
+        <translation>  [スクランブル前バックアップ] %1</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="91" />
         <source>Backup before Scramble</source>
-        <translation>Karıştırmadan önce yedek</translation>
+        <translation>スクランブル前のバックアップ</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="96" />
         <source>Pre-scramble backup completed successfully. Starting scramble...</source>
-        <translation>Karıştırma öncesi yedek başarıyla tamamlandı. Karıştırma başlatılıyor...</translation>
+        <translation>スクランブル前のバックアップが完了しました。スクランブルを開始しています...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="106" />
         <source>✗ Pre-scramble backup failed. Aborting scramble operation.</source>
-        <translation>✗ Karıştırma öncesi yedek başarısız. Karıştırma işlemi iptal ediliyor.</translation>
+        <translation>✗ スクランブル前のバックアップに失敗しました。スクランブル操作を中止します。</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="113" />
         <source>✗ CRITICAL ERROR: %1</source>
-        <translation>✗ KRİTİK HATA: %1</translation>
+        <translation>✗ 重大なエラー: %1</translation>
     </message>
 </context><context>
     <name>Main</name>
     <message>
         <location filename="..\main.py" line="334" />
         <source>Critical Error</source>
-        <translation>Kritik hata</translation>
+        <translation>重大なエラー</translation>
     </message>
     <message>
         <location filename="..\main.py" line="335" />
         <source>Failed to start application:
 %1</source>
-        <translation>Uygulama başlatılamadı:
+        <translation>アプリケーションの起動に失敗しました:
 %1</translation>
     </message>
 </context><context>
@@ -625,239 +625,239 @@ Devam etmek istediğinizden emin misiniz?</translation>
     <message>
         <location filename="..\ui\main_window.py" line="59" />
         <source>Unknown</source>
-        <translation>Bilinmiyor</translation>
+        <translation>不明</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="86" />
         <source>Quick Save</source>
-        <translation>Hızlı kaydet</translation>
+        <translation>クイック保存</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="88" />
         <source>Quick Save (Tray)</source>
-        <translation>Hızlı kaydet (Tepsi)</translation>
+        <translation>クイック保存（トレイ）</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="92" />
         <source>Restore Latest</source>
-        <translation>En sonuncuyu geri yükle</translation>
+        <translation>最新を復元</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="98" />
         <source>Show Window</source>
-        <translation>Pencereyi göster</translation>
+        <translation>ウィンドウを表示</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="102" />
         <source>Exit</source>
-        <translation>Çıkış</translation>
+        <translation>終了</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="123" />
         <source>Desktop Icon Backup Manager by mapi68</source>
-        <translation>mapi68 tarafından Masaüstü Simge Yedek Yöneticisi</translation>
+        <translation>Desktop Icon Backup Manager by mapi68</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="128" />
         <source>&amp;File</source>
-        <translation>&amp;Dosya</translation>
+        <translation>ファイル(&amp;F)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="131" />
         <source>Scramble Desktop Icons (Random)</source>
-        <translation>Masaüstü simgelerini karıştır (Rastgele)</translation>
+        <translation>デスクトップアイコンをランダム配置</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="134" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
-        <translation>Zorunlu yedek oluşturduktan sonra tüm masaüstü simgelerinin konumunu rastgele düzenler.</translation>
+        <translation>必須バックアップを作成した後、すべてのデスクトップアイコンの位置をランダムに変更します。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="142" />
         <source>Remove All Backups...</source>
-        <translation>Tüm yedekleri kaldır...</translation>
+        <translation>すべてのバックアップを削除...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="147" />
         <source>E&amp;xit</source>
-        <translation>Çı&amp;kış</translation>
+        <translation>終了(&amp;X)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="369" />
         <location filename="..\ui\main_window.py" line="152" />
         <source>&amp;Settings</source>
-        <translation>&amp;Ayarlar</translation>
+        <translation>設定(&amp;S)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="154" />
         <source>Open Settings Menu</source>
-        <translation>Ayarlar menüsünü aç</translation>
+        <translation>設定メニューを開く</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="159" />
         <source>Start Minimized to Tray</source>
-        <translation>Tepsiye küçültülmüş olarak başlat</translation>
+        <translation>トレイに最小化して起動</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="795" />
         <location filename="..\ui\main_window.py" line="169" />
         <source>Auto-Save on Exit</source>
-        <translation>Çıkışta otomatik kaydet</translation>
+        <translation>終了時に自動保存</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="177" />
         <source>Auto-Restore on Startup</source>
-        <translation>Başlangıçta otomatik geri yükle</translation>
+        <translation>起動時に自動復元</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="187" />
         <source>Enable Adaptive Scaling on Restore</source>
-        <translation>Geri yüklemede uyarlamalı ölçeklendirmeyi etkinleştir</translation>
+        <translation>復元時にアダプティブスケーリングを有効化</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="197" />
         <source>Minimize to Tray on Close ('X' button)</source>
-        <translation>Kapatma düğmesine ('X') basıldığında tepsiye küçült</translation>
+        <translation>閉じるボタン（'X'）でトレイに最小化</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="206" />
         <source>Automatic Backup Cleanup Limit</source>
-        <translation>Otomatik yedek temizleme limiti</translation>
+        <translation>自動バックアップクリーンアップ上限</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="211" />
         <source>Disabled (Keep All)</source>
-        <translation>Devre dışı (Tümünü sakla)</translation>
+        <translation>無効（すべて保持）</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="212" />
         <source>Keep Last 5</source>
-        <translation>Son 5'i sakla</translation>
+        <translation>最新5件を保持</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="213" />
         <source>Keep Last 10</source>
-        <translation>Son 10'u sakla</translation>
+        <translation>最新10件を保持</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="214" />
         <source>Keep Last 25</source>
-        <translation>Son 25'i sakla</translation>
+        <translation>最新25件を保持</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="215" />
         <source>Keep Last 50</source>
-        <translation>Son 50'yi sakla</translation>
+        <translation>最新50件を保持</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="226" />
         <source>&amp;Help</source>
-        <translation>&amp;Yardım</translation>
+        <translation>ヘルプ(&amp;H)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="228" />
         <source>Online User Manual</source>
-        <translation>Çevrimiçi kullanıcı kılavuzu</translation>
+        <translation>オンラインユーザーマニュアル</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="863" />
         <location filename="..\ui\main_window.py" line="831" />
         <location filename="..\ui\main_window.py" line="235" />
         <source>Keyboard Shortcuts</source>
-        <translation>Klavye kısayolları</translation>
+        <translation>キーボードショートカット</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="241" />
         <source>&amp;About</source>
-        <translation>&amp;Hakkında</translation>
+        <translation>このソフトについて(&amp;A)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="247" />
         <source>Support on Ko-fi...</source>
-        <translation>Ko-fi'de destek ol...</translation>
+        <translation>Ko-fiでサポート...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="262" />
         <source>Optional: Enter a descriptive tag/description...</source>
-        <translation>İsteğe bağlı: Açıklayıcı bir etiket/açıklama girin...</translation>
+        <translation>任意: 説明的なタグ/説明を入力...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="266" />
         <source>Save Tag:</source>
-        <translation>Etiketi kaydet:</translation>
+        <translation>保存タグ:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="273" />
         <source>💾 SAVE QUICK BACKUP</source>
-        <translation>💾 HIZLI YEDEK KAYDET</translation>
+        <translation>💾 クイックバックアップを保存</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="277" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
-        <translation>Mevcut masaüstü simge konumlarını yukarıdaki etiketi kullanarak yeni bir dosyaya kaydedin.
+        <translation>上記のタグを使用して、現在のデスクトップアイコンの位置を新しいファイルに保存します。
 
-Kısayol: Ctrl+S</translation>
+ショートカット: Ctrl+S</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="285" />
         <source>↺ RESTORE LATEST</source>
-        <translation>↺ EN SONUNCUYU GERİ YÜKLE</translation>
+        <translation>↺ 最新を復元</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="288" />
         <source>Restore icon positions from the LATEST backup file found.</source>
-        <translation>Bulunan EN SON yedek dosyasından simge konumlarını geri yükle.</translation>
+        <translation>見つかった最新のバックアップファイルからアイコンの位置を復元します。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="293" />
         <source>↺ BACKUP MANAGER</source>
-        <translation>↺ YEDEK YÖNETİCİSİ</translation>
+        <translation>↺ バックアップマネージャー</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="297" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
-        <translation>Geri yüklenecek veya silinecek belirli bir yedek dosyası seçmek için bir pencere açar.
+        <translation>復元または削除する特定のバックアップファイルを選択するウィンドウを開きます。
 
-Kısayol: Ctrl+M</translation>
+ショートカット: Ctrl+M</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="311" />
         <source>Activity Log:</source>
-        <translation>Etkinlik günlüğü:</translation>
+        <translation>アクティビティログ:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="322" />
         <source>Current Resolution: %1</source>
-        <translation>Mevcut çözünürlük: %1</translation>
+        <translation>現在の解像度: %1</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="329" />
         <source>Support on Ko-fi</source>
-        <translation>Ko-fi'de destek ol</translation>
+        <translation>Ko-fiでサポート</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="335" />
         <source>Clear Log</source>
-        <translation>Günlüğü temizle</translation>
+        <translation>ログを消去</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="377" />
         <source>Settings menu not found</source>
-        <translation>Ayarlar menüsü bulunamadı</translation>
+        <translation>設定メニューが見つかりません</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="389" />
         <source>Opening online user manual in browser...</source>
-        <translation>Çevrimiçi kullanıcı kılavuzu tarayıcıda açılıyor...</translation>
+        <translation>ブラウザでオンラインユーザーマニュアルを開いています...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="391" />
         <source>✗ Failed to open manual URL</source>
-        <translation>✗ Kılavuz URL'si açılamadı</translation>
+        <translation>✗ マニュアルURLを開けませんでした</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="723" />
@@ -865,7 +865,7 @@ Kısayol: Ctrl+M</translation>
         <location filename="..\ui\main_window.py" line="577" />
         <location filename="..\ui\main_window.py" line="394" />
         <source>Error</source>
-        <translation>Hata</translation>
+        <translation>エラー</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="395" />
@@ -873,36 +873,36 @@ Kısayol: Ctrl+M</translation>
 
 Please visit manually:
 %1</source>
-        <translation>Çevrimiçi kılavuz açılamadı.
+        <translation>オンラインマニュアルを開けませんでした。
 
-Lütfen manuel olarak ziyaret edin:
+手動でアクセスしてください:
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="402" />
         <source>Save</source>
-        <translation>Kaydet</translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="405" />
         <source>Quick Backup (Shortcut)</source>
-        <translation>Hızlı yedek (Kısayol)</translation>
+        <translation>クイックバックアップ（ショートカット）</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="409" />
         <source>Backup Manager</source>
-        <translation>Yedek yöneticisi</translation>
+        <translation>バックアップマネージャー</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="414" />
         <source>Settings</source>
-        <translation>Ayarlar</translation>
+        <translation>設定</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="446" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
-            <numerusform>Otomatik temizleme limiti: %n yedek (0 = Devre dışı).</numerusform>
+            <numerusform>自動クリーンアップ上限を設定しました: %n 件 (0 = 無効)。</numerusform>
         </translation>
     </message>
     <message>
@@ -910,162 +910,162 @@ Lütfen manuel olarak ziyaret edin:
         <location filename="..\ui\main_window.py" line="714" />
         <location filename="..\ui\main_window.py" line="463" />
         <source>Desktop Icon Manager</source>
-        <translation>Masaüstü simge yöneticisi</translation>
+        <translation>デスクトップアイコンマネージャー</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="493" />
         <source>Backup list updated (item deleted).</source>
-        <translation>Yedek listesi güncellendi (öğe silindi).</translation>
+        <translation>バックアップリストを更新しました（アイテムを削除）。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="499" />
         <source>Quick Backup</source>
-        <translation>Hızlı yedek</translation>
+        <translation>クイックバックアップ</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="513" />
         <source>Translation:</source>
-        <translation>Çeviri:</translation>
+        <translation>翻訳:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="519" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
-        <translation>Windows masaüstü simge konumlarını kaydetmek ve geri yüklemek için basit ama güçlü bir araç.</translation>
+        <translation>Windowsデスクトップアイコンの位置を保存・復元するシンプルで強力なツール。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="520" />
         <source>Key Features:</source>
-        <translation>Temel özellikler:</translation>
+        <translation>主な機能:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="522" />
         <source>Quick Save:</source>
-        <translation>Hızlı kaydet:</translation>
+        <translation>クイック保存:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="522" />
         <source>Save icons with an optional descriptive tag.</source>
-        <translation>Simgeleri isteğe bağlı açıklayıcı bir etiketle kaydet.</translation>
+        <translation>任意の説明タグを付けてアイコンを保存します。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="523" />
         <source>Backup Management:</source>
-        <translation>Yedek yönetimi:</translation>
+        <translation>バックアップ管理:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="523" />
         <source>Select, restore, or delete specific backups.</source>
-        <translation>Belirli yedekleri seç, geri yükle veya sil.</translation>
+        <translation>特定のバックアップを選択・復元・削除します。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="524" />
         <source>Live Diff Preview:</source>
-        <translation>Canlı fark önizlemesi:</translation>
+        <translation>ライブ差分プレビュー:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="524" />
         <source>See which icons will move before restoring.</source>
-        <translation>Geri yüklemeden önce hangi simgelerin hareket edeceğini gör.</translation>
+        <translation>復元前に移動するアイコンを確認できます。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="525" />
         <source>Visual Preview:</source>
-        <translation>Görsel önizleme:</translation>
+        <translation>ビジュアルプレビュー:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="525" />
         <source>See a mini-map of your layout.</source>
-        <translation>Düzeninizin mini haritasını gör.</translation>
+        <translation>レイアウトのミニマップを表示します。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="526" />
         <source>Backup Comparison:</source>
-        <translation>Yedek karşılaştırması:</translation>
+        <translation>バックアップ比較:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="526" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
-        <translation>Eklenen, kaldırılan ve taşınan simgeleri görmek için herhangi iki yedeği karşılaştır.</translation>
+        <translation>2つのバックアップを比較して、追加・削除・移動されたアイコンを確認できます。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="527" />
         <source>Adaptive Scaling:</source>
-        <translation>Uyarlamalı ölçeklendirme:</translation>
+        <translation>アダプティブスケーリング:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="527" />
         <source>Automatic adjustment for different resolutions.</source>
-        <translation>Farklı çözünürlükler için otomatik ayarlama.</translation>
+        <translation>異なる解像度への自動調整。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="528" />
         <source>Automatic Cleanup:</source>
-        <translation>Otomatik temizleme:</translation>
+        <translation>自動クリーンアップ:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="528" />
         <source>Set a limit on backups to keep.</source>
-        <translation>Saklanacak yedekler için bir limit belirle.</translation>
+        <translation>保持するバックアップ数の上限を設定します。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="529" />
         <source>Random Scramble:</source>
-        <translation>Rastgele karıştırma:</translation>
+        <translation>ランダムスクランブル:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="529" />
         <source>Randomize icon positions after backup.</source>
-        <translation>Yedeklemeden sonra simge konumlarını rastgele düzenle.</translation>
+        <translation>バックアップ後にアイコンの位置をランダム化します。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="530" />
         <source>Tray Integration:</source>
-        <translation>Tepsi entegrasyonu:</translation>
+        <translation>トレイ統合:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="530" />
         <source>Quick access via tray.</source>
-        <translation>Tepsi aracılığıyla hızlı erişim.</translation>
+        <translation>トレイからのクイックアクセス。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="532" />
         <source>Version:</source>
-        <translation>Sürüm:</translation>
+        <translation>バージョン:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="533" />
         <source>Development:</source>
-        <translation>Geliştirme:</translation>
+        <translation>開発:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="534" />
         <source>Support this project on Ko-fi</source>
-        <translation>Bu projeyi Ko-fi'de destekle</translation>
+        <translation>Ko-fiでこのプロジェクトをサポート</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="536" />
         <source>About Desktop Icon Backup Manager</source>
-        <translation>Masaüstü Simge Yedek Yöneticisi hakkında</translation>
+        <translation>Desktop Icon Backup Manager について</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="542" />
         <source>No backup files found to delete.</source>
-        <translation>Silinecek yedek dosyası bulunamadı.</translation>
+        <translation>削除するバックアップファイルが見つかりません。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="545" />
         <source>No Backups Found</source>
-        <translation>Yedek bulunamadı</translation>
+        <translation>バックアップが見つかりません</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="546" />
         <source>There are no backup files to delete.</source>
-        <translation>Silinecek yedek dosyası yok.</translation>
+        <translation>削除するバックアップファイルがありません。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="552" />
         <source>WARNING: Delete All Backups</source>
-        <translation>UYARI: Tüm yedekleri sil</translation>
+        <translation>警告: すべてのバックアップを削除</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="553" />
@@ -1073,56 +1073,56 @@ Lütfen manuel olarak ziyaret edin:
 
 This action cannot be undone!</source>
         <translation>
-            <numerusform>TÜM %n masaüstü simge yedek dosyasını kalıcı olarak silmek istediğinizden kesinlikle emin misiniz?
+            <numerusform>デスクトップアイコンのバックアップファイルをすべて（%n 件）完全に削除してもよろしいですか？
 
-Bu işlem geri alınamaz!</numerusform>
+この操作は元に戻せません！</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="563" />
         <source>Starting deletion of all backup files...</source>
-        <translation>Tüm yedek dosyalarının silinmesi başlatılıyor...</translation>
+        <translation>すべてのバックアップファイルの削除を開始しています...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="707" />
         <location filename="..\ui\main_window.py" line="571" />
         <source>Success</source>
-        <translation>Başarılı</translation>
+        <translation>成功</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="572" />
         <source>All backup files have been successfully deleted.</source>
-        <translation>Tüm yedek dosyaları başarıyla silindi.</translation>
+        <translation>すべてのバックアップファイルを正常に削除しました。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="578" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
-        <translation>Bazı dosyalar silinemedi. Ayrıntılar için Etkinlik Günlüğü'nü kontrol edin.</translation>
+        <translation>一部のファイルを削除できませんでした。詳細はアクティビティログを確認してください。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="586" />
         <source>Starting new timestamped backup...</source>
-        <translation>Yeni zaman damgalı yedekleme başlatılıyor...</translation>
+        <translation>新しいタイムスタンプ付きバックアップを開始しています...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="588" />
         <source>  (Tag: %1)</source>
-        <translation>  (Etiket: %1)</translation>
+        <translation>  (タグ: %1)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="592" />
         <source>Saving...</source>
-        <translation>Kaydediliyor...</translation>
+        <translation>保存中...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="610" />
         <source>No backup files found to restore!</source>
-        <translation>Geri yüklenecek yedek dosyası bulunamadı!</translation>
+        <translation>復元するバックアップファイルが見つかりません！</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="612" />
         <source>✗ Restore failed: No backup files found.</source>
-        <translation>✗ Geri yükleme başarısız: Yedek dosyası bulunamadı.</translation>
+        <translation>✗ 復元に失敗しました: バックアップファイルが見つかりません。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="628" />
@@ -1131,17 +1131,17 @@ Bu işlem geri alınamaz!</numerusform>
         <location filename="..\ui\main_window.py" line="619" />
         <location filename="..\ui\main_window.py" line="618" />
         <source>N/A</source>
-        <translation>Yok</translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="627" />
         <source>N/A (Old Format)</source>
-        <translation>Yok (Eski format)</translation>
+        <translation>N/A（旧形式）</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="632" />
         <source>Confirm Restore</source>
-        <translation>Geri yüklemeyi onayla</translation>
+        <translation>復元の確認</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="633" />
@@ -1154,35 +1154,35 @@ Tag: %4
 Timestamp: %5
 
 Are you sure you want to proceed?</source>
-        <translation>EN SON yedek dosyasından simge konumlarını geri yükle:
+        <translation>最新のバックアップファイルからアイコンの位置を復元します:
 
-Dosya: %1
-Çözünürlük: %2
-Simgeler: %3
-Etiket: %4
-Zaman damgası: %5
+ファイル: %1
+解像度: %2
+アイコン数: %3
+タグ: %4
+タイムスタンプ: %5
 
-Devam etmek istediğinizden emin misiniz?</translation>
+続行してもよろしいですか？</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="653" />
         <source>Starting restore from backup '%1'...</source>
-        <translation>'%1' yedeğinden geri yükleme başlatılıyor...</translation>
+        <translation>バックアップ「%1」からの復元を開始しています...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="654" />
         <source>latest</source>
-        <translation>en son</translation>
+        <translation>最新</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="659" />
         <source>Restoring...</source>
-        <translation>Geri yükleniyor...</translation>
+        <translation>復元中...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="672" />
         <source>Confirm Scramble</source>
-        <translation>Karıştırmayı onayla</translation>
+        <translation>スクランブルの確認</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="673" />
@@ -1191,228 +1191,228 @@ Devam etmek istediğinizden emin misiniz?</translation>
 **A mandatory backup will be created first**.
 
 Do you want to proceed?</source>
-        <translation>TÜM masaüstü simgelerinin konumlarını rastgele düzenlemek istediğinizden emin misiniz?
+        <translation>すべてのデスクトップアイコンの位置をランダム化してもよろしいですか？
 
-**Önce zorunlu bir yedek oluşturulacak**.
+**最初に必須バックアップが作成されます**。
 
-Devam etmek istiyor musunuz?</translation>
+続行しますか？</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="680" />
         <source>Starting desktop icon scrambling (randomization)...</source>
-        <translation>Masaüstü simgesi karıştırma başlatılıyor...</translation>
+        <translation>デスクトップアイコンのスクランブル（ランダム化）を開始しています...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="683" />
         <source>Scrambling icons...</source>
-        <translation>Simgeler karıştırılıyor...</translation>
+        <translation>アイコンをスクランブル中...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="702" />
         <source>Operation completed successfully</source>
-        <translation>İşlem başarıyla tamamlandı</translation>
+        <translation>操作が正常に完了しました</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="708" />
         <source>Operation completed successfully! (%1)</source>
-        <translation>İşlem başarıyla tamamlandı! (%1)</translation>
+        <translation>操作が正常に完了しました！（%1）</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="715" />
         <source>%1 successful!</source>
-        <translation>%1 başarılı!</translation>
+        <translation>%1 が成功しました！</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="720" />
         <source>Operation failed</source>
-        <translation>İşlem başarısız</translation>
+        <translation>操作に失敗しました</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="724" />
         <source>Operation failed (%1). Check the log for details.</source>
-        <translation>İşlem başarısız (%1). Ayrıntılar için günlüğü kontrol edin.</translation>
+        <translation>操作に失敗しました（%1）。詳細はログを確認してください。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="737" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
-        <translation>⚠ Uyarı: Ekran meta verileri eksik veya tamamlanmamış.</translation>
+        <translation>⚠ 警告: ディスプレイのメタデータが欠落または不完全です。</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="742" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
-            <numerusform>⚠ Uyarı: Kaydedilen (%n monitör) vs. Mevcut (%1 monitör).</numerusform>
+            <numerusform>⚠ 警告: 保存時（%n 台のモニター）と現在（%1 台のモニター）が一致しません。</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="750" />
         <source>Monitor Mismatch Warning</source>
-        <translation>Monitör uyumsuzluğu uyarısı</translation>
+        <translation>モニター不一致の警告</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="751" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
-        <translation>Düzen %1 monitörle kaydedildi, ancak şu anda %2 monitör bağlı.
+        <translation>レイアウトは %1 台のモニターで保存されましたが、現在 %2 台のモニターが接続されています。
 
-Simge konumları geri yüklendi, ancak yanlış olabilir.</translation>
+アイコンの位置は復元されましたが、正確でない場合があります。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="773" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
-        <translation>⚠ Uyarı: Ekran çözünürlükleri kaydedilen düzenle eşleşmiyor.</translation>
+        <translation>⚠ 警告: 画面の解像度が保存されたレイアウトと一致しません。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="777" />
         <source>Resolution Mismatch Warning</source>
-        <translation>Çözünürlük uyumsuzluğu uyarısı</translation>
+        <translation>解像度不一致の警告</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="778" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
-        <translation>Bir veya daha fazla monitörün ekran çözünürlükleri kaydedilen düzenle eşleşmiyor.
+        <translation>1台以上のモニターの画面解像度が保存されたレイアウトと一致しません。
 
-Simge konumları geri yüklendi, ancak yanlış olabilir.</translation>
+アイコンの位置は復元されましたが、正確でない場合があります。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="790" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
-        <translation>Çıkışta otomatik kaydet etkin. Sessiz yedekleme yapılıyor...</translation>
+        <translation>終了時の自動保存が有効です。サイレントバックアップを実行しています...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="794" />
         <source>Auto-Save Log</source>
-        <translation>Otomatik kaydetme günlüğü</translation>
+        <translation>自動保存ログ</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="809" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
-        <translation>Uygulama tepsiye küçültüldü. Geri yüklemek için tıklayın veya çift tıklayın.</translation>
+        <translation>アプリケーションをトレイに最小化しました。クリックまたはダブルクリックで復元します。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="834" />
         <source>Shortcut</source>
-        <translation>Kısayol</translation>
+        <translation>ショートカット</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="835" />
         <source>Action</source>
-        <translation>Eylem</translation>
+        <translation>操作</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="839" />
         <source>Quick Save current layout</source>
-        <translation>Mevcut düzeni hızlıca kaydet</translation>
+        <translation>現在のレイアウトをクイック保存</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="843" />
         <source>Open Backup Manager</source>
-        <translation>Yedek yöneticisini aç</translation>
+        <translation>バックアップマネージャーを開く</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="847" />
         <source>Open Settings menu</source>
-        <translation>Ayarlar menüsünü aç</translation>
+        <translation>設定メニューを開く</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="851" />
         <source>Open Online User Manual</source>
-        <translation>Çevrimiçi kullanıcı kılavuzunu aç</translation>
+        <translation>オンラインユーザーマニュアルを開く</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="855" />
         <source>Exit Application</source>
-        <translation>Uygulamadan çık</translation>
+        <translation>アプリケーションを終了</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="859" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
-        <translation>İpucu: Ek kısayolları araç ipuçlarında görmek için düğmelerin üzerine gelin.</translation>
+        <translation>ヒント: ボタンにカーソルを合わせると、ツールチップで追加のショートカットを確認できます。</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="874" />
         <source>Close</source>
-        <translation>Kapat</translation>
+        <translation>閉じる</translation>
     </message>
 </context><context>
     <name>SplashScreen</name>
     <message>
         <location filename="..\ui\splash_screen.py" line="143" />
         <source>Version: %1</source>
-        <translation>Sürüm: %1</translation>
+        <translation>バージョン: %1</translation>
     </message>
     <message>
         <location filename="..\ui\splash_screen.py" line="154" />
         <source>Development: mapi68</source>
-        <translation>Geliştirme: mapi68</translation>
+        <translation>開発: mapi68</translation>
     </message>
     <message>
         <location filename="..\ui\splash_screen.py" line="179" />
         <source>Loading…</source>
-        <translation>Yükleniyor…</translation>
+        <translation>読み込み中…</translation>
     </message>
 </context><context>
     <name>_BackupPickerDialog</name>
     <message>
         <location filename="..\ui\backup_dialog.py" line="537" />
         <source>Pick Backup to Compare Against</source>
-        <translation>Karşılaştırılacak yedeği seç</translation>
+        <translation>比較するバックアップを選択</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="541" />
         <source>Select the second backup file:</source>
-        <translation>İkinci yedek dosyasını seçin:</translation>
+        <translation>2番目のバックアップファイルを選択:</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="555" />
         <source>Compare</source>
-        <translation>Karşılaştır</translation>
+        <translation>比較</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="557" />
         <source>Cancel</source>
-        <translation>İptal</translation>
+        <translation>キャンセル</translation>
     </message>
 </context><context>
     <name>_DiffCanvas</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="211" />
         <source>No Preview Available</source>
-        <translation>Önizleme mevcut değil</translation>
+        <translation>プレビューを利用できません</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="271" />
         <source>✓ already in place</source>
-        <translation>✓ zaten yerli yerinde</translation>
+        <translation>✓ 既に配置済み</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="273" />
         <source>↕ will move</source>
-        <translation>↕ taşınacak</translation>
+        <translation>↕ 移動します</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="276" />
         <source>⚠ not on desktop</source>
-        <translation>⚠ masaüstünde değil</translation>
+        <translation>⚠ デスクトップにありません</translation>
     </message>
 </context><context>
     <name>_LegendPanel</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="306" />
         <source>Already in place, will not move</source>
-        <translation>Zaten yerli yerinde, taşınmayacak</translation>
+        <translation>既に配置済み、移動しません</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="307" />
         <source>Will move  (orange = now,  red = target)</source>
-        <translation>Taşınacak  (turuncu = şimdi,  kırmızı = hedef)</translation>
+        <translation>移動します（オレンジ = 現在、赤 = 移動先）</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="308" />
         <source>In backup, not on desktop</source>
-        <translation>Yedekte var, masaüstünde yok</translation>
+        <translation>バックアップにあり、デスクトップにはありません</translation>
     </message>
 </context></TS>

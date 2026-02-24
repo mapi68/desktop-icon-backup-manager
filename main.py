@@ -27,17 +27,17 @@ from ui.main_window import MainWindow
 # ── Locale name → display name ────────────────────────────────────────────────
 _LOCALE_NAMES = {
     "": "English",
-    "it_IT": "Italiano",
-    "fr_FR": "Français",
     "de_DE": "Deutsch",
     "es_ES": "Español",
-    "pt_BR": "Português (BR)",
+    "fr_FR": "Français",
+    "it_IT": "Italiano",
+    "ja_JP": "日本語",
     "pl_PL": "Polski",
-    "tr_TR": "Türkçe",
+    "pt_BR": "Português (BR)",
     "ru_RU": "Русский",
+    "tr_TR": "Türkçe",
     "uk_UA": "Українська",
     "zh_CN": "中文 (简体)",
-    "ja_JP": "日本語",
 }
 
 
