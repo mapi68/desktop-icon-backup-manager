@@ -24,6 +24,19 @@ from utils.helpers import (
 )
 
 
+def _pack_lparam(x: int, y: int) -> int:
+    """
+    Pack (x, y) pixel coordinates into a Win32 LPARAM for LVM_SETITEMPOSITION.
+
+    Handles negative coordinates correctly (e.g. multi-monitor setups where
+    monitors are positioned to the left / above the primary).  Both values are
+    masked to 16-bit signed two's complement so the shell interprets them
+    correctly regardless of sign.
+    """
+    # Bug 5 fix: mask *both* components to 16-bit, not just x
+    return ((y & 0xFFFF) << 16) | (x & 0xFFFF)
+
+
 class DesktopIconManager:
     """Manages saving and restoring desktop icon positions"""
 
@@ -59,7 +72,7 @@ class DesktopIconManager:
                 hwnd_listview = hwnds[0]
 
         if not hwnd_listview:
-            raise Exception(
+            raise RuntimeError(
                 QCoreApplication.translate(
                     "DesktopIconManager",
                     "Unable to find desktop ListView control. Make sure desktop icons are visible.",
@@ -68,7 +81,7 @@ class DesktopIconManager:
         return hwnd_listview
 
     def _list_backup_files(self) -> List[str]:
-        """List all backup files sorted by date"""
+        """List all backup files sorted by date (newest first)"""
         if not os.path.exists(Config.BACKUP_DIR):
             return []
         backup_files = [f for f in os.listdir(Config.BACKUP_DIR) if f.endswith(".json")]
@@ -91,8 +104,8 @@ class DesktopIconManager:
             try:
                 os.remove(filepath)
                 return True
-            except Exception as e:
-                logging.error(f"Error deleting file {filepath}: {e}")
+            except OSError as e:
+                logging.error("Error deleting file %s: %s", filepath, e)
                 return False
         return False
 
@@ -208,6 +221,75 @@ class DesktopIconManager:
             return os.path.join(Config.BACKUP_DIR, latest_file)
         return None
 
+    def get_current_icon_positions(self) -> Dict[str, Tuple[int, int]]:
+        """
+        Read the current live icon positions from the desktop ListView.
+        Returns a dict mapping icon name -> (x, y).
+        """
+        icons: Dict[str, Tuple[int, int]] = {}
+        pid = win32process.GetWindowThreadProcessId(self.hwnd_listview)[1]
+        process_handle = None
+        remote_memory = None
+        try:
+            process_handle = win32api.OpenProcess(
+                win32con.PROCESS_ALL_ACCESS, False, pid
+            )
+            remote_memory = win32process.VirtualAllocEx(
+                process_handle,
+                0,
+                Config.REMOTE_BUFFER_SIZE,
+                Win32Constants.MEM_COMMIT,
+                Win32Constants.PAGE_READWRITE,
+            )
+            count = win32gui.SendMessage(
+                self.hwnd_listview, Win32Constants.LVM_GETITEMCOUNT, 0, 0
+            )
+            text_buffer_remote = remote_memory + Config.TEXT_BUFFER_OFFSET
+            for i in range(count):
+                win32gui.SendMessage(
+                    self.hwnd_listview,
+                    Win32Constants.LVM_GETITEMPOSITION,
+                    i,
+                    remote_memory,
+                )
+                point_data = win32process.ReadProcessMemory(
+                    process_handle, remote_memory, 8
+                )
+                x, y = struct.unpack("ii", point_data)
+
+                lvitem = LVITEMW()
+                lvitem.mask = 0x0001
+                lvitem.iItem = i
+                lvitem.iSubItem = 0
+                lvitem.pszText = text_buffer_remote
+                lvitem.cchTextMax = 512
+
+                win32process.WriteProcessMemory(
+                    process_handle, remote_memory, bytes(lvitem)
+                )
+                win32gui.SendMessage(
+                    self.hwnd_listview,
+                    Win32Constants.LVM_GETITEMTEXTW,
+                    i,
+                    remote_memory,
+                )
+                text_raw = win32process.ReadProcessMemory(
+                    process_handle, text_buffer_remote, 512 * 2
+                )
+                icon_name = text_raw.decode("utf-16-le").split("\0", 1)[0]
+                if icon_name:
+                    icons[icon_name] = (x, y)
+        except Exception as e:
+            logging.error("Error reading current icon positions: %s", e)
+        finally:
+            if remote_memory and process_handle:
+                win32process.VirtualFreeEx(
+                    process_handle, remote_memory, 0, Win32Constants.MEM_RELEASE
+                )
+            if process_handle:
+                win32api.CloseHandle(process_handle)
+        return icons
+
     def save(
         self,
         log_callback: Callable[[str], None],
@@ -223,7 +305,6 @@ class DesktopIconManager:
         filename = f"{resolution}_{timestamp}.json"
         filepath = os.path.join(Config.BACKUP_DIR, filename)
 
-        icons = {}
         pid = win32process.GetWindowThreadProcessId(self.hwnd_listview)[1]
         process_handle = None
         remote_memory = None
@@ -257,6 +338,9 @@ class DesktopIconManager:
                 )
             )
 
+            icons: Dict[str, Tuple[int, int]] = {}
+            text_buffer_remote = remote_memory + Config.TEXT_BUFFER_OFFSET
+
             for i in range(count):
                 if progress_callback:
                     progress_callback(int((i / count) * 100))
@@ -272,7 +356,6 @@ class DesktopIconManager:
                 )
                 x, y = struct.unpack("ii", point_data)
 
-                text_buffer_remote = remote_memory + Config.TEXT_BUFFER_OFFSET
                 lvitem = LVITEMW()
                 lvitem.mask = 0x0001
                 lvitem.iItem = i
@@ -331,11 +414,18 @@ class DesktopIconManager:
                 progress_callback(100)
             return True
 
+        except OSError as e:
+            log_callback(
+                QCoreApplication.translate(
+                    "DesktopIconManager", "✗ Error saving (I/O): %1"
+                ).replace("%1", str(e))
+            )
+            return False
         except Exception as e:
             log_callback(
                 QCoreApplication.translate(
                     "DesktopIconManager", "✗ Error saving: %1"
-                ).replace("%1", str(str(e)))
+                ).replace("%1", str(e))
             )
             return False
         finally:
@@ -415,7 +505,14 @@ class DesktopIconManager:
             log_callback(
                 QCoreApplication.translate(
                     "DesktopIconManager", "✗ Error: Invalid backup file format: %1"
-                ).replace("%1", str(str(e)))
+                ).replace("%1", str(e))
+            )
+            return False, None
+        except OSError as e:
+            log_callback(
+                QCoreApplication.translate(
+                    "DesktopIconManager", "✗ Error reading backup file (I/O): %1"
+                ).replace("%1", str(e))
             )
             return False, None
 
@@ -468,7 +565,7 @@ class DesktopIconManager:
             count = win32gui.SendMessage(
                 self.hwnd_listview, Win32Constants.LVM_GETITEMCOUNT, 0, 0
             )
-            current_map = {}
+            current_map: Dict[str, int] = {}
 
             text_buffer_remote = remote_memory + Config.TEXT_BUFFER_OFFSET
             for i in range(count):
@@ -512,7 +609,8 @@ class DesktopIconManager:
                     x_new = int(x_saved * scale_x) if scaling_active else x_saved
                     y_new = int(y_saved * scale_y) if scaling_active else y_saved
 
-                    lparam = (y_new << 16) | (x_new & 0xFFFF)
+                    # Bug 5 fix: use _pack_lparam to correctly handle negative coords
+                    lparam = _pack_lparam(x_new, y_new)
                     win32gui.SendMessage(
                         self.hwnd_listview,
                         Win32Constants.LVM_SETITEMPOSITION,
@@ -542,6 +640,13 @@ class DesktopIconManager:
                 progress_callback(100)
             return True, saved_metadata
 
+        except OSError as e:
+            log_callback(
+                QCoreApplication.translate(
+                    "DesktopIconManager", "✗ Error restoring (I/O): %1"
+                ).replace("%1", str(e))
+            )
+            return False, saved_metadata
         except Exception as e:
             log_callback(
                 QCoreApplication.translate(
@@ -596,7 +701,7 @@ class DesktopIconManager:
                 rand_x = random.randint(margin, screen_width - margin)
                 rand_y = random.randint(margin, screen_height - margin)
 
-                lparam = (rand_y << 16) | (rand_x & 0xFFFF)
+                lparam = _pack_lparam(rand_x, rand_y)
                 win32gui.SendMessage(
                     self.hwnd_listview, Win32Constants.LVM_SETITEMPOSITION, i, lparam
                 )
@@ -618,7 +723,7 @@ class DesktopIconManager:
             log_callback(
                 QCoreApplication.translate(
                     "DesktopIconManager", "✗ Error scrambling icons: %1"
-                ).replace("%1", str(str(e)))
+                ).replace("%1", str(e))
             )
             return False
         finally:
@@ -626,125 +731,5 @@ class DesktopIconManager:
             win32gui.InvalidateRect(self.hwnd_listview, None, True)
 
 
-# Send desktop refresh signal
-try:
-    win32gui.SendMessageTimeout(
-        win32con.HWND_BROADCAST,
-        win32con.WM_SETTINGCHANGE,
-        0,
-        0,
-        win32con.SMTO_ABORTIFHUNG,
-        100,
-        None,
-    )
-except Exception:
-    pass
-
-
-class BackupComparator:
-    """Compare two backup files to find differences"""
-
-    @staticmethod
-    def compare(file1_path: str, file2_path: str) -> Optional[str]:
-        """Compare two backup files and return a report"""
-        try:
-            with open(file1_path, "r", encoding="utf-8") as f:
-                data1 = json.load(f)
-            icons1 = data1.get("icons", data1) if isinstance(data1, dict) else data1
-
-            with open(file2_path, "r", encoding="utf-8") as f:
-                data2 = json.load(f)
-            icons2 = data2.get("icons", data2) if isinstance(data2, dict) else data2
-
-            names1 = set(icons1.keys())
-            names2 = set(icons2.keys())
-
-            added = names2 - names1
-            removed = names1 - names2
-            moved = []
-
-            for name in names1 & names2:
-                pos1 = icons1[name]
-                pos2 = icons2[name]
-                if pos1 != pos2:
-                    moved.append(name)
-
-            num_added = len(added)
-            num_removed = len(removed)
-            num_moved = len(moved)
-            num_unchanged = len(names1 & names2) - len(moved)
-            report = (
-                QCoreApplication.translate(
-                    "BackupComparator", "=== COMPARISON RESULTS ==="
-                )
-                + "\n\n"
-            )
-            report += (
-                QCoreApplication.translate(
-                    "BackupComparator", "Icon(s) Added: %n", None, num_added
-                )
-                + "\n"
-            )
-            report += (
-                QCoreApplication.translate(
-                    "BackupComparator", "Icon(s) Removed: %n", None, num_removed
-                )
-                + "\n"
-            )
-            report += (
-                QCoreApplication.translate(
-                    "BackupComparator", "Icon(s) Moved: %n", None, num_moved
-                )
-                + "\n"
-            )
-            report += (
-                QCoreApplication.translate(
-                    "BackupComparator", "Icon(s) Unchanged: %n", None, num_unchanged
-                )
-                + "\n\n"
-            )
-
-            if added:
-                report += (
-                    QCoreApplication.translate(
-                        "BackupComparator", "--- ADDED ICONS ---"
-                    )
-                    + "\n"
-                )
-                for name in sorted(added):
-                    report += f"  + {name}\n"
-                report += "\n"
-
-            if removed:
-                report += (
-                    QCoreApplication.translate(
-                        "BackupComparator", "--- REMOVED ICONS ---"
-                    )
-                    + "\n"
-                )
-                for name in sorted(removed):
-                    report += f"  - {name}\n"
-                report += "\n"
-
-            if moved:
-                report += (
-                    QCoreApplication.translate(
-                        "BackupComparator", "--- MOVED ICONS ---"
-                    )
-                    + "\n"
-                )
-                for name in sorted(moved):
-                    report += f"  ↔ {name}\n"
-
-            if not added and not removed and not moved:
-                report += (
-                    QCoreApplication.translate(
-                        "BackupComparator", "✓ No differences - backups are identical!"
-                    )
-                    + "\n"
-                )
-
-            return report
-
-        except Exception as e:
-            return None
+# NOTE: No module-level Win32 side-effects here.
+# (Bug 4 fix: removed the SendMessageTimeout block that used to execute on import.)

@@ -1,6 +1,5 @@
 """Helper functions for Desktop Icon Backup Manager"""
 
-import argparse
 from typing import Dict, Tuple, Optional
 from datetime import datetime
 
@@ -100,29 +99,3 @@ def get_readable_date(filename: str) -> str:
 def get_resolution_from_filename(filename: str) -> str:
     """Extract resolution from backup filename"""
     return parse_backup_filename(filename)[1]
-
-
-def setup_cli_parser():
-    """Setup and parse command line arguments"""
-    parser = argparse.ArgumentParser(
-        description=QCoreApplication.translate("CLI", "Desktop Icon Backup Manager CLI")
-    )
-    parser.add_argument(
-        "--backup",
-        action="store_true",
-        help=QCoreApplication.translate("CLI", "Perform a backup"),
-    )
-    parser.add_argument(
-        "--restore",
-        type=str,
-        metavar="FILENAME",
-        help=QCoreApplication.translate("CLI", "Restore a specific backup or latest"),
-    )
-    parser.add_argument(
-        "--silent",
-        action="store_true",
-        help=QCoreApplication.translate("CLI", "Run without showing the GUI"),
-    )
-
-    args, unknown = parser.parse_known_args()
-    return args, unknown

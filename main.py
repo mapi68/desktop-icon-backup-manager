@@ -5,29 +5,218 @@ import os
 import argparse
 from pathlib import Path
 
-from PyQt6.QtWidgets import QApplication, QMessageBox
-from PyQt6.QtCore import QSettings, QTranslator, QLocale, QCoreApplication
+from PyQt6.QtWidgets import (
+    QApplication,
+    QMessageBox,
+    QSystemTrayIcon,
+    QDialog,
+    QVBoxLayout,
+    QHBoxLayout,
+    QLabel,
+    QComboBox,
+    QPushButton,
+    QCheckBox,
+)
+from PyQt6.QtCore import QSettings, QTranslator, QLocale, QCoreApplication, QTimer
 from PyQt6.QtGui import QIcon
 
 from core.config import Config, resource_path
 from core.icon_manager import DesktopIconManager
-from utils.helpers import setup_cli_parser
 from ui.main_window import MainWindow
 
+# ── Locale name → display name ────────────────────────────────────────────────
+_LOCALE_NAMES = {
+    "": "English",
+    "it_IT": "Italiano",
+    "fr_FR": "Français",
+    "de_DE": "Deutsch",
+    "es_ES": "Español",
+    "pt_BR": "Português (BR)",
+    "pl_PL": "Polski",
+    "tr_TR": "Türkçe",
+    "ru_RU": "Русский",
+    "uk_UA": "Українська",
+    "zh_CN": "中文 (简体)",
+    "ja_JP": "日本語",
+}
+
+
+def _display_name(locale: str) -> str:
+    """Return a human-readable name for a locale string."""
+    return _LOCALE_NAMES.get(locale, locale)
+
+
+# ── Discover available .qm files ──────────────────────────────────────────────
+def _available_locales() -> list[str]:
+    """
+    Scan the i18n folder and return a sorted list of locale strings
+    for which a .qm file exists, plus "" (English built-in).
+    E.g. ["", "it_IT"]
+    """
+    locales = [""]  # English always available
+    i18n_dir = Path(resource_path("i18n"))
+    if i18n_dir.is_dir():
+        for qm in sorted(i18n_dir.glob("*.qm")):
+            locale = qm.stem  # e.g. "it_IT"
+            if locale not in locales:
+                locales.append(locale)
+    return locales
+
+
+# ── Auto-detect best locale ───────────────────────────────────────────────────
+def _autodetect_locale(available: list[str]) -> str:
+    """
+    Try to match the system locale to an available .qm file.
+    Tries exact match first (e.g. "it_IT"), then language-only (e.g. "it").
+    Returns "" (English) if nothing matches.
+    """
+    sys_locale = QLocale.system()
+    # Candidates in order of preference
+    candidates = [
+        sys_locale.name(),  # e.g. "it_IT"
+        sys_locale.name().split("_")[0],  # e.g. "it"
+    ]
+    available_lower = {a.lower(): a for a in available if a}
+    for c in candidates:
+        if c in available:
+            return c
+        if c.lower() in available_lower:
+            return available_lower[c.lower()]
+    return ""
+
+
+# ── Language loader ───────────────────────────────────────────────────────────
+def load_language(app: QApplication, locale: str) -> QTranslator:
+    """Install a translator for *locale* ("" = English, no file needed)."""
+    translator = QTranslator()
+    if locale:
+        translator.load(locale, resource_path("i18n"))
+    app.installTranslator(translator)
+    return translator
+
+
+# ── Language picker dialog ────────────────────────────────────────────────────
+class LanguageDialog(QDialog):
+    """Shown only when the system locale has no matching .qm or --choose-lang is passed."""
+
+    def __init__(self, available: list[str], current_lang: str, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Language")
+        self.setFixedWidth(300)
+        self.setStyleSheet("""
+            QDialog { background: #1e1e1e; color: #ddd; }
+            QLabel  { color: #ddd; font-size: 13px; }
+            QComboBox {
+                background: #2d2d2d; color: #ddd;
+                border: 1px solid #555; border-radius: 4px;
+                padding: 4px 8px; font-size: 13px;
+            }
+            QComboBox QAbstractItemView { background: #2d2d2d; color: #ddd; }
+            QPushButton {
+                background: #0078D7; color: #fff;
+                border: none; border-radius: 4px;
+                padding: 6px 20px; font-size: 13px;
+            }
+            QPushButton:hover { background: #106EBE; }
+            QCheckBox { color: #aaa; font-size: 11px; }
+        """)
+
+        layout = QVBoxLayout(self)
+        layout.setSpacing(12)
+        layout.setContentsMargins(20, 20, 20, 20)
+
+        layout.addWidget(QLabel("Select language:"))
+
+        self.combo = QComboBox()
+        for locale in available:
+            self.combo.addItem(_display_name(locale), locale)
+
+        # Pre-select current language
+        for i in range(self.combo.count()):
+            if self.combo.itemData(i) == current_lang:
+                self.combo.setCurrentIndex(i)
+                break
+
+        layout.addWidget(self.combo)
+
+        self.remember_cb = QCheckBox("Remember this choice")
+        self.remember_cb.setChecked(True)
+        layout.addWidget(self.remember_cb)
+
+        btn_layout = QHBoxLayout()
+        btn_layout.addStretch()
+        ok_btn = QPushButton("OK")
+        ok_btn.setDefault(True)
+        ok_btn.clicked.connect(self.accept)
+        btn_layout.addWidget(ok_btn)
+        layout.addLayout(btn_layout)
+
+    @property
+    def selected_locale(self) -> str:
+        return self.combo.currentData()
+
+    @property
+    def remember(self) -> bool:
+        return self.remember_cb.isChecked()
+
+
+# ── Entry point ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     if QApplication.instance():
         app = QApplication.instance()
     else:
         app = QApplication(sys.argv)
 
-    translator = QTranslator()
-    if translator.load(QLocale.system(), "", "", resource_path("i18n")):
-        app.installTranslator(translator)
-
     app_path = Path(os.path.abspath(sys.argv[0])).parent
     settings_file_path = app_path / "settings.ini"
     settings = QSettings(str(settings_file_path), QSettings.Format.IniFormat)
 
+    # ── Determine language ────────────────────────────────────────────────────
+    pre_parser = argparse.ArgumentParser(add_help=False)
+    pre_parser.add_argument("--lang", type=str, default=None)
+    pre_parser.add_argument("--choose-lang", action="store_true")
+    pre_args, _ = pre_parser.parse_known_args()
+
+    available = _available_locales()  # ["", "it_IT", ...]
+    saved_lang = settings.value("language", None)  # None = never explicitly chosen
+
+    if pre_args.lang is not None:
+        # --lang en  or  --lang it_IT  — one-shot, not saved
+        chosen_locale = "" if pre_args.lang == "en" else pre_args.lang
+        remember = False
+
+    elif pre_args.choose_lang:
+        # --choose-lang: always show the dialog
+        dlg = LanguageDialog(available, current_lang=saved_lang or "")
+        if dlg.exec() == QDialog.DialogCode.Accepted:
+            chosen_locale = dlg.selected_locale
+            remember = dlg.remember
+        else:
+            chosen_locale = saved_lang or _autodetect_locale(available)
+            remember = False
+
+    elif saved_lang is not None:
+        # User already made a choice in a previous session — honour it silently
+        chosen_locale = saved_lang
+        remember = False
+
+    else:
+        # First run: show dialog pre-selecting the autodetected locale
+        autodetected = _autodetect_locale(available)
+        dlg = LanguageDialog(available, current_lang=autodetected)
+        if dlg.exec() == QDialog.DialogCode.Accepted:
+            chosen_locale = dlg.selected_locale
+            remember = dlg.remember
+        else:
+            chosen_locale = autodetected
+            remember = False
+
+    if remember:
+        settings.setValue("language", chosen_locale)
+
+    translator = load_language(app, chosen_locale)
+
+    # ── CLI argument parsing (translated) ─────────────────────────────────────
     parser = argparse.ArgumentParser(
         description=QCoreApplication.translate("CLI", "Desktop Icon Backup Manager CLI")
     )
@@ -47,6 +236,17 @@ if __name__ == "__main__":
         action="store_true",
         help=QCoreApplication.translate("CLI", "Run without showing the GUI"),
     )
+    parser.add_argument(
+        "--lang",
+        type=str,
+        default=None,
+        help="Set UI language for this session (e.g. en, it_IT)",
+    )
+    parser.add_argument(
+        "--choose-lang",
+        action="store_true",
+        help="Show language picker at startup",
+    )
 
     args, unknown = parser.parse_known_args()
 
@@ -61,7 +261,6 @@ if __name__ == "__main__":
         if args.backup:
             cleanup_limit = settings.value("cleanup_limit", 0, type=int)
             print(QCoreApplication.translate("CLI", "Starting silent backup..."))
-
             success = manager.save(
                 silent_log,
                 description=QCoreApplication.translate("CLI", "Silent CLI Backup"),
@@ -73,7 +272,6 @@ if __name__ == "__main__":
             enable_scaling = settings.value(
                 "adaptive_scaling_enabled", False, type=bool
             )
-
             filename = None
             if args.restore.lower() == "latest":
                 filename = manager.get_latest_backup_filename()
@@ -100,13 +298,13 @@ if __name__ == "__main__":
         if args.silent:
             sys.exit(0)
 
+    # ── GUI startup ───────────────────────────────────────────────────────────
     app.setQuitOnLastWindowClosed(False)
     app.setStyle("Fusion")
 
     start_minimized = settings.value("start_minimized", False, type=bool)
 
     try:
-        # Create the main window (hidden for now so we can read its geometry)
         window = MainWindow()
 
         if start_minimized:
@@ -118,10 +316,7 @@ if __name__ == "__main__":
                 Config.TRAY_NOTIFICATION_DURATION,
             )
         else:
-            # Show splash centered on the (still hidden) main window, then
-            # reveal the main window after SPLASH_DURATION_MS milliseconds.
             from ui.splash_screen import SplashScreen, SPLASH_DURATION_MS
-            from PyQt6.QtCore import QTimer
 
             splash = SplashScreen()
             splash.center_on_window(window)

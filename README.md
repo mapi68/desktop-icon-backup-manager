@@ -36,10 +36,11 @@
 - **📊 Resolution Tracking**: Automatically records screen resolution and monitor metadata with each backup
 
 ### Advanced Features
+- **🔍 Live Diff Preview**: Before restoring, see a color-coded overlay showing exactly which icons will move (orange→red with arrow), which are already in place (blue), and which are missing from the desktop (green)
 - **🖼️ Visual Layout Preview**: See a mini-map of your icon arrangement before restoring, with interactive tooltips showing icon names
 - **🔄 Adaptive Scaling**: Automatically adjusts icon positions when restoring to a different screen resolution
 - **🖥️ Multi-Monitor Support**: Detects and handles multiple monitor configurations, with warnings when the setup differs from the saved backup
-- **⚖️ Delta Comparison**: Compare any backup against the latest one to see added, removed, and moved icons
+- **⚖️ Flexible Comparison**: Compare **any two backups** against each other (not just vs. latest) to see added, removed, and moved icons — via context menu or the dedicated "Compare Two Selected…" button
 - **🗑️ Smart Cleanup**: Automatic deletion of old backups when a configured limit is reached (5, 10, 25, 50, or unlimited)
 - **⚡ System Tray Integration**: Run minimized in the background with quick access to save/restore from the tray icon
 
@@ -50,7 +51,9 @@
 - **Background Operations**: All operations run in a separate thread with real-time progress indicators
 
 ### User Experience
-- **🌍 Multi-language**: English and Italian supported; auto-detected from system locale
+- **📋 Sortable Backup Table**: Click any column header (Tag, Resolution, Icons, Timestamp) to sort the backup list
+- **↔️ Resizable Backup Manager**: The window adapts to any screen size or DPI setting
+- **🌍 Multi-language**: Auto-detected from system locale or manually selected
 - **⌨️ Keyboard Shortcuts**: Full keyboard navigation — see [shortcuts table](#%EF%B8%8F-keyboard-shortcuts) below
 - **📋 Detailed Activity Log**: Track all operations with timestamped entries; copy log with `Ctrl+A` / `Ctrl+C`
 - **✅ Confirmation Dialogs**: Prevent accidental overwrites or deletions
@@ -111,6 +114,18 @@
 
 ### Advanced Features
 
+#### Live Diff Preview
+
+When you select a backup in the Backup Manager, the preview panel fetches the **current live positions** from the desktop and renders a color-coded diff directly on a desktop-like canvas with a subtle grid:
+
+| Visual | Meaning |
+|--------|---------|
+| 🔵 **Blue dot** (with soft halo) | Already in place, will not move |
+| 🟠 **Orange dot** ──▶ 🔴 **Red dot** | Will move: orange = current position, red = target from backup |
+| 🟢 **Green dot** | In backup, not on desktop (will be skipped on restore) |
+
+A compact legend panel displayed **outside the canvas** (to the right of the backup info box) shows the colour coding used in the diff preview. Hover over any dot to see the icon name and status.
+
 #### Command Line Interface (CLI)
 
 The application supports headless operation for scripting and scheduled tasks. When `--backup`, `--restore`, or `--silent` is passed, no GUI is shown and the process exits immediately after the operation.
@@ -141,8 +156,10 @@ desktop-icon-backup-manager.exe --restore "1920x1080_20241211_143015.json" --sil
 
 #### Backup Manager
 - **Search/filter** backups by tag, resolution, or date in real time
+- **Sortable table**: click any column header (Tag, Resolution, Icons, Timestamp) to sort
+- **Live diff preview** shows which icons will move before you confirm a restore (see above)
 - **Visual preview** shows a dot-map of icon positions; hover over dots to see icon names
-- **Compare** any backup with the latest one to see a color-coded diff (added ✚, removed ✖, moved ↔)
+- **Compare any two backups** via right-click → *Compare with Latest*, or select one backup and click **"Compare Two Selected…"** to pick any second backup
 - **Right-click** a backup for Restore, Compare, or Delete options
 
 ---
@@ -263,7 +280,6 @@ The program accesses Windows Explorer's memory to read and write icon positions 
 
 - Built with [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) for the GUI
 - Uses [pywin32](https://github.com/mhammond/pywin32) for Win32 API access to desktop icon positions
-- Internationalization via Qt's translation system (`pylupdate6` / `lrelease`)
 
 ---
 

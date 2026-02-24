@@ -1,130 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS language="it_IT" version="2.1">
+<TS language="fr_FR" version="2.1">
     <context>
     <name>BackupComparator</name>
     <message>
         <location filename="..\core\comparator.py" line="37" />
         <source>=== COMPARISON RESULTS ===</source>
-        <translation>=== RISULTATI DEL CONFRONTO ===</translation>
+        <translation>=== RÉSULTATS DE COMPARAISON ===</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="43" />
         <source>Icon(s) Added: %n</source>
         <translation>
-            <numerusform>Icona aggiunta: %n</numerusform>
-            <numerusform>Icone aggiunte: %n</numerusform>
+            <numerusform>1 icône ajoutée</numerusform>
+            <numerusform>%n icônes ajoutées</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="49" />
         <source>Icon(s) Removed: %n</source>
         <translation>
-            <numerusform>Icona rimossa: %n</numerusform>
-            <numerusform>Icone rimosse: %n</numerusform>
+            <numerusform>1 icône supprimée</numerusform>
+            <numerusform>%n icônes supprimées</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="55" />
         <source>Icon(s) Moved: %n</source>
         <translation>
-            <numerusform>Icona spostata: %n</numerusform>
-            <numerusform>Icone spostate: %n</numerusform>
+            <numerusform>1 icône déplacée</numerusform>
+            <numerusform>%n icônes déplacées</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="61" />
         <source>Icon(s) Unchanged: %n</source>
         <translation>
-            <numerusform>Icona invariata: %n</numerusform>
-            <numerusform>Icone invariate: %n</numerusform>
+            <numerusform>1 icône inchangée</numerusform>
+            <numerusform>%n icônes inchangées</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="69" />
         <source>--- ADDED ICONS ---</source>
-        <translation>--- ICONE AGGIUNTE ---</translation>
+        <translation>--- ICÔNES AJOUTÉES ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="80" />
         <source>--- REMOVED ICONS ---</source>
-        <translation>--- ICONE RIMOSSE ---</translation>
+        <translation>--- ICÔNES SUPPRIMÉES ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="91" />
         <source>--- MOVED ICONS ---</source>
-        <translation>--- ICONE SPOSTATE ---</translation>
+        <translation>--- ICÔNES DÉPLACÉES ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="101" />
         <source>✓ No differences - backups are identical!</source>
-        <translation>✓ Nessuna differenza: i backup sono identici!</translation>
+        <translation>✓ Aucune différence – les sauvegardes sont identiques !</translation>
     </message>
 </context><context>
     <name>BackupManagerWindow</name>
     <message>
         <location filename="..\ui\backup_dialog.py" line="38" />
         <source>Select, Restore, or Delete Backup</source>
-        <translation>Seleziona, Ripristina o Elimina backup</translation>
+        <translation>Sélectionner, restaurer ou supprimer une sauvegarde</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="48" />
         <source>Select a backup to restore or right-click for options.</source>
-        <translation>Seleziona un backup da ripristinare o fai clic con il pulsante destro del mouse per visualizzare le opzioni.</translation>
+        <translation>Sélectionnez une sauvegarde à restaurer ou faites un clic droit pour les options.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="54" />
         <source>Search by tag, resolution, or date...</source>
-        <translation>Ricerca per tag, risoluzione o data...</translation>
+        <translation>Rechercher par étiquette, résolution ou date...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="71" />
         <source>Tag / Description</source>
-        <translation>Tag / Descrizione</translation>
+        <translation>Étiquette / Description</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="272" />
         <location filename="..\ui\backup_dialog.py" line="72" />
         <source>Resolution</source>
-        <translation>Risoluzione</translation>
+        <translation>Résolution</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="271" />
         <location filename="..\ui\backup_dialog.py" line="73" />
         <source>Icons</source>
-        <translation>Icone</translation>
+        <translation>Icônes</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="274" />
         <location filename="..\ui\backup_dialog.py" line="74" />
         <source>Timestamp</source>
-        <translation>Data/ora</translation>
+        <translation>Horodatage</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="118" />
         <source>Layout Preview (saved positions vs current):</source>
-        <translation>Anteprima del layout (posizioni salvate rispetto a quelle attuali):</translation>
+        <translation>Aperçu de la disposition (positions sauvegardées vs actuelles) :</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="239" />
         <location filename="..\ui\backup_dialog.py" line="128" />
         <source>Select a backup to see details.</source>
-        <translation>Seleziona un backup per vedere i dettagli.</translation>
+        <translation>Sélectionnez une sauvegarde pour voir les détails.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="154" />
         <source>Restore Selected Layout</source>
-        <translation>Ripristina layout selezionato</translation>
+        <translation>Restaurer la disposition sélectionnée</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="158" />
         <source>📊 Compare Two Selected...</source>
-        <translation>📊 Confronta due selezionati...</translation>
+        <translation>📊 Comparer deux sélectionnés...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="162" />
         <source>Close</source>
-        <translation>Chiudi</translation>
+        <translation>Fermer</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="335" />
@@ -138,22 +138,22 @@
     <message>
         <location filename="..\ui\backup_dialog.py" line="222" />
         <source>No backups found.</source>
-        <translation>Nessun backup trovato.</translation>
+        <translation>Aucune sauvegarde trouvée.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="260" />
         <source>None</source>
-        <translation>Nessuno</translation>
+        <translation>Aucun</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="270" />
         <source>File</source>
-        <translation>File</translation>
+        <translation>Fichier</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="273" />
         <source>Description</source>
-        <translation>Descrizione</translation>
+        <translation>Description</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="457" />
@@ -162,27 +162,27 @@
         <location filename="..\ui\backup_dialog.py" line="364" />
         <location filename="..\ui\backup_dialog.py" line="280" />
         <source>Error</source>
-        <translation>Errore</translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="305" />
         <source>🔄 Restore Selected</source>
-        <translation>🔄 Ripristina selezionati</translation>
+        <translation>🔄 Restaurer la sélection</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="308" />
         <source>🗑️ Delete Selected</source>
-        <translation>🗑️ Elimina selezionati</translation>
+        <translation>🗑️ Supprimer la sélection</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="312" />
         <source>📊 Compare with Latest</source>
-        <translation>📊 Confronta con il più recente</translation>
+        <translation>📊 Comparer avec la plus récente</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="339" />
         <source>Confirm Restore</source>
-        <translation>Conferma ripristino</translation>
+        <translation>Confirmer la restauration</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="340" />
@@ -195,164 +195,164 @@ Tag: %4
 Timestamp: %5
 
 Are you sure you want to proceed?</source>
-        <translation>Ripristina le posizioni delle icone dal file di backup selezionato:
+        <translation>Restaurer les positions des icônes depuis le fichier sélectionné :
 
-File: %1
-Risoluzione: %2
-Icone: %3
-Tag: %4
-Data/ora: %5
+Fichier : %1
+Résolution : %2
+Icônes : %3
+Étiquette : %4
+Horodatage : %5
 
-Sei sicuro di voler procedere?</translation>
+Êtes-vous sûr de vouloir continuer ?</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="365" />
         <source>Failed to load backup file:
 %1</source>
-        <translation>Impossibile caricare il file di backup:
+        <translation>Impossible de charger le fichier de sauvegarde :
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="375" />
         <source>Confirm Delete</source>
-        <translation>Conferma eliminazione</translation>
+        <translation>Confirmer la suppression</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="376" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
-        <translation>Sei sicuro di voler eliminare questo backup?
+        <translation>Êtes-vous sûr de vouloir supprimer cette sauvegarde ?
 
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="387" />
         <source>Success</source>
-        <translation>Operazione riuscita</translation>
+        <translation>Succès</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="387" />
         <source>Backup deleted successfully.</source>
-        <translation>Backup eliminato con successo.</translation>
+        <translation>Sauvegarde supprimée avec succès.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="391" />
         <source>Failed to delete backup file.</source>
-        <translation>Impossibile eliminare il file di backup.</translation>
+        <translation>Impossible de supprimer le fichier de sauvegarde.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="431" />
         <location filename="..\ui\backup_dialog.py" line="400" />
         <source>No Selection</source>
-        <translation>Nessuna selezione</translation>
+        <translation>Aucune sélection</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="401" />
         <source>Please select a backup to compare.</source>
-        <translation>Seleziona un backup da confrontare.</translation>
+        <translation>Veuillez sélectionner une sauvegarde à comparer.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="408" />
         <source>No latest backup found</source>
-        <translation>Nessun backup più recente trovato</translation>
+        <translation>Aucune sauvegarde récente trouvée</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="415" />
         <source>Same Backup</source>
-        <translation>Backup identico</translation>
+        <translation>Même sauvegarde</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="416" />
         <source>You selected the latest backup. Nothing to compare.</source>
-        <translation>Hai selezionato il backup più recente. Niente da confrontare.</translation>
+        <translation>Vous avez sélectionné la sauvegarde la plus récente. Rien à comparer.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="432" />
         <source>Please select a backup first.</source>
-        <translation>Seleziona prima un backup.</translation>
+        <translation>Veuillez d'abord sélectionner une sauvegarde.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="441" />
         <source>Not Enough Backups</source>
-        <translation>Backup insufficienti</translation>
+        <translation>Sauvegardes insuffisantes</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="442" />
         <source>There is only one backup. Nothing to compare against.</source>
-        <translation>C'è solo un backup. Niente con cui confrontare.</translation>
+        <translation>Il n'y a qu'une seule sauvegarde. Rien à comparer.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="457" />
         <source>Failed to compare backups</source>
-        <translation>Impossibile confrontare i backup</translation>
+        <translation>Impossible de comparer les sauvegardes</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="461" />
         <source>latest</source>
-        <translation>più recente</translation>
+        <translation>plus récente</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="464" />
         <source>Comparison Results</source>
-        <translation>Risultati del confronto</translation>
+        <translation>Résultats de comparaison</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="484" />
         <source>Comparing Backups:</source>
-        <translation>Confronto dei backup:</translation>
+        <translation>Comparaison des sauvegardes :</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="495" />
         <source>✓ Close</source>
-        <translation>✓ Chiudi</translation>
+        <translation>✓ Fermer</translation>
     </message>
 </context><context>
     <name>CLI</name>
     <message>
         <location filename="..\main.py" line="221" />
         <source>Desktop Icon Backup Manager CLI</source>
-        <translation>Desktop Icon Backup Manager CLI</translation>
+        <translation>CLI du Gestionnaire de Sauvegarde d'Icônes du Bureau</translation>
     </message>
     <message>
         <location filename="..\main.py" line="226" />
         <source>Perform a backup</source>
-        <translation>Esegui un backup</translation>
+        <translation>Effectuer une sauvegarde</translation>
     </message>
     <message>
         <location filename="..\main.py" line="232" />
         <source>Restore a specific backup or latest</source>
-        <translation>Ripristina un backup specifico o il più recente</translation>
+        <translation>Restaurer une sauvegarde spécifique ou la plus récente</translation>
     </message>
     <message>
         <location filename="..\main.py" line="237" />
         <source>Run without showing the GUI</source>
-        <translation>Esegui senza mostrare la GUI</translation>
+        <translation>Exécuter sans afficher l'interface graphique</translation>
     </message>
     <message>
         <location filename="..\main.py" line="258" />
         <source>[SILENT]</source>
-        <translation>[SILENZIOSO]</translation>
+        <translation>[SILENCIEUX]</translation>
     </message>
     <message>
         <location filename="..\main.py" line="263" />
         <source>Starting silent backup...</source>
-        <translation>Avvio backup silenzioso...</translation>
+        <translation>Démarrage de la sauvegarde silencieuse...</translation>
     </message>
     <message>
         <location filename="..\main.py" line="266" />
         <source>Silent CLI Backup</source>
-        <translation>Backup CLI silenzioso</translation>
+        <translation>Sauvegarde CLI silencieuse</translation>
     </message>
     <message>
         <location filename="..\main.py" line="280" />
         <source>Error: No backup files found for latest restore.</source>
-        <translation>Errore: nessun file di backup trovato per ripristinare il più recente.</translation>
+        <translation>Erreur : Aucun fichier de sauvegarde trouvé pour la restauration la plus récente.</translation>
     </message>
     <message>
         <location filename="..\main.py" line="288" />
         <source>Starting silent restore from: %1</source>
-        <translation>Avvio del ripristino silenzioso da: %1</translation>
+        <translation>Démarrage de la restauration silencieuse depuis : %1</translation>
     </message>
 </context><context>
     <name>Common</name>
@@ -360,279 +360,279 @@ Sei sicuro di voler procedere?</translation>
         <location filename="..\ui\splash_screen.py" line="158" />
         <location filename="..\ui\main_window.py" line="506" />
         <source>Translation: %1</source>
-        <translation>Traduzione: mapi68</translation>
+        <translation>Traduction : mapi68</translation>
     </message>
 </context><context>
     <name>DesktopIconManager</name>
     <message>
         <location filename="..\core\icon_manager.py" line="76" />
         <source>Unable to find desktop ListView control. Make sure desktop icons are visible.</source>
-        <translation>Impossibile trovare il controllo ListView del desktop. Assicurati che le icone del desktop siano visibili.</translation>
+        <translation>Impossible de trouver le contrôle ListView du bureau. Assurez-vous que les icônes du bureau sont visibles.</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="117" />
         <source>No backup files found to delete.</source>
-        <translation>Nessun file di backup trovato da eliminare.</translation>
+        <translation>Aucun fichier de sauvegarde à supprimer.</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="133" />
         <source>✓ Successfully deleted %n backup file(s).</source>
         <translation>
-            <numerusform>✓ %n file di backup eliminato con successo.</numerusform>
-            <numerusform>✓ %n file di backup eliminati con successo.</numerusform>
+            <numerusform>✓ 1 fichier de sauvegarde supprimé avec succès.</numerusform>
+            <numerusform>✓ %n fichiers de sauvegarde supprimés avec succès.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="142" />
         <source>✗ Failed to delete %n backup file(s).</source>
         <translation>
-            <numerusform>✗ Errore durante l'eliminazione di %n file di backup.</numerusform>
-            <numerusform>✗ Errore durante l'eliminazione di %n file di backup.</numerusform>
+            <numerusform>✗ Impossible de supprimer 1 fichier de sauvegarde.</numerusform>
+            <numerusform>✗ Impossible de supprimer %n fichiers de sauvegarde.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="158" />
         <source>Automatic cleanup skipped: max_count is disabled (0).</source>
-        <translation>Pulizia automatica saltata: limite disabilitato (0).</translation>
+        <translation>Nettoyage automatique ignoré : max_count est désactivé (0).</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="170" />
         <source>Cleanup skipped: Current count (%n) is within the limit (%1).</source>
         <translation>
-            <numerusform>Pulizia saltata: il conteggio attuale (%n) è entro il limite (%1).</numerusform>
-            <numerusform>Pulizia saltata: il conteggio attuale (%n) è entro il limite (%1).</numerusform>
+            <numerusform>Nettoyage ignoré : Le nombre actuel (%n) est dans la limite (%1).</numerusform>
+            <numerusform>Nettoyage ignoré : Le nombre actuel (%n) est dans la limite (%1).</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="183" />
         <source>Cleanup needed: Current count (%1) exceeds limit (%2). Deleting %n oldest file(s).</source>
         <translation>
-            <numerusform>Pulizia necessaria: il conteggio attuale (%1) supera il limite (%2). Eliminazione del file più vecchio.</numerusform>
-            <numerusform>Pulizia necessaria: il conteggio attuale (%1) supera il limite (%2). Eliminazione dei %n file più vecchi.</numerusform>
+            <numerusform>Nettoyage nécessaire : Le nombre (%1) dépasse la limite (%2). Suppression de 1 fichier le plus ancien.</numerusform>
+            <numerusform>Nettoyage nécessaire : Le nombre (%1) dépasse la limite (%2). Suppression de %n fichiers les plus anciens.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="197" />
         <source>  Deleted oldest backup: %1</source>
-        <translation>  Eliminato il backup più vecchio: %1</translation>
+        <translation>  Sauvegarde la plus ancienne supprimée : %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="203" />
         <source>  Failed to delete: %1</source>
-        <translation>  Impossibile eliminare: %1</translation>
+        <translation>  Échec de la suppression : %1</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="209" />
         <source>Cleanup complete. Total deleted: %n file(s).</source>
         <translation>
-            <numerusform>Pulizia completata. Totale eliminato: %n file.</numerusform>
-            <numerusform>Pulizia completata. Totale eliminati: %n file.</numerusform>
+            <numerusform>Nettoyage terminé. Total supprimé : 1 fichier.</numerusform>
+            <numerusform>Nettoyage terminé. Total supprimé : %n fichiers.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="328" />
         <source>Monitor Resolution: %1</source>
-        <translation>Risoluzione monitor: %1</translation>
+        <translation>Résolution du moniteur : %1</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="333" />
         <source>Found %n icon(s). Starting scan...</source>
         <translation>
-            <numerusform>Trovata %n icona. Avvio scansione...</numerusform>
-            <numerusform>Trovate %n icone. Avvio scansione...</numerusform>
+            <numerusform>1 icône trouvée. Démarrage de l'analyse...</numerusform>
+            <numerusform>%n icônes trouvées. Démarrage de l'analyse...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="396" />
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
-            <numerusform>✓ Salvata %n icona nel file di backup '%1'</numerusform>
-            <numerusform>✓ Salvate %n icone nel file di backup '%1'</numerusform>
+            <numerusform>✓ 1 icône sauvegardée dans le fichier '%1'</numerusform>
+            <numerusform>✓ %n icônes sauvegardées dans le fichier '%1'</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="406" />
         <source>  (Description: %1)</source>
-        <translation>  (Descrizione: %1)</translation>
+        <translation>  (Description : %1)</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="419" />
         <source>✗ Error saving (I/O): %1</source>
-        <translation>✗ Errore durante il salvataggio (I/O): %1</translation>
+        <translation>✗ Erreur lors de la sauvegarde (E/S) : %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="426" />
         <source>✗ Error saving: %1</source>
-        <translation>✗ Errore durante il salvataggio: %1</translation>
+        <translation>✗ Erreur lors de la sauvegarde : %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="454" />
         <source>✗ Error: Backup file not found.</source>
-        <translation>✗ Errore: file di backup non trovato.</translation>
+        <translation>✗ Erreur : Fichier de sauvegarde introuvable.</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="464" />
         <source>Attempting to restore from backup: '%1'</source>
-        <translation>Tentativo di ripristino dal backup: '%1'</translation>
+        <translation>Tentative de restauration depuis la sauvegarde : '%1'</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="469" />
         <source>Saved Resolution (from filename): %1</source>
-        <translation>Risoluzione salvata (dal nome file): %1</translation>
+        <translation>Résolution sauvegardée (du nom de fichier) : %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="486" />
         <source>Restoring layout (saved: %1)</source>
-        <translation>Ripristino layout (salvato: %1)</translation>
+        <translation>Restauration de la disposition (sauvegardée : %1)</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="491" />
         <source>  Description: %1</source>
-        <translation>  Descrizione: %1</translation>
+        <translation>  Description : %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="498" />
         <source>Restoring layout (Old format, no timestamp and metadata)</source>
-        <translation>Ripristino layout (vecchio formato, senza data/ora e metadati)</translation>
+        <translation>Restauration de la disposition (Ancien format, sans horodatage ni métadonnées)</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="506" />
         <source>✗ Error: Invalid backup file format: %1</source>
-        <translation>✗ Errore: formato del file di backup non valido: %1</translation>
+        <translation>✗ Erreur : Format de fichier de sauvegarde invalide : %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="513" />
         <source>✗ Error reading backup file (I/O): %1</source>
-        <translation>✗ Errore durante la lettura del file di backup (I/O): %1</translation>
+        <translation>✗ Erreur lors de la lecture du fichier de sauvegarde (E/S) : %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="530" />
         <source>⚠ Warning: Resolution mismatch!</source>
-        <translation>⚠ Attenzione: la risoluzione non corrisponde!</translation>
+        <translation>⚠ Avertissement : Incompatibilité de résolution !</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="540" />
         <source>✓ Adaptive Scaling enabled: X=%1, Y=%2</source>
-        <translation>✓ Ridimensionamento adattivo abilitato: X=%1, Y=%2</translation>
+        <translation>✓ Mise à l'échelle adaptative activée : X=%1, Y=%2</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="625" />
         <source>✓ Restored %n icon(s)</source>
         <translation>
-            <numerusform>✓ Ripristinata %n icona</numerusform>
-            <numerusform>✓ Ripristinate %n icone</numerusform>
+            <numerusform>✓ 1 icône restaurée</numerusform>
+            <numerusform>✓ %n icônes restaurées</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="631" />
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
-            <numerusform>⚠ %n icona saltata (non trovata sul desktop)</numerusform>
-            <numerusform>⚠ %n icone saltate (non trovate sul desktop)</numerusform>
+            <numerusform>⚠ 1 icône ignorée (introuvable sur le bureau)</numerusform>
+            <numerusform>⚠ %n icônes ignorées (introuvables sur le bureau)</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="645" />
         <source>✗ Error restoring (I/O): %1</source>
-        <translation>✗ Errore durante il ripristino (I/O): %1</translation>
+        <translation>✗ Erreur lors de la restauration (E/S) : %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="652" />
         <source>✗ Error restoring: %1</source>
-        <translation>✗ Errore durante il ripristino: %1</translation>
+        <translation>✗ Erreur lors de la restauration : %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="680" />
         <source>Redrawing disabled for scrambling...</source>
-        <translation>Ridisegno disabilitato per il rimescolamento...</translation>
+        <translation>Redessin désactivé pour le mélange...</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="689" />
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
-            <numerusform>Trovata %n icona. Avvio posizionamento casuale...</numerusform>
-            <numerusform>Trovate %n icone. Avvio posizionamento casuale...</numerusform>
+            <numerusform>1 icône trouvée. Démarrage du positionnement aléatoire...</numerusform>
+            <numerusform>%n icônes trouvées. Démarrage du positionnement aléatoire...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="710" />
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
-            <numerusform>✓ Posizioni rimescolate per %n icona.</numerusform>
-            <numerusform>✓ Posizioni rimescolate per %n icone.</numerusform>
+            <numerusform>✓ Position mélangée pour 1 icône.</numerusform>
+            <numerusform>✓ Positions mélangées pour %n icônes.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="724" />
         <source>✗ Error scrambling icons: %1</source>
-        <translation>✗ Errore durante il rimescolamento delle icone: %1</translation>
+        <translation>✗ Erreur lors du mélange des icônes : %1</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="423" />
         <source>No Preview Available</source>
-        <translation>Anteprima non disponibile</translation>
+        <translation>Aucun aperçu disponible</translation>
     </message>
 </context><context>
     <name>IconWorker</name>
     <message>
         <location filename="..\utils\threads.py" line="52" />
         <source>Forcing desktop refresh...</source>
-        <translation>Forzatura aggiornamento desktop...</translation>
+        <translation>Forçage de l'actualisation du bureau...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="67" />
         <source>Desktop refresh signal sent successfully.</source>
-        <translation>Segnale di aggiornamento desktop inviato con successo.</translation>
+        <translation>Signal d'actualisation du bureau envoyé avec succès.</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="71" />
         <source>Warning: Failed to send desktop refresh signals: %1</source>
-        <translation>Avviso: impossibile inviare segnali di aggiornamento desktop: %1</translation>
+        <translation>Avertissement : Impossible d'envoyer les signaux d'actualisation du bureau : %1</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="84" />
         <source>Performing mandatory quick backup before scrambling...</source>
-        <translation>Esecuzione backup rapido obbligatorio prima del rimescolamento...</translation>
+        <translation>Exécution de la sauvegarde rapide obligatoire avant le mélange...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="88" />
         <source>  [Pre-Scramble Backup] %1</source>
-        <translation>  [Backup pre-rimescolamento] %1</translation>
+        <translation>  [Sauvegarde avant mélange] %1</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="91" />
         <source>Backup before Scramble</source>
-        <translation>Backup prima del rimescolamento</translation>
+        <translation>Sauvegarde avant mélange</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="96" />
         <source>Pre-scramble backup completed successfully. Starting scramble...</source>
-        <translation>Backup pre-rimescolamento completato. Avvio rimescolamento...</translation>
+        <translation>Sauvegarde avant mélange terminée avec succès. Démarrage du mélange...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="106" />
         <source>✗ Pre-scramble backup failed. Aborting scramble operation.</source>
-        <translation>✗ Backup pre-rimescolamento non riuscito. Operazione annullata.</translation>
+        <translation>✗ Échec de la sauvegarde avant mélange. Abandon de l'opération de mélange.</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="113" />
         <source>✗ CRITICAL ERROR: %1</source>
-        <translation>✗ ERRORE CRITICO: %1</translation>
+        <translation>✗ ERREUR CRITIQUE : %1</translation>
     </message>
 </context><context>
     <name>Main</name>
     <message>
         <location filename="..\main.py" line="334" />
         <source>Critical Error</source>
-        <translation>Errore critico</translation>
+        <translation>Erreur critique</translation>
     </message>
     <message>
         <location filename="..\main.py" line="335" />
         <source>Failed to start application:
 %1</source>
-        <translation>Impossibile avviare l'applicazione:
+        <translation>Impossible de démarrer l'application :
 %1</translation>
     </message>
 </context><context>
@@ -640,239 +640,239 @@ Sei sicuro di voler procedere?</translation>
     <message>
         <location filename="..\ui\main_window.py" line="59" />
         <source>Unknown</source>
-        <translation>Sconosciuto</translation>
+        <translation>Inconnu</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="86" />
         <source>Quick Save</source>
-        <translation>Salvataggio rapido</translation>
+        <translation>Sauvegarde rapide</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="88" />
         <source>Quick Save (Tray)</source>
-        <translation>Salvataggio rapido (barra delle applicazioni)</translation>
+        <translation>Sauvegarde rapide (Barre des tâches)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="92" />
         <source>Restore Latest</source>
-        <translation>Ripristina più recente</translation>
+        <translation>Restaurer la plus récente</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="98" />
         <source>Show Window</source>
-        <translation>Mostra finestra</translation>
+        <translation>Afficher la fenêtre</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="102" />
         <source>Exit</source>
-        <translation>Esci</translation>
+        <translation>Quitter</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="123" />
         <source>Desktop Icon Backup Manager by mapi68</source>
-        <translation>Desktop Icon Backup Manager di mapi68</translation>
+        <translation>Gestionnaire de Sauvegarde d'Icônes du Bureau par mapi68</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="128" />
         <source>&amp;File</source>
-        <translation>&amp;File</translation>
+        <translation>&amp;Fichier</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="131" />
         <source>Scramble Desktop Icons (Random)</source>
-        <translation>Rimescola icone desktop (casuale)</translation>
+        <translation>Mélanger les icônes du bureau (Aléatoire)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="134" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
-        <translation>Posiziona casualmente tutte le icone del desktop dopo aver creato un backup obbligatorio.</translation>
+        <translation>Randomise la position de toutes les icônes du bureau après avoir créé une sauvegarde obligatoire.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="142" />
         <source>Remove All Backups...</source>
-        <translation>Rimuovi tutti i backup...</translation>
+        <translation>Supprimer toutes les sauvegardes...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="147" />
         <source>E&amp;xit</source>
-        <translation>E&amp;sci</translation>
+        <translation>&amp;Quitter</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="369" />
         <location filename="..\ui\main_window.py" line="152" />
         <source>&amp;Settings</source>
-        <translation>&amp;Impostazioni</translation>
+        <translation>&amp;Paramètres</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="154" />
         <source>Open Settings Menu</source>
-        <translation>Apri il menu Impostazioni</translation>
+        <translation>Ouvrir le menu des paramètres</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="159" />
         <source>Start Minimized to Tray</source>
-        <translation>Avvia ridotto a icona nella barra delle applicazioni</translation>
+        <translation>Démarrer réduit dans la barre des tâches</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="795" />
         <location filename="..\ui\main_window.py" line="169" />
         <source>Auto-Save on Exit</source>
-        <translation>Salvataggio automatico all'uscita</translation>
+        <translation>Sauvegarde automatique à la fermeture</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="177" />
         <source>Auto-Restore on Startup</source>
-        <translation>Ripristino automatico all'avvio</translation>
+        <translation>Restauration automatique au démarrage</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="187" />
         <source>Enable Adaptive Scaling on Restore</source>
-        <translation>Abilita ridimensionamento adattivo al ripristino</translation>
+        <translation>Activer la mise à l'échelle adaptative lors de la restauration</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="197" />
         <source>Minimize to Tray on Close ('X' button)</source>
-        <translation>Minimizza nella barra delle applicazioni alla chiusura (pulsante 'X')</translation>
+        <translation>Réduire dans la barre des tâches à la fermeture (bouton 'X')</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="206" />
         <source>Automatic Backup Cleanup Limit</source>
-        <translation>Limite di pulizia automatica del backup</translation>
+        <translation>Limite de nettoyage automatique des sauvegardes</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="211" />
         <source>Disabled (Keep All)</source>
-        <translation>Disabilitato (mantieni tutti)</translation>
+        <translation>Désactivé (Conserver tout)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="212" />
         <source>Keep Last 5</source>
-        <translation>Mantieni ultimi 5</translation>
+        <translation>Conserver les 5 dernières</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="213" />
         <source>Keep Last 10</source>
-        <translation>Mantieni ultimi 10</translation>
+        <translation>Conserver les 10 dernières</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="214" />
         <source>Keep Last 25</source>
-        <translation>Mantieni ultimi 25</translation>
+        <translation>Conserver les 25 dernières</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="215" />
         <source>Keep Last 50</source>
-        <translation>Mantieni ultimi 50</translation>
+        <translation>Conserver les 50 dernières</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="226" />
         <source>&amp;Help</source>
-        <translation>&amp;Aiuto</translation>
+        <translation>&amp;Aide</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="228" />
         <source>Online User Manual</source>
-        <translation>Manuale utente online</translation>
+        <translation>Manuel d'utilisation en ligne</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="863" />
         <location filename="..\ui\main_window.py" line="831" />
         <location filename="..\ui\main_window.py" line="235" />
         <source>Keyboard Shortcuts</source>
-        <translation>Scorciatoie da tastiera</translation>
+        <translation>Raccourcis clavier</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="241" />
         <source>&amp;About</source>
-        <translation>&amp;Informazioni su</translation>
+        <translation>À &amp;propos</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="247" />
         <source>Support on Ko-fi...</source>
-        <translation>Supportami su Ko-fi...</translation>
+        <translation>Soutenir sur Ko-fi...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="262" />
         <source>Optional: Enter a descriptive tag/description...</source>
-        <translation>Opzionale: inserisci un tag o descrizione...</translation>
+        <translation>Facultatif : Entrez une étiquette/description descriptive...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="266" />
         <source>Save Tag:</source>
-        <translation>Tag di salvataggio:</translation>
+        <translation>Étiquette de sauvegarde :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="273" />
         <source>💾 SAVE QUICK BACKUP</source>
-        <translation>💾 SALVATAGGIO RAPIDO</translation>
+        <translation>💾 ENREGISTRER UNE SAUVEGARDE RAPIDE</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="277" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
-        <translation>Salva le posizioni correnti delle icone del desktop in un nuovo file, utilizzando il tag sopra.
+        <translation>Sauvegarder les positions actuelles des icônes dans un nouveau fichier, en utilisant l'étiquette ci-dessus.
 
-Scorciatoia: Ctrl+S</translation>
+Raccourci : Ctrl+S</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="285" />
         <source>↺ RESTORE LATEST</source>
-        <translation>↺ RIPRISTINA PIÙ RECENTE</translation>
+        <translation>↺ RESTAURER LA PLUS RÉCENTE</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="288" />
         <source>Restore icon positions from the LATEST backup file found.</source>
-        <translation>Ripristina le posizioni delle icone dal file di backup trovato PIÙ RECENTE.</translation>
+        <translation>Restaurer les positions des icônes depuis le fichier de sauvegarde LE PLUS RÉCENT trouvé.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="293" />
         <source>↺ BACKUP MANAGER</source>
-        <translation>↺ GESTIONE BACKUP</translation>
+        <translation>↺ GESTIONNAIRE DE SAUVEGARDES</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="297" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
-        <translation>Apre una finestra per selezionare un file di backup specifico da ripristinare o eliminare.
+        <translation>Ouvre une fenêtre pour sélectionner un fichier de sauvegarde spécifique à restaurer ou supprimer.
 
-Scorciatoia: Ctrl+M</translation>
+Raccourci : Ctrl+M</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="311" />
         <source>Activity Log:</source>
-        <translation>Log attività:</translation>
+        <translation>Journal d'activité :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="322" />
         <source>Current Resolution: %1</source>
-        <translation>Risoluzione attuale: %1</translation>
+        <translation>Résolution actuelle : %1</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="329" />
         <source>Support on Ko-fi</source>
-        <translation>Supportami su Ko-fi</translation>
+        <translation>Soutenir sur Ko-fi</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="335" />
         <source>Clear Log</source>
-        <translation>Pulisci log</translation>
+        <translation>Effacer le journal</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="377" />
         <source>Settings menu not found</source>
-        <translation>Menu delle impostazioni non trovato</translation>
+        <translation>Menu des paramètres introuvable</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="389" />
         <source>Opening online user manual in browser...</source>
-        <translation>Apertura del manuale utente online nel browser...</translation>
+        <translation>Ouverture du manuel d'utilisation en ligne dans le navigateur...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="391" />
         <source>✗ Failed to open manual URL</source>
-        <translation>✗ Impossibile aprire l'URL manuale</translation>
+        <translation>✗ Impossible d'ouvrir l'URL du manuel</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="723" />
@@ -880,7 +880,7 @@ Scorciatoia: Ctrl+M</translation>
         <location filename="..\ui\main_window.py" line="577" />
         <location filename="..\ui\main_window.py" line="394" />
         <source>Error</source>
-        <translation>Errore</translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="395" />
@@ -888,37 +888,37 @@ Scorciatoia: Ctrl+M</translation>
 
 Please visit manually:
 %1</source>
-        <translation>Impossibile aprire il manuale online.
+        <translation>Impossible d'ouvrir le manuel en ligne.
 
-Visita manualmente:
+Veuillez visiter manuellement :
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="402" />
         <source>Save</source>
-        <translation>Salva</translation>
+        <translation>Enregistrer</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="405" />
         <source>Quick Backup (Shortcut)</source>
-        <translation>Backup rapido (scorciatoia)</translation>
+        <translation>Sauvegarde rapide (Raccourci)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="409" />
         <source>Backup Manager</source>
-        <translation>Gestione backup</translation>
+        <translation>Gestionnaire de sauvegardes</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="414" />
         <source>Settings</source>
-        <translation>Impostazioni</translation>
+        <translation>Paramètres</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="446" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
-            <numerusform>Limite pulizia automatica impostato a: %n backup (0 = Disabilitato).</numerusform>
-            <numerusform>Limite pulizia automatica impostato a: %n backup (0 = Disabilitato).</numerusform>
+            <numerusform>Limite de nettoyage automatique définie sur : 1 sauvegarde (0 = Désactivé).</numerusform>
+            <numerusform>Limite de nettoyage automatique définie sur : %n sauvegardes (0 = Désactivé).</numerusform>
         </translation>
     </message>
     <message>
@@ -926,162 +926,162 @@ Visita manualmente:
         <location filename="..\ui\main_window.py" line="714" />
         <location filename="..\ui\main_window.py" line="463" />
         <source>Desktop Icon Manager</source>
-        <translation>Desktop Icon Manager</translation>
+        <translation>Gestionnaire d'icônes du bureau</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="493" />
         <source>Backup list updated (item deleted).</source>
-        <translation>Lista backup aggiornata (elemento eliminato).</translation>
+        <translation>Liste de sauvegardes mise à jour (élément supprimé).</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="499" />
         <source>Quick Backup</source>
-        <translation>Backup rapido</translation>
+        <translation>Sauvegarde rapide</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="513" />
         <source>Translation:</source>
-        <translation>Traduzione:</translation>
+        <translation>Traduction :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="519" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
-        <translation>Uno strumento semplice ma potente per salvare e ripristinare le posizioni delle icone del desktop di Windows.</translation>
+        <translation>Un outil simple mais puissant pour sauvegarder et restaurer les positions des icônes du bureau Windows.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="520" />
         <source>Key Features:</source>
-        <translation>Caratteristiche principali:</translation>
+        <translation>Fonctionnalités principales :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="522" />
         <source>Quick Save:</source>
-        <translation>Salvataggio rapido:</translation>
+        <translation>Sauvegarde rapide :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="522" />
         <source>Save icons with an optional descriptive tag.</source>
-        <translation>Salva le icone con un tag descrittivo opzionale.</translation>
+        <translation>Sauvegarder les icônes avec une étiquette descriptive optionnelle.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="523" />
         <source>Backup Management:</source>
-        <translation>Gestione del backup:</translation>
+        <translation>Gestion des sauvegardes :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="523" />
         <source>Select, restore, or delete specific backups.</source>
-        <translation>Seleziona, ripristina o elimina backup specifici.</translation>
+        <translation>Sélectionner, restaurer ou supprimer des sauvegardes spécifiques.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="524" />
         <source>Live Diff Preview:</source>
-        <translation>Anteprima delle differenze in tempo reale:</translation>
+        <translation>Aperçu des différences en direct :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="524" />
         <source>See which icons will move before restoring.</source>
-        <translation>Scopri quali icone si sposteranno prima del ripristino.</translation>
+        <translation>Voir quelles icônes se déplaceront avant de restaurer.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="525" />
         <source>Visual Preview:</source>
-        <translation>Anteprima visiva:</translation>
+        <translation>Aperçu visuel :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="525" />
         <source>See a mini-map of your layout.</source>
-        <translation>Visualizza una minimappa del tuo layout.</translation>
+        <translation>Voir une mini-carte de votre disposition.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="526" />
         <source>Backup Comparison:</source>
-        <translation>Confronto backup:</translation>
+        <translation>Comparaison de sauvegardes :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="526" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
-        <translation>Confronta due backup qualsiasi per vedere le icone aggiunte, rimosse e spostate.</translation>
+        <translation>Comparer deux sauvegardes pour voir les icônes ajoutées, supprimées et déplacées.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="527" />
         <source>Adaptive Scaling:</source>
-        <translation>Ridimensionamento adattivo:</translation>
+        <translation>Mise à l'échelle adaptative :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="527" />
         <source>Automatic adjustment for different resolutions.</source>
-        <translation>Regolazione automatica per diverse risoluzioni.</translation>
+        <translation>Ajustement automatique pour différentes résolutions.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="528" />
         <source>Automatic Cleanup:</source>
-        <translation>Pulizia automatica:</translation>
+        <translation>Nettoyage automatique :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="528" />
         <source>Set a limit on backups to keep.</source>
-        <translation>Imposta un limite ai backup da conservare.</translation>
+        <translation>Définir une limite de sauvegardes à conserver.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="529" />
         <source>Random Scramble:</source>
-        <translation>Mischia casualmente:</translation>
+        <translation>Mélange aléatoire :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="529" />
         <source>Randomize icon positions after backup.</source>
-        <translation>Rimescola la posizione delle icone dopo il backup.</translation>
+        <translation>Randomiser les positions des icônes après la sauvegarde.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="530" />
         <source>Tray Integration:</source>
-        <translation>Integrazione con la barra delle applicazioni:</translation>
+        <translation>Intégration dans la barre des tâches :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="530" />
         <source>Quick access via tray.</source>
-        <translation>Accesso rapido tramite barra delle applicazioni.</translation>
+        <translation>Accès rapide via la barre des tâches.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="532" />
         <source>Version:</source>
-        <translation>Versione:</translation>
+        <translation>Version :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="533" />
         <source>Development:</source>
-        <translation>Sviluppo:</translation>
+        <translation>Développement :</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="534" />
         <source>Support this project on Ko-fi</source>
-        <translation>Sostieni questo progetto su Ko-fi</translation>
+        <translation>Soutenir ce projet sur Ko-fi</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="536" />
         <source>About Desktop Icon Backup Manager</source>
-        <translation>Informazioni su Desktop Icon Backup Manager</translation>
+        <translation>À propos du Gestionnaire de Sauvegarde d'Icônes du Bureau</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="542" />
         <source>No backup files found to delete.</source>
-        <translation>Nessun file di backup trovato da eliminare.</translation>
+        <translation>Aucun fichier de sauvegarde à supprimer.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="545" />
         <source>No Backups Found</source>
-        <translation>Nessun backup trovato</translation>
+        <translation>Aucune sauvegarde trouvée</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="546" />
         <source>There are no backup files to delete.</source>
-        <translation>Non ci sono file di backup da eliminare.</translation>
+        <translation>Il n'y a aucun fichier de sauvegarde à supprimer.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="552" />
         <source>WARNING: Delete All Backups</source>
-        <translation>ATTENZIONE: elimina tutti i backup</translation>
+        <translation>AVERTISSEMENT : Supprimer toutes les sauvegardes</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="553" />
@@ -1089,59 +1089,59 @@ Visita manualmente:
 
 This action cannot be undone!</source>
         <translation>
-            <numerusform>Sei assolutamente sicuro di voler eliminare permanentemente l'unico file di backup delle icone del desktop?
+            <numerusform>Êtes-vous absolument sûr de vouloir supprimer définitivement TOUT 1 fichier de sauvegarde ?
 
-Questa azione non può essere annullata!</numerusform>
-            <numerusform>Sei assolutamente sicuro di voler eliminare permanentemente TUTTI i %n file di backup delle icone del desktop?
+Cette action ne peut pas être annulée !</numerusform>
+            <numerusform>Êtes-vous absolument sûr de vouloir supprimer définitivement TOUS les %n fichiers de sauvegarde ?
 
-Questa azione non può essere annullata!</numerusform>
+Cette action ne peut pas être annulée !</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="563" />
         <source>Starting deletion of all backup files...</source>
-        <translation>Avvio eliminazione di tutti i file di backup...</translation>
+        <translation>Démarrage de la suppression de tous les fichiers de sauvegarde...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="707" />
         <location filename="..\ui\main_window.py" line="571" />
         <source>Success</source>
-        <translation>Operazione riuscita</translation>
+        <translation>Succès</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="572" />
         <source>All backup files have been successfully deleted.</source>
-        <translation>Tutti i file di backup sono stati eliminati con successo.</translation>
+        <translation>Tous les fichiers de sauvegarde ont été supprimés avec succès.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="578" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
-        <translation>Alcuni file non sono stati eliminati. Controlla il Log attività per i dettagli.</translation>
+        <translation>Certains fichiers n'ont pas pu être supprimés. Consultez le journal d'activité pour plus de détails.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="586" />
         <source>Starting new timestamped backup...</source>
-        <translation>Avvio di un nuovo backup con data/ora...</translation>
+        <translation>Démarrage d'une nouvelle sauvegarde horodatée...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="588" />
         <source>  (Tag: %1)</source>
-        <translation>  (Tag: %1)</translation>
+        <translation>  (Étiquette : %1)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="592" />
         <source>Saving...</source>
-        <translation>Salvataggio in corso...</translation>
+        <translation>Enregistrement en cours...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="610" />
         <source>No backup files found to restore!</source>
-        <translation>Nessun file di backup trovato per il ripristino!</translation>
+        <translation>Aucun fichier de sauvegarde trouvé pour la restauration !</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="612" />
         <source>✗ Restore failed: No backup files found.</source>
-        <translation>✗ Ripristino non riuscito: nessun file di backup trovato.</translation>
+        <translation>✗ Échec de la restauration : Aucun fichier de sauvegarde trouvé.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="628" />
@@ -1155,12 +1155,12 @@ Questa azione non può essere annullata!</numerusform>
     <message>
         <location filename="..\ui\main_window.py" line="627" />
         <source>N/A (Old Format)</source>
-        <translation>N/D (vecchio formato)</translation>
+        <translation>N/D (Ancien format)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="632" />
         <source>Confirm Restore</source>
-        <translation>Conferma ripristino</translation>
+        <translation>Confirmer la restauration</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="633" />
@@ -1173,35 +1173,35 @@ Tag: %4
 Timestamp: %5
 
 Are you sure you want to proceed?</source>
-        <translation>Ripristina le posizioni delle icone dal file di backup PIÙ RECENTE:
+        <translation>Restaurer les positions des icônes depuis le fichier LE PLUS RÉCENT :
 
-File: %1
-Risoluzione: %2
-Icone: %3
-Tag: %4
-Data/ora: %5
+Fichier : %1
+Résolution : %2
+Icônes : %3
+Étiquette : %4
+Horodatage : %5
 
-Sei sicuro di voler procedere?</translation>
+Êtes-vous sûr de vouloir continuer ?</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="653" />
         <source>Starting restore from backup '%1'...</source>
-        <translation>Avvio ripristino dal backup '%1'...</translation>
+        <translation>Démarrage de la restauration depuis la sauvegarde '%1'...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="654" />
         <source>latest</source>
-        <translation>più recente</translation>
+        <translation>plus récente</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="659" />
         <source>Restoring...</source>
-        <translation>Ripristino in corso...</translation>
+        <translation>Restauration en cours...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="672" />
         <source>Confirm Scramble</source>
-        <translation>Conferma rimescolamento</translation>
+        <translation>Confirmer le mélange aléatoire</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="673" />
@@ -1210,229 +1210,229 @@ Sei sicuro di voler procedere?</translation>
 **A mandatory backup will be created first**.
 
 Do you want to proceed?</source>
-        <translation>Sei sicuro di voler rendere casuale la posizione di TUTTE le icone?
+        <translation>Êtes-vous sûr de vouloir randomiser les positions de TOUTES les icônes du bureau ?
 
-**Verrà creato prima un backup obbligatorio**.
+**Une sauvegarde obligatoire sera d'abord créée**.
 
-Vuoi procedere?</translation>
+Voulez-vous continuer ?</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="680" />
         <source>Starting desktop icon scrambling (randomization)...</source>
-        <translation>Avvio rimescolamento icone desktop (randomizzazione)...</translation>
+        <translation>Démarrage du mélange aléatoire des icônes du bureau...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="683" />
         <source>Scrambling icons...</source>
-        <translation>Rimescolamento icone...</translation>
+        <translation>Mélange aléatoire des icônes en cours...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="702" />
         <source>Operation completed successfully</source>
-        <translation>Operazione completata con successo</translation>
+        <translation>Opération terminée avec succès</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="708" />
         <source>Operation completed successfully! (%1)</source>
-        <translation>Operazione completata con successo! (%1)</translation>
+        <translation>Opération terminée avec succès ! (%1)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="715" />
         <source>%1 successful!</source>
-        <translation>%1 riuscito!</translation>
+        <translation>%1 réussi !</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="720" />
         <source>Operation failed</source>
-        <translation>Operazione non riuscita</translation>
+        <translation>Opération échouée</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="724" />
         <source>Operation failed (%1). Check the log for details.</source>
-        <translation>Operazione non riuscita (%1). Controlla il log per i dettagli.</translation>
+        <translation>Opération échouée (%1). Consultez le journal pour plus de détails.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="737" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
-        <translation>⚠ Avviso: metadati del display mancanti o incompleti.</translation>
+        <translation>⚠ Avertissement : Métadonnées d'affichage manquantes ou incomplètes.</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="742" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
-            <numerusform>⚠ Attenzione: salvato %n monitor rispetto ai %1 attuali.</numerusform>
-            <numerusform>⚠ Attenzione: salvati %n monitor rispetto ai %1 attuali.</numerusform>
+            <numerusform>⚠ Avertissement : Sauvegardé (1 moniteur) vs Actuel (%1 moniteur(s)).</numerusform>
+            <numerusform>⚠ Avertissement : Sauvegardé (%n moniteurs) vs Actuel (%1 moniteur(s)).</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="750" />
         <source>Monitor Mismatch Warning</source>
-        <translation>Avviso discrepanza monitor</translation>
+        <translation>Avertissement de discordance de moniteur</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="751" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
-        <translation>Il layout è stato salvato con %1 monitor, ma attualmente ne hai %2 collegati.
+        <translation>La disposition a été sauvegardée avec %1 moniteur(s), mais vous avez actuellement %2 moniteur(s) connecté(s).
 
-Le posizioni sono state ripristinate, ma potrebbero non essere accurate.</translation>
+Les positions des icônes ont été restaurées, mais elles peuvent être inexactes.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="773" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
-        <translation>⚠ Avviso: le risoluzioni dello schermo non corrispondono al layout salvato.</translation>
+        <translation>⚠ Avertissement : Les résolutions d'écran ne correspondent pas à la disposition sauvegardée.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="777" />
         <source>Resolution Mismatch Warning</source>
-        <translation>Avviso discrepanza risoluzione</translation>
+        <translation>Avertissement de discordance de résolution</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="778" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
-        <translation>Le risoluzioni di uno o più monitor non corrispondono al layout salvato.
+        <translation>Les résolutions d'écran d'un ou plusieurs moniteurs ne correspondent pas à la disposition sauvegardée.
 
-Le posizioni delle icone sono state ripristinate, ma potrebbero non essere accurate.</translation>
+Les positions des icônes ont été restaurées, mais elles peuvent être inexactes.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="790" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
-        <translation>Salvataggio automatico all'uscita abilitato. Esecuzione backup silenzioso...</translation>
+        <translation>Sauvegarde automatique à la fermeture activée. Exécution de la sauvegarde silencieuse...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="794" />
         <source>Auto-Save Log</source>
-        <translation>Log salvataggio automatico</translation>
+        <translation>Journal de sauvegarde automatique</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="809" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
-        <translation>Applicazione ridotta a icona nella barra delle applicazioni. Fai clic o doppio clic per ripristinare.</translation>
+        <translation>Application réduite dans la barre des tâches. Cliquez ou double-cliquez pour restaurer.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="834" />
         <source>Shortcut</source>
-        <translation>Scorciatoia</translation>
+        <translation>Raccourci</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="835" />
         <source>Action</source>
-        <translation>Azione</translation>
+        <translation>Action</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="839" />
         <source>Quick Save current layout</source>
-        <translation>Salvataggio rapido del layout attuale</translation>
+        <translation>Sauvegarder rapidement la disposition actuelle</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="843" />
         <source>Open Backup Manager</source>
-        <translation>Apri Gestione backup</translation>
+        <translation>Ouvrir le gestionnaire de sauvegardes</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="847" />
         <source>Open Settings menu</source>
-        <translation>Apri il menu Impostazioni</translation>
+        <translation>Ouvrir le menu des paramètres</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="851" />
         <source>Open Online User Manual</source>
-        <translation>Apri il Manuale utente online</translation>
+        <translation>Ouvrir le manuel d'utilisation en ligne</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="855" />
         <source>Exit Application</source>
-        <translation>Esci dall'applicazione</translation>
+        <translation>Quitter l'application</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="859" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
-        <translation>Suggerimento: passa il mouse sui pulsanti per vedere scorciatoie aggiuntive nei suggerimenti.</translation>
+        <translation>Conseil : Survolez les boutons pour voir les raccourcis supplémentaires dans les info-bulles.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="874" />
         <source>Close</source>
-        <translation>Chiudi</translation>
+        <translation>Fermer</translation>
     </message>
 </context><context>
     <name>SplashScreen</name>
     <message>
         <location filename="..\ui\splash_screen.py" line="143" />
         <source>Version: %1</source>
-        <translation>Versione: %1</translation>
+        <translation>Version : %1</translation>
     </message>
     <message>
         <location filename="..\ui\splash_screen.py" line="154" />
         <source>Development: mapi68</source>
-        <translation>Sviluppo: mapi68</translation>
+        <translation>Développement : mapi68</translation>
     </message>
     <message>
         <location filename="..\ui\splash_screen.py" line="179" />
         <source>Loading…</source>
-        <translation>Caricamento in corso…</translation>
+        <translation>Chargement…</translation>
     </message>
 </context><context>
     <name>_BackupPickerDialog</name>
     <message>
         <location filename="..\ui\backup_dialog.py" line="537" />
         <source>Pick Backup to Compare Against</source>
-        <translation>Seleziona il backup da confrontare</translation>
+        <translation>Choisir la sauvegarde à comparer</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="541" />
         <source>Select the second backup file:</source>
-        <translation>Seleziona il secondo file di backup:</translation>
+        <translation>Sélectionnez le deuxième fichier de sauvegarde :</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="555" />
         <source>Compare</source>
-        <translation>Confronta</translation>
+        <translation>Comparer</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="557" />
         <source>Cancel</source>
-        <translation>Annulla</translation>
+        <translation>Annuler</translation>
     </message>
 </context><context>
     <name>_DiffCanvas</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="211" />
         <source>No Preview Available</source>
-        <translation>Anteprima non disponibile</translation>
+        <translation>Aucun aperçu disponible</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="271" />
         <source>✓ already in place</source>
-        <translation>✓ già nella posizione corretta</translation>
+        <translation>✓ déjà en place</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="273" />
         <source>↕ will move</source>
-        <translation>↕ verrà spostata</translation>
+        <translation>↕ va se déplacer</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="276" />
         <source>⚠ not on desktop</source>
-        <translation>⚠ non sul desktop</translation>
+        <translation>⚠ pas sur le bureau</translation>
     </message>
 </context><context>
     <name>_LegendPanel</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="306" />
         <source>Already in place, will not move</source>
-        <translation>Già posizionata, non verrà spostata</translation>
+        <translation>Déjà en place, ne bougera pas</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="307" />
         <source>Will move  (orange = now,  red = target)</source>
-        <translation>Verrà spostata  (arancione = attuale,  rosso = destinazione)</translation>
+        <translation>Va se déplacer  (orange = maintenant,  rouge = cible)</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="308" />
         <source>In backup, not on desktop</source>
-        <translation>Nel backup, non sul desktop</translation>
+        <translation>Dans la sauvegarde, pas sur le bureau</translation>
     </message>
 </context></TS>

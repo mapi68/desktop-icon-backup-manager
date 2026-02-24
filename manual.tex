@@ -13,6 +13,7 @@
 \usepackage{titlesec}
 \usepackage{fontawesome5}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{float}
 \usepackage{parskip}
 \usepackage{needspace}
@@ -299,11 +300,15 @@ different resolutions, and complete automation through configurable settings.
   \item \textbf{Quick Backup}: Save icon positions with optional
     descriptive tags
   \item \textbf{Backup Management}: Dedicated interface with search
-    filtering to select, restore, or delete specific backups
+    filtering and sortable table columns to select, restore, or
+    delete specific backups
+  \item \textbf{Live Diff Preview}: Color-coded overlay showing exactly
+    which icons will move, appear, or stay in place \textit{before} you
+    confirm a restore
   \item \textbf{Visual Preview}: Mini-map display of icon layouts
     before restoring with interactive tooltips
-  \item \textbf{Backup Comparison}: Compare two backups to see
-    exactly what changed
+  \item \textbf{Backup Comparison}: Compare \textit{any two} backups
+    to see exactly what changed (added, removed, moved icons)
   \item \textbf{Adaptive Scaling}: Automatic adjustment of icon
     positions across different resolutions
   \item \textbf{Automatic Cleanup}: Configurable limit on the number
@@ -357,7 +362,7 @@ different resolutions, and complete automation through configurable settings.
     \end{verbatim}
   \item Run the script:
     \begin{verbatim}
-    python desktop-icon-backup-manager.py
+    python main.py
     \end{verbatim}
 \end{enumerate}
 
@@ -522,19 +527,30 @@ restoring, a detailed confirmation dialog displays complete backup information.
 \textcolor{primary}{\textbf{Color: Blue | Shortcut: Ctrl+M | Button
 icon: \faUndo}}
 
-Opens the comprehensive backup management window that provides:
+Opens the comprehensive backup management window (default size: 1600×800,
+resizable) that provides:
 \begin{itemize}
   \item \textbf{Search/Filter Bar}: Real-time filtering by tag,
     resolution, or date
-  \item \textbf{Backup List}: Tabular view with aligned columns for
-    easy scanning
-  \item \textbf{Visual Preview}: Mini-map display of icon layouts
-    before restoring, with interactive tooltips for icon identification
+  \item \textbf{Sortable Table}: Click any column header to sort
+    (description, resolution, icon count, timestamp). The Tag/Description
+    column stretches to fill available space; Resolution, Icons, and
+    Timestamp columns have fixed widths with centre-aligned content.
+  \item \textbf{Live Diff Preview}: Before restoring, see exactly
+    which icons will move (orange $\rightarrow$ red arrow), which are
+    already in place (blue), and which are missing from the desktop (green)
+  \item \textbf{Legend Panel}: A dedicated legend widget displayed
+    \textit{outside} the canvas, to the right of the information box,
+    showing the colour coding used in the diff preview (blue = in place,
+    orange/red arrow = will move, green = not on desktop)
   \item \textbf{Detailed Information}: Extended metadata display for
-    selected backup
+    the selected backup (file name, icon count, resolution, description,
+    formatted timestamp), shown alongside the legend panel
   \item \textbf{Context Menu}: Right-click for quick restore,
-    compare, or delete actions
-  \item \textbf{Batch Operations}: Select and delete multiple backups
+    compare with latest, or delete actions
+  \item \textbf{Flexible Comparison}: Compare the selected backup
+    against \textit{any} other backup (not just the latest) via the
+    ``Compare Two Selected\ldots'' button
 \end{itemize}
 
 \section{File Menu}
@@ -958,7 +974,8 @@ Displays program information including:
 \subsection{Backup Manager Window}
 
 The Backup Manager provides a professional interface for managing all
-saved backups with advanced features.
+saved backups with advanced features. The window is \textbf{resizable}
+to suit any screen size or DPI setting.
 
 \subsubsection{Search and Filter Bar}
 
@@ -971,73 +988,83 @@ saved backups with advanced features.
   \item Searches across all displayed information: tag, resolution,
     icon count, timestamp
   \item Clear button (X) to quickly reset filter
-  \item Placeholder text: "Search by tag, resolution, or date..."
+  \item Placeholder text: ``Search by tag, resolution, or date\ldots''
 \end{itemize}
 
 \textbf{Search Examples}:
 \begin{itemize}
-  \item Type "1920" $\rightarrow$ Shows only backups saved at 1920×* resolution
-  \item Type "work" $\rightarrow$ Shows backups with "work" in their
+  \item Type ``1920'' $\rightarrow$ Shows only backups saved at
+    1920$\times$* resolution
+  \item Type ``work'' $\rightarrow$ Shows backups with ``work'' in their
     tag/description
-  \item Type "2024/12" $\rightarrow$ Shows backups from December 2024
-  \item Type "15" $\rightarrow$ Shows backups with 15 icons or saved
+  \item Type ``2024/12'' $\rightarrow$ Shows backups from December 2024
+  \item Type ``15'' $\rightarrow$ Shows backups with 15 icons or saved
     on the 15th day
 \end{itemize}
 
-\subsubsection{Backup List Columns}
+\subsubsection{Backup Table Columns}
 
-The list displays backups in a monospaced font (Consolas) for perfect
-column alignment:
+The list is displayed in a \textbf{sortable QTableWidget} --- click any
+column header to sort ascending or descending:
 
 \begin{enumerate}
-  \item \textbf{TAG/DESCRIPTION} (55 chars width): User-provided
-    description, truncated with "..." if longer, shown in brackets
-    [Description Here]
-  \item \textbf{RESOLUTION} (14 chars width): Monitor resolution at
-    save time (e.g., "1920x1080")
-  \item \textbf{ICONS} (6 chars width): Number of icons in the
-    backup, right-aligned
-  \item \textbf{TIMESTAMP} (variable width): Human-readable date/time
-    in format "YYYY/MM/DD HH:MM:SS"
+  \item \textbf{Tag / Description}: User-provided description
+    (stretches to fill available space)
+  \item \textbf{Resolution}: Monitor resolution at save time
+    (e.g.\ ``1920x1080'')
+  \item \textbf{Icons}: Number of icons in the backup, right-aligned
+  \item \textbf{Timestamp}: Human-readable date/time in format
+    ``YYYY/MM/DD HH:MM:SS''
 \end{enumerate}
 
-\textbf{Example List Display}:
-\begin{verbatim}
-TAG/DESCRIPTION                   | RESOLUTION    | ICONS | TIMESTAMP
-[Work Setup Final]                | 1920x1080     |    12 | 2024/12/11 14:30:15
-[Gaming Layout]                   | 2560x1440     |    18 | 2024/12/10 22:15:00
-[Clean Desktop]                   | 1920x1080     |     5 | 2024/12/09 09:00:00
-[Auto-Save on Exit]               | 1920x1080     |    12 | 2024/12/08 18:45:30
-\end{verbatim}
+\subsubsection{Live Diff Preview Panel}
 
-\subsubsection{Visual Preview Panel}
+\textbf{Location}: Right side of the window, above the info panel.
 
-\textbf{Location}: Right side of the window
+\textbf{New in this version}: When you select a backup, the preview
+automatically fetches the \textit{current} live icon positions from the
+desktop and overlays them against the saved positions, giving you a
+visual diff \textit{before} you commit to restoring.
 
-\textbf{Features}:
+The preview canvas draws a subtle grid to convey the desktop space,
+and each icon state is rendered with a distinct visual treatment:
+
 \begin{itemize}
-  \item Dark background (\#1a1a1a) with subtle border
-  \item Icons displayed as blue dots (\#0078d7, 8px diameter)
-  \item Automatic scaling to fit preview area (450×250 pixels)
-  \item Updates dynamically when selecting different backups
-  \item Shows "No Preview Available" when no backup is selected
+  \item \textbf{\textcolor{primary}{Blue dot} (with soft halo)} ---
+    Icon is already in the correct saved position; restoring will not move it.
+  \item \textbf{Orange dot $\xrightarrow{\text{dashed}}$ Red dot} ---
+    Icon will move.  The orange dot marks the \textit{current} position;
+    the red dot marks the \textit{target} position from the backup.
+    A dashed arrow connects them to show direction.
+  \item \textbf{\textcolor{success}{Green dot}} ---
+    Icon exists in the backup but is not currently on the desktop
+    (will be skipped during restore).
 \end{itemize}
 
-\textbf{Scaling Calculation}:
-\begin{itemize}
-  \item Preview uses saved resolution from backup file
-  \item Scale X = Preview Width / Saved Width
-  \item Scale Y = Preview Height / Saved Height
-  \item Each icon position is multiplied by scale factors
-  \item Positions are clamped to preview boundaries (5px margin)
-\end{itemize}
+\textbf{Legend}: A compact 3-row panel below the canvas uses custom
+pixel-drawn dot and arrow icons (not Unicode characters) so that
+every row has exactly the same height and spacing, regardless of
+system font or DPI.  Rows are arranged with a fixed-height
+\texttt{QGridLayout} (26\,px per row) to guarantee uniform vertical
+spacing.
 
-\subsubsection{Interactive Tooltip Preview}
+\textbf{Interactive Tooltips}: Hover over any dot to see the icon name
+and its status (\textit{``\checkmark\ already in place''},
+  \textit{``$\updownarrow$\ will move''},
+or \textit{``$\triangle$\ not on desktop''}).
 
-\textbf{Location}: Integrated within the Visual Preview Panel
+\begin{infobox}[Pro Tip: Live Diff]
+  Use the Live Diff Preview to assess the impact of a restore at a
+  glance.  A mostly blue canvas means the backup already matches your
+  current layout; many orange/red dot-pairs indicate significant
+  movement.  You can inspect and then cancel the restore dialog if needed.
+\end{infobox}
 
-The preview panel features an interactive tooltip system that
-identifies icons as you hover over them with the mouse.
+\subsubsection{Visual Preview Panel (standard)}
+
+In addition to the live diff, the standard preview is available via the
+single-backup dot-map in the information panel on the right, with
+interactive tooltip on hover:
 
 \textbf{Technical Implementation}:
 \begin{itemize}
@@ -1046,24 +1073,8 @@ identifies icons as you hover over them with the mouse.
   \item Hover detection uses distance calculation: $\sqrt{(dx)^2 +
     (dy)^2} < 12$ pixels
   \item Icon names displayed via \texttt{QToolTip.showText()} at cursor position
-  \item Real-time update as mouse moves across preview
   \item Automatic tooltip hiding when cursor leaves icon proximity
-  \item Coordinate scaling matches preview transformation
 \end{itemize}
-
-\textbf{Visual Styling}:
-\begin{itemize}
-  \item Black text on light yellow background (\#ffffdc)
-  \item Segoe UI font, 12px size
-  \item 1px black border for visibility
-  \item Follows cursor movement smoothly
-\end{itemize}
-
-\begin{infobox}[Pro Tip]
-  Use this feature to verify that a backup contains specific
-  shortcuts or files before performing a full restore, especially
-  when dealing with multiple backups created on the same day.
-\end{infobox}
 
 \subsubsection{Information Panel}
 
@@ -1082,40 +1093,49 @@ Timestamp: 2024-12-11T14:30:15
 \textbf{Restore Operations}:
 \begin{itemize}
   \item Double-click any backup in the list
-  \item Select backup + click "Restore Selected Layout" button
-  \item Right-click backup $\rightarrow$ "Restore Selected" in context menu
+  \item Select backup + click ``Restore Selected Layout'' button
+  \item Right-click backup $\rightarrow$ ``Restore Selected'' in context menu
 \end{itemize}
 
 \textbf{Delete Operations}:
 \begin{itemize}
-  \item Right-click backup $\rightarrow$ "Delete Selected"
-  \item Confirmation dialog shows before deletion
+  \item Right-click backup $\rightarrow$ ``Delete Selected''
+  \item Confirmation dialog shown before deletion
   \item Successful deletion refreshes the list automatically
-  \item List view updates to reflect removal
 \end{itemize}
 
 \textbf{Selection Behavior}:
 \begin{itemize}
   \item Single-selection mode (one backup at a time)
   \item Selection changes update preview and info panels immediately
-  \item "Restore Selected Layout" button disabled when no valid selection
+  \item ``Restore Selected Layout'' button disabled when no valid selection
   \item Keyboard navigation supported (arrow keys, Enter to restore)
 \end{itemize}
 
 \subsection{Backup Comparison}
 
 The application includes an intelligent comparison system that lets
-you compare the \textbf{latest backup} with any other
-\textbf{selected backup} from the list, visualizing structural changes
-and icon movements between two different points in time.
+you compare \textbf{any two backups} from the list, visualizing
+structural changes and icon movements between two different points in time.
 
 \subsubsection{How to Use Comparison}
 
+\textbf{Method 1 --- Compare with Latest (context menu)}:
 \begin{enumerate}
   \item Open the Backup Manager
   \item Select any backup from the list (other than the latest)
-  \item Use the \textit{Compare with Latest} option from the context menu
-  \item A color-coded report appears in the comparison panel
+  \item Right-click $\rightarrow$ \textit{Compare with Latest}
+  \item A color-coded report appears in the comparison dialog
+\end{enumerate}
+
+\textbf{Method 2 --- Compare any two backups (button)}:
+\begin{enumerate}
+  \item Open the Backup Manager
+  \item Select the \textbf{first} backup from the table
+  \item Click the ``\textbf{Compare Two Selected\ldots}'' button at the bottom
+  \item A mini-picker dialog opens showing all other available backups
+  \item Select the \textbf{second} backup and click Compare
+  \item A color-coded report appears
 \end{enumerate}
 
 \subsubsection{Comparison Engine Details}
@@ -1821,11 +1841,28 @@ storage for archiving.
 
 \begin{itemize}
   \item \texttt{DesktopIconManager}: Core logic for
-    save/restore/scramble operations
-  \item \texttt{IconWorker}: QThread worker for background processing
+    save/restore/scramble; exposes \texttt{get\_current\_icon\_positions()}
+    for live diff
+  \item \texttt{BackupComparator}: Standalone module
+    (\texttt{core/comparator.py}) for diff reports between any two backups
+  \item \texttt{IconWorker}: QThread worker; accepts a shared
+    \texttt{DesktopIconManager} instance to avoid redundant desktop
+    handle detection
   \item \texttt{MainWindow}: Primary application window and UI orchestration
-  \item \texttt{BackupManagerWindow}: Backup selection and management dialog
-  \item \texttt{IconPreviewWidget}: Custom widget for visual layout preview
+  \item \texttt{BackupManagerWindow}: Backup selection dialog with
+    sortable \texttt{QTableWidget} (resizable)
+  \item \texttt{IconPreviewWidget}: Standard single-backup dot-map preview
+  \item \texttt{\_DiffCanvas}: Custom \texttt{QWidget} that paints the
+    live diff overlay (grid, dots, dashed arrows, arrowheads)
+  \item \texttt{\_ColorDot}: Pixel-drawn circle widget used in the legend
+    to guarantee uniform size across all DPI settings
+  \item \texttt{\_ArrowIcon}: Pixel-drawn orange→red arrow widget that
+    illustrates the ``will move'' legend entry
+  \item \texttt{\_LegendPanel}: \texttt{QFrame} with a fixed-row-height
+    \texttt{QGridLayout} (26\,px/row) ensuring perfectly uniform vertical
+    spacing for all legend entries
+  \item \texttt{DiffPreviewWidget}: Composes \texttt{\_DiffCanvas} +
+    \texttt{\_LegendPanel} into the final panel shown in the Backup Manager
 \end{itemize}
 
 \subsection{Remote Memory Access Process}
@@ -2035,51 +2072,6 @@ geometry=@Rect(100 100 800 650)
   \item No system information beyond screen resolution
 \end{itemize}
 
-\section{Directory Structure}
-
-\begin{center}
-  \begin{minipage}{\textwidth}
-\begin{verbatim}
-
-.
-├── about.txt                    Quick info
-├── compile.spec                 PyInstaller config
-├── core                         Icon backup engine & app configuration
-│   ├── config.py                Configuration & constants
-│   └── icon_manager.py          Core functionality
-├── i18n                         Localization
-│   ├── it_IT.qm                 Binary translation file
-│   └── it_IT.ts                 Translation source
-├── icon.ico                     Windows icon file
-├── icon.png                     Portable network graphic icon
-├── images                       Screenshots for docs
-│   ├── DIBM_1.png               Screenshot 1
-│   ├── DIBM_2.png               Screenshot 2
-│   ├── DIBM_3.png               Screenshot 3
-│   ├── DIBM_4.png               Screenshot 4
-│   ├── DIBM_5.png               Screenshot 5
-│   └── DIBM_6.png               Screenshot 6
-├── LICENSE                      MIT license
-├── main.py                      Entry point (run this!)
-├── manual.tex                   Latex user manual
-├── README.md                    Project overview
-├── requirements.txt             Python dependencies
-├── ui                           User interface
-│   ├── backup_dialog.py         Backup manager
-│   ├── __init__.py              Initialization script
-│   ├── main_window.py           Main window
-│   ├── preview_widget.py        Icon preview
-│   └── splash_screen.py         Startup splash screen
-├── utils                        Utilities
-│   ├── helpers.py               Helper functions
-│   ├── __init__.py              Initialization script
-│   └── threads.py               Worker threads
-└── version.txt                  Version number
-
-\end{verbatim}
-  \end{minipage}
-\end{center}
-
 \section{Development and Contribution}
 
 \subsection{Building from Source}
@@ -2094,7 +2086,7 @@ Python 3.8+
 git clone https://github.com/mapi68/desktop-icon-backup-manager.git
 cd desktop-icon-backup-manager
 pip install -r requirements.txt
-python desktop-icon-backup-manager.py
+python main.py
 \end{verbatim}
 
 \textbf{Building Executable with PyInstaller}:
@@ -2102,7 +2094,7 @@ python desktop-icon-backup-manager.py
 pip install pyinstaller
 pyinstaller --onefile --windowed --icon=icon.ico \
     --name="desktop-icon-backup-manager" \
-    desktop-icon-backup-manager.py
+    main.py
 \end{verbatim}
 
 \subsection{Translation/Localization}

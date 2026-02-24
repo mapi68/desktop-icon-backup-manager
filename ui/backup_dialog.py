@@ -9,21 +9,23 @@ from PyQt6.QtWidgets import (
     QHBoxLayout,
     QLabel,
     QLineEdit,
-    QListWidget,
-    QListWidgetItem,
+    QTableWidget,
+    QTableWidgetItem,
+    QHeaderView,
+    QAbstractItemView,
     QPushButton,
     QMessageBox,
-    QAbstractItemView,
     QMenu,
     QTextEdit,
+    QSizePolicy,
 )
-from PyQt6.QtCore import Qt, pyqtSignal
-from PyQt6.QtGui import QAction
+from PyQt6.QtCore import Qt, pyqtSignal, QSize
+from PyQt6.QtGui import QAction, QColor, QFont
 
 from core.config import Config
+from core.comparator import BackupComparator
 from utils.helpers import parse_backup_filename, parse_resolution_string
-from ui.preview_widget import IconPreviewWidget
-from core.icon_manager import BackupComparator
+from ui.preview_widget import IconPreviewWidget, DiffPreviewWidget, make_legend_widget
 
 
 class BackupManagerWindow(QDialog):
@@ -34,165 +36,292 @@ class BackupManagerWindow(QDialog):
         super().__init__(parent)
         self.manager = manager
         self.setWindowTitle(self.tr("Select, Restore, or Delete Backup"))
-        self.setFixedSize(1150, 650)
-        self.layout = QVBoxLayout(self)
-        self.layout.setSpacing(10)
-        self.layout.addWidget(
-            QLabel(self.tr("Select a backup to restore or right-click to delete."))
+        # Bug 6 fix: use setMinimumSize instead of setFixedSize so it
+        # adapts to high-DPI / small screens.
+        self.setMinimumSize(1200, 600)
+        self.resize(1600, 800)
+
+        root = QVBoxLayout(self)
+        root.setSpacing(8)
+
+        root.addWidget(
+            QLabel(self.tr("Select a backup to restore or right-click for options."))
         )
+
+        # Search bar
         self.search_input = QLineEdit()
         self.search_input.setPlaceholderText(
             self.tr("Search by tag, resolution, or date...")
         )
         self.search_input.setClearButtonEnabled(True)
         self.search_input.textChanged.connect(self.filter_backups)
-        self.layout.addWidget(self.search_input)
+        root.addWidget(self.search_input)
+
+        # ── Main horizontal split ────────────────────────────────────────────
         h_split = QHBoxLayout()
-        left_panel = QVBoxLayout()
-        header_text = (
-            f"{self.tr('TAG/DESCRIPTION'):<55} "
-            f"| {self.tr('RESOLUTION'):<14} "
-            f"| {self.tr('ICONS'):<6} "
-            f"| {self.tr('TIMESTAMP')}"
+
+        # Left: table of backups
+        left = QVBoxLayout()
+
+        # Improvement: QTableWidget instead of fragile monospaced text
+        self.table = QTableWidget()
+        self.table.setColumnCount(4)
+        self.table.setHorizontalHeaderLabels(
+            [
+                self.tr("Tag / Description"),
+                self.tr("Resolution"),
+                self.tr("Icons"),
+                self.tr("Timestamp"),
+            ]
         )
-        header_label = QLabel(header_text)
-        header_label.setStyleSheet(
-            "font-family: 'Consolas', monospace; font-size: 11px; font-weight: bold; margin-bottom: 2px;"
+        # Col 0: Tag/Description — stretches to fill remaining space
+        self.table.horizontalHeader().setSectionResizeMode(
+            0, QHeaderView.ResizeMode.Stretch
         )
-        left_panel.addWidget(header_label)
-        self.list_widget = QListWidget()
-        self.list_widget.setSelectionMode(
-            QAbstractItemView.SelectionMode.SingleSelection
+        # Col 1: Resolution — fixed, enough for "1920x1080"
+        self.table.horizontalHeader().setSectionResizeMode(
+            1, QHeaderView.ResizeMode.Fixed
         )
-        self.list_widget.setStyleSheet(
-            "font-family: 'Consolas', monospace; font-size: 11px;"
+        self.table.horizontalHeader().resizeSection(1, 80)
+        # Col 2: Icons — fixed, enough for a 3-digit count
+        self.table.horizontalHeader().setSectionResizeMode(
+            2, QHeaderView.ResizeMode.Fixed
         )
-        left_panel.addWidget(self.list_widget)
-        h_split.addLayout(left_panel, 6)
-        right_panel = QVBoxLayout()
-        right_panel.addWidget(QLabel(self.tr("Layout Preview:")))
-        self.preview_widget = IconPreviewWidget()
-        right_panel.addWidget(self.preview_widget)
+        self.table.horizontalHeader().resizeSection(2, 46)
+        # Col 3: Timestamp — fixed, enough for "2026/02/22 16:30:02"
+        self.table.horizontalHeader().setSectionResizeMode(
+            3, QHeaderView.ResizeMode.Fixed
+        )
+        self.table.horizontalHeader().resizeSection(3, 140)
+        self.table.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.table.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.table.setAlternatingRowColors(True)
+        self.table.verticalHeader().setVisible(False)
+        self.table.setStyleSheet("font-family: 'Segoe UI'; font-size: 11px;")
+        self.table.setSortingEnabled(True)
+        self.table.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.table.setMinimumWidth(490)
+        # Centre-align headers for numeric/date columns
+        for col in (1, 2, 3):
+            self.table.horizontalHeaderItem(col).setTextAlignment(
+                Qt.AlignmentFlag.AlignCenter
+            )
+        left.addWidget(self.table)
+        h_split.addLayout(left, 4)
+
+        # Right: preview + info
+        right = QVBoxLayout()
+        right.setSpacing(8)
+
+        # Live diff preview label — styled to stand out
+        preview_label = QLabel(self.tr("Layout Preview (saved positions vs current):"))
+        preview_label.setStyleSheet(
+            "color: #888888; font-family: 'Segoe UI'; font-size: 10px;"
+            " font-weight: bold; background: transparent; padding: 0px;"
+        )
+        right.addWidget(preview_label)
+
+        self.preview_widget = DiffPreviewWidget()
+        right.addWidget(self.preview_widget, stretch=1)
+
         self.info_label = QLabel(self.tr("Select a backup to see details."))
         self.info_label.setWordWrap(True)
         self.info_label.setStyleSheet(
-            "color: #ccc; background-color: #2b2b2b; border-radius: 4px; padding: 10px; font-family: 'Segoe UI'; font-size: 12px;"
+            "color: #ccc; background-color: #2b2b2b; border-radius: 4px;"
+            " padding: 10px; font-family: 'Segoe UI'; font-size: 12px;"
         )
-        right_panel.addWidget(self.info_label)
-        right_panel.addStretch()
-        h_split.addLayout(right_panel, 2)
-        self.layout.addLayout(h_split)
-        button_layout = QHBoxLayout()
+        self.info_label.setMinimumHeight(100)
+
+        # Legend sits to the right of info_label, same height
+        self._legend_widget = make_legend_widget()
+        self._legend_widget.setSizePolicy(
+            QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding
+        )
+        self._legend_widget.setMinimumWidth(420)
+
+        info_row = QHBoxLayout()
+        info_row.setSpacing(8)
+        info_row.addWidget(self.info_label, stretch=1)
+        info_row.addWidget(self._legend_widget)
+        right.addLayout(info_row)
+        h_split.addLayout(right, 8)
+
+        root.addLayout(h_split)
+
+        # Bottom buttons
+        btn_row = QHBoxLayout()
         self.btn_restore = QPushButton(self.tr("Restore Selected Layout"))
         self.btn_restore.clicked.connect(self.restore_selected)
         self.btn_restore.setEnabled(False)
+
+        self.btn_compare = QPushButton(self.tr("📊 Compare Two Selected..."))
+        self.btn_compare.clicked.connect(self.compare_selected_pair)
+        self.btn_compare.setEnabled(False)
+
         self.btn_close = QPushButton(self.tr("Close"))
         self.btn_close.clicked.connect(self.reject)
-        button_layout.addWidget(self.btn_restore)
-        button_layout.addStretch(1)
-        button_layout.addWidget(self.btn_close)
-        self.layout.addLayout(button_layout)
-        self.list_widget.itemSelectionChanged.connect(self.on_selection_changed)
-        self.list_widget.itemDoubleClicked.connect(self.restore_selected)
-        self.list_widget.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
-        self.list_widget.customContextMenuRequested.connect(self.show_context_menu)
+
+        btn_row.addWidget(self.btn_restore)
+        btn_row.addWidget(self.btn_compare)
+        btn_row.addStretch(1)
+        btn_row.addWidget(self.btn_close)
+        root.addLayout(btn_row)
+
+        # Connect signals
+        self.table.itemSelectionChanged.connect(self.on_selection_changed)
+        self.table.itemDoubleClicked.connect(self.restore_selected)
+        self.table.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
+        self.table.customContextMenuRequested.connect(self.show_context_menu)
+
         self.load_backups()
 
+    # ── Data loading ─────────────────────────────────────────────────────────
+
     def load_backups(self):
-        self.list_widget.clear()
+        self.table.setSortingEnabled(False)
+        self.table.setRowCount(0)
         backups = self.manager.get_all_backup_filenames()
-        if not backups:
-            self.list_widget.addItem(QListWidgetItem(self.tr("No backups found.")))
-            return
+
         for filename in backups:
             readable_date, resolution, _ = parse_backup_filename(filename)
             description = ""
-            icon_count = "N/A"
+            icon_count = self.tr("N/A")
             filepath = os.path.join(Config.BACKUP_DIR, filename)
             try:
                 with open(filepath, "r", encoding="utf-8") as f:
                     data = json.load(f)
                     description = data.get("description", "").strip()
-                    icon_count = data.get("icon_count", "N/A")
-            except Exception:
+                    icon_count = data.get("icon_count", self.tr("N/A"))
+            except (OSError, json.JSONDecodeError):
                 pass
-            description_display = f"{f'[{description[:52]}]':<56}"
-            resolution_display = f"| {resolution:<15}"
-            icon_count_display = f"| {icon_count:>6}"
-            item_text = f"{description_display}{resolution_display}{icon_count_display} | {readable_date}"
-            item = QListWidgetItem(item_text)
-            item.setData(Qt.ItemDataRole.UserRole, filename)
-            self.list_widget.addItem(item)
+
+            row = self.table.rowCount()
+            self.table.insertRow(row)
+
+            desc_item = QTableWidgetItem(description)
+            desc_item.setData(Qt.ItemDataRole.UserRole, filename)
+            self.table.setItem(row, 0, desc_item)
+
+            res_item = QTableWidgetItem(resolution)
+            res_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+            self.table.setItem(row, 1, res_item)
+
+            count_item = QTableWidgetItem(str(icon_count))
+            count_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+            self.table.setItem(row, 2, count_item)
+
+            date_item = QTableWidgetItem(readable_date)
+            date_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+            self.table.setItem(row, 3, date_item)
+
+        self.table.setSortingEnabled(True)
+
+        if not backups:
+            self.table.setRowCount(1)
+            no_item = QTableWidgetItem(self.tr("No backups found."))
+            no_item.setFlags(Qt.ItemFlag.NoItemFlags)
+            self.table.setItem(0, 0, no_item)
+
+    def _selected_filename(self) -> str | None:
+        rows = self.table.selectedItems()
+        if not rows:
+            return None
+        filename = self.table.item(rows[0].row(), 0).data(Qt.ItemDataRole.UserRole)
+        return filename
+
+    # ── Selection / preview ──────────────────────────────────────────────────
 
     def on_selection_changed(self):
-        items = self.list_widget.selectedItems()
-        if not items or items[0].data(Qt.ItemDataRole.UserRole) is None:
-            self.preview_widget.update_preview({}, (1920, 1080))
+        filename = self._selected_filename()
+        if not filename:
+            self.preview_widget.update_preview({}, {}, (1920, 1080))
             self.info_label.setText(self.tr("Select a backup to see details."))
             self.btn_restore.setEnabled(False)
+            self.btn_compare.setEnabled(False)
             return
-        filename = items[0].data(Qt.ItemDataRole.UserRole)
+
         filepath = os.path.join(Config.BACKUP_DIR, filename)
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                icons = data.get("icons", {})
-                res_str = parse_backup_filename(filename)[1]
-                res_tuple = parse_resolution_string(res_str)
-                self.preview_widget.update_preview(icons, res_tuple)
-                desc = data.get("description", self.tr("None"))
-                ts = data.get("timestamp", "N/A")
-                count = len(icons)
-                info = (
-                    f"<b>{self.tr('File')}:</b> {filename}<br>"
-                    f"<b>{self.tr('Icons')}:</b> {count}<br>"
-                    f"<b>{self.tr('Resolution')}:</b> {res_str}<br>"
-                    f"<b>{self.tr('Description')}:</b> {desc}<br>"
-                    f"<b>{self.tr('Timestamp')}:</b> {ts}"
-                )
-                self.info_label.setText(info)
-                self.btn_restore.setEnabled(True)
-        except Exception as e:
+            saved_icons = data.get("icons", {})
+            res_str = parse_backup_filename(filename)[1]
+            res_tuple = parse_resolution_string(res_str) or (1920, 1080)
+
+            # Fetch live positions for the diff preview
+            try:
+                current_icons = self.manager.get_current_icon_positions()
+            except Exception:
+                current_icons = {}
+
+            self.preview_widget.update_preview(saved_icons, current_icons, res_tuple)
+
+            desc = data.get("description", self.tr("None"))
+            ts_raw = data.get("timestamp", self.tr("N/A"))
+            try:
+                from datetime import datetime as _dt
+
+                ts = _dt.fromisoformat(ts_raw).strftime("%Y/%m/%d %H:%M:%S")
+            except Exception:
+                ts = ts_raw
+            count = len(saved_icons)
+            info = (
+                f"<b>{self.tr('File')}:</b> {filename}<br>"
+                f"<b>{self.tr('Icons')}:</b> {count}<br>"
+                f"<b>{self.tr('Resolution')}:</b> {res_str}<br>"
+                f"<b>{self.tr('Description')}:</b> {desc}<br>"
+                f"<b>{self.tr('Timestamp')}:</b> {ts}"
+            )
+            self.info_label.setText(info)
+            self.btn_restore.setEnabled(True)
+            self.btn_compare.setEnabled(True)
+        except (OSError, json.JSONDecodeError) as e:
             self.info_label.setText(f"{self.tr('Error')}: {str(e)}")
             self.btn_restore.setEnabled(False)
+            self.btn_compare.setEnabled(False)
 
-    def filter_backups(self, query):
+    def filter_backups(self, query: str):
         query = query.lower()
-        for i in range(self.list_widget.count()):
-            item = self.list_widget.item(i)
-            item.setHidden(query not in item.text().lower())
+        for row in range(self.table.rowCount()):
+            row_text = " ".join(
+                self.table.item(row, col).text()
+                for col in range(self.table.columnCount())
+                if self.table.item(row, col)
+            ).lower()
+            self.table.setRowHidden(row, query not in row_text)
 
-    def get_selected_filename(self):
-        selected = self.list_widget.selectedItems()
-        if not selected:
-            return None
-        return selected[0].data(Qt.ItemDataRole.UserRole)
+    # ── Context menu ─────────────────────────────────────────────────────────
 
     def show_context_menu(self, pos):
-        item = self.list_widget.itemAt(pos)
-        if not item or not item.data(Qt.ItemDataRole.UserRole):
+        row = self.table.rowAt(pos.y())
+        if row < 0:
+            return
+        filename = self.table.item(row, 0).data(Qt.ItemDataRole.UserRole)
+        if not filename:
             return
 
         menu = QMenu(self)
-
         restore_action = QAction(self.tr("🔄 Restore Selected"), self)
         restore_action.triggered.connect(self.restore_selected)
 
         delete_action = QAction(self.tr("🗑️ Delete Selected"), self)
         delete_action.triggered.connect(self.delete_selected)
 
-        compare_action = QAction(self.tr("📊 Compare with Latest"), self)
-        compare_action.triggered.connect(self.compare_with_latest)
+        # Improvement: compare any two backups (not just vs latest)
+        compare_latest_action = QAction(self.tr("📊 Compare with Latest"), self)
+        compare_latest_action.triggered.connect(self.compare_with_latest)
 
         menu.addAction(restore_action)
-        menu.addAction(compare_action)
+        menu.addAction(compare_latest_action)
         menu.addSeparator()
         menu.addAction(delete_action)
+        menu.exec(self.table.mapToGlobal(pos))
 
-        menu.exec(self.list_widget.mapToGlobal(pos))
+    # ── Actions ──────────────────────────────────────────────────────────────
 
     def restore_selected(self):
-        fn = self.get_selected_filename()
+        fn = self._selected_filename()
         if not fn:
             return
 
@@ -202,8 +331,8 @@ class BackupManagerWindow(QDialog):
                 data = json.load(f)
 
             readable_date, resolution, _ = parse_backup_filename(fn)
-            description = data.get("description", "N/A")
-            icon_count = data.get("icon_count", "N/A")
+            description = data.get("description", self.tr("N/A"))
+            icon_count = data.get("icon_count", self.tr("N/A"))
 
             reply = QMessageBox.question(
                 self,
@@ -229,7 +358,7 @@ class BackupManagerWindow(QDialog):
                 self.restore_requested.emit(fn)
                 self.accept()
 
-        except Exception as e:
+        except (OSError, json.JSONDecodeError) as e:
             QMessageBox.critical(
                 self,
                 self.tr("Error"),
@@ -237,7 +366,7 @@ class BackupManagerWindow(QDialog):
             )
 
     def delete_selected(self):
-        fn = self.get_selected_filename()
+        fn = self._selected_filename()
         if not fn:
             return
 
@@ -263,8 +392,9 @@ class BackupManagerWindow(QDialog):
                 )
 
     def compare_with_latest(self):
-        selected_filename = self.get_selected_filename()
-        if not selected_filename:
+        """Compare selected backup against the latest one."""
+        selected = self._selected_filename()
+        if not selected:
             QMessageBox.warning(
                 self,
                 self.tr("No Selection"),
@@ -272,14 +402,14 @@ class BackupManagerWindow(QDialog):
             )
             return
 
-        latest_filename = self.manager.get_latest_backup_filename()
-        if not latest_filename:
+        latest = self.manager.get_latest_backup_filename()
+        if not latest:
             QMessageBox.warning(
                 self, self.tr("Error"), self.tr("No latest backup found")
             )
             return
 
-        if selected_filename == latest_filename:
+        if selected == latest:
             QMessageBox.information(
                 self,
                 self.tr("Same Backup"),
@@ -287,114 +417,151 @@ class BackupManagerWindow(QDialog):
             )
             return
 
-        file1 = os.path.join(Config.BACKUP_DIR, selected_filename)
-        file2 = os.path.join(Config.BACKUP_DIR, latest_filename)
+        self._show_comparison_dialog(selected, latest, is_latest=True)
 
-        report = BackupComparator.compare(file1, file2)
-
-        if report:
-            dialog = QDialog(self)
-            dialog.setWindowTitle(self.tr("Comparison Results"))
-            dialog.resize(650, 550)
-
-            dialog.setStyleSheet("""
-                QDialog {
-                    background-color: #1e1e1e;
-                }
-                QLabel {
-                    color: #ffffff;
-                    background-color: #2d2d30;
-                    border: 1px solid #3f3f46;
-                    border-radius: 4px;
-                    padding: 12px;
-                    font-family: 'Segoe UI';
-                    font-size: 11px;
-                }
-                QTextEdit {
-                    color: #d4d4d4;
-                    background-color: #1e1e1e;
-                    border: 1px solid #3f3f46;
-                    border-radius: 4px;
-                    font-family: 'Consolas', monospace;
-                    font-size: 11px;
-                    selection-background-color: #264f78;
-                    selection-color: #ffffff;
-                }
-                QPushButton {
-                    color: #ffffff;
-                    background-color: #0e639c;
-                    border: 1px solid #1177bb;
-                    border-radius: 4px;
-                    padding: 8px 16px;
-                    font-family: 'Segoe UI';
-                    font-size: 11px;
-                    font-weight: bold;
-                }
-                QPushButton:hover {
-                    background-color: #1177bb;
-                    border: 1px solid #1c8dd9;
-                }
-                QPushButton:pressed {
-                    background-color: #0d5a8f;
-                }
-            """)
-
-            layout = QVBoxLayout(dialog)
-            layout.setSpacing(10)
-            layout.setContentsMargins(15, 15, 15, 15)
-
-            header = QLabel(
-                f"<b style='color: #4ec9b0;'>{self.tr('Comparing Backups:')}</b><br>"
-                f"<span style='color: #9cdcfe;'>📄 {selected_filename}</span><br>"
-                f"<span style='color: #4fc1ff;'>📄 {latest_filename} ({self.tr('latest')})</span>"
+    def compare_selected_pair(self):
+        """
+        Improvement: compare any two backups. Opens a mini-picker dialog so
+        the user can choose the second file without being limited to 'latest'.
+        """
+        selected = self._selected_filename()
+        if not selected:
+            QMessageBox.warning(
+                self,
+                self.tr("No Selection"),
+                self.tr("Please select a backup first."),
             )
-            layout.addWidget(header)
+            return
 
-            text_area = QTextEdit()
-            text_area.setReadOnly(True)
+        all_files = self.manager.get_all_backup_filenames()
+        other_files = [f for f in all_files if f != selected]
+        if not other_files:
+            QMessageBox.information(
+                self,
+                self.tr("Not Enough Backups"),
+                self.tr("There is only one backup. Nothing to compare against."),
+            )
+            return
 
-            html_report = self._colorize_comparison_report(report)
-            text_area.setHtml(html_report)
+        picker = _BackupPickerDialog(other_files, self)
+        if picker.exec() == QDialog.DialogCode.Accepted and picker.chosen:
+            self._show_comparison_dialog(selected, picker.chosen, is_latest=False)
 
-            layout.addWidget(text_area)
+    def _show_comparison_dialog(self, file_a: str, file_b: str, is_latest: bool):
+        path_a = os.path.join(Config.BACKUP_DIR, file_a)
+        path_b = os.path.join(Config.BACKUP_DIR, file_b)
+        report = BackupComparator.compare(path_a, path_b)
 
-            btn_close = QPushButton(self.tr("✓ Close"))
-            btn_close.clicked.connect(dialog.accept)
-            btn_close.setMinimumHeight(35)
-            layout.addWidget(btn_close)
-
-            dialog.exec()
-        else:
+        if not report:
             QMessageBox.critical(
                 self, self.tr("Error"), self.tr("Failed to compare backups")
             )
+            return
 
-    def _colorize_comparison_report(self, report: str) -> str:
+        label_b = f"{file_b} ({self.tr('latest')})" if is_latest else file_b
+
+        dialog = QDialog(self)
+        dialog.setWindowTitle(self.tr("Comparison Results"))
+        dialog.resize(650, 550)
+        dialog.setStyleSheet("""
+            QDialog { background-color: #1e1e1e; }
+            QLabel { color: #ffffff; background-color: #2d2d30; border: 1px solid #3f3f46;
+                     border-radius: 4px; padding: 12px; font-family: 'Segoe UI'; font-size: 11px; }
+            QTextEdit { color: #d4d4d4; background-color: #1e1e1e; border: 1px solid #3f3f46;
+                        border-radius: 4px; font-family: 'Consolas', monospace; font-size: 11px;
+                        selection-background-color: #264f78; selection-color: #ffffff; }
+            QPushButton { color: #ffffff; background-color: #0e639c; border: 1px solid #1177bb;
+                          border-radius: 4px; padding: 8px 16px; font-family: 'Segoe UI';
+                          font-size: 11px; font-weight: bold; }
+            QPushButton:hover { background-color: #1177bb; }
+        """)
+
+        layout = QVBoxLayout(dialog)
+        layout.setSpacing(10)
+        layout.setContentsMargins(15, 15, 15, 15)
+
+        header = QLabel(
+            f"<b style='color: #4ec9b0;'>{self.tr('Comparing Backups:')}</b><br>"
+            f"<span style='color: #9cdcfe;'>📄 {file_a}</span><br>"
+            f"<span style='color: #4fc1ff;'>📄 {label_b}</span>"
+        )
+        layout.addWidget(header)
+
+        text_area = QTextEdit()
+        text_area.setReadOnly(True)
+        text_area.setHtml(self._colorize_report(report))
+        layout.addWidget(text_area)
+
+        btn_close = QPushButton(self.tr("✓ Close"))
+        btn_close.clicked.connect(dialog.accept)
+        btn_close.setMinimumHeight(35)
+        layout.addWidget(btn_close)
+
+        dialog.exec()
+
+    def _colorize_report(self, report: str) -> str:
         lines = report.split("\n")
         html_lines = []
-
         for line in lines:
             if line.startswith("==="):
                 html_lines.append(
-                    f"<p style='color: #4ec9b0; font-weight: bold; font-size: 12pt;'>{line}</p>"
+                    f"<p style='color:#4ec9b0;font-weight:bold;font-size:12pt;'>{line}</p>"
                 )
             elif line.startswith("---"):
                 html_lines.append(
-                    f"<p style='color: #dcdcaa; font-weight: bold; margin-top: 10px;'>{line}</p>"
+                    f"<p style='color:#dcdcaa;font-weight:bold;margin-top:10px;'>{line}</p>"
                 )
             elif "Icon(s) Added:" in line or "  + " in line:
-                html_lines.append(f"<p style='color: #4ec9b0;'>{line}</p>")
+                html_lines.append(f"<p style='color:#4ec9b0;'>{line}</p>")
             elif "Icon(s) Removed:" in line or "  - " in line:
-                html_lines.append(f"<p style='color: #f48771;'>{line}</p>")
+                html_lines.append(f"<p style='color:#f48771;'>{line}</p>")
             elif "Icon(s) Moved:" in line or "  ↔" in line:
-                html_lines.append(f"<p style='color: #dcdcaa;'>{line}</p>")
+                html_lines.append(f"<p style='color:#dcdcaa;'>{line}</p>")
             elif "Icon(s) Unchanged:" in line:
-                html_lines.append(f"<p style='color: #808080;'>{line}</p>")
+                html_lines.append(f"<p style='color:#808080;'>{line}</p>")
             elif "✓" in line:
                 html_lines.append(
-                    f"<p style='color: #89d185; font-weight: bold;'>{line}</p>"
+                    f"<p style='color:#89d185;font-weight:bold;'>{line}</p>"
                 )
             else:
-                html_lines.append(f"<p style='color: #d4d4d4;'>{line}</p>")
-
+                html_lines.append(f"<p style='color:#d4d4d4;'>{line}</p>")
         return "".join(html_lines)
+
+
+class _BackupPickerDialog(QDialog):
+    """Small helper dialog to pick a second backup file for comparison."""
+
+    def __init__(self, filenames: list[str], parent=None):
+        super().__init__(parent)
+        self.chosen: str | None = None
+        self.setWindowTitle(self.tr("Pick Backup to Compare Against"))
+        self.setMinimumSize(500, 300)
+
+        layout = QVBoxLayout(self)
+        layout.addWidget(QLabel(self.tr("Select the second backup file:")))
+
+        from PyQt6.QtWidgets import QListWidget, QListWidgetItem
+
+        self.list = QListWidget()
+        for fn in filenames:
+            readable_date, resolution, _ = parse_backup_filename(fn)
+            item = QListWidgetItem(f"{readable_date}  [{resolution}]  {fn}")
+            item.setData(Qt.ItemDataRole.UserRole, fn)
+            self.list.addItem(item)
+        self.list.itemDoubleClicked.connect(self._accept)
+        layout.addWidget(self.list)
+
+        btn_row = QHBoxLayout()
+        ok_btn = QPushButton(self.tr("Compare"))
+        ok_btn.clicked.connect(self._accept)
+        cancel_btn = QPushButton(self.tr("Cancel"))
+        cancel_btn.clicked.connect(self.reject)
+        btn_row.addWidget(ok_btn)
+        btn_row.addWidget(cancel_btn)
+        layout.addLayout(btn_row)
+
+    def _accept(self):
+        sel = self.list.selectedItems()
+        if sel:
+            self.chosen = sel[0].data(Qt.ItemDataRole.UserRole)
+            self.accept()

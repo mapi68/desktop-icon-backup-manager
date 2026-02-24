@@ -26,9 +26,16 @@ from PyQt6.QtWidgets import (
     QLineEdit,
 )
 
-from PyQt6.QtCore import QSettings, QTranslator, QLocale, QCoreApplication, QRect
+from PyQt6.QtCore import (
+    QSettings,
+    QTranslator,
+    QLocale,
+    QCoreApplication,
+    QRect,
+    QTimer,
+    QUrl,
+)
 from PyQt6.QtGui import QAction, QKeySequence, QIcon, QDesktopServices, QCursor
-from PyQt6.QtCore import QUrl
 
 import win32gui
 import win32con
@@ -514,7 +521,9 @@ class MainWindow(QMainWindow):
             f"<ul>"
             f"<li><b>{self.tr('Quick Save:')}</b> {self.tr('Save icons with an optional descriptive tag.')}</li>"
             f"<li><b>{self.tr('Backup Management:')}</b> {self.tr('Select, restore, or delete specific backups.')}</li>"
+            f"<li><b>{self.tr('Live Diff Preview:')}</b> {self.tr('See which icons will move before restoring.')}</li>"
             f"<li><b>{self.tr('Visual Preview:')}</b> {self.tr('See a mini-map of your layout.')}</li>"
+            f"<li><b>{self.tr('Backup Comparison:')}</b> {self.tr('Compare any two backups to see added, removed, and moved icons.')}</li>"
             f"<li><b>{self.tr('Adaptive Scaling:')}</b> {self.tr('Automatic adjustment for different resolutions.')}</li>"
             f"<li><b>{self.tr('Automatic Cleanup:')}</b> {self.tr('Set a limit on backups to keep.')}</li>"
             f"<li><b>{self.tr('Random Scramble:')}</b> {self.tr('Randomize icon positions after backup.')}</li>"
@@ -583,7 +592,10 @@ class MainWindow(QMainWindow):
         self.statusBar().showMessage(self.tr("Saving..."))
 
         self.worker = IconWorker(
-            "save", description=description, max_backup_count=cleanup_limit
+            "save",
+            description=description,
+            max_backup_count=cleanup_limit,
+            manager=self.manager,
         )
         self.worker.log_signal.connect(self.log)
         self.worker.progress_signal.connect(self.update_progress)
@@ -603,17 +615,17 @@ class MainWindow(QMainWindow):
         formatted_date = get_readable_date(latest_backup_file)
         resolution = get_resolution_from_filename(latest_backup_file)
 
-        description = "N/A"
-        icon_count = "N/A"
+        description = self.tr("N/A")
+        icon_count = self.tr("N/A")
         filepath = os.path.join(Config.BACKUP_DIR, latest_backup_file)
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                description = data.get("description", "N/A")
-                icon_count = data.get("icon_count", "N/A")
+                description = data.get("description", self.tr("N/A"))
+                icon_count = data.get("icon_count", self.tr("N/A"))
         except Exception:
-            description = "N/A (Old Format)"
-            icon_count = "N/A"
+            description = self.tr("N/A (Old Format)")
+            icon_count = self.tr("N/A")
 
         reply = QMessageBox.question(
             self,
@@ -646,7 +658,9 @@ class MainWindow(QMainWindow):
         self.show_progress(True)
         self.statusBar().showMessage(self.tr("Restoring..."))
 
-        self.worker = IconWorker("restore", filename, enable_scaling=enable_scaling)
+        self.worker = IconWorker(
+            "restore", filename, enable_scaling=enable_scaling, manager=self.manager
+        )
         self.worker.log_signal.connect(self.log)
         self.worker.progress_signal.connect(self.update_progress)
         self.worker.finished_signal.connect(self.on_operation_finished)
@@ -668,7 +682,7 @@ class MainWindow(QMainWindow):
             self.show_progress(True)
             self.statusBar().showMessage(self.tr("Scrambling icons..."))
 
-            self.worker = IconWorker("scramble")
+            self.worker = IconWorker("scramble", manager=self.manager)
             self.worker.log_signal.connect(self.log)
             self.worker.progress_signal.connect(self.update_progress)
             self.worker.finished_signal.connect(self.on_operation_finished)
@@ -816,29 +830,29 @@ class MainWindow(QMainWindow):
         shortcuts_text = f"""
         <h2>{self.tr("Keyboard Shortcuts")}</h2>
         <table style='width:100%; border-collapse: collapse;'>
-            <tr style='background-color: #db2db2;'>
-                <th style='padding: 8px; text-align: left; border: 1px solid #ddd;'>{self.tr("Shortcut")}</th>
-                <th style='padding: 8px; text-align: left; border: 1px solid #ddd;'>{self.tr("Action")}</th>
+            <tr style='background-color: #2b2b2b;'>
+                <th style='padding: 8px; text-align: left; border: 1px solid #444;'>{self.tr("Shortcut")}</th>
+                <th style='padding: 8px; text-align: left; border: 1px solid #444;'>{self.tr("Action")}</th>
             </tr>
             <tr>
-                <td style='padding: 8px; border: 1px solid #ddd;'><b>Ctrl+S</b></td>
-                <td style='padding: 8px; border: 1px solid #ddd;'>{self.tr("Quick Save current layout")}</td>
+                <td style='padding: 8px; border: 1px solid #444;'><b>Ctrl+S</b></td>
+                <td style='padding: 8px; border: 1px solid #444;'>{self.tr("Quick Save current layout")}</td>
             </tr>
-            <tr style='background-color: #db2d2d;'>
-                <td style='padding: 8px; border: 1px solid #ddd;'><b>Ctrl+M</b></td>
-                <td style='padding: 8px; border: 1px solid #ddd;'>{self.tr("Open Backup Manager")}</td>
-            </tr>
-            <tr>
-                <td style='padding: 8px; border: 1px solid #ddd;'><b>Ctrl+,</b></td>
-                <td style='padding: 8px; border: 1px solid #ddd;'>{self.tr("Open Settings menu")}</td>
-            </tr>
-            <tr style='background-color: #db2d2d;'>
-                <td style='padding: 8px; border: 1px solid #ddd;'><b>F1</b></td>
-                <td style='padding: 8px; border: 1px solid #ddd;'>{self.tr("Open Online User Manual")}</td>
+            <tr style='background-color: #1e1e1e;'>
+                <td style='padding: 8px; border: 1px solid #444;'><b>Ctrl+M</b></td>
+                <td style='padding: 8px; border: 1px solid #444;'>{self.tr("Open Backup Manager")}</td>
             </tr>
             <tr>
-                <td style='padding: 8px; border: 1px solid #ddd;'><b>Ctrl+Q</b></td>
-                <td style='padding: 8px; border: 1px solid #ddd;'>{self.tr("Exit Application")}</td>
+                <td style='padding: 8px; border: 1px solid #444;'><b>Ctrl+,</b></td>
+                <td style='padding: 8px; border: 1px solid #444;'>{self.tr("Open Settings menu")}</td>
+            </tr>
+            <tr style='background-color: #1e1e1e;'>
+                <td style='padding: 8px; border: 1px solid #444;'><b>F1</b></td>
+                <td style='padding: 8px; border: 1px solid #444;'>{self.tr("Open Online User Manual")}</td>
+            </tr>
+            <tr>
+                <td style='padding: 8px; border: 1px solid #444;'><b>Ctrl+Q</b></td>
+                <td style='padding: 8px; border: 1px solid #444;'>{self.tr("Exit Application")}</td>
             </tr>
         </table>
         <br>

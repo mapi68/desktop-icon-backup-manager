@@ -10,46 +10,6 @@ from PyQt6.QtCore import QThread, pyqtSignal
 from core.icon_manager import DesktopIconManager
 
 
-class SaveThread(QThread):
-    """Thread for asynchronous backup save operation"""
-
-    log_signal = pyqtSignal(str)
-    finished_signal = pyqtSignal(bool)
-
-    def __init__(self, manager, description: str, max_backup_count: int):
-        super().__init__()
-        self.manager = manager
-        self.description = description
-        self.max_backup_count = max_backup_count
-
-    def run(self):
-        """Execute save operation"""
-        success = self.manager.save(
-            self.log_signal.emit, self.description, self.max_backup_count
-        )
-        self.finished_signal.emit(success)
-
-
-class RestoreThread(QThread):
-    """Thread for asynchronous backup restore operation"""
-
-    log_signal = pyqtSignal(str)
-    finished_signal = pyqtSignal(bool, object)
-
-    def __init__(self, manager, filename: str, enable_scaling: bool):
-        super().__init__()
-        self.manager = manager
-        self.filename = filename
-        self.enable_scaling = enable_scaling
-
-    def run(self):
-        """Execute restore operation"""
-        success, metadata = self.manager.restore(
-            self.log_signal.emit, self.filename, self.enable_scaling
-        )
-        self.finished_signal.emit(success, metadata)
-
-
 class IconWorker(QThread):
     """Worker thread for icon operations (save/restore/scramble)"""
 
@@ -64,6 +24,7 @@ class IconWorker(QThread):
         description: Optional[str] = None,
         max_backup_count: int = 0,
         enable_scaling: bool = False,
+        manager: Optional[DesktopIconManager] = None,
     ):
         super().__init__()
         self.mode = mode
@@ -71,7 +32,8 @@ class IconWorker(QThread):
         self.description = description
         self.max_backup_count = max_backup_count
         self.enable_scaling = enable_scaling
-        self.manager = DesktopIconManager()
+        # Re-use a shared manager instance if provided, avoiding redundant hwnd detection
+        self.manager = manager if manager is not None else DesktopIconManager()
 
     def run(self):
         """Execute the requested operation"""
@@ -148,9 +110,7 @@ class IconWorker(QThread):
                     success = False
 
         except Exception as e:
-            self.log_signal.emit(
-                self.tr("✗ CRITICAL ERROR: %1").replace("%1", str(str(e)))
-            )
+            self.log_signal.emit(self.tr("✗ CRITICAL ERROR: %1").replace("%1", str(e)))
             success = False
         finally:
             self.finished_signal.emit(success, metadata)
