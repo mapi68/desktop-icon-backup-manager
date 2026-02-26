@@ -1,12 +1,35 @@
-# Desktop Icon Backup Manager
+# Desktop Icon Backup Manager — Save & Restore Desktop Icon Positions on Windows 10 / 11
 
 [![☕ Liked this tool? Buy me a coffee! — ko-fi.com/mapi68](https://img.shields.io/badge/-%E2%98%95%20Liked%20this%20tool%3F%20%20Buy%20me%20a%20coffee!%20%E2%80%94%20ko--fi.com%2Fmapi68-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=1a1a2e)](https://ko-fi.com/mapi68)
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
-[![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
+[![Windows](https://img.shields.io/badge/Platform-Windows%207%20%2F%2010%20%2F%2011-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
 [![GitHub release](https://img.shields.io/github/v/release/mapi68/desktop-icon-backup-manager?style=for-the-badge&logo=github&color=2ea44f)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
 [![GitHub All Releases](https://img.shields.io/github/downloads/mapi68/desktop-icon-backup-manager/total?style=for-the-badge&logo=github-actions&color=6f42c1)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
 [![License](https://img.shields.io/badge/License-MIT-41AD49?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
+
+---
+
+**Desktop Icon Backup Manager** is the most feature-complete free, open-source tool to **save, restore, and manage desktop icon positions and layouts on Windows**. Unlike simpler alternatives, it gives you a **live visual diff preview before every restore**, **adaptive scaling across resolutions**, **multi-monitor warnings**, and **full CLI automation** — all in a single portable `.exe` with no installation required.
+
+> **TL;DR:** Windows keeps moving your desktop icons. This tool saves your exact layout and restores it in one click — with a preview of what will change before you commit. Free, open source, portable. Works on Windows 7, 10, 11 (up to 25H2).
+
+---
+
+## 😤 Sound familiar?
+
+Windows has had a well-known, never-fixed bug since Windows 7: desktop icons rearrange themselves without any warning. Every version of Windows — including Windows 11 25H2 — still suffers from it. Here are the most common triggers:
+
+- 🔄 **After a Windows Update** — icons reset to the left side or sort into alphabetical order
+- 🖥️ **After connecting or disconnecting an external monitor or docking station** — the entire layout collapses onto the primary screen
+- 🎮 **After playing a full-screen game** — the game changes the screen resolution, and Windows scrambles all icon positions on exit
+- 💤 **After sleep, hibernate, or lock screen** — icons shift position, especially along the right edge of the screen
+- 🔌 **After changing screen resolution or DPI scaling** — icons pile up in the top-left corner
+- 📺 **After switching between laptop screen and a TV or projector** — the layout is completely lost
+- 🔁 **After a reboot** — Windows ignores your carefully arranged positions and auto-arranges instead
+
+If any of these scenarios sound familiar, **Desktop Icon Backup Manager is exactly what you need**.
+Save your perfect desktop layout once. Restore it in seconds — and see a colour-coded preview of every icon that will move *before* you click Restore.
 
 ---
 
@@ -15,7 +38,7 @@
 [![User Manual](https://img.shields.io/badge/Manual-PDF-EC1C24?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)](https://mapi68.github.io/desktop-icon-backup-manager/manual.pdf)
 
 > [!TIP]
-> You can always access the latest updated documentation at the following link: [User Manual (PDF)](https://mapi68.github.io/desktop-icon-backup-manager/manual.pdf)
+> Full documentation is always available here: [User Manual (PDF)](https://mapi68.github.io/desktop-icon-backup-manager/manual.pdf)
 
 ---
 
@@ -27,162 +50,193 @@
 
 ---
 
-## ✨ Features
+## ✨ What Makes This Tool Different
 
-### Core Functionality
-- **💾 Quick Backup**: Save your desktop icon layout with a single click, with an optional descriptive tag
-- **↺ Restore Options**: Restore from the latest backup or choose from a list of saved configurations
-- **🏷️ Custom Tags**: Add descriptive tags to your backups for easy identification
-- **📊 Resolution Tracking**: Automatically records screen resolution and monitor metadata with each backup
+Most icon layout tools do one thing: save a list of coordinates and restore them. **Desktop Icon Backup Manager goes much further.**
+
+### 🔍 Live Diff Preview — Unique to This Tool
+Before restoring any backup, you see a **colour-coded live overlay** showing *exactly* which icons will move, which are already in position, and which exist in the backup but are missing from your current desktop. No other free tool offers this. You always know what will happen before you click Restore — no surprises.
+
+| Colour | Meaning |
+|--------|---------|
+| 🔵 **Blue** (with soft halo) | Already in the correct position — will not move |
+| 🟠 **Orange** ──▶ 🔴 **Red** | Will move: orange = current position, red = saved destination |
+| 🟢 **Green** | In the backup, but not currently on the desktop — will be skipped |
+
+### 🔄 Adaptive Scaling — Restore Across Different Resolutions
+When you restore a backup saved at 1920×1080 onto a 2560×1440 display, icon positions are **automatically recalculated proportionally** so they land in the right area of the new screen. Icons no longer pile up in a corner. This works seamlessly across any resolution change — including DPI scaling differences.
+
+### ⚖️ Compare Any Two Backups
+Not just "current vs. backup" — you can select **any two saved layouts** and diff them side by side. See exactly which icons were added, removed, or moved between two points in time. Useful for tracking how your desktop evolved, or for choosing which of two old snapshots to restore.
+
+### 🖥️ Multi-Monitor Awareness
+Every backup records the full monitor configuration (count, resolution, arrangement). When you restore on a different setup, **the app warns you** before proceeding. Create named backups for each configuration — `Laptop Only`, `Office Dock`, `Home TV` — and switch between them instantly.
+
+### ⚡ Full CLI Automation
+Run backup and restore operations silently from the command line, Windows Task Scheduler, login scripts, or batch files — with no GUI at all. Schedule automatic desktop icon backups at login, and your layout is always safe without any manual effort.
+
+### 🔓 Fully Open Source
+Every line of code is on GitHub, MIT licensed, auditable, and forkable. No telemetry, no ads, no account, no cloud. Your backup files are plain JSON — human-readable and portable between machines.
+
+---
+
+## 🚀 Features at a Glance
+
+### Core — Save and Restore Desktop Icon Layouts
+- **💾 Quick Backup**: Save your entire desktop icon layout with one click; add an optional tag like `Before Update` or `Dual Monitor Setup`
+- **↺ One-Click Restore**: Restore icon positions from the latest backup, or pick any snapshot from the Backup Manager
+- **🏷️ Custom Tags**: Label each backup for easy identification — no more guessing which snapshot is which
+- **📊 Resolution & Monitor Metadata**: Every backup records screen resolution, DPI, and monitor count
 
 ### Advanced Features
-- **🔍 Live Diff Preview**: Before restoring, see a color-coded overlay showing exactly which icons will move (orange→red with arrow), which are already in place (blue), and which are missing from the desktop (green)
-- **🖼️ Visual Layout Preview**: See a mini-map of your icon arrangement before restoring, with interactive tooltips showing icon names
-- **🔄 Adaptive Scaling**: Automatically adjusts icon positions when restoring to a different screen resolution
-- **🖥️ Multi-Monitor Support**: Detects and handles multiple monitor configurations, with warnings when the setup differs from the saved backup
-- **⚖️ Flexible Comparison**: Compare **any two backups** against each other (not just vs. latest) to see added, removed, and moved icons — via context menu or the dedicated "Compare Two Selected…" button
-- **🗑️ Smart Cleanup**: Automatic deletion of old backups when a configured limit is reached (5, 10, 25, 50, or unlimited)
-- **⚡ System Tray Integration**: Run minimized in the background with quick access to save/restore from the tray icon
+- **🔍 Live Diff Preview**: Colour-coded overlay before every restore — see what will move, stay, or be skipped *(unique feature)*
+- **🖼️ Visual Dot-Map Preview**: Mini-map of all icon positions with hover tooltips showing icon names
+- **🔄 Adaptive Scaling**: Proportional position recalculation when restoring to a different resolution or DPI
+- **🖥️ Multi-Monitor Support + Warnings**: Full multi-monitor save/restore with automatic alerts on config mismatch
+- **⚖️ Backup Comparison**: Diff any two saved layouts against each other *(unique feature)*
+- **🗑️ Smart Auto-Cleanup**: Keep only the N most recent backups (5 / 10 / 25 / 50 / unlimited)
+- **⚡ System Tray**: Save or restore silently from the tray icon — no need to open the main window
 
 ### Automation & CLI
-- **Auto-Save on Exit**: Automatically backup your layout when closing the application
-- **Auto-Restore on Startup**: Automatically restore the latest backup when the application starts
-- **Command Line Interface**: Run headless backup and restore operations for scripting and scheduled tasks
-- **Background Operations**: All operations run in a separate thread with real-time progress indicators
+- **Auto-Save on Exit**: Backup icon positions automatically every time the app closes
+- **Auto-Restore on Startup**: Restore your layout automatically every time Windows starts
+- **Command Line Interface**: Full `--backup`, `--restore`, `--silent` support for scripting and Task Scheduler
+- **Background Threading**: Save/restore never freezes the UI — live progress indicator always visible
 
-### User Experience
-- **📋 Sortable Backup Table**: Click any column header (Tag, Resolution, Icons, Timestamp) to sort the backup list
-- **↔️ Resizable Backup Manager**: The window adapts to any screen size or DPI setting
-- **🌍 Multi-language**: Auto-detected from system locale or manually selected
-- **⌨️ Keyboard Shortcuts**: Full keyboard navigation — see [shortcuts table](#%EF%B8%8F-keyboard-shortcuts) below
-- **📋 Detailed Activity Log**: Track all operations with timestamped entries; copy log with `Ctrl+A` / `Ctrl+C`
-- **✅ Confirmation Dialogs**: Prevent accidental overwrites or deletions
+### Usability
+- **📋 Sortable + Filterable Backup Table**: Sort by tag, resolution, icon count, or timestamp; real-time search filter
+- **↔️ Fully Resizable Windows**: Adapts to any screen size or DPI setting
+- **🌍 16+ Languages**: Auto-detected from Windows locale, or manually overridden
+- **⌨️ Full Keyboard Navigation**: Every action has a shortcut — see the [shortcuts table](#%EF%B8%8F-keyboard-shortcuts)
+- **📋 Timestamped Activity Log**: Full operation history; copy with `Ctrl+A` / `Ctrl+C`
+- **✅ Confirmation Dialogs**: Always confirms before overwrite or delete — no accidents
+
+---
+
+## 🔍 How Desktop Icon Backup Manager Compares
+
+There are a few tools in this space. Here is how they stack up:
+
+| Feature | **Desktop Icon Backup Manager** | ReIcon | DesktopOK | Windows built-in |
+|---|:---:|:---:|:---:|:---:|
+| Save icon positions | ✅ | ✅ | ✅ | ❌ |
+| Restore icon positions | ✅ | ✅ | ✅ | ❌ |
+| **Live diff preview before restore** | ✅ | ❌ | ❌ | ❌ |
+| **Visual dot-map layout preview** | ✅ | ❌ | ❌ | ❌ |
+| **Compare any two backups** | ✅ | ❌ | ❌ | ❌ |
+| Adaptive scaling (resolution change) | ✅ | ✅ | ❌ | ❌ |
+| Multi-monitor support + warnings | ✅ | ✅ | ✅ | ❌ |
+| CLI / Task Scheduler automation | ✅ | ✅ | ❌ | ❌ |
+| Search / filter saved backups | ✅ | ❌ | ❌ | ❌ |
+| Auto-save on exit | ✅ | ⚠️ partial | ✅ | ❌ |
+| Auto-restore on startup | ✅ | ⚠️ via shortcut | ✅ | ❌ |
+| System tray integration | ✅ | ✅ | ✅ | ❌ |
+| Context menu integration | ❌ | ✅ | ❌ | ❌ |
+| **Open source (MIT)** | ✅ | ❌ | ❌ | — |
+| Portable (no install required) | ✅ | ✅ | ✅ | — |
+| **Actively maintained for Windows 11 25H2** | ✅ | ✅ | ⚠️ | — |
+| Multi-language UI | ✅ 16+ | ❌ | ✅ | — |
+| Free | ✅ | ✅ | ✅ | — |
+
+> **The bolded rows are where Desktop Icon Backup Manager stands apart.** No other free tool offers a live diff preview, visual layout preview, or cross-backup comparison. These features mean you always know exactly what will happen before you restore — and you can audit your backup history with confidence.
+>
+> **ReIcon** (by Sordum) is a good lightweight option with CLI support and resolution scaling. It lacks visual previews, diff comparison, and backup search — it is simpler but also more limited.  
+> **DesktopOK** is the oldest and best-known tool in this category, but it is closed source, has no CLI, no diff preview, and its Windows 11 updates are infrequent.
 
 ---
 
 ## 📋 Requirements
 
-- Windows 7 or higher (fully compatible with Windows 11)
-- Python 3.8+ (only if running from source)
+- **Windows 7, 8, 10, or 11** (32-bit and 64-bit, up to Windows 11 25H2)
+- Python 3.8+ — **only needed if running from source**; the `.exe` has zero external dependencies
 - Desktop icons must be visible (`Right-click desktop → View → Show desktop icons`)
-- No administrator rights required
+- No administrator rights required — runs as a standard user
 
 ---
 
-## 🚀 Installation
+## 🚀 Getting Started
 
-### Option 1: Download Pre-compiled Executable (Recommended)
-1. Download the latest `desktop-icon-backup-manager.exe` from the [Releases](../../releases) page
-2. Place it in a dedicated folder
-3. Run the executable — no installation required!
+### Option 1: Download the Portable Executable (Recommended)
 
-### Option 2: Run from Source
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/mapi68/desktop-icon-backup-manager.git
-   cd desktop-icon-backup-manager
-   ```
+No installation. No Python. No dependencies. Download and run.
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+1. Go to the [Releases](../../releases) page
+2. Download the latest `desktop-icon-backup-manager.exe`
+3. Place it in any folder (e.g. `C:\Tools\`)
+4. Run it — the `icon_backups` folder and `settings.ini` are created automatically
 
-3. Run the application:
-   ```bash
-   python main.py
-   ```
-
----
-
-## 📖 Usage Guide
-
-### Basic Operations
-
-#### Saving Your Layout
-1. *(Optional)* Type a descriptive tag in the **Save Tag** field (e.g. `Work Setup`, `Before Update`)
-2. Click **💾 SAVE QUICK BACKUP** — or press `Ctrl+S` — to create a timestamped backup
-
-> [!NOTE]
-> When using `Ctrl+S`, the backup is tagged *"Quick Backup (Shortcut)"* regardless of what is typed in the tag field. To apply a custom tag, use the button click.
-
-#### Restoring Your Layout
-1. Click **↺ RESTORE LATEST** to restore from the most recent backup (a confirmation dialog is shown first)
-2. Or click **↺ BACKUP MANAGER** (`Ctrl+M`) to browse, preview, and restore any saved backup
-
----
-
-### Advanced Features
-
-#### Live Diff Preview
-
-When you select a backup in the Backup Manager, the preview panel fetches the **current live positions** from the desktop and renders a color-coded diff directly on a desktop-like canvas with a subtle grid:
-
-| Visual | Meaning |
-|--------|---------|
-| 🔵 **Blue dot** (with soft halo) | Already in place, will not move |
-| 🟠 **Orange dot** ──▶ 🔴 **Red dot** | Will move: orange = current position, red = target from backup |
-| 🟢 **Green dot** | In backup, not on desktop (will be skipped on restore) |
-
-A compact legend panel displayed **outside the canvas** (to the right of the backup info box) shows the colour coding used in the diff preview. Hover over any dot to see the icon name and status.
-
-#### Command Line Interface (CLI)
-
-The application supports headless operation for scripting and scheduled tasks. When `--backup`, `--restore`, or `--silent` is passed, no GUI is shown and the process exits immediately after the operation.
+### Option 2: Run from Source (Python)
 
 ```bash
-# Silent backup (uses settings.ini for cleanup limit)
+git clone https://github.com/mapi68/desktop-icon-backup-manager.git
+cd desktop-icon-backup-manager
+pip install -r requirements.txt
+python main.py
+```
+
+**Dependencies:** `PyQt6`, `pywin32`
+
+---
+
+## 📖 How to Use
+
+### Saving Your Desktop Icon Layout
+
+1. *(Optional)* Type a descriptive tag — e.g. `Work Setup`, `Before Win Update`, `Gaming Mode`
+2. Click **💾 SAVE QUICK BACKUP** or press `Ctrl+S`
+
+A compact JSON snapshot of all icon positions and screen metadata is saved instantly to the `icon_backups` folder. Each file is 2–10 KB.
+
+> [!NOTE]
+> `Ctrl+S` always tags the backup as *"Quick Backup (Shortcut)"*. To save with a custom tag, use the button.
+
+### Restoring Your Desktop Icon Positions
+
+- **Quick restore**: Click **↺ RESTORE LATEST** — restores the most recent backup after a confirmation prompt
+- **Full control**: Click **↺ BACKUP MANAGER** (`Ctrl+M`) — browse, search, preview the live diff, compare snapshots, and restore any saved layout
+
+### Automating with the CLI
+
+```bash
+# Silent backup — no window, exits immediately
 desktop-icon-backup-manager.exe --backup --silent
 
-# Restore the most recent backup silently
+# Restore the most recent layout silently
 desktop-icon-backup-manager.exe --restore latest --silent
 
-# Restore a specific backup file
+# Restore a specific saved layout by filename
 desktop-icon-backup-manager.exe --restore "1920x1080_20241211_143015.json" --silent
 ```
 
 **Exit codes:** `0` = success, `1` = error.
 
-**Automation with Windows Task Scheduler:**
-1. Open Task Scheduler → Create Basic Task
-2. Set trigger (e.g. Daily, or On logon)
-3. Action: Start a program → path to `desktop-icon-backup-manager.exe`
-4. Add arguments: `--backup --silent`
-
-#### System Tray Usage
-- **Right-click** the tray icon for quick Save / Restore Latest / Show Window / Exit
-- **Double-click** to show or hide the main window
-- Notifications appear for completed operations even when the window is hidden
-
-#### Backup Manager
-- **Search/filter** backups by tag, resolution, or date in real time
-- **Sortable table**: click any column header (Tag, Resolution, Icons, Timestamp) to sort
-- **Live diff preview** shows which icons will move before you confirm a restore (see above)
-- **Visual preview** shows a dot-map of icon positions; hover over dots to see icon names
-- **Compare any two backups** via right-click → *Compare with Latest*, or select one backup and click **"Compare Two Selected…"** to pick any second backup
-- **Right-click** a backup for Restore, Compare, or Delete options
+**Auto-backup at Windows login via Task Scheduler:**
+1. Open **Task Scheduler** → *Create Basic Task*
+2. Trigger: *When I log on*
+3. Action: *Start a program* → select `desktop-icon-backup-manager.exe`
+4. Arguments: `--backup --silent`
 
 ---
 
-### Settings
+### Settings Reference
 
 | Setting | Description |
 |---------|-------------|
-| **Start Minimized to Tray** | Launch the app hidden in the system tray |
-| **Auto-Save on Exit** | Create a backup automatically when closing the app |
-| **Auto-Restore on Startup** | Restore the latest backup automatically on launch |
-| **Enable Adaptive Scaling on Restore** | Scale icon positions proportionally when restoring to a different resolution |
-| **Minimize to Tray on Close** | Hide to tray instead of quitting when clicking the X button |
-| **Automatic Backup Cleanup Limit** | Keep only the N most recent backups (5 / 10 / 25 / 50 / unlimited) |
+| **Start Minimized to Tray** | Launch hidden — zero visual footprint |
+| **Auto-Save on Exit** | Silently back up icon positions every time the app closes |
+| **Auto-Restore on Startup** | Silently restore the latest layout every time the app starts |
+| **Enable Adaptive Scaling on Restore** | Recalculate positions proportionally when restoring to a different resolution |
+| **Minimize to Tray on Close** | Clicking × hides to tray instead of quitting |
+| **Automatic Backup Cleanup Limit** | Auto-delete oldest backups — keep 5, 10, 25, 50, or unlimited |
 
 > [!WARNING]
-> Combining **Auto-Save on Exit** with **Auto-Restore on Startup** creates an automatic save/restore cycle. If icons are in wrong positions when you exit, those wrong positions will be restored on next startup. Use the Backup Manager to restore a known-good layout if needed.
+> Enabling both **Auto-Save on Exit** and **Auto-Restore on Startup** creates a cycle: whatever layout is on screen when you close the app gets saved and restored next boot — including a broken layout. If icons are already in the wrong positions, use the Backup Manager to restore a known-good snapshot first.
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ Configuration File
 
-Settings are stored in `settings.ini` in the application directory and are created automatically on first run:
+Settings are stored in `settings.ini` next to the executable, created automatically on first run:
 
 ```ini
 [General]
@@ -195,8 +249,7 @@ cleanup_limit=0
 geometry=@Rect(100 100 800 650)
 ```
 
-> [!TIP]
-> You can edit `settings.ini` directly with any text editor. Changes take effect on the next program launch. Invalid values are automatically reset to defaults.
+Edit with any text editor. Invalid values reset to defaults on next launch.
 
 ---
 
@@ -204,25 +257,23 @@ geometry=@Rect(100 100 800 650)
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+S` | Quick Save current layout |
+| `Ctrl+S` | Save desktop icon layout (Quick Backup) |
 | `Ctrl+M` | Open Backup Manager |
-| `Ctrl+,` | Open Settings menu |
-| `Ctrl+Q` | Exit Application |
-| `F1`     | Open Online User Manual |
+| `Ctrl+,` | Open Settings |
+| `Ctrl+Q` | Exit application |
+| `F1`     | Open User Manual (PDF) |
 
 ---
 
 ## 📁 Backup File Format
 
-Backups are stored as JSON files in the `icon_backups` subfolder, created automatically next to the executable.
+Backups are stored as human-readable JSON files in the `icon_backups` subfolder:
 
-**File naming:**
 ```
 {width}x{height}_{YYYYMMDD}_{HHMMSS}.json
 Example: 1920x1080_20241211_143015.json
 ```
 
-**File structure:**
 ```json
 {
     "timestamp": "2024-12-11T14:30:15.123456",
@@ -240,7 +291,47 @@ Example: 1920x1080_20241211_143015.json
 }
 ```
 
-Each backup file is typically 2–10 KB. With 50 backups, total storage is under 500 KB.
+Plain text, portable, and easy to copy between machines. 50 backups take less than 500 KB.
+
+---
+
+## ❓ Frequently Asked Questions
+
+**Why do my desktop icons keep moving in Windows 11?**  
+This is a long-standing Windows bug that Microsoft has never fixed — it affects Windows 7, 10, and 11 (including 25H2). Icons rearrange automatically when the screen resolution changes, which happens silently when you connect a monitor, start a game, wake from sleep, or install a Windows Update. Desktop Icon Backup Manager lets you save your layout and restore it with one click whenever this happens.
+
+**How do I stop Windows 11 from rearranging my desktop icons?**  
+There is no built-in Windows setting that permanently prevents icon rearrangement. The most reliable solution is to use Desktop Icon Backup Manager: save your layout, and restore it with one click after Windows moves things around. Enable Auto-Restore on Startup to restore your layout automatically every time Windows boots — you'll never need to rearrange manually again.
+
+**My desktop icons moved after a Windows Update — how do I get them back?**  
+Open Desktop Icon Backup Manager, click *Backup Manager*, and restore the snapshot saved before the update. If Auto-Save on Exit was enabled, a backup was created automatically the last time you closed the app.
+
+**I want to see what will change before restoring — is that possible?**  
+Yes — this is one of the standout features of Desktop Icon Backup Manager. Select any backup in the Backup Manager and the live diff preview immediately shows you which icons will move (orange → red), which are already in position (blue), and which are in the backup but not on the desktop (green). No other free tool offers this.
+
+**Can I restore my icon positions after connecting a second monitor?**  
+Yes. The app supports full multi-monitor setups and saves positions across all displays. It will warn you if the monitor count differs from the saved backup. Enable *Adaptive Scaling* if the resolution differs between save and restore.
+
+**Does Adaptive Scaling work between very different resolutions, like 1080p and 4K?**  
+Yes. The scaling algorithm proportionally recalculates every icon's position to fit the new screen dimensions, so icons land in the correct area of the display rather than piling up in a corner.
+
+**Is Desktop Icon Backup Manager really free?**  
+Completely free, forever, MIT licensed. No ads, no telemetry, no account, no nag screens. The source code is on GitHub for anyone to inspect, fork, or contribute to.
+
+**Will antivirus flag it?**  
+Some antivirus tools flag programs that interact with Windows Explorer's memory, even when they use only standard Win32 API calls — the same calls Explorer uses internally. If this happens, add the `.exe` to your whitelist. The full source code is available on GitHub for independent verification.
+
+**What is the difference between this and ReIcon or DesktopOK?**  
+All three tools save and restore desktop icon positions. Desktop Icon Backup Manager is the only one with a **live diff preview** (see exactly which icons will move before restoring), **cross-backup comparison** (diff any two saved layouts), **visual dot-map preview**, and an **open-source MIT-licensed codebase**. See the full comparison table above.
+
+**Can I automate backups with Windows Task Scheduler?**  
+Yes — use `desktop-icon-backup-manager.exe --backup --silent`. The process runs in the background, saves your layout, and exits immediately. Set it as a login trigger in Task Scheduler for fully automatic, zero-effort desktop icon backups.
+
+**Where are the backup files stored? Can I move them?**  
+In the `icon_backups` subfolder next to the `.exe`. The files are plain JSON — you can copy them to another machine or store them in a cloud-synced folder. The filename includes the resolution and timestamp for easy identification.
+
+**Does it work on Windows 10 and Windows 7?**  
+Yes. Desktop Icon Backup Manager is fully compatible with Windows 7, 8, 10, and 11 (including 25H2), both 32-bit and 64-bit.
 
 ---
 
@@ -249,30 +340,30 @@ Each backup file is typically 2–10 KB. With 50 backups, total storage is under
 ### "Unable to find desktop ListView control"
 Desktop icons are hidden or inaccessible.
 - Right-click the desktop → **View** → enable **Show desktop icons**
-- Restart Windows Explorer via Task Manager if the error persists
-- Check that no third-party desktop replacement software is active
+- If that doesn't help, restart Windows Explorer: `Ctrl+Shift+Esc` → right-click *Windows Explorer* → *Restart*
+- Make sure no third-party desktop replacement (e.g. Stardock Fences) is interfering
 
-### Icons restored to wrong positions
-- Enable **Adaptive Scaling on Restore** in the Settings menu
-- Make sure the same monitors are connected in the same arrangement as when the backup was created
-- Create separate backups for each monitor configuration (e.g. `Laptop Only`, `Docked - 2 Monitors`)
+### Icons restore to wrong positions or pile up in a corner
+- Enable **Adaptive Scaling on Restore** in Settings — this proportionally corrects positions when the resolution differs
+- Confirm that the same monitors are connected in the same arrangement as when the backup was saved
+- Create separate named backups per configuration: `Laptop Only`, `Office Dock`, `Home TV`
 
 ### Program flagged by antivirus
-The program accesses Windows Explorer's memory to read and write icon positions (standard Win32 API). Some antivirus tools may flag this behavior. Add the executable to your antivirus whitelist.
+The app reads and writes icon positions using standard Win32 API calls — the same method Windows itself uses. Some heuristic engines flag this. Add the `.exe` to your whitelist. Full source code is available on GitHub for inspection.
 
 ### Settings not saved after restart
-- Make sure the application is closed via **File → Exit** or `Ctrl+Q`, not via Task Manager
-- Check that `settings.ini` is writable (the folder must not be read-only or protected)
+- Always close with **File → Exit** or `Ctrl+Q` — force-killing via Task Manager skips the settings save
+- Check that `settings.ini` is writable (the folder must not be read-only or inside `Program Files`)
 
 ### Application won't start
-- Only one instance can run at a time — check if it is already running in the system tray
-- If the app crashes immediately, delete `settings.ini` to reset all settings to defaults
-- If **Auto-Restore on Startup** is causing a crash, set `auto_restore_on_startup=false` in `settings.ini` manually
+- Only one instance runs at a time — check the system tray for an existing icon before opening again
+- Delete `settings.ini` to reset to defaults if the app crashes on launch
+- Set `auto_restore_on_startup=false` in `settings.ini` manually if a corrupt backup causes a startup crash
 
-### Multi-monitor issues
-- Enable **Adaptive Scaling** for automatic position adjustment between similar resolutions
-- For very different configurations, create and restore dedicated backups per setup
-- A warning dialog will appear if the number of monitors differs from the saved backup
+### Multi-monitor layout is wrong after restore
+- Enable **Adaptive Scaling** for automatic proportional adjustment
+- For very different configurations (e.g. 1 vs. 3 monitors), maintain separate named backups per setup
+- The app shows a warning dialog if the monitor count differs from the saved backup
 
 ---
 
@@ -283,9 +374,9 @@ The program accesses Windows Explorer's memory to read and write icon positions 
 
 ---
 
-## ☕ Support
+## ☕ Support the Project
 
-If this tool saved you even 5 minutes of frustration, consider buying me a coffee — it helps keep the project alive and growing!
+Desktop Icon Backup Manager is free and will stay free. If it saved you frustration, a coffee helps keep it actively maintained!
 
 [![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/mapi68)
 
@@ -294,43 +385,43 @@ If this tool saved you even 5 minutes of frustration, consider buying me a coffe
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="images/DIBM_1.png" width="80%" title="Main interface showing the activity log and three main action buttons">
+  <img src="images/DIBM_1.png" width="80%" title="Main window — save and restore desktop icon positions on Windows 10 and 11">
   <br><br>
-  <em>Main interface showing the activity log and three main action buttons</em>
+  <em>Main window — save and restore desktop icon positions on Windows 10 / 11</em>
   <br><br><br>
 </p>
 
 <p align="center">
-  <img src="images/DIBM_2.png" width="80%" title="Backup Manager window with list of saved backups and layout preview">
+  <img src="images/DIBM_2.png" width="80%" title="Backup Manager — browse, search, preview live diff, and restore saved desktop icon layouts">
   <br><br>
-  <em>Backup Manager window with list of saved backups and layout preview</em>
+  <em>Backup Manager — browse, search, preview live diff, and restore saved desktop icon layouts</em>
   <br><br><br>
 </p>
 
 <p align="center">
-  <img src="images/DIBM_3.png" width="50%" title="Loading Desktop Backup Manager...">
+  <img src="images/DIBM_3.png" width="50%" title="Splash screen on launch">
   <br><br>
-  <em>Loading Desktop Backup Manager...</em>
+  <em>Splash screen on launch</em>
   <br><br><br>
 </p>
 
 <p align="center">
-  <img src="images/DIBM_4.png" width="80%" title="Desktop Icon Backup Manager featuring dark mode and Italian support">
+  <img src="images/DIBM_4.png" width="80%" title="Dark mode — Desktop Icon Backup Manager with Italian language and multi-monitor support">
   <br><br>
-  <em>Desktop Icon Backup Manager featuring dark mode and Italian support</em>
+  <em>Dark mode with Italian language support</em>
   <br><br><br>
 </p>
 
 <p align="center">
-  <img src="images/DIBM_5.png" width="80%" title="Detailed view of the comparison interface">
+  <img src="images/DIBM_5.png" width="80%" title="Live diff preview — unique feature showing exactly which desktop icons will move before restoring">
   <br><br>
-  <em>Detailed view of the comparison interface</em>
+  <em>Live diff preview — see exactly which desktop icons will move before restoring (unique feature)</em>
   <br><br><br>
 </p>
 
 <p align="center">
-  <img src="images/DIBM_6.png" width="50%" title="Confirmation dialog before restoring a backup">
+  <img src="images/DIBM_6.png" width="50%" title="Confirmation dialog before restoring a desktop icon backup">
   <br><br>
-  <em>Confirmation dialog before restoring a backup</em>
+  <em>Confirmation dialog before restoring a desktop icon layout</em>
   <br><br><br>
 </p>
