@@ -314,57 +314,49 @@ Are you sure you want to proceed?</source>
 </context><context>
     <name>CLI</name>
     <message>
-        <location filename="..\main.py" line="221" />
+        <location filename="..\main.py" line="229" />
         <source>Desktop Icon Backup Manager CLI</source>
         <translation>Desktop Icon Backup Manager — CLI</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="226" />
+        <location filename="..\main.py" line="234" />
         <source>Perform a backup</source>
         <translation>Создать резервную копию</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="232" />
+        <location filename="..\main.py" line="240" />
         <source>Restore a specific backup or latest</source>
         <translation>Восстановить конкретную или последнюю резервную копию</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="237" />
+        <location filename="..\main.py" line="245" />
         <source>Run without showing the GUI</source>
         <translation>Запустить без отображения графического интерфейса</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="258" />
+        <location filename="..\main.py" line="266" />
         <source>[SILENT]</source>
         <translation>[ТИХИЙ]</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="263" />
+        <location filename="..\main.py" line="271" />
         <source>Starting silent backup...</source>
         <translation>Запуск тихого резервного копирования...</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="266" />
+        <location filename="..\main.py" line="274" />
         <source>Silent CLI Backup</source>
         <translation>Тихое резервное копирование CLI</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="280" />
+        <location filename="..\main.py" line="288" />
         <source>Error: No backup files found for latest restore.</source>
         <translation>Ошибка: файлы резервных копий для восстановления не найдены.</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="288" />
+        <location filename="..\main.py" line="296" />
         <source>Starting silent restore from: %1</source>
         <translation>Запуск тихого восстановления из: %1</translation>
-    </message>
-</context><context>
-    <name>Common</name>
-    <message>
-        <location filename="..\ui\splash_screen.py" line="158" />
-        <location filename="..\ui\main_window.py" line="506" />
-        <source>Translation: %1</source>
-        <translation>Перевод: mapi68</translation>
     </message>
 </context><context>
     <name>DesktopIconManager</name>
@@ -639,12 +631,12 @@ Are you sure you want to proceed?</source>
 </context><context>
     <name>Main</name>
     <message>
-        <location filename="..\main.py" line="334" />
+        <location filename="..\main.py" line="342" />
         <source>Critical Error</source>
         <translation>Критическая ошибка</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="335" />
+        <location filename="..\main.py" line="343" />
         <source>Failed to start application:
 %1</source>
         <translation>Не удалось запустить приложение:
@@ -729,7 +721,7 @@ Are you sure you want to proceed?</source>
         <translation>Запускать свёрнутым в трей</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="795" />
+        <location filename="..\ui\main_window.py" line="784" />
         <location filename="..\ui\main_window.py" line="169" />
         <source>Auto-Save on Exit</source>
         <translation>Автосохранение при выходе</translation>
@@ -790,8 +782,8 @@ Are you sure you want to proceed?</source>
         <translation>Руководство пользователя онлайн</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="863" />
-        <location filename="..\ui\main_window.py" line="831" />
+        <location filename="..\ui\main_window.py" line="852" />
+        <location filename="..\ui\main_window.py" line="820" />
         <location filename="..\ui\main_window.py" line="235" />
         <source>Keyboard Shortcuts</source>
         <translation>Горячие клавиши</translation>
@@ -890,9 +882,9 @@ Shortcut: Ctrl+M</source>
         <translation>✗ Не удалось открыть URL руководства</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="723" />
-        <location filename="..\ui\main_window.py" line="610" />
-        <location filename="..\ui\main_window.py" line="577" />
+        <location filename="..\ui\main_window.py" line="712" />
+        <location filename="..\ui\main_window.py" line="599" />
+        <location filename="..\ui\main_window.py" line="566" />
         <location filename="..\ui\main_window.py" line="394" />
         <source>Error</source>
         <translation>Ошибка</translation>
@@ -938,8 +930,8 @@ Please visit manually:
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="808" />
-        <location filename="..\ui\main_window.py" line="714" />
+        <location filename="..\ui\main_window.py" line="797" />
+        <location filename="..\ui\main_window.py" line="703" />
         <location filename="..\ui\main_window.py" line="463" />
         <source>Desktop Icon Manager</source>
         <translation>Менеджер значков рабочего стола</translation>
@@ -955,152 +947,147 @@ Please visit manually:
         <translation>Быстрая резервная копия</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="513" />
-        <source>Translation:</source>
-        <translation>Перевод:</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="519" />
+        <location filename="..\ui\main_window.py" line="508" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
         <translation>Простой, но мощный инструмент для сохранения и восстановления позиций значков рабочего стола Windows.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="520" />
+        <location filename="..\ui\main_window.py" line="509" />
         <source>Key Features:</source>
         <translation>Основные функции:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="522" />
+        <location filename="..\ui\main_window.py" line="511" />
         <source>Quick Save:</source>
         <translation>Быстрое сохранение:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="522" />
+        <location filename="..\ui\main_window.py" line="511" />
         <source>Save icons with an optional descriptive tag.</source>
         <translation>Сохранение значков с необязательным описательным тегом.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="523" />
+        <location filename="..\ui\main_window.py" line="512" />
         <source>Backup Management:</source>
         <translation>Управление резервными копиями:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="523" />
+        <location filename="..\ui\main_window.py" line="512" />
         <source>Select, restore, or delete specific backups.</source>
         <translation>Выбор, восстановление или удаление конкретных резервных копий.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="524" />
+        <location filename="..\ui\main_window.py" line="513" />
         <source>Live Diff Preview:</source>
         <translation>Предпросмотр изменений в реальном времени:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="524" />
+        <location filename="..\ui\main_window.py" line="513" />
         <source>See which icons will move before restoring.</source>
         <translation>Просмотр значков, которые будут перемещены, до восстановления.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="525" />
+        <location filename="..\ui\main_window.py" line="514" />
         <source>Visual Preview:</source>
         <translation>Визуальный предпросмотр:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="525" />
+        <location filename="..\ui\main_window.py" line="514" />
         <source>See a mini-map of your layout.</source>
         <translation>Просмотр миниатюры вашего макета.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="526" />
+        <location filename="..\ui\main_window.py" line="515" />
         <source>Backup Comparison:</source>
         <translation>Сравнение резервных копий:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="526" />
+        <location filename="..\ui\main_window.py" line="515" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
         <translation>Сравнение двух резервных копий для просмотра добавленных, удалённых и перемещённых значков.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="527" />
+        <location filename="..\ui\main_window.py" line="516" />
         <source>Adaptive Scaling:</source>
         <translation>Адаптивное масштабирование:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="527" />
+        <location filename="..\ui\main_window.py" line="516" />
         <source>Automatic adjustment for different resolutions.</source>
         <translation>Автоматическая подстройка под различные разрешения экрана.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="528" />
+        <location filename="..\ui\main_window.py" line="517" />
         <source>Automatic Cleanup:</source>
         <translation>Автоматическая очистка:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="528" />
+        <location filename="..\ui\main_window.py" line="517" />
         <source>Set a limit on backups to keep.</source>
         <translation>Установка лимита хранимых резервных копий.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="529" />
+        <location filename="..\ui\main_window.py" line="518" />
         <source>Random Scramble:</source>
         <translation>Случайное перемешивание:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="529" />
+        <location filename="..\ui\main_window.py" line="518" />
         <source>Randomize icon positions after backup.</source>
         <translation>Случайное размещение значков после резервного копирования.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="530" />
+        <location filename="..\ui\main_window.py" line="519" />
         <source>Tray Integration:</source>
         <translation>Интеграция с треем:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="530" />
+        <location filename="..\ui\main_window.py" line="519" />
         <source>Quick access via tray.</source>
         <translation>Быстрый доступ через трей.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="532" />
+        <location filename="..\ui\main_window.py" line="521" />
         <source>Version:</source>
         <translation>Версия:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="533" />
+        <location filename="..\ui\main_window.py" line="522" />
         <source>Development:</source>
         <translation>Разработчик:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="534" />
+        <location filename="..\ui\main_window.py" line="523" />
         <source>Support this project on Ko-fi</source>
         <translation>Поддержать проект на Ko-fi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="536" />
+        <location filename="..\ui\main_window.py" line="525" />
         <source>About Desktop Icon Backup Manager</source>
         <translation>О программе Desktop Icon Backup Manager</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="542" />
+        <location filename="..\ui\main_window.py" line="531" />
         <source>No backup files found to delete.</source>
         <translation>Файлы резервных копий для удаления не найдены.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="545" />
+        <location filename="..\ui\main_window.py" line="534" />
         <source>No Backups Found</source>
         <translation>Резервные копии не найдены</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="546" />
+        <location filename="..\ui\main_window.py" line="535" />
         <source>There are no backup files to delete.</source>
         <translation>Нет файлов резервных копий для удаления.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="552" />
+        <location filename="..\ui\main_window.py" line="541" />
         <source>WARNING: Delete All Backups</source>
         <translation>ПРЕДУПРЕЖДЕНИЕ: Удалить все резервные копии</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="553" />
+        <location filename="..\ui\main_window.py" line="542" />
         <source>Are you absolutely sure you want to permanently delete ALL %n desktop icon backup file(s)?
 
 This action cannot be undone!</source>
@@ -1117,72 +1104,72 @@ This action cannot be undone!</source>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="563" />
+        <location filename="..\ui\main_window.py" line="552" />
         <source>Starting deletion of all backup files...</source>
         <translation>Запуск удаления всех файлов резервных копий...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="707" />
-        <location filename="..\ui\main_window.py" line="571" />
+        <location filename="..\ui\main_window.py" line="696" />
+        <location filename="..\ui\main_window.py" line="560" />
         <source>Success</source>
         <translation>Успех</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="572" />
+        <location filename="..\ui\main_window.py" line="561" />
         <source>All backup files have been successfully deleted.</source>
         <translation>Все файлы резервных копий успешно удалены.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="578" />
+        <location filename="..\ui\main_window.py" line="567" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>Некоторые файлы не удалось удалить. Проверьте журнал действий для получения подробностей.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="586" />
+        <location filename="..\ui\main_window.py" line="575" />
         <source>Starting new timestamped backup...</source>
         <translation>Создание новой резервной копии с меткой времени...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="588" />
+        <location filename="..\ui\main_window.py" line="577" />
         <source>  (Tag: %1)</source>
         <translation>  (Тег: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="592" />
+        <location filename="..\ui\main_window.py" line="581" />
         <source>Saving...</source>
         <translation>Сохранение...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="610" />
+        <location filename="..\ui\main_window.py" line="599" />
         <source>No backup files found to restore!</source>
         <translation>Файлы резервных копий для восстановления не найдены!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="612" />
+        <location filename="..\ui\main_window.py" line="601" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ Восстановление не выполнено: файлы резервных копий не найдены.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="628" />
-        <location filename="..\ui\main_window.py" line="625" />
-        <location filename="..\ui\main_window.py" line="624" />
-        <location filename="..\ui\main_window.py" line="619" />
-        <location filename="..\ui\main_window.py" line="618" />
+        <location filename="..\ui\main_window.py" line="617" />
+        <location filename="..\ui\main_window.py" line="614" />
+        <location filename="..\ui\main_window.py" line="613" />
+        <location filename="..\ui\main_window.py" line="608" />
+        <location filename="..\ui\main_window.py" line="607" />
         <source>N/A</source>
         <translation>Н/Д</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="627" />
+        <location filename="..\ui\main_window.py" line="616" />
         <source>N/A (Old Format)</source>
         <translation>Н/Д (старый формат)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="632" />
+        <location filename="..\ui\main_window.py" line="621" />
         <source>Confirm Restore</source>
         <translation>Подтверждение восстановления</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="633" />
+        <location filename="..\ui\main_window.py" line="622" />
         <source>Restore icon positions from the LATEST backup file:
 
 File: %1
@@ -1203,27 +1190,27 @@ Are you sure you want to proceed?</source>
 Вы уверены, что хотите продолжить?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="653" />
+        <location filename="..\ui\main_window.py" line="642" />
         <source>Starting restore from backup '%1'...</source>
         <translation>Запуск восстановления из резервной копии «%1»...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="654" />
+        <location filename="..\ui\main_window.py" line="643" />
         <source>latest</source>
         <translation>последняя</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="659" />
+        <location filename="..\ui\main_window.py" line="648" />
         <source>Restoring...</source>
         <translation>Восстановление...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="672" />
+        <location filename="..\ui\main_window.py" line="661" />
         <source>Confirm Scramble</source>
         <translation>Подтверждение перемешивания</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="673" />
+        <location filename="..\ui\main_window.py" line="662" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1236,47 +1223,47 @@ Do you want to proceed?</source>
 Хотите продолжить?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="680" />
+        <location filename="..\ui\main_window.py" line="669" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>Запуск перемешивания значков рабочего стола (случайное размещение)...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="683" />
+        <location filename="..\ui\main_window.py" line="672" />
         <source>Scrambling icons...</source>
         <translation>Перемешивание значков...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="702" />
+        <location filename="..\ui\main_window.py" line="691" />
         <source>Operation completed successfully</source>
         <translation>Операция успешно завершена</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="708" />
+        <location filename="..\ui\main_window.py" line="697" />
         <source>Operation completed successfully! (%1)</source>
         <translation>Операция успешно завершена! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="715" />
+        <location filename="..\ui\main_window.py" line="704" />
         <source>%1 successful!</source>
         <translation>%1 выполнено успешно!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="720" />
+        <location filename="..\ui\main_window.py" line="709" />
         <source>Operation failed</source>
         <translation>Ошибка операции</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="724" />
+        <location filename="..\ui\main_window.py" line="713" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>Ошибка операции (%1). Проверьте журнал для получения подробностей.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="737" />
+        <location filename="..\ui\main_window.py" line="726" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ Предупреждение: метаданные дисплея отсутствуют или неполны.</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="742" />
+        <location filename="..\ui\main_window.py" line="731" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ Предупреждение: сохранено (%n монитор) vs текущее (%1 монитор(ов)).</numerusform>
@@ -1285,12 +1272,12 @@ Do you want to proceed?</source>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="750" />
+        <location filename="..\ui\main_window.py" line="739" />
         <source>Monitor Mismatch Warning</source>
         <translation>Предупреждение о несоответствии мониторов</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="751" />
+        <location filename="..\ui\main_window.py" line="740" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1299,17 +1286,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Позиции значков восстановлены, но они могут быть неточными.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="773" />
+        <location filename="..\ui\main_window.py" line="762" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ Предупреждение: разрешения экрана не соответствуют сохранённому макету.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="777" />
+        <location filename="..\ui\main_window.py" line="766" />
         <source>Resolution Mismatch Warning</source>
         <translation>Предупреждение о несоответствии разрешения</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="778" />
+        <location filename="..\ui\main_window.py" line="767" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1318,62 +1305,62 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Позиции значков восстановлены, но они могут быть неточными.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="790" />
+        <location filename="..\ui\main_window.py" line="779" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>Автосохранение при выходе включено. Выполняется тихое резервное копирование...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="794" />
+        <location filename="..\ui\main_window.py" line="783" />
         <source>Auto-Save Log</source>
         <translation>Журнал автосохранения</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="809" />
+        <location filename="..\ui\main_window.py" line="798" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>Приложение свёрнуто в трей. Нажмите или дважды нажмите для восстановления.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="834" />
+        <location filename="..\ui\main_window.py" line="823" />
         <source>Shortcut</source>
         <translation>Горячая клавиша</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="835" />
+        <location filename="..\ui\main_window.py" line="824" />
         <source>Action</source>
         <translation>Действие</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="839" />
+        <location filename="..\ui\main_window.py" line="828" />
         <source>Quick Save current layout</source>
         <translation>Быстрое сохранение текущего макета</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="843" />
+        <location filename="..\ui\main_window.py" line="832" />
         <source>Open Backup Manager</source>
         <translation>Открыть менеджер резервных копий</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="847" />
+        <location filename="..\ui\main_window.py" line="836" />
         <source>Open Settings menu</source>
         <translation>Открыть меню настроек</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="851" />
+        <location filename="..\ui\main_window.py" line="840" />
         <source>Open Online User Manual</source>
         <translation>Открыть руководство пользователя онлайн</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="855" />
+        <location filename="..\ui\main_window.py" line="844" />
         <source>Exit Application</source>
         <translation>Выйти из приложения</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="859" />
+        <location filename="..\ui\main_window.py" line="848" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
         <translation>Совет: наведите курсор на кнопки, чтобы увидеть дополнительные горячие клавиши во всплывающих подсказках.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="874" />
+        <location filename="..\ui\main_window.py" line="863" />
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
@@ -1390,7 +1377,7 @@ Icon positions have been restored, but they may be inaccurate.</source>
         <translation>Разработчик: mapi68</translation>
     </message>
     <message>
-        <location filename="..\ui\splash_screen.py" line="179" />
+        <location filename="..\ui\splash_screen.py" line="168" />
         <source>Loading…</source>
         <translation>Загрузка…</translation>
     </message>

@@ -321,8 +321,12 @@ different resolutions, and complete automation through configurable settings.
     startup options
   \item \textbf{Command Line Interface}: Full CLI support for scripting
     and scheduled tasks
-  \item \textbf{Multi-language Support}: Internationalization ready
-    with translation system
+  \item \textbf{Multi-language Support}: Available in 21 languages ---
+    English, Arabic, German, Greek, Spanish, French, Hindi, Italian,
+    Japanese, Korean, Norwegian Bokmål, Dutch, Polish, Portuguese (BR),
+    Portuguese (PT), Russian, Swedish, Turkish, Ukrainian, Simplified
+    Chinese, and Traditional Chinese. Auto-detected from Windows locale,
+    or manually overridden
 \end{itemize}
 
 \subsection{System Requirements}
@@ -2099,7 +2103,13 @@ pyinstaller --onefile --windowed --icon=icon.ico \
 
 \subsection{Translation/Localization}
 
-The program uses Qt's translation system for internationalization:
+The program uses Qt's translation system for internationalization.
+It is currently available in 21 languages: English, Arabic, German,
+Greek, Spanish, French, Hindi, Italian, Japanese, Korean, Norwegian
+Bokmål, Dutch, Polish, Portuguese (BR), Portuguese (PT), Russian,
+Swedish, Turkish, Ukrainian, Simplified Chinese, and Traditional Chinese.
+The language is auto-detected from the Windows locale and can be
+manually overridden.
 
 \textbf{Creating New Translation}:
 \begin{enumerate}
@@ -2109,12 +2119,6 @@ The program uses Qt's translation system for internationalization:
   \item Place .qm file in i18n folder
   \item Program auto-detects system language
 \end{enumerate}
-
-\textbf{Currently Supported Languages}:
-\begin{itemize}
-  \item English (en)
-  \item Italian (it)
-\end{itemize}
 
 \vfill
 

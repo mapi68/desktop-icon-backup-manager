@@ -503,17 +503,6 @@ class MainWindow(QMainWindow):
         self._start_restore(filename)
 
     def show_about_dialog(self):
-        translator_line = QCoreApplication.translate("Common", "Translation: %1")
-        translator_name = (
-            translator_line.split(": ", 1)[-1]
-            if translator_line != "Translation: %1"
-            else ""
-        )
-        translation_html = (
-            f"<b>{self.tr('Translation:')}</b> {translator_name}<br>"
-            if translator_name
-            else ""
-        )
         html = (
             f"<h2>Desktop Icon Backup Manager</h2>"
             f"<p>{self.tr('A simple yet powerful tool to save and restore Windows desktop icon positions.')}</p>"
@@ -530,7 +519,7 @@ class MainWindow(QMainWindow):
             f"<li><b>{self.tr('Tray Integration:')}</b> {self.tr('Quick access via tray.')}</li>"
             f"</ul>"
             f"<p><b>{self.tr('Version:')}</b> {Config.VERSION}<br>"
-            f"<b>{self.tr('Development:')}</b> mapi68<br>" + translation_html + f"</p>"
+            f"<b>{self.tr('Development:')}</b> mapi68<br></p>"
             f"<p><a href='https://ko-fi.com/mapi68'>{self.tr('Support this project on Ko-fi')}</a></p>"
         )
         QMessageBox.about(self, self.tr("About Desktop Icon Backup Manager"), html)

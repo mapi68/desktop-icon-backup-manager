@@ -154,17 +154,6 @@ class SplashScreen(QSplashScreen):
             QCoreApplication.translate("SplashScreen", "Development: mapi68"),
         )
 
-        # ── Translator credit (shown only if translated)
-        translator_line = QCoreApplication.translate("Common", "Translation: %1")
-        if translator_line != "Translation: %1":
-            p.setPen(QColor("#B380FF"))
-            p.setFont(QFont("Segoe UI", 8))
-            p.drawText(
-                QRect(tx, iy + 131, tw, 18),
-                Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
-                translator_line,
-            )
-
         # ── Status dot + text at bottom
         dot_x, dot_y = 22, H - 18
         p.setPen(Qt.PenStyle.NoPen)

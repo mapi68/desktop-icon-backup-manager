@@ -27,19 +27,27 @@ from ui.main_window import MainWindow
 # ── Locale name → display name ────────────────────────────────────────────────
 _LOCALE_NAMES = {
     "": "English",
+    "ar_SA": "العربية",
     "de_DE": "Deutsch",
+    "el_GR": "Ελληνικά",
     "es_ES": "Español",
     "fr_FR": "Français",
+    "hi_IN": "हिन्दी",
     "it_IT": "Italiano",
     "ja_JP": "日本語",
+    "ko_KR": "한국어",
+    "nb_NO": "Norsk bokmål",
+    "nl_NL": "Nederlands",
     "pl_PL": "Polski",
     "pt_BR": "Português (BR)",
+    "pt_PT": "Português (PT)",
     "ru_RU": "Русский",
+    "sv_SE": "Svenska",
     "tr_TR": "Türkçe",
     "uk_UA": "Українська",
     "zh_CN": "中文 (简体)",
+    "zh_TW": "中文 (繁體)",
 }
-
 
 def _display_name(locale: str) -> str:
     """Return a human-readable name for a locale string."""

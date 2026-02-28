@@ -1,9 +1,9 @@
-# Desktop Icon Backup Manager — Save & Restore Desktop Icon Positions on Windows 10 / 11
+# Desktop Icon Backup Manager
 
 [![☕ Liked this tool? Buy me a coffee! — ko-fi.com/mapi68](https://img.shields.io/badge/-%E2%98%95%20Liked%20this%20tool%3F%20%20Buy%20me%20a%20coffee!%20%E2%80%94%20ko--fi.com%2Fmapi68-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=1a1a2e)](https://ko-fi.com/mapi68)
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
-[![Windows](https://img.shields.io/badge/Platform-Windows%207%20%2F%2010%20%2F%2011-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
+[![Windows](https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
 [![GitHub release](https://img.shields.io/github/v/release/mapi68/desktop-icon-backup-manager?style=for-the-badge&logo=github&color=2ea44f)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
 [![GitHub All Releases](https://img.shields.io/github/downloads/mapi68/desktop-icon-backup-manager/total?style=for-the-badge&logo=github-actions&color=6f42c1)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
 [![License](https://img.shields.io/badge/License-MIT-41AD49?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
@@ -106,7 +106,7 @@ Every line of code is on GitHub, MIT licensed, auditable, and forkable. No telem
 ### Usability
 - **📋 Sortable + Filterable Backup Table**: Sort by tag, resolution, icon count, or timestamp; real-time search filter
 - **↔️ Fully Resizable Windows**: Adapts to any screen size or DPI setting
-- **🌍 16+ Languages**: Auto-detected from Windows locale, or manually overridden
+- **🌍 21 Languages**: Auto-detected from Windows locale, or manually overridden. Available in English, Arabic, German, Greek, Spanish, French, Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Dutch, Polish, Portuguese (BR), Portuguese (PT), Russian, Swedish, Turkish, Ukrainian, Simplified Chinese, and Traditional Chinese
 - **⌨️ Full Keyboard Navigation**: Every action has a shortcut — see the [shortcuts table](#%EF%B8%8F-keyboard-shortcuts)
 - **📋 Timestamped Activity Log**: Full operation history; copy with `Ctrl+A` / `Ctrl+C`
 - **✅ Confirmation Dialogs**: Always confirms before overwrite or delete — no accidents
@@ -135,12 +135,12 @@ There are a few tools in this space. Here is how they stack up:
 | **Open source (MIT)** | ✅ | ❌ | ❌ | — |
 | Portable (no install required) | ✅ | ✅ | ✅ | — |
 | **Actively maintained for Windows 11 25H2** | ✅ | ✅ | ⚠️ | — |
-| Multi-language UI | ✅ 16+ | ❌ | ✅ | — |
+| Multi-language UI | ✅ | ❌ | ✅ | — |
 | Free | ✅ | ✅ | ✅ | — |
 
 > **The bolded rows are where Desktop Icon Backup Manager stands apart.** No other free tool offers a live diff preview, visual layout preview, or cross-backup comparison. These features mean you always know exactly what will happen before you restore — and you can audit your backup history with confidence.
 >
-> **ReIcon** (by Sordum) is a good lightweight option with CLI support and resolution scaling. It lacks visual previews, diff comparison, and backup search — it is simpler but also more limited.  
+> **ReIcon** (by Sordum) is a good lightweight option with CLI support and resolution scaling. It lacks visual previews, diff comparison, and backup search — it is simpler but also more limited.
 > **DesktopOK** is the oldest and best-known tool in this category, but it is closed source, has no CLI, no diff preview, and its Windows 11 updates are infrequent.
 
 ---
@@ -297,40 +297,40 @@ Plain text, portable, and easy to copy between machines. 50 backups take less th
 
 ## ❓ Frequently Asked Questions
 
-**Why do my desktop icons keep moving in Windows 11?**  
+**Why do my desktop icons keep moving in Windows 11?**
 This is a long-standing Windows bug that Microsoft has never fixed — it affects Windows 7, 10, and 11 (including 25H2). Icons rearrange automatically when the screen resolution changes, which happens silently when you connect a monitor, start a game, wake from sleep, or install a Windows Update. Desktop Icon Backup Manager lets you save your layout and restore it with one click whenever this happens.
 
-**How do I stop Windows 11 from rearranging my desktop icons?**  
+**How do I stop Windows 11 from rearranging my desktop icons?**
 There is no built-in Windows setting that permanently prevents icon rearrangement. The most reliable solution is to use Desktop Icon Backup Manager: save your layout, and restore it with one click after Windows moves things around. Enable Auto-Restore on Startup to restore your layout automatically every time Windows boots — you'll never need to rearrange manually again.
 
-**My desktop icons moved after a Windows Update — how do I get them back?**  
+**My desktop icons moved after a Windows Update — how do I get them back?**
 Open Desktop Icon Backup Manager, click *Backup Manager*, and restore the snapshot saved before the update. If Auto-Save on Exit was enabled, a backup was created automatically the last time you closed the app.
 
-**I want to see what will change before restoring — is that possible?**  
+**I want to see what will change before restoring — is that possible?**
 Yes — this is one of the standout features of Desktop Icon Backup Manager. Select any backup in the Backup Manager and the live diff preview immediately shows you which icons will move (orange → red), which are already in position (blue), and which are in the backup but not on the desktop (green). No other free tool offers this.
 
-**Can I restore my icon positions after connecting a second monitor?**  
+**Can I restore my icon positions after connecting a second monitor?**
 Yes. The app supports full multi-monitor setups and saves positions across all displays. It will warn you if the monitor count differs from the saved backup. Enable *Adaptive Scaling* if the resolution differs between save and restore.
 
-**Does Adaptive Scaling work between very different resolutions, like 1080p and 4K?**  
+**Does Adaptive Scaling work between very different resolutions, like 1080p and 4K?**
 Yes. The scaling algorithm proportionally recalculates every icon's position to fit the new screen dimensions, so icons land in the correct area of the display rather than piling up in a corner.
 
-**Is Desktop Icon Backup Manager really free?**  
+**Is Desktop Icon Backup Manager really free?**
 Completely free, forever, MIT licensed. No ads, no telemetry, no account, no nag screens. The source code is on GitHub for anyone to inspect, fork, or contribute to.
 
-**Will antivirus flag it?**  
+**Will antivirus flag it?**
 Some antivirus tools flag programs that interact with Windows Explorer's memory, even when they use only standard Win32 API calls — the same calls Explorer uses internally. If this happens, add the `.exe` to your whitelist. The full source code is available on GitHub for independent verification.
 
-**What is the difference between this and ReIcon or DesktopOK?**  
+**What is the difference between this and ReIcon or DesktopOK?**
 All three tools save and restore desktop icon positions. Desktop Icon Backup Manager is the only one with a **live diff preview** (see exactly which icons will move before restoring), **cross-backup comparison** (diff any two saved layouts), **visual dot-map preview**, and an **open-source MIT-licensed codebase**. See the full comparison table above.
 
-**Can I automate backups with Windows Task Scheduler?**  
+**Can I automate backups with Windows Task Scheduler?**
 Yes — use `desktop-icon-backup-manager.exe --backup --silent`. The process runs in the background, saves your layout, and exits immediately. Set it as a login trigger in Task Scheduler for fully automatic, zero-effort desktop icon backups.
 
-**Where are the backup files stored? Can I move them?**  
+**Where are the backup files stored? Can I move them?**
 In the `icon_backups` subfolder next to the `.exe`. The files are plain JSON — you can copy them to another machine or store them in a cloud-synced folder. The filename includes the resolution and timestamp for easy identification.
 
-**Does it work on Windows 10 and Windows 7?**  
+**Does it work on Windows 10 and Windows 7?**
 Yes. Desktop Icon Backup Manager is fully compatible with Windows 7, 8, 10, and 11 (including 25H2), both 32-bit and 64-bit.
 
 ---
