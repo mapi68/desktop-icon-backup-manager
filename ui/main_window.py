@@ -49,6 +49,7 @@ from utils.helpers import (
     get_resolution_from_filename,
 )
 from ui.backup_dialog import BackupManagerWindow
+from ui.update_dialog import UpdateDialog
 
 
 class MainWindow(QMainWindow):
@@ -76,6 +77,9 @@ class MainWindow(QMainWindow):
 
         if self.settings.value("auto_restore_on_startup", False, type=bool):
             QTimer.singleShot(1000, self.start_restore_latest)
+
+        if self.settings.value("check_updates_on_startup", True, type=bool):
+            QTimer.singleShot(Config.UPDATE_CHECK_DELAY_MS, self._silent_update_check)
 
     def create_tray_icon(self):
         icon = QIcon(resource_path("icon.ico"))
@@ -181,6 +185,14 @@ class MainWindow(QMainWindow):
         )
         settings_menu.addAction(self.action_auto_restore)
 
+        self.action_check_updates_on_startup = QAction(
+            self.tr("Check for Updates on Startup"), self, checkable=True
+        )
+        self.action_check_updates_on_startup.triggered.connect(
+            lambda checked: self.settings.setValue("check_updates_on_startup", checked)
+        )
+        settings_menu.addAction(self.action_check_updates_on_startup)
+
         settings_menu.addSeparator()
 
         self.action_adaptive_scaling = QAction(
@@ -235,6 +247,12 @@ class MainWindow(QMainWindow):
         action_shortcuts = QAction(self.tr("Keyboard Shortcuts"), self)
         action_shortcuts.triggered.connect(self.show_shortcuts_dialog)
         help_menu.addAction(action_shortcuts)
+
+        help_menu.addSeparator()
+
+        action_check_updates = QAction(self.tr("Check for Updates..."), self)
+        action_check_updates.triggered.connect(self.show_update_dialog)
+        help_menu.addAction(action_check_updates)
 
         help_menu.addSeparator()
 
@@ -431,6 +449,9 @@ class MainWindow(QMainWindow):
         )
         self.action_close_to_tray.setChecked(
             self.settings.value("close_to_tray", False, type=bool)
+        )
+        self.action_check_updates_on_startup.setChecked(
+            self.settings.value("check_updates_on_startup", True, type=bool)
         )
 
         current_limit = self.settings.value("cleanup_limit", 0, type=int)
@@ -814,6 +835,39 @@ class MainWindow(QMainWindow):
             except Exception:
                 pass
         QApplication.quit()
+
+    def _silent_update_check(self):
+        from ui.update_dialog import UpdateCheckWorker
+
+        self._update_worker = UpdateCheckWorker(self)
+        self._update_worker.finished.connect(self._on_silent_update_result)
+        self._update_worker.error.connect(lambda _: None)
+        self._update_worker.start()
+
+    def _on_silent_update_result(self, remote: str):
+        from core.config import Config
+
+        try:
+            current = tuple(int(x) for x in Config.VERSION.split("."))
+            latest = tuple(int(x) for x in remote.split("."))
+        except ValueError:
+            return
+        if latest > current:
+            self.tray_icon.showMessage(
+                self.tr("Desktop Icon Backup Manager"),
+                self.tr("A new version is available! (%1)").replace("%1", remote),
+                QSystemTrayIcon.MessageIcon.Information,
+                8000,
+            )
+            self.log(
+                self.tr("\U0001f514 A new version is available: %1 (current: %2)")
+                .replace("%1", remote)
+                .replace("%2", Config.VERSION)
+            )
+
+    def show_update_dialog(self):
+        dlg = UpdateDialog(self)
+        dlg.exec()
 
     def show_shortcuts_dialog(self):
         shortcuts_text = f"""

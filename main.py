@@ -49,6 +49,7 @@ _LOCALE_NAMES = {
     "zh_TW": "中文 (繁體)",
 }
 
+
 def _display_name(locale: str) -> str:
     """Return a human-readable name for a locale string."""
     return _LOCALE_NAMES.get(locale, locale)
@@ -111,22 +112,21 @@ class LanguageDialog(QDialog):
         super().__init__(parent)
         self.setWindowTitle("Language")
         self.setFixedWidth(300)
+        # Only style interactive controls with accent color.
+        # Background/text inherit the system theme automatically.
         self.setStyleSheet("""
-            QDialog { background: #1e1e1e; color: #ddd; }
-            QLabel  { color: #ddd; font-size: 13px; }
+            QLabel { font-size: 13px; }
             QComboBox {
-                background: #2d2d2d; color: #ddd;
-                border: 1px solid #555; border-radius: 4px;
+                border: 1px solid palette(mid); border-radius: 4px;
                 padding: 4px 8px; font-size: 13px;
             }
-            QComboBox QAbstractItemView { background: #2d2d2d; color: #ddd; }
             QPushButton {
                 background: #0078D7; color: #fff;
                 border: none; border-radius: 4px;
                 padding: 6px 20px; font-size: 13px;
             }
             QPushButton:hover { background: #106EBE; }
-            QCheckBox { color: #aaa; font-size: 11px; }
+            QCheckBox { font-size: 11px; }
         """)
 
         layout = QVBoxLayout(self)

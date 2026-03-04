@@ -100,6 +100,7 @@ Every line of code is on GitHub, MIT licensed, auditable, and forkable. No telem
 ### Automation & CLI
 - **Auto-Save on Exit**: Backup icon positions automatically every time the app closes
 - **Auto-Restore on Startup**: Restore your layout automatically every time Windows starts
+- **🔔 Update Checker**: Automatic check for new versions at startup (optional) with one-click download link; also available manually via Help → Check for Updates
 - **Command Line Interface**: Full `--backup`, `--restore`, `--silent` support for scripting and Task Scheduler
 - **Background Threading**: Save/restore never freezes the UI — live progress indicator always visible
 
@@ -130,6 +131,7 @@ There are a few tools in this space. Here is how they stack up:
 | Search / filter saved backups | ✅ | ❌ | ❌ | ❌ |
 | Auto-save on exit | ✅ | ⚠️ partial | ✅ | ❌ |
 | Auto-restore on startup | ✅ | ⚠️ via shortcut | ✅ | ❌ |
+| **Update checker (with tray notification)** | ✅ | ❌ | ❌ | ❌ |
 | System tray integration | ✅ | ✅ | ✅ | ❌ |
 | Context menu integration | ❌ | ✅ | ❌ | ❌ |
 | **Open source (MIT)** | ✅ | ❌ | ❌ | — |
@@ -161,9 +163,10 @@ There are a few tools in this space. Here is how they stack up:
 No installation. No Python. No dependencies. Download and run.
 
 1. Go to the [Releases](../../releases) page
-2. Download the latest `desktop-icon-backup-manager.exe`
-3. Place it in any folder (e.g. `C:\Tools\`)
-4. Run it — the `icon_backups` folder and `settings.ini` are created automatically
+2. Download the latest zip file
+3. Extract it in any folder (e.g. `C:\Tools\`)
+4. Run `Desktop Icon Backup Manager.exe`
+5. The `icon_backups` folder and `settings.ini` are created automatically
 
 ### Option 2: Run from Source (Python)
 
@@ -227,6 +230,7 @@ desktop-icon-backup-manager.exe --restore "1920x1080_20241211_143015.json" --sil
 | **Auto-Restore on Startup** | Silently restore the latest layout every time the app starts |
 | **Enable Adaptive Scaling on Restore** | Recalculate positions proportionally when restoring to a different resolution |
 | **Minimize to Tray on Close** | Clicking × hides to tray instead of quitting |
+| **Check for Updates on Startup** | Automatically checks GitHub for a new version 10 seconds after launch — a tray notification and log entry appear if an update is available |
 | **Automatic Backup Cleanup Limit** | Auto-delete oldest backups — keep 5, 10, 25, 50, or unlimited |
 
 > [!WARNING]
@@ -243,6 +247,7 @@ Settings are stored in `settings.ini` next to the executable, created automatica
 start_minimized=false
 auto_save_on_exit=false
 auto_restore_on_startup=false
+check_updates_on_startup=true
 adaptive_scaling_enabled=false
 close_to_tray=false
 cleanup_limit=0
@@ -323,6 +328,10 @@ Some antivirus tools flag programs that interact with Windows Explorer's memory,
 
 **What is the difference between this and ReIcon or DesktopOK?**
 All three tools save and restore desktop icon positions. Desktop Icon Backup Manager is the only one with a **live diff preview** (see exactly which icons will move before restoring), **cross-backup comparison** (diff any two saved layouts), **visual dot-map preview**, and an **open-source MIT-licensed codebase**. See the full comparison table above.
+
+**Does the program check for updates?**
+
+A: Yes. By default, the program checks GitHub for a new version 10 seconds after startup. If one is found, a tray notification appears and a log entry is added. You can also check manually at any time via Help → Check for Updates. Clicking "Download Update" opens the GitHub releases page. To disable the automatic check, uncheck Settings → Check for Updates on Startup.
 
 **Can I automate backups with Windows Task Scheduler?**
 Yes — use `desktop-icon-backup-manager.exe --backup --silent`. The process runs in the background, saves your layout, and exits immediately. Set it as a login trigger in Task Scheduler for fully automatic, zero-effort desktop icon backups.

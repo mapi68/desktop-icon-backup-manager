@@ -117,7 +117,7 @@ class BackupManagerWindow(QDialog):
         # Live diff preview label — styled to stand out
         preview_label = QLabel(self.tr("Layout Preview (saved positions vs current):"))
         preview_label.setStyleSheet(
-            "color: #888888; font-family: 'Segoe UI'; font-size: 10px;"
+            "font-family: 'Segoe UI'; font-size: 10px;"
             " font-weight: bold; background: transparent; padding: 0px;"
         )
         right.addWidget(preview_label)
@@ -128,7 +128,7 @@ class BackupManagerWindow(QDialog):
         self.info_label = QLabel(self.tr("Select a backup to see details."))
         self.info_label.setWordWrap(True)
         self.info_label.setStyleSheet(
-            "color: #ccc; background-color: #2b2b2b; border-radius: 4px;"
+            "border: 1px solid palette(mid); border-radius: 4px;"
             " padding: 10px; font-family: 'Segoe UI'; font-size: 12px;"
         )
         self.info_label.setMinimumHeight(100)
@@ -464,16 +464,14 @@ class BackupManagerWindow(QDialog):
         dialog.setWindowTitle(self.tr("Comparison Results"))
         dialog.resize(650, 550)
         dialog.setStyleSheet("""
-            QDialog { background-color: #1e1e1e; }
-            QLabel { color: #ffffff; background-color: #2d2d30; border: 1px solid #3f3f46;
+            QLabel { border: 1px solid palette(mid);
                      border-radius: 4px; padding: 12px; font-family: 'Segoe UI'; font-size: 11px; }
-            QTextEdit { color: #d4d4d4; background-color: #1e1e1e; border: 1px solid #3f3f46;
-                        border-radius: 4px; font-family: 'Consolas', monospace; font-size: 11px;
-                        selection-background-color: #264f78; selection-color: #ffffff; }
-            QPushButton { color: #ffffff; background-color: #0e639c; border: 1px solid #1177bb;
+            QTextEdit { border: 1px solid palette(mid);
+                        border-radius: 4px; font-family: 'Consolas', monospace; font-size: 11px; }
+            QPushButton { color: #ffffff; background-color: #0078D7; border: none;
                           border-radius: 4px; padding: 8px 16px; font-family: 'Segoe UI';
                           font-size: 11px; font-weight: bold; }
-            QPushButton:hover { background-color: #1177bb; }
+            QPushButton:hover { background-color: #106EBE; }
         """)
 
         layout = QVBoxLayout(dialog)
@@ -481,9 +479,9 @@ class BackupManagerWindow(QDialog):
         layout.setContentsMargins(15, 15, 15, 15)
 
         header = QLabel(
-            f"<b style='color: #4ec9b0;'>{self.tr('Comparing Backups:')}</b><br>"
-            f"<span style='color: #9cdcfe;'>📄 {file_a}</span><br>"
-            f"<span style='color: #4fc1ff;'>📄 {label_b}</span>"
+            f"<b style='color: #007a6a;'>{self.tr('Comparing Backups:')}</b><br>"
+            f"<span style='color: #0066cc;'>📄 {file_a}</span><br>"
+            f"<span style='color: #0055aa;'>📄 {label_b}</span>"
         )
         layout.addWidget(header)
 
@@ -505,26 +503,26 @@ class BackupManagerWindow(QDialog):
         for line in lines:
             if line.startswith("==="):
                 html_lines.append(
-                    f"<p style='color:#4ec9b0;font-weight:bold;font-size:12pt;'>{line}</p>"
+                    f"<p style='color:#007a6a;font-weight:bold;font-size:12pt;'>{line}</p>"
                 )
             elif line.startswith("---"):
                 html_lines.append(
-                    f"<p style='color:#dcdcaa;font-weight:bold;margin-top:10px;'>{line}</p>"
+                    f"<p style='color:#856a00;font-weight:bold;margin-top:10px;'>{line}</p>"
                 )
             elif "Icon(s) Added:" in line or "  + " in line:
-                html_lines.append(f"<p style='color:#4ec9b0;'>{line}</p>")
+                html_lines.append(f"<p style='color:#007a6a;'>{line}</p>")
             elif "Icon(s) Removed:" in line or "  - " in line:
-                html_lines.append(f"<p style='color:#f48771;'>{line}</p>")
+                html_lines.append(f"<p style='color:#cc2200;'>{line}</p>")
             elif "Icon(s) Moved:" in line or "  ↔" in line:
-                html_lines.append(f"<p style='color:#dcdcaa;'>{line}</p>")
+                html_lines.append(f"<p style='color:#856a00;'>{line}</p>")
             elif "Icon(s) Unchanged:" in line:
-                html_lines.append(f"<p style='color:#808080;'>{line}</p>")
+                html_lines.append(f"<p style='color:gray;'>{line}</p>")
             elif "✓" in line:
                 html_lines.append(
-                    f"<p style='color:#89d185;font-weight:bold;'>{line}</p>"
+                    f"<p style='color:#2e7d32;font-weight:bold;'>{line}</p>"
                 )
             else:
-                html_lines.append(f"<p style='color:#d4d4d4;'>{line}</p>")
+                html_lines.append(f"<p style=''>{line}</p>")
         return "".join(html_lines)
 
 

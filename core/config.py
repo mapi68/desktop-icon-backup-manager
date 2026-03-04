@@ -40,6 +40,7 @@ class Config:
 
     # Tray notification duration (ms)
     TRAY_NOTIFICATION_DURATION = 2000
+    UPDATE_CHECK_DELAY_MS = 10000
 
     # Application version (will be overridden from file)
     VERSION = "0.0.0"

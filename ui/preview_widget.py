@@ -149,7 +149,7 @@ def _draw_arrowhead(
 
 # ── _DiffCanvas ───────────────────────────────────────────────────────────────
 class _DiffCanvas(QWidget):
-    _C_GRID = QColor("#222222")
+    # Grid color computed at paint time from system palette
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -188,22 +188,27 @@ class _DiffCanvas(QWidget):
         p.setRenderHint(QPainter.RenderHint.Antialiasing)
         W, H = self.width(), self.height()
 
-        p.fillRect(0, 0, W, H, QColor("#1a1a1a"))
+        # Use system palette so canvas respects light/dark theme
+        pal = self.palette()
+        bg = pal.color(pal.ColorRole.Base)
+        grid_color = pal.color(pal.ColorRole.AlternateBase)
+        border_color = pal.color(pal.ColorRole.Mid)
+        p.fillRect(0, 0, W, H, bg)
 
         # Subtle grid
-        p.setPen(QPen(self._C_GRID, 1))
+        p.setPen(QPen(grid_color, 1))
         for x in range(0, W, 60):
             p.drawLine(x, 0, x, H)
         for y in range(0, H, 60):
             p.drawLine(0, y, W, y)
 
         # Border
-        p.setPen(QPen(QColor("#3a3a3a"), 2))
+        p.setPen(QPen(border_color, 2))
         p.setBrush(Qt.BrushStyle.NoBrush)
         p.drawRoundedRect(1, 1, W - 2, H - 2, 4, 4)
 
         if not self._saved:
-            p.setPen(QColor(Config.COLOR_TEXT_DIM))
+            p.setPen(pal.color(pal.ColorRole.PlaceholderText))
             p.setFont(QFont("Segoe UI", 10))
             p.drawText(
                 self.rect(),
@@ -314,14 +319,12 @@ class _LegendPanel(QFrame):
         self.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         self.setStyleSheet("""
             QFrame#LegendPanel {
-                background-color: rgba(15, 15, 15, 210);
-                border: 1px solid #484848;
+                border: 1px solid palette(mid);
                 border-radius: 7px;
             }
             QLabel {
                 background: transparent;
                 border: none;
-                color: #c8c8c8;
                 font-family: 'Segoe UI';
                 font-size: 11px;
             }
@@ -386,18 +389,15 @@ class IconPreviewWidget(QWidget):
         self.icons: Dict[str, Tuple[int, int]] = {}
         self.screen_res: Tuple[int, int] = (1920, 1080)
         self.setMouseTracking(True)
-        self.setStyleSheet(f"""
-            QWidget {{
-                background-color: {Config.COLOR_BACKGROUND};
-                border: 2px solid {Config.COLOR_BORDER};
+        self.setStyleSheet("""
+            QWidget {
+                background-color: palette(base);
+                border: 2px solid palette(mid);
                 border-radius: 4px;
-            }}
-            QToolTip {{
-                color: {Config.COLOR_TOOLTIP_TEXT};
-                background-color: {Config.COLOR_TOOLTIP_BG};
-                border: 1px solid {Config.COLOR_TOOLTIP_TEXT};
+            }
+            QToolTip {
                 font-family: 'Segoe UI'; font-size: 12px;
-            }}
+            }
         """)
 
     def update_preview(self, icons: Dict, res_tuple: Tuple[int, int]):
@@ -416,7 +416,7 @@ class IconPreviewWidget(QWidget):
         p = QPainter(self)
         p.setRenderHint(QPainter.RenderHint.Antialiasing)
         if not self.icons:
-            p.setPen(QColor(Config.COLOR_TEXT_DIM))
+            p.setPen(self.palette().color(self.palette().ColorRole.PlaceholderText))
             p.drawText(
                 self.rect(),
                 Qt.AlignmentFlag.AlignCenter,
@@ -425,7 +425,7 @@ class IconPreviewWidget(QWidget):
             return
         sx, sy = self._scale()
         p.setPen(Qt.PenStyle.NoPen)
-        p.setBrush(QColor(Config.COLOR_ICON_DOT))
+        p.setBrush(_C_BLUE)
         for pos in self.icons.values():
             px, py = self._clamp(int(pos[0] * sx), int(pos[1] * sy))
             p.drawEllipse(px - _DOT_R, py - _DOT_R, _DOT_D, _DOT_D)

@@ -199,7 +199,7 @@
   % Version info
   {\small\color{gray}
     \begin{tabular}{rl}
-      \textbf{Document Version:} & 1.0 \\[0.2cm]
+      \textbf{Document Version:} & 1.1 \\[0.2cm]
       \textbf{Release Date:} & \today \\[0.2cm]
       \textbf{Software Version:} & \input{version.txt} \\
     \end{tabular}
@@ -319,6 +319,9 @@ different resolutions, and complete automation through configurable settings.
     functions from the system tray
   \item \textbf{Automation}: Auto-save on exit and auto-restore on
     startup options
+  \item \textbf{Update Checker}: Automatically checks for new versions
+    at startup (configurable); tray notification and log entry when an
+    update is available. Also accessible manually via Help menu
   \item \textbf{Command Line Interface}: Full CLI support for scripting
     and scheduled tasks
   \item \textbf{Multi-language Support}: Available in 21 languages ---
@@ -350,11 +353,11 @@ different resolutions, and complete automation through configurable settings.
 
 \textbf{Method 1: Standalone Executable (Recommended)}
 \begin{enumerate}
-  \item Download the \texttt{desktop-icon-backup-manager.exe} file
-  \item Place the executable in a dedicated folder
-  \item Run the program with a double-click
-  \item The program will automatically create necessary folders and
-    configuration files
+  \item Download the latest zip file
+  \item Extract it in any folder
+  \item Run \texttt{Desktop Icon Backup Manager.exe}
+  \item The \texttt{icon\_backups} folder and \texttt{settings.ini}
+    are created automatically
 \end{enumerate}
 
 \textbf{Method 2: From Python Source}
@@ -715,6 +718,29 @@ Automatically restores the most recent backup when the application starts.
   \item Combination with laptop docking/undocking workflows
 \end{itemize}
 
+\subsection{Check for Updates on Startup}
+
+When enabled (default: on), the application silently checks GitHub
+for a new version 10 seconds after startup.
+
+\textbf{Behavior when an update is available}:
+\begin{itemize}
+  \item A tray notification is shown: ``A new version is available! (x.x.x)''
+  \item Notification duration: 8 seconds
+  \item A log entry is added to the Activity Log
+\end{itemize}
+
+\textbf{Manual check}: Select \texttt{Help > Check for Updates\ldots}
+at any time to open the update dialog, which shows the installed
+version, the latest version from GitHub, and a ``Download Update''
+button that opens the releases page in your browser.
+
+\begin{infobox}[Network Note]
+  The check connects only to GitHub raw content to read a single
+  plain-text \texttt{version.txt} file. No personal data is sent.
+  If the network is unavailable, the check silently fails.
+\end{infobox}
+
 \subsection{Enable Adaptive Scaling on Restore}
 
 Enables intelligent scaling of icon positions when restoring a backup
@@ -959,6 +985,22 @@ Opens the complete PDF user manual in your default browser.
   \item Troubleshooting guides
   \item Best practices and recommendations
   \item Technical reference information
+\end{itemize}
+
+\subsection{Check for Updates}
+
+Opens the update checker dialog (also triggered automatically at
+startup if the option is enabled in Settings).
+
+\textbf{Dialog contents}:
+\begin{itemize}
+  \item \textbf{Installed version}: Read from the bundled \texttt{version.txt}
+  \item \textbf{Latest version}: Fetched in a background thread from GitHub
+  \item \textbf{Status}: ``You are using the latest version'',
+    ``A new version is available!'' (with Download button),
+    or ``You are using a pre-release version''
+  \item \textbf{Download Update}: Opens the GitHub releases page in your browser
+  \item \textbf{Check Again}: Re-fetches the remote version without closing
 \end{itemize}
 
 \subsection{About Dialog}
@@ -1788,10 +1830,15 @@ configuration rather than relying on scaling.
 A: No, running multiple instances simultaneously is not supported and
 may cause conflicts. Only one instance should run at a time.
 
-\textbf{Q: Does the program auto-update?}
+\textbf{Q: Does the program check for updates?}
 
-A: Currently, no auto-update feature exists. Check the GitHub
-repository or project website for new releases and manual download.
+A: Yes. By default, the program checks GitHub for a new version
+10 seconds after startup. If one is available, a tray notification
+appears and a log entry is added. You can also check manually via
+\texttt{Help > Check for Updates\ldots}. Clicking ``Download Update''
+opens the GitHub releases page. The check can be disabled via
+\texttt{Settings > Check for Updates on Startup}.
+The program never auto-installs updates.
 
 \subsection{Technical Questions}
 
@@ -2023,6 +2070,7 @@ settings_file_path = app_path / "settings.ini"
 start_minimized=false
 auto_save_on_exit=false
 auto_restore_on_startup=false
+check_updates_on_startup=true
 adaptive_scaling_enabled=false
 close_to_tray=false
 cleanup_limit=0
@@ -2037,6 +2085,8 @@ geometry=@Rect(100 100 800 650)
   \item[\texttt{adaptive\_scaling\_enabled}] Enable resolution
     scaling during restore
   \item[\texttt{close\_to\_tray}] Minimize to tray when clicking X button
+  \item[\texttt{check\_updates\_on\_startup}] Check GitHub for a new
+    version 10 seconds after launch (default: true)
   \item[\texttt{cleanup\_limit}] Maximum backup files to retain (0 = unlimited)
   \item[\texttt{geometry}] Window position and size in Qt rect format
 \end{description}
