@@ -303,7 +303,7 @@ class _LegendPanel(QFrame):
         row 2:  [● green ] "In backup — not on desktop"
     """
 
-    _ROW_H = 26  # uniform row height (px)
+    _ROW_H = 22  # uniform row height (px)
 
     # (icon_factory, source_string) — strings are marked here for lupdate extraction.
     # Translation happens at instance creation time via self.tr() in __init__.
@@ -333,14 +333,13 @@ class _LegendPanel(QFrame):
         grid = QGridLayout(self)
         grid.setContentsMargins(12, 8, 16, 8)
         grid.setHorizontalSpacing(10)
-        grid.setVerticalSpacing(0)
+        grid.setVerticalSpacing(4)
         # Column 0: icon zone — wide enough for _ArrowIcon (64 px)
         grid.setColumnMinimumWidth(0, _ArrowIcon._W)
         grid.setColumnStretch(1, 1)
 
         for row_idx, (icon_fn, label_key) in enumerate(self._ROWS):
             icon_w = icon_fn()
-            # Every icon widget is the same height — the grid rows are all equal
             icon_w.setFixedHeight(self._ROW_H)
             icon_w.setStyleSheet("background: transparent; border: none;")
 
@@ -350,6 +349,9 @@ class _LegendPanel(QFrame):
 
             grid.addWidget(icon_w, row_idx, 0, Qt.AlignmentFlag.AlignVCenter)
             grid.addWidget(lbl, row_idx, 1, Qt.AlignmentFlag.AlignVCenter)
+
+        # Stretch row: absorbs extra vertical space so items stay packed at top
+        grid.setRowStretch(len(self._ROWS), 1)
 
 
 # ── DiffPreviewWidget ─────────────────────────────────────────────────────────

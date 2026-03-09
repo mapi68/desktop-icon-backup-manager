@@ -77,12 +77,31 @@ jobs:
         shell: pwsh
         run: Compress-Archive -Path artifact_contents/* -DestinationPath desktop-icon-backup-manager_v${{ steps.app_version.outputs.version }}.zip -Force
 
+      - name: Generate SHA256 checksum
+        shell: pwsh
+        run: |
+          $zipFile = "desktop-icon-backup-manager_v${{ steps.app_version.outputs.version }}.zip"
+          $hash = (Get-FileHash $zipFile -Algorithm SHA256).Hash.ToLower()
+          $checksumLine = "$hash  $zipFile"
+          $checksumFile = "desktop-icon-backup-manager_v${{ steps.app_version.outputs.version }}.zip.sha256"
+          [System.IO.File]::WriteAllText($checksumFile, $checksumLine)
+          Write-Host "SHA256: $checksumLine"
+
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
-          files: desktop-icon-backup-manager_v${{ steps.app_version.outputs.version }}.zip
+          files: |
+            desktop-icon-backup-manager_v${{ steps.app_version.outputs.version }}.zip
+            desktop-icon-backup-manager_v${{ steps.app_version.outputs.version }}.zip.sha256
           tag_name: v${{ steps.app_version.outputs.version }}
           name: Release v${{ steps.app_version.outputs.version }}
+          body: |
+            [![☕ Liked this tool? Buy me a coffee! — ko-fi.com/mapi68](https://img.shields.io/badge/-%E2%98%95%20Liked%20this%20tool%3F%20%20Buy%20me%20a%20coffee!%20%E2%80%94%20ko--fi.com%2Fmapi68-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=1a1a2e)](https://ko-fi.com/mapi68)
+
+            > **Verify integrity:** download the `.sha256` file and run:
+            > ```
+            > certutil -hashfile desktop-icon-backup-manager_v${{ steps.app_version.outputs.version }}.zip SHA256
+            > ```
           generate_release_notes: true
           draft: false
           prerelease: false

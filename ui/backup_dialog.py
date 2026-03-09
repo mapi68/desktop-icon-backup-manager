@@ -23,6 +23,21 @@ from PyQt6.QtCore import Qt, pyqtSignal, QSize
 from PyQt6.QtGui import QAction, QColor, QFont
 
 from core.config import Config
+
+
+def _ask(parent, title: str, text: str, yes_label: str, no_label: str) -> bool:
+    """QMessageBox with fully translated custom Yes/No buttons."""
+    box = QMessageBox(parent)
+    box.setWindowTitle(title)
+    box.setText(text)
+    box.setIcon(QMessageBox.Icon.Question)
+    btn_yes = box.addButton(yes_label, QMessageBox.ButtonRole.AcceptRole)
+    box.addButton(no_label, QMessageBox.ButtonRole.RejectRole)
+    box.setDefaultButton(btn_yes)
+    box.exec()
+    return box.clickedButton() is btn_yes
+
+
 from core.comparator import BackupComparator
 from utils.helpers import parse_backup_filename, parse_resolution_string
 from ui.preview_widget import IconPreviewWidget, DiffPreviewWidget, make_legend_widget
@@ -334,7 +349,39 @@ class BackupManagerWindow(QDialog):
             description = data.get("description", self.tr("N/A"))
             icon_count = data.get("icon_count", self.tr("N/A"))
 
-            reply = QMessageBox.question(
+            # Count diff stats from the already-loaded preview
+            saved_icons = data.get("icons", {})
+            try:
+                current_icons = self.manager.get_current_icon_positions()
+            except Exception:
+                current_icons = {}
+
+            moved = sum(
+                1
+                for name, pos in saved_icons.items()
+                if name in current_icons
+                and (
+                    abs(pos[0] - current_icons[name][0]) > 4
+                    or abs(pos[1] - current_icons[name][1]) > 4
+                )
+            )
+            unchanged = sum(
+                1
+                for name, pos in saved_icons.items()
+                if name in current_icons
+                and abs(pos[0] - current_icons[name][0]) <= 4
+                and abs(pos[1] - current_icons[name][1]) <= 4
+            )
+            missing = sum(1 for name in saved_icons if name not in current_icons)
+
+            summary = (
+                f"\n\n"
+                f"🟠 {moved} {self.tr('will move')}\n"
+                f"🔵 {unchanged} {self.tr('already in place')}\n"
+                f"🟢 {missing} {self.tr('not on desktop')}"
+            )
+
+            if _ask(
                 self,
                 self.tr("Confirm Restore"),
                 self.tr(
@@ -350,11 +397,11 @@ class BackupManagerWindow(QDialog):
                 .replace("%2", resolution)
                 .replace("%3", str(icon_count))
                 .replace("%4", description)
-                .replace("%5", readable_date),
-                QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
-            )
-
-            if reply == QMessageBox.StandardButton.Yes:
+                .replace("%5", readable_date)
+                + summary,
+                self.tr("Yes"),
+                self.tr("No"),
+            ):
                 self.restore_requested.emit(fn)
                 self.accept()
 
@@ -370,16 +417,15 @@ class BackupManagerWindow(QDialog):
         if not fn:
             return
 
-        reply = QMessageBox.question(
+        if _ask(
             self,
             self.tr("Confirm Delete"),
             self.tr("Are you sure you want to delete this backup?\n\n%1").replace(
                 "%1", fn
             ),
-            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
-        )
-
-        if reply == QMessageBox.StandardButton.Yes:
+            self.tr("Yes"),
+            self.tr("No"),
+        ):
             if self.manager.delete_backup(fn):
                 self.load_backups()
                 self.list_changed_signal.emit()

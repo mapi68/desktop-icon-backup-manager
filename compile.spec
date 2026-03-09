@@ -60,7 +60,18 @@ VERSION_INFO_PATH = 'version_info.txt'
 with open(VERSION_INFO_PATH, 'w', encoding='utf-8', newline='\n') as f:
     f.write(version_info_content)
 
-# --- 3. ANALYSIS ---
+# --- 3. QT BASE TRANSLATIONS ---
+# Resolve Qt's own translations folder at build time so PyInstaller
+# can bundle qtbase_*.qm files — needed to localise standard buttons
+# (Yes / No / OK / Cancel / Close …) in each language.
+import glob as _glob
+from PyQt6.QtCore import QLibraryInfo as _QLib
+from PyQt6.QtWidgets import QApplication as _QApp
+_qt_app = _QApp.instance() or _QApp([])
+_qt_tr_path = _QLib.path(_QLib.LibraryPath.TranslationsPath)
+_qtbase_qms = _glob.glob(os.path.join(_qt_tr_path, 'qtbase_*.qm'))
+
+# --- 4. ANALYSIS ---
 a = Analysis(
     ['main.py'],
     pathex=[],
@@ -69,7 +80,8 @@ a = Analysis(
         ('icon.ico', '.'),
         ('icon.png', '.'),
         ('i18n/*.qm', 'i18n'),
-        ('version.txt', '.')
+        ('version.txt', '.'),
+        *[(_qm, 'qt_translations') for _qm in _qtbase_qms],
     ],
     hiddenimports=[],
     hookspath=[],

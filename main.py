@@ -101,6 +101,33 @@ def load_language(app: QApplication, locale: str) -> QTranslator:
     if locale:
         translator.load(locale, resource_path("i18n"))
     app.installTranslator(translator)
+
+    # Also load Qt's own base translations so standard buttons
+    # (Yes/No/OK/Cancel/Close/…) appear in the chosen language.
+    if locale:
+        from PyQt6.QtCore import QLibraryInfo
+
+        qt_translator = QTranslator()
+        lang_short = locale.split("_")[0]  # e.g. "it" from "it_IT"
+
+        # When running from a PyInstaller bundle, qtbase_*.qm files are
+        # bundled in the "qt_translations" subfolder next to the exe.
+        # In a dev environment they live in Qt's system translations path.
+        search_paths = [
+            resource_path("qt_translations"),
+            QLibraryInfo.path(QLibraryInfo.LibraryPath.TranslationsPath),
+        ]
+        loaded = False
+        for path in search_paths:
+            if qt_translator.load(f"qtbase_{locale}", path):
+                loaded = True
+                break
+            if qt_translator.load(f"qtbase_{lang_short}", path):
+                loaded = True
+                break
+        if loaded:
+            app.installTranslator(qt_translator)
+
     return translator
 
 

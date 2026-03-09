@@ -48,8 +48,9 @@ from utils.helpers import (
     get_readable_date,
     get_resolution_from_filename,
 )
-from ui.backup_dialog import BackupManagerWindow
+from ui.backup_dialog import BackupManagerWindow, _ask
 from ui.update_dialog import UpdateDialog
+from ui.preview_widget import DiffPreviewWidget, make_legend_widget
 
 
 class MainWindow(QMainWindow):
@@ -557,7 +558,7 @@ class MainWindow(QMainWindow):
             )
             return
 
-        reply = QMessageBox.warning(
+        if _ask(
             self,
             self.tr("WARNING: Delete All Backups"),
             self.tr(
@@ -565,11 +566,9 @@ class MainWindow(QMainWindow):
                 None,
                 backup_count,
             ),
-            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
-            QMessageBox.StandardButton.No,
-        )
-
-        if reply == QMessageBox.StandardButton.Yes:
+            self.tr("Yes"),
+            self.tr("No"),
+        ):
             self.log(self.tr("Starting deletion of all backup files..."))
             self.toggle_buttons(False)
             success = self.manager.delete_all_backups(self.log)
@@ -622,37 +621,134 @@ class MainWindow(QMainWindow):
             self.log(self.tr("✗ Restore failed: No backup files found."))
             return
 
-        formatted_date = get_readable_date(latest_backup_file)
-        resolution = get_resolution_from_filename(latest_backup_file)
+        self._show_restore_preview_dialog(latest_backup_file)
+
+    def _show_restore_preview_dialog(self, filename: str):
+        """Show a restore confirmation dialog with a live diff preview."""
+        from utils.helpers import parse_resolution_string
+
+        filepath = os.path.join(Config.BACKUP_DIR, filename)
+        formatted_date = get_readable_date(filename)
+        resolution = get_resolution_from_filename(filename)
 
         description = self.tr("N/A")
         icon_count = self.tr("N/A")
-        filepath = os.path.join(Config.BACKUP_DIR, latest_backup_file)
+        saved_icons = {}
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 description = data.get("description", self.tr("N/A"))
                 icon_count = data.get("icon_count", self.tr("N/A"))
+                saved_icons = data.get("icons", {})
         except Exception:
             description = self.tr("N/A (Old Format)")
-            icon_count = self.tr("N/A")
 
-        reply = QMessageBox.question(
-            self,
-            self.tr("Confirm Restore"),
-            self.tr(
-                "Restore icon positions from the LATEST backup file:\n\nFile: %1\nResolution: %2\nIcons: %3\nTag: %4\nTimestamp: %5\n\nAre you sure you want to proceed?"
+        try:
+            current_icons = self.manager.get_current_icon_positions()
+        except Exception:
+            current_icons = {}
+
+        res_tuple = parse_resolution_string(resolution) or (1920, 1080)
+
+        # Count what will actually change
+        moved = sum(
+            1
+            for name, pos in saved_icons.items()
+            if name in current_icons
+            and (
+                abs(pos[0] - current_icons[name][0]) > 4
+                or abs(pos[1] - current_icons[name][1]) > 4
             )
-            .replace("%1", str(latest_backup_file))
-            .replace("%2", str(resolution))
-            .replace("%3", str(icon_count))
-            .replace("%4", str(description))
-            .replace("%5", str(formatted_date)),
-            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
         )
+        unchanged = sum(
+            1
+            for name, pos in saved_icons.items()
+            if name in current_icons
+            and abs(pos[0] - current_icons[name][0]) <= 4
+            and abs(pos[1] - current_icons[name][1]) <= 4
+        )
+        missing = sum(1 for name in saved_icons if name not in current_icons)
 
-        if reply == QMessageBox.StandardButton.Yes:
-            self._start_restore(latest_backup_file)
+        dialog = QDialog(self)
+        dialog.setWindowTitle(self.tr("Confirm Restore — Live Preview"))
+        dialog.setMinimumSize(900, 580)
+        dialog.resize(1000, 640)
+
+        layout = QVBoxLayout(dialog)
+        layout.setSpacing(10)
+        layout.setContentsMargins(14, 14, 14, 14)
+
+        # Info header
+        info_html = (
+            f"<b>{self.tr('File')}:</b> {filename}&nbsp;&nbsp;"
+            f"<b>{self.tr('Resolution')}:</b> {resolution}&nbsp;&nbsp;"
+            f"<b>{self.tr('Icons')}:</b> {icon_count}&nbsp;&nbsp;"
+            f"<b>{self.tr('Tag')}:</b> {description}&nbsp;&nbsp;"
+            f"<b>{self.tr('Timestamp')}:</b> {formatted_date}"
+        )
+        info_label = QLabel(info_html)
+        info_label.setWordWrap(True)
+        info_label.setStyleSheet(
+            "border: 1px solid palette(mid); border-radius: 4px;"
+            " padding: 8px; font-family: 'Segoe UI'; font-size: 11px;"
+        )
+        layout.addWidget(info_label)
+
+        # Diff summary bar
+        summary_html = (
+            f"<span style='color:#FF9800;'>⬤</span> <b>{moved}</b> {self.tr('will move')}&nbsp;&nbsp;&nbsp;"
+            f"<span style='color:#0078D7;'>⬤</span> <b>{unchanged}</b> {self.tr('already in place')}&nbsp;&nbsp;&nbsp;"
+            f"<span style='color:#4CAF50;'>⬤</span> <b>{missing}</b> {self.tr('not on desktop')}"
+        )
+        summary_label = QLabel(summary_html)
+        summary_label.setStyleSheet(
+            "font-family: 'Segoe UI'; font-size: 12px; padding: 4px 0px;"
+        )
+        layout.addWidget(summary_label)
+
+        # Preview label
+        preview_title = QLabel(self.tr("Layout Preview (saved positions vs current):"))
+        preview_title.setStyleSheet(
+            "font-family: 'Segoe UI'; font-size: 10px; font-weight: bold;"
+        )
+        layout.addWidget(preview_title)
+
+        # Preview canvas + legend side by side
+        preview_row = QHBoxLayout()
+        preview_widget = DiffPreviewWidget()
+        preview_widget.update_preview(saved_icons, current_icons, res_tuple)
+        preview_row.addWidget(preview_widget, stretch=1)
+
+        legend = make_legend_widget()
+        from PyQt6.QtWidgets import QSizePolicy as QSP
+
+        legend.setSizePolicy(QSP.Policy.Preferred, QSP.Policy.Expanding)
+        legend.setMinimumWidth(320)
+        preview_row.addWidget(legend)
+        layout.addLayout(preview_row, stretch=1)
+
+        # Buttons
+        btn_row = QHBoxLayout()
+        btn_restore = QPushButton(self.tr("↺ Restore"))
+        btn_restore.setMinimumHeight(38)
+        btn_restore.setStyleSheet(
+            "QPushButton { color: white; background-color: #CC0000; font-weight: bold;"
+            " border-radius: 5px; padding: 6px 18px; font-size: 13px; }"
+            "QPushButton:hover { background-color: #aa0000; }"
+        )
+        btn_cancel = QPushButton(self.tr("Cancel"))
+        btn_cancel.setMinimumHeight(38)
+
+        btn_row.addStretch(1)
+        btn_row.addWidget(btn_cancel)
+        btn_row.addWidget(btn_restore)
+        layout.addLayout(btn_row)
+
+        btn_restore.clicked.connect(dialog.accept)
+        btn_cancel.clicked.connect(dialog.reject)
+
+        if dialog.exec() == QDialog.DialogCode.Accepted:
+            self._start_restore(filename)
 
     def _start_restore(self, filename: Optional[str] = None):
         enable_scaling = self.settings.value(
@@ -677,16 +773,15 @@ class MainWindow(QMainWindow):
         self.worker.start()
 
     def start_scramble(self):
-        reply = QMessageBox.question(
+        if _ask(
             self,
             self.tr("Confirm Scramble"),
             self.tr(
                 "Are you sure you want to randomize the positions of ALL desktop icons?\n\n**A mandatory backup will be created first**.\n\nDo you want to proceed?"
             ),
-            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
-        )
-
-        if reply == QMessageBox.StandardButton.Yes:
+            self.tr("Yes"),
+            self.tr("No"),
+        ):
             self.log(self.tr("Starting desktop icon scrambling (randomization)..."))
             self.toggle_buttons(False)
             self.show_progress(True)
