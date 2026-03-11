@@ -10,23 +10,34 @@ from PyQt6.QtGui import (
     QRadialGradient,
     QPen,
 )
-from PyQt6.QtCore import Qt, QRect, QTimer, QCoreApplication
+from PyQt6.QtCore import Qt, QRect, QCoreApplication
 
 from core.config import Config, resource_path
 
 # Duration in milliseconds
-SPLASH_DURATION_MS = 2000
+SPLASH_DURATION_MS = 1500
 
 
 class SplashScreen(QSplashScreen):
     """Splash screen shown at application startup."""
 
-    SPLASH_W = 480
-    SPLASH_H = 280
+    SPLASH_W = 460
+    SPLASH_H = 340
+
+    # Design palette — Windows light theme
+    _C_BG_TOP = QColor("#D6DCE8")
+    _C_BG_BOT = QColor("#C8D0E0")
+    _C_CARD = QColor(0, 0, 0, 6)
+    _C_BORDER = QColor(0, 0, 0, 45)
+    _C_ACCENT = QColor("#0058A8")
+    _C_ACCENT2 = QColor("#0078D7")
+    _C_WHITE = QColor("#0A0A14")
+    _C_DIM = QColor("#2D3748")
+    _C_RULE = QColor(0, 0, 0, 120)
 
     def __init__(self):
-        canvas = self._build_canvas()
-        super().__init__(canvas)
+        self._base_canvas = self._build_canvas()  # pixmap senza barra
+        super().__init__(self._base_canvas.copy())
         self.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint)
 
     def center_on_window(self, window):
@@ -37,8 +48,6 @@ class SplashScreen(QSplashScreen):
         self.move(x, y)
 
     def _build_canvas(self) -> QPixmap:
-        from PyQt6.QtGui import QPen, QRadialGradient
-
         W, H = self.SPLASH_W, self.SPLASH_H
 
         source = QPixmap(resource_path("icon.png"))
@@ -49,121 +58,156 @@ class SplashScreen(QSplashScreen):
         p.setRenderHint(QPainter.RenderHint.Antialiasing)
         p.setRenderHint(QPainter.RenderHint.SmoothPixmapTransform)
 
-        # ── Background: deep space blue — diagonal gradient
-        bg = QLinearGradient(0, 0, W * 0.6, H)
-        bg.setColorAt(0.0, QColor("#060D1F"))
-        bg.setColorAt(0.55, QColor("#0B1A3B"))
-        bg.setColorAt(1.0, QColor("#0E2255"))
+        # ── Background: near-black gradient
+        bg = QLinearGradient(0, 0, 0, H)
+        bg.setColorAt(0.0, self._C_BG_TOP)
+        bg.setColorAt(1.0, self._C_BG_BOT)
         p.setBrush(bg)
         p.setPen(Qt.PenStyle.NoPen)
-        p.drawRoundedRect(0, 0, W, H, 14, 14)
+        p.drawRoundedRect(0, 0, W, H, 12, 12)
 
-        # ── Radial glow top-right (cyan)
-        glow_tr = QRadialGradient(W, 0, 200)
-        glow_tr.setColorAt(0.0, QColor(0, 229, 255, 55))
-        glow_tr.setColorAt(1.0, QColor(0, 229, 255, 0))
-        p.setBrush(glow_tr)
-        p.drawRoundedRect(0, 0, W, H, 14, 14)
+        # ── Subtle radial glow behind icon area (blue)
+        glow = QRadialGradient(W // 2, 118, 110)
+        glow.setColorAt(0.0, QColor(0, 120, 215, 45))
+        glow.setColorAt(1.0, QColor(0, 120, 215, 0))
+        p.setBrush(glow)
+        p.drawRect(0, 0, W, H)
 
-        # ── Radial glow bottom-left (violet)
-        glow_bl = QRadialGradient(60, H + 30, 160)
-        glow_bl.setColorAt(0.0, QColor(120, 40, 255, 40))
-        glow_bl.setColorAt(1.0, QColor(120, 40, 255, 0))
-        p.setBrush(glow_bl)
-        p.drawRoundedRect(0, 0, W, H, 14, 14)
-
-        # ── Subtle grid lines
-        p.setPen(QPen(QColor(255, 255, 255, 10), 1))
-        for x in range(0, W, 40):
-            p.drawLine(x, 0, x, H)
-        for y in range(0, H, 40):
+        # ── Fine horizontal scan-lines for texture (very subtle)
+        p.setPen(QPen(QColor(0, 0, 0, 6), 1))
+        for y in range(0, H, 3):
             p.drawLine(0, y, W, y)
 
-        # ── Top accent bar: vivid cyan → electric blue → violet
+        # ── Outer border
+        p.setPen(QPen(self._C_BORDER, 1))
+        p.setBrush(Qt.BrushStyle.NoBrush)
+        p.drawRoundedRect(0, 0, W - 1, H - 1, 12, 12)
+
+        # ── Top accent stripe (electric blue → cyan)
         p.setPen(Qt.PenStyle.NoPen)
-        accent = QLinearGradient(0, 0, W, 0)
-        accent.setColorAt(0.0, QColor("#00E5FF"))
-        accent.setColorAt(0.45, QColor("#2979FF"))
-        accent.setColorAt(1.0, QColor("#AA00FF"))
-        p.setBrush(accent)
-        p.drawRoundedRect(0, 0, W, 5, 3, 3)
+        stripe = QLinearGradient(0, 0, W, 0)
+        stripe.setColorAt(0.0, self._C_ACCENT)
+        stripe.setColorAt(1.0, self._C_ACCENT2)
+        p.setBrush(stripe)
+        p.drawRoundedRect(0, 0, W, 4, 2, 2)
 
-        # ── Bottom accent bar: reversed, slightly dimmer
-        accent2 = QLinearGradient(0, 0, W, 0)
-        accent2.setColorAt(0.0, QColor(170, 0, 255, 140))
-        accent2.setColorAt(0.55, QColor(41, 121, 255, 140))
-        accent2.setColorAt(1.0, QColor(0, 229, 255, 140))
-        p.setBrush(accent2)
-        p.drawRoundedRect(0, H - 4, W, 4, 3, 3)
-
-        # ── App icon (left)
-        ICON = 96
-        ix, iy = 28, (H - ICON) // 2 - 10
+        # ══════════════════════════════════════════
+        # ICON — centred in the top portion
+        # ══════════════════════════════════════════
+        ICON = 80
+        ix = (W - ICON) // 2
+        iy = 26
         scaled = source.scaled(
             ICON,
             ICON,
             Qt.AspectRatioMode.KeepAspectRatio,
             Qt.TransformationMode.SmoothTransformation,
         )
+        # Soft drop-shadow behind icon
+        p.setPen(Qt.PenStyle.NoPen)
+        shadow = QRadialGradient(ix + ICON // 2, iy + ICON // 2 + 6, ICON // 2 + 8)
+        shadow.setColorAt(0.0, QColor(0, 120, 215, 60))
+        shadow.setColorAt(1.0, QColor(0, 0, 0, 0))
+        p.setBrush(shadow)
+        p.drawEllipse(ix - 12, iy - 4, ICON + 24, ICON + 20)
         p.drawPixmap(ix, iy, scaled)
 
-        # ── Title line 1: pure white
-        tx = ix + ICON + 24
-        tw = W - tx - 22
-        p.setPen(QColor("#FFFFFF"))
-        p.setFont(QFont("Segoe UI", 19, QFont.Weight.Bold))
+        # ══════════════════════════════════════════
+        # APP NAME — two-line, centred
+        # ══════════════════════════════════════════
+        name_y = iy + ICON + 14
+
+        p.setPen(self._C_WHITE)
+        f_title = QFont("Segoe UI", 17, QFont.Weight.Bold)
+        f_title.setLetterSpacing(QFont.SpacingType.AbsoluteSpacing, 0.5)
+        p.setFont(f_title)
         p.drawText(
-            QRect(tx, iy, tw, 38),
-            Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
+            QRect(0, name_y, W, 30),
+            Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter,
             "Desktop Icon",
         )
 
-        # ── Title line 2: vivid cyan (stands out from line 1)
-        p.setPen(QColor("#00E5FF"))
+        p.setPen(self._C_ACCENT2)
+        f_sub = QFont("Segoe UI", 17, QFont.Weight.Bold)
+        f_sub.setLetterSpacing(QFont.SpacingType.AbsoluteSpacing, 0.5)
+        p.setFont(f_sub)
         p.drawText(
-            QRect(tx, iy + 37, tw, 38),
-            Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
+            QRect(0, name_y + 28, W, 30),
+            Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter,
             "Backup Manager",
         )
 
-        # ── Separator line: full gradient
-        sep = QLinearGradient(tx, 0, tx + tw, 0)
-        sep.setColorAt(0.0, QColor("#00E5FF"))
-        sep.setColorAt(0.5, QColor("#2979FF"))
-        sep.setColorAt(1.0, QColor("#AA00FF"))
-        p.setPen(QPen(sep, 1.5))
-        p.drawLine(tx, iy + 83, tx + tw, iy + 83)
+        # ══════════════════════════════════════════
+        # THIN HORIZONTAL RULE
+        # ══════════════════════════════════════════
+        rule_y = name_y + 68
+        rule_margin = 40
+        rule_grad = QLinearGradient(rule_margin, 0, W - rule_margin, 0)
+        rule_grad.setColorAt(0.0, QColor(0, 0, 0, 0))
+        rule_grad.setColorAt(0.3, self._C_RULE)
+        rule_grad.setColorAt(0.7, self._C_RULE)
+        rule_grad.setColorAt(1.0, QColor(0, 0, 0, 0))
+        p.setPen(QPen(rule_grad, 1))
+        p.drawLine(rule_margin, rule_y, W - rule_margin, rule_y)
 
-        # ── Version — bright cyan
-        p.setPen(QColor("#40D4FF"))
-        p.setFont(QFont("Segoe UI", 9, QFont.Weight.DemiBold))
+        # ══════════════════════════════════════════
+        # VERSION  +  DEVELOPMENT  — two columns
+        # ══════════════════════════════════════════
+        meta_y = rule_y + 14
+        col_w = W // 2
+
+        f_label = QFont("Segoe UI", 7, QFont.Weight.Bold)
+        f_label.setLetterSpacing(QFont.SpacingType.AbsoluteSpacing, 1.8)
+        f_value = QFont("Segoe UI", 9)
+
+        # Left: VERSION
+        p.setFont(f_label)
+        p.setPen(self._C_DIM)
         p.drawText(
-            QRect(tx, iy + 91, tw, 22),
-            Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
-            QCoreApplication.translate("SplashScreen", "Version: %1").replace(
-                "%1", Config.VERSION
-            ),
+            QRect(0, meta_y, col_w, 16),
+            Qt.AlignmentFlag.AlignHCenter,
+            QCoreApplication.translate("SplashScreen", "VERSION"),
+        )
+        p.setFont(f_value)
+        p.setPen(self._C_WHITE)
+        p.drawText(
+            QRect(0, meta_y + 17, col_w, 18),
+            Qt.AlignmentFlag.AlignHCenter,
+            Config.VERSION,
         )
 
-        # ── Author — light steel blue
-        p.setPen(QColor("#7BB8E8"))
-        p.setFont(QFont("Segoe UI", 9))
+        # Vertical divider between columns
+        p.setPen(QPen(self._C_RULE, 1))
+        p.drawLine(col_w, meta_y, col_w, meta_y + 35)
+
+        # Right: DEVELOPMENT
+        p.setFont(f_label)
+        p.setPen(self._C_DIM)
         p.drawText(
-            QRect(tx, iy + 111, tw, 22),
-            Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
-            QCoreApplication.translate("SplashScreen", "Development: mapi68"),
+            QRect(col_w, meta_y, col_w, 16),
+            Qt.AlignmentFlag.AlignHCenter,
+            QCoreApplication.translate("SplashScreen", "DEVELOPMENT"),
+        )
+        p.setFont(f_value)
+        p.setPen(self._C_WHITE)
+        p.drawText(
+            QRect(col_w, meta_y + 17, col_w, 18),
+            Qt.AlignmentFlag.AlignHCenter,
+            "mapi68",
         )
 
-        # ── Status dot + text at bottom
-        dot_x, dot_y = 22, H - 18
-        p.setPen(Qt.PenStyle.NoPen)
-        p.setBrush(QColor("#00E5FF"))
-        p.drawEllipse(dot_x, dot_y - 3, 6, 6)
+        # ══════════════════════════════════════════
+        # LOADING LABEL at the bottom
+        # ══════════════════════════════════════════
+        label_margin = 32
+        label_w = W - label_margin * 2
+        label_y = H - 22
 
-        p.setPen(QColor("#3A8FC4"))
+        # "Loading…" label left-aligned at the bottom
         p.setFont(QFont("Segoe UI", 8))
+        p.setPen(self._C_DIM)
         p.drawText(
-            QRect(dot_x + 12, H - 26, W - dot_x - 32, 18),
+            QRect(label_margin, label_y - 14, label_w, 14),
             Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter,
             QCoreApplication.translate("SplashScreen", "Loading\u2026"),
         )
@@ -176,6 +220,6 @@ class SplashScreen(QSplashScreen):
         self.showMessage(
             message,
             Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignBottom,
-            QColor("#3A8FC4"),
+            self._C_DIM,
         )
         QApplication.processEvents()

@@ -63,144 +63,170 @@
 </context><context>
     <name>BackupManagerWindow</name>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="53" />
+        <location filename="..\ui\backup_dialog.py" line="57" />
         <source>Select, Restore, or Delete Backup</source>
         <translation>Back-up selecteren, herstellen of verwijderen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="63" />
+        <location filename="..\ui\backup_dialog.py" line="67" />
         <source>Select a backup to restore or right-click for options.</source>
         <translation>Selecteer een back-up om te herstellen of klik met de rechtermuisknop voor opties.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="69" />
+        <location filename="..\ui\backup_dialog.py" line="73" />
         <source>Search by tag, resolution, or date...</source>
         <translation>Zoeken op tag, resolutie of datum...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="86" />
+        <location filename="..\ui\backup_dialog.py" line="90" />
         <source>Tag / Description</source>
         <translation>Tag / Beschrijving</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="287" />
-        <location filename="..\ui\backup_dialog.py" line="87" />
+        <location filename="..\ui\backup_dialog.py" line="317" />
+        <location filename="..\ui\backup_dialog.py" line="91" />
         <source>Resolution</source>
         <translation>Resolutie</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="286" />
-        <location filename="..\ui\backup_dialog.py" line="88" />
+        <location filename="..\ui\backup_dialog.py" line="316" />
+        <location filename="..\ui\backup_dialog.py" line="92" />
         <source>Icons</source>
         <translation>Pictogrammen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="289" />
-        <location filename="..\ui\backup_dialog.py" line="89" />
+        <location filename="..\ui\backup_dialog.py" line="319" />
+        <location filename="..\ui\backup_dialog.py" line="93" />
         <source>Timestamp</source>
         <translation>Tijdstempel</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="133" />
+        <location filename="..\ui\backup_dialog.py" line="141" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>Lay-outvoorvertoning (opgeslagen posities vs. huidig):</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="254" />
-        <location filename="..\ui\backup_dialog.py" line="143" />
+        <location filename="..\ui\backup_dialog.py" line="284" />
+        <location filename="..\ui\backup_dialog.py" line="151" />
         <source>Select a backup to see details.</source>
         <translation>Selecteer een back-up om de details te bekijken.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="169" />
+        <location filename="..\ui\backup_dialog.py" line="177" />
         <source>Restore Selected Layout</source>
         <translation>Geselecteerde lay-out herstellen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="173" />
+        <location filename="..\ui\backup_dialog.py" line="181" />
         <source>📊 Compare Two Selected...</source>
         <translation>📊 Twee geselecteerde vergelijken...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="177" />
+        <location filename="..\ui\backup_dialog.py" line="185" />
+        <source>📤 Export Backups...</source>
+        <translation>📤 Back-ups exporteren...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="187" />
+        <source>Export selected or all backups to a folder or ZIP archive</source>
+        <translation>Geselecteerde of alle back-ups exporteren naar een map of ZIP-archief</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="191" />
+        <source>📥 Import Backups...</source>
+        <translation>📥 Back-ups importeren...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="193" />
+        <source>Import backup files (.json) or a ZIP archive from another installation</source>
+        <translation>Back-upbestanden (.json) of een ZIP-archief importeren vanuit een andere installatie</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="199" />
         <source>Close</source>
         <translation>Sluiten</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="350" />
-        <location filename="..\ui\backup_dialog.py" line="349" />
-        <location filename="..\ui\backup_dialog.py" line="276" />
-        <location filename="..\ui\backup_dialog.py" line="210" />
-        <location filename="..\ui\backup_dialog.py" line="204" />
+        <location filename="..\ui\backup_dialog.py" line="380" />
+        <location filename="..\ui\backup_dialog.py" line="379" />
+        <location filename="..\ui\backup_dialog.py" line="306" />
+        <location filename="..\ui\backup_dialog.py" line="235" />
+        <location filename="..\ui\backup_dialog.py" line="229" />
         <source>N/A</source>
         <translation>N.v.t.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="237" />
+        <location filename="..\ui\backup_dialog.py" line="245" />
+        <source>Double-click to edit the tag/description</source>
+        <translation>Dubbelklik om de tag/beschrijving te bewerken</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="267" />
         <source>No backups found.</source>
         <translation>Geen back-ups gevonden.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="275" />
+        <location filename="..\ui\backup_dialog.py" line="305" />
         <source>None</source>
         <translation>Geen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="285" />
+        <location filename="..\ui\backup_dialog.py" line="315" />
         <source>File</source>
         <translation>Bestand</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="288" />
+        <location filename="..\ui\backup_dialog.py" line="318" />
         <source>Description</source>
         <translation>Beschrijving</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="503" />
-        <location filename="..\ui\backup_dialog.py" line="454" />
-        <location filename="..\ui\backup_dialog.py" line="437" />
-        <location filename="..\ui\backup_dialog.py" line="411" />
-        <location filename="..\ui\backup_dialog.py" line="295" />
+        <location filename="..\ui\backup_dialog.py" line="633" />
+        <location filename="..\ui\backup_dialog.py" line="533" />
+        <location filename="..\ui\backup_dialog.py" line="484" />
+        <location filename="..\ui\backup_dialog.py" line="467" />
+        <location filename="..\ui\backup_dialog.py" line="441" />
+        <location filename="..\ui\backup_dialog.py" line="325" />
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="320" />
+        <location filename="..\ui\backup_dialog.py" line="350" />
         <source>🔄 Restore Selected</source>
         <translation>🔄 Geselecteerde herstellen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="323" />
+        <location filename="..\ui\backup_dialog.py" line="353" />
         <source>🗑️ Delete Selected</source>
         <translation>🗑️ Geselecteerde verwijderen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="327" />
+        <location filename="..\ui\backup_dialog.py" line="357" />
         <source>📊 Compare with Latest</source>
         <translation>📊 Vergelijken met nieuwste</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="379" />
+        <location filename="..\ui\backup_dialog.py" line="409" />
         <source>will move</source>
         <translation>wordt verplaatst</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="380" />
+        <location filename="..\ui\backup_dialog.py" line="410" />
         <source>already in place</source>
         <translation>al op de juiste positie</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="381" />
+        <location filename="..\ui\backup_dialog.py" line="411" />
         <source>not on desktop</source>
         <translation>niet op het bureaublad</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="386" />
+        <location filename="..\ui\backup_dialog.py" line="416" />
         <source>Confirm Restore</source>
         <translation>Herstel bevestigen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="387" />
+        <location filename="..\ui\backup_dialog.py" line="417" />
         <source>Restore icon positions from the selected backup file:
 
 File: %1
@@ -221,31 +247,31 @@ Tijdstempel: %5
 Weet u zeker dat u wilt doorgaan?</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="426" />
-        <location filename="..\ui\backup_dialog.py" line="402" />
+        <location filename="..\ui\backup_dialog.py" line="456" />
+        <location filename="..\ui\backup_dialog.py" line="432" />
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="427" />
-        <location filename="..\ui\backup_dialog.py" line="403" />
+        <location filename="..\ui\backup_dialog.py" line="457" />
+        <location filename="..\ui\backup_dialog.py" line="433" />
         <source>No</source>
         <translation>Nee</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="412" />
+        <location filename="..\ui\backup_dialog.py" line="442" />
         <source>Failed to load backup file:
 %1</source>
         <translation>Back-upbestand laden mislukt:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="422" />
+        <location filename="..\ui\backup_dialog.py" line="452" />
         <source>Confirm Delete</source>
         <translation>Verwijdering bevestigen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="423" />
+        <location filename="..\ui\backup_dialog.py" line="453" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
@@ -254,85 +280,241 @@ Weet u zeker dat u wilt doorgaan?</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="433" />
+        <location filename="..\ui\backup_dialog.py" line="463" />
         <source>Success</source>
         <translation>Geslaagd</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="433" />
+        <location filename="..\ui\backup_dialog.py" line="463" />
         <source>Backup deleted successfully.</source>
         <translation>Back-up succesvol verwijderd.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="437" />
+        <location filename="..\ui\backup_dialog.py" line="467" />
         <source>Failed to delete backup file.</source>
         <translation>Back-upbestand verwijderen mislukt.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="477" />
-        <location filename="..\ui\backup_dialog.py" line="446" />
+        <location filename="..\ui\backup_dialog.py" line="507" />
+        <location filename="..\ui\backup_dialog.py" line="476" />
         <source>No Selection</source>
         <translation>Geen selectie</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="447" />
+        <location filename="..\ui\backup_dialog.py" line="477" />
         <source>Please select a backup to compare.</source>
         <translation>Selecteer een back-up om te vergelijken.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="454" />
+        <location filename="..\ui\backup_dialog.py" line="484" />
         <source>No latest backup found</source>
         <translation>Geen nieuwste back-up gevonden</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="461" />
+        <location filename="..\ui\backup_dialog.py" line="491" />
         <source>Same Backup</source>
         <translation>Zelfde back-up</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="462" />
+        <location filename="..\ui\backup_dialog.py" line="492" />
         <source>You selected the latest backup. Nothing to compare.</source>
         <translation>U heeft de nieuwste back-up geselecteerd. Niets te vergelijken.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="478" />
+        <location filename="..\ui\backup_dialog.py" line="508" />
         <source>Please select a backup first.</source>
         <translation>Selecteer eerst een back-up.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="487" />
+        <location filename="..\ui\backup_dialog.py" line="517" />
         <source>Not Enough Backups</source>
         <translation>Niet genoeg back-ups</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="488" />
+        <location filename="..\ui\backup_dialog.py" line="518" />
         <source>There is only one backup. Nothing to compare against.</source>
         <translation>Er is slechts één back-up. Niets om mee te vergelijken.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="503" />
+        <location filename="..\ui\backup_dialog.py" line="533" />
         <source>Failed to compare backups</source>
         <translation>Back-ups vergelijken mislukt</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="507" />
+        <location filename="..\ui\backup_dialog.py" line="537" />
         <source>latest</source>
         <translation>nieuwste</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="510" />
+        <location filename="..\ui\backup_dialog.py" line="540" />
         <source>Comparison Results</source>
         <translation>Vergelijkingsresultaten</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="528" />
+        <location filename="..\ui\backup_dialog.py" line="558" />
         <source>Comparing Backups:</source>
         <translation>Back-ups vergelijken:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="539" />
+        <location filename="..\ui\backup_dialog.py" line="569" />
         <source>✓ Close</source>
         <translation>✓ Sluiten</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="634" />
+        <source>Failed to save tag: %1</source>
+        <translation>Tag opslaan mislukt: %1</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="651" />
+        <source>No Backups</source>
+        <translation>Geen back-ups</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="652" />
+        <source>There are no backup files to export.</source>
+        <translation>Er zijn geen back-upbestanden om te exporteren.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="660" />
+        <source>All backups (%1 files)</source>
+        <translation>Alle back-ups (%1 bestanden)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="664" />
+        <source>Selected backup only (%1)</source>
+        <translation>Alleen geselecteerde back-up (%1)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="670" />
+        <source>Export Backups</source>
+        <translation>Back-ups exporteren</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="671" />
+        <source>What do you want to export?</source>
+        <translation>Wat wilt u exporteren?</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="683" />
+        <source>ZIP archive (.zip)</source>
+        <translation>ZIP-archief (.zip)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="684" />
+        <source>Folder (copy .json files)</source>
+        <translation>Map (.json-bestanden kopiëren)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="688" />
+        <source>Export Format</source>
+        <translation>Exportindeling</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="689" />
+        <source>Choose export format:</source>
+        <translation>Exportindeling kiezen:</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="704" />
+        <source>Save ZIP Archive</source>
+        <translation>ZIP-archief opslaan</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="706" />
+        <source>ZIP Archives (*.zip)</source>
+        <translation>ZIP Archives (*.zip)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="756" />
+        <location filename="..\ui\backup_dialog.py" line="718" />
+        <source>Export Successful</source>
+        <translation>Export geslaagd</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="757" />
+        <location filename="..\ui\backup_dialog.py" line="719" />
+        <source>Exported %1 backup(s) to:
+%2</source>
+        <translation>%1 back-up(s) geëxporteerd naar:
+%2</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="726" />
+        <source>Export Failed</source>
+        <translation>Export mislukt</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="727" />
+        <source>Could not create ZIP archive:
+%1</source>
+        <translation>Kan geen ZIP-archief maken:
+%1</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="731" />
+        <source>Select Destination Folder</source>
+        <translation>Doelmap selecteren</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="748" />
+        <source>Export Partial</source>
+        <translation>Gedeeltelijke export</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="749" />
+        <source>Exported %1 file(s). Errors:
+%2</source>
+        <translation>%1 bestand(en) geëxporteerd. Fouten:
+%2</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="768" />
+        <source>Import Backups</source>
+        <translation>Back-ups importeren</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="770" />
+        <source>Backup files (*.json *.zip)</source>
+        <translation>Backup files (*.json *.zip)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="796" />
+        <source>Import complete.
+
+✓ Imported: %1
+⏭ Skipped (already exist): %2</source>
+        <translation>Import voltooid.
+
+✓ Geïmporteerd: %1
+⏭ Overgeslagen (bestaan al): %2</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="801" />
+        <source>Errors:
+%1</source>
+        <translation>Fouten:
+%1</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="802" />
+        <source>Import Results</source>
+        <translation>Importresultaten</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="804" />
+        <source>Import Successful</source>
+        <translation>Import geslaagd</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="816" />
+        <source>No .json files found in: %1</source>
+        <translation>Geen .json-bestanden gevonden in: %1</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="836" />
+        <source>Invalid ZIP file %1: %2</source>
+        <translation>Ongeldig ZIP-bestand %1: %2</translation>
     </message>
 </context><context>
     <name>CLI</name>
@@ -712,131 +894,151 @@ Weet u zeker dat u wilt doorgaan?</translation>
         <translation>Alle back-ups verwijderen...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="152" />
+        <location filename="..\ui\main_window.py" line="153" />
+        <source>📤 Export Backups...</source>
+        <translation>📤 Back-ups exporteren...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="154" />
+        <source>Export backups to a folder or ZIP archive</source>
+        <translation>Back-ups exporteren naar een map of ZIP-archief</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="158" />
+        <source>📥 Import Backups...</source>
+        <translation>📥 Back-ups importeren...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="160" />
+        <source>Import backup files (.json) or a ZIP archive</source>
+        <translation>Back-upbestanden (.json) of een ZIP-archief importeren</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="166" />
         <source>E&amp;xit</source>
         <translation>Af&amp;sluiten</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="388" />
-        <location filename="..\ui\main_window.py" line="157" />
+        <location filename="..\ui\main_window.py" line="404" />
+        <location filename="..\ui\main_window.py" line="171" />
         <source>&amp;Settings</source>
         <translation>&amp;Instellingen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="159" />
+        <location filename="..\ui\main_window.py" line="173" />
         <source>Open Settings Menu</source>
         <translation>Instellingenmenu openen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="164" />
-        <source>Start Minimized to Tray</source>
-        <translation>Geminimaliseerd in systeemvak starten</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="900" />
-        <location filename="..\ui\main_window.py" line="174" />
+        <location filename="..\ui\main_window.py" line="941" />
+        <location filename="..\ui\main_window.py" line="179" />
         <source>Auto-Save on Exit</source>
         <translation>Automatisch opslaan bij afsluiten</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="182" />
+        <location filename="..\ui\main_window.py" line="187" />
         <source>Auto-Restore on Startup</source>
         <translation>Automatisch herstellen bij opstarten</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="190" />
+        <location filename="..\ui\main_window.py" line="195" />
         <source>Check for Updates on Startup</source>
         <translation>Controleren op updates bij opstarten</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="200" />
+        <location filename="..\ui\main_window.py" line="206" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>Adaptief schalen inschakelen bij herstellen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="210" />
+        <location filename="..\ui\main_window.py" line="217" />
+        <source>Start Minimized to Tray</source>
+        <translation>Geminimaliseerd in systeemvak starten</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="225" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>Minimaliseren naar systeemvak bij sluiten ('X' knop)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="219" />
+        <location filename="..\ui\main_window.py" line="235" />
         <source>Automatic Backup Cleanup Limit</source>
         <translation>Limiet voor automatisch opschonen van back-ups</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="224" />
+        <location filename="..\ui\main_window.py" line="240" />
         <source>Disabled (Keep All)</source>
         <translation>Uitgeschakeld (Alles bewaren)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="225" />
+        <location filename="..\ui\main_window.py" line="241" />
         <source>Keep Last 5</source>
         <translation>Laatste 5 bewaren</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="226" />
+        <location filename="..\ui\main_window.py" line="242" />
         <source>Keep Last 10</source>
         <translation>Laatste 10 bewaren</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="227" />
+        <location filename="..\ui\main_window.py" line="243" />
         <source>Keep Last 25</source>
         <translation>Laatste 25 bewaren</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="228" />
+        <location filename="..\ui\main_window.py" line="244" />
         <source>Keep Last 50</source>
         <translation>Laatste 50 bewaren</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="239" />
+        <location filename="..\ui\main_window.py" line="255" />
         <source>&amp;Help</source>
         <translation>&amp;Help</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="241" />
+        <location filename="..\ui\main_window.py" line="257" />
         <source>Online User Manual</source>
         <translation>Online gebruikershandleiding</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1001" />
-        <location filename="..\ui\main_window.py" line="969" />
-        <location filename="..\ui\main_window.py" line="248" />
+        <location filename="..\ui\main_window.py" line="1042" />
+        <location filename="..\ui\main_window.py" line="1010" />
+        <location filename="..\ui\main_window.py" line="264" />
         <source>Keyboard Shortcuts</source>
         <translation>Sneltoetsen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="254" />
+        <location filename="..\ui\main_window.py" line="270" />
         <source>Check for Updates...</source>
         <translation>Controleren op updates...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="260" />
+        <location filename="..\ui\main_window.py" line="276" />
         <source>&amp;About</source>
         <translation>&amp;Over</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="266" />
+        <location filename="..\ui\main_window.py" line="282" />
         <source>Support on Ko-fi...</source>
         <translation>Ondersteunen op Ko-fi...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="281" />
+        <location filename="..\ui\main_window.py" line="297" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>Optioneel: Voer een beschrijvende tag/beschrijving in...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="285" />
+        <location filename="..\ui\main_window.py" line="301" />
         <source>Save Tag:</source>
         <translation>Tag opslaan:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="292" />
+        <location filename="..\ui\main_window.py" line="308" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 SNELLE BACK-UP OPSLAAN</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="296" />
+        <location filename="..\ui\main_window.py" line="312" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -845,22 +1047,22 @@ Shortcut: Ctrl+S</source>
 Sneltoets: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="304" />
+        <location filename="..\ui\main_window.py" line="320" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ NIEUWSTE HERSTELLEN</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="307" />
+        <location filename="..\ui\main_window.py" line="323" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>Pictogramposities herstellen vanuit het NIEUWSTE gevonden back-upbestand.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="312" />
+        <location filename="..\ui\main_window.py" line="328" />
         <source>↺ BACKUP MANAGER</source>
         <translation>↺ BACK-UPBEHEER</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="316" />
+        <location filename="..\ui\main_window.py" line="332" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -869,50 +1071,50 @@ Shortcut: Ctrl+M</source>
 Sneltoets: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="330" />
+        <location filename="..\ui\main_window.py" line="346" />
         <source>Activity Log:</source>
         <translation>Activiteitenlogboek:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="341" />
+        <location filename="..\ui\main_window.py" line="357" />
         <source>Current Resolution: %1</source>
         <translation>Huidige resolutie: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="348" />
+        <location filename="..\ui\main_window.py" line="364" />
         <source>Support on Ko-fi</source>
         <translation>Ondersteunen op Ko-fi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="354" />
+        <location filename="..\ui\main_window.py" line="370" />
         <source>Clear Log</source>
         <translation>Logboek wissen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="396" />
+        <location filename="..\ui\main_window.py" line="412" />
         <source>Settings menu not found</source>
         <translation>Instellingenmenu niet gevonden</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="408" />
+        <location filename="..\ui\main_window.py" line="424" />
         <source>Opening online user manual in browser...</source>
         <translation>Online gebruikershandleiding openen in browser...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="410" />
+        <location filename="..\ui\main_window.py" line="426" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ Openen van handboek-URL mislukt</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="828" />
-        <location filename="..\ui\main_window.py" line="619" />
-        <location filename="..\ui\main_window.py" line="586" />
-        <location filename="..\ui\main_window.py" line="413" />
+        <location filename="..\ui\main_window.py" line="869" />
+        <location filename="..\ui\main_window.py" line="660" />
+        <location filename="..\ui\main_window.py" line="627" />
+        <location filename="..\ui\main_window.py" line="429" />
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="414" />
+        <location filename="..\ui\main_window.py" line="430" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -923,27 +1125,27 @@ Bezoek handmatig:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="421" />
+        <location filename="..\ui\main_window.py" line="437" />
         <source>Save</source>
         <translation>Opslaan</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="424" />
+        <location filename="..\ui\main_window.py" line="440" />
         <source>Quick Backup (Shortcut)</source>
         <translation>Snelle back-up (Sneltoets)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="428" />
+        <location filename="..\ui\main_window.py" line="444" />
         <source>Backup Manager</source>
         <translation>Back-upbeheer</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="433" />
+        <location filename="..\ui\main_window.py" line="449" />
         <source>Settings</source>
         <translation>Instellingen</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="468" />
+        <location filename="..\ui\main_window.py" line="484" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>Limiet voor automatisch opschonen ingesteld op: %n back-up (0 = Uitgeschakeld).</numerusform>
@@ -951,164 +1153,174 @@ Bezoek handmatig:
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="913" />
-        <location filename="..\ui\main_window.py" line="819" />
-        <location filename="..\ui\main_window.py" line="485" />
+        <location filename="..\ui\main_window.py" line="954" />
+        <location filename="..\ui\main_window.py" line="860" />
+        <location filename="..\ui\main_window.py" line="501" />
         <source>Desktop Icon Manager</source>
         <translation>Bureaubladpictogrambeheer</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="515" />
+        <location filename="..\ui\main_window.py" line="531" />
         <source>Backup list updated (item deleted).</source>
         <translation>Back-uplijst bijgewerkt (item verwijderd).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="521" />
+        <location filename="..\ui\main_window.py" line="540" />
+        <source>Backup list updated.</source>
+        <translation>Back-uplijst bijgewerkt.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="553" />
+        <source>Backup list updated (imported).</source>
+        <translation>Back-uplijst bijgewerkt (geïmporteerd).</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="562" />
         <source>Quick Backup</source>
         <translation>Snelle back-up</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="530" />
+        <location filename="..\ui\main_window.py" line="571" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
         <translation>Een eenvoudig maar krachtig hulpprogramma om Windows bureaubladpictogramposities op te slaan en te herstellen.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="531" />
+        <location filename="..\ui\main_window.py" line="572" />
         <source>Key Features:</source>
         <translation>Belangrijkste functies:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="533" />
+        <location filename="..\ui\main_window.py" line="574" />
         <source>Quick Save:</source>
         <translation>Snel opslaan:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="533" />
+        <location filename="..\ui\main_window.py" line="574" />
         <source>Save icons with an optional descriptive tag.</source>
         <translation>Pictogrammen opslaan met een optionele beschrijvende tag.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="534" />
+        <location filename="..\ui\main_window.py" line="575" />
         <source>Backup Management:</source>
         <translation>Back-upbeheer:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="534" />
+        <location filename="..\ui\main_window.py" line="575" />
         <source>Select, restore, or delete specific backups.</source>
         <translation>Specifieke back-ups selecteren, herstellen of verwijderen.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="535" />
+        <location filename="..\ui\main_window.py" line="576" />
         <source>Live Diff Preview:</source>
         <translation>Live verschilvoorvertoning:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="535" />
+        <location filename="..\ui\main_window.py" line="576" />
         <source>See which icons will move before restoring.</source>
         <translation>Bekijk welke pictogrammen worden verplaatst voor het herstellen.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="536" />
+        <location filename="..\ui\main_window.py" line="577" />
         <source>Visual Preview:</source>
         <translation>Visuele voorvertoning:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="536" />
+        <location filename="..\ui\main_window.py" line="577" />
         <source>See a mini-map of your layout.</source>
         <translation>Bekijk een minikaart van uw lay-out.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="537" />
+        <location filename="..\ui\main_window.py" line="578" />
         <source>Backup Comparison:</source>
         <translation>Back-upvergelijking:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="537" />
+        <location filename="..\ui\main_window.py" line="578" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
         <translation>Vergelijk twee willekeurige back-ups om toegevoegde, verwijderde en verplaatste pictogrammen te zien.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="538" />
+        <location filename="..\ui\main_window.py" line="579" />
         <source>Adaptive Scaling:</source>
         <translation>Adaptief schalen:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="538" />
+        <location filename="..\ui\main_window.py" line="579" />
         <source>Automatic adjustment for different resolutions.</source>
         <translation>Automatische aanpassing voor verschillende resoluties.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="539" />
+        <location filename="..\ui\main_window.py" line="580" />
         <source>Automatic Cleanup:</source>
         <translation>Automatisch opschonen:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="539" />
+        <location filename="..\ui\main_window.py" line="580" />
         <source>Set a limit on backups to keep.</source>
         <translation>Stel een limiet in voor te bewaren back-ups.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="540" />
+        <location filename="..\ui\main_window.py" line="581" />
         <source>Random Scramble:</source>
         <translation>Willekeurig schudden:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="540" />
+        <location filename="..\ui\main_window.py" line="581" />
         <source>Randomize icon positions after backup.</source>
         <translation>Pictogramposities randomiseren na back-up.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="541" />
+        <location filename="..\ui\main_window.py" line="582" />
         <source>Tray Integration:</source>
         <translation>Systeemvakintegratie:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="541" />
+        <location filename="..\ui\main_window.py" line="582" />
         <source>Quick access via tray.</source>
         <translation>Snelle toegang via het systeemvak.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="543" />
+        <location filename="..\ui\main_window.py" line="584" />
         <source>Version:</source>
         <translation>Versie:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="544" />
+        <location filename="..\ui\main_window.py" line="585" />
         <source>Development:</source>
         <translation>Ontwikkeling:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="545" />
+        <location filename="..\ui\main_window.py" line="586" />
         <source>Support this project on Ko-fi</source>
         <translation>Ondersteun dit project op Ko-fi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="547" />
+        <location filename="..\ui\main_window.py" line="588" />
         <source>About Desktop Icon Backup Manager</source>
         <translation>Over Desktop Icon Backup Manager</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="553" />
+        <location filename="..\ui\main_window.py" line="594" />
         <source>No backup files found to delete.</source>
         <translation>Geen back-upbestanden gevonden om te verwijderen.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="556" />
+        <location filename="..\ui\main_window.py" line="597" />
         <source>No Backups Found</source>
         <translation>Geen back-ups gevonden</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="557" />
+        <location filename="..\ui\main_window.py" line="598" />
         <source>There are no backup files to delete.</source>
         <translation>Er zijn geen back-upbestanden om te verwijderen.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="563" />
+        <location filename="..\ui\main_window.py" line="604" />
         <source>WARNING: Delete All Backups</source>
         <translation>WAARSCHUWING: Alle back-ups verwijderen</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="564" />
+        <location filename="..\ui\main_window.py" line="605" />
         <source>Are you absolutely sure you want to permanently delete ALL %n desktop icon backup file(s)?
 
 This action cannot be undone!</source>
@@ -1122,158 +1334,158 @@ Deze actie kan niet ongedaan worden gemaakt!</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="782" />
-        <location filename="..\ui\main_window.py" line="569" />
+        <location filename="..\ui\main_window.py" line="823" />
+        <location filename="..\ui\main_window.py" line="610" />
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="783" />
-        <location filename="..\ui\main_window.py" line="570" />
+        <location filename="..\ui\main_window.py" line="824" />
+        <location filename="..\ui\main_window.py" line="611" />
         <source>No</source>
         <translation>Nee</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="572" />
+        <location filename="..\ui\main_window.py" line="613" />
         <source>Starting deletion of all backup files...</source>
         <translation>Verwijderen van alle back-upbestanden starten...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="812" />
-        <location filename="..\ui\main_window.py" line="580" />
+        <location filename="..\ui\main_window.py" line="853" />
+        <location filename="..\ui\main_window.py" line="621" />
         <source>Success</source>
         <translation>Geslaagd</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="581" />
+        <location filename="..\ui\main_window.py" line="622" />
         <source>All backup files have been successfully deleted.</source>
         <translation>Alle back-upbestanden zijn succesvol verwijderd.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="587" />
+        <location filename="..\ui\main_window.py" line="628" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>Sommige bestanden konden niet worden verwijderd. Raadpleeg het activiteitenlogboek voor details.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="595" />
+        <location filename="..\ui\main_window.py" line="636" />
         <source>Starting new timestamped backup...</source>
         <translation>Nieuwe back-up met tijdstempel starten...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="597" />
+        <location filename="..\ui\main_window.py" line="638" />
         <source>  (Tag: %1)</source>
         <translation>  (Tag: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="601" />
+        <location filename="..\ui\main_window.py" line="642" />
         <source>Saving...</source>
         <translation>Opslaan...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="619" />
+        <location filename="..\ui\main_window.py" line="660" />
         <source>No backup files found to restore!</source>
         <translation>Geen back-upbestanden gevonden om te herstellen!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="621" />
+        <location filename="..\ui\main_window.py" line="662" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ Herstellen mislukt: Geen back-upbestanden gevonden.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="641" />
-        <location filename="..\ui\main_window.py" line="640" />
-        <location filename="..\ui\main_window.py" line="635" />
-        <location filename="..\ui\main_window.py" line="634" />
+        <location filename="..\ui\main_window.py" line="682" />
+        <location filename="..\ui\main_window.py" line="681" />
+        <location filename="..\ui\main_window.py" line="676" />
+        <location filename="..\ui\main_window.py" line="675" />
         <source>N/A</source>
         <translation>N.v.t.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="644" />
+        <location filename="..\ui\main_window.py" line="685" />
         <source>N/A (Old Format)</source>
         <translation>N.v.t. (Oud formaat)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="673" />
+        <location filename="..\ui\main_window.py" line="714" />
         <source>Confirm Restore — Live Preview</source>
         <translation>Herstel bevestigen — Live voorbeeld</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="683" />
+        <location filename="..\ui\main_window.py" line="724" />
         <source>File</source>
         <translation>Bestand</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="684" />
+        <location filename="..\ui\main_window.py" line="725" />
         <source>Resolution</source>
         <translation>Resolutie</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="685" />
+        <location filename="..\ui\main_window.py" line="726" />
         <source>Icons</source>
         <translation>Pictogrammen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="686" />
+        <location filename="..\ui\main_window.py" line="727" />
         <source>Tag</source>
         <translation>Label</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="687" />
+        <location filename="..\ui\main_window.py" line="728" />
         <source>Timestamp</source>
         <translation>Tijdstempel</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="699" />
+        <location filename="..\ui\main_window.py" line="740" />
         <source>will move</source>
         <translation>wordt verplaatst</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="700" />
+        <location filename="..\ui\main_window.py" line="741" />
         <source>already in place</source>
         <translation>al op de juiste positie</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="701" />
+        <location filename="..\ui\main_window.py" line="742" />
         <source>not on desktop</source>
         <translation>niet op het bureaublad</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="710" />
+        <location filename="..\ui\main_window.py" line="751" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>Lay-outvoorvertoning (opgeslagen posities vs. huidig):</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="732" />
+        <location filename="..\ui\main_window.py" line="773" />
         <source>↺ Restore</source>
         <translation>↺ Herstellen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="739" />
+        <location filename="..\ui\main_window.py" line="780" />
         <source>Cancel</source>
         <translation>Annuleren</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="759" />
+        <location filename="..\ui\main_window.py" line="800" />
         <source>Starting restore from backup '%1'...</source>
         <translation>Herstellen vanuit back-up '%1' starten...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="760" />
+        <location filename="..\ui\main_window.py" line="801" />
         <source>latest</source>
         <translation>nieuwste</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="765" />
+        <location filename="..\ui\main_window.py" line="806" />
         <source>Restoring...</source>
         <translation>Herstellen...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="778" />
+        <location filename="..\ui\main_window.py" line="819" />
         <source>Confirm Scramble</source>
         <translation>Schudden bevestigen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="779" />
+        <location filename="..\ui\main_window.py" line="820" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1286,47 +1498,47 @@ Do you want to proceed?</source>
 Wilt u doorgaan?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="785" />
+        <location filename="..\ui\main_window.py" line="826" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>Bureaubladpictogrammen schudden (randomiseren) starten...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="788" />
+        <location filename="..\ui\main_window.py" line="829" />
         <source>Scrambling icons...</source>
         <translation>Pictogrammen schudden...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="807" />
+        <location filename="..\ui\main_window.py" line="848" />
         <source>Operation completed successfully</source>
         <translation>Bewerking succesvol voltooid</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="813" />
+        <location filename="..\ui\main_window.py" line="854" />
         <source>Operation completed successfully! (%1)</source>
         <translation>Bewerking succesvol voltooid! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="820" />
+        <location filename="..\ui\main_window.py" line="861" />
         <source>%1 successful!</source>
         <translation>%1 geslaagd!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="825" />
+        <location filename="..\ui\main_window.py" line="866" />
         <source>Operation failed</source>
         <translation>Bewerking mislukt</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="829" />
+        <location filename="..\ui\main_window.py" line="870" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>Bewerking mislukt (%1). Raadpleeg het logboek voor details.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="842" />
+        <location filename="..\ui\main_window.py" line="883" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ Waarschuwing: Beeldschermmetadata ontbreekt of is onvolledig.</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="847" />
+        <location filename="..\ui\main_window.py" line="888" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ Waarschuwing: Opgeslagen (%n monitor) vs. Huidig (%1 monitor(s)).</numerusform>
@@ -1334,12 +1546,12 @@ Wilt u doorgaan?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="855" />
+        <location filename="..\ui\main_window.py" line="896" />
         <source>Monitor Mismatch Warning</source>
         <translation>Waarschuwing voor monitormismatch</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="856" />
+        <location filename="..\ui\main_window.py" line="897" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1348,17 +1560,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Pictogramposities zijn hersteld, maar kunnen onnauwkeurig zijn.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="878" />
+        <location filename="..\ui\main_window.py" line="919" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ Waarschuwing: Schermresoluties komen niet overeen met de opgeslagen lay-out.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="882" />
+        <location filename="..\ui\main_window.py" line="923" />
         <source>Resolution Mismatch Warning</source>
         <translation>Waarschuwing voor resolutiemismatch</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="883" />
+        <location filename="..\ui\main_window.py" line="924" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1367,94 +1579,94 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Pictogramposities zijn hersteld, maar kunnen onnauwkeurig zijn.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="895" />
+        <location filename="..\ui\main_window.py" line="936" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>Automatisch opslaan bij afsluiten ingeschakeld. Stille back-up uitvoeren...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="899" />
+        <location filename="..\ui\main_window.py" line="940" />
         <source>Auto-Save Log</source>
         <translation>Automatisch opslaglogboek</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="914" />
+        <location filename="..\ui\main_window.py" line="955" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>Applicatie geminimaliseerd naar systeemvak. Klik of dubbelklik om te herstellen.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="952" />
+        <location filename="..\ui\main_window.py" line="993" />
         <source>Desktop Icon Backup Manager</source>
         <translation>Desktop Icon Backup Manager</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="953" />
+        <location filename="..\ui\main_window.py" line="994" />
         <source>A new version is available! (%1)</source>
         <translation>Een nieuwe versie is beschikbaar! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="958" />
+        <location filename="..\ui\main_window.py" line="999" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 Een nieuwe versie is beschikbaar: %1 (huidig: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="972" />
+        <location filename="..\ui\main_window.py" line="1013" />
         <source>Shortcut</source>
         <translation>Sneltoets</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="973" />
+        <location filename="..\ui\main_window.py" line="1014" />
         <source>Action</source>
         <translation>Actie</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="977" />
+        <location filename="..\ui\main_window.py" line="1018" />
         <source>Quick Save current layout</source>
         <translation>Huidige lay-out snel opslaan</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="981" />
+        <location filename="..\ui\main_window.py" line="1022" />
         <source>Open Backup Manager</source>
         <translation>Back-upbeheer openen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="985" />
+        <location filename="..\ui\main_window.py" line="1026" />
         <source>Open Settings menu</source>
         <translation>Instellingenmenu openen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="989" />
+        <location filename="..\ui\main_window.py" line="1030" />
         <source>Open Online User Manual</source>
         <translation>Online gebruikershandleiding openen</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="993" />
+        <location filename="..\ui\main_window.py" line="1034" />
         <source>Exit Application</source>
         <translation>Applicatie afsluiten</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="997" />
+        <location filename="..\ui\main_window.py" line="1038" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
         <translation>Tip: Beweeg de muis over knoppen om extra sneltoetsen in tooltips te zien.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1012" />
+        <location filename="..\ui\main_window.py" line="1053" />
         <source>Close</source>
         <translation>Sluiten</translation>
     </message>
 </context><context>
     <name>SplashScreen</name>
     <message>
-        <location filename="..\ui\splash_screen.py" line="143" />
-        <source>Version: %1</source>
-        <translation>Versie: %1</translation>
+        <location filename="..\ui\splash_screen.py" line="169" />
+        <source>VERSION</source>
+        <translation>VERSIE</translation>
     </message>
     <message>
-        <location filename="..\ui\splash_screen.py" line="154" />
-        <source>Development: mapi68</source>
-        <translation>Ontwikkeling: mapi68</translation>
+        <location filename="..\ui\splash_screen.py" line="189" />
+        <source>DEVELOPMENT</source>
+        <translation>ONTWIKKELING</translation>
     </message>
     <message>
-        <location filename="..\ui\splash_screen.py" line="168" />
+        <location filename="..\ui\splash_screen.py" line="212" />
         <source>Loading…</source>
         <translation>Laden…</translation>
     </message>
@@ -1527,28 +1739,6 @@ Pictogramposities zijn hersteld, maar kunnen onnauwkeurig zijn.</translation>
         <translation>Kan niet controleren op updates:</translation>
     </message>
 </context><context>
-    <name>_BackupPickerDialog</name>
-    <message>
-        <location filename="..\ui\backup_dialog.py" line="581" />
-        <source>Pick Backup to Compare Against</source>
-        <translation>Back-up kiezen om mee te vergelijken</translation>
-    </message>
-    <message>
-        <location filename="..\ui\backup_dialog.py" line="585" />
-        <source>Select the second backup file:</source>
-        <translation>Selecteer het tweede back-upbestand:</translation>
-    </message>
-    <message>
-        <location filename="..\ui\backup_dialog.py" line="599" />
-        <source>Compare</source>
-        <translation>Vergelijken</translation>
-    </message>
-    <message>
-        <location filename="..\ui\backup_dialog.py" line="601" />
-        <source>Cancel</source>
-        <translation>Annuleren</translation>
-    </message>
-</context><context>
     <name>_DiffCanvas</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="216" />
@@ -1586,5 +1776,27 @@ Pictogramposities zijn hersteld, maar kunnen onnauwkeurig zijn.</translation>
         <location filename="..\ui\preview_widget.py" line="313" />
         <source>In backup, not on desktop</source>
         <translation>In back-up, niet op bureaublad</translation>
+    </message>
+</context><context>
+    <name>_PickBackupDialog</name>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="863" />
+        <source>Pick Backup to Compare Against</source>
+        <translation>Back-up selecteren om mee te vergelijken</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="867" />
+        <source>Select the second backup file:</source>
+        <translation>Selecteer het tweede back-upbestand:</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="881" />
+        <source>Compare</source>
+        <translation>Vergelijken</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="883" />
+        <source>Cancel</source>
+        <translation>Annuleren</translation>
     </message>
 </context></TS>

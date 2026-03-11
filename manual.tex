@@ -199,7 +199,7 @@
   % Version info
   {\small\color{gray}
     \begin{tabular}{rl}
-      \textbf{Document Version:} & 1.1 \\[0.2cm]
+      \textbf{Document Version:} & 1.3 \\[0.2cm]
       \textbf{Release Date:} & \today \\[0.2cm]
       \textbf{Software Version:} & \input{version.txt} \\
     \end{tabular}
@@ -299,6 +299,15 @@ different resolutions, and complete automation through configurable settings.
 \begin{itemize}[leftmargin=*]
   \item \textbf{Quick Backup}: Save icon positions with optional
     descriptive tags
+  \item \textbf{Inline Tag Editing}: Double-click any tag cell in the
+    Backup Manager table to rename a backup in place --- the change is
+    written to the JSON file immediately; no dialog required
+  \item \textbf{Export Backups}: Export the selected backup or all
+    backups to a ZIP archive or a destination folder for portability,
+    off-site storage, or sharing between machines
+  \item \textbf{Import Backups}: Import \texttt{.json} backup files or
+    ZIP archives from another installation; existing files are
+    automatically skipped to prevent overwriting
   \item \textbf{Backup Management}: Dedicated interface with search
     filtering and sortable table columns to select, restore, or
     delete specific backups
@@ -558,6 +567,16 @@ resizable) that provides:
   \item \textbf{Flexible Comparison}: Compare the selected backup
     against \textit{any} other backup (not just the latest) via the
     ``Compare Two Selected\ldots'' button
+  \item \textbf{Inline Tag Editing}: Double-click a cell in the
+    \textit{Tag / Description} column to edit the label directly in the
+    table. Press \texttt{Enter} or click outside to save; press
+    \texttt{Escape} to cancel. Columns 2--4 (Resolution, Icons,
+    Timestamp) remain read-only and open the restore dialog on
+    double-click as before
+  \item \textbf{Export / Import}: Two buttons in the bottom toolbar
+    (\texttt{Export Backups\ldots} and \texttt{Import Backups\ldots})
+    let you archive or transfer backups --- see
+    Section~\ref{sec:export-import}
 \end{itemize}
 
 \section{File Menu}
@@ -594,6 +613,89 @@ icons across the available screen area, creating a chaotic but fun layout.
   \item Margin prevents icons from being placed too close to screen edges
   \item Operation completes even if some icons fail to move
 \end{itemize}
+
+\subsection{Export Backups}
+\label{sec:export-import}
+
+Exports the selected backup or all backups to an archive or folder.
+Accessible from:
+\begin{itemize}
+  \item \textbf{Backup Manager} bottom toolbar: \texttt{Export Backups\ldots}
+  \item \textbf{Main menu}: \texttt{File > Export Backups\ldots}
+\end{itemize}
+
+\textbf{Export Workflow}:
+\begin{enumerate}
+  \item A dialog asks \textit{what} to export:
+    \begin{itemize}
+      \item \textbf{All backups} (shows the total file count)
+      \item \textbf{Selected backup only} (shows the filename)
+    \end{itemize}
+  \item A second dialog asks \textit{how} to export:
+    \begin{itemize}
+      \item \textbf{ZIP archive (.zip)}: All selected files packed into
+        one compressed archive; a save-file dialog lets you choose the
+        name and destination.
+      \item \textbf{Folder (copy .json files)}: A directory picker lets
+        you choose a destination folder; JSON files are copied there directly.
+    \end{itemize}
+  \item A summary dialog reports the number of files exported, or a
+    partial-export warning if any file could not be copied.
+\end{enumerate}
+
+\begin{infobox}[Use Cases]
+  \begin{itemize}
+    \item \textbf{Off-site storage}: ZIP to a USB drive or cloud folder
+      before a system reinstall
+    \item \textbf{Migration}: Export all backups, then import on a
+      new machine with \texttt{Import Backups\ldots}
+    \item \textbf{Sharing}: Send a ZIP containing your layout to a
+      colleague with the same monitor setup
+    \item \textbf{Archiving}: Keep a permanent copy of a perfect layout
+      that you want to preserve independently of the cleanup limit
+  \end{itemize}
+\end{infobox}
+
+\subsection{Import Backups}
+
+Imports \texttt{.json} backup files or ZIP archives from another
+location or installation.
+Accessible from:
+\begin{itemize}
+  \item \textbf{Backup Manager} bottom toolbar: \texttt{Import Backups\ldots}
+  \item \textbf{Main menu}: \texttt{File > Import Backups\ldots}
+\end{itemize}
+
+\textbf{Import Workflow}:
+\begin{enumerate}
+  \item A multi-selection file dialog opens, filtered to
+    \texttt{*.json} and \texttt{*.zip}.
+    You can select multiple files of either type in a single operation.
+  \item For each selected file:
+    \begin{itemize}
+      \item \textbf{.json}: Validated as JSON before being copied to the
+        \texttt{icon\_backups} folder.
+      \item \textbf{.zip}: The archive is opened; every \texttt{.json}
+        entry inside is validated and extracted individually.
+    \end{itemize}
+  \item Files whose name already exists in \texttt{icon\_backups} are
+    \textbf{skipped} (never overwritten).
+  \item A summary dialog reports:
+    \begin{itemize}
+      \item \texttt{[OK] Imported} --- new files successfully added
+      \item \texttt{[SKIP] Skipped (already exist)} --- duplicates
+        left untouched
+      \item Errors (invalid JSON, corrupted ZIP, etc.)
+    \end{itemize}
+  \item The Backup Manager table refreshes automatically to show the
+    newly imported backups.
+\end{enumerate}
+
+\begin{warningbox}[Duplicate Detection]
+  Duplicate detection is based on the \textbf{filename} only.
+  If you rename a JSON file externally and re-import it, it will be
+  treated as a new file and imported without being skipped.
+\end{warningbox}
 
 \subsection{Remove All Backups}
 
@@ -1136,6 +1238,21 @@ Timestamp: 2024-12-11T14:30:15
 
 \subsubsection{Available Operations}
 
+\textbf{Inline Tag Editing}:
+\begin{itemize}
+  \item Double-click a cell in column~1 (Tag / Description) to activate
+    an in-place editor
+  \item Press \texttt{Enter} or click outside the cell to confirm and
+    save the new tag to the \texttt{.json} file
+  \item Press \texttt{Escape} to cancel without saving
+  \item A tooltip on the column header reads:
+    \textit{``Double-click to edit the tag/description''}
+  \item Double-clicking columns 2--4 (Resolution, Icons, Timestamp)
+    opens the restore dialog --- those columns are read-only
+  \item If the file cannot be written, an error dialog appears and the
+    cell reverts to its previous text automatically
+\end{itemize}
+
 \textbf{Restore Operations}:
 \begin{itemize}
   \item Double-click any backup in the list
@@ -1568,20 +1685,30 @@ For systems with changing monitor configurations:
 
 \subsection{Backup Archiving Strategy}
 
-\textbf{Export Important Backups}:
+\textbf{Export Important Backups}
+(via \texttt{File > Export Backups\ldots} or the Backup Manager toolbar):
 \begin{enumerate}
-  \item Navigate to \texttt{icon\_backups} folder
-  \item Copy important .json files to safe location
-  \item Consider cloud storage (Dropbox, OneDrive, Google Drive)
-  \item USB drive backup for critical configurations
-  \item Include in regular system backup routine
+  \item Select one backup or choose to export all, then pick ZIP or folder
+  \item Store the ZIP in cloud storage (Dropbox, OneDrive, Google Drive)
+  \item Keep a copy on a USB drive for critical configurations
+  \item Include in your regular system backup routine
+\end{enumerate}
+
+\textbf{Import on a New Machine}
+(via \texttt{File > Import Backups\ldots} or the Backup Manager toolbar):
+\begin{enumerate}
+  \item Copy the exported ZIP or JSON files to the new machine
+  \item Open the Backup Manager and click \texttt{Import Backups\ldots}
+  \item Select the ZIP or individual JSON files; duplicates are
+    skipped automatically
+  \item The table refreshes and the imported layouts are immediately available
 \end{enumerate}
 
 \textbf{When to Export}:
 \begin{itemize}
   \item Perfect layouts you want to preserve forever
   \item Before system migrations or reinstalls
-  \item Company/work standardized layouts
+  \item Company/work standardised layouts to share with colleagues
   \item Configurations that took significant time to create
 \end{itemize}
 

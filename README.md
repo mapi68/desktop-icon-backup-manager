@@ -94,6 +94,9 @@ Every line of code is on GitHub, MIT licensed, auditable, and forkable. No telem
 - **🔄 Adaptive Scaling**: Proportional position recalculation when restoring to a different resolution or DPI
 - **🖥️ Multi-Monitor Support + Warnings**: Full multi-monitor save/restore with automatic alerts on config mismatch
 - **⚖️ Backup Comparison**: Diff any two saved layouts against each other *(unique feature)*
+- **✏️ Inline Tag Editing**: Double-click any tag in the Backup Manager table to rename it in place — no dialog needed
+- **📤 Export Backups**: Export selected or all backups to a folder or a ZIP archive for portability, sharing, or off-site storage
+- **📥 Import Backups**: Import `.json` backup files or ZIP archives from another machine or installation — duplicates are safely skipped
 - **🗑️ Smart Auto-Cleanup**: Keep only the N most recent backups (5 / 10 / 25 / 50 / unlimited)
 - **⚡ System Tray**: Save or restore silently from the tray icon — no need to open the main window
 
@@ -125,6 +128,8 @@ There are a few tools in this space. Here is how they stack up:
 | **Live diff preview before restore** | ✅ | ❌ | ❌ | ❌ |
 | **Visual dot-map layout preview** | ✅ | ❌ | ❌ | ❌ |
 | **Compare any two backups** | ✅ | ❌ | ❌ | ❌ |
+| **Inline tag editing** | ✅ | ❌ | ❌ | ❌ |
+| **Export / Import backups (ZIP or folder)** | ✅ | ❌ | ❌ | ❌ |
 | Adaptive scaling (resolution change) | ✅ | ✅ | ❌ | ❌ |
 | Multi-monitor support + warnings | ✅ | ✅ | ✅ | ❌ |
 | CLI / Task Scheduler automation | ✅ | ✅ | ❌ | ❌ |
@@ -197,6 +202,31 @@ A compact JSON snapshot of all icon positions and screen metadata is saved insta
 
 - **Quick restore**: Click **↺ RESTORE LATEST** — restores the most recent backup after a confirmation prompt
 - **Full control**: Click **↺ BACKUP MANAGER** (`Ctrl+M`) — browse, search, preview the live diff, compare snapshots, and restore any saved layout
+
+### Editing a Backup Tag
+
+In the Backup Manager, **double-click any row in the Tag / Description column** to edit the label inline. Press `Enter` or click elsewhere to save; press `Escape` to cancel. The change is written immediately to the `.json` file.
+
+> [!NOTE]
+> Double-clicking columns 2–4 (Resolution, Icons, Timestamp) still opens the restore dialog as usual — those columns are read-only.
+
+### Exporting Backups
+
+1. Open **↺ BACKUP MANAGER** (`Ctrl+M`)
+2. Click **📤 Export Backups...** (bottom toolbar) — or use **File → 📤 Export Backups...**
+3. Choose what to export: *selected backup only* or *all backups*
+4. Choose the format:
+   - **ZIP archive** — saves everything in a single `.zip` file
+   - **Folder** — copies the `.json` files into a destination folder of your choice
+5. A summary confirms how many files were exported
+
+### Importing Backups
+
+1. Open **↺ BACKUP MANAGER** (`Ctrl+M`)
+2. Click **📥 Import Backups...** (bottom toolbar) — or use **File → 📥 Import Backups...**
+3. Select one or more `.json` files and/or `.zip` archives
+4. The importer validates each file before copying; files that already exist in `icon_backups` are **skipped** (never overwritten)
+5. A summary shows: ✓ imported, ⏭ skipped (already exist), and any errors
 
 ### Automating with the CLI
 
@@ -301,6 +331,12 @@ Plain text, portable, and easy to copy between machines. 50 backups take less th
 ---
 
 ## ❓ Frequently Asked Questions
+
+**Can I rename a backup tag without deleting and re-creating it?**
+Yes — in the Backup Manager, double-click the tag cell in the first column to edit it directly in the table. The change is saved to the `.json` file immediately.
+
+**Can I transfer my backups to another PC or share them?**
+Yes. Use **📤 Export Backups...** in the Backup Manager to package them as a ZIP archive or copy them to a folder. On the target machine use **📥 Import Backups...** to bring them in. Files that already exist are skipped automatically to avoid overwriting.
 
 **Why do my desktop icons keep moving in Windows 11?**
 This is a long-standing Windows bug that Microsoft has never fixed — it affects Windows 7, 10, and 11 (including 25H2). Icons rearrange automatically when the screen resolution changes, which happens silently when you connect a monitor, start a game, wake from sleep, or install a Windows Update. Desktop Icon Backup Manager lets you save your layout and restore it with one click whenever this happens.

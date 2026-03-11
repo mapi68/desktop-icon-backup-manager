@@ -2,6 +2,9 @@
 
 import os
 import json
+import shutil
+import zipfile
+from datetime import datetime
 
 from PyQt6.QtWidgets import (
     QDialog,
@@ -18,6 +21,7 @@ from PyQt6.QtWidgets import (
     QMenu,
     QTextEdit,
     QSizePolicy,
+    QFileDialog,
 )
 from PyQt6.QtCore import Qt, pyqtSignal, QSize
 from PyQt6.QtGui import QAction, QColor, QFont
@@ -110,7 +114,11 @@ class BackupManagerWindow(QDialog):
         self.table.horizontalHeader().resizeSection(3, 140)
         self.table.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.table.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
-        self.table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        # Col 0 (Tag) is editable; all others are read-only
+        self.table.setEditTriggers(
+            QAbstractItemView.EditTrigger.DoubleClicked
+            | QAbstractItemView.EditTrigger.EditKeyPressed
+        )
         self.table.setAlternatingRowColors(True)
         self.table.verticalHeader().setVisible(False)
         self.table.setStyleSheet("font-family: 'Segoe UI'; font-size: 11px;")
@@ -174,18 +182,35 @@ class BackupManagerWindow(QDialog):
         self.btn_compare.clicked.connect(self.compare_selected_pair)
         self.btn_compare.setEnabled(False)
 
+        self.btn_export = QPushButton(self.tr("📤 Export Backups..."))
+        self.btn_export.setToolTip(
+            self.tr("Export selected or all backups to a folder or ZIP archive")
+        )
+        self.btn_export.clicked.connect(self.export_backups)
+
+        self.btn_import = QPushButton(self.tr("📥 Import Backups..."))
+        self.btn_import.setToolTip(
+            self.tr(
+                "Import backup files (.json) or a ZIP archive from another installation"
+            )
+        )
+        self.btn_import.clicked.connect(self.import_backups)
+
         self.btn_close = QPushButton(self.tr("Close"))
         self.btn_close.clicked.connect(self.reject)
 
         btn_row.addWidget(self.btn_restore)
         btn_row.addWidget(self.btn_compare)
+        btn_row.addWidget(self.btn_export)
+        btn_row.addWidget(self.btn_import)
         btn_row.addStretch(1)
         btn_row.addWidget(self.btn_close)
         root.addLayout(btn_row)
 
         # Connect signals
         self.table.itemSelectionChanged.connect(self.on_selection_changed)
-        self.table.itemDoubleClicked.connect(self.restore_selected)
+        self.table.itemDoubleClicked.connect(self._on_item_double_clicked)
+        self.table.itemChanged.connect(self._on_tag_edited)
         self.table.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.table.customContextMenuRequested.connect(self.show_context_menu)
 
@@ -216,18 +241,23 @@ class BackupManagerWindow(QDialog):
 
             desc_item = QTableWidgetItem(description)
             desc_item.setData(Qt.ItemDataRole.UserRole, filename)
+            # Col 0 is editable (tag); tooltip hints the user
+            desc_item.setToolTip(self.tr("Double-click to edit the tag/description"))
             self.table.setItem(row, 0, desc_item)
 
             res_item = QTableWidgetItem(resolution)
             res_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+            res_item.setFlags(res_item.flags() & ~Qt.ItemFlag.ItemIsEditable)
             self.table.setItem(row, 1, res_item)
 
             count_item = QTableWidgetItem(str(icon_count))
             count_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+            count_item.setFlags(count_item.flags() & ~Qt.ItemFlag.ItemIsEditable)
             self.table.setItem(row, 2, count_item)
 
             date_item = QTableWidgetItem(readable_date)
             date_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+            date_item.setFlags(date_item.flags() & ~Qt.ItemFlag.ItemIsEditable)
             self.table.setItem(row, 3, date_item)
 
         self.table.setSortingEnabled(True)
@@ -489,7 +519,7 @@ class BackupManagerWindow(QDialog):
             )
             return
 
-        picker = _BackupPickerDialog(other_files, self)
+        picker = _PickBackupDialog(other_files, self)
         if picker.exec() == QDialog.DialogCode.Accepted and picker.chosen:
             self._show_comparison_dialog(selected, picker.chosen, is_latest=False)
 
@@ -571,8 +601,260 @@ class BackupManagerWindow(QDialog):
                 html_lines.append(f"<p style=''>{line}</p>")
         return "".join(html_lines)
 
+    def _on_item_double_clicked(self, item: QTableWidgetItem):
+        """Double-click on col 0 → start inline edit; col 1-3 → restore."""
+        if item.column() == 0:
+            self.table.editItem(item)
+        else:
+            self.restore_selected()
 
-class _BackupPickerDialog(QDialog):
+    def _on_tag_edited(self, item: QTableWidgetItem):
+        """Persist the new tag to the JSON file when the user finishes editing col 0."""
+        if item.column() != 0:
+            return
+        filename = item.data(Qt.ItemDataRole.UserRole)
+        if not filename:
+            return
+        new_tag = item.text().strip()
+        filepath = os.path.join(Config.BACKUP_DIR, filename)
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            old_tag = data.get("description", "")
+            if old_tag == new_tag:
+                return
+            data["description"] = new_tag
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=4, ensure_ascii=False)
+            self.list_changed_signal.emit()
+        except (OSError, json.JSONDecodeError) as e:
+            QMessageBox.critical(
+                self,
+                self.tr("Error"),
+                self.tr("Failed to save tag: %1").replace("%1", str(e)),
+            )
+            # Revert the cell text to the old value
+            self.table.blockSignals(True)
+            item.setText(old_tag if "old_tag" in dir() else "")
+            self.table.blockSignals(False)
+
+    # ── Export ────────────────────────────────────────────────────────────────
+
+    def export_backups(self):
+        """Export selected backup(s) or all backups to a folder or ZIP archive."""
+        selected_fn = self._selected_filename()
+        all_files = self.manager.get_all_backup_filenames()
+
+        if not all_files:
+            QMessageBox.information(
+                self,
+                self.tr("No Backups"),
+                self.tr("There are no backup files to export."),
+            )
+            return
+
+        # Ask what to export
+        from PyQt6.QtWidgets import QInputDialog
+
+        choice_map = {
+            self.tr("All backups (%1 files)").replace("%1", str(len(all_files))): "all",
+        }
+        if selected_fn:
+            choice_map[
+                self.tr("Selected backup only (%1)").replace("%1", selected_fn)
+            ] = "selected"
+        choices = list(choice_map.keys())
+
+        choice_label, ok = QInputDialog.getItem(
+            self,
+            self.tr("Export Backups"),
+            self.tr("What do you want to export?"),
+            choices,
+            0,
+            False,
+        )
+        if not ok:
+            return
+        export_selected_only = choice_map[choice_label] == "selected"
+        files_to_export = [selected_fn] if export_selected_only else all_files
+
+        # Ask format: folder or ZIP
+        format_choices = [
+            self.tr("ZIP archive (.zip)"),
+            self.tr("Folder (copy .json files)"),
+        ]
+        format_label, ok = QInputDialog.getItem(
+            self,
+            self.tr("Export Format"),
+            self.tr("Choose export format:"),
+            format_choices,
+            0,
+            False,
+        )
+        if not ok:
+            return
+        use_zip = format_choices.index(format_label) == 0
+
+        if use_zip:
+            default_name = (
+                f"dibm_backups_{datetime.now().strftime('%Y%m%d_%H%M%S')}.zip"
+            )
+            dest, _ = QFileDialog.getSaveFileName(
+                self,
+                self.tr("Save ZIP Archive"),
+                default_name,
+                self.tr("ZIP Archives (*.zip)"),
+            )
+            if not dest:
+                return
+            try:
+                with zipfile.ZipFile(dest, "w", zipfile.ZIP_DEFLATED) as zf:
+                    for fn in files_to_export:
+                        src = os.path.join(Config.BACKUP_DIR, fn)
+                        if os.path.exists(src):
+                            zf.write(src, arcname=fn)
+                QMessageBox.information(
+                    self,
+                    self.tr("Export Successful"),
+                    self.tr("Exported %1 backup(s) to:\n%2")
+                    .replace("%1", str(len(files_to_export)))
+                    .replace("%2", dest),
+                )
+            except OSError as e:
+                QMessageBox.critical(
+                    self,
+                    self.tr("Export Failed"),
+                    self.tr("Could not create ZIP archive:\n%1").replace("%1", str(e)),
+                )
+        else:
+            dest_dir = QFileDialog.getExistingDirectory(
+                self, self.tr("Select Destination Folder")
+            )
+            if not dest_dir:
+                return
+            copied = 0
+            errors = []
+            for fn in files_to_export:
+                src = os.path.join(Config.BACKUP_DIR, fn)
+                dst = os.path.join(dest_dir, fn)
+                try:
+                    shutil.copy2(src, dst)
+                    copied += 1
+                except OSError as e:
+                    errors.append(f"{fn}: {e}")
+            if errors:
+                QMessageBox.warning(
+                    self,
+                    self.tr("Export Partial"),
+                    self.tr("Exported %1 file(s). Errors:\n%2")
+                    .replace("%1", str(copied))
+                    .replace("%2", "\n".join(errors)),
+                )
+            else:
+                QMessageBox.information(
+                    self,
+                    self.tr("Export Successful"),
+                    self.tr("Exported %1 backup(s) to:\n%2")
+                    .replace("%1", str(copied))
+                    .replace("%2", dest_dir),
+                )
+
+    # ── Import ────────────────────────────────────────────────────────────────
+
+    def import_backups(self):
+        """Import .json backup files or a ZIP archive from another installation."""
+        file_paths, _ = QFileDialog.getOpenFileNames(
+            self,
+            self.tr("Import Backups"),
+            "",
+            self.tr("Backup files (*.json *.zip)"),
+        )
+        if not file_paths:
+            return
+
+        imported = 0
+        skipped = 0
+        errors = []
+
+        for path in file_paths:
+            ext = os.path.splitext(path)[1].lower()
+            if ext == ".zip":
+                result = self._import_from_zip(path)
+                imported += result[0]
+                skipped += result[1]
+                errors.extend(result[2])
+            elif ext == ".json":
+                ok, skip, err = self._import_single_json(path)
+                imported += ok
+                skipped += skip
+                errors.extend(err)
+
+        self.load_backups()
+        self.list_changed_signal.emit()
+
+        summary = (
+            self.tr("Import complete.\n\n✓ Imported: %1\n⏭ Skipped (already exist): %2")
+            .replace("%1", str(imported))
+            .replace("%2", str(skipped))
+        )
+        if errors:
+            summary += "\n\n" + self.tr("Errors:\n%1").replace("%1", "\n".join(errors))
+            QMessageBox.warning(self, self.tr("Import Results"), summary)
+        else:
+            QMessageBox.information(self, self.tr("Import Successful"), summary)
+
+    def _import_from_zip(self, zip_path: str):
+        """Extract JSON backups from a ZIP file. Returns (imported, skipped, errors)."""
+        imported = 0
+        skipped = 0
+        errors = []
+        try:
+            with zipfile.ZipFile(zip_path, "r") as zf:
+                json_names = [n for n in zf.namelist() if n.endswith(".json")]
+                if not json_names:
+                    errors.append(
+                        self.tr("No .json files found in: %1").replace("%1", zip_path)
+                    )
+                    return imported, skipped, errors
+                for name in json_names:
+                    base = os.path.basename(name)
+                    dest = os.path.join(Config.BACKUP_DIR, base)
+                    if os.path.exists(dest):
+                        skipped += 1
+                        continue
+                    try:
+                        data = zf.read(name)
+                        # Validate it's parseable JSON before saving
+                        json.loads(data)
+                        with open(dest, "wb") as f:
+                            f.write(data)
+                        imported += 1
+                    except (json.JSONDecodeError, OSError) as e:
+                        errors.append(f"{base}: {e}")
+        except zipfile.BadZipFile as e:
+            errors.append(
+                self.tr("Invalid ZIP file %1: %2")
+                .replace("%1", zip_path)
+                .replace("%2", str(e))
+            )
+        return imported, skipped, errors
+
+    def _import_single_json(self, json_path: str):
+        """Import a single JSON backup file. Returns (imported, skipped, errors)."""
+        base = os.path.basename(json_path)
+        dest = os.path.join(Config.BACKUP_DIR, base)
+        if os.path.exists(dest):
+            return 0, 1, []
+        try:
+            with open(json_path, "r", encoding="utf-8") as f:
+                json.load(f)  # validate
+            shutil.copy2(json_path, dest)
+            return 1, 0, []
+        except (json.JSONDecodeError, OSError) as e:
+            return 0, 0, [f"{base}: {e}"]
+
+
+class _PickBackupDialog(QDialog):
     """Small helper dialog to pick a second backup file for comparison."""
 
     def __init__(self, filenames: list[str], parent=None):

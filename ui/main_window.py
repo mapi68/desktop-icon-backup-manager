@@ -149,6 +149,20 @@ class MainWindow(QMainWindow):
         file_menu.addAction(self.action_remove_all)
 
         file_menu.addSeparator()
+
+        action_export = QAction(self.tr("📤 Export Backups..."), self)
+        action_export.setToolTip(self.tr("Export backups to a folder or ZIP archive"))
+        action_export.triggered.connect(self._open_backup_manager_for_export)
+        file_menu.addAction(action_export)
+
+        action_import = QAction(self.tr("📥 Import Backups..."), self)
+        action_import.setToolTip(
+            self.tr("Import backup files (.json) or a ZIP archive")
+        )
+        action_import.triggered.connect(self._import_backups_direct)
+        file_menu.addAction(action_import)
+
+        file_menu.addSeparator()
         action_exit = QAction(self.tr("E&xit"), self)
         action_exit.setShortcut("Ctrl+Q")
         action_exit.triggered.connect(self.exit_application)
@@ -160,16 +174,7 @@ class MainWindow(QMainWindow):
         action_open_settings.setShortcut(QKeySequence("Ctrl+,"))
         action_open_settings.triggered.connect(self.show_settings_menu)
 
-        self.action_start_minimized = QAction(
-            self.tr("Start Minimized to Tray"), self, checkable=True
-        )
-        self.action_start_minimized.triggered.connect(
-            lambda checked: self.settings.setValue("start_minimized", checked)
-        )
-        settings_menu.addAction(self.action_start_minimized)
-
-        settings_menu.addSeparator()
-
+        # Group 1: startup / exit behaviour
         self.action_auto_save = QAction(
             self.tr("Auto-Save on Exit"), self, checkable=True
         )
@@ -196,6 +201,7 @@ class MainWindow(QMainWindow):
 
         settings_menu.addSeparator()
 
+        # Group 2: restore behaviour
         self.action_adaptive_scaling = QAction(
             self.tr("Enable Adaptive Scaling on Restore"), self, checkable=True
         )
@@ -205,6 +211,15 @@ class MainWindow(QMainWindow):
         settings_menu.addAction(self.action_adaptive_scaling)
 
         settings_menu.addSeparator()
+
+        # Group 3: tray / window behaviour
+        self.action_start_minimized = QAction(
+            self.tr("Start Minimized to Tray"), self, checkable=True
+        )
+        self.action_start_minimized.triggered.connect(
+            lambda checked: self.settings.setValue("start_minimized", checked)
+        )
+        settings_menu.addAction(self.action_start_minimized)
 
         self.action_close_to_tray = QAction(
             self.tr("Minimize to Tray on Close ('X' button)"), self, checkable=True
@@ -216,6 +231,7 @@ class MainWindow(QMainWindow):
 
         settings_menu.addSeparator()
 
+        # Group 4: cleanup
         self.cleanup_group = QMenu(self.tr("Automatic Backup Cleanup Limit"), self)
         settings_menu.addMenu(self.cleanup_group)
         self.cleanup_actions = {}
@@ -514,6 +530,31 @@ class MainWindow(QMainWindow):
         manager_window.list_changed_signal.connect(
             lambda: self.log(self.tr("Backup list updated (item deleted)."))
         )
+        manager_window.exec()
+
+    def _open_backup_manager_for_export(self):
+        """Open Backup Manager and trigger the export flow directly."""
+        manager_window = BackupManagerWindow(self.manager, self)
+        manager_window.restore_requested.connect(self.start_restore_specific)
+        manager_window.list_changed_signal.connect(
+            lambda: self.log(self.tr("Backup list updated."))
+        )
+        # Trigger export immediately after the dialog is shown
+        from PyQt6.QtCore import QTimer as _QTimer
+
+        _QTimer.singleShot(0, manager_window.export_backups)
+        manager_window.exec()
+
+    def _import_backups_direct(self):
+        """Open Backup Manager and trigger the import flow directly."""
+        manager_window = BackupManagerWindow(self.manager, self)
+        manager_window.restore_requested.connect(self.start_restore_specific)
+        manager_window.list_changed_signal.connect(
+            lambda: self.log(self.tr("Backup list updated (imported)."))
+        )
+        from PyQt6.QtCore import QTimer as _QTimer
+
+        _QTimer.singleShot(0, manager_window.import_backups)
         manager_window.exec()
 
     def quick_save_with_tag(self):
@@ -968,29 +1009,29 @@ class MainWindow(QMainWindow):
         shortcuts_text = f"""
         <h2>{self.tr("Keyboard Shortcuts")}</h2>
         <table style='width:100%; border-collapse: collapse;'>
-            <tr style='background-color: #2b2b2b;'>
+            <tr style='background-color: #2b2b2b; color: #ffffff;'>
                 <th style='padding: 8px; text-align: left; border: 1px solid #444;'>{self.tr("Shortcut")}</th>
                 <th style='padding: 8px; text-align: left; border: 1px solid #444;'>{self.tr("Action")}</th>
             </tr>
-            <tr>
-                <td style='padding: 8px; border: 1px solid #444;'><b>Ctrl+S</b></td>
-                <td style='padding: 8px; border: 1px solid #444;'>{self.tr("Quick Save current layout")}</td>
+            <tr style='background-color: #f5f5f5; color: #1a1a1a;'>
+                <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+S</b></td>
+                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Quick Save current layout")}</td>
             </tr>
-            <tr style='background-color: #1e1e1e;'>
-                <td style='padding: 8px; border: 1px solid #444;'><b>Ctrl+M</b></td>
-                <td style='padding: 8px; border: 1px solid #444;'>{self.tr("Open Backup Manager")}</td>
+            <tr style='background-color: #e8e8e8; color: #1a1a1a;'>
+                <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+M</b></td>
+                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Open Backup Manager")}</td>
             </tr>
-            <tr>
-                <td style='padding: 8px; border: 1px solid #444;'><b>Ctrl+,</b></td>
-                <td style='padding: 8px; border: 1px solid #444;'>{self.tr("Open Settings menu")}</td>
+            <tr style='background-color: #f5f5f5; color: #1a1a1a;'>
+                <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+,</b></td>
+                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Open Settings menu")}</td>
             </tr>
-            <tr style='background-color: #1e1e1e;'>
-                <td style='padding: 8px; border: 1px solid #444;'><b>F1</b></td>
-                <td style='padding: 8px; border: 1px solid #444;'>{self.tr("Open Online User Manual")}</td>
+            <tr style='background-color: #e8e8e8; color: #1a1a1a;'>
+                <td style='padding: 8px; border: 1px solid #ccc;'><b>F1</b></td>
+                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Open Online User Manual")}</td>
             </tr>
-            <tr>
-                <td style='padding: 8px; border: 1px solid #444;'><b>Ctrl+Q</b></td>
-                <td style='padding: 8px; border: 1px solid #444;'>{self.tr("Exit Application")}</td>
+            <tr style='background-color: #f5f5f5; color: #1a1a1a;'>
+                <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+Q</b></td>
+                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Exit Application")}</td>
             </tr>
         </table>
         <br>

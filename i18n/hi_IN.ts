@@ -63,144 +63,170 @@
 </context><context>
     <name>BackupManagerWindow</name>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="53" />
+        <location filename="..\ui\backup_dialog.py" line="57" />
         <source>Select, Restore, or Delete Backup</source>
         <translation>बैकअप चुनें, पुनर्स्थापित करें या हटाएं</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="63" />
+        <location filename="..\ui\backup_dialog.py" line="67" />
         <source>Select a backup to restore or right-click for options.</source>
         <translation>पुनर्स्थापित करने के लिए बैकअप चुनें या विकल्पों के लिए राइट-क्लिक करें।</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="69" />
+        <location filename="..\ui\backup_dialog.py" line="73" />
         <source>Search by tag, resolution, or date...</source>
         <translation>टैग, रिज़ॉल्यूशन या दिनांक से खोजें...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="86" />
+        <location filename="..\ui\backup_dialog.py" line="90" />
         <source>Tag / Description</source>
         <translation>टैग / विवरण</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="287" />
-        <location filename="..\ui\backup_dialog.py" line="87" />
+        <location filename="..\ui\backup_dialog.py" line="317" />
+        <location filename="..\ui\backup_dialog.py" line="91" />
         <source>Resolution</source>
         <translation>रिज़ॉल्यूशन</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="286" />
-        <location filename="..\ui\backup_dialog.py" line="88" />
+        <location filename="..\ui\backup_dialog.py" line="316" />
+        <location filename="..\ui\backup_dialog.py" line="92" />
         <source>Icons</source>
         <translation>आइकन</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="289" />
-        <location filename="..\ui\backup_dialog.py" line="89" />
+        <location filename="..\ui\backup_dialog.py" line="319" />
+        <location filename="..\ui\backup_dialog.py" line="93" />
         <source>Timestamp</source>
         <translation>टाइमस्टैम्प</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="133" />
+        <location filename="..\ui\backup_dialog.py" line="141" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>लेआउट पूर्वावलोकन (सहेजी गई स्थितियाँ बनाम वर्तमान):</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="254" />
-        <location filename="..\ui\backup_dialog.py" line="143" />
+        <location filename="..\ui\backup_dialog.py" line="284" />
+        <location filename="..\ui\backup_dialog.py" line="151" />
         <source>Select a backup to see details.</source>
         <translation>विवरण देखने के लिए कोई बैकअप चुनें।</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="169" />
+        <location filename="..\ui\backup_dialog.py" line="177" />
         <source>Restore Selected Layout</source>
         <translation>चुना गया लेआउट पुनर्स्थापित करें</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="173" />
+        <location filename="..\ui\backup_dialog.py" line="181" />
         <source>📊 Compare Two Selected...</source>
         <translation>📊 दो चुने हुए की तुलना करें...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="177" />
+        <location filename="..\ui\backup_dialog.py" line="185" />
+        <source>📤 Export Backups...</source>
+        <translation>📤 बैकअप निर्यात करें...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="187" />
+        <source>Export selected or all backups to a folder or ZIP archive</source>
+        <translation>चुने हुए या सभी बैकअप को किसी फ़ोल्डर या ZIP संग्रह में निर्यात करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="191" />
+        <source>📥 Import Backups...</source>
+        <translation>📥 बैकअप आयात करें...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="193" />
+        <source>Import backup files (.json) or a ZIP archive from another installation</source>
+        <translation>बैकअप फ़ाइलें (.json) या किसी अन्य इंस्टॉलेशन से ZIP संग्रह आयात करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="199" />
         <source>Close</source>
         <translation>बंद करें</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="350" />
-        <location filename="..\ui\backup_dialog.py" line="349" />
-        <location filename="..\ui\backup_dialog.py" line="276" />
-        <location filename="..\ui\backup_dialog.py" line="210" />
-        <location filename="..\ui\backup_dialog.py" line="204" />
+        <location filename="..\ui\backup_dialog.py" line="380" />
+        <location filename="..\ui\backup_dialog.py" line="379" />
+        <location filename="..\ui\backup_dialog.py" line="306" />
+        <location filename="..\ui\backup_dialog.py" line="235" />
+        <location filename="..\ui\backup_dialog.py" line="229" />
         <source>N/A</source>
         <translation>उपलब्ध नहीं</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="237" />
+        <location filename="..\ui\backup_dialog.py" line="245" />
+        <source>Double-click to edit the tag/description</source>
+        <translation>टैग/विवरण संपादित करने के लिए डबल-क्लिक करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="267" />
         <source>No backups found.</source>
         <translation>कोई बैकअप नहीं मिला।</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="275" />
+        <location filename="..\ui\backup_dialog.py" line="305" />
         <source>None</source>
         <translation>कोई नहीं</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="285" />
+        <location filename="..\ui\backup_dialog.py" line="315" />
         <source>File</source>
         <translation>फ़ाइल</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="288" />
+        <location filename="..\ui\backup_dialog.py" line="318" />
         <source>Description</source>
         <translation>विवरण</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="503" />
-        <location filename="..\ui\backup_dialog.py" line="454" />
-        <location filename="..\ui\backup_dialog.py" line="437" />
-        <location filename="..\ui\backup_dialog.py" line="411" />
-        <location filename="..\ui\backup_dialog.py" line="295" />
+        <location filename="..\ui\backup_dialog.py" line="633" />
+        <location filename="..\ui\backup_dialog.py" line="533" />
+        <location filename="..\ui\backup_dialog.py" line="484" />
+        <location filename="..\ui\backup_dialog.py" line="467" />
+        <location filename="..\ui\backup_dialog.py" line="441" />
+        <location filename="..\ui\backup_dialog.py" line="325" />
         <source>Error</source>
         <translation>त्रुटि</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="320" />
+        <location filename="..\ui\backup_dialog.py" line="350" />
         <source>🔄 Restore Selected</source>
         <translation>🔄 चुना हुआ पुनर्स्थापित करें</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="323" />
+        <location filename="..\ui\backup_dialog.py" line="353" />
         <source>🗑️ Delete Selected</source>
         <translation>🗑️ चुना हुआ हटाएं</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="327" />
+        <location filename="..\ui\backup_dialog.py" line="357" />
         <source>📊 Compare with Latest</source>
         <translation>📊 नवीनतम से तुलना करें</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="379" />
+        <location filename="..\ui\backup_dialog.py" line="409" />
         <source>will move</source>
         <translation>स्थानांतरित होगा</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="380" />
+        <location filename="..\ui\backup_dialog.py" line="410" />
         <source>already in place</source>
         <translation>पहले से सही स्थान पर</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="381" />
+        <location filename="..\ui\backup_dialog.py" line="411" />
         <source>not on desktop</source>
         <translation>डेस्कटॉप पर नहीं है</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="386" />
+        <location filename="..\ui\backup_dialog.py" line="416" />
         <source>Confirm Restore</source>
         <translation>पुनर्स्थापना की पुष्टि करें</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="387" />
+        <location filename="..\ui\backup_dialog.py" line="417" />
         <source>Restore icon positions from the selected backup file:
 
 File: %1
@@ -221,31 +247,31 @@ Are you sure you want to proceed?</source>
 क्या आप आगे बढ़ना चाहते हैं?</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="426" />
-        <location filename="..\ui\backup_dialog.py" line="402" />
+        <location filename="..\ui\backup_dialog.py" line="456" />
+        <location filename="..\ui\backup_dialog.py" line="432" />
         <source>Yes</source>
         <translation>हाँ</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="427" />
-        <location filename="..\ui\backup_dialog.py" line="403" />
+        <location filename="..\ui\backup_dialog.py" line="457" />
+        <location filename="..\ui\backup_dialog.py" line="433" />
         <source>No</source>
         <translation>नहीं</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="412" />
+        <location filename="..\ui\backup_dialog.py" line="442" />
         <source>Failed to load backup file:
 %1</source>
         <translation>बैकअप फ़ाइल लोड करने में विफल:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="422" />
+        <location filename="..\ui\backup_dialog.py" line="452" />
         <source>Confirm Delete</source>
         <translation>हटाने की पुष्टि करें</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="423" />
+        <location filename="..\ui\backup_dialog.py" line="453" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
@@ -254,85 +280,241 @@ Are you sure you want to proceed?</source>
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="433" />
+        <location filename="..\ui\backup_dialog.py" line="463" />
         <source>Success</source>
         <translation>सफलता</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="433" />
+        <location filename="..\ui\backup_dialog.py" line="463" />
         <source>Backup deleted successfully.</source>
         <translation>बैकअप सफलतापूर्वक हटा दिया गया।</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="437" />
+        <location filename="..\ui\backup_dialog.py" line="467" />
         <source>Failed to delete backup file.</source>
         <translation>बैकअप फ़ाइल हटाने में विफल।</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="477" />
-        <location filename="..\ui\backup_dialog.py" line="446" />
+        <location filename="..\ui\backup_dialog.py" line="507" />
+        <location filename="..\ui\backup_dialog.py" line="476" />
         <source>No Selection</source>
         <translation>कुछ चुना नहीं गया</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="447" />
+        <location filename="..\ui\backup_dialog.py" line="477" />
         <source>Please select a backup to compare.</source>
         <translation>तुलना के लिए कोई बैकअप चुनें।</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="454" />
+        <location filename="..\ui\backup_dialog.py" line="484" />
         <source>No latest backup found</source>
         <translation>कोई नवीनतम बैकअप नहीं मिला</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="461" />
+        <location filename="..\ui\backup_dialog.py" line="491" />
         <source>Same Backup</source>
         <translation>समान बैकअप</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="462" />
+        <location filename="..\ui\backup_dialog.py" line="492" />
         <source>You selected the latest backup. Nothing to compare.</source>
         <translation>आपने नवीनतम बैकअप चुना। तुलना के लिए कुछ नहीं।</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="478" />
+        <location filename="..\ui\backup_dialog.py" line="508" />
         <source>Please select a backup first.</source>
         <translation>पहले कोई बैकअप चुनें।</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="487" />
+        <location filename="..\ui\backup_dialog.py" line="517" />
         <source>Not Enough Backups</source>
         <translation>पर्याप्त बैकअप नहीं</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="488" />
+        <location filename="..\ui\backup_dialog.py" line="518" />
         <source>There is only one backup. Nothing to compare against.</source>
         <translation>केवल एक बैकअप है। तुलना के लिए कुछ नहीं।</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="503" />
+        <location filename="..\ui\backup_dialog.py" line="533" />
         <source>Failed to compare backups</source>
         <translation>बैकअप की तुलना करने में विफल</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="507" />
+        <location filename="..\ui\backup_dialog.py" line="537" />
         <source>latest</source>
         <translation>नवीनतम</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="510" />
+        <location filename="..\ui\backup_dialog.py" line="540" />
         <source>Comparison Results</source>
         <translation>तुलना परिणाम</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="528" />
+        <location filename="..\ui\backup_dialog.py" line="558" />
         <source>Comparing Backups:</source>
         <translation>बैकअप की तुलना की जा रही है:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="539" />
+        <location filename="..\ui\backup_dialog.py" line="569" />
         <source>✓ Close</source>
         <translation>✓ बंद करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="634" />
+        <source>Failed to save tag: %1</source>
+        <translation>टैग सहेजने में विफल: %1</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="651" />
+        <source>No Backups</source>
+        <translation>कोई बैकअप नहीं</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="652" />
+        <source>There are no backup files to export.</source>
+        <translation>निर्यात के लिए कोई बैकअप फ़ाइल नहीं है।</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="660" />
+        <source>All backups (%1 files)</source>
+        <translation>सभी बैकअप (%1 फ़ाइलें)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="664" />
+        <source>Selected backup only (%1)</source>
+        <translation>केवल चुना हुआ बैकअप (%1)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="670" />
+        <source>Export Backups</source>
+        <translation>बैकअप निर्यात करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="671" />
+        <source>What do you want to export?</source>
+        <translation>आप क्या निर्यात करना चाहते हैं?</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="683" />
+        <source>ZIP archive (.zip)</source>
+        <translation>ZIP संग्रह (.zip)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="684" />
+        <source>Folder (copy .json files)</source>
+        <translation>फ़ोल्डर (.json फ़ाइलें कॉपी करें)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="688" />
+        <source>Export Format</source>
+        <translation>निर्यात प्रारूप</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="689" />
+        <source>Choose export format:</source>
+        <translation>निर्यात प्रारूप चुनें:</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="704" />
+        <source>Save ZIP Archive</source>
+        <translation>ZIP संग्रह सहेजें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="706" />
+        <source>ZIP Archives (*.zip)</source>
+        <translation>ZIP Archives (*.zip)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="756" />
+        <location filename="..\ui\backup_dialog.py" line="718" />
+        <source>Export Successful</source>
+        <translation>निर्यात सफल</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="757" />
+        <location filename="..\ui\backup_dialog.py" line="719" />
+        <source>Exported %1 backup(s) to:
+%2</source>
+        <translation>%1 बैकअप निर्यात किए गए:
+%2</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="726" />
+        <source>Export Failed</source>
+        <translation>निर्यात विफल</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="727" />
+        <source>Could not create ZIP archive:
+%1</source>
+        <translation>ZIP संग्रह नहीं बनाया जा सका:
+%1</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="731" />
+        <source>Select Destination Folder</source>
+        <translation>गंतव्य फ़ोल्डर चुनें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="748" />
+        <source>Export Partial</source>
+        <translation>आंशिक निर्यात</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="749" />
+        <source>Exported %1 file(s). Errors:
+%2</source>
+        <translation>%1 फ़ाइल(ें) निर्यात की गईं। त्रुटियाँ:
+%2</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="768" />
+        <source>Import Backups</source>
+        <translation>बैकअप आयात करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="770" />
+        <source>Backup files (*.json *.zip)</source>
+        <translation>Backup files (*.json *.zip)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="796" />
+        <source>Import complete.
+
+✓ Imported: %1
+⏭ Skipped (already exist): %2</source>
+        <translation>आयात पूर्ण हुआ।
+
+✓ आयात किए गए: %1
+⏭ छोड़े गए (पहले से मौजूद): %2</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="801" />
+        <source>Errors:
+%1</source>
+        <translation>त्रुटियाँ:
+%1</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="802" />
+        <source>Import Results</source>
+        <translation>आयात परिणाम</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="804" />
+        <source>Import Successful</source>
+        <translation>आयात सफल</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="816" />
+        <source>No .json files found in: %1</source>
+        <translation>%1 में कोई .json फ़ाइल नहीं मिली:</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="836" />
+        <source>Invalid ZIP file %1: %2</source>
+        <translation>अमान्य ZIP फ़ाइल %1: %2</translation>
     </message>
 </context><context>
     <name>CLI</name>
@@ -712,131 +894,151 @@ Are you sure you want to proceed?</source>
         <translation>सभी बैकअप हटाएं...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="152" />
+        <location filename="..\ui\main_window.py" line="153" />
+        <source>📤 Export Backups...</source>
+        <translation>📤 बैकअप निर्यात करें...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="154" />
+        <source>Export backups to a folder or ZIP archive</source>
+        <translation>बैकअप को किसी फ़ोल्डर या ZIP संग्रह में निर्यात करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="158" />
+        <source>📥 Import Backups...</source>
+        <translation>📥 बैकअप आयात करें...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="160" />
+        <source>Import backup files (.json) or a ZIP archive</source>
+        <translation>बैकअप फ़ाइलें (.json) या ZIP संग्रह आयात करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="166" />
         <source>E&amp;xit</source>
         <translation>बा&amp;हर निकलें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="388" />
-        <location filename="..\ui\main_window.py" line="157" />
+        <location filename="..\ui\main_window.py" line="404" />
+        <location filename="..\ui\main_window.py" line="171" />
         <source>&amp;Settings</source>
         <translation>&amp;सेटिंग्स</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="159" />
+        <location filename="..\ui\main_window.py" line="173" />
         <source>Open Settings Menu</source>
         <translation>सेटिंग्स मेनू खोलें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="164" />
-        <source>Start Minimized to Tray</source>
-        <translation>सिस्टम ट्रे में न्यूनतम करके प्रारंभ करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="900" />
-        <location filename="..\ui\main_window.py" line="174" />
+        <location filename="..\ui\main_window.py" line="941" />
+        <location filename="..\ui\main_window.py" line="179" />
         <source>Auto-Save on Exit</source>
         <translation>बाहर निकलने पर स्वतः सहेजें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="182" />
+        <location filename="..\ui\main_window.py" line="187" />
         <source>Auto-Restore on Startup</source>
         <translation>स्टार्टअप पर स्वतः पुनर्स्थापित करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="190" />
+        <location filename="..\ui\main_window.py" line="195" />
         <source>Check for Updates on Startup</source>
         <translation>स्टार्टअप पर अपडेट जांचें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="200" />
+        <location filename="..\ui\main_window.py" line="206" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>पुनर्स्थापना पर अनुकूली स्केलिंग सक्षम करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="210" />
+        <location filename="..\ui\main_window.py" line="217" />
+        <source>Start Minimized to Tray</source>
+        <translation>सिस्टम ट्रे में न्यूनतम करके प्रारंभ करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="225" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>बंद करने पर ट्रे में न्यूनतम करें ('X' बटन)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="219" />
+        <location filename="..\ui\main_window.py" line="235" />
         <source>Automatic Backup Cleanup Limit</source>
         <translation>स्वचालित बैकअप सफाई सीमा</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="224" />
+        <location filename="..\ui\main_window.py" line="240" />
         <source>Disabled (Keep All)</source>
         <translation>अक्षम (सभी रखें)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="225" />
+        <location filename="..\ui\main_window.py" line="241" />
         <source>Keep Last 5</source>
         <translation>अंतिम 5 रखें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="226" />
+        <location filename="..\ui\main_window.py" line="242" />
         <source>Keep Last 10</source>
         <translation>अंतिम 10 रखें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="227" />
+        <location filename="..\ui\main_window.py" line="243" />
         <source>Keep Last 25</source>
         <translation>अंतिम 25 रखें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="228" />
+        <location filename="..\ui\main_window.py" line="244" />
         <source>Keep Last 50</source>
         <translation>अंतिम 50 रखें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="239" />
+        <location filename="..\ui\main_window.py" line="255" />
         <source>&amp;Help</source>
         <translation>&amp;सहायता</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="241" />
+        <location filename="..\ui\main_window.py" line="257" />
         <source>Online User Manual</source>
         <translation>ऑनलाइन उपयोगकर्ता मैनुअल</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1001" />
-        <location filename="..\ui\main_window.py" line="969" />
-        <location filename="..\ui\main_window.py" line="248" />
+        <location filename="..\ui\main_window.py" line="1042" />
+        <location filename="..\ui\main_window.py" line="1010" />
+        <location filename="..\ui\main_window.py" line="264" />
         <source>Keyboard Shortcuts</source>
         <translation>कीबोर्ड शॉर्टकट</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="254" />
+        <location filename="..\ui\main_window.py" line="270" />
         <source>Check for Updates...</source>
         <translation>अपडेट जांचें...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="260" />
+        <location filename="..\ui\main_window.py" line="276" />
         <source>&amp;About</source>
         <translation>&amp;के बारे में</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="266" />
+        <location filename="..\ui\main_window.py" line="282" />
         <source>Support on Ko-fi...</source>
         <translation>Ko-fi पर समर्थन करें...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="281" />
+        <location filename="..\ui\main_window.py" line="297" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>वैकल्पिक: एक वर्णनात्मक टैग/विवरण दर्ज करें...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="285" />
+        <location filename="..\ui\main_window.py" line="301" />
         <source>Save Tag:</source>
         <translation>सहेजें टैग:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="292" />
+        <location filename="..\ui\main_window.py" line="308" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 त्वरित बैकअप सहेजें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="296" />
+        <location filename="..\ui\main_window.py" line="312" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -845,22 +1047,22 @@ Shortcut: Ctrl+S</source>
 शॉर्टकट: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="304" />
+        <location filename="..\ui\main_window.py" line="320" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ नवीनतम पुनर्स्थापित करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="307" />
+        <location filename="..\ui\main_window.py" line="323" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>पाई गई नवीनतम बैकअप फ़ाइल से आइकन स्थितियाँ पुनर्स्थापित करें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="312" />
+        <location filename="..\ui\main_window.py" line="328" />
         <source>↺ BACKUP MANAGER</source>
         <translation>↺ बैकअप प्रबंधक</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="316" />
+        <location filename="..\ui\main_window.py" line="332" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -869,50 +1071,50 @@ Shortcut: Ctrl+M</source>
 शॉर्टकट: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="330" />
+        <location filename="..\ui\main_window.py" line="346" />
         <source>Activity Log:</source>
         <translation>गतिविधि लॉग:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="341" />
+        <location filename="..\ui\main_window.py" line="357" />
         <source>Current Resolution: %1</source>
         <translation>वर्तमान रिज़ॉल्यूशन: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="348" />
+        <location filename="..\ui\main_window.py" line="364" />
         <source>Support on Ko-fi</source>
         <translation>Ko-fi पर समर्थन करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="354" />
+        <location filename="..\ui\main_window.py" line="370" />
         <source>Clear Log</source>
         <translation>लॉग साफ़ करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="396" />
+        <location filename="..\ui\main_window.py" line="412" />
         <source>Settings menu not found</source>
         <translation>सेटिंग्स मेनू नहीं मिला</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="408" />
+        <location filename="..\ui\main_window.py" line="424" />
         <source>Opening online user manual in browser...</source>
         <translation>ब्राउज़र में ऑनलाइन उपयोगकर्ता मैनुअल खोला जा रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="410" />
+        <location filename="..\ui\main_window.py" line="426" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ मैनुअल URL खोलने में विफल</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="828" />
-        <location filename="..\ui\main_window.py" line="619" />
-        <location filename="..\ui\main_window.py" line="586" />
-        <location filename="..\ui\main_window.py" line="413" />
+        <location filename="..\ui\main_window.py" line="869" />
+        <location filename="..\ui\main_window.py" line="660" />
+        <location filename="..\ui\main_window.py" line="627" />
+        <location filename="..\ui\main_window.py" line="429" />
         <source>Error</source>
         <translation>त्रुटि</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="414" />
+        <location filename="..\ui\main_window.py" line="430" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -923,27 +1125,27 @@ Please visit manually:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="421" />
+        <location filename="..\ui\main_window.py" line="437" />
         <source>Save</source>
         <translation>सहेजें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="424" />
+        <location filename="..\ui\main_window.py" line="440" />
         <source>Quick Backup (Shortcut)</source>
         <translation>त्वरित बैकअप (शॉर्टकट)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="428" />
+        <location filename="..\ui\main_window.py" line="444" />
         <source>Backup Manager</source>
         <translation>बैकअप प्रबंधक</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="433" />
+        <location filename="..\ui\main_window.py" line="449" />
         <source>Settings</source>
         <translation>सेटिंग्स</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="468" />
+        <location filename="..\ui\main_window.py" line="484" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>स्वचालित सफाई सीमा निर्धारित: %n बैकअप (0 = अक्षम)।</numerusform>
@@ -951,164 +1153,174 @@ Please visit manually:
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="913" />
-        <location filename="..\ui\main_window.py" line="819" />
-        <location filename="..\ui\main_window.py" line="485" />
+        <location filename="..\ui\main_window.py" line="954" />
+        <location filename="..\ui\main_window.py" line="860" />
+        <location filename="..\ui\main_window.py" line="501" />
         <source>Desktop Icon Manager</source>
         <translation>डेस्कटॉप आइकन प्रबंधक</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="515" />
+        <location filename="..\ui\main_window.py" line="531" />
         <source>Backup list updated (item deleted).</source>
         <translation>बैकअप सूची अपडेट की गई (आइटम हटाया गया)।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="521" />
+        <location filename="..\ui\main_window.py" line="540" />
+        <source>Backup list updated.</source>
+        <translation>बैकअप सूची अपडेट की गई।</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="553" />
+        <source>Backup list updated (imported).</source>
+        <translation>बैकअप सूची अपडेट की गई (आयात की गई)।</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="562" />
         <source>Quick Backup</source>
         <translation>त्वरित बैकअप</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="530" />
+        <location filename="..\ui\main_window.py" line="571" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
         <translation>Windows डेस्कटॉप आइकन स्थितियाँ सहेजने और पुनर्स्थापित करने के लिए एक सरल लेकिन शक्तिशाली उपकरण।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="531" />
+        <location filename="..\ui\main_window.py" line="572" />
         <source>Key Features:</source>
         <translation>मुख्य विशेषताएं:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="533" />
+        <location filename="..\ui\main_window.py" line="574" />
         <source>Quick Save:</source>
         <translation>त्वरित सहेजें:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="533" />
+        <location filename="..\ui\main_window.py" line="574" />
         <source>Save icons with an optional descriptive tag.</source>
         <translation>वैकल्पिक वर्णनात्मक टैग के साथ आइकन सहेजें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="534" />
+        <location filename="..\ui\main_window.py" line="575" />
         <source>Backup Management:</source>
         <translation>बैकअप प्रबंधन:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="534" />
+        <location filename="..\ui\main_window.py" line="575" />
         <source>Select, restore, or delete specific backups.</source>
         <translation>विशेष बैकअप चुनें, पुनर्स्थापित करें या हटाएं।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="535" />
+        <location filename="..\ui\main_window.py" line="576" />
         <source>Live Diff Preview:</source>
         <translation>लाइव अंतर पूर्वावलोकन:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="535" />
+        <location filename="..\ui\main_window.py" line="576" />
         <source>See which icons will move before restoring.</source>
         <translation>पुनर्स्थापना से पहले देखें कि कौन से आइकन हिलेंगे।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="536" />
+        <location filename="..\ui\main_window.py" line="577" />
         <source>Visual Preview:</source>
         <translation>दृश्य पूर्वावलोकन:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="536" />
+        <location filename="..\ui\main_window.py" line="577" />
         <source>See a mini-map of your layout.</source>
         <translation>अपने लेआउट का मिनी-मैप देखें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="537" />
+        <location filename="..\ui\main_window.py" line="578" />
         <source>Backup Comparison:</source>
         <translation>बैकअप तुलना:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="537" />
+        <location filename="..\ui\main_window.py" line="578" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
         <translation>जोड़े, हटाए और स्थानांतरित आइकन देखने के लिए कोई भी दो बैकअप तुलना करें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="538" />
+        <location filename="..\ui\main_window.py" line="579" />
         <source>Adaptive Scaling:</source>
         <translation>अनुकूली स्केलिंग:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="538" />
+        <location filename="..\ui\main_window.py" line="579" />
         <source>Automatic adjustment for different resolutions.</source>
         <translation>विभिन्न रिज़ॉल्यूशन के लिए स्वचालित समायोजन।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="539" />
+        <location filename="..\ui\main_window.py" line="580" />
         <source>Automatic Cleanup:</source>
         <translation>स्वचालित सफाई:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="539" />
+        <location filename="..\ui\main_window.py" line="580" />
         <source>Set a limit on backups to keep.</source>
         <translation>रखे जाने वाले बैकअप की सीमा निर्धारित करें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="540" />
+        <location filename="..\ui\main_window.py" line="581" />
         <source>Random Scramble:</source>
         <translation>यादृच्छिक फेरबदल:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="540" />
+        <location filename="..\ui\main_window.py" line="581" />
         <source>Randomize icon positions after backup.</source>
         <translation>बैकअप के बाद आइकन स्थितियाँ यादृच्छिक करें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="541" />
+        <location filename="..\ui\main_window.py" line="582" />
         <source>Tray Integration:</source>
         <translation>ट्रे एकीकरण:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="541" />
+        <location filename="..\ui\main_window.py" line="582" />
         <source>Quick access via tray.</source>
         <translation>ट्रे के माध्यम से त्वरित पहुंच।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="543" />
+        <location filename="..\ui\main_window.py" line="584" />
         <source>Version:</source>
         <translation>संस्करण:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="544" />
+        <location filename="..\ui\main_window.py" line="585" />
         <source>Development:</source>
         <translation>विकास:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="545" />
+        <location filename="..\ui\main_window.py" line="586" />
         <source>Support this project on Ko-fi</source>
         <translation>Ko-fi पर इस प्रोजेक्ट को समर्थन दें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="547" />
+        <location filename="..\ui\main_window.py" line="588" />
         <source>About Desktop Icon Backup Manager</source>
         <translation>Desktop Icon Backup Manager के बारे में</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="553" />
+        <location filename="..\ui\main_window.py" line="594" />
         <source>No backup files found to delete.</source>
         <translation>हटाने के लिए कोई बैकअप फ़ाइल नहीं मिली।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="556" />
+        <location filename="..\ui\main_window.py" line="597" />
         <source>No Backups Found</source>
         <translation>कोई बैकअप नहीं मिला</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="557" />
+        <location filename="..\ui\main_window.py" line="598" />
         <source>There are no backup files to delete.</source>
         <translation>हटाने के लिए कोई बैकअप फ़ाइल नहीं है।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="563" />
+        <location filename="..\ui\main_window.py" line="604" />
         <source>WARNING: Delete All Backups</source>
         <translation>चेतावनी: सभी बैकअप हटाएं</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="564" />
+        <location filename="..\ui\main_window.py" line="605" />
         <source>Are you absolutely sure you want to permanently delete ALL %n desktop icon backup file(s)?
 
 This action cannot be undone!</source>
@@ -1122,158 +1334,158 @@ This action cannot be undone!</source>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="782" />
-        <location filename="..\ui\main_window.py" line="569" />
+        <location filename="..\ui\main_window.py" line="823" />
+        <location filename="..\ui\main_window.py" line="610" />
         <source>Yes</source>
         <translation>हाँ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="783" />
-        <location filename="..\ui\main_window.py" line="570" />
+        <location filename="..\ui\main_window.py" line="824" />
+        <location filename="..\ui\main_window.py" line="611" />
         <source>No</source>
         <translation>नहीं</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="572" />
+        <location filename="..\ui\main_window.py" line="613" />
         <source>Starting deletion of all backup files...</source>
         <translation>सभी बैकअप फ़ाइलें हटाई जा रही हैं...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="812" />
-        <location filename="..\ui\main_window.py" line="580" />
+        <location filename="..\ui\main_window.py" line="853" />
+        <location filename="..\ui\main_window.py" line="621" />
         <source>Success</source>
         <translation>सफलता</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="581" />
+        <location filename="..\ui\main_window.py" line="622" />
         <source>All backup files have been successfully deleted.</source>
         <translation>सभी बैकअप फ़ाइलें सफलतापूर्वक हटा दी गई हैं।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="587" />
+        <location filename="..\ui\main_window.py" line="628" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>कुछ फ़ाइलें नहीं हटाई जा सकीं। विवरण के लिए गतिविधि लॉग देखें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="595" />
+        <location filename="..\ui\main_window.py" line="636" />
         <source>Starting new timestamped backup...</source>
         <translation>नया टाइमस्टैम्प बैकअप शुरू हो रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="597" />
+        <location filename="..\ui\main_window.py" line="638" />
         <source>  (Tag: %1)</source>
         <translation>  (टैग: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="601" />
+        <location filename="..\ui\main_window.py" line="642" />
         <source>Saving...</source>
         <translation>सहेजा जा रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="619" />
+        <location filename="..\ui\main_window.py" line="660" />
         <source>No backup files found to restore!</source>
         <translation>पुनर्स्थापित करने के लिए कोई बैकअप फ़ाइल नहीं मिली!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="621" />
+        <location filename="..\ui\main_window.py" line="662" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ पुनर्स्थापना विफल: कोई बैकअप फ़ाइल नहीं मिली।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="641" />
-        <location filename="..\ui\main_window.py" line="640" />
-        <location filename="..\ui\main_window.py" line="635" />
-        <location filename="..\ui\main_window.py" line="634" />
+        <location filename="..\ui\main_window.py" line="682" />
+        <location filename="..\ui\main_window.py" line="681" />
+        <location filename="..\ui\main_window.py" line="676" />
+        <location filename="..\ui\main_window.py" line="675" />
         <source>N/A</source>
         <translation>उपलब्ध नहीं</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="644" />
+        <location filename="..\ui\main_window.py" line="685" />
         <source>N/A (Old Format)</source>
         <translation>उपलब्ध नहीं (पुराना प्रारूप)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="673" />
+        <location filename="..\ui\main_window.py" line="714" />
         <source>Confirm Restore — Live Preview</source>
         <translation>पुनर्स्थापना की पुष्टि करें — लाइव पूर्वावलोकन</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="683" />
+        <location filename="..\ui\main_window.py" line="724" />
         <source>File</source>
         <translation>फ़ाइल</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="684" />
+        <location filename="..\ui\main_window.py" line="725" />
         <source>Resolution</source>
         <translation>रिज़ॉल्यूशन</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="685" />
+        <location filename="..\ui\main_window.py" line="726" />
         <source>Icons</source>
         <translation>आइकन</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="686" />
+        <location filename="..\ui\main_window.py" line="727" />
         <source>Tag</source>
         <translation>टैग</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="687" />
+        <location filename="..\ui\main_window.py" line="728" />
         <source>Timestamp</source>
         <translation>टाइमस्टैम्प</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="699" />
+        <location filename="..\ui\main_window.py" line="740" />
         <source>will move</source>
         <translation>स्थानांतरित होगा</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="700" />
+        <location filename="..\ui\main_window.py" line="741" />
         <source>already in place</source>
         <translation>पहले से सही स्थान पर</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="701" />
+        <location filename="..\ui\main_window.py" line="742" />
         <source>not on desktop</source>
         <translation>डेस्कटॉप पर नहीं है</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="710" />
+        <location filename="..\ui\main_window.py" line="751" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>लेआउट पूर्वावलोकन (सहेजी गई स्थितियाँ बनाम वर्तमान):</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="732" />
+        <location filename="..\ui\main_window.py" line="773" />
         <source>↺ Restore</source>
         <translation>↺ पुनर्स्थापित करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="739" />
+        <location filename="..\ui\main_window.py" line="780" />
         <source>Cancel</source>
         <translation>रद्द करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="759" />
+        <location filename="..\ui\main_window.py" line="800" />
         <source>Starting restore from backup '%1'...</source>
         <translation>बैकअप '%1' से पुनर्स्थापना शुरू हो रही है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="760" />
+        <location filename="..\ui\main_window.py" line="801" />
         <source>latest</source>
         <translation>नवीनतम</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="765" />
+        <location filename="..\ui\main_window.py" line="806" />
         <source>Restoring...</source>
         <translation>पुनर्स्थापित किया जा रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="778" />
+        <location filename="..\ui\main_window.py" line="819" />
         <source>Confirm Scramble</source>
         <translation>फेरबदल की पुष्टि करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="779" />
+        <location filename="..\ui\main_window.py" line="820" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1286,47 +1498,47 @@ Do you want to proceed?</source>
 क्या आप आगे बढ़ना चाहते हैं?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="785" />
+        <location filename="..\ui\main_window.py" line="826" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>डेस्कटॉप आइकन यादृच्छिक फेरबदल शुरू हो रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="788" />
+        <location filename="..\ui\main_window.py" line="829" />
         <source>Scrambling icons...</source>
         <translation>आइकन फेरबदल किए जा रहे हैं...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="807" />
+        <location filename="..\ui\main_window.py" line="848" />
         <source>Operation completed successfully</source>
         <translation>ऑपरेशन सफलतापूर्वक पूर्ण हुआ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="813" />
+        <location filename="..\ui\main_window.py" line="854" />
         <source>Operation completed successfully! (%1)</source>
         <translation>ऑपरेशन सफलतापूर्वक पूर्ण हुआ! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="820" />
+        <location filename="..\ui\main_window.py" line="861" />
         <source>%1 successful!</source>
         <translation>%1 सफल!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="825" />
+        <location filename="..\ui\main_window.py" line="866" />
         <source>Operation failed</source>
         <translation>ऑपरेशन विफल</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="829" />
+        <location filename="..\ui\main_window.py" line="870" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>ऑपरेशन विफल (%1)। विवरण के लिए लॉग देखें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="842" />
+        <location filename="..\ui\main_window.py" line="883" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ चेतावनी: डिस्प्ले मेटाडेटा अनुपस्थित या अधूरा है।</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="847" />
+        <location filename="..\ui\main_window.py" line="888" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ चेतावनी: सहेजा गया (%n मॉनिटर) बनाम वर्तमान (%1 मॉनिटर)।</numerusform>
@@ -1334,12 +1546,12 @@ Do you want to proceed?</source>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="855" />
+        <location filename="..\ui\main_window.py" line="896" />
         <source>Monitor Mismatch Warning</source>
         <translation>मॉनिटर असंगति चेतावनी</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="856" />
+        <location filename="..\ui\main_window.py" line="897" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1348,17 +1560,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 आइकन स्थितियाँ पुनर्स्थापित की गई हैं, लेकिन वे सटीक नहीं हो सकतीं।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="878" />
+        <location filename="..\ui\main_window.py" line="919" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ चेतावनी: स्क्रीन रिज़ॉल्यूशन सहेजे गए लेआउट से मेल नहीं खाता।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="882" />
+        <location filename="..\ui\main_window.py" line="923" />
         <source>Resolution Mismatch Warning</source>
         <translation>रिज़ॉल्यूशन असंगति चेतावनी</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="883" />
+        <location filename="..\ui\main_window.py" line="924" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1367,94 +1579,94 @@ Icon positions have been restored, but they may be inaccurate.</source>
 आइकन स्थितियाँ पुनर्स्थापित की गई हैं, लेकिन वे सटीक नहीं हो सकतीं।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="895" />
+        <location filename="..\ui\main_window.py" line="936" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>बाहर निकलने पर स्वतः सहेजें सक्षम है। मौन बैकअप किया जा रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="899" />
+        <location filename="..\ui\main_window.py" line="940" />
         <source>Auto-Save Log</source>
         <translation>स्वतः सहेजें लॉग</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="914" />
+        <location filename="..\ui\main_window.py" line="955" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>एप्लिकेशन ट्रे में न्यूनतम किया गया। पुनर्स्थापित करने के लिए क्लिक या डबल-क्लिक करें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="952" />
+        <location filename="..\ui\main_window.py" line="993" />
         <source>Desktop Icon Backup Manager</source>
         <translation>Desktop Icon Backup Manager</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="953" />
+        <location filename="..\ui\main_window.py" line="994" />
         <source>A new version is available! (%1)</source>
         <translation>एक नया संस्करण उपलब्ध है! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="958" />
+        <location filename="..\ui\main_window.py" line="999" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 एक नया संस्करण उपलब्ध है: %1 (वर्तमान: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="972" />
+        <location filename="..\ui\main_window.py" line="1013" />
         <source>Shortcut</source>
         <translation>शॉर्टकट</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="973" />
+        <location filename="..\ui\main_window.py" line="1014" />
         <source>Action</source>
         <translation>क्रिया</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="977" />
+        <location filename="..\ui\main_window.py" line="1018" />
         <source>Quick Save current layout</source>
         <translation>वर्तमान लेआउट त्वरित सहेजें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="981" />
+        <location filename="..\ui\main_window.py" line="1022" />
         <source>Open Backup Manager</source>
         <translation>बैकअप प्रबंधक खोलें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="985" />
+        <location filename="..\ui\main_window.py" line="1026" />
         <source>Open Settings menu</source>
         <translation>सेटिंग्स मेनू खोलें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="989" />
+        <location filename="..\ui\main_window.py" line="1030" />
         <source>Open Online User Manual</source>
         <translation>ऑनलाइन उपयोगकर्ता मैनुअल खोलें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="993" />
+        <location filename="..\ui\main_window.py" line="1034" />
         <source>Exit Application</source>
         <translation>एप्लिकेशन बंद करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="997" />
+        <location filename="..\ui\main_window.py" line="1038" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
         <translation>सुझाव: टूलटिप्स में अतिरिक्त शॉर्टकट देखने के लिए बटनों पर माउस ले जाएं।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1012" />
+        <location filename="..\ui\main_window.py" line="1053" />
         <source>Close</source>
         <translation>बंद करें</translation>
     </message>
 </context><context>
     <name>SplashScreen</name>
     <message>
-        <location filename="..\ui\splash_screen.py" line="143" />
-        <source>Version: %1</source>
-        <translation>संस्करण: %1</translation>
+        <location filename="..\ui\splash_screen.py" line="169" />
+        <source>VERSION</source>
+        <translation>संस्करण</translation>
     </message>
     <message>
-        <location filename="..\ui\splash_screen.py" line="154" />
-        <source>Development: mapi68</source>
-        <translation>विकास: mapi68</translation>
+        <location filename="..\ui\splash_screen.py" line="189" />
+        <source>DEVELOPMENT</source>
+        <translation>विकास</translation>
     </message>
     <message>
-        <location filename="..\ui\splash_screen.py" line="168" />
+        <location filename="..\ui\splash_screen.py" line="212" />
         <source>Loading…</source>
         <translation>लोड हो रहा है…</translation>
     </message>
@@ -1527,28 +1739,6 @@ Icon positions have been restored, but they may be inaccurate.</source>
         <translation>अपडेट की जांच नहीं हो सकी:</translation>
     </message>
 </context><context>
-    <name>_BackupPickerDialog</name>
-    <message>
-        <location filename="..\ui\backup_dialog.py" line="581" />
-        <source>Pick Backup to Compare Against</source>
-        <translation>तुलना के लिए बैकअप चुनें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\backup_dialog.py" line="585" />
-        <source>Select the second backup file:</source>
-        <translation>दूसरी बैकअप फ़ाइल चुनें:</translation>
-    </message>
-    <message>
-        <location filename="..\ui\backup_dialog.py" line="599" />
-        <source>Compare</source>
-        <translation>तुलना करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\backup_dialog.py" line="601" />
-        <source>Cancel</source>
-        <translation>रद्द करें</translation>
-    </message>
-</context><context>
     <name>_DiffCanvas</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="216" />
@@ -1586,5 +1776,27 @@ Icon positions have been restored, but they may be inaccurate.</source>
         <location filename="..\ui\preview_widget.py" line="313" />
         <source>In backup, not on desktop</source>
         <translation>बैकअप में है, डेस्कटॉप पर नहीं</translation>
+    </message>
+</context><context>
+    <name>_PickBackupDialog</name>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="863" />
+        <source>Pick Backup to Compare Against</source>
+        <translation>तुलना के लिए बैकअप चुनें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="867" />
+        <source>Select the second backup file:</source>
+        <translation>दूसरी बैकअप फ़ाइल चुनें:</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="881" />
+        <source>Compare</source>
+        <translation>तुलना करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\backup_dialog.py" line="883" />
+        <source>Cancel</source>
+        <translation>रद्द करें</translation>
     </message>
 </context></TS>

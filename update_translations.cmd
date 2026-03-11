@@ -10,12 +10,23 @@ echo  Translation Update Process
 echo ============================================================
 echo.
 
+rem Ask user whether to use --no-obsolete flag
+set "noObsolete=--no-obsolete"
+set /p "userChoice=Use --no-obsolete flag? Removes unused strings from .ts files [Y/n]: "
+if /i "!userChoice!"=="n" (
+    set "noObsolete="
+    echo   Option: obsolete strings will be KEPT
+) else (
+    echo   Option: obsolete strings will be REMOVED
+)
+echo.
+
 rem 1. Run pylupdate6 for each file to sync with source code
 echo [1/2] Updating source strings...
 echo.
 for %%f in ("%i18nPath%\*.ts") do (
     echo   Updating: %%~nxf
-    pylupdate6.exe --no-obsolete . -ts "%i18nPath%/%%~nxf"
+    pylupdate6.exe !noObsolete! . -ts "%i18nPath%/%%~nxf"
 )
 
 echo.
