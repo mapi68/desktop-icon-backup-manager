@@ -21,7 +21,7 @@ v_tuple = get_version_tuple(VERSIONE)
 
 # --- 2. VERSION INFO FILE GENERATION ---
 FILE_DESCRIPTION = (
-    'A utility that allows to manage the positions of Windows desktop icons'
+    'Manage the positions of desktop icons'
 )
 
 version_info_content = (

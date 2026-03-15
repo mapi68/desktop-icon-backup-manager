@@ -496,7 +496,12 @@ The main interface is divided into five main areas:
   \item \textbf{Action Buttons}: Three large, color-coded buttons for
     primary operations
   \item \textbf{Activity Log}: Displays operation status, warnings,
-    and errors in real-time with timestamps
+    and errors in real-time with timestamps. Every entry is also
+    silently written to \texttt{history.log} next to the executable
+    (maximum 500 entries, auto-trimmed). The file persists across
+    sessions and can be used for auditing or troubleshooting.
+    The \textbf{Clear Log} button clears both the on-screen log
+    and the \texttt{history.log} file
   \item \textbf{Status Bar}: Shows current primary monitor resolution
     and quick operation messages
 \end{enumerate}

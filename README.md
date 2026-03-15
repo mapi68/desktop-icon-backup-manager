@@ -113,7 +113,8 @@ Every line of code is on GitHub, MIT licensed, auditable, and forkable. No telem
 - **↔️ Fully Resizable Windows**: Adapts to any screen size or DPI setting
 - **🌍 24 Languages**: Auto-detected from Windows locale, or manually overridden. Available in English, Arabic, Czech, German, Greek, Spanish, Finnish, French, Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Dutch, Polish, Portuguese (BR), Portuguese (PT), Romanian, Russian, Swedish, Turkish, Ukrainian, Simplified Chinese, and Traditional Chinese
 - **⌨️ Full Keyboard Navigation**: Every action has a shortcut — see the [shortcuts table](#%EF%B8%8F-keyboard-shortcuts)
-- **📋 Timestamped Activity Log**: Full operation history; copy with `Ctrl+A` / `Ctrl+C`
+- **📋 Timestamped Activity Log**: Full operation history with timestamps; copy with `Ctrl+A` / `Ctrl+C`
+- **🗒️ Persistent Log File**: Every operation is silently written to `history.log` next to the executable (max 500 entries, auto-trimmed). The log file persists across sessions — useful for auditing or troubleshooting past operations. "Clear Log" also clears the file
 - **✅ Confirmation Dialogs**: Always confirms before overwrite or delete — no accidents
 
 ---

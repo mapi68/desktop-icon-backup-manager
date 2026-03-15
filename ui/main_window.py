@@ -65,6 +65,7 @@ class MainWindow(QMainWindow):
         app_path = Path(os.path.abspath(sys.argv[0])).parent
         settings_file_path = app_path / "settings.ini"
         self.settings = QSettings(str(settings_file_path), QSettings.Format.IniFormat)
+        self.log_path = app_path / "history.log"
 
         self.worker = None
         self.tray_icon = None
@@ -379,7 +380,7 @@ class MainWindow(QMainWindow):
         log_button_layout.addWidget(kofi_label)
 
         self.btn_clear_log = QPushButton(self.tr("Clear Log"))
-        self.btn_clear_log.clicked.connect(self.log_area.clear)
+        self.btn_clear_log.clicked.connect(self.clear_log)
         self.btn_clear_log.setMaximumWidth(150)
         self.btn_clear_log.setObjectName("clearLogButton")
         log_button_layout.addWidget(self.btn_clear_log)
@@ -506,6 +507,33 @@ class MainWindow(QMainWindow):
     def log(self, message: str):
         timestamp = datetime.now().strftime("%H:%M:%S")
         self.log_area.append(f"[{timestamp}] {message}")
+        try:
+            full_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            with open(self.log_path, "a", encoding="utf-8") as f:
+                f.write(f"[{full_date}] {message}\n")
+            self._trim_log_file()
+        except OSError:
+            pass
+
+    def _trim_log_file(self, max_lines: int = 500):
+        """Keep only the last max_lines lines in the log file."""
+        try:
+            with open(self.log_path, "r", encoding="utf-8") as f:
+                lines = f.readlines()
+            if len(lines) > max_lines:
+                with open(self.log_path, "w", encoding="utf-8") as f:
+                    f.writelines(lines[-max_lines:])
+        except OSError:
+            pass
+
+    def clear_log(self):
+        """Clear the log area and the history file."""
+        self.log_area.clear()
+        try:
+            if self.log_path.exists():
+                self.log_path.unlink()
+        except OSError:
+            pass
 
         if not self.isVisible() and ("✗" in message or "CRITICAL ERROR" in message):
             self.tray_icon.showMessage(
