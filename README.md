@@ -86,6 +86,7 @@ Every line of code is on GitHub, MIT licensed, auditable, and forkable. No telem
 - **💾 Quick Backup**: Save your entire desktop icon layout with one click; add an optional tag like `Before Update` or `Dual Monitor Setup`
 - **↺ One-Click Restore**: Restore icon positions from the latest backup, or pick any snapshot from the Backup Manager
 - **🏷️ Custom Tags**: Label each backup for easy identification — no more guessing which snapshot is which
+- **📋 Profiles**: A built-in dropdown of 14 ready-made profile names — *Work, Gaming, Presentation, Dev / Coding, Meeting, Home, Office, Laptop, Docked / External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favourite, Test* — one click pre-fills the tag field; you can then use it as-is or refine it freely
 - **📊 Resolution & Monitor Metadata**: Every backup records screen resolution, DPI, and monitor count
 
 ### Advanced Features
@@ -110,7 +111,7 @@ Every line of code is on GitHub, MIT licensed, auditable, and forkable. No telem
 ### Usability
 - **📋 Sortable + Filterable Backup Table**: Sort by tag, resolution, icon count, or timestamp; real-time search filter
 - **↔️ Fully Resizable Windows**: Adapts to any screen size or DPI setting
-- **🌍 21 Languages**: Auto-detected from Windows locale, or manually overridden. Available in English, Arabic, German, Greek, Spanish, French, Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Dutch, Polish, Portuguese (BR), Portuguese (PT), Russian, Swedish, Turkish, Ukrainian, Simplified Chinese, and Traditional Chinese
+- **🌍 24 Languages**: Auto-detected from Windows locale, or manually overridden. Available in English, Arabic, Czech, German, Greek, Spanish, Finnish, French, Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Dutch, Polish, Portuguese (BR), Portuguese (PT), Romanian, Russian, Swedish, Turkish, Ukrainian, Simplified Chinese, and Traditional Chinese
 - **⌨️ Full Keyboard Navigation**: Every action has a shortcut — see the [shortcuts table](#%EF%B8%8F-keyboard-shortcuts)
 - **📋 Timestamped Activity Log**: Full operation history; copy with `Ctrl+A` / `Ctrl+C`
 - **✅ Confirmation Dialogs**: Always confirms before overwrite or delete — no accidents
@@ -191,6 +192,7 @@ python main.py
 ### Saving Your Desktop Icon Layout
 
 1. *(Optional)* Type a descriptive tag — e.g. `Work Setup`, `Before Win Update`, `Gaming Mode`
+   - Or click the **Profiles** dropdown to the right of the tag field and pick one of the 14 built-in names (*Work, Gaming, Presentation, Dev / Coding, Meeting, Home, Office, Laptop, Docked / External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favourite, Test*). The selected name is copied into the tag field instantly — edit it further if you like, then save.
 2. Click **💾 SAVE QUICK BACKUP** or press `Ctrl+S`
 
 A compact JSON snapshot of all icon positions and screen metadata is saved instantly to the `icon_backups` folder. Each file is 2–10 KB.
@@ -334,6 +336,9 @@ Plain text, portable, and easy to copy between machines. 50 backups take less th
 
 **Can I rename a backup tag without deleting and re-creating it?**
 Yes — in the Backup Manager, double-click the tag cell in the first column to edit it directly in the table. The change is saved to the `.json` file immediately.
+
+**What are Profiles and how do I use them?**
+Profiles is a built-in dropdown next to the tag field on the main window. It contains 14 pre-made names (*Work, Gaming, Presentation, Dev / Coding, Meeting, Home, Office, Laptop, Docked / External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favourite, Test*) to help you tag backups consistently without having to type from scratch. Select one and the name is copied into the tag field — you can keep it as-is or edit it before saving. All profile names are fully translated into the 24 supported languages.
 
 **Can I transfer my backups to another PC or share them?**
 Yes. Use **📤 Export Backups...** in the Backup Manager to package them as a ZIP archive or copy them to a folder. On the target machine use **📥 Import Backups...** to bring them in. Files that already exist are skipped automatically to avoid overwriting.

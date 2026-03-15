@@ -24,6 +24,7 @@ from PyQt6.QtWidgets import (
     QSystemTrayIcon,
     QMenu,
     QLineEdit,
+    QComboBox,
 )
 
 from PyQt6.QtCore import (
@@ -297,9 +298,19 @@ class MainWindow(QMainWindow):
             self.tr("Optional: Enter a descriptive tag/description...")
         )
 
+        # Named-profile preset combo — selecting an entry copies the name into
+        # the tag field so the user can use it as-is or refine it further.
+        self.profile_combo = QComboBox()
+        self.profile_combo.setToolTip(
+            self.tr("Select a profile to auto-fill the tag field")
+        )
+        self._populate_profile_combo()
+        self.profile_combo.currentIndexChanged.connect(self._on_profile_selected)
+
         tag_input_row = QHBoxLayout()
         tag_input_row.addWidget(QLabel(self.tr("Save Tag:")))
         tag_input_row.addWidget(self.save_tag_input, 1)
+        tag_input_row.addWidget(self.profile_combo)
         layout.addLayout(tag_input_row)
 
         action_buttons_row = QHBoxLayout()
@@ -556,6 +567,48 @@ class MainWindow(QMainWindow):
 
         _QTimer.singleShot(0, manager_window.import_backups)
         manager_window.exec()
+
+    # ── Named profiles ────────────────────────────────────────────────────────
+
+    def _populate_profile_combo(self) -> None:
+        """Fill the profile preset combo with the built-in named profiles."""
+        self.profile_combo.blockSignals(True)
+        self.profile_combo.clear()
+        # First entry: placeholder — selecting it does nothing
+        self.profile_combo.addItem(self.tr("— Profiles —"), None)
+        profiles = [
+            self.tr("Work"),
+            self.tr("Gaming"),
+            self.tr("Presentation"),
+            self.tr("Dev / Coding"),
+            self.tr("Meeting"),
+            self.tr("Home"),
+            self.tr("Office"),
+            self.tr("Laptop"),
+            self.tr("Docked / External Monitor"),
+            self.tr("Clean Desktop"),
+            self.tr("Pre-Update"),
+            self.tr("Pre-Reboot"),
+            self.tr("Favourite"),
+            self.tr("Test"),
+        ]
+        for name in profiles:
+            self.profile_combo.addItem(name, name)
+        self.profile_combo.blockSignals(False)
+
+    def _on_profile_selected(self, index: int) -> None:
+        """Copy the selected profile name into the tag field (index 0 = placeholder)."""
+        if index <= 0:
+            return
+        name = self.profile_combo.itemData(index)
+        if name:
+            self.save_tag_input.setText(name)
+        # Reset to placeholder so re-selecting the same item still triggers
+        self.profile_combo.blockSignals(True)
+        self.profile_combo.setCurrentIndex(0)
+        self.profile_combo.blockSignals(False)
+
+    # ─────────────────────────────────────────────────────────────────────────
 
     def quick_save_with_tag(self):
         tag = self.save_tag_input.text().strip()
@@ -990,7 +1043,7 @@ class MainWindow(QMainWindow):
             return
         if latest > current:
             self.tray_icon.showMessage(
-                self.tr("Desktop Icon Backup Manager"),
+                "Desktop Icon Backup Manager",
                 self.tr("A new version is available! (%1)").replace("%1", remote),
                 QSystemTrayIcon.MessageIcon.Information,
                 8000,

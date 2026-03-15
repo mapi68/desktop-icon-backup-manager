@@ -2,6 +2,7 @@
 
 % Packages
 \usepackage[utf8]{inputenc}
+\usepackage{lmodern}
 \usepackage[english]{babel}
 \usepackage{geometry}
 \usepackage{graphicx}
@@ -17,6 +18,7 @@
 \usepackage{float}
 \usepackage{parskip}
 \usepackage{needspace}
+\usepackage{etoolbox}
 \usepackage{pmboxdraw}
 \usepackage{tcolorbox}
 \usepackage{tikz}
@@ -29,6 +31,8 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\thepage}
+\fancyfoot[R]{\footnotesize\color{orange!70!black}%
+\href{https://ko-fi.com/mapi68}{\faCoffee\ buy me a coffee}}
 \renewcommand{\headrulewidth}{0pt}
 
 % Colors
@@ -46,6 +50,9 @@
   urlcolor=primary,
   pdftitle={Desktop Icon Backup Manager - User Manual},
   pdfauthor={mapi68},
+  pdfsubject={User manual for Desktop Icon Backup Manager},
+  pdfkeywords={backup, icons, desktop, Windows, manager},
+  pdfpagelayout=TwoPageRight,
 }
 
 % Custom boxes
@@ -90,6 +97,22 @@
 \titleformat{\subsection}
 {\color{primary}\normalfont\large\bfseries}
 {\color{primary}\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{primary}\normalfont\normalsize\bfseries}
+{\color{primary}\thesubsubsection}{1em}{}
+
+% Prevent orphan headings robustly:
+% - \section and \subsection reserve enough space for themselves +
+% following content
+% - \subsubsection reserves space for itself + a few lines of text
+% Using \preto from etoolbox so the check happens BEFORE the heading is set
+\preto
+\section{\needspace{10\baselineskip}}
+\preto
+\subsection{\needspace{10\baselineskip}}
+\preto
+\subsubsection{\needspace{6\baselineskip}}
 
 \begin{document}
 
@@ -166,9 +189,6 @@
 
 \end{titlepage}
 
-% Set counter so next pages start from 0
-\setcounter{page}{0}
-
 % Copyright and document information page
 \newpage
 \thispagestyle{empty}
@@ -199,7 +219,6 @@
   % Version info
   {\small\color{gray}
     \begin{tabular}{rl}
-      \textbf{Document Version:} & 1.3 \\[0.2cm]
       \textbf{Release Date:} & \today \\[0.2cm]
       \textbf{Software Version:} & \input{version.txt} \\
     \end{tabular}
@@ -213,7 +232,7 @@
 
     {\color{blue!70!black}\rule{0.8\textwidth}{0.5pt}}\\[0.5cm]
 
-    {\small\textbf{Copyright \copyright\ 2026 mapi68}}\\[0.2cm]
+    {\small\textbf{Copyright \copyright\ \the\year\ mapi68}}\\[0.2cm]
     {\footnotesize All rights reserved}\\[0.5cm]
 
     {\color{blue!70!black}\rule{0.8\textwidth}{0.5pt}}\\[1cm]
@@ -284,8 +303,25 @@
 
 % Table of contents
 \newpage
+\pagenumbering{roman}
+\setcounter{page}{1}
 \tableofcontents
-\newpage
+\clearpage
+\ifodd\value{page}\else
+\mbox{}\clearpage
+\fi
+\pagenumbering{arabic}
+
+% ── Page 1 header ─────────────────────────────────────────────────────
+\begin{center}
+  {\color{primary!60!black}\rule{\textwidth}{1.5pt}}\\[0.4cm]
+  {\fontsize{20}{24}\selectfont\bfseries\color{primary!90!black}%
+  \faWindows\enspace Desktop Icon Backup Manager}\\[0.25cm]
+  {\large\color{gray}\textsc{User Manual}}\\[0.4cm]
+  {\color{warning}\rule{\textwidth}{2pt}}
+\end{center}
+\vspace{0.6cm}
+% ──────────────────────────────────────────────────────────────────────
 
 \section{Introduction}
 
@@ -299,6 +335,12 @@ different resolutions, and complete automation through configurable settings.
 \begin{itemize}[leftmargin=*]
   \item \textbf{Quick Backup}: Save icon positions with optional
     descriptive tags
+  \item \textbf{Profiles}: Built-in dropdown of 14 preset tag
+    names (Work, Gaming, Presentation, Dev / Coding, Meeting, Home,
+      Office, Laptop, Docked / External Monitor, Clean Desktop,
+    Pre-Update, Pre-Reboot, Favourite, Test) for consistent,
+    one-click tag entry; fully translated into all 24 supported
+    languages
   \item \textbf{Inline Tag Editing}: Double-click any tag cell in the
     Backup Manager table to rename a backup in place --- the change is
     written to the JSON file immediately; no dialog required
@@ -333,12 +375,12 @@ different resolutions, and complete automation through configurable settings.
     update is available. Also accessible manually via Help menu
   \item \textbf{Command Line Interface}: Full CLI support for scripting
     and scheduled tasks
-  \item \textbf{Multi-language Support}: Available in 21 languages ---
-    English, Arabic, German, Greek, Spanish, French, Hindi, Italian,
-    Japanese, Korean, Norwegian Bokmål, Dutch, Polish, Portuguese (BR),
-    Portuguese (PT), Russian, Swedish, Turkish, Ukrainian, Simplified
-    Chinese, and Traditional Chinese. Auto-detected from Windows locale,
-    or manually overridden
+  \item \textbf{Multi-language Support}: Available in 24 languages ---
+    English, Arabic, Czech, German, Greek, Spanish, Finnish, French,
+    Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Dutch, Polish,
+    Portuguese (BR), Portuguese (PT), Romanian, Russian, Swedish,
+    Turkish, Ukrainian, Simplified Chinese, and Traditional Chinese.
+    Auto-detected from Windows locale, or manually overridden
 \end{itemize}
 
 \subsection{System Requirements}
@@ -408,7 +450,9 @@ For users who want to get started immediately, here is the essential workflow:
 \begin{enumerate}
   \item \textbf{Save your current layout}: Click the green
     \textbf{SAVE QUICK BACKUP} button (or press \texttt{Ctrl+S}).
-    Optionally type a descriptive tag in the field above the button.
+    Optionally type a descriptive tag in the field above the button,
+    or use the \textbf{Profiles} dropdown to the right to
+    pre-fill it with a preset name (Work, Gaming, Presentation, etc.).
   \item \textbf{Restore a layout}: Click the red \textbf{RESTORE LATEST}
     button to restore the most recent backup, or open the
     \textbf{BACKUP MANAGER} (blue button) to choose a specific backup.
@@ -441,6 +485,14 @@ The main interface is divided into five main areas:
     backup, restore, and scramble operations
   \item \textbf{Tag Input Field}: Optional field for entering
     descriptive tags for quick saves
+  \item \textbf{Profiles Dropdown}: A combo box to the right of
+    the tag field containing 14 built-in profile presets (Work, Gaming,
+      Presentation, Dev / Coding, Meeting, Home, Office, Laptop, Docked /
+      External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favourite,
+    Test). Selecting any entry instantly copies the name into the tag
+    field; the combo resets to its placeholder so the same entry can be
+    re-selected. All names are fully translated into the 24 supported
+    languages.
   \item \textbf{Action Buttons}: Three large, color-coded buttons for
     primary operations
   \item \textbf{Activity Log}: Displays operation status, warnings,
@@ -458,7 +510,12 @@ icon: \faSave}}
 
 Immediately saves current desktop icon positions to a new timestamped
 backup file. You can add an optional descriptive tag in the field
-above the button for easier identification later.
+above the button for easier identification later. Use the
+\textbf{Profiles} dropdown to the right of the tag field to
+quickly pre-fill it with one of 14 built-in names (Work, Gaming,
+  Presentation, Dev / Coding, Meeting, Home, Office, Laptop,
+  Docked / External Monitor, Clean Desktop, Pre-Update, Pre-Reboot,
+Favourite, Test) --- then edit freely before saving if needed.
 
 \begin{infobox}[Note on Ctrl+S vs Button Click]
   When using the \texttt{Ctrl+S} shortcut, the backup is saved with
@@ -2281,60 +2338,18 @@ pyinstaller --onefile --windowed --icon=icon.ico \
 \subsection{Translation/Localization}
 
 The program uses Qt's translation system for internationalization.
-It is currently available in 21 languages: English, Arabic, German,
-Greek, Spanish, French, Hindi, Italian, Japanese, Korean, Norwegian
-Bokmål, Dutch, Polish, Portuguese (BR), Portuguese (PT), Russian,
-Swedish, Turkish, Ukrainian, Simplified Chinese, and Traditional Chinese.
+It is currently available in 24 languages: English, Arabic, Czech,
+German, Greek, Spanish, Finnish, French, Hindi, Italian, Japanese,
+Korean, Norwegian Bokmål, Dutch, Polish, Portuguese (BR), Portuguese
+(PT), Romanian, Russian, Swedish, Turkish, Ukrainian, Simplified
+Chinese, and Traditional Chinese.
 The language is auto-detected from the Windows locale and can be
 manually overridden.
-
-\textbf{Creating New Translation}:
-\begin{enumerate}
-  \item Extract translatable strings: \texttt{pylupdate6 *.py -ts i18n/lang.ts}
-  \item Translate strings using Qt Linguist
-  \item Compile: \texttt{lrelease i18n/lang.ts}
-  \item Place .qm file in i18n folder
-  \item Program auto-detects system language
-\end{enumerate}
-
-\vfill
-
-\begin{center}
-  \begin{tcolorbox}[
-      enhanced,
-      frame hidden,
-      colback=orange!8,
-      width=0.85\textwidth,
-      arc=3mm,
-      left=15pt,
-      right=15pt,
-      top=12pt,
-      bottom=12pt
-    ]
-    \centering
-    {\small\color{blue!70!black}\textbf{Support \& Updates}}\\[0.3cm]
-    {\footnotesize\color{gray}Please visit the project repository:}\\[0.1cm]
-    {\small\color{blue!60}%
-      \href{https://github.com/mapi68/desktop-icon-backup-manager}{%
-        \raisebox{-0.15em}{\faGithub}\ %
-        \texttt{github.com/mapi68/desktop-icon-backup-manager}%
-      }%
-    }\\[0.3cm]
-    {\small\color{orange!80!red}\textbf{Support the Developer}}\\[0.2cm]
-    {\footnotesize\color{gray}If you find this software useful,
-    consider a donation:}\\[0.1cm]
-    {\small\color{orange!70!black}%
-      \href{https://ko-fi.com/mapi68}{%
-        \raisebox{-0.15em}{\faCoffee}\ %
-        \texttt{ko-fi.com/mapi68}%
-      }%
-    }
-  \end{tcolorbox}
-\end{center}
 
 \newpage
 \section{Screenshots}
 
+% Page 1: screenshots 1 & 2
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{images/DIBM_1.png}
@@ -2342,17 +2357,24 @@ manually overridden.
   action buttons}
 \end{figure}
 
+\vfill
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{images/DIBM_2.png}
   \caption{Backup Manager window with list of saved backups and layout preview}
 \end{figure}
 
+\newpage
+
+% Page 2: screenshots 3 & 4
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.65\textwidth]{images/DIBM_3.png}
-  \caption{Loading Desktop Backup Manager...}
+  \includegraphics[width=0.8\textwidth]{images/DIBM_3.png}
+  \caption{Loading Desktop Icon Backup Manager...}
 \end{figure}
+
+\vfill
 
 \begin{figure}[H]
   \centering
@@ -2360,28 +2382,79 @@ manually overridden.
   \caption{Desktop Icon Backup Manager featuring dark mode and Italian support}
 \end{figure}
 
+\newpage
+
+% Page 3: screenshots 5 & 6
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{images/DIBM_5.png}
   \caption{Detailed view of the comparison interface}
 \end{figure}
 
+\vfill
+
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.65\textwidth]{images/DIBM_6.png}
+  \includegraphics[width=0.8\textwidth]{images/DIBM_6.png}
   \caption{Confirmation dialog before restoring a backup}
 \end{figure}
 
-\vfill
+\newpage
+\thispagestyle{empty}
+
+\vspace*{\fill}
 
 \begin{center}
-  \rule{0.5\textwidth}{0.4pt}
 
-  \textit{End of User Manual}
+  \begin{tcolorbox}[
+      enhanced,
+      colback=orange!6!white,
+      colframe=orange!70!red,
+      width=0.78\textwidth,
+      arc=6mm,
+      boxrule=1.5pt,
+      drop shadow={black!30!white},
+      left=20pt, right=20pt, top=20pt, bottom=20pt
+    ]
+    \centering
 
-  \textbf{Desktop Icon Backup Manager}
+    {\large\color{orange!80!red}\faHeart\quad\textbf{Support the
+    Developer}\quad\faHeart}\\[0.6cm]
 
-  \today
+    {\normalsize\color{gray}
+      \textbf{Desktop Icon Backup Manager} is free and open-source.\\[0.2cm]
+      If you find it useful, consider buying me a coffee!\\[0.5cm]
+    }
+
+    {\color{orange!70!black}\rule{0.6\textwidth}{0.4pt}}\\[0.5cm]
+
+    {\Large\color{orange!80!red}\faCoffee\quad
+    \textbf{ko-fi.com/mapi68}}\\[0.3cm]
+
+    {\small\color{blue!60}%
+      \href{https://ko-fi.com/mapi68}{%
+        \texttt{https://ko-fi.com/mapi68}%
+      }%
+    }\\[0.6cm]
+
+    {\color{orange!70!black}\rule{0.6\textwidth}{0.4pt}}\\[0.5cm]
+
+    {\small\color{gray}
+      Source code \&\ updates:\\[0.1cm]
+    }
+    {\small\color{blue!60}%
+      \href{https://github.com/mapi68/desktop-icon-backup-manager}{%
+        \faGithub\quad\texttt{github.com/mapi68/desktop-icon-backup-manager}%
+      }%
+    }\\[0.6cm]
+
+    {\footnotesize\color{gray}Copyright
+    \copyright\ \the\year\ \textbf{mapi68} \quad\textbullet\quad \today}
+
+  \end{tcolorbox}
+
 \end{center}
+
+\vspace*{\fill}
 
 \end{document}

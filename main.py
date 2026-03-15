@@ -28,9 +28,11 @@ from ui.main_window import MainWindow
 _LOCALE_NAMES = {
     "": "English",
     "ar_SA": "العربية",
+    "cs_CZ": "Čeština",
     "de_DE": "Deutsch",
     "el_GR": "Ελληνικά",
     "es_ES": "Español",
+    "fi_FI": "Suomi",
     "fr_FR": "Français",
     "hi_IN": "हिन्दी",
     "it_IT": "Italiano",
@@ -41,6 +43,7 @@ _LOCALE_NAMES = {
     "pl_PL": "Polski",
     "pt_BR": "Português (BR)",
     "pt_PT": "Português (PT)",
+    "ro_RO": "Română",
     "ru_RU": "Русский",
     "sv_SE": "Svenska",
     "tr_TR": "Türkçe",
@@ -251,10 +254,8 @@ if __name__ == "__main__":
 
     translator = load_language(app, chosen_locale)
 
-    # ── CLI argument parsing (translated) ─────────────────────────────────────
-    parser = argparse.ArgumentParser(
-        description=QCoreApplication.translate("CLI", "Desktop Icon Backup Manager CLI")
-    )
+    # ── CLI argument parsing ──────────────────────────────────────────────────
+    parser = argparse.ArgumentParser(description="Desktop Icon Backup Manager CLI")
     parser.add_argument(
         "--backup",
         action="store_true",

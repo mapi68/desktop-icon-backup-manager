@@ -1,96 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
-    <context>
+<TS version="2.1" language="cs_CZ">
+<context>
     <name>BackupComparator</name>
     <message>
         <location filename="..\core\comparator.py" line="37" />
         <source>=== COMPARISON RESULTS ===</source>
-        <translation>=== WYNIKI PORÓWNANIA ===</translation>
+        <translation>=== VÝSLEDKY POROVNÁNÍ ===</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="43" />
         <source>Icon(s) Added: %n</source>
         <translation>
-            <numerusform>Dodana ikona: %n</numerusform>
-            <numerusform>Dodane ikony: %n</numerusform>
-            <numerusform>Dodanych ikon: %n</numerusform>
+            <numerusform>Přidána %n ikona</numerusform>
+            <numerusform>Přidány %n ikony</numerusform>
+            <numerusform>Přidáno %n ikon</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="49" />
         <source>Icon(s) Removed: %n</source>
         <translation>
-            <numerusform>Usunięta ikona: %n</numerusform>
-            <numerusform>Usunięte ikony: %n</numerusform>
-            <numerusform>Usuniętych ikon: %n</numerusform>
+            <numerusform>Odebrána %n ikona</numerusform>
+            <numerusform>Odebrány %n ikony</numerusform>
+            <numerusform>Odebráno %n ikon</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="55" />
         <source>Icon(s) Moved: %n</source>
         <translation>
-            <numerusform>Przeniesiona ikona: %n</numerusform>
-            <numerusform>Przeniesione ikony: %n</numerusform>
-            <numerusform>Przeniesionych ikon: %n</numerusform>
+            <numerusform>Přesunuta %n ikona</numerusform>
+            <numerusform>Přesunuty %n ikony</numerusform>
+            <numerusform>Přesunuto %n ikon</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="61" />
         <source>Icon(s) Unchanged: %n</source>
         <translation>
-            <numerusform>Niezmieniona ikona: %n</numerusform>
-            <numerusform>Niezmienione ikony: %n</numerusform>
-            <numerusform>Niezmienione ikony: %n</numerusform>
+            <numerusform>Nezměněna %n ikona</numerusform>
+            <numerusform>Nezměněny %n ikony</numerusform>
+            <numerusform>Nezměněno %n ikon</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="69" />
         <source>--- ADDED ICONS ---</source>
-        <translation>--- DODANE IKONY ---</translation>
+        <translation>--- PŘIDANÉ IKONY ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="80" />
         <source>--- REMOVED ICONS ---</source>
-        <translation>--- USUNIĘTE IKONY ---</translation>
+        <translation>--- ODEBRANÉ IKONY ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="91" />
         <source>--- MOVED ICONS ---</source>
-        <translation>--- PRZENIESIONE IKONY ---</translation>
+        <translation>--- PŘESUNUTÉ IKONY ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="101" />
         <source>✓ No differences - backups are identical!</source>
-        <translation>✓ Brak różnic – kopie zapasowe są identyczne!</translation>
+        <translation>✓ Žádné rozdíly – zálohy jsou totožné!</translation>
     </message>
 </context><context>
     <name>BackupManagerWindow</name>
     <message>
         <location filename="..\ui\backup_dialog.py" line="57" />
         <source>Select, Restore, or Delete Backup</source>
-        <translation>Wybierz, przywróć lub usuń kopię zapasową</translation>
+        <translation>Vybrat, obnovit nebo smazat zálohu</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="67" />
         <source>Select a backup to restore or right-click for options.</source>
-        <translation>Wybierz kopię zapasową do przywrócenia lub kliknij prawym przyciskiem, aby wyświetlić opcje.</translation>
+        <translation>Vyberte zálohu pro obnovení nebo klikněte pravým tlačítkem pro možnosti.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="73" />
         <source>Search by tag, resolution, or date...</source>
-        <translation>Szukaj po tagu, rozdzielczości lub dacie...</translation>
+        <translation>Hledat podle tagu, rozlišení nebo data...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="90" />
         <source>Tag / Description</source>
-        <translation>Tag / Opis</translation>
+        <translation>Tag / Popis</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="317" />
         <location filename="..\ui\backup_dialog.py" line="91" />
         <source>Resolution</source>
-        <translation>Rozdzielczość</translation>
+        <translation>Rozlišení</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="316" />
@@ -102,53 +102,53 @@
         <location filename="..\ui\backup_dialog.py" line="319" />
         <location filename="..\ui\backup_dialog.py" line="93" />
         <source>Timestamp</source>
-        <translation>Znacznik czasu</translation>
+        <translation>Časové razítko</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="141" />
         <source>Layout Preview (saved positions vs current):</source>
-        <translation>Podgląd układu (zapisane pozycje vs bieżące):</translation>
+        <translation>Náhled rozvržení (uložené pozice vs. aktuální):</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="284" />
         <location filename="..\ui\backup_dialog.py" line="151" />
         <source>Select a backup to see details.</source>
-        <translation>Wybierz kopię zapasową, aby zobaczyć szczegóły.</translation>
+        <translation>Vyberte zálohu pro zobrazení podrobností.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="177" />
         <source>Restore Selected Layout</source>
-        <translation>Przywróć wybrany układ</translation>
+        <translation>Obnovit vybrané rozvržení</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="181" />
         <source>📊 Compare Two Selected...</source>
-        <translation>📊 Porównaj dwie wybrane...</translation>
+        <translation>📊 Porovnat dvě vybrané...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="185" />
         <source>📤 Export Backups...</source>
-        <translation>📤 Eksportuj kopie zapasowe...</translation>
+        <translation>📤 Exportovat zálohy...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="187" />
         <source>Export selected or all backups to a folder or ZIP archive</source>
-        <translation>Eksportuj wybrane lub wszystkie kopie zapasowe do folderu lub archiwum ZIP</translation>
+        <translation>Exportovat vybrané nebo všechny zálohy do složky nebo archivu ZIP</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="191" />
         <source>📥 Import Backups...</source>
-        <translation>📥 Importuj kopie zapasowe...</translation>
+        <translation>📥 Importovat zálohy...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="193" />
         <source>Import backup files (.json) or a ZIP archive from another installation</source>
-        <translation>Importuj pliki kopii zapasowych (.json) lub archiwum ZIP z innej instalacji</translation>
+        <translation>Importovat záložní soubory (.json) nebo archiv ZIP z jiné instalace</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="199" />
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zavřít</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="380" />
@@ -157,32 +157,32 @@
         <location filename="..\ui\backup_dialog.py" line="235" />
         <location filename="..\ui\backup_dialog.py" line="229" />
         <source>N/A</source>
-        <translation>N/D</translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="245" />
         <source>Double-click to edit the tag/description</source>
-        <translation>Kliknij dwukrotnie, aby edytować tag/opis</translation>
+        <translation>Dvojklikem upravte tag/popis</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="267" />
         <source>No backups found.</source>
-        <translation>Nie znaleziono kopii zapasowych.</translation>
+        <translation>Žádné zálohy nenalezeny.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="305" />
         <source>None</source>
-        <translation>Brak</translation>
+        <translation>Žádné</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="315" />
         <source>File</source>
-        <translation>Plik</translation>
+        <translation>Soubor</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="318" />
         <source>Description</source>
-        <translation>Opis</translation>
+        <translation>Popis</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="633" />
@@ -192,42 +192,42 @@
         <location filename="..\ui\backup_dialog.py" line="441" />
         <location filename="..\ui\backup_dialog.py" line="325" />
         <source>Error</source>
-        <translation>Błąd</translation>
+        <translation>Chyba</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="350" />
         <source>🔄 Restore Selected</source>
-        <translation>🔄 Przywróć wybraną</translation>
+        <translation>🔄 Obnovit vybrané</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="353" />
         <source>🗑️ Delete Selected</source>
-        <translation>🗑️ Usuń wybraną</translation>
+        <translation>🗑️ Smazat vybrané</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="357" />
         <source>📊 Compare with Latest</source>
-        <translation>📊 Porównaj z najnowszą</translation>
+        <translation>📊 Porovnat s nejnovější</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="409" />
         <source>will move</source>
-        <translation>zostanie przeniesiona</translation>
+        <translation>přesune se</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="410" />
         <source>already in place</source>
-        <translation>już na właściwej pozycji</translation>
+        <translation>již na místě</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="411" />
         <source>not on desktop</source>
-        <translation>nieobecna na pulpicie</translation>
+        <translation>není na ploše</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="416" />
         <source>Confirm Restore</source>
-        <translation>Potwierdź przywracanie</translation>
+        <translation>Potvrdit obnovení</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="417" />
@@ -240,247 +240,247 @@ Tag: %4
 Timestamp: %5
 
 Are you sure you want to proceed?</source>
-        <translation>Przywrócić pozycje ikon z wybranej kopii zapasowej?
+        <translation>Obnovit pozice ikon ze zvolené zálohy:
 
-Plik: %1
-Rozdzielczość: %2
+Soubor: %1
+Rozlišení: %2
 Ikony: %3
 Tag: %4
-Znacznik czasu: %5
+Časové razítko: %5
 
-Czy na pewno chcesz kontynuować?</translation>
+Opravdu chcete pokračovat?</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="456" />
         <location filename="..\ui\backup_dialog.py" line="432" />
         <source>Yes</source>
-        <translation>Tak</translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="457" />
         <location filename="..\ui\backup_dialog.py" line="433" />
         <source>No</source>
-        <translation>Nie</translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="442" />
         <source>Failed to load backup file:
 %1</source>
-        <translation>Nie udało się wczytać pliku kopii zapasowej:
+        <translation>Nepodařilo se načíst záložní soubor:
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="452" />
         <source>Confirm Delete</source>
-        <translation>Potwierdź usunięcie</translation>
+        <translation>Potvrdit smazání</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="453" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
-        <translation>Czy na pewno chcesz usunąć tę kopię zapasową?
+        <translation>Opravdu chcete smazat tuto zálohu?
 
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="463" />
         <source>Success</source>
-        <translation>Sukces</translation>
+        <translation>Úspěch</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="463" />
         <source>Backup deleted successfully.</source>
-        <translation>Kopia zapasowa została pomyślnie usunięta.</translation>
+        <translation>Záloha byla úspěšně smazána.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="467" />
         <source>Failed to delete backup file.</source>
-        <translation>Nie udało się usunąć pliku kopii zapasowej.</translation>
+        <translation>Nepodařilo se smazat záložní soubor.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="507" />
         <location filename="..\ui\backup_dialog.py" line="476" />
         <source>No Selection</source>
-        <translation>Brak wyboru</translation>
+        <translation>Nic nevybráno</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="477" />
         <source>Please select a backup to compare.</source>
-        <translation>Wybierz kopię zapasową do porównania.</translation>
+        <translation>Vyberte prosím zálohu pro porovnání.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="484" />
         <source>No latest backup found</source>
-        <translation>Nie znaleziono najnowszej kopii zapasowej</translation>
+        <translation>Nenalezena žádná nejnovější záloha</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="491" />
         <source>Same Backup</source>
-        <translation>Ta sama kopia zapasowa</translation>
+        <translation>Stejná záloha</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="492" />
         <source>You selected the latest backup. Nothing to compare.</source>
-        <translation>Wybrano najnowszą kopię zapasową. Nie ma nic do porównania.</translation>
+        <translation>Vybrali jste nejnovější zálohu. Není co porovnávat.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="508" />
         <source>Please select a backup first.</source>
-        <translation>Najpierw wybierz kopię zapasową.</translation>
+        <translation>Nejprve prosím vyberte zálohu.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="517" />
         <source>Not Enough Backups</source>
-        <translation>Za mało kopii zapasowych</translation>
+        <translation>Nedostatek záloh</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="518" />
         <source>There is only one backup. Nothing to compare against.</source>
-        <translation>Istnieje tylko jedna kopia zapasowa. Nie ma nic do porównania.</translation>
+        <translation>Je k dispozici pouze jedna záloha. Není s čím porovnávat.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="533" />
         <source>Failed to compare backups</source>
-        <translation>Nie udało się porównać kopii zapasowych</translation>
+        <translation>Porovnání záloh selhalo</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="537" />
         <source>latest</source>
-        <translation>najnowsza</translation>
+        <translation>nejnovější</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="540" />
         <source>Comparison Results</source>
-        <translation>Wyniki porównania</translation>
+        <translation>Výsledky porovnání</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="558" />
         <source>Comparing Backups:</source>
-        <translation>Porównywanie kopii zapasowych:</translation>
+        <translation>Porovnávání záloh:</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="569" />
         <source>✓ Close</source>
-        <translation>✓ Zamknij</translation>
+        <translation>✓ Zavřít</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="634" />
         <source>Failed to save tag: %1</source>
-        <translation>Nie można zapisać tagu: %1</translation>
+        <translation>Nepodařilo se uložit tag: %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="651" />
         <source>No Backups</source>
-        <translation>Brak kopii zapasowych</translation>
+        <translation>Žádné zálohy</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="652" />
         <source>There are no backup files to export.</source>
-        <translation>Nie ma plików kopii zapasowych do eksportu.</translation>
+        <translation>Nejsou k dispozici žádné záložní soubory pro export.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="660" />
         <source>All backups (%1 files)</source>
-        <translation>Wszystkie kopie zapasowe (%1 plików)</translation>
+        <translation>Všechny zálohy (%1 souborů)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="664" />
         <source>Selected backup only (%1)</source>
-        <translation>Tylko wybrana kopia zapasowa (%1)</translation>
+        <translation>Pouze vybraná záloha (%1)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="670" />
         <source>Export Backups</source>
-        <translation>Eksportuj kopie zapasowe</translation>
+        <translation>Exportovat zálohy</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="671" />
         <source>What do you want to export?</source>
-        <translation>Co chcesz wyeksportować?</translation>
+        <translation>Co chcete exportovat?</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="683" />
         <source>ZIP archive (.zip)</source>
-        <translation>Archiwum ZIP (.zip)</translation>
+        <translation>Archiv ZIP (.zip)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="684" />
         <source>Folder (copy .json files)</source>
-        <translation>Folder (skopiuj pliki .json)</translation>
+        <translation>Složka (kopírovat soubory .json)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="688" />
         <source>Export Format</source>
-        <translation>Format eksportu</translation>
+        <translation>Formát exportu</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="689" />
         <source>Choose export format:</source>
-        <translation>Wybierz format eksportu:</translation>
+        <translation>Vyberte formát exportu:</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="704" />
         <source>Save ZIP Archive</source>
-        <translation>Zapisz archiwum ZIP</translation>
+        <translation>Uložit archiv ZIP</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="706" />
         <source>ZIP Archives (*.zip)</source>
-        <translation>ZIP Archives (*.zip)</translation>
+        <translation>Archivy ZIP (*.zip)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="756" />
         <location filename="..\ui\backup_dialog.py" line="718" />
         <source>Export Successful</source>
-        <translation>Eksport zakończony sukcesem</translation>
+        <translation>Export byl úspěšný</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="757" />
         <location filename="..\ui\backup_dialog.py" line="719" />
         <source>Exported %1 backup(s) to:
 %2</source>
-        <translation>Wyeksportowano %1 kopię/kopie zapasową/e do:
+        <translation>Exportováno %1 záloh(y) do:
 %2</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="726" />
         <source>Export Failed</source>
-        <translation>Eksport nieudany</translation>
+        <translation>Export se nezdařil</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="727" />
         <source>Could not create ZIP archive:
 %1</source>
-        <translation>Nie można utworzyć archiwum ZIP:
+        <translation>Nepodařilo se vytvořit archiv ZIP:
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="731" />
         <source>Select Destination Folder</source>
-        <translation>Wybierz folder docelowy</translation>
+        <translation>Vyberte cílovou složku</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="748" />
         <source>Export Partial</source>
-        <translation>Częściowy eksport</translation>
+        <translation>Částečný export</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="749" />
         <source>Exported %1 file(s). Errors:
 %2</source>
-        <translation>Wyeksportowano %1 plik(ów). Błędy:
+        <translation>Exportováno %1 soubor(ů). Chyby:
 %2</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="768" />
         <source>Import Backups</source>
-        <translation>Importuj kopie zapasowe</translation>
+        <translation>Importovat zálohy</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="770" />
         <source>Backup files (*.json *.zip)</source>
-        <translation>Backup files (*.json *.zip)</translation>
+        <translation>Záložní soubory (*.json *.zip)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="796" />
@@ -488,362 +488,362 @@ Czy na pewno chcesz kontynuować?</translation>
 
 ✓ Imported: %1
 ⏭ Skipped (already exist): %2</source>
-        <translation>Import zakończony.
+        <translation>Import dokončen.
 
-✓ Zaimportowano: %1
-⏭ Pominięto (już istnieją): %2</translation>
+✓ Importováno: %1
+⏭ Přeskočeno (již existuje): %2</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="801" />
         <source>Errors:
 %1</source>
-        <translation>Błędy:
+        <translation>Chyby:
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="802" />
         <source>Import Results</source>
-        <translation>Wyniki importu</translation>
+        <translation>Výsledky importu</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="804" />
         <source>Import Successful</source>
-        <translation>Import zakończony sukcesem</translation>
+        <translation>Import byl úspěšný</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="816" />
         <source>No .json files found in: %1</source>
-        <translation>Nie znaleziono plików .json w: %1</translation>
+        <translation>Nenalezeny žádné soubory .json v: %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="836" />
         <source>Invalid ZIP file %1: %2</source>
-        <translation>Nieprawidłowy plik ZIP %1: %2</translation>
+        <translation>Neplatný soubor ZIP %1: %2</translation>
     </message>
 </context><context>
     <name>CLI</name>
     <message>
         <location filename="..\main.py" line="262" />
         <source>Perform a backup</source>
-        <translation>Wykonaj kopię zapasową</translation>
+        <translation>Provést zálohu</translation>
     </message>
     <message>
         <location filename="..\main.py" line="268" />
         <source>Restore a specific backup or latest</source>
-        <translation>Przywróć określoną lub najnowszą kopię zapasową</translation>
+        <translation>Obnovit konkrétní zálohu nebo nejnovější</translation>
     </message>
     <message>
         <location filename="..\main.py" line="273" />
         <source>Run without showing the GUI</source>
-        <translation>Uruchom bez wyświetlania interfejsu graficznego</translation>
+        <translation>Spustit bez zobrazení grafického rozhraní</translation>
     </message>
     <message>
         <location filename="..\main.py" line="294" />
         <source>[SILENT]</source>
-        <translation>[CICHY]</translation>
+        <translation>[TIŠE]</translation>
     </message>
     <message>
         <location filename="..\main.py" line="299" />
         <source>Starting silent backup...</source>
-        <translation>Uruchamianie cichej kopii zapasowej...</translation>
+        <translation>Spouštění tiché zálohy...</translation>
     </message>
     <message>
         <location filename="..\main.py" line="302" />
         <source>Silent CLI Backup</source>
-        <translation>Cicha kopia zapasowa CLI</translation>
+        <translation>Tichá záloha CLI</translation>
     </message>
     <message>
         <location filename="..\main.py" line="316" />
         <source>Error: No backup files found for latest restore.</source>
-        <translation>Błąd: Nie znaleziono plików kopii zapasowej do przywrócenia.</translation>
+        <translation>Chyba: Pro obnovení nejnovější zálohy nebyly nalezeny žádné záložní soubory.</translation>
     </message>
     <message>
         <location filename="..\main.py" line="324" />
         <source>Starting silent restore from: %1</source>
-        <translation>Uruchamianie cichego przywracania z: %1</translation>
+        <translation>Spouštění tichého obnovení z: %1</translation>
     </message>
 </context><context>
     <name>DesktopIconManager</name>
     <message>
         <location filename="..\core\icon_manager.py" line="76" />
         <source>Unable to find desktop ListView control. Make sure desktop icons are visible.</source>
-        <translation>Nie można znaleźć kontrolki ListView pulpitu. Upewnij się, że ikony pulpitu są widoczne.</translation>
+        <translation>Nelze najít ovládací prvek ListView plochy. Zkontrolujte, zda jsou ikony plochy viditelné.</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="117" />
         <source>No backup files found to delete.</source>
-        <translation>Nie znaleziono plików kopii zapasowej do usunięcia.</translation>
+        <translation>Nenalezeny žádné záložní soubory ke smazání.</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="133" />
         <source>✓ Successfully deleted %n backup file(s).</source>
         <translation>
-            <numerusform>✓ Pomyślnie usunięto %n plik kopii zapasowej.</numerusform>
-            <numerusform>✓ Pomyślnie usunięto %n pliki kopii zapasowej.</numerusform>
-            <numerusform>✓ Pomyślnie usunięto %n plików kopii zapasowej.</numerusform>
+            <numerusform>✓ Úspěšně smazán %n záložní soubor.</numerusform>
+            <numerusform>✓ Úspěšně smazány %n záložní soubory.</numerusform>
+            <numerusform>✓ Úspěšně smazáno %n záložních souborů.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="142" />
         <source>✗ Failed to delete %n backup file(s).</source>
         <translation>
-            <numerusform>✗ Nie udało się usunąć %n pliku kopii zapasowej.</numerusform>
-            <numerusform>✗ Nie udało się usunąć %n plików kopii zapasowej.</numerusform>
-            <numerusform>✗ Nie udało się usunąć %n plików kopii zapasowej.</numerusform>
+            <numerusform>✗ Nepodařilo se smazat %n záložní soubor.</numerusform>
+            <numerusform>✗ Nepodařilo se smazat %n záložní soubory.</numerusform>
+            <numerusform>✗ Nepodařilo se smazat %n záložních souborů.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="158" />
         <source>Automatic cleanup skipped: max_count is disabled (0).</source>
-        <translation>Automatyczne czyszczenie pominięte: max_count jest wyłączone (0).</translation>
+        <translation>Automatické čištění přeskočeno: max_count je zakázán (0).</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="170" />
         <source>Cleanup skipped: Current count (%n) is within the limit (%1).</source>
         <translation>
-            <numerusform>Czyszczenie pominięte: bieżąca liczba (%n) mieści się w limicie (%1).</numerusform>
-            <numerusform>Czyszczenie pominięte: bieżąca liczba (%n) mieści się w limicie (%1).</numerusform>
-            <numerusform>Czyszczenie pominięte: bieżąca liczba (%n) mieści się w limicie (%1).</numerusform>
+            <numerusform>Čištění přeskočeno: Aktuální počet (%n) je v rámci limitu (%1).</numerusform>
+            <numerusform>Čištění přeskočeno: Aktuální počet (%n) je v rámci limitu (%1).</numerusform>
+            <numerusform>Čištění přeskočeno: Aktuální počet (%n) je v rámci limitu (%1).</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="183" />
         <source>Cleanup needed: Current count (%1) exceeds limit (%2). Deleting %n oldest file(s).</source>
         <translation>
-            <numerusform>Wymagane czyszczenie: bieżąca liczba (%1) przekracza limit (%2). Usuwanie %n najstarszego pliku.</numerusform>
-            <numerusform>Wymagane czyszczenie: bieżąca liczba (%1) przekracza limit (%2). Usuwanie %n najstarszych plików.</numerusform>
-            <numerusform>Wymagane czyszczenie: bieżąca liczba (%1) przekracza limit (%2). Usuwanie %n najstarszych plików.</numerusform>
+            <numerusform>Čištění nutné: Aktuální počet (%1) překračuje limit (%2). Mazání %n nejstaršího souboru.</numerusform>
+            <numerusform>Čištění nutné: Aktuální počet (%1) překračuje limit (%2). Mazání %n nejstarších souborů.</numerusform>
+            <numerusform>Čištění nutné: Aktuální počet (%1) překračuje limit (%2). Mazání %n nejstarších souborů.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="197" />
         <source>  Deleted oldest backup: %1</source>
-        <translation>  Usunięto najstarszą kopię zapasową: %1</translation>
+        <translation>  Smazána nejstarší záloha: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="203" />
         <source>  Failed to delete: %1</source>
-        <translation>  Nie udało się usunąć: %1</translation>
+        <translation>  Smazání se nezdařilo: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="209" />
         <source>Cleanup complete. Total deleted: %n file(s).</source>
         <translation>
-            <numerusform>Czyszczenie zakończone. Łącznie usunięto: %n plik.</numerusform>
-            <numerusform>Czyszczenie zakończone. Łącznie usunięto: %n pliki.</numerusform>
-            <numerusform>Czyszczenie zakończone. Łącznie usunięto: %n plików.</numerusform>
+            <numerusform>Čištění dokončeno. Celkem smazán: %n soubor.</numerusform>
+            <numerusform>Čištění dokončeno. Celkem smazány: %n soubory.</numerusform>
+            <numerusform>Čištění dokončeno. Celkem smazáno: %n souborů.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="328" />
         <source>Monitor Resolution: %1</source>
-        <translation>Rozdzielczość monitora: %1</translation>
+        <translation>Rozlišení monitoru: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="333" />
         <source>Found %n icon(s). Starting scan...</source>
         <translation>
-            <numerusform>Znaleziono %n ikonę. Uruchamianie skanowania...</numerusform>
-            <numerusform>Znaleziono %n ikony. Uruchamianie skanowania...</numerusform>
-            <numerusform>Znaleziono %n ikon. Uruchamianie skanowania...</numerusform>
+            <numerusform>Nalezena %n ikona. Spouštění skenování...</numerusform>
+            <numerusform>Nalezeny %n ikony. Spouštění skenování...</numerusform>
+            <numerusform>Nalezeno %n ikon. Spouštění skenování...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="396" />
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
-            <numerusform>✓ Zapisano %n ikonę do pliku kopii zapasowej „%1"</numerusform>
-            <numerusform>✓ Zapisano %n ikony do pliku kopii zapasowej „%1"</numerusform>
-            <numerusform>✓ Zapisano %n ikon do pliku kopii zapasowej „%1"</numerusform>
+            <numerusform>✓ Uložena %n ikona do záložního souboru „%1"</numerusform>
+            <numerusform>✓ Uloženy %n ikony do záložního souboru „%1"</numerusform>
+            <numerusform>✓ Uloženo %n ikon do záložního souboru „%1"</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="406" />
         <source>  (Description: %1)</source>
-        <translation>  (Opis: %1)</translation>
+        <translation>  (Popis: %1)</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="419" />
         <source>✗ Error saving (I/O): %1</source>
-        <translation>✗ Błąd zapisywania (I/O): %1</translation>
+        <translation>✗ Chyba při ukládání (I/O): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="426" />
         <source>✗ Error saving: %1</source>
-        <translation>✗ Błąd zapisywania: %1</translation>
+        <translation>✗ Chyba při ukládání: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="454" />
         <source>✗ Error: Backup file not found.</source>
-        <translation>✗ Błąd: Nie znaleziono pliku kopii zapasowej.</translation>
+        <translation>✗ Chyba: Záložní soubor nebyl nalezen.</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="464" />
         <source>Attempting to restore from backup: '%1'</source>
-        <translation>Próba przywrócenia z kopii zapasowej: „%1"</translation>
+        <translation>Pokus o obnovení ze zálohy: „%1"</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="469" />
         <source>Saved Resolution (from filename): %1</source>
-        <translation>Zapisana rozdzielczość (z nazwy pliku): %1</translation>
+        <translation>Uložené rozlišení (ze souboru): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="486" />
         <source>Restoring layout (saved: %1)</source>
-        <translation>Przywracanie układu (zapisano: %1)</translation>
+        <translation>Obnovování rozvržení (uloženo: %1)</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="491" />
         <source>  Description: %1</source>
-        <translation>  Opis: %1</translation>
+        <translation>  Popis: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="498" />
         <source>Restoring layout (Old format, no timestamp and metadata)</source>
-        <translation>Przywracanie układu (stary format, bez znacznika czasu i metadanych)</translation>
+        <translation>Obnovování rozvržení (Starý formát, bez časového razítka a metadat)</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="506" />
         <source>✗ Error: Invalid backup file format: %1</source>
-        <translation>✗ Błąd: Nieprawidłowy format pliku kopii zapasowej: %1</translation>
+        <translation>✗ Chyba: Neplatný formát záložního souboru: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="513" />
         <source>✗ Error reading backup file (I/O): %1</source>
-        <translation>✗ Błąd odczytu pliku kopii zapasowej (I/O): %1</translation>
+        <translation>✗ Chyba při čtení záložního souboru (I/O): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="530" />
         <source>⚠ Warning: Resolution mismatch!</source>
-        <translation>⚠ Ostrzeżenie: Niezgodność rozdzielczości!</translation>
+        <translation>⚠ Varování: Neshoda rozlišení!</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="540" />
         <source>✓ Adaptive Scaling enabled: X=%1, Y=%2</source>
-        <translation>✓ Adaptacyjne skalowanie włączone: X=%1, Y=%2</translation>
+        <translation>✓ Adaptivní škálování povoleno: X=%1, Y=%2</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="625" />
         <source>✓ Restored %n icon(s)</source>
         <translation>
-            <numerusform>✓ Przywrócono %n ikonę</numerusform>
-            <numerusform>✓ Przywrócono %n ikony</numerusform>
-            <numerusform>✓ Przywrócono %n ikon</numerusform>
+            <numerusform>✓ Obnovena %n ikona</numerusform>
+            <numerusform>✓ Obnoveny %n ikony</numerusform>
+            <numerusform>✓ Obnoveno %n ikon</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="631" />
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
-            <numerusform>⚠ Pominięto %n ikonę (nie znaleziono na pulpicie)</numerusform>
-            <numerusform>⚠ Pominięto %n ikony (nie znaleziono na pulpicie)</numerusform>
-            <numerusform>⚠ Pominięto %n ikon (nie znaleziono na pulpicie)</numerusform>
+            <numerusform>⚠ Přeskočena %n ikona (nenalezena na ploše)</numerusform>
+            <numerusform>⚠ Přeskočeny %n ikony (nenalezeny na ploše)</numerusform>
+            <numerusform>⚠ Přeskočeno %n ikon (nenalezeny na ploše)</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="645" />
         <source>✗ Error restoring (I/O): %1</source>
-        <translation>✗ Błąd przywracania (I/O): %1</translation>
+        <translation>✗ Chyba při obnovování (I/O): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="652" />
         <source>✗ Error restoring: %1</source>
-        <translation>✗ Błąd przywracania: %1</translation>
+        <translation>✗ Chyba při obnovování: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="680" />
         <source>Redrawing disabled for scrambling...</source>
-        <translation>Odrysowywanie wyłączone podczas tasowania...</translation>
+        <translation>Překreslování zakázáno pro náhodné přemísťování...</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="689" />
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
-            <numerusform>Znaleziono %n ikonę. Uruchamianie losowego rozmieszczania...</numerusform>
-            <numerusform>Znaleziono %n ikony. Uruchamianie losowego rozmieszczania...</numerusform>
-            <numerusform>Znaleziono %n ikon. Uruchamianie losowego rozmieszczania...</numerusform>
+            <numerusform>Nalezena %n ikona. Spouštění náhodného umístění...</numerusform>
+            <numerusform>Nalezeny %n ikony. Spouštění náhodného umístění...</numerusform>
+            <numerusform>Nalezeno %n ikon. Spouštění náhodného umístění...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="710" />
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
-            <numerusform>✓ Potasowano pozycję %n ikony.</numerusform>
-            <numerusform>✓ Potasowano pozycje %n ikon.</numerusform>
-            <numerusform>✓ Potasowano pozycje %n ikon.</numerusform>
+            <numerusform>✓ Náhodně přemístěna %n ikona.</numerusform>
+            <numerusform>✓ Náhodně přemístěny %n ikony.</numerusform>
+            <numerusform>✓ Náhodně přemístěno %n ikon.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="724" />
         <source>✗ Error scrambling icons: %1</source>
-        <translation>✗ Błąd tasowania ikon: %1</translation>
+        <translation>✗ Chyba při náhodném přemísťování ikon: %1</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="425" />
         <source>No Preview Available</source>
-        <translation>Brak dostępnego podglądu</translation>
+        <translation>Náhled není k dispozici</translation>
     </message>
 </context><context>
     <name>IconWorker</name>
     <message>
         <location filename="..\utils\threads.py" line="52" />
         <source>Forcing desktop refresh...</source>
-        <translation>Wymuszanie odświeżenia pulpitu...</translation>
+        <translation>Vynucení obnovení plochy...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="67" />
         <source>Desktop refresh signal sent successfully.</source>
-        <translation>Sygnał odświeżenia pulpitu wysłany pomyślnie.</translation>
+        <translation>Signál obnovení plochy byl úspěšně odeslán.</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="71" />
         <source>Warning: Failed to send desktop refresh signals: %1</source>
-        <translation>Ostrzeżenie: Nie udało się wysłać sygnałów odświeżenia pulpitu: %1</translation>
+        <translation>Varování: Nepodařilo se odeslat signály obnovení plochy: %1</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="84" />
         <source>Performing mandatory quick backup before scrambling...</source>
-        <translation>Wykonywanie obowiązkowej szybkiej kopii zapasowej przed tasowaniem...</translation>
+        <translation>Provádění povinné rychlé zálohy před náhodným přemístěním...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="88" />
         <source>  [Pre-Scramble Backup] %1</source>
-        <translation>  [Kopia przed tasowaniem] %1</translation>
+        <translation>  [Záloha před přemístěním] %1</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="91" />
         <source>Backup before Scramble</source>
-        <translation>Kopia zapasowa przed tasowaniem</translation>
+        <translation>Záloha před náhodným přemístěním</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="96" />
         <source>Pre-scramble backup completed successfully. Starting scramble...</source>
-        <translation>Kopia zapasowa przed tasowaniem zakończona pomyślnie. Uruchamianie tasowania...</translation>
+        <translation>Záloha před přemístěním byla úspěšně dokončena. Spouštění náhodného přemístění...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="106" />
         <source>✗ Pre-scramble backup failed. Aborting scramble operation.</source>
-        <translation>✗ Kopia zapasowa przed tasowaniem nie powiodła się. Przerywanie operacji tasowania.</translation>
+        <translation>✗ Záloha před přemístěním se nezdařila. Přerušení operace náhodného přemístění.</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="113" />
         <source>✗ CRITICAL ERROR: %1</source>
-        <translation>✗ BŁĄD KRYTYCZNY: %1</translation>
+        <translation>✗ KRITICKÁ CHYBA: %1</translation>
     </message>
 </context><context>
     <name>Main</name>
     <message>
         <location filename="..\main.py" line="370" />
         <source>Critical Error</source>
-        <translation>Błąd krytyczny</translation>
+        <translation>Kritická chyba</translation>
     </message>
     <message>
         <location filename="..\main.py" line="371" />
         <source>Failed to start application:
 %1</source>
-        <translation>Nie udało się uruchomić aplikacji:
+        <translation>Spuštění aplikace se nezdařilo:
 %1</translation>
     </message>
 </context><context>
@@ -851,274 +851,274 @@ Czy na pewno chcesz kontynuować?</translation>
     <message>
         <location filename="..\ui\main_window.py" line="62" />
         <source>Unknown</source>
-        <translation>Nieznany</translation>
+        <translation>Neznámý</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="92" />
         <source>Quick Save</source>
-        <translation>Szybki zapis</translation>
+        <translation>Rychlé uložení</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="94" />
         <source>Quick Save (Tray)</source>
-        <translation>Szybki zapis (pasek zadań)</translation>
+        <translation>Rychlé uložení (panel)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="98" />
         <source>Restore Latest</source>
-        <translation>Przywróć najnowszą</translation>
+        <translation>Obnovit nejnovější</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="104" />
         <source>Show Window</source>
-        <translation>Pokaż okno</translation>
+        <translation>Zobrazit okno</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="108" />
         <source>Exit</source>
-        <translation>Wyjdź</translation>
+        <translation>Ukončit</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="129" />
         <source>Desktop Icon Backup Manager by mapi68</source>
-        <translation>Desktop Icon Backup Manager by mapi68</translation>
+        <translation>Desktop Icon Backup Manager od mapi68</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="134" />
         <source>&amp;File</source>
-        <translation>&amp;Plik</translation>
+        <translation>&amp;Soubor</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="137" />
         <source>Scramble Desktop Icons (Random)</source>
-        <translation>Potasuj ikony pulpitu (losowo)</translation>
+        <translation>Náhodně přemístit ikony plochy</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="140" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
-        <translation>Losowo rozmieszcza wszystkie ikony pulpitu po utworzeniu obowiązkowej kopii zapasowej.</translation>
+        <translation>Náhodně přemístí pozice všech ikon plochy po vytvoření povinné zálohy.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="148" />
         <source>Remove All Backups...</source>
-        <translation>Usuń wszystkie kopie zapasowe...</translation>
+        <translation>Odebrat všechny zálohy...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="154" />
         <source>📤 Export Backups...</source>
-        <translation>📤 Eksportuj kopie zapasowe...</translation>
+        <translation>📤 Exportovat zálohy...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="155" />
         <source>Export backups to a folder or ZIP archive</source>
-        <translation>Eksportuj kopie zapasowe do folderu lub archiwum ZIP</translation>
+        <translation>Exportovat zálohy do složky nebo archivu ZIP</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="159" />
         <source>📥 Import Backups...</source>
-        <translation>📥 Importuj kopie zapasowe...</translation>
+        <translation>📥 Importovat zálohy...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="161" />
         <source>Import backup files (.json) or a ZIP archive</source>
-        <translation>Importuj pliki kopii zapasowych (.json) lub archiwum ZIP</translation>
+        <translation>Importovat záložní soubory (.json) nebo archiv ZIP</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="167" />
         <source>E&amp;xit</source>
-        <translation>Wy&amp;jdź</translation>
+        <translation>U&amp;končit</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="415" />
         <location filename="..\ui\main_window.py" line="172" />
         <source>&amp;Settings</source>
-        <translation>&amp;Ustawienia</translation>
+        <translation>&amp;Nastavení</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="174" />
         <source>Open Settings Menu</source>
-        <translation>Otwórz menu ustawień</translation>
+        <translation>Otevřít nabídku Nastavení</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="994" />
         <location filename="..\ui\main_window.py" line="180" />
         <source>Auto-Save on Exit</source>
-        <translation>Automatyczny zapis przy wyjściu</translation>
+        <translation>Automatické uložení při ukončení</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="188" />
         <source>Auto-Restore on Startup</source>
-        <translation>Automatyczne przywracanie przy uruchomieniu</translation>
+        <translation>Automatické obnovení při spuštění</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="196" />
         <source>Check for Updates on Startup</source>
-        <translation>Sprawdzaj aktualizacje przy uruchomieniu</translation>
+        <translation>Kontrolovat aktualizace při spuštění</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="207" />
         <source>Enable Adaptive Scaling on Restore</source>
-        <translation>Włącz adaptacyjne skalowanie przy przywracaniu</translation>
+        <translation>Povolit adaptivní škálování při obnovení</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="218" />
         <source>Start Minimized to Tray</source>
-        <translation>Uruchom zminimalizowany do paska zadań</translation>
+        <translation>Spustit minimalizovaně do panelu</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="226" />
         <source>Minimize to Tray on Close ('X' button)</source>
-        <translation>Minimalizuj do paska zadań przy zamknięciu (przycisk 'X')</translation>
+        <translation>Minimalizovat do panelu při zavření (tlačítko „X")</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="236" />
         <source>Automatic Backup Cleanup Limit</source>
-        <translation>Limit automatycznego czyszczenia kopii zapasowych</translation>
+        <translation>Limit automatického čištění záloh</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="241" />
         <source>Disabled (Keep All)</source>
-        <translation>Wyłączony (zachowaj wszystkie)</translation>
+        <translation>Zakázáno (zachovat vše)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="242" />
         <source>Keep Last 5</source>
-        <translation>Zachowaj ostatnie 5</translation>
+        <translation>Zachovat posledních 5</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="243" />
         <source>Keep Last 10</source>
-        <translation>Zachowaj ostatnie 10</translation>
+        <translation>Zachovat posledních 10</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="244" />
         <source>Keep Last 25</source>
-        <translation>Zachowaj ostatnie 25</translation>
+        <translation>Zachovat posledních 25</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="245" />
         <source>Keep Last 50</source>
-        <translation>Zachowaj ostatnie 50</translation>
+        <translation>Zachovat posledních 50</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="256" />
         <source>&amp;Help</source>
-        <translation>&amp;Pomoc</translation>
+        <translation>&amp;Nápověda</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="258" />
         <source>Online User Manual</source>
-        <translation>Podręcznik użytkownika online</translation>
+        <translation>Online uživatelská příručka</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1095" />
         <location filename="..\ui\main_window.py" line="1063" />
         <location filename="..\ui\main_window.py" line="265" />
         <source>Keyboard Shortcuts</source>
-        <translation>Skróty klawiszowe</translation>
+        <translation>Klávesové zkratky</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="271" />
         <source>Check for Updates...</source>
-        <translation>Sprawdź aktualizacje...</translation>
+        <translation>Zkontrolovat aktualizace...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="277" />
         <source>&amp;About</source>
-        <translation>&amp;O programie</translation>
+        <translation>&amp;O programu</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="283" />
         <source>Support on Ko-fi...</source>
-        <translation>Wsparcie na Ko-fi...</translation>
+        <translation>Podpora na Ko-fi...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="298" />
         <source>Optional: Enter a descriptive tag/description...</source>
-        <translation>Opcjonalnie: wprowadź opisowy tag/opis...</translation>
+        <translation>Volitelné: Zadejte popisný tag/popis...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="305" />
         <source>Select a profile to auto-fill the tag field</source>
-        <translation>Wybierz profil, aby automatycznie wypełnić pole tagu</translation>
+        <translation>Vyberte profil pro automatické vyplnění pole tagu</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="311" />
         <source>Save Tag:</source>
-        <translation>Tag zapisu:</translation>
+        <translation>Uložit tag:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="319" />
         <source>💾 SAVE QUICK BACKUP</source>
-        <translation>💾 SZYBKI ZAPIS KOPII</translation>
+        <translation>💾 ULOŽIT RYCHLOU ZÁLOHU</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="323" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
-        <translation>Zapisz bieżące pozycje ikon pulpitu do nowego pliku, używając powyższego tagu.
+        <translation>Uložit aktuální pozice ikon plochy do nového souboru s použitím výše uvedeného tagu.
 
-Skrót: Ctrl+S</translation>
+Zkratka: Ctrl+S</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="331" />
         <source>↺ RESTORE LATEST</source>
-        <translation>↺ PRZYWRÓĆ NAJNOWSZĄ</translation>
+        <translation>↺ OBNOVIT NEJNOVĚJŠÍ</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="334" />
         <source>Restore icon positions from the LATEST backup file found.</source>
-        <translation>Przywróć pozycje ikon z NAJNOWSZEGO znalezionego pliku kopii zapasowej.</translation>
+        <translation>Obnovit pozice ikon z NEJNOVĚJŠÍHO nalezeného záložního souboru.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="339" />
         <source>↺ BACKUP MANAGER</source>
-        <translation>↺ MENEDŻER KOPII</translation>
+        <translation>↺ SPRÁVCE ZÁLOH</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="343" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
-        <translation>Otwiera okno do wyboru określonego pliku kopii zapasowej do przywrócenia lub usunięcia.
+        <translation>Otevře okno pro výběr konkrétního záložního souboru k obnovení nebo smazání.
 
-Skrót: Ctrl+M</translation>
+Zkratka: Ctrl+M</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="357" />
         <source>Activity Log:</source>
-        <translation>Dziennik aktywności:</translation>
+        <translation>Protokol aktivit:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="368" />
         <source>Current Resolution: %1</source>
-        <translation>Bieżąca rozdzielczość: %1</translation>
+        <translation>Aktuální rozlišení: %1</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="375" />
         <source>Support on Ko-fi</source>
-        <translation>Wsparcie na Ko-fi</translation>
+        <translation>Podpora na Ko-fi</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="381" />
         <source>Clear Log</source>
-        <translation>Wyczyść dziennik</translation>
+        <translation>Vymazat protokol</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="423" />
         <source>Settings menu not found</source>
-        <translation>Nie znaleziono menu ustawień</translation>
+        <translation>Nabídka Nastavení nebyla nalezena</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="435" />
         <source>Opening online user manual in browser...</source>
-        <translation>Otwieranie podręcznika użytkownika online w przeglądarce...</translation>
+        <translation>Otevírání online uživatelské příručky v prohlížeči...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="437" />
         <source>✗ Failed to open manual URL</source>
-        <translation>✗ Nie udało się otworzyć adresu URL podręcznika</translation>
+        <translation>✗ Nepodařilo se otevřít URL příručky</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="922" />
@@ -1126,7 +1126,7 @@ Skrót: Ctrl+M</translation>
         <location filename="..\ui\main_window.py" line="680" />
         <location filename="..\ui\main_window.py" line="440" />
         <source>Error</source>
-        <translation>Błąd</translation>
+        <translation>Chyba</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="441" />
@@ -1134,38 +1134,38 @@ Skrót: Ctrl+M</translation>
 
 Please visit manually:
 %1</source>
-        <translation>Nie można otworzyć podręcznika online.
+        <translation>Nepodařilo se otevřít online příručku.
 
-Odwiedź ręcznie:
+Navštivte prosím ručně:
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="448" />
         <source>Save</source>
-        <translation>Zapisz</translation>
+        <translation>Uložit</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="451" />
         <source>Quick Backup (Shortcut)</source>
-        <translation>Szybka kopia zapasowa (skrót)</translation>
+        <translation>Rychlá záloha (zkratka)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="455" />
         <source>Backup Manager</source>
-        <translation>Menedżer kopii zapasowych</translation>
+        <translation>Správce záloh</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="460" />
         <source>Settings</source>
-        <translation>Ustawienia</translation>
+        <translation>Nastavení</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="495" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
-            <numerusform>Limit automatycznego czyszczenia ustawiony na: %n kopię zapasową (0 = wyłączony).</numerusform>
-            <numerusform>Limit automatycznego czyszczenia ustawiony na: %n kopie zapasowe (0 = wyłączony).</numerusform>
-            <numerusform>Limit automatycznego czyszczenia ustawiony na: %n kopii zapasowych (0 = wyłączony).</numerusform>
+            <numerusform>Limit automatického čištění nastaven na: %n zálohu (0 = zakázáno).</numerusform>
+            <numerusform>Limit automatického čištění nastaven na: %n zálohy (0 = zakázáno).</numerusform>
+            <numerusform>Limit automatického čištění nastaven na: %n záloh (0 = zakázáno).</numerusform>
         </translation>
     </message>
     <message>
@@ -1173,62 +1173,62 @@ Odwiedź ręcznie:
         <location filename="..\ui\main_window.py" line="913" />
         <location filename="..\ui\main_window.py" line="512" />
         <source>Desktop Icon Manager</source>
-        <translation>Menedżer ikon pulpitu</translation>
+        <translation>Správce ikon plochy</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="542" />
         <source>Backup list updated (item deleted).</source>
-        <translation>Lista kopii zapasowych zaktualizowana (element usunięty).</translation>
+        <translation>Seznam záloh aktualizován (položka smazána).</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="551" />
         <source>Backup list updated.</source>
-        <translation>Lista kopii zapasowych zaktualizowana.</translation>
+        <translation>Seznam záloh aktualizován.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="564" />
         <source>Backup list updated (imported).</source>
-        <translation>Lista kopii zapasowych zaktualizowana (zaimportowane).</translation>
+        <translation>Seznam záloh aktualizován (importováno).</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="578" />
         <source>— Profiles —</source>
-        <translation>— Profile —</translation>
+        <translation>— Profily —</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="580" />
         <source>Work</source>
-        <translation>Praca</translation>
+        <translation>Práce</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="581" />
         <source>Gaming</source>
-        <translation>Gaming</translation>
+        <translation>Hry</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="582" />
         <source>Presentation</source>
-        <translation>Prezentacja</translation>
+        <translation>Prezentace</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="583" />
         <source>Dev / Coding</source>
-        <translation>Dev / Kodowanie</translation>
+        <translation>Vývoj / Programování</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="584" />
         <source>Meeting</source>
-        <translation>Spotkanie</translation>
+        <translation>Schůzka</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="585" />
         <source>Home</source>
-        <translation>Dom</translation>
+        <translation>Domov</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="586" />
         <source>Office</source>
-        <translation>Biuro</translation>
+        <translation>Kancelář</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="587" />
@@ -1238,27 +1238,27 @@ Odwiedź ręcznie:
     <message>
         <location filename="..\ui\main_window.py" line="588" />
         <source>Docked / External Monitor</source>
-        <translation>Stacja / Monitor zewnętrzny</translation>
+        <translation>Dokovací stanice / Externí monitor</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="589" />
         <source>Clean Desktop</source>
-        <translation>Czysty pulpit</translation>
+        <translation>Čistá plocha</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="590" />
         <source>Pre-Update</source>
-        <translation>Przed aktualizacją</translation>
+        <translation>Před aktualizací</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="591" />
         <source>Pre-Reboot</source>
-        <translation>Przed restartem</translation>
+        <translation>Před restartem</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="592" />
         <source>Favourite</source>
-        <translation>Ulubiony</translation>
+        <translation>Oblíbené</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="593" />
@@ -1268,147 +1268,147 @@ Odwiedź ręcznie:
     <message>
         <location filename="..\ui\main_window.py" line="615" />
         <source>Quick Backup</source>
-        <translation>Szybka kopia zapasowa</translation>
+        <translation>Rychlá záloha</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="624" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
-        <translation>Proste, lecz potężne narzędzie do zapisywania i przywracania pozycji ikon pulpitu Windows.</translation>
+        <translation>Jednoduchý, ale výkonný nástroj pro ukládání a obnovování pozic ikon na ploše Windows.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="625" />
         <source>Key Features:</source>
-        <translation>Główne funkcje:</translation>
+        <translation>Klíčové funkce:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="627" />
         <source>Quick Save:</source>
-        <translation>Szybki zapis:</translation>
+        <translation>Rychlé uložení:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="627" />
         <source>Save icons with an optional descriptive tag.</source>
-        <translation>Zapisz ikony z opcjonalnym opisowym tagiem.</translation>
+        <translation>Uložit ikony s volitelným popisným tagem.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="628" />
         <source>Backup Management:</source>
-        <translation>Zarządzanie kopiami zapasowymi:</translation>
+        <translation>Správa záloh:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="628" />
         <source>Select, restore, or delete specific backups.</source>
-        <translation>Wybierz, przywróć lub usuń określone kopie zapasowe.</translation>
+        <translation>Vybrat, obnovit nebo smazat konkrétní zálohy.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="629" />
         <source>Live Diff Preview:</source>
-        <translation>Podgląd różnic na żywo:</translation>
+        <translation>Živý náhled rozdílů:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="629" />
         <source>See which icons will move before restoring.</source>
-        <translation>Sprawdź, które ikony zostaną przesunięte przed przywróceniem.</translation>
+        <translation>Zobrazit, které ikony se přesunou před obnovením.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="630" />
         <source>Visual Preview:</source>
-        <translation>Podgląd wizualny:</translation>
+        <translation>Vizuální náhled:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="630" />
         <source>See a mini-map of your layout.</source>
-        <translation>Zobacz miniaturę układu ikon.</translation>
+        <translation>Zobrazit minimapu rozvržení.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="631" />
         <source>Backup Comparison:</source>
-        <translation>Porównywanie kopii zapasowych:</translation>
+        <translation>Porovnání záloh:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="631" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
-        <translation>Porównaj dowolne dwie kopie zapasowe, aby zobaczyć dodane, usunięte i przeniesione ikony.</translation>
+        <translation>Porovnat libovolné dvě zálohy a zobrazit přidané, odebrané a přesunuté ikony.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="632" />
         <source>Adaptive Scaling:</source>
-        <translation>Adaptacyjne skalowanie:</translation>
+        <translation>Adaptivní škálování:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="632" />
         <source>Automatic adjustment for different resolutions.</source>
-        <translation>Automatyczne dostosowanie do różnych rozdzielczości.</translation>
+        <translation>Automatické přizpůsobení pro různá rozlišení.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="633" />
         <source>Automatic Cleanup:</source>
-        <translation>Automatyczne czyszczenie:</translation>
+        <translation>Automatické čištění:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="633" />
         <source>Set a limit on backups to keep.</source>
-        <translation>Ustaw limit przechowywanych kopii zapasowych.</translation>
+        <translation>Nastavit limit počtu zachovávaných záloh.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="634" />
         <source>Random Scramble:</source>
-        <translation>Losowe tasowanie:</translation>
+        <translation>Náhodné přemístění:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="634" />
         <source>Randomize icon positions after backup.</source>
-        <translation>Losowe rozmieszczenie ikon po wykonaniu kopii zapasowej.</translation>
+        <translation>Náhodně přemístit ikony po záloze.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="635" />
         <source>Tray Integration:</source>
-        <translation>Integracja z paskiem zadań:</translation>
+        <translation>Integrace do panelu:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="635" />
         <source>Quick access via tray.</source>
-        <translation>Szybki dostęp przez pasek zadań.</translation>
+        <translation>Rychlý přístup přes panel.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="637" />
         <source>Version:</source>
-        <translation>Wersja:</translation>
+        <translation>Verze:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="638" />
         <source>Development:</source>
-        <translation>Twórca:</translation>
+        <translation>Vývoj:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="639" />
         <source>Support this project on Ko-fi</source>
-        <translation>Wesprzyj ten projekt na Ko-fi</translation>
+        <translation>Podpořte tento projekt na Ko-fi</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="641" />
         <source>About Desktop Icon Backup Manager</source>
-        <translation>O programie Desktop Icon Backup Manager</translation>
+        <translation>O aplikaci Desktop Icon Backup Manager</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="647" />
         <source>No backup files found to delete.</source>
-        <translation>Nie znaleziono plików kopii zapasowej do usunięcia.</translation>
+        <translation>Nenalezeny žádné záložní soubory ke smazání.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="650" />
         <source>No Backups Found</source>
-        <translation>Nie znaleziono kopii zapasowych</translation>
+        <translation>Nenalezeny žádné zálohy</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="651" />
         <source>There are no backup files to delete.</source>
-        <translation>Nie ma plików kopii zapasowej do usunięcia.</translation>
+        <translation>Nejsou k dispozici žádné záložní soubory ke smazání.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="657" />
         <source>WARNING: Delete All Backups</source>
-        <translation>OSTRZEŻENIE: Usuń wszystkie kopie zapasowe</translation>
+        <translation>VAROVÁNÍ: Smazat všechny zálohy</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="658" />
@@ -1416,54 +1416,54 @@ Odwiedź ręcznie:
 
 This action cannot be undone!</source>
         <translation>
-            <numerusform>Czy na pewno chcesz trwale usunąć WSZYSTKIE %n plik kopii zapasowej ikon pulpitu?
+            <numerusform>Opravdu chcete trvale smazat VŠECHNY %n záložní soubor ikon plochy?
 
-Tej operacji nie można cofnąć!</numerusform>
-            <numerusform>Czy na pewno chcesz trwale usunąć WSZYSTKIE %n pliki kopii zapasowej ikon pulpitu?
+Tuto akci nelze vrátit!</numerusform>
+            <numerusform>Opravdu chcete trvale smazat VŠECHNY %n záložní soubory ikon plochy?
 
-Tej operacji nie można cofnąć!</numerusform>
-            <numerusform>Czy na pewno chcesz trwale usunąć WSZYSTKIE %n plików kopii zapasowej ikon pulpitu?
+Tuto akci nelze vrátit!</numerusform>
+            <numerusform>Opravdu chcete trvale smazat VŠECHNY %n záložní soubory ikon plochy?
 
-Tej operacji nie można cofnąć!</numerusform>
+Tuto akci nelze vrátit!</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="876" />
         <location filename="..\ui\main_window.py" line="663" />
         <source>Yes</source>
-        <translation>Tak</translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="877" />
         <location filename="..\ui\main_window.py" line="664" />
         <source>No</source>
-        <translation>Nie</translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="666" />
         <source>Starting deletion of all backup files...</source>
-        <translation>Rozpoczynanie usuwania wszystkich plików kopii zapasowej...</translation>
+        <translation>Spouštění mazání všech záložních souborů...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="906" />
         <location filename="..\ui\main_window.py" line="674" />
         <source>Success</source>
-        <translation>Sukces</translation>
+        <translation>Úspěch</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="675" />
         <source>All backup files have been successfully deleted.</source>
-        <translation>Wszystkie pliki kopii zapasowej zostały pomyślnie usunięte.</translation>
+        <translation>Všechny záložní soubory byly úspěšně smazány.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="681" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
-        <translation>Niektórych plików nie udało się usunąć. Sprawdź dziennik aktywności, aby uzyskać szczegóły.</translation>
+        <translation>Některé soubory nebylo možné smazat. Podrobnosti naleznete v protokolu aktivit.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="689" />
         <source>Starting new timestamped backup...</source>
-        <translation>Tworzenie nowej kopii zapasowej ze znacznikiem czasu...</translation>
+        <translation>Spouštění nové zálohy s časovým razítkem...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="691" />
@@ -1473,17 +1473,17 @@ Tej operacji nie można cofnąć!</numerusform>
     <message>
         <location filename="..\ui\main_window.py" line="695" />
         <source>Saving...</source>
-        <translation>Zapisywanie...</translation>
+        <translation>Ukládání...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="713" />
         <source>No backup files found to restore!</source>
-        <translation>Nie znaleziono plików kopii zapasowej do przywrócenia!</translation>
+        <translation>Nenalezeny žádné záložní soubory pro obnovení!</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="715" />
         <source>✗ Restore failed: No backup files found.</source>
-        <translation>✗ Przywracanie nie powiodło się: Nie znaleziono plików kopii zapasowej.</translation>
+        <translation>✗ Obnovení se nezdařilo: Nenalezeny žádné záložní soubory.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="735" />
@@ -1491,27 +1491,27 @@ Tej operacji nie można cofnąć!</numerusform>
         <location filename="..\ui\main_window.py" line="729" />
         <location filename="..\ui\main_window.py" line="728" />
         <source>N/A</source>
-        <translation>N/D</translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="738" />
         <source>N/A (Old Format)</source>
-        <translation>N/D (stary format)</translation>
+        <translation>N/A (Starý formát)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="767" />
         <source>Confirm Restore — Live Preview</source>
-        <translation>Potwierdź przywracanie — Podgląd na żywo</translation>
+        <translation>Potvrdit obnovení — živý náhled</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="777" />
         <source>File</source>
-        <translation>Plik</translation>
+        <translation>Soubor</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="778" />
         <source>Resolution</source>
-        <translation>Rozdzielczość</translation>
+        <translation>Rozlišení</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="779" />
@@ -1521,62 +1521,62 @@ Tej operacji nie można cofnąć!</numerusform>
     <message>
         <location filename="..\ui\main_window.py" line="780" />
         <source>Tag</source>
-        <translation>Etykieta</translation>
+        <translation>Tag</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="781" />
         <source>Timestamp</source>
-        <translation>Znacznik czasu</translation>
+        <translation>Časové razítko</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="793" />
         <source>will move</source>
-        <translation>zostanie przeniesiona</translation>
+        <translation>přesune se</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="794" />
         <source>already in place</source>
-        <translation>już na właściwej pozycji</translation>
+        <translation>již na místě</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="795" />
         <source>not on desktop</source>
-        <translation>nieobecna na pulpicie</translation>
+        <translation>není na ploše</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="804" />
         <source>Layout Preview (saved positions vs current):</source>
-        <translation>Podgląd układu (zapisane pozycje vs bieżące):</translation>
+        <translation>Náhled rozvržení (uložené pozice vs. aktuální):</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="826" />
         <source>↺ Restore</source>
-        <translation>↺ Przywróć</translation>
+        <translation>↺ Obnovit</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="833" />
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Zrušit</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="853" />
         <source>Starting restore from backup '%1'...</source>
-        <translation>Uruchamianie przywracania z kopii zapasowej „%1"...</translation>
+        <translation>Spouštění obnovení ze zálohy „%1"...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="854" />
         <source>latest</source>
-        <translation>najnowsza</translation>
+        <translation>nejnovější</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="859" />
         <source>Restoring...</source>
-        <translation>Przywracanie...</translation>
+        <translation>Obnovování...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="872" />
         <source>Confirm Scramble</source>
-        <translation>Potwierdź tasowanie</translation>
+        <translation>Potvrdit náhodné přemístění</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="873" />
@@ -1585,308 +1585,308 @@ Tej operacji nie można cofnąć!</numerusform>
 **A mandatory backup will be created first**.
 
 Do you want to proceed?</source>
-        <translation>Czy na pewno chcesz losowo rozmieścić WSZYSTKIE ikony pulpitu?
+        <translation>Opravdu chcete náhodně přemístit pozice VŠECH ikon plochy?
 
-**Najpierw zostanie utworzona obowiązkowa kopia zapasowa**.
+**Nejprve bude vytvořena povinná záloha**.
 
-Czy chcesz kontynuować?</translation>
+Chcete pokračovat?</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="879" />
         <source>Starting desktop icon scrambling (randomization)...</source>
-        <translation>Uruchamianie losowego tasowania ikon pulpitu...</translation>
+        <translation>Spouštění náhodného přemísťování ikon plochy...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="882" />
         <source>Scrambling icons...</source>
-        <translation>Tasowanie ikon...</translation>
+        <translation>Náhodné přemísťování ikon...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="901" />
         <source>Operation completed successfully</source>
-        <translation>Operacja zakończona pomyślnie</translation>
+        <translation>Operace byla úspěšně dokončena</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="907" />
         <source>Operation completed successfully! (%1)</source>
-        <translation>Operacja zakończona pomyślnie! (%1)</translation>
+        <translation>Operace byla úspěšně dokončena! (%1)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="914" />
         <source>%1 successful!</source>
-        <translation>%1 zakończone pomyślnie!</translation>
+        <translation>%1 bylo úspěšné!</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="919" />
         <source>Operation failed</source>
-        <translation>Operacja nie powiodła się</translation>
+        <translation>Operace se nezdařila</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="923" />
         <source>Operation failed (%1). Check the log for details.</source>
-        <translation>Operacja nie powiodła się (%1). Sprawdź dziennik, aby uzyskać szczegóły.</translation>
+        <translation>Operace se nezdařila (%1). Podrobnosti naleznete v protokolu.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="936" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
-        <translation>⚠ Ostrzeżenie: Metadane ekranu brakują lub są niekompletne.</translation>
+        <translation>⚠ Varování: Metadata zobrazení chybí nebo jsou neúplná.</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="941" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
-            <numerusform>⚠ Ostrzeżenie: Zapisano (%n monitor) vs Bieżące (%1 monitor(y/ów)).</numerusform>
-            <numerusform>⚠ Ostrzeżenie: Zapisano (%n monitory) vs Bieżące (%1 monitor(y/ów)).</numerusform>
-            <numerusform>⚠ Ostrzeżenie: Zapisano (%n monitorów) vs Bieżące (%1 monitor(y/ów)).</numerusform>
+            <numerusform>⚠ Varování: Uloženo (%n monitor) vs. aktuální (%1 monitor(ů)).</numerusform>
+            <numerusform>⚠ Varování: Uloženo (%n monitory) vs. aktuální (%1 monitor(ů)).</numerusform>
+            <numerusform>⚠ Varování: Uloženo (%n monitorů) vs. aktuální (%1 monitor(ů)).</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="949" />
         <source>Monitor Mismatch Warning</source>
-        <translation>Ostrzeżenie o niezgodności monitorów</translation>
+        <translation>Varování: Neshoda monitorů</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="950" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
-        <translation>Układ został zapisany z %1 monitorem/monitorami, ale obecnie podłączono %2 monitor/monitory.
+        <translation>Rozvržení bylo uloženo s %1 monitorem(y), ale aktuálně máte připojeno %2 monitor(ů).
 
-Pozycje ikon zostały przywrócone, ale mogą być niedokładne.</translation>
+Pozice ikon byly obnoveny, ale mohou být nepřesné.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="972" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
-        <translation>⚠ Ostrzeżenie: Rozdzielczości ekranu nie odpowiadają zapisanemu układowi.</translation>
+        <translation>⚠ Varování: Rozlišení obrazovky neodpovídá uloženému rozvržení.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="976" />
         <source>Resolution Mismatch Warning</source>
-        <translation>Ostrzeżenie o niezgodności rozdzielczości</translation>
+        <translation>Varování: Neshoda rozlišení</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="977" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
-        <translation>Rozdzielczości ekranu jednego lub więcej monitorów nie odpowiadają zapisanemu układowi.
+        <translation>Rozlišení obrazovky jednoho nebo více monitorů neodpovídá uloženému rozvržení.
 
-Pozycje ikon zostały przywrócone, ale mogą być niedokładne.</translation>
+Pozice ikon byly obnoveny, ale mohou být nepřesné.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="989" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
-        <translation>Automatyczny zapis przy wyjściu włączony. Wykonywanie cichej kopii zapasowej...</translation>
+        <translation>Automatické uložení při ukončení povoleno. Provádění tiché zálohy...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="993" />
         <source>Auto-Save Log</source>
-        <translation>Dziennik automatycznego zapisu</translation>
+        <translation>Protokol automatického ukládání</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1008" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
-        <translation>Aplikacja zminimalizowana do paska zadań. Kliknij lub dwukrotnie kliknij, aby przywrócić.</translation>
+        <translation>Aplikace minimalizována do panelu. Kliknutím nebo dvojklikem obnovíte.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1047" />
         <source>A new version is available! (%1)</source>
-        <translation>Dostępna jest nowa wersja! (%1)</translation>
+        <translation>Je dostupná nová verze! (%1)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1052" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
-        <translation>🔔 Dostępna jest nowa wersja: %1 (aktualna: %2)</translation>
+        <translation>🔔 Je dostupná nová verze: %1 (aktuální: %2)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1066" />
         <source>Shortcut</source>
-        <translation>Skrót</translation>
+        <translation>Zkratka</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1067" />
         <source>Action</source>
-        <translation>Akcja</translation>
+        <translation>Akce</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1071" />
         <source>Quick Save current layout</source>
-        <translation>Szybki zapis bieżącego układu</translation>
+        <translation>Rychlé uložení aktuálního rozvržení</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1075" />
         <source>Open Backup Manager</source>
-        <translation>Otwórz menedżera kopii zapasowych</translation>
+        <translation>Otevřít Správce záloh</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1079" />
         <source>Open Settings menu</source>
-        <translation>Otwórz menu ustawień</translation>
+        <translation>Otevřít nabídku Nastavení</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1083" />
         <source>Open Online User Manual</source>
-        <translation>Otwórz podręcznik użytkownika online</translation>
+        <translation>Otevřít online uživatelskou příručku</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1087" />
         <source>Exit Application</source>
-        <translation>Zamknij aplikację</translation>
+        <translation>Ukončit aplikaci</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1091" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
-        <translation>Wskazówka: Najedź kursorem na przyciski, aby zobaczyć dodatkowe skróty w podpowiedziach.</translation>
+        <translation>Tip: Najeďte myší na tlačítka pro zobrazení dalších zkratek v popisech.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1106" />
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zavřít</translation>
     </message>
 </context><context>
     <name>SplashScreen</name>
     <message>
         <location filename="..\ui\splash_screen.py" line="173" />
         <source>VERSION</source>
-        <translation>WERSJA</translation>
+        <translation>VERZE</translation>
     </message>
     <message>
         <location filename="..\ui\splash_screen.py" line="191" />
         <source>DEVELOPMENT</source>
-        <translation>TWÓRCA</translation>
+        <translation>VÝVOJ</translation>
     </message>
     <message>
         <location filename="..\ui\splash_screen.py" line="207" />
         <source>Loading…</source>
-        <translation>Ładowanie…</translation>
+        <translation>Načítání…</translation>
     </message>
 </context><context>
     <name>UpdateDialog</name>
     <message>
         <location filename="..\ui\update_dialog.py" line="53" />
         <source>Check for Updates</source>
-        <translation>Sprawdź aktualizacje</translation>
+        <translation>Zkontrolovat aktualizace</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="69" />
         <source>Installed version:</source>
-        <translation>Zainstalowana wersja:</translation>
+        <translation>Nainstalovaná verze:</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="77" />
         <source>Latest version:</source>
-        <translation>Najnowsza wersja:</translation>
+        <translation>Nejnovější verze:</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="142" />
         <location filename="..\ui\update_dialog.py" line="78" />
         <source>Checking...</source>
-        <translation>Sprawdzanie...</translation>
+        <translation>Kontrolování...</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="100" />
         <source>Download Update</source>
-        <translation>Pobierz aktualizację</translation>
+        <translation>Stáhnout aktualizaci</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="105" />
         <source>Check Again</source>
-        <translation>Sprawdź ponownie</translation>
+        <translation>Zkontrolovat znovu</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="109" />
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zavřít</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="164" />
         <source>Could not parse version numbers.</source>
-        <translation>Nie można przetworzyć numerów wersji.</translation>
+        <translation>Nelze analyzovat čísla verzí.</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="171" />
         <source>A new version is available!</source>
-        <translation>Dostępna jest nowa wersja!</translation>
+        <translation>Je dostupná nová verze!</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="177" />
         <source>You are using the latest version.</source>
-        <translation>Używasz najnowszej wersji.</translation>
+        <translation>Používáte nejnovější verzi.</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="182" />
         <source>You are using a pre-release version.</source>
-        <translation>Używasz wersji przedpremierowej.</translation>
+        <translation>Používáte předběžnou verzi.</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="188" />
         <source>Unknown</source>
-        <translation>Nieznany</translation>
+        <translation>Neznámý</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="191" />
         <source>Could not check for updates:</source>
-        <translation>Nie można sprawdzić aktualizacji:</translation>
+        <translation>Nelze zkontrolovat aktualizace:</translation>
     </message>
 </context><context>
     <name>_DiffCanvas</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="216" />
         <source>No Preview Available</source>
-        <translation>Brak dostępnego podglądu</translation>
+        <translation>Náhled není k dispozici</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="276" />
         <source>✓ already in place</source>
-        <translation>✓ już na miejscu</translation>
+        <translation>✓ již na místě</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="278" />
         <source>↕ will move</source>
-        <translation>↕ zostanie przesunięta</translation>
+        <translation>↕ přesune se</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="281" />
         <source>⚠ not on desktop</source>
-        <translation>⚠ nie ma na pulpicie</translation>
+        <translation>⚠ není na ploše</translation>
     </message>
 </context><context>
     <name>_LegendPanel</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="311" />
         <source>Already in place, will not move</source>
-        <translation>Już na miejscu, nie zostanie przesunięta</translation>
+        <translation>Již na místě, nebude přesunuta</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="312" />
         <source>Will move  (orange = now,  red = target)</source>
-        <translation>Zostanie przesunięta  (pomarańczowy = teraz,  czerwony = cel)</translation>
+        <translation>Bude přesunuta (oranžová = nyní, červená = cíl)</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="313" />
         <source>In backup, not on desktop</source>
-        <translation>W kopii zapasowej, nie ma na pulpicie</translation>
+        <translation>V záloze, není na ploše</translation>
     </message>
 </context><context>
     <name>_PickBackupDialog</name>
     <message>
         <location filename="..\ui\backup_dialog.py" line="863" />
         <source>Pick Backup to Compare Against</source>
-        <translation>Wybierz kopię zapasową do porównania</translation>
+        <translation>Vybrat zálohu pro porovnání</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="867" />
         <source>Select the second backup file:</source>
-        <translation>Wybierz drugi plik kopii zapasowej:</translation>
+        <translation>Vyberte druhý záložní soubor:</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="881" />
         <source>Compare</source>
-        <translation>Porównaj</translation>
+        <translation>Porovnat</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="883" />
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Zrušit</translation>
     </message>
 </context></TS>

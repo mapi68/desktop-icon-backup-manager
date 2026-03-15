@@ -515,47 +515,42 @@ Devam etmek istediğinizden emin misiniz?</translation>
 </context><context>
     <name>CLI</name>
     <message>
-        <location filename="..\main.py" line="256" />
-        <source>Desktop Icon Backup Manager CLI</source>
-        <translation>Desktop Icon Backup Manager CLI</translation>
-    </message>
-    <message>
-        <location filename="..\main.py" line="261" />
+        <location filename="..\main.py" line="262" />
         <source>Perform a backup</source>
         <translation>Yedek al</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="267" />
+        <location filename="..\main.py" line="268" />
         <source>Restore a specific backup or latest</source>
         <translation>Belirli bir yedeği veya en sonuncuyu geri yükle</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="272" />
+        <location filename="..\main.py" line="273" />
         <source>Run without showing the GUI</source>
         <translation>Grafik arayüz göstermeden çalıştır</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="293" />
+        <location filename="..\main.py" line="294" />
         <source>[SILENT]</source>
         <translation>[SESİZ]</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="298" />
+        <location filename="..\main.py" line="299" />
         <source>Starting silent backup...</source>
         <translation>Sessiz yedekleme başlatılıyor...</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="301" />
+        <location filename="..\main.py" line="302" />
         <source>Silent CLI Backup</source>
         <translation>Sessiz CLI yedeklemesi</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="315" />
+        <location filename="..\main.py" line="316" />
         <source>Error: No backup files found for latest restore.</source>
         <translation>Hata: En son geri yükleme için yedek dosyası bulunamadı.</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="323" />
+        <location filename="..\main.py" line="324" />
         <source>Starting silent restore from: %1</source>
         <translation>Sessiz geri yükleme başlatılıyor: %1</translation>
     </message>
@@ -810,12 +805,12 @@ Devam etmek istediğinizden emin misiniz?</translation>
 </context><context>
     <name>Main</name>
     <message>
-        <location filename="..\main.py" line="369" />
+        <location filename="..\main.py" line="370" />
         <source>Critical Error</source>
         <translation>Kritik hata</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="370" />
+        <location filename="..\main.py" line="371" />
         <source>Failed to start application:
 %1</source>
         <translation>Uygulama başlatılamadı:
@@ -824,206 +819,211 @@ Devam etmek istediğinizden emin misiniz?</translation>
 </context><context>
     <name>MainWindow</name>
     <message>
-        <location filename="..\ui\main_window.py" line="61" />
+        <location filename="..\ui\main_window.py" line="62" />
         <source>Unknown</source>
         <translation>Bilinmiyor</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="91" />
+        <location filename="..\ui\main_window.py" line="92" />
         <source>Quick Save</source>
         <translation>Hızlı kaydet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="93" />
+        <location filename="..\ui\main_window.py" line="94" />
         <source>Quick Save (Tray)</source>
         <translation>Hızlı kaydet (Tepsi)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="97" />
+        <location filename="..\ui\main_window.py" line="98" />
         <source>Restore Latest</source>
         <translation>En sonuncuyu geri yükle</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="103" />
+        <location filename="..\ui\main_window.py" line="104" />
         <source>Show Window</source>
         <translation>Pencereyi göster</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="107" />
+        <location filename="..\ui\main_window.py" line="108" />
         <source>Exit</source>
         <translation>Çıkış</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="128" />
+        <location filename="..\ui\main_window.py" line="129" />
         <source>Desktop Icon Backup Manager by mapi68</source>
         <translation>Desktop Icon Backup Manager tarafından mapi68</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="133" />
+        <location filename="..\ui\main_window.py" line="134" />
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="136" />
+        <location filename="..\ui\main_window.py" line="137" />
         <source>Scramble Desktop Icons (Random)</source>
         <translation>Masaüstü simgelerini karıştır (Rastgele)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="139" />
+        <location filename="..\ui\main_window.py" line="140" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
         <translation>Zorunlu yedek oluşturduktan sonra tüm masaüstü simgelerinin konumunu rastgele düzenler.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="147" />
+        <location filename="..\ui\main_window.py" line="148" />
         <source>Remove All Backups...</source>
         <translation>Tüm yedekleri kaldır...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="153" />
+        <location filename="..\ui\main_window.py" line="154" />
         <source>📤 Export Backups...</source>
         <translation>📤 Yedekleri Dışa Aktar...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="154" />
+        <location filename="..\ui\main_window.py" line="155" />
         <source>Export backups to a folder or ZIP archive</source>
         <translation>Yedekleri bir klasöre veya ZIP arşivine dışa aktar</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="158" />
+        <location filename="..\ui\main_window.py" line="159" />
         <source>📥 Import Backups...</source>
         <translation>📥 Yedekleri İçe Aktar...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="160" />
+        <location filename="..\ui\main_window.py" line="161" />
         <source>Import backup files (.json) or a ZIP archive</source>
         <translation>Yedek dosyalarını (.json) veya ZIP arşivini içe aktar</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="166" />
+        <location filename="..\ui\main_window.py" line="167" />
         <source>E&amp;xit</source>
         <translation>Çı&amp;kış</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="404" />
-        <location filename="..\ui\main_window.py" line="171" />
+        <location filename="..\ui\main_window.py" line="415" />
+        <location filename="..\ui\main_window.py" line="172" />
         <source>&amp;Settings</source>
         <translation>&amp;Ayarlar</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="173" />
+        <location filename="..\ui\main_window.py" line="174" />
         <source>Open Settings Menu</source>
         <translation>Ayarlar menüsünü aç</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="941" />
-        <location filename="..\ui\main_window.py" line="179" />
+        <location filename="..\ui\main_window.py" line="994" />
+        <location filename="..\ui\main_window.py" line="180" />
         <source>Auto-Save on Exit</source>
         <translation>Çıkışta otomatik kaydet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="187" />
+        <location filename="..\ui\main_window.py" line="188" />
         <source>Auto-Restore on Startup</source>
         <translation>Başlangıçta otomatik geri yükle</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="195" />
+        <location filename="..\ui\main_window.py" line="196" />
         <source>Check for Updates on Startup</source>
         <translation>Başlangıçta güncellemeleri kontrol et</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="206" />
+        <location filename="..\ui\main_window.py" line="207" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>Geri yüklemede uyarlamalı ölçeklendirmeyi etkinleştir</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="217" />
+        <location filename="..\ui\main_window.py" line="218" />
         <source>Start Minimized to Tray</source>
         <translation>Tepsiye küçültülmüş olarak başlat</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="225" />
+        <location filename="..\ui\main_window.py" line="226" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>Kapatma düğmesine ('X') basıldığında tepsiye küçült</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="235" />
+        <location filename="..\ui\main_window.py" line="236" />
         <source>Automatic Backup Cleanup Limit</source>
         <translation>Otomatik yedek temizleme limiti</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="240" />
+        <location filename="..\ui\main_window.py" line="241" />
         <source>Disabled (Keep All)</source>
         <translation>Devre dışı (Tümünü sakla)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="241" />
+        <location filename="..\ui\main_window.py" line="242" />
         <source>Keep Last 5</source>
         <translation>Son 5'i sakla</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="242" />
+        <location filename="..\ui\main_window.py" line="243" />
         <source>Keep Last 10</source>
         <translation>Son 10'u sakla</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="243" />
+        <location filename="..\ui\main_window.py" line="244" />
         <source>Keep Last 25</source>
         <translation>Son 25'i sakla</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="244" />
+        <location filename="..\ui\main_window.py" line="245" />
         <source>Keep Last 50</source>
         <translation>Son 50'yi sakla</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="255" />
+        <location filename="..\ui\main_window.py" line="256" />
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="257" />
+        <location filename="..\ui\main_window.py" line="258" />
         <source>Online User Manual</source>
         <translation>Çevrimiçi kullanıcı kılavuzu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1042" />
-        <location filename="..\ui\main_window.py" line="1010" />
-        <location filename="..\ui\main_window.py" line="264" />
+        <location filename="..\ui\main_window.py" line="1095" />
+        <location filename="..\ui\main_window.py" line="1063" />
+        <location filename="..\ui\main_window.py" line="265" />
         <source>Keyboard Shortcuts</source>
         <translation>Klavye kısayolları</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="270" />
+        <location filename="..\ui\main_window.py" line="271" />
         <source>Check for Updates...</source>
         <translation>Güncellemeleri kontrol et...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="276" />
+        <location filename="..\ui\main_window.py" line="277" />
         <source>&amp;About</source>
         <translation>&amp;Hakkında</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="282" />
+        <location filename="..\ui\main_window.py" line="283" />
         <source>Support on Ko-fi...</source>
         <translation>Ko-fi'de destek ol...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="297" />
+        <location filename="..\ui\main_window.py" line="298" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>İsteğe bağlı: Açıklayıcı bir etiket/açıklama girin...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="301" />
+        <location filename="..\ui\main_window.py" line="305" />
+        <source>Select a profile to auto-fill the tag field</source>
+        <translation>Etiket alanını otomatik doldurmak için bir profil seçin</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="311" />
         <source>Save Tag:</source>
         <translation>Etiketi kaydet:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="308" />
+        <location filename="..\ui\main_window.py" line="319" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 HIZLI YEDEK KAYDET</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="312" />
+        <location filename="..\ui\main_window.py" line="323" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -1032,22 +1032,22 @@ Shortcut: Ctrl+S</source>
 Kısayol: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="320" />
+        <location filename="..\ui\main_window.py" line="331" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ EN SONUNCUYU GERİ YÜKLE</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="323" />
+        <location filename="..\ui\main_window.py" line="334" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>Bulunan EN SON yedek dosyasından simge konumlarını geri yükle.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="328" />
+        <location filename="..\ui\main_window.py" line="339" />
         <source>↺ BACKUP MANAGER</source>
         <translation>↺ YEDEK YÖNETİCİSİ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="332" />
+        <location filename="..\ui\main_window.py" line="343" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -1056,50 +1056,50 @@ Shortcut: Ctrl+M</source>
 Kısayol: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="346" />
+        <location filename="..\ui\main_window.py" line="357" />
         <source>Activity Log:</source>
         <translation>Etkinlik günlüğü:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="357" />
+        <location filename="..\ui\main_window.py" line="368" />
         <source>Current Resolution: %1</source>
         <translation>Mevcut çözünürlük: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="364" />
+        <location filename="..\ui\main_window.py" line="375" />
         <source>Support on Ko-fi</source>
         <translation>Ko-fi'de destek ol</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="370" />
+        <location filename="..\ui\main_window.py" line="381" />
         <source>Clear Log</source>
         <translation>Günlüğü temizle</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="412" />
+        <location filename="..\ui\main_window.py" line="423" />
         <source>Settings menu not found</source>
         <translation>Ayarlar menüsü bulunamadı</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="424" />
+        <location filename="..\ui\main_window.py" line="435" />
         <source>Opening online user manual in browser...</source>
         <translation>Çevrimiçi kullanıcı kılavuzu tarayıcıda açılıyor...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="426" />
+        <location filename="..\ui\main_window.py" line="437" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ Kılavuz URL'si açılamadı</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="869" />
-        <location filename="..\ui\main_window.py" line="660" />
-        <location filename="..\ui\main_window.py" line="627" />
-        <location filename="..\ui\main_window.py" line="429" />
+        <location filename="..\ui\main_window.py" line="922" />
+        <location filename="..\ui\main_window.py" line="713" />
+        <location filename="..\ui\main_window.py" line="680" />
+        <location filename="..\ui\main_window.py" line="440" />
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="430" />
+        <location filename="..\ui\main_window.py" line="441" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -1110,201 +1110,276 @@ Lütfen manuel olarak ziyaret edin:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="437" />
+        <location filename="..\ui\main_window.py" line="448" />
         <source>Save</source>
         <translation>Kaydet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="440" />
+        <location filename="..\ui\main_window.py" line="451" />
         <source>Quick Backup (Shortcut)</source>
         <translation>Hızlı yedek (Kısayol)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="444" />
+        <location filename="..\ui\main_window.py" line="455" />
         <source>Backup Manager</source>
         <translation>Yedek yöneticisi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="449" />
+        <location filename="..\ui\main_window.py" line="460" />
         <source>Settings</source>
         <translation>Ayarlar</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="484" />
+        <location filename="..\ui\main_window.py" line="495" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>Otomatik temizleme limiti: %n yedek (0 = Devre dışı).</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="954" />
-        <location filename="..\ui\main_window.py" line="860" />
-        <location filename="..\ui\main_window.py" line="501" />
+        <location filename="..\ui\main_window.py" line="1007" />
+        <location filename="..\ui\main_window.py" line="913" />
+        <location filename="..\ui\main_window.py" line="512" />
         <source>Desktop Icon Manager</source>
         <translation>Masaüstü simge yöneticisi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="531" />
+        <location filename="..\ui\main_window.py" line="542" />
         <source>Backup list updated (item deleted).</source>
         <translation>Yedek listesi güncellendi (öğe silindi).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="540" />
+        <location filename="..\ui\main_window.py" line="551" />
         <source>Backup list updated.</source>
         <translation>Yedek listesi güncellendi.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="553" />
+        <location filename="..\ui\main_window.py" line="564" />
         <source>Backup list updated (imported).</source>
         <translation>Yedek listesi güncellendi (içe aktarıldı).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="562" />
+        <location filename="..\ui\main_window.py" line="578" />
+        <source>— Profiles —</source>
+        <translation>— Profiller —</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="580" />
+        <source>Work</source>
+        <translation>İş</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="581" />
+        <source>Gaming</source>
+        <translation>Oyun</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="582" />
+        <source>Presentation</source>
+        <translation>Sunum</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="583" />
+        <source>Dev / Coding</source>
+        <translation>Geliştirme / Kodlama</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="584" />
+        <source>Meeting</source>
+        <translation>Toplantı</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="585" />
+        <source>Home</source>
+        <translation>Ev</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="586" />
+        <source>Office</source>
+        <translation>Ofis</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="587" />
+        <source>Laptop</source>
+        <translation>Dizüstü</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="588" />
+        <source>Docked / External Monitor</source>
+        <translation>Yerleşik / Harici Monitör</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="589" />
+        <source>Clean Desktop</source>
+        <translation>Temiz Masaüstü</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="590" />
+        <source>Pre-Update</source>
+        <translation>Güncellemeden önce</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="591" />
+        <source>Pre-Reboot</source>
+        <translation>Yeniden başlatmadan önce</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="592" />
+        <source>Favourite</source>
+        <translation>Favori</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="593" />
+        <source>Test</source>
+        <translation>Test</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="615" />
         <source>Quick Backup</source>
         <translation>Hızlı yedek</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="571" />
+        <location filename="..\ui\main_window.py" line="624" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
         <translation>Windows masaüstü simge konumlarını kaydetmek ve geri yüklemek için basit ama güçlü bir araç.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="572" />
+        <location filename="..\ui\main_window.py" line="625" />
         <source>Key Features:</source>
         <translation>Temel özellikler:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="574" />
+        <location filename="..\ui\main_window.py" line="627" />
         <source>Quick Save:</source>
         <translation>Hızlı kaydet:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="574" />
+        <location filename="..\ui\main_window.py" line="627" />
         <source>Save icons with an optional descriptive tag.</source>
         <translation>Simgeleri isteğe bağlı açıklayıcı bir etiketle kaydet.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="575" />
+        <location filename="..\ui\main_window.py" line="628" />
         <source>Backup Management:</source>
         <translation>Yedek yönetimi:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="575" />
+        <location filename="..\ui\main_window.py" line="628" />
         <source>Select, restore, or delete specific backups.</source>
         <translation>Belirli yedekleri seç, geri yükle veya sil.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="576" />
+        <location filename="..\ui\main_window.py" line="629" />
         <source>Live Diff Preview:</source>
         <translation>Canlı fark önizlemesi:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="576" />
+        <location filename="..\ui\main_window.py" line="629" />
         <source>See which icons will move before restoring.</source>
         <translation>Geri yüklemeden önce hangi simgelerin hareket edeceğini gör.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="577" />
+        <location filename="..\ui\main_window.py" line="630" />
         <source>Visual Preview:</source>
         <translation>Görsel önizleme:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="577" />
+        <location filename="..\ui\main_window.py" line="630" />
         <source>See a mini-map of your layout.</source>
         <translation>Düzeninizin mini haritasını gör.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="578" />
+        <location filename="..\ui\main_window.py" line="631" />
         <source>Backup Comparison:</source>
         <translation>Yedek karşılaştırması:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="578" />
+        <location filename="..\ui\main_window.py" line="631" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
         <translation>Eklenen, kaldırılan ve taşınan simgeleri görmek için herhangi iki yedeği karşılaştır.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="579" />
+        <location filename="..\ui\main_window.py" line="632" />
         <source>Adaptive Scaling:</source>
         <translation>Uyarlamalı ölçeklendirme:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="579" />
+        <location filename="..\ui\main_window.py" line="632" />
         <source>Automatic adjustment for different resolutions.</source>
         <translation>Farklı çözünürlükler için otomatik ayarlama.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="580" />
+        <location filename="..\ui\main_window.py" line="633" />
         <source>Automatic Cleanup:</source>
         <translation>Otomatik temizleme:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="580" />
+        <location filename="..\ui\main_window.py" line="633" />
         <source>Set a limit on backups to keep.</source>
         <translation>Saklanacak yedekler için bir limit belirle.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="581" />
+        <location filename="..\ui\main_window.py" line="634" />
         <source>Random Scramble:</source>
         <translation>Rastgele karıştırma:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="581" />
+        <location filename="..\ui\main_window.py" line="634" />
         <source>Randomize icon positions after backup.</source>
         <translation>Yedeklemeden sonra simge konumlarını rastgele düzenle.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="582" />
+        <location filename="..\ui\main_window.py" line="635" />
         <source>Tray Integration:</source>
         <translation>Tepsi entegrasyonu:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="582" />
+        <location filename="..\ui\main_window.py" line="635" />
         <source>Quick access via tray.</source>
         <translation>Tepsi aracılığıyla hızlı erişim.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="584" />
+        <location filename="..\ui\main_window.py" line="637" />
         <source>Version:</source>
         <translation>Sürüm:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="585" />
+        <location filename="..\ui\main_window.py" line="638" />
         <source>Development:</source>
         <translation>Geliştirme:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="586" />
+        <location filename="..\ui\main_window.py" line="639" />
         <source>Support this project on Ko-fi</source>
         <translation>Bu projeyi Ko-fi'de destekle</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="588" />
+        <location filename="..\ui\main_window.py" line="641" />
         <source>About Desktop Icon Backup Manager</source>
         <translation>Desktop Icon Backup Manager hakkında</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="594" />
+        <location filename="..\ui\main_window.py" line="647" />
         <source>No backup files found to delete.</source>
         <translation>Silinecek yedek dosyası bulunamadı.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="597" />
+        <location filename="..\ui\main_window.py" line="650" />
         <source>No Backups Found</source>
         <translation>Yedek bulunamadı</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="598" />
+        <location filename="..\ui\main_window.py" line="651" />
         <source>There are no backup files to delete.</source>
         <translation>Silinecek yedek dosyası yok.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="604" />
+        <location filename="..\ui\main_window.py" line="657" />
         <source>WARNING: Delete All Backups</source>
         <translation>UYARI: Tüm yedekleri sil</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="605" />
+        <location filename="..\ui\main_window.py" line="658" />
         <source>Are you absolutely sure you want to permanently delete ALL %n desktop icon backup file(s)?
 
 This action cannot be undone!</source>
@@ -1315,158 +1390,158 @@ Bu işlem geri alınamaz!</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="823" />
-        <location filename="..\ui\main_window.py" line="610" />
+        <location filename="..\ui\main_window.py" line="876" />
+        <location filename="..\ui\main_window.py" line="663" />
         <source>Yes</source>
         <translation>Evet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="824" />
-        <location filename="..\ui\main_window.py" line="611" />
+        <location filename="..\ui\main_window.py" line="877" />
+        <location filename="..\ui\main_window.py" line="664" />
         <source>No</source>
         <translation>Hayır</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="613" />
+        <location filename="..\ui\main_window.py" line="666" />
         <source>Starting deletion of all backup files...</source>
         <translation>Tüm yedek dosyalarının silinmesi başlatılıyor...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="853" />
-        <location filename="..\ui\main_window.py" line="621" />
+        <location filename="..\ui\main_window.py" line="906" />
+        <location filename="..\ui\main_window.py" line="674" />
         <source>Success</source>
         <translation>Başarılı</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="622" />
+        <location filename="..\ui\main_window.py" line="675" />
         <source>All backup files have been successfully deleted.</source>
         <translation>Tüm yedek dosyaları başarıyla silindi.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="628" />
+        <location filename="..\ui\main_window.py" line="681" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>Bazı dosyalar silinemedi. Ayrıntılar için Etkinlik Günlüğü'nü kontrol edin.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="636" />
+        <location filename="..\ui\main_window.py" line="689" />
         <source>Starting new timestamped backup...</source>
         <translation>Yeni zaman damgalı yedekleme başlatılıyor...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="638" />
+        <location filename="..\ui\main_window.py" line="691" />
         <source>  (Tag: %1)</source>
         <translation>  (Etiket: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="642" />
+        <location filename="..\ui\main_window.py" line="695" />
         <source>Saving...</source>
         <translation>Kaydediliyor...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="660" />
+        <location filename="..\ui\main_window.py" line="713" />
         <source>No backup files found to restore!</source>
         <translation>Geri yüklenecek yedek dosyası bulunamadı!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="662" />
+        <location filename="..\ui\main_window.py" line="715" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ Geri yükleme başarısız: Yedek dosyası bulunamadı.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="682" />
-        <location filename="..\ui\main_window.py" line="681" />
-        <location filename="..\ui\main_window.py" line="676" />
-        <location filename="..\ui\main_window.py" line="675" />
+        <location filename="..\ui\main_window.py" line="735" />
+        <location filename="..\ui\main_window.py" line="734" />
+        <location filename="..\ui\main_window.py" line="729" />
+        <location filename="..\ui\main_window.py" line="728" />
         <source>N/A</source>
         <translation>Yok</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="685" />
+        <location filename="..\ui\main_window.py" line="738" />
         <source>N/A (Old Format)</source>
         <translation>Yok (Eski format)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="714" />
+        <location filename="..\ui\main_window.py" line="767" />
         <source>Confirm Restore — Live Preview</source>
         <translation>Geri yüklemeyi onayla — Canlı Önizleme</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="724" />
+        <location filename="..\ui\main_window.py" line="777" />
         <source>File</source>
         <translation>Dosya</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="725" />
+        <location filename="..\ui\main_window.py" line="778" />
         <source>Resolution</source>
         <translation>Çözünürlük</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="726" />
+        <location filename="..\ui\main_window.py" line="779" />
         <source>Icons</source>
         <translation>Simgeler</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="727" />
+        <location filename="..\ui\main_window.py" line="780" />
         <source>Tag</source>
         <translation>Etiket</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="728" />
+        <location filename="..\ui\main_window.py" line="781" />
         <source>Timestamp</source>
         <translation>Zaman damgası</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="740" />
+        <location filename="..\ui\main_window.py" line="793" />
         <source>will move</source>
         <translation>taşınacak</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="741" />
+        <location filename="..\ui\main_window.py" line="794" />
         <source>already in place</source>
         <translation>zaten doğru konumda</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="742" />
+        <location filename="..\ui\main_window.py" line="795" />
         <source>not on desktop</source>
         <translation>masaüstünde yok</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="751" />
+        <location filename="..\ui\main_window.py" line="804" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>Düzen Önizlemesi (kaydedilen konumlar vs. güncel):</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="773" />
+        <location filename="..\ui\main_window.py" line="826" />
         <source>↺ Restore</source>
         <translation>↺ Geri Yükle</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="780" />
+        <location filename="..\ui\main_window.py" line="833" />
         <source>Cancel</source>
         <translation>İptal</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="800" />
+        <location filename="..\ui\main_window.py" line="853" />
         <source>Starting restore from backup '%1'...</source>
         <translation>'%1' yedeğinden geri yükleme başlatılıyor...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="801" />
+        <location filename="..\ui\main_window.py" line="854" />
         <source>latest</source>
         <translation>en son</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="806" />
+        <location filename="..\ui\main_window.py" line="859" />
         <source>Restoring...</source>
         <translation>Geri yükleniyor...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="819" />
+        <location filename="..\ui\main_window.py" line="872" />
         <source>Confirm Scramble</source>
         <translation>Karıştırmayı onayla</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="820" />
+        <location filename="..\ui\main_window.py" line="873" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1479,59 +1554,59 @@ Do you want to proceed?</source>
 Devam etmek istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="826" />
+        <location filename="..\ui\main_window.py" line="879" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>Masaüstü simgesi karıştırma başlatılıyor...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="829" />
+        <location filename="..\ui\main_window.py" line="882" />
         <source>Scrambling icons...</source>
         <translation>Simgeler karıştırılıyor...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="848" />
+        <location filename="..\ui\main_window.py" line="901" />
         <source>Operation completed successfully</source>
         <translation>İşlem başarıyla tamamlandı</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="854" />
+        <location filename="..\ui\main_window.py" line="907" />
         <source>Operation completed successfully! (%1)</source>
         <translation>İşlem başarıyla tamamlandı! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="861" />
+        <location filename="..\ui\main_window.py" line="914" />
         <source>%1 successful!</source>
         <translation>%1 başarılı!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="866" />
+        <location filename="..\ui\main_window.py" line="919" />
         <source>Operation failed</source>
         <translation>İşlem başarısız</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="870" />
+        <location filename="..\ui\main_window.py" line="923" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>İşlem başarısız (%1). Ayrıntılar için günlüğü kontrol edin.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="883" />
+        <location filename="..\ui\main_window.py" line="936" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ Uyarı: Ekran meta verileri eksik veya tamamlanmamış.</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="888" />
+        <location filename="..\ui\main_window.py" line="941" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ Uyarı: Kaydedilen (%n monitör) vs. Mevcut (%1 monitör).</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="896" />
+        <location filename="..\ui\main_window.py" line="949" />
         <source>Monitor Mismatch Warning</source>
         <translation>Monitör uyumsuzluğu uyarısı</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="897" />
+        <location filename="..\ui\main_window.py" line="950" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1540,17 +1615,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Simge konumları geri yüklendi, ancak yanlış olabilir.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="919" />
+        <location filename="..\ui\main_window.py" line="972" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ Uyarı: Ekran çözünürlükleri kaydedilen düzenle eşleşmiyor.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="923" />
+        <location filename="..\ui\main_window.py" line="976" />
         <source>Resolution Mismatch Warning</source>
         <translation>Çözünürlük uyumsuzluğu uyarısı</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="924" />
+        <location filename="..\ui\main_window.py" line="977" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1559,94 +1634,89 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Simge konumları geri yüklendi, ancak yanlış olabilir.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="936" />
+        <location filename="..\ui\main_window.py" line="989" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>Çıkışta otomatik kaydet etkin. Sessiz yedekleme yapılıyor...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="940" />
+        <location filename="..\ui\main_window.py" line="993" />
         <source>Auto-Save Log</source>
         <translation>Otomatik kaydetme günlüğü</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="955" />
+        <location filename="..\ui\main_window.py" line="1008" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>Uygulama tepsiye küçültüldü. Geri yüklemek için tıklayın veya çift tıklayın.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="993" />
-        <source>Desktop Icon Backup Manager</source>
-        <translation>Desktop Icon Backup Manager</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="994" />
+        <location filename="..\ui\main_window.py" line="1047" />
         <source>A new version is available! (%1)</source>
         <translation>Yeni bir sürüm mevcut! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="999" />
+        <location filename="..\ui\main_window.py" line="1052" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 Yeni bir sürüm mevcut: %1 (mevcut: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1013" />
+        <location filename="..\ui\main_window.py" line="1066" />
         <source>Shortcut</source>
         <translation>Kısayol</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1014" />
+        <location filename="..\ui\main_window.py" line="1067" />
         <source>Action</source>
         <translation>Eylem</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1018" />
+        <location filename="..\ui\main_window.py" line="1071" />
         <source>Quick Save current layout</source>
         <translation>Mevcut düzeni hızlıca kaydet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1022" />
+        <location filename="..\ui\main_window.py" line="1075" />
         <source>Open Backup Manager</source>
         <translation>Yedek yöneticisini aç</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1026" />
+        <location filename="..\ui\main_window.py" line="1079" />
         <source>Open Settings menu</source>
         <translation>Ayarlar menüsünü aç</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1030" />
+        <location filename="..\ui\main_window.py" line="1083" />
         <source>Open Online User Manual</source>
         <translation>Çevrimiçi kullanıcı kılavuzunu aç</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1034" />
+        <location filename="..\ui\main_window.py" line="1087" />
         <source>Exit Application</source>
         <translation>Uygulamadan çık</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1038" />
+        <location filename="..\ui\main_window.py" line="1091" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
         <translation>İpucu: Ek kısayolları araç ipuçlarında görmek için düğmelerin üzerine gelin.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1053" />
+        <location filename="..\ui\main_window.py" line="1106" />
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
 </context><context>
     <name>SplashScreen</name>
     <message>
-        <location filename="..\ui\splash_screen.py" line="169" />
+        <location filename="..\ui\splash_screen.py" line="173" />
         <source>VERSION</source>
         <translation>SÜRÜM</translation>
     </message>
     <message>
-        <location filename="..\ui\splash_screen.py" line="189" />
+        <location filename="..\ui\splash_screen.py" line="191" />
         <source>DEVELOPMENT</source>
         <translation>GELİŞTİRME</translation>
     </message>
     <message>
-        <location filename="..\ui\splash_screen.py" line="212" />
+        <location filename="..\ui\splash_screen.py" line="207" />
         <source>Loading…</source>
         <translation>Yükleniyor…</translation>
     </message>
