@@ -175,6 +175,9 @@ No installation. No Python. No dependencies. Download and run.
 4. Run `Desktop Icon Backup Manager.exe`
 5. The `icon_backups` folder and `settings.ini` are created automatically
 
+> [!TIP]
+> **Sync across multiple Windows PCs with OneDrive:** Create a new folder inside your OneDrive (e.g. `C:\Users\YourName\OneDrive\DIBM\`), then extract `desktop-icon-backup-manager.zip` into it. Since `icon_backups` and `settings.ini` are always stored next to the `.exe`, OneDrive will sync your backups automatically across all your PCs. Simply run the `.exe` from that OneDrive folder on each machine. Avoid running the app on two PCs simultaneously to prevent file conflicts.
+
 ### Option 2: Run from Source (Python)
 
 ```bash
