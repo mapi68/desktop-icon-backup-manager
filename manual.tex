@@ -330,6 +330,14 @@ to save and restore Windows desktop icon positions with advanced
 features for managing multiple layouts, adaptive scaling across
 different resolutions, and complete automation through configurable settings.
 
+Windows has a long-standing bug --- present in every version from
+Windows 7 through Windows 11 --- that silently rearranges desktop
+icons after events such as a Windows Update, connecting or
+disconnecting a monitor, waking from sleep, or exiting a full-screen
+game. Desktop Icon Backup Manager solves this by letting you snapshot
+your exact layout at any time and restore it in a single click,
+with a live preview of every change before you commit.
+
 \subsection{Key Features}
 
 \begin{itemize}[leftmargin=*]
@@ -344,6 +352,10 @@ different resolutions, and complete automation through configurable settings.
   \item \textbf{Inline Tag Editing}: Double-click any tag cell in the
     Backup Manager table to rename a backup in place --- the change is
     written to the JSON file immediately; no dialog required
+  \item \textbf{Colour-coded Tag Bar}: Each distinct tag is assigned a
+    unique colour bar on the left edge of its row in the Backup Manager
+    --- consistent tags always share the same colour for instant visual
+    identification without reading the text
   \item \textbf{Export Backups}: Export the selected backup or all
     backups to a ZIP archive or a destination folder for portability,
     off-site storage, or sharing between machines
@@ -376,10 +388,11 @@ different resolutions, and complete automation through configurable settings.
   \item \textbf{Command Line Interface}: Full CLI support for scripting
     and scheduled tasks
   \item \textbf{Multi-language Support}: Available in 24 languages ---
-    English, Arabic, Czech, German, Greek, Spanish, Finnish, French,
-    Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Dutch, Polish,
-    Portuguese (BR), Portuguese (PT), Romanian, Russian, Swedish,
-    Turkish, Ukrainian, Simplified Chinese, and Traditional Chinese.
+    Arabic, Czech, Dutch, English, Finnish, French, German, Greek,
+    Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Polish,
+    Portuguese (BR), Portuguese (PT), Romanian, Russian, Simplified
+    Chinese, Spanish, Swedish, Traditional Chinese, Turkish, and
+    Ukrainian.
     Auto-detected from Windows locale, or manually overridden
 \end{itemize}
 
@@ -406,10 +419,17 @@ different resolutions, and complete automation through configurable settings.
 \begin{enumerate}
   \item Download the latest zip file
   \item Extract it in any folder
+    (e.g.\ \texttt{C:\textbackslash{}Tools\textbackslash{}}
+    or a USB drive --- the program is fully portable)
   \item Run \texttt{Desktop Icon Backup Manager.exe}
   \item The \texttt{icon\_backups} folder and \texttt{settings.ini}
-    are created automatically
+    are created automatically next to the executable
 \end{enumerate}
+
+Because all data files are stored relative to the executable,
+the program can be moved or copied to any location at any time
+without losing settings or backups. No entries are written to
+the Windows registry and no administrator rights are required.
 
 \begin{infobox}[Tip: Sync Across Multiple PCs with OneDrive]
   Create a new folder inside your OneDrive (e.g.\
@@ -465,9 +485,21 @@ For users who want to get started immediately, here is the essential workflow:
     Optionally type a descriptive tag in the field above the button,
     or use the \textbf{Profiles} dropdown to the right to
     pre-fill it with a preset name (Work, Gaming, Presentation, etc.).
+    The backup is saved instantly as a small JSON file in the
+    \texttt{icon\_backups} folder next to the executable --- no
+    configuration needed. Each file records the position of every
+    icon on the desktop along with the current screen resolution
+    and monitor count, so the correct layout can always be matched
+    to the right setup.
   \item \textbf{Restore a layout}: Click the red \textbf{RESTORE LATEST}
     button to restore the most recent backup, or open the
     \textbf{BACKUP MANAGER} (blue button) to choose a specific backup.
+    Before confirming, the Backup Manager shows a live diff preview
+    --- a colour-coded overlay of which icons will move, which are
+    already in position, and which are in the backup but no longer
+    on the desktop. If the saved backup was created at a different
+    resolution, enable \textit{Adaptive Scaling} in Settings to
+    have positions recalculated proportionally before restoring.
   \item \textbf{Enable auto-protection}: In the Settings menu, enable
     \textit{Auto-Save on Exit} so your layout is always preserved
     when closing the program.
@@ -1231,7 +1263,10 @@ column header to sort ascending or descending:
 
 \begin{enumerate}
   \item \textbf{Tag / Description}: User-provided description
-    (stretches to fill available space)
+    (stretches to fill available space). Each distinct tag is assigned a
+    unique colour, displayed as a vertical bar on the left edge of the cell
+    --- the same tag always gets the same colour, making layouts instantly
+    recognisable without reading the text.
   \item \textbf{Resolution}: Monitor resolution at save time
     (e.g.\ ``1920x1080'')
   \item \textbf{Icons}: Number of icons in the backup, right-aligned
@@ -1689,6 +1724,14 @@ manipulated directly.
   \item Special characters that might cause issues: \textbackslash /
     : * ? " < > |
 \end{itemize}
+
+\begin{infobox}[Colour-coded tag bars]
+  The Backup Manager assigns a unique colour bar to each distinct tag.
+  Using consistent tag names --- for example, always ``Work'' rather than
+  ``Work Setup'', ``work'', or ``Work Layout'' --- ensures that all related
+  backups share the same colour, making them immediately recognisable in
+  the table without reading the full text.
+\end{infobox}
 
 \subsection{Multi-Monitor Management}
 
@@ -2355,11 +2398,6 @@ pyinstaller --onefile --windowed --icon=icon.ico \
 \subsection{Translation/Localization}
 
 The program uses Qt's translation system for internationalization.
-It is currently available in 24 languages: English, Arabic, Czech,
-German, Greek, Spanish, Finnish, French, Hindi, Italian, Japanese,
-Korean, Norwegian Bokmål, Dutch, Polish, Portuguese (BR), Portuguese
-(PT), Romanian, Russian, Swedish, Turkish, Ukrainian, Simplified
-Chinese, and Traditional Chinese.
 The language is auto-detected from the Windows locale and can be
 manually overridden.
 
