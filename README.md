@@ -110,6 +110,7 @@ Every line of code is on GitHub, MIT licensed, auditable, and forkable. No telem
 
 ### Usability
 - **📋 Sortable + Filterable Backup Table**: Sort by tag, resolution, icon count, or timestamp; real-time search filter
+- **🎨 Colour-coded tag bar**: Each distinct tag gets a unique colour indicator on the left edge of its row in the Backup Manager — consistent tags always get the same colour, making layouts instantly recognisable at a glance
 - **↔️ Fully Resizable Windows**: Adapts to any screen size or DPI setting
 - **🌍 24 Languages**: Auto-detected from Windows locale, or manually overridden. Available in English, Arabic, Czech, German, Greek, Spanish, Finnish, French, Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Dutch, Polish, Portuguese (BR), Portuguese (PT), Romanian, Russian, Swedish, Turkish, Ukrainian, Simplified Chinese, and Traditional Chinese
 - **⌨️ Full Keyboard Navigation**: Every action has a shortcut — see the [shortcuts table](#%EF%B8%8F-keyboard-shortcuts)
@@ -131,6 +132,7 @@ There are a few tools in this space. Here is how they stack up:
 | **Visual dot-map layout preview** | ✅ | ❌ | ❌ | ❌ |
 | **Compare any two backups** | ✅ | ❌ | ❌ | ❌ |
 | **Inline tag editing** | ✅ | ❌ | ❌ | ❌ |
+| **Colour-coded tag bar** | ✅ | ❌ | ❌ | ❌ |
 | **Export / Import backups (ZIP or folder)** | ✅ | ❌ | ❌ | ❌ |
 | Adaptive scaling (resolution change) | ✅ | ✅ | ❌ | ❌ |
 | Multi-monitor support + warnings | ✅ | ✅ | ✅ | ❌ |
@@ -147,7 +149,7 @@ There are a few tools in this space. Here is how they stack up:
 | Multi-language UI | ✅ | ❌ | ✅ | — |
 | Free | ✅ | ✅ | ✅ | — |
 
-> **The bolded rows are where Desktop Icon Backup Manager stands apart.** No other free tool offers a live diff preview, visual layout preview, or cross-backup comparison. These features mean you always know exactly what will happen before you restore — and you can audit your backup history with confidence.
+> **The bolded rows are where Desktop Icon Backup Manager stands apart.** No other free tool offers a live diff preview, visual layout preview, cross-backup comparison, or colour-coded tag bars. These features mean you always know exactly what will happen before you restore — and you can audit your backup history with confidence.
 >
 > **ReIcon** (by Sordum) is a good lightweight option with CLI support and resolution scaling. It lacks visual previews, diff comparison, and backup search — it is simpler but also more limited.
 > **DesktopOK** is the oldest and best-known tool in this category, but it is closed source, has no CLI, no diff preview, and its Windows 11 updates are infrequent.

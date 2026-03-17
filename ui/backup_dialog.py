@@ -22,9 +22,50 @@ from PyQt6.QtWidgets import (
     QTextEdit,
     QSizePolicy,
     QFileDialog,
+    QStyledItemDelegate,
 )
-from PyQt6.QtCore import Qt, pyqtSignal, QSize
-from PyQt6.QtGui import QAction, QColor, QFont
+from PyQt6.QtCore import Qt, pyqtSignal, QSize, QRect
+from PyQt6.QtGui import QAction, QColor, QFont, QPainter
+
+_TAG_COLOR_ROLE = Qt.ItemDataRole.UserRole + 10
+
+_TAG_PALETTE = [
+    QColor("#4A90D9"),  # blue
+    QColor("#7B68EE"),  # purple
+    QColor("#2ECC71"),  # green
+    QColor("#E67E22"),  # orange
+    QColor("#E74C3C"),  # red
+    QColor("#1ABC9C"),  # teal
+    QColor("#F39C12"),  # amber
+    QColor("#E91E8C"),  # pink
+]
+
+
+class TagColorDelegate(QStyledItemDelegate):
+    """Draws a coloured bar on the left edge of the tag cell."""
+
+    BAR_WIDTH = 6
+
+    def paint(self, painter: QPainter, option, index):
+        color = index.data(_TAG_COLOR_ROLE)
+        if color:
+            option = option.__class__(option)
+            option.rect.setLeft(option.rect.left() + self.BAR_WIDTH + 2)
+        super().paint(painter, option, index)
+        if color:
+            bar = QRect(option.rect.left() - self.BAR_WIDTH - 2, option.rect.top(), self.BAR_WIDTH, option.rect.height())
+            painter.save()
+            painter.fillRect(bar, color)
+            painter.restore()
+
+
+def _assign_tag_color(tag: str, cache: dict) -> QColor:
+    """Return a stable colour for *tag*, assigning one from the palette if needed."""
+    if not tag:
+        return None
+    if tag not in cache:
+        cache[tag] = _TAG_PALETTE[len(cache) % len(_TAG_PALETTE)]
+    return cache[tag]
 
 from core.config import Config
 
@@ -130,6 +171,8 @@ class BackupManagerWindow(QDialog):
             self.table.horizontalHeaderItem(col).setTextAlignment(
                 Qt.AlignmentFlag.AlignCenter
             )
+        self.table.setItemDelegateForColumn(0, TagColorDelegate(self.table))
+        self._tag_color_cache: dict = {}
         left.addWidget(self.table)
         h_split.addLayout(left, 4)
 
@@ -241,6 +284,7 @@ class BackupManagerWindow(QDialog):
 
             desc_item = QTableWidgetItem(description)
             desc_item.setData(Qt.ItemDataRole.UserRole, filename)
+            desc_item.setData(_TAG_COLOR_ROLE, _assign_tag_color(description, self._tag_color_cache))
             # Col 0 is editable (tag); tooltip hints the user
             desc_item.setToolTip(self.tr("Double-click to edit the tag/description"))
             self.table.setItem(row, 0, desc_item)
@@ -626,6 +670,7 @@ class BackupManagerWindow(QDialog):
             data["description"] = new_tag
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=4, ensure_ascii=False)
+            item.setData(_TAG_COLOR_ROLE, _assign_tag_color(new_tag, self._tag_color_cache))
             self.list_changed_signal.emit()
         except (OSError, json.JSONDecodeError) as e:
             QMessageBox.critical(
