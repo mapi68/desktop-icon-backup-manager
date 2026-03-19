@@ -112,8 +112,8 @@ Every line of code is on GitHub, MIT licensed, auditable, and forkable. No telem
 - **📋 Sortable + Filterable Backup Table**: Sort by tag, resolution, icon count, or timestamp; real-time search filter
 - **🎨 Colour-coded tag bar**: Each distinct tag gets a unique colour indicator on the left edge of its row in the Backup Manager — consistent tags always get the same colour, making layouts instantly recognisable at a glance
 - **↔️ Fully Resizable Windows**: Adapts to any screen size or DPI setting
-- **🌍 24 Languages**: Auto-detected from Windows locale, or manually overridden. Available in:
-Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, Finnish, French, German, Greek, Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (BR), Portuguese (PT), Romanian, Russian, Spanish, Swedish, Turkish, and Ukrainian
+- **🌍 26 Languages**: Auto-detected from Windows locale, or manually overridden. Available in:
+Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (BR), Portuguese (PT), Romanian, Russian, Slovenian, Spanish, Swedish, Turkish, and Ukrainian
 - **⌨️ Full Keyboard Navigation**: Every action has a shortcut — see the [shortcuts table](#%EF%B8%8F-keyboard-shortcuts)
 - **📋 Timestamped Activity Log**: Full operation history with timestamps; copy with `Ctrl+A` / `Ctrl+C`
 - **🗒️ Persistent Log File**: Every operation is silently written to `history.log` next to the executable (max 500 entries, auto-trimmed). The log file persists across sessions — useful for auditing or troubleshooting past operations. "Clear Log" also clears the file

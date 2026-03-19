@@ -24,32 +24,33 @@ from core.config import Config, resource_path
 from core.icon_manager import DesktopIconManager
 from ui.main_window import MainWindow
 
-# ── Locale name → display name ────────────────────────────────────────────────
 _LOCALE_NAMES = {
     "": "English",
-    "ar_SA": "العربية",
-    "cs_CZ": "Čeština",
-    "de_DE": "Deutsch",
-    "el_GR": "Ελληνικά",
-    "es_ES": "Español",
-    "fi_FI": "Suomi",
-    "fr_FR": "Français",
-    "hi_IN": "हिन्दी",
-    "it_IT": "Italiano",
-    "ja_JP": "日本語",
-    "ko_KR": "한국어",
-    "nb_NO": "Norsk bokmål",
-    "nl_NL": "Nederlands",
-    "pl_PL": "Polski",
-    "pt_BR": "Português (BR)",
-    "pt_PT": "Português (PT)",
-    "ro_RO": "Română",
-    "ru_RU": "Русский",
-    "sv_SE": "Svenska",
-    "tr_TR": "Türkçe",
-    "uk_UA": "Українська",
-    "zh_CN": "中文 (简体)",
-    "zh_TW": "中文 (繁體)",
+    "ar_SA": "Arabic (العربية)",
+    "zh_CN": "Chinese Simplified (中文 简体)",
+    "zh_TW": "Chinese Traditional (中文 繁體)",
+    "cs_CZ": "Czech (Čeština)",
+    "da_DK": "Danish (Dansk)",
+    "nl_NL": "Dutch (Nederlands)",
+    "fi_FI": "Finnish (Suomi)",
+    "fr_FR": "French (Français)",
+    "de_DE": "German (Deutsch)",
+    "el_GR": "Greek (Ελληνικά)",
+    "hi_IN": "Hindi (हिन्दी)",
+    "it_IT": "Italian (Italiano)",
+    "ja_JP": "Japanese (日本語)",
+    "ko_KR": "Korean (한국어)",
+    "nb_NO": "Norwegian (Norsk bokmål)",
+    "pl_PL": "Polish (Polski)",
+    "pt_BR": "Portuguese BR (Português BR)",
+    "pt_PT": "Portuguese PT (Português PT)",
+    "ro_RO": "Romanian (Română)",
+    "ru_RU": "Russian (Русский)",
+    "sl_SI": "Slovenian (Slovenščina)",
+    "es_ES": "Spanish (Español)",
+    "sv_SE": "Swedish (Svenska)",
+    "tr_TR": "Turkish (Türkçe)",
+    "uk_UA": "Ukrainian (Українська)",
 }
 
 
@@ -141,7 +142,7 @@ class LanguageDialog(QDialog):
     def __init__(self, available: list[str], current_lang: str, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Language")
-        self.setFixedWidth(300)
+        self.setFixedWidth(280)
         # Only style interactive controls with accent color.
         # Background/text inherit the system theme automatically.
         self.setStyleSheet("""
@@ -166,7 +167,11 @@ class LanguageDialog(QDialog):
         layout.addWidget(QLabel("Select language:"))
 
         self.combo = QComboBox()
-        for locale in available:
+        english = [loc for loc in available if loc == ""]
+        others = sorted(
+            [loc for loc in available if loc != ""], key=lambda l: _display_name(l)
+        )
+        for locale in english + others:
             self.combo.addItem(_display_name(locale), locale)
 
         # Pre-select current language
@@ -176,6 +181,7 @@ class LanguageDialog(QDialog):
                 break
 
         layout.addWidget(self.combo)
+        self.combo.setSizeAdjustPolicy(QComboBox.SizeAdjustPolicy.AdjustToContents)
 
         self.remember_cb = QCheckBox("Remember this choice")
         self.remember_cb.setChecked(True)

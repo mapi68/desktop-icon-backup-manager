@@ -24,7 +24,7 @@ from PyQt6.QtWidgets import (
     QFileDialog,
     QStyledItemDelegate,
 )
-from PyQt6.QtCore import Qt, pyqtSignal, QSize, QRect
+from PyQt6.QtCore import Qt, pyqtSignal, QSize, QRect, QCoreApplication
 from PyQt6.QtGui import QAction, QColor, QFont, QPainter
 
 _TAG_COLOR_ROLE = Qt.ItemDataRole.UserRole + 10
@@ -53,7 +53,12 @@ class TagColorDelegate(QStyledItemDelegate):
             option.rect.setLeft(option.rect.left() + self.BAR_WIDTH + 2)
         super().paint(painter, option, index)
         if color:
-            bar = QRect(option.rect.left() - self.BAR_WIDTH - 2, option.rect.top(), self.BAR_WIDTH, option.rect.height())
+            bar = QRect(
+                option.rect.left() - self.BAR_WIDTH - 2,
+                option.rect.top(),
+                self.BAR_WIDTH,
+                option.rect.height(),
+            )
             painter.save()
             painter.fillRect(bar, color)
             painter.restore()
@@ -66,6 +71,7 @@ def _assign_tag_color(tag: str, cache: dict) -> QColor:
     if tag not in cache:
         cache[tag] = _TAG_PALETTE[len(cache) % len(_TAG_PALETTE)]
     return cache[tag]
+
 
 from core.config import Config
 
@@ -284,7 +290,9 @@ class BackupManagerWindow(QDialog):
 
             desc_item = QTableWidgetItem(description)
             desc_item.setData(Qt.ItemDataRole.UserRole, filename)
-            desc_item.setData(_TAG_COLOR_ROLE, _assign_tag_color(description, self._tag_color_cache))
+            desc_item.setData(
+                _TAG_COLOR_ROLE, _assign_tag_color(description, self._tag_color_cache)
+            )
             # Col 0 is editable (tag); tooltip hints the user
             desc_item.setToolTip(self.tr("Double-click to edit the tag/description"))
             self.table.setItem(row, 0, desc_item)
@@ -450,9 +458,9 @@ class BackupManagerWindow(QDialog):
 
             summary = (
                 f"\n\n"
-                f"🟠 {moved} {self.tr('will move')}\n"
-                f"🔵 {unchanged} {self.tr('already in place')}\n"
-                f"🟢 {missing} {self.tr('not on desktop')}"
+                f"🟠 {QCoreApplication.translate('BackupManagerWindow', '%n icon will be moved', '%n icons will be moved', moved).replace('%n', str(moved))}\n"
+                f"🔵 {QCoreApplication.translate('BackupManagerWindow', '%n icon already in place', '%n icons already in place', unchanged).replace('%n', str(unchanged))}\n"
+                f"🟢 {QCoreApplication.translate('BackupManagerWindow', '%n icon not on desktop', '%n icons not on desktop', missing).replace('%n', str(missing))}"
             )
 
             if _ask(
@@ -670,7 +678,9 @@ class BackupManagerWindow(QDialog):
             data["description"] = new_tag
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=4, ensure_ascii=False)
-            item.setData(_TAG_COLOR_ROLE, _assign_tag_color(new_tag, self._tag_color_cache))
+            item.setData(
+                _TAG_COLOR_ROLE, _assign_tag_color(new_tag, self._tag_color_cache)
+            )
             self.list_changed_signal.emit()
         except (OSError, json.JSONDecodeError) as e:
             QMessageBox.critical(

@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS language="nl_NL" version="2.1">
-    <context>
+<TS version="2.1" language="da_DK">
+<context>
     <name>BackupComparator</name>
     <message>
         <location filename="..\core\comparator.py" line="37" />
         <source>=== COMPARISON RESULTS ===</source>
-        <translation>=== VERGELIJKINGSRESULTATEN ===</translation>
+        <translation>=== SAMMENLIGNINGSRESULTATER ===</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="43" />
         <source>Icon(s) Added: %n</source>
         <translation>
-            <numerusform>%n pictogram toegevoegd</numerusform>
-            <numerusform>%n pictogrammen toegevoegd</numerusform>
+            <numerusform>Ikon tilføjet: %n</numerusform>
+            <numerusform>Ikoner tilføjet: %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="49" />
         <source>Icon(s) Removed: %n</source>
         <translation>
-            <numerusform>%n pictogram verwijderd</numerusform>
-            <numerusform>%n pictogrammen verwijderd</numerusform>
+            <numerusform>Ikon fjernet: %n</numerusform>
+            <numerusform>Ikoner fjernet: %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="55" />
         <source>Icon(s) Moved: %n</source>
         <translation>
-            <numerusform>%n pictogram verplaatst</numerusform>
-            <numerusform>%n pictogrammen verplaatst</numerusform>
+            <numerusform>Ikon flyttet: %n</numerusform>
+            <numerusform>Ikoner flyttet: %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\comparator.py" line="61" />
         <source>Icon(s) Unchanged: %n</source>
         <translation>
-            <numerusform>%n pictogram ongewijzigd</numerusform>
-            <numerusform>%n pictogrammen ongewijzigd</numerusform>
+            <numerusform>Ikon uændret: %n</numerusform>
+            <numerusform>Ikoner uændret: %n</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="69" />
         <source>--- ADDED ICONS ---</source>
-        <translation>--- TOEGEVOEGDE PICTOGRAMMEN ---</translation>
+        <translation>--- TILFØJEDE IKONER ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="80" />
         <source>--- REMOVED ICONS ---</source>
-        <translation>--- VERWIJDERDE PICTOGRAMMEN ---</translation>
+        <translation>--- FJERNEDE IKONER ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="91" />
         <source>--- MOVED ICONS ---</source>
-        <translation>--- VERPLAATSTE PICTOGRAMMEN ---</translation>
+        <translation>--- FLYTTEDE IKONER ---</translation>
     </message>
     <message>
         <location filename="..\core\comparator.py" line="101" />
         <source>✓ No differences - backups are identical!</source>
-        <translation>✓ Geen verschillen – back-ups zijn identiek!</translation>
+        <translation>✓ Ingen forskelle – sikkerhedskopierne er identiske!</translation>
     </message>
 </context><context>
     <name>BackupManagerWindow</name>
@@ -67,8 +67,8 @@
         <source>%n icon will be moved</source>
         <comment>%n icons will be moved</comment>
         <translation>
-            <numerusform>%n pictogram wordt verplaatst</numerusform>
-            <numerusform>%n pictogrammen worden verplaatst</numerusform>
+            <numerusform>%n ikon flyttes</numerusform>
+            <numerusform>%n ikoner flyttes</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -76,8 +76,8 @@
         <source>%n icon already in place</source>
         <comment>%n icons already in place</comment>
         <translation>
-            <numerusform>%n pictogram staat al op de juiste plek</numerusform>
-            <numerusform>%n pictogrammen staan al op de juiste plek</numerusform>
+            <numerusform>%n ikon er allerede på plads</numerusform>
+            <numerusform>%n ikoner er allerede på plads</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -85,93 +85,93 @@
         <source>%n icon not on desktop</source>
         <comment>%n icons not on desktop</comment>
         <translation>
-            <numerusform>%n pictogram staat niet op het bureaublad</numerusform>
-            <numerusform>%n pictogrammen staan niet op het bureaublad</numerusform>
+            <numerusform>%n ikon ikke på skrivebordet</numerusform>
+            <numerusform>%n ikoner ikke på skrivebordet</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="104" />
         <source>Select, Restore, or Delete Backup</source>
-        <translation>Back-up selecteren, herstellen of verwijderen</translation>
+        <translation>Vælg, gendan eller slet sikkerhedskopi</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="114" />
         <source>Select a backup to restore or right-click for options.</source>
-        <translation>Selecteer een back-up om te herstellen of klik met de rechtermuisknop voor opties.</translation>
+        <translation>Vælg en sikkerhedskopi at gendanne, eller højreklik for indstillinger.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="120" />
         <source>Search by tag, resolution, or date...</source>
-        <translation>Zoeken op tag, resolutie of datum...</translation>
+        <translation>Søg efter tag, opløsning eller dato...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="137" />
         <source>Tag / Description</source>
-        <translation>Tag / Beschrijving</translation>
+        <translation>Tag / Beskrivelse</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="369" />
         <location filename="..\ui\backup_dialog.py" line="138" />
         <source>Resolution</source>
-        <translation>Resolutie</translation>
+        <translation>Opløsning</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="368" />
         <location filename="..\ui\backup_dialog.py" line="139" />
         <source>Icons</source>
-        <translation>Pictogrammen</translation>
+        <translation>Ikoner</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="371" />
         <location filename="..\ui\backup_dialog.py" line="140" />
         <source>Timestamp</source>
-        <translation>Tijdstempel</translation>
+        <translation>Tidsstempel</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="190" />
         <source>Layout Preview (saved positions vs current):</source>
-        <translation>Lay-outvoorvertoning (opgeslagen posities vs. huidig):</translation>
+        <translation>Layoutvisning (gemte positioner vs. aktuelle):</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="336" />
         <location filename="..\ui\backup_dialog.py" line="200" />
         <source>Select a backup to see details.</source>
-        <translation>Selecteer een back-up om de details te bekijken.</translation>
+        <translation>Vælg en sikkerhedskopi for at se detaljer.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="226" />
         <source>Restore Selected Layout</source>
-        <translation>Geselecteerde lay-out herstellen</translation>
+        <translation>Gendan valgt layout</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="230" />
         <source>📊 Compare Two Selected...</source>
-        <translation>📊 Twee geselecteerde vergelijken...</translation>
+        <translation>📊 Sammenlign to valgte...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="234" />
         <source>📤 Export Backups...</source>
-        <translation>📤 Back-ups exporteren...</translation>
+        <translation>📤 Eksportér sikkerhedskopier...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="236" />
         <source>Export selected or all backups to a folder or ZIP archive</source>
-        <translation>Geselecteerde of alle back-ups exporteren naar een map of ZIP-archief</translation>
+        <translation>Eksportér valgte eller alle sikkerhedskopier til en mappe eller ZIP-arkiv</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="240" />
         <source>📥 Import Backups...</source>
-        <translation>📥 Back-ups importeren...</translation>
+        <translation>📥 Importér sikkerhedskopier...</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="242" />
         <source>Import backup files (.json) or a ZIP archive from another installation</source>
-        <translation>Back-upbestanden (.json) of een ZIP-archief importeren vanuit een andere installatie</translation>
+        <translation>Importér sikkerhedskopifiler (.json) eller et ZIP-arkiv fra en anden installation</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="248" />
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Luk</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="432" />
@@ -180,32 +180,32 @@
         <location filename="..\ui\backup_dialog.py" line="284" />
         <location filename="..\ui\backup_dialog.py" line="278" />
         <source>N/A</source>
-        <translation>N.v.t.</translation>
+        <translation>I/T</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="297" />
         <source>Double-click to edit the tag/description</source>
-        <translation>Dubbelklik om de tag/beschrijving te bewerken</translation>
+        <translation>Dobbeltklik for at redigere tag/beskrivelse</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="319" />
         <source>No backups found.</source>
-        <translation>Geen back-ups gevonden.</translation>
+        <translation>Ingen sikkerhedskopier fundet.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="357" />
         <source>None</source>
-        <translation>Geen</translation>
+        <translation>Ingen</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="367" />
         <source>File</source>
-        <translation>Bestand</translation>
+        <translation>Fil</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="370" />
         <source>Description</source>
-        <translation>Beschrijving</translation>
+        <translation>Beskrivelse</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="688" />
@@ -215,27 +215,27 @@
         <location filename="..\ui\backup_dialog.py" line="493" />
         <location filename="..\ui\backup_dialog.py" line="377" />
         <source>Error</source>
-        <translation>Fout</translation>
+        <translation>Fejl</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="402" />
         <source>🔄 Restore Selected</source>
-        <translation>🔄 Geselecteerde herstellen</translation>
+        <translation>🔄 Gendan valgte</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="405" />
         <source>🗑️ Delete Selected</source>
-        <translation>🗑️ Geselecteerde verwijderen</translation>
+        <translation>🗑️ Slet valgte</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="409" />
         <source>📊 Compare with Latest</source>
-        <translation>📊 Vergelijken met nieuwste</translation>
+        <translation>📊 Sammenlign med seneste</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="468" />
         <source>Confirm Restore</source>
-        <translation>Herstel bevestigen</translation>
+        <translation>Bekræft gendannelse</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="469" />
@@ -248,15 +248,15 @@ Tag: %4
 Timestamp: %5
 
 Are you sure you want to proceed?</source>
-        <translation>Pictogramposities herstellen vanuit het geselecteerde back-upbestand:
+        <translation>Gendan ikonpositioner fra den valgte sikkerhedskopifil:
 
-Bestand: %1
-Resolutie: %2
-Pictogrammen: %3
+Fil: %1
+Opløsning: %2
+Ikoner: %3
 Tag: %4
-Tijdstempel: %5
+Tidsstempel: %5
 
-Weet u zeker dat u wilt doorgaan?</translation>
+Er du sikker på, at du vil fortsætte?</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="508" />
@@ -268,227 +268,227 @@ Weet u zeker dat u wilt doorgaan?</translation>
         <location filename="..\ui\backup_dialog.py" line="509" />
         <location filename="..\ui\backup_dialog.py" line="485" />
         <source>No</source>
-        <translation>Nee</translation>
+        <translation>Nej</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="494" />
         <source>Failed to load backup file:
 %1</source>
-        <translation>Back-upbestand laden mislukt:
+        <translation>Kunne ikke indlæse sikkerhedskopifil:
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="504" />
         <source>Confirm Delete</source>
-        <translation>Verwijdering bevestigen</translation>
+        <translation>Bekræft sletning</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="505" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
-        <translation>Weet u zeker dat u deze back-up wilt verwijderen?
+        <translation>Er du sikker på, at du vil slette denne sikkerhedskopi?
 
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="515" />
         <source>Success</source>
-        <translation>Geslaagd</translation>
+        <translation>Succes</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="515" />
         <source>Backup deleted successfully.</source>
-        <translation>Back-up succesvol verwijderd.</translation>
+        <translation>Sikkerhedskopien er slettet.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="519" />
         <source>Failed to delete backup file.</source>
-        <translation>Back-upbestand verwijderen mislukt.</translation>
+        <translation>Kunne ikke slette sikkerhedskopifilen.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="559" />
         <location filename="..\ui\backup_dialog.py" line="528" />
         <source>No Selection</source>
-        <translation>Geen selectie</translation>
+        <translation>Intet valg</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="529" />
         <source>Please select a backup to compare.</source>
-        <translation>Selecteer een back-up om te vergelijken.</translation>
+        <translation>Vælg venligst en sikkerhedskopi til sammenligning.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="536" />
         <source>No latest backup found</source>
-        <translation>Geen nieuwste back-up gevonden</translation>
+        <translation>Ingen seneste sikkerhedskopi fundet</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="543" />
         <source>Same Backup</source>
-        <translation>Zelfde back-up</translation>
+        <translation>Samme sikkerhedskopi</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="544" />
         <source>You selected the latest backup. Nothing to compare.</source>
-        <translation>U heeft de nieuwste back-up geselecteerd. Niets te vergelijken.</translation>
+        <translation>Du valgte den seneste sikkerhedskopi. Intet at sammenligne.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="560" />
         <source>Please select a backup first.</source>
-        <translation>Selecteer eerst een back-up.</translation>
+        <translation>Vælg venligst en sikkerhedskopi først.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="569" />
         <source>Not Enough Backups</source>
-        <translation>Niet genoeg back-ups</translation>
+        <translation>Ikke nok sikkerhedskopier</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="570" />
         <source>There is only one backup. Nothing to compare against.</source>
-        <translation>Er is slechts één back-up. Niets om mee te vergelijken.</translation>
+        <translation>Der er kun én sikkerhedskopi. Intet at sammenligne med.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="585" />
         <source>Failed to compare backups</source>
-        <translation>Back-ups vergelijken mislukt</translation>
+        <translation>Kunne ikke sammenligne sikkerhedskopier</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="589" />
         <source>latest</source>
-        <translation>nieuwste</translation>
+        <translation>seneste</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="592" />
         <source>Comparison Results</source>
-        <translation>Vergelijkingsresultaten</translation>
+        <translation>Sammenligningsresultater</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="610" />
         <source>Comparing Backups:</source>
-        <translation>Back-ups vergelijken:</translation>
+        <translation>Sammenligner sikkerhedskopier:</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="621" />
         <source>✓ Close</source>
-        <translation>✓ Sluiten</translation>
+        <translation>✓ Luk</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="689" />
         <source>Failed to save tag: %1</source>
-        <translation>Tag opslaan mislukt: %1</translation>
+        <translation>Kunne ikke gemme tag: %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="706" />
         <source>No Backups</source>
-        <translation>Geen back-ups</translation>
+        <translation>Ingen sikkerhedskopier</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="707" />
         <source>There are no backup files to export.</source>
-        <translation>Er zijn geen back-upbestanden om te exporteren.</translation>
+        <translation>Der er ingen sikkerhedskopifiler at eksportere.</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="715" />
         <source>All backups (%1 files)</source>
-        <translation>Alle back-ups (%1 bestanden)</translation>
+        <translation>Alle sikkerhedskopier (%1 filer)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="719" />
         <source>Selected backup only (%1)</source>
-        <translation>Alleen geselecteerde back-up (%1)</translation>
+        <translation>Kun valgt sikkerhedskopi (%1)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="725" />
         <source>Export Backups</source>
-        <translation>Back-ups exporteren</translation>
+        <translation>Eksportér sikkerhedskopier</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="726" />
         <source>What do you want to export?</source>
-        <translation>Wat wilt u exporteren?</translation>
+        <translation>Hvad vil du eksportere?</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="738" />
         <source>ZIP archive (.zip)</source>
-        <translation>ZIP-archief (.zip)</translation>
+        <translation>ZIP-arkiv (.zip)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="739" />
         <source>Folder (copy .json files)</source>
-        <translation>Map (.json-bestanden kopiëren)</translation>
+        <translation>Mappe (kopier .json-filer)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="743" />
         <source>Export Format</source>
-        <translation>Exportindeling</translation>
+        <translation>Eksportformat</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="744" />
         <source>Choose export format:</source>
-        <translation>Exportindeling kiezen:</translation>
+        <translation>Vælg eksportformat:</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="759" />
         <source>Save ZIP Archive</source>
-        <translation>ZIP-archief opslaan</translation>
+        <translation>Gem ZIP-arkiv</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="761" />
         <source>ZIP Archives (*.zip)</source>
-        <translation>ZIP Archives (*.zip)</translation>
+        <translation>ZIP-arkiver (*.zip)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="811" />
         <location filename="..\ui\backup_dialog.py" line="773" />
         <source>Export Successful</source>
-        <translation>Export geslaagd</translation>
+        <translation>Eksport vellykket</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="812" />
         <location filename="..\ui\backup_dialog.py" line="774" />
         <source>Exported %1 backup(s) to:
 %2</source>
-        <translation>%1 back-up(s) geëxporteerd naar:
+        <translation>Eksporterede %1 sikkerhedskopi(er) til:
 %2</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="781" />
         <source>Export Failed</source>
-        <translation>Export mislukt</translation>
+        <translation>Eksport mislykkedes</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="782" />
         <source>Could not create ZIP archive:
 %1</source>
-        <translation>Kan geen ZIP-archief maken:
+        <translation>Kunne ikke oprette ZIP-arkiv:
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="786" />
         <source>Select Destination Folder</source>
-        <translation>Doelmap selecteren</translation>
+        <translation>Vælg destinationsmappe</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="803" />
         <source>Export Partial</source>
-        <translation>Gedeeltelijke export</translation>
+        <translation>Delvis eksport</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="804" />
         <source>Exported %1 file(s). Errors:
 %2</source>
-        <translation>%1 bestand(en) geëxporteerd. Fouten:
+        <translation>Eksporterede %1 fil(er). Fejl:
 %2</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="823" />
         <source>Import Backups</source>
-        <translation>Back-ups importeren</translation>
+        <translation>Importér sikkerhedskopier</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="825" />
         <source>Backup files (*.json *.zip)</source>
-        <translation>Backup files (*.json *.zip)</translation>
+        <translation>Sikkerhedskopifiler (*.json *.zip)</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="851" />
@@ -496,351 +496,351 @@ Weet u zeker dat u wilt doorgaan?</translation>
 
 ✓ Imported: %1
 ⏭ Skipped (already exist): %2</source>
-        <translation>Import voltooid.
+        <translation>Import fuldført.
 
-✓ Geïmporteerd: %1
-⏭ Overgeslagen (bestaan al): %2</translation>
+✓ Importeret: %1
+⏭ Sprunget over (eksisterer allerede): %2</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="856" />
         <source>Errors:
 %1</source>
-        <translation>Fouten:
+        <translation>Fejl:
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="857" />
         <source>Import Results</source>
-        <translation>Importresultaten</translation>
+        <translation>Importresultater</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="859" />
         <source>Import Successful</source>
-        <translation>Import geslaagd</translation>
+        <translation>Import vellykket</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="871" />
         <source>No .json files found in: %1</source>
-        <translation>Geen .json-bestanden gevonden in: %1</translation>
+        <translation>Ingen .json-filer fundet i: %1</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="891" />
         <source>Invalid ZIP file %1: %2</source>
-        <translation>Ongeldig ZIP-bestand %1: %2</translation>
+        <translation>Ugyldigt ZIP-arkiv %1: %2</translation>
     </message>
 </context><context>
     <name>CLI</name>
     <message>
         <location filename="..\main.py" line="268" />
         <source>Perform a backup</source>
-        <translation>Back-up uitvoeren</translation>
+        <translation>Udfør en sikkerhedskopi</translation>
     </message>
     <message>
         <location filename="..\main.py" line="274" />
         <source>Restore a specific backup or latest</source>
-        <translation>Een specifieke of de nieuwste back-up herstellen</translation>
+        <translation>Gendan en bestemt sikkerhedskopi eller den seneste</translation>
     </message>
     <message>
         <location filename="..\main.py" line="279" />
         <source>Run without showing the GUI</source>
-        <translation>Uitvoeren zonder GUI te tonen</translation>
+        <translation>Kør uden at vise GUI</translation>
     </message>
     <message>
         <location filename="..\main.py" line="300" />
         <source>[SILENT]</source>
-        <translation>[STIL]</translation>
+        <translation>[STILLE]</translation>
     </message>
     <message>
         <location filename="..\main.py" line="305" />
         <source>Starting silent backup...</source>
-        <translation>Stille back-up starten...</translation>
+        <translation>Starter stille sikkerhedskopiering...</translation>
     </message>
     <message>
         <location filename="..\main.py" line="308" />
         <source>Silent CLI Backup</source>
-        <translation>Stille CLI-back-up</translation>
+        <translation>Stille CLI-sikkerhedskopi</translation>
     </message>
     <message>
         <location filename="..\main.py" line="322" />
         <source>Error: No backup files found for latest restore.</source>
-        <translation>Fout: Geen back-upbestanden gevonden voor het nieuwste herstel.</translation>
+        <translation>Fejl: Ingen sikkerhedskopifiler fundet til seneste gendannelse.</translation>
     </message>
     <message>
         <location filename="..\main.py" line="330" />
         <source>Starting silent restore from: %1</source>
-        <translation>Stil herstel starten vanuit: %1</translation>
+        <translation>Starter stille gendannelse fra: %1</translation>
     </message>
 </context><context>
     <name>DesktopIconManager</name>
     <message>
         <location filename="..\core\icon_manager.py" line="76" />
         <source>Unable to find desktop ListView control. Make sure desktop icons are visible.</source>
-        <translation>Kan het ListView-besturingselement van het bureaublad niet vinden. Zorg ervoor dat bureaubladpictogrammen zichtbaar zijn.</translation>
+        <translation>Kan ikke finde listvisningskontrol på skrivebordet. Sørg for, at skrivebordsikoner er synlige.</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="117" />
         <source>No backup files found to delete.</source>
-        <translation>Geen back-upbestanden gevonden om te verwijderen.</translation>
+        <translation>Ingen sikkerhedskopifiler fundet til sletning.</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="133" />
         <source>✓ Successfully deleted %n backup file(s).</source>
         <translation>
-            <numerusform>✓ %n back-upbestand succesvol verwijderd.</numerusform>
-            <numerusform>✓ %n back-upbestanden succesvol verwijderd.</numerusform>
+            <numerusform>✓ Slettet %n sikkerhedskopifil.</numerusform>
+            <numerusform>✓ Slettet %n sikkerhedskopifiler.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="142" />
         <source>✗ Failed to delete %n backup file(s).</source>
         <translation>
-            <numerusform>✗ Verwijderen van %n back-upbestand mislukt.</numerusform>
-            <numerusform>✗ Verwijderen van %n back-upbestanden mislukt.</numerusform>
+            <numerusform>✗ Kunne ikke slette %n sikkerhedskopifil.</numerusform>
+            <numerusform>✗ Kunne ikke slette %n sikkerhedskopifiler.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="158" />
         <source>Automatic cleanup skipped: max_count is disabled (0).</source>
-        <translation>Automatisch opschonen overgeslagen: max_count is uitgeschakeld (0).</translation>
+        <translation>Automatisk oprydning sprunget over: max_count er deaktiveret (0).</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="170" />
         <source>Cleanup skipped: Current count (%n) is within the limit (%1).</source>
         <translation>
-            <numerusform>Opschonen overgeslagen: Huidig aantal (%n) is binnen de limiet (%1).</numerusform>
-            <numerusform>Opschonen overgeslagen: Huidig aantal (%n) is binnen de limiet (%1).</numerusform>
+            <numerusform>Oprydning sprunget over: Aktuel antal (%n) er inden for grænsen (%1).</numerusform>
+            <numerusform>Oprydning sprunget over: Aktuel antal (%n) er inden for grænsen (%1).</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="183" />
         <source>Cleanup needed: Current count (%1) exceeds limit (%2). Deleting %n oldest file(s).</source>
         <translation>
-            <numerusform>Opschonen nodig: Huidig aantal (%1) overschrijdt de limiet (%2). %n oudste bestand verwijderen.</numerusform>
-            <numerusform>Opschonen nodig: Huidig aantal (%1) overschrijdt de limiet (%2). %n oudste bestanden verwijderen.</numerusform>
+            <numerusform>Oprydning nødvendig: Aktuel antal (%1) overstiger grænsen (%2). Sletter %n ældste fil.</numerusform>
+            <numerusform>Oprydning nødvendig: Aktuel antal (%1) overstiger grænsen (%2). Sletter %n ældste filer.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="197" />
         <source>  Deleted oldest backup: %1</source>
-        <translation>  Oudste back-up verwijderd: %1</translation>
+        <translation>  Slettet ældste sikkerhedskopi: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="203" />
         <source>  Failed to delete: %1</source>
-        <translation>  Verwijderen mislukt: %1</translation>
+        <translation>  Kunne ikke slette: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="209" />
         <source>Cleanup complete. Total deleted: %n file(s).</source>
         <translation>
-            <numerusform>Opschonen voltooid. Totaal verwijderd: %n bestand.</numerusform>
-            <numerusform>Opschonen voltooid. Totaal verwijderd: %n bestanden.</numerusform>
+            <numerusform>Oprydning fuldført. Samlet slettet: %n fil.</numerusform>
+            <numerusform>Oprydning fuldført. Samlet slettet: %n filer.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="328" />
         <source>Monitor Resolution: %1</source>
-        <translation>Monitorresolutie: %1</translation>
+        <translation>Skærmopløsning: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="333" />
         <source>Found %n icon(s). Starting scan...</source>
         <translation>
-            <numerusform>%n pictogram gevonden. Scan starten...</numerusform>
-            <numerusform>%n pictogrammen gevonden. Scan starten...</numerusform>
+            <numerusform>Fandt %n ikon. Starter scanning...</numerusform>
+            <numerusform>Fandt %n ikoner. Starter scanning...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="396" />
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
-            <numerusform>✓ %n pictogram opgeslagen in back-upbestand '%1'</numerusform>
-            <numerusform>✓ %n pictogrammen opgeslagen in back-upbestand '%1'</numerusform>
+            <numerusform>✓ Gemte %n ikon i sikkerhedskopifilen '%1'</numerusform>
+            <numerusform>✓ Gemte %n ikoner i sikkerhedskopifilen '%1'</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="406" />
         <source>  (Description: %1)</source>
-        <translation>  (Beschrijving: %1)</translation>
+        <translation>  (Beskrivelse: %1)</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="419" />
         <source>✗ Error saving (I/O): %1</source>
-        <translation>✗ Fout bij opslaan (I/O): %1</translation>
+        <translation>✗ Fejl ved gemning (I/O): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="426" />
         <source>✗ Error saving: %1</source>
-        <translation>✗ Fout bij opslaan: %1</translation>
+        <translation>✗ Fejl ved gemning: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="454" />
         <source>✗ Error: Backup file not found.</source>
-        <translation>✗ Fout: Back-upbestand niet gevonden.</translation>
+        <translation>✗ Fejl: Sikkerhedskopifil ikke fundet.</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="464" />
         <source>Attempting to restore from backup: '%1'</source>
-        <translation>Herstellen vanuit back-up proberen: '%1'</translation>
+        <translation>Forsøger at gendanne fra sikkerhedskopi: '%1'</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="469" />
         <source>Saved Resolution (from filename): %1</source>
-        <translation>Opgeslagen resolutie (uit bestandsnaam): %1</translation>
+        <translation>Gemt opløsning (fra filnavn): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="486" />
         <source>Restoring layout (saved: %1)</source>
-        <translation>Lay-out herstellen (opgeslagen: %1)</translation>
+        <translation>Gendanner layout (gemt: %1)</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="491" />
         <source>  Description: %1</source>
-        <translation>  Beschrijving: %1</translation>
+        <translation>  Beskrivelse: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="498" />
         <source>Restoring layout (Old format, no timestamp and metadata)</source>
-        <translation>Lay-out herstellen (Oud formaat, geen tijdstempel en metadata)</translation>
+        <translation>Gendanner layout (gammelt format, ingen tidsstempel og metadata)</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="506" />
         <source>✗ Error: Invalid backup file format: %1</source>
-        <translation>✗ Fout: Ongeldig back-upbestandsformaat: %1</translation>
+        <translation>✗ Fejl: Ugyldigt sikkerhedskopififormat: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="513" />
         <source>✗ Error reading backup file (I/O): %1</source>
-        <translation>✗ Fout bij lezen van back-upbestand (I/O): %1</translation>
+        <translation>✗ Fejl ved læsning af sikkerhedskopifil (I/O): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="530" />
         <source>⚠ Warning: Resolution mismatch!</source>
-        <translation>⚠ Waarschuwing: Resolutie komt niet overeen!</translation>
+        <translation>⚠ Advarsel: Opløsningsafvigelse!</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="540" />
         <source>✓ Adaptive Scaling enabled: X=%1, Y=%2</source>
-        <translation>✓ Adaptief schalen ingeschakeld: X=%1, Y=%2</translation>
+        <translation>✓ Adaptiv skalering aktiveret: X=%1, Y=%2</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="625" />
         <source>✓ Restored %n icon(s)</source>
         <translation>
-            <numerusform>✓ %n pictogram hersteld</numerusform>
-            <numerusform>✓ %n pictogrammen hersteld</numerusform>
+            <numerusform>✓ Gendannet %n ikon</numerusform>
+            <numerusform>✓ Gendannet %n ikoner</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="631" />
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
-            <numerusform>⚠ %n pictogram overgeslagen (niet gevonden op bureaublad)</numerusform>
-            <numerusform>⚠ %n pictogrammen overgeslagen (niet gevonden op bureaublad)</numerusform>
+            <numerusform>⚠ Sprunget %n ikon over (ikke fundet på skrivebordet)</numerusform>
+            <numerusform>⚠ Sprunget %n ikoner over (ikke fundet på skrivebordet)</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="645" />
         <source>✗ Error restoring (I/O): %1</source>
-        <translation>✗ Fout bij herstellen (I/O): %1</translation>
+        <translation>✗ Fejl ved gendannelse (I/O): %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="652" />
         <source>✗ Error restoring: %1</source>
-        <translation>✗ Fout bij herstellen: %1</translation>
+        <translation>✗ Fejl ved gendannelse: %1</translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="680" />
         <source>Redrawing disabled for scrambling...</source>
-        <translation>Opnieuw tekenen uitgeschakeld voor schudden...</translation>
+        <translation>Gentegning deaktiveret til blanding...</translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="689" />
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
-            <numerusform>%n pictogram gevonden. Willekeurige positionering starten...</numerusform>
-            <numerusform>%n pictogrammen gevonden. Willekeurige positionering starten...</numerusform>
+            <numerusform>Fandt %n ikon. Starter tilfældig placering...</numerusform>
+            <numerusform>Fandt %n ikoner. Starter tilfældig placering...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="..\core\icon_manager.py" line="710" />
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
-            <numerusform>✓ Posities voor %n pictogram geschud.</numerusform>
-            <numerusform>✓ Posities voor %n pictogrammen geschud.</numerusform>
+            <numerusform>✓ Blandede positioner for %n ikon.</numerusform>
+            <numerusform>✓ Blandede positioner for %n ikoner.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\core\icon_manager.py" line="724" />
         <source>✗ Error scrambling icons: %1</source>
-        <translation>✗ Fout bij schudden van pictogrammen: %1</translation>
+        <translation>✗ Fejl ved blanding af ikoner: %1</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="425" />
         <source>No Preview Available</source>
-        <translation>Geen voorvertoning beschikbaar</translation>
+        <translation>Ingen forhåndsvisning tilgængelig</translation>
     </message>
 </context><context>
     <name>IconWorker</name>
     <message>
         <location filename="..\utils\threads.py" line="52" />
         <source>Forcing desktop refresh...</source>
-        <translation>Vernieuwen van bureaublad afdwingen...</translation>
+        <translation>Tvinger skrivebordsopdatering...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="67" />
         <source>Desktop refresh signal sent successfully.</source>
-        <translation>Vernieuwingssignaal voor bureaublad succesvol verzonden.</translation>
+        <translation>Skrivebordsopdateringssignal sendt.</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="71" />
         <source>Warning: Failed to send desktop refresh signals: %1</source>
-        <translation>Waarschuwing: Verzenden van vernieuwingssignalen voor bureaublad mislukt: %1</translation>
+        <translation>Advarsel: Kunne ikke sende skrivebordsopdateringssignaler: %1</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="84" />
         <source>Performing mandatory quick backup before scrambling...</source>
-        <translation>Verplichte snelle back-up uitvoeren voor het schudden...</translation>
+        <translation>Udfører obligatorisk hurtig sikkerhedskopiering før blanding...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="88" />
         <source>  [Pre-Scramble Backup] %1</source>
-        <translation>  [Back-up voor schudden] %1</translation>
+        <translation>  [Sikkerhedskopi før blanding] %1</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="91" />
         <source>Backup before Scramble</source>
-        <translation>Back-up voor schudden</translation>
+        <translation>Sikkerhedskopi før blanding</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="96" />
         <source>Pre-scramble backup completed successfully. Starting scramble...</source>
-        <translation>Back-up voor schudden succesvol voltooid. Schudden starten...</translation>
+        <translation>Sikkerhedskopi før blanding fuldført. Starter blanding...</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="106" />
         <source>✗ Pre-scramble backup failed. Aborting scramble operation.</source>
-        <translation>✗ Back-up voor schudden mislukt. Schudbewerking wordt afgebroken.</translation>
+        <translation>✗ Sikkerhedskopi før blanding mislykkedes. Afbryder blandingsoperation.</translation>
     </message>
     <message>
         <location filename="..\utils\threads.py" line="113" />
         <source>✗ CRITICAL ERROR: %1</source>
-        <translation>✗ KRITIEKE FOUT: %1</translation>
+        <translation>✗ KRITISK FEJL: %1</translation>
     </message>
 </context><context>
     <name>Main</name>
     <message>
         <location filename="..\main.py" line="376" />
         <source>Critical Error</source>
-        <translation>Kritieke fout</translation>
+        <translation>Kritisk fejl</translation>
     </message>
     <message>
         <location filename="..\main.py" line="377" />
         <source>Failed to start application:
 %1</source>
-        <translation>Starten van applicatie mislukt:
+        <translation>Kunne ikke starte programmet:
 %1</translation>
     </message>
 </context><context>
@@ -848,274 +848,274 @@ Weet u zeker dat u wilt doorgaan?</translation>
     <message>
         <location filename="..\ui\main_window.py" line="62" />
         <source>Unknown</source>
-        <translation>Onbekend</translation>
+        <translation>Ukendt</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="93" />
         <source>Quick Save</source>
-        <translation>Snel opslaan</translation>
+        <translation>Hurtiggem</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="95" />
         <source>Quick Save (Tray)</source>
-        <translation>Snel opslaan (Systeemvak)</translation>
+        <translation>Hurtiggem (proceslinje)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="99" />
         <source>Restore Latest</source>
-        <translation>Nieuwste herstellen</translation>
+        <translation>Gendan seneste</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="105" />
         <source>Show Window</source>
-        <translation>Venster weergeven</translation>
+        <translation>Vis vindue</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="109" />
         <source>Exit</source>
-        <translation>Afsluiten</translation>
+        <translation>Afslut</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="130" />
         <source>Desktop Icon Backup Manager by mapi68</source>
-        <translation>Desktop Icon Backup Manager door mapi68</translation>
+        <translation>Desktop Icon Backup Manager af mapi68</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="135" />
         <source>&amp;File</source>
-        <translation>&amp;Bestand</translation>
+        <translation>&amp;Fil</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="138" />
         <source>Scramble Desktop Icons (Random)</source>
-        <translation>Bureaubladpictogrammen schudden (Willekeurig)</translation>
+        <translation>Bland skrivebordsikoner (tilfældig)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="141" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
-        <translation>Randomiseert de positie van alle bureaubladpictogrammen na het aanmaken van een verplichte back-up.</translation>
+        <translation>Tilfældiggør positionen af alle skrivebordsikoner efter oprettelse af en obligatorisk sikkerhedskopi.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="149" />
         <source>Remove All Backups...</source>
-        <translation>Alle back-ups verwijderen...</translation>
+        <translation>Fjern alle sikkerhedskopier...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="155" />
         <source>📤 Export Backups...</source>
-        <translation>📤 Back-ups exporteren...</translation>
+        <translation>📤 Eksportér sikkerhedskopier...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="156" />
         <source>Export backups to a folder or ZIP archive</source>
-        <translation>Back-ups exporteren naar een map of ZIP-archief</translation>
+        <translation>Eksportér sikkerhedskopier til en mappe eller ZIP-arkiv</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="160" />
         <source>📥 Import Backups...</source>
-        <translation>📥 Back-ups importeren...</translation>
+        <translation>📥 Importér sikkerhedskopier...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="162" />
         <source>Import backup files (.json) or a ZIP archive</source>
-        <translation>Back-upbestanden (.json) of een ZIP-archief importeren</translation>
+        <translation>Importér sikkerhedskopifiler (.json) eller et ZIP-arkiv</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="168" />
         <source>E&amp;xit</source>
-        <translation>Af&amp;sluiten</translation>
+        <translation>A&amp;fslut</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="416" />
         <location filename="..\ui\main_window.py" line="173" />
         <source>&amp;Settings</source>
-        <translation>&amp;Instellingen</translation>
+        <translation>&amp;Indstillinger</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="175" />
         <source>Open Settings Menu</source>
-        <translation>Instellingenmenu openen</translation>
+        <translation>Åbn indstillingsmenu</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1022" />
         <location filename="..\ui\main_window.py" line="181" />
         <source>Auto-Save on Exit</source>
-        <translation>Automatisch opslaan bij afsluiten</translation>
+        <translation>Auto-gem ved afslutning</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="189" />
         <source>Auto-Restore on Startup</source>
-        <translation>Automatisch herstellen bij opstarten</translation>
+        <translation>Auto-gendan ved opstart</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="197" />
         <source>Check for Updates on Startup</source>
-        <translation>Controleren op updates bij opstarten</translation>
+        <translation>Tjek for opdateringer ved opstart</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="208" />
         <source>Enable Adaptive Scaling on Restore</source>
-        <translation>Adaptief schalen inschakelen bij herstellen</translation>
+        <translation>Aktivér adaptiv skalering ved gendannelse</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="219" />
         <source>Start Minimized to Tray</source>
-        <translation>Geminimaliseerd in systeemvak starten</translation>
+        <translation>Start minimeret i proceslinje</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="227" />
         <source>Minimize to Tray on Close ('X' button)</source>
-        <translation>Minimaliseren naar systeemvak bij sluiten ('X' knop)</translation>
+        <translation>Minimer til proceslinje ved lukning ('X'-knap)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="237" />
         <source>Automatic Backup Cleanup Limit</source>
-        <translation>Limiet voor automatisch opschonen van back-ups</translation>
+        <translation>Automatisk oprydningsgrænse for sikkerhedskopier</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="242" />
         <source>Disabled (Keep All)</source>
-        <translation>Uitgeschakeld (Alles bewaren)</translation>
+        <translation>Deaktiveret (behold alle)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="243" />
         <source>Keep Last 5</source>
-        <translation>Laatste 5 bewaren</translation>
+        <translation>Behold de seneste 5</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="244" />
         <source>Keep Last 10</source>
-        <translation>Laatste 10 bewaren</translation>
+        <translation>Behold de seneste 10</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="245" />
         <source>Keep Last 25</source>
-        <translation>Laatste 25 bewaren</translation>
+        <translation>Behold de seneste 25</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="246" />
         <source>Keep Last 50</source>
-        <translation>Laatste 50 bewaren</translation>
+        <translation>Behold de seneste 50</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="257" />
         <source>&amp;Help</source>
-        <translation>&amp;Help</translation>
+        <translation>&amp;Hjælp</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="259" />
         <source>Online User Manual</source>
-        <translation>Online gebruikershandleiding</translation>
+        <translation>Online brugervejledning</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1123" />
         <location filename="..\ui\main_window.py" line="1091" />
         <location filename="..\ui\main_window.py" line="266" />
         <source>Keyboard Shortcuts</source>
-        <translation>Sneltoetsen</translation>
+        <translation>Tastaturgenveje</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="272" />
         <source>Check for Updates...</source>
-        <translation>Controleren op updates...</translation>
+        <translation>Tjek for opdateringer...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="278" />
         <source>&amp;About</source>
-        <translation>&amp;Over</translation>
+        <translation>&amp;Om</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="284" />
         <source>Support on Ko-fi...</source>
-        <translation>Ondersteunen op Ko-fi...</translation>
+        <translation>Støt på Ko-fi...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="299" />
         <source>Optional: Enter a descriptive tag/description...</source>
-        <translation>Optioneel: Voer een beschrijvende tag/beschrijving in...</translation>
+        <translation>Valgfrit: Indtast et beskrivende tag/beskrivelse...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="306" />
         <source>Select a profile to auto-fill the tag field</source>
-        <translation>Selecteer een profiel om het tagveld automatisch in te vullen</translation>
+        <translation>Vælg en profil til automatisk udfyldning af tagfeltet</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="312" />
         <source>Save Tag:</source>
-        <translation>Tag opslaan:</translation>
+        <translation>Gem tag:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="320" />
         <source>💾 SAVE QUICK BACKUP</source>
-        <translation>💾 SNELLE BACK-UP OPSLAAN</translation>
+        <translation>💾 GEM HURTIG SIKKERHEDSKOPI</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="324" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
-        <translation>Huidige bureaubladpictogramposities opslaan in een nieuw bestand met de bovenstaande tag.
+        <translation>Gem aktuelle skrivebordsikon-positioner i en ny fil med tagget ovenfor.
 
-Sneltoets: Ctrl+S</translation>
+Genvej: Ctrl+S</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="332" />
         <source>↺ RESTORE LATEST</source>
-        <translation>↺ NIEUWSTE HERSTELLEN</translation>
+        <translation>↺ GENDAN SENESTE</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="335" />
         <source>Restore icon positions from the LATEST backup file found.</source>
-        <translation>Pictogramposities herstellen vanuit het NIEUWSTE gevonden back-upbestand.</translation>
+        <translation>Gendan ikonpositioner fra den SENESTE fundne sikkerhedskopifil.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="340" />
         <source>↺ BACKUP MANAGER</source>
-        <translation>↺ BACK-UPBEHEER</translation>
+        <translation>↺ BACKUP MANAGER</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="344" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
-        <translation>Opent een venster om een specifiek back-upbestand te selecteren om te herstellen of verwijderen.
+        <translation>Åbner et vindue til valg af en bestemt sikkerhedskopifil til gendannelse eller sletning.
 
-Sneltoets: Ctrl+M</translation>
+Genvej: Ctrl+M</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="358" />
         <source>Activity Log:</source>
-        <translation>Activiteitenlogboek:</translation>
+        <translation>Aktivitetslog:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="369" />
         <source>Current Resolution: %1</source>
-        <translation>Huidige resolutie: %1</translation>
+        <translation>Aktuel opløsning: %1</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="376" />
         <source>Support on Ko-fi</source>
-        <translation>Ondersteunen op Ko-fi</translation>
+        <translation>Støt på Ko-fi</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="382" />
         <source>Clear Log</source>
-        <translation>Logboek wissen</translation>
+        <translation>Ryd log</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="424" />
         <source>Settings menu not found</source>
-        <translation>Instellingenmenu niet gevonden</translation>
+        <translation>Indstillingsmenu ikke fundet</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="436" />
         <source>Opening online user manual in browser...</source>
-        <translation>Online gebruikershandleiding openen in browser...</translation>
+        <translation>Åbner online brugervejledning i browser...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="438" />
         <source>✗ Failed to open manual URL</source>
-        <translation>✗ Openen van handboek-URL mislukt</translation>
+        <translation>✗ Kunne ikke åbne vejlednings-URL</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="950" />
@@ -1123,7 +1123,7 @@ Sneltoets: Ctrl+M</translation>
         <location filename="..\ui\main_window.py" line="708" />
         <location filename="..\ui\main_window.py" line="441" />
         <source>Error</source>
-        <translation>Fout</translation>
+        <translation>Fejl</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="442" />
@@ -1131,37 +1131,37 @@ Sneltoets: Ctrl+M</translation>
 
 Please visit manually:
 %1</source>
-        <translation>Kan het online handboek niet openen.
+        <translation>Kunne ikke åbne online-vejledningen.
 
-Bezoek handmatig:
+Besøg venligst manuelt:
 %1</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="449" />
         <source>Save</source>
-        <translation>Opslaan</translation>
+        <translation>Gem</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="452" />
         <source>Quick Backup (Shortcut)</source>
-        <translation>Snelle back-up (Sneltoets)</translation>
+        <translation>Hurtig sikkerhedskopi (genvej)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="456" />
         <source>Backup Manager</source>
-        <translation>Back-upbeheer</translation>
+        <translation>Backup Manager</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="461" />
         <source>Settings</source>
-        <translation>Instellingen</translation>
+        <translation>Indstillinger</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="496" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
-            <numerusform>Limiet voor automatisch opschonen ingesteld op: %n back-up (0 = Uitgeschakeld).</numerusform>
-            <numerusform>Limiet voor automatisch opschonen ingesteld op: %n back-ups (0 = Uitgeschakeld).</numerusform>
+            <numerusform>Automatisk oprydningsgrænse sat til: %n sikkerhedskopi (0 = Deaktiveret).</numerusform>
+            <numerusform>Automatisk oprydningsgrænse sat til: %n sikkerhedskopier (0 = Deaktiveret).</numerusform>
         </translation>
     </message>
     <message>
@@ -1169,92 +1169,92 @@ Bezoek handmatig:
         <location filename="..\ui\main_window.py" line="941" />
         <location filename="..\ui\main_window.py" line="540" />
         <source>Desktop Icon Manager</source>
-        <translation>Bureaubladpictogrambeheer</translation>
+        <translation>Desktop Icon Manager</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="570" />
         <source>Backup list updated (item deleted).</source>
-        <translation>Back-uplijst bijgewerkt (item verwijderd).</translation>
+        <translation>Sikkerhedskopiliste opdateret (element slettet).</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="579" />
         <source>Backup list updated.</source>
-        <translation>Back-uplijst bijgewerkt.</translation>
+        <translation>Sikkerhedskopiliste opdateret.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="592" />
         <source>Backup list updated (imported).</source>
-        <translation>Back-uplijst bijgewerkt (geïmporteerd).</translation>
+        <translation>Sikkerhedskopiliste opdateret (importeret).</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="606" />
         <source>— Profiles —</source>
-        <translation>— Profielen —</translation>
+        <translation>— Profiler —</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="608" />
         <source>Work</source>
-        <translation>Werk</translation>
+        <translation>Arbejde</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="609" />
         <source>Gaming</source>
-        <translation>Gaming</translation>
+        <translation>Spil</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="610" />
         <source>Presentation</source>
-        <translation>Presentatie</translation>
+        <translation>Præsentation</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="611" />
         <source>Dev / Coding</source>
-        <translation>Ontwikkeling / Coderen</translation>
+        <translation>Udvikling / Kodning</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="612" />
         <source>Meeting</source>
-        <translation>Vergadering</translation>
+        <translation>Møde</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="613" />
         <source>Home</source>
-        <translation>Thuis</translation>
+        <translation>Hjem</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="614" />
         <source>Office</source>
-        <translation>Kantoor</translation>
+        <translation>Kontor</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="615" />
         <source>Laptop</source>
-        <translation>Laptop</translation>
+        <translation>Bærbar</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="616" />
         <source>Docked / External Monitor</source>
-        <translation>Gedockt / Extern scherm</translation>
+        <translation>Tilsluttet / Ekstern skærm</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="617" />
         <source>Clean Desktop</source>
-        <translation>Opgeruimd bureaublad</translation>
+        <translation>Rent skrivebord</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="618" />
         <source>Pre-Update</source>
-        <translation>Vóór update</translation>
+        <translation>Før opdatering</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="619" />
         <source>Pre-Reboot</source>
-        <translation>Vóór herstart</translation>
+        <translation>Før genstart</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="620" />
         <source>Favourite</source>
-        <translation>Favoriet</translation>
+        <translation>Favorit</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="621" />
@@ -1264,147 +1264,147 @@ Bezoek handmatig:
     <message>
         <location filename="..\ui\main_window.py" line="643" />
         <source>Quick Backup</source>
-        <translation>Snelle back-up</translation>
+        <translation>Hurtig sikkerhedskopi</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="652" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
-        <translation>Een eenvoudig maar krachtig hulpprogramma om Windows bureaubladpictogramposities op te slaan en te herstellen.</translation>
+        <translation>Et enkelt, men kraftfuldt værktøj til at gemme og gendanne Windows skrivebordsikon-positioner.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="653" />
         <source>Key Features:</source>
-        <translation>Belangrijkste functies:</translation>
+        <translation>Nøglefunktioner:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="655" />
         <source>Quick Save:</source>
-        <translation>Snel opslaan:</translation>
+        <translation>Hurtiggem:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="655" />
         <source>Save icons with an optional descriptive tag.</source>
-        <translation>Pictogrammen opslaan met een optionele beschrijvende tag.</translation>
+        <translation>Gem ikoner med et valgfrit beskrivende tag.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="656" />
         <source>Backup Management:</source>
-        <translation>Back-upbeheer:</translation>
+        <translation>Håndtering af sikkerhedskopier:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="656" />
         <source>Select, restore, or delete specific backups.</source>
-        <translation>Specifieke back-ups selecteren, herstellen of verwijderen.</translation>
+        <translation>Vælg, gendan eller slet specifikke sikkerhedskopier.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="657" />
         <source>Live Diff Preview:</source>
-        <translation>Live verschilvoorvertoning:</translation>
+        <translation>Live diff-forhåndsvisning:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="657" />
         <source>See which icons will move before restoring.</source>
-        <translation>Bekijk welke pictogrammen worden verplaatst voor het herstellen.</translation>
+        <translation>Se hvilke ikoner der flyttes før gendannelse.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="658" />
         <source>Visual Preview:</source>
-        <translation>Visuele voorvertoning:</translation>
+        <translation>Visuel forhåndsvisning:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="658" />
         <source>See a mini-map of your layout.</source>
-        <translation>Bekijk een minikaart van uw lay-out.</translation>
+        <translation>Se et mini-kort over dit layout.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="659" />
         <source>Backup Comparison:</source>
-        <translation>Back-upvergelijking:</translation>
+        <translation>Sammenligning af sikkerhedskopier:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="659" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
-        <translation>Vergelijk twee willekeurige back-ups om toegevoegde, verwijderde en verplaatste pictogrammen te zien.</translation>
+        <translation>Sammenlign to sikkerhedskopier for at se tilføjede, fjernede og flyttede ikoner.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="660" />
         <source>Adaptive Scaling:</source>
-        <translation>Adaptief schalen:</translation>
+        <translation>Adaptiv skalering:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="660" />
         <source>Automatic adjustment for different resolutions.</source>
-        <translation>Automatische aanpassing voor verschillende resoluties.</translation>
+        <translation>Automatisk justering til forskellige opløsninger.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="661" />
         <source>Automatic Cleanup:</source>
-        <translation>Automatisch opschonen:</translation>
+        <translation>Automatisk oprydning:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="661" />
         <source>Set a limit on backups to keep.</source>
-        <translation>Stel een limiet in voor te bewaren back-ups.</translation>
+        <translation>Sæt en grænse for sikkerhedskopier at beholde.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="662" />
         <source>Random Scramble:</source>
-        <translation>Willekeurig schudden:</translation>
+        <translation>Tilfældig blanding:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="662" />
         <source>Randomize icon positions after backup.</source>
-        <translation>Pictogramposities randomiseren na back-up.</translation>
+        <translation>Tilfældiggør ikonpositioner efter sikkerhedskopiering.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="663" />
         <source>Tray Integration:</source>
-        <translation>Systeemvakintegratie:</translation>
+        <translation>Proceslinjeintegration:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="663" />
         <source>Quick access via tray.</source>
-        <translation>Snelle toegang via het systeemvak.</translation>
+        <translation>Hurtig adgang via proceslinjen.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="665" />
         <source>Version:</source>
-        <translation>Versie:</translation>
+        <translation>Version:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="666" />
         <source>Development:</source>
-        <translation>Ontwikkeling:</translation>
+        <translation>Udvikling:</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="667" />
         <source>Support this project on Ko-fi</source>
-        <translation>Ondersteun dit project op Ko-fi</translation>
+        <translation>Støt dette projekt på Ko-fi</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="669" />
         <source>About Desktop Icon Backup Manager</source>
-        <translation>Over Desktop Icon Backup Manager</translation>
+        <translation>Om Desktop Icon Backup Manager</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="675" />
         <source>No backup files found to delete.</source>
-        <translation>Geen back-upbestanden gevonden om te verwijderen.</translation>
+        <translation>Ingen sikkerhedskopifiler fundet til sletning.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="678" />
         <source>No Backups Found</source>
-        <translation>Geen back-ups gevonden</translation>
+        <translation>Ingen sikkerhedskopier fundet</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="679" />
         <source>There are no backup files to delete.</source>
-        <translation>Er zijn geen back-upbestanden om te verwijderen.</translation>
+        <translation>Der er ingen sikkerhedskopifiler at slette.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="685" />
         <source>WARNING: Delete All Backups</source>
-        <translation>WAARSCHUWING: Alle back-ups verwijderen</translation>
+        <translation>ADVARSEL: Slet alle sikkerhedskopier</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="686" />
@@ -1412,12 +1412,12 @@ Bezoek handmatig:
 
 This action cannot be undone!</source>
         <translation>
-            <numerusform>Weet u absoluut zeker dat u ALLE %n bureaubladpictogram back-upbestand permanent wilt verwijderen?
+            <numerusform>Er du helt sikker på, at du permanent vil slette AL %n sikkerhedskopifil?
 
-Deze actie kan niet ongedaan worden gemaakt!</numerusform>
-            <numerusform>Weet u absoluut zeker dat u ALLE %n bureaubladpictogram back-upbestanden permanent wilt verwijderen?
+Denne handling kan ikke fortrydes!</numerusform>
+            <numerusform>Er du helt sikker på, at du permanent vil slette ALLE %n sikkerhedskopifiler?
 
-Deze actie kan niet ongedaan worden gemaakt!</numerusform>
+Denne handling kan ikke fortrydes!</numerusform>
         </translation>
     </message>
     <message>
@@ -1430,33 +1430,33 @@ Deze actie kan niet ongedaan worden gemaakt!</numerusform>
         <location filename="..\ui\main_window.py" line="905" />
         <location filename="..\ui\main_window.py" line="692" />
         <source>No</source>
-        <translation>Nee</translation>
+        <translation>Nej</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="694" />
         <source>Starting deletion of all backup files...</source>
-        <translation>Verwijderen van alle back-upbestanden starten...</translation>
+        <translation>Starter sletning af alle sikkerhedskopifiler...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="934" />
         <location filename="..\ui\main_window.py" line="702" />
         <source>Success</source>
-        <translation>Geslaagd</translation>
+        <translation>Succes</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="703" />
         <source>All backup files have been successfully deleted.</source>
-        <translation>Alle back-upbestanden zijn succesvol verwijderd.</translation>
+        <translation>Alle sikkerhedskopifiler er blevet slettet.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="709" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
-        <translation>Sommige bestanden konden niet worden verwijderd. Raadpleeg het activiteitenlogboek voor details.</translation>
+        <translation>Nogle filer kunne ikke slettes. Tjek aktivitetsloggen for detaljer.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="717" />
         <source>Starting new timestamped backup...</source>
-        <translation>Nieuwe back-up met tijdstempel starten...</translation>
+        <translation>Starter ny sikkerhedskopi med tidsstempel...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="719" />
@@ -1466,17 +1466,17 @@ Deze actie kan niet ongedaan worden gemaakt!</numerusform>
     <message>
         <location filename="..\ui\main_window.py" line="723" />
         <source>Saving...</source>
-        <translation>Opslaan...</translation>
+        <translation>Gemmer...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="741" />
         <source>No backup files found to restore!</source>
-        <translation>Geen back-upbestanden gevonden om te herstellen!</translation>
+        <translation>Ingen sikkerhedskopifiler fundet til gendannelse!</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="743" />
         <source>✗ Restore failed: No backup files found.</source>
-        <translation>✗ Herstellen mislukt: Geen back-upbestanden gevonden.</translation>
+        <translation>✗ Gendannelse mislykkedes: Ingen sikkerhedskopifiler fundet.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="763" />
@@ -1484,92 +1484,92 @@ Deze actie kan niet ongedaan worden gemaakt!</numerusform>
         <location filename="..\ui\main_window.py" line="757" />
         <location filename="..\ui\main_window.py" line="756" />
         <source>N/A</source>
-        <translation>N.v.t.</translation>
+        <translation>I/T</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="766" />
         <source>N/A (Old Format)</source>
-        <translation>N.v.t. (Oud formaat)</translation>
+        <translation>I/T (gammelt format)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="795" />
         <source>Confirm Restore — Live Preview</source>
-        <translation>Herstel bevestigen — Live voorbeeld</translation>
+        <translation>Bekræft gendannelse — live forhåndsvisning</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="805" />
         <source>File</source>
-        <translation>Bestand</translation>
+        <translation>Fil</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="806" />
         <source>Resolution</source>
-        <translation>Resolutie</translation>
+        <translation>Opløsning</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="807" />
         <source>Icons</source>
-        <translation>Pictogrammen</translation>
+        <translation>Ikoner</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="808" />
         <source>Tag</source>
-        <translation>Label</translation>
+        <translation>Tag</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="809" />
         <source>Timestamp</source>
-        <translation>Tijdstempel</translation>
+        <translation>Tidsstempel</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="821" />
         <source>will move</source>
-        <translation>wordt verplaatst</translation>
+        <translation>flyttes</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="822" />
         <source>already in place</source>
-        <translation>al op de juiste positie</translation>
+        <translation>allerede på plads</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="823" />
         <source>not on desktop</source>
-        <translation>niet op het bureaublad</translation>
+        <translation>ikke på skrivebordet</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="832" />
         <source>Layout Preview (saved positions vs current):</source>
-        <translation>Lay-outvoorvertoning (opgeslagen posities vs. huidig):</translation>
+        <translation>Layoutvisning (gemte positioner vs. aktuelle):</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="854" />
         <source>↺ Restore</source>
-        <translation>↺ Herstellen</translation>
+        <translation>↺ Gendan</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="861" />
         <source>Cancel</source>
-        <translation>Annuleren</translation>
+        <translation>Annuller</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="881" />
         <source>Starting restore from backup '%1'...</source>
-        <translation>Herstellen vanuit back-up '%1' starten...</translation>
+        <translation>Starter gendannelse fra sikkerhedskopi '%1'...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="882" />
         <source>latest</source>
-        <translation>nieuwste</translation>
+        <translation>seneste</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="887" />
         <source>Restoring...</source>
-        <translation>Herstellen...</translation>
+        <translation>Gendanner...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="900" />
         <source>Confirm Scramble</source>
-        <translation>Schudden bevestigen</translation>
+        <translation>Bekræft blanding</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="901" />
@@ -1578,307 +1578,307 @@ Deze actie kan niet ongedaan worden gemaakt!</numerusform>
 **A mandatory backup will be created first**.
 
 Do you want to proceed?</source>
-        <translation>Weet u zeker dat u de posities van ALLE bureaubladpictogrammen wilt randomiseren?
+        <translation>Er du sikker på, at du vil tilfældiggøre positionerne for ALLE skrivebordsikoner?
 
-**Er wordt eerst een verplichte back-up aangemaakt**.
+**En obligatorisk sikkerhedskopi oprettes først**.
 
-Wilt u doorgaan?</translation>
+Vil du fortsætte?</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="907" />
         <source>Starting desktop icon scrambling (randomization)...</source>
-        <translation>Bureaubladpictogrammen schudden (randomiseren) starten...</translation>
+        <translation>Starter blanding af skrivebordsikoner (tilfældiggørelse)...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="910" />
         <source>Scrambling icons...</source>
-        <translation>Pictogrammen schudden...</translation>
+        <translation>Blander ikoner...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="929" />
         <source>Operation completed successfully</source>
-        <translation>Bewerking succesvol voltooid</translation>
+        <translation>Handling fuldført</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="935" />
         <source>Operation completed successfully! (%1)</source>
-        <translation>Bewerking succesvol voltooid! (%1)</translation>
+        <translation>Handling fuldført! (%1)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="942" />
         <source>%1 successful!</source>
-        <translation>%1 geslaagd!</translation>
+        <translation>%1 gennemført!</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="947" />
         <source>Operation failed</source>
-        <translation>Bewerking mislukt</translation>
+        <translation>Handling mislykkedes</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="951" />
         <source>Operation failed (%1). Check the log for details.</source>
-        <translation>Bewerking mislukt (%1). Raadpleeg het logboek voor details.</translation>
+        <translation>Handling mislykkedes (%1). Tjek loggen for detaljer.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="964" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
-        <translation>⚠ Waarschuwing: Beeldschermmetadata ontbreekt of is onvolledig.</translation>
+        <translation>⚠ Advarsel: Skærmmetadata mangler eller er ufuldstændige.</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="969" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
-            <numerusform>⚠ Waarschuwing: Opgeslagen (%n monitor) vs. Huidig (%1 monitor(s)).</numerusform>
-            <numerusform>⚠ Waarschuwing: Opgeslagen (%n monitors) vs. Huidig (%1 monitor(s)).</numerusform>
+            <numerusform>⚠ Advarsel: Gemt (%n skærm) vs. Aktuel (%1 skærm).</numerusform>
+            <numerusform>⚠ Advarsel: Gemt (%n skærme) vs. Aktuel (%1 skærme).</numerusform>
         </translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="977" />
         <source>Monitor Mismatch Warning</source>
-        <translation>Waarschuwing voor monitormismatch</translation>
+        <translation>Advarsel om skærmafvigelse</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="978" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
-        <translation>De lay-out is opgeslagen met %1 monitor(s), maar u heeft momenteel %2 monitor(s) aangesloten.
+        <translation>Layoutet blev gemt med %1 skærm(e), men du har i øjeblikket %2 skærm(e) tilsluttet.
 
-Pictogramposities zijn hersteld, maar kunnen onnauwkeurig zijn.</translation>
+Ikonpositioner er gendannet, men de er muligvis unøjagtige.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1000" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
-        <translation>⚠ Waarschuwing: Schermresoluties komen niet overeen met de opgeslagen lay-out.</translation>
+        <translation>⚠ Advarsel: Skærmopløsninger stemmer ikke overens med det gemte layout.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1004" />
         <source>Resolution Mismatch Warning</source>
-        <translation>Waarschuwing voor resolutiemismatch</translation>
+        <translation>Advarsel om opløsningsafvigelse</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1005" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
-        <translation>De schermresoluties van een of meer monitors komen niet overeen met de opgeslagen lay-out.
+        <translation>Skærmopløsningerne for en eller flere skærme stemmer ikke overens med det gemte layout.
 
-Pictogramposities zijn hersteld, maar kunnen onnauwkeurig zijn.</translation>
+Ikonpositioner er gendannet, men de er muligvis unøjagtige.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1017" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
-        <translation>Automatisch opslaan bij afsluiten ingeschakeld. Stille back-up uitvoeren...</translation>
+        <translation>Auto-gem ved afslutning aktiveret. Udfører stille sikkerhedskopiering...</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1021" />
         <source>Auto-Save Log</source>
-        <translation>Automatisch opslaglogboek</translation>
+        <translation>Auto-gem-log</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1036" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
-        <translation>Applicatie geminimaliseerd naar systeemvak. Klik of dubbelklik om te herstellen.</translation>
+        <translation>Program minimeret til proceslinjen. Klik eller dobbeltklik for at gendanne.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1075" />
         <source>A new version is available! (%1)</source>
-        <translation>Een nieuwe versie is beschikbaar! (%1)</translation>
+        <translation>En ny version er tilgængelig! (%1)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1080" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
-        <translation>🔔 Een nieuwe versie is beschikbaar: %1 (huidig: %2)</translation>
+        <translation>🔔 En ny version er tilgængelig: %1 (aktuel: %2)</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1094" />
         <source>Shortcut</source>
-        <translation>Sneltoets</translation>
+        <translation>Genvej</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1095" />
         <source>Action</source>
-        <translation>Actie</translation>
+        <translation>Handling</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1099" />
         <source>Quick Save current layout</source>
-        <translation>Huidige lay-out snel opslaan</translation>
+        <translation>Hurtiggem aktuelt layout</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1103" />
         <source>Open Backup Manager</source>
-        <translation>Back-upbeheer openen</translation>
+        <translation>Åbn Backup Manager</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1107" />
         <source>Open Settings menu</source>
-        <translation>Instellingenmenu openen</translation>
+        <translation>Åbn indstillingsmenu</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1111" />
         <source>Open Online User Manual</source>
-        <translation>Online gebruikershandleiding openen</translation>
+        <translation>Åbn online brugervejledning</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1115" />
         <source>Exit Application</source>
-        <translation>Applicatie afsluiten</translation>
+        <translation>Afslut program</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1119" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
-        <translation>Tip: Beweeg de muis over knoppen om extra sneltoetsen in tooltips te zien.</translation>
+        <translation>Tip: Hold musen over knapper for at se yderligere genveje i værktøjstips.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1134" />
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Luk</translation>
     </message>
 </context><context>
     <name>SplashScreen</name>
     <message>
         <location filename="..\ui\splash_screen.py" line="173" />
         <source>VERSION</source>
-        <translation>VERSIE</translation>
+        <translation>VERSION</translation>
     </message>
     <message>
         <location filename="..\ui\splash_screen.py" line="191" />
         <source>DEVELOPMENT</source>
-        <translation>ONTWIKKELING</translation>
+        <translation>UDVIKLING</translation>
     </message>
     <message>
         <location filename="..\ui\splash_screen.py" line="207" />
         <source>Loading…</source>
-        <translation>Laden…</translation>
+        <translation>Indlæser…</translation>
     </message>
 </context><context>
     <name>UpdateDialog</name>
     <message>
         <location filename="..\ui\update_dialog.py" line="53" />
         <source>Check for Updates</source>
-        <translation>Controleren op updates</translation>
+        <translation>Tjek for opdateringer</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="69" />
         <source>Installed version:</source>
-        <translation>Geïnstalleerde versie:</translation>
+        <translation>Installeret version:</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="77" />
         <source>Latest version:</source>
-        <translation>Nieuwste versie:</translation>
+        <translation>Seneste version:</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="142" />
         <location filename="..\ui\update_dialog.py" line="78" />
         <source>Checking...</source>
-        <translation>Controleren...</translation>
+        <translation>Tjekker...</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="100" />
         <source>Download Update</source>
-        <translation>Update downloaden</translation>
+        <translation>Download opdatering</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="105" />
         <source>Check Again</source>
-        <translation>Opnieuw controleren</translation>
+        <translation>Tjek igen</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="109" />
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Luk</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="164" />
         <source>Could not parse version numbers.</source>
-        <translation>Kan versienummers niet verwerken.</translation>
+        <translation>Kunne ikke analysere versionsnumre.</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="171" />
         <source>A new version is available!</source>
-        <translation>Een nieuwe versie is beschikbaar!</translation>
+        <translation>En ny version er tilgængelig!</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="177" />
         <source>You are using the latest version.</source>
-        <translation>U gebruikt de nieuwste versie.</translation>
+        <translation>Du bruger den seneste version.</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="182" />
         <source>You are using a pre-release version.</source>
-        <translation>U gebruikt een voorlopige versie.</translation>
+        <translation>Du bruger en pre-release-version.</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="188" />
         <source>Unknown</source>
-        <translation>Onbekend</translation>
+        <translation>Ukendt</translation>
     </message>
     <message>
         <location filename="..\ui\update_dialog.py" line="191" />
         <source>Could not check for updates:</source>
-        <translation>Kan niet controleren op updates:</translation>
+        <translation>Kunne ikke tjekke for opdateringer:</translation>
     </message>
 </context><context>
     <name>_DiffCanvas</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="216" />
         <source>No Preview Available</source>
-        <translation>Geen voorvertoning beschikbaar</translation>
+        <translation>Ingen forhåndsvisning tilgængelig</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="276" />
         <source>✓ already in place</source>
-        <translation>✓ al op zijn plaats</translation>
+        <translation>✓ allerede på plads</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="278" />
         <source>↕ will move</source>
-        <translation>↕ wordt verplaatst</translation>
+        <translation>↕ flyttes</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="281" />
         <source>⚠ not on desktop</source>
-        <translation>⚠ niet op bureaublad</translation>
+        <translation>⚠ ikke på skrivebordet</translation>
     </message>
 </context><context>
     <name>_LegendPanel</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="311" />
         <source>Already in place, will not move</source>
-        <translation>Al op zijn plaats, wordt niet verplaatst</translation>
+        <translation>Allerede på plads, flyttes ikke</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="312" />
         <source>Will move  (orange = now,  red = target)</source>
-        <translation>Wordt verplaatst  (oranje = nu,  rood = doel)</translation>
+        <translation>Flyttes  (orange = nu,  rød = mål)</translation>
     </message>
     <message>
         <location filename="..\ui\preview_widget.py" line="313" />
         <source>In backup, not on desktop</source>
-        <translation>In back-up, niet op bureaublad</translation>
+        <translation>I sikkerhedskopi, ikke på skrivebordet</translation>
     </message>
 </context><context>
     <name>_PickBackupDialog</name>
     <message>
         <location filename="..\ui\backup_dialog.py" line="918" />
         <source>Pick Backup to Compare Against</source>
-        <translation>Back-up selecteren om mee te vergelijken</translation>
+        <translation>Vælg sikkerhedskopi til sammenligning</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="922" />
         <source>Select the second backup file:</source>
-        <translation>Selecteer het tweede back-upbestand:</translation>
+        <translation>Vælg den anden sikkerhedskopifil:</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="936" />
         <source>Compare</source>
-        <translation>Vergelijken</translation>
+        <translation>Sammenlign</translation>
     </message>
     <message>
         <location filename="..\ui\backup_dialog.py" line="938" />
         <source>Cancel</source>
-        <translation>Annuleren</translation>
+        <translation>Annuller</translation>
     </message>
 </context></TS>
