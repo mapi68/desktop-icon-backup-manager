@@ -758,6 +758,56 @@ Are you sure you want to proceed?</source>
         <translation>✗ 아이콘 섞기 오류: %1</translation>
     </message>
 </context><context>
+    <name>DesktopVisibilityManager</name>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="46" />
+        <source>Unable to locate the desktop window.</source>
+        <translation>바탕 화면 창을 찾을 수 없습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="66" />
+        <source>Error toggling desktop icon visibility: %1</source>
+        <translation>바탕 화면 아이콘 표시 전환 오류: %1</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="87" />
+        <source>Desktop icons are already visible.</source>
+        <translation>바탕 화면 아이콘이 이미 표시되어 있습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="209" />
+        <location filename="..\core\desktop_visibility.py" line="95" />
+        <source>Error showing desktop icons: %1</source>
+        <translation>바탕 화면 아이콘 표시 오류: %1</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="116" />
+        <source>Desktop icons are already hidden.</source>
+        <translation>바탕 화면 아이콘이 이미 숨겨져 있습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="175" />
+        <location filename="..\core\desktop_visibility.py" line="124" />
+        <source>Error hiding desktop icons: %1</source>
+        <translation>바탕 화면 아이콘 숨기기 오류: %1</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="189" />
+        <location filename="..\core\desktop_visibility.py" line="155" />
+        <source>Unable to locate the desktop view window.</source>
+        <translation>바탕 화면 보기 창을 찾을 수 없습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="166" />
+        <source>✓ Desktop icons hidden successfully.</source>
+        <translation>✓ 바탕 화면 아이콘이 성공적으로 숨겨졌습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="200" />
+        <source>✓ Desktop icons shown successfully.</source>
+        <translation>✓ 바탕 화면 아이콘이 성공적으로 표시되었습니다.</translation>
+    </message>
+</context><context>
     <name>IconPreviewWidget</name>
     <message>
         <location filename="..\ui\preview_widget.py" line="425" />
@@ -828,211 +878,292 @@ Are you sure you want to proceed?</source>
 </context><context>
     <name>MainWindow</name>
     <message>
-        <location filename="..\ui\main_window.py" line="62" />
+        <location filename="..\ui\main_window.py" line="1200" />
+        <source>Updating desktop icon visibility...</source>
+        <translation>바탕 화면 아이콘 표시 상태 업데이트 중...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1207" />
+        <source>Desktop icon visibility updated.</source>
+        <translation>바탕 화면 아이콘 표시 상태가 업데이트되었습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1214" />
+        <source>✗ Failed to show/hide desktop icons.</source>
+        <translation>✗ 바탕 화면 아이콘 표시/숨기기에 실패했습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1223" />
+        <source>Attempting to show desktop icons...</source>
+        <translation>바탕 화면 아이콘 표시 시도 중...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1230" />
+        <source>Desktop icons are now visible.</source>
+        <translation>바탕 화면 아이콘이 이제 표시됩니다.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1237" />
+        <source>✗ Failed to show desktop icons.</source>
+        <translation>✗ 바탕 화면 아이콘 표시에 실패했습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1246" />
+        <source>Attempting to hide desktop icons...</source>
+        <translation>바탕 화면 아이콘 숨기기 시도 중...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1253" />
+        <source>Desktop icons are now hidden.</source>
+        <translation>바탕 화면 아이콘이 이제 숨겨져 있습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1260" />
+        <source>✗ Failed to hide desktop icons.</source>
+        <translation>✗ 바탕 화면 아이콘 숨기기에 실패했습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="64" />
         <source>Unknown</source>
         <translation>알 수 없음</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="93" />
+        <location filename="..\ui\main_window.py" line="95" />
         <source>Quick Save</source>
         <translation>빠른 저장</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="95" />
+        <location filename="..\ui\main_window.py" line="97" />
         <source>Quick Save (Tray)</source>
         <translation>빠른 저장 (트레이)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="99" />
+        <location filename="..\ui\main_window.py" line="101" />
         <source>Restore Latest</source>
         <translation>최신 복원</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="105" />
+        <location filename="..\ui\main_window.py" line="171" />
+        <location filename="..\ui\main_window.py" line="108" />
+        <source>Show/Hide Desktop Icons</source>
+        <translation>바탕 화면 아이콘 표시/숨기기</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="113" />
+        <source>Show Desktop Icons</source>
+        <translation>바탕 화면 아이콘 표시</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="117" />
+        <source>Hide Desktop Icons</source>
+        <translation>바탕 화면 아이콘 숨기기</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="123" />
         <source>Show Window</source>
         <translation>창 표시</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="109" />
+        <location filename="..\ui\main_window.py" line="127" />
         <source>Exit</source>
         <translation>종료</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="130" />
+        <location filename="..\ui\main_window.py" line="148" />
         <source>Desktop Icon Backup Manager by mapi68</source>
         <translation>Desktop Icon Backup Manager by mapi68</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="135" />
+        <location filename="..\ui\main_window.py" line="153" />
         <source>&amp;File</source>
         <translation>파일(&amp;F)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="138" />
+        <location filename="..\ui\main_window.py" line="156" />
         <source>Scramble Desktop Icons (Random)</source>
         <translation>바탕 화면 아이콘 무작위 섞기</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="141" />
+        <location filename="..\ui\main_window.py" line="159" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
         <translation>필수 백업을 생성한 후 모든 바탕 화면 아이콘의 위치를 무작위로 섞습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="149" />
+        <location filename="..\ui\main_window.py" line="169" />
+        <source>👁️ Desktop Icons Visibility</source>
+        <translation>👁️ 바탕 화면 아이콘 표시 설정</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="174" />
+        <source>Toggle visibility of all desktop icons (Ctrl+H)</source>
+        <translation>모든 바탕 화면 아이콘의 표시 상태 전환 (Ctrl+H)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="179" />
+        <source>Show Icons</source>
+        <translation>아이콘 표시</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="183" />
+        <source>Hide Icons</source>
+        <translation>아이콘 숨기기</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="189" />
         <source>Remove All Backups...</source>
         <translation>모든 백업 제거...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="155" />
+        <location filename="..\ui\main_window.py" line="195" />
         <source>📤 Export Backups...</source>
         <translation>📤 백업 내보내기...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="156" />
+        <location filename="..\ui\main_window.py" line="196" />
         <source>Export backups to a folder or ZIP archive</source>
         <translation>백업을 폴더나 ZIP 아카이브로 내보냅니다</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="160" />
+        <location filename="..\ui\main_window.py" line="200" />
         <source>📥 Import Backups...</source>
         <translation>📥 백업 가져오기...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="162" />
+        <location filename="..\ui\main_window.py" line="202" />
         <source>Import backup files (.json) or a ZIP archive</source>
         <translation>백업 파일(.json) 또는 ZIP 아카이브를 가져옵니다</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="168" />
+        <location filename="..\ui\main_window.py" line="208" />
         <source>E&amp;xit</source>
         <translation>종료(&amp;X)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="416" />
-        <location filename="..\ui\main_window.py" line="173" />
+        <location filename="..\ui\main_window.py" line="468" />
+        <location filename="..\ui\main_window.py" line="213" />
         <source>&amp;Settings</source>
         <translation>설정(&amp;S)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="175" />
+        <location filename="..\ui\main_window.py" line="215" />
         <source>Open Settings Menu</source>
         <translation>설정 메뉴 열기</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1022" />
-        <location filename="..\ui\main_window.py" line="181" />
+        <location filename="..\ui\main_window.py" line="1079" />
+        <location filename="..\ui\main_window.py" line="221" />
         <source>Auto-Save on Exit</source>
         <translation>종료 시 자동 저장</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="189" />
+        <location filename="..\ui\main_window.py" line="229" />
         <source>Auto-Restore on Startup</source>
         <translation>시작 시 자동 복원</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="197" />
+        <location filename="..\ui\main_window.py" line="237" />
         <source>Check for Updates on Startup</source>
         <translation>시작 시 업데이트 확인</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="208" />
+        <location filename="..\ui\main_window.py" line="248" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>복원 시 적응형 배율 활성화</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="219" />
+        <location filename="..\ui\main_window.py" line="259" />
         <source>Start Minimized to Tray</source>
         <translation>트레이로 최소화하여 시작</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="227" />
+        <location filename="..\ui\main_window.py" line="267" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>닫기 시 트레이로 최소화 ('X' 버튼)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="237" />
+        <location filename="..\ui\main_window.py" line="277" />
         <source>Automatic Backup Cleanup Limit</source>
         <translation>자동 백업 정리 제한</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="242" />
+        <location filename="..\ui\main_window.py" line="282" />
         <source>Disabled (Keep All)</source>
         <translation>비활성화 (모두 유지)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="243" />
+        <location filename="..\ui\main_window.py" line="283" />
         <source>Keep Last 5</source>
         <translation>최근 5개 유지</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="244" />
+        <location filename="..\ui\main_window.py" line="284" />
         <source>Keep Last 10</source>
         <translation>최근 10개 유지</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="245" />
+        <location filename="..\ui\main_window.py" line="285" />
         <source>Keep Last 25</source>
         <translation>최근 25개 유지</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="246" />
+        <location filename="..\ui\main_window.py" line="286" />
         <source>Keep Last 50</source>
         <translation>최근 50개 유지</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="257" />
+        <location filename="..\ui\main_window.py" line="297" />
         <source>&amp;Help</source>
         <translation>도움말(&amp;H)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="259" />
+        <location filename="..\ui\main_window.py" line="299" />
         <source>Online User Manual</source>
         <translation>온라인 사용자 설명서</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1123" />
-        <location filename="..\ui\main_window.py" line="1091" />
-        <location filename="..\ui\main_window.py" line="266" />
+        <location filename="..\ui\main_window.py" line="1180" />
+        <location filename="..\ui\main_window.py" line="1148" />
+        <location filename="..\ui\main_window.py" line="306" />
         <source>Keyboard Shortcuts</source>
         <translation>키보드 단축키</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="272" />
+        <location filename="..\ui\main_window.py" line="312" />
         <source>Check for Updates...</source>
         <translation>업데이트 확인...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="278" />
+        <location filename="..\ui\main_window.py" line="318" />
         <source>&amp;About</source>
         <translation>정보(&amp;A)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="284" />
+        <location filename="..\ui\main_window.py" line="324" />
         <source>Support on Ko-fi...</source>
         <translation>Ko-fi에서 지원...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="299" />
+        <location filename="..\ui\main_window.py" line="339" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>선택 사항: 설명 태그/설명 입력...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="306" />
+        <location filename="..\ui\main_window.py" line="346" />
         <source>Select a profile to auto-fill the tag field</source>
         <translation>태그 필드를 자동으로 채울 프로필을 선택하세요</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="312" />
+        <location filename="..\ui\main_window.py" line="352" />
         <source>Save Tag:</source>
         <translation>태그 저장:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="320" />
+        <location filename="..\ui\main_window.py" line="360" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 빠른 백업 저장</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="324" />
+        <location filename="..\ui\main_window.py" line="364" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -1041,22 +1172,22 @@ Shortcut: Ctrl+S</source>
 단축키: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="332" />
+        <location filename="..\ui\main_window.py" line="372" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ 최신 복원</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="335" />
+        <location filename="..\ui\main_window.py" line="375" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>찾은 최신 백업 파일에서 아이콘 위치를 복원합니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="340" />
+        <location filename="..\ui\main_window.py" line="380" />
         <source>↺ BACKUP MANAGER</source>
         <translation>↺ 백업 관리자</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="344" />
+        <location filename="..\ui\main_window.py" line="384" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -1065,50 +1196,64 @@ Shortcut: Ctrl+M</source>
 단축키: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="358" />
+        <location filename="..\ui\main_window.py" line="392" />
+        <source>👁️ SHOW/HIDE ICONS</source>
+        <translation>👁️ 아이콘 표시/숨기기</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="395" />
+        <source>Show or hide all desktop icons.
+
+Shortcut: Ctrl+H</source>
+        <translation>모든 바탕 화면 아이콘을 표시하거나 숨깁니다.
+
+단축키: Ctrl+H</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="407" />
         <source>Activity Log:</source>
         <translation>활동 로그:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="369" />
+        <location filename="..\ui\main_window.py" line="418" />
         <source>Current Resolution: %1</source>
         <translation>현재 해상도: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="376" />
+        <location filename="..\ui\main_window.py" line="425" />
         <source>Support on Ko-fi</source>
         <translation>Ko-fi에서 지원</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="382" />
+        <location filename="..\ui\main_window.py" line="431" />
         <source>Clear Log</source>
         <translation>로그 지우기</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="424" />
+        <location filename="..\ui\main_window.py" line="476" />
         <source>Settings menu not found</source>
         <translation>설정 메뉴를 찾을 수 없습니다</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="436" />
+        <location filename="..\ui\main_window.py" line="488" />
         <source>Opening online user manual in browser...</source>
         <translation>브라우저에서 온라인 사용자 설명서 열기 중...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="438" />
+        <location filename="..\ui\main_window.py" line="490" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ 설명서 URL 열기 실패</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="950" />
-        <location filename="..\ui\main_window.py" line="741" />
-        <location filename="..\ui\main_window.py" line="708" />
-        <location filename="..\ui\main_window.py" line="441" />
+        <location filename="..\ui\main_window.py" line="1007" />
+        <location filename="..\ui\main_window.py" line="798" />
+        <location filename="..\ui\main_window.py" line="765" />
+        <location filename="..\ui\main_window.py" line="493" />
         <source>Error</source>
         <translation>오류</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="442" />
+        <location filename="..\ui\main_window.py" line="494" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -1119,276 +1264,281 @@ Please visit manually:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="449" />
+        <location filename="..\ui\main_window.py" line="501" />
         <source>Save</source>
         <translation>저장</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="452" />
+        <location filename="..\ui\main_window.py" line="504" />
         <source>Quick Backup (Shortcut)</source>
         <translation>빠른 백업 (단축키)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="456" />
+        <location filename="..\ui\main_window.py" line="508" />
         <source>Backup Manager</source>
         <translation>백업 관리자</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="461" />
+        <location filename="..\ui\main_window.py" line="513" />
+        <source>Toggle Desktop Icons</source>
+        <translation>바탕 화면 아이콘 전환</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="518" />
         <source>Settings</source>
         <translation>설정</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="496" />
+        <location filename="..\ui\main_window.py" line="553" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>자동 정리 제한이 설정됨: 백업 %n개 (0 = 비활성화).</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1035" />
-        <location filename="..\ui\main_window.py" line="941" />
-        <location filename="..\ui\main_window.py" line="540" />
+        <location filename="..\ui\main_window.py" line="1092" />
+        <location filename="..\ui\main_window.py" line="998" />
+        <location filename="..\ui\main_window.py" line="597" />
         <source>Desktop Icon Manager</source>
         <translation>바탕 화면 아이콘 관리자</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="570" />
+        <location filename="..\ui\main_window.py" line="627" />
         <source>Backup list updated (item deleted).</source>
         <translation>백업 목록이 업데이트되었습니다 (항목 삭제됨).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="579" />
+        <location filename="..\ui\main_window.py" line="636" />
         <source>Backup list updated.</source>
         <translation>백업 목록이 업데이트되었습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="592" />
+        <location filename="..\ui\main_window.py" line="649" />
         <source>Backup list updated (imported).</source>
         <translation>백업 목록이 업데이트되었습니다(가져옴).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="606" />
+        <location filename="..\ui\main_window.py" line="663" />
         <source>— Profiles —</source>
         <translation>— 프로필 —</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="608" />
+        <location filename="..\ui\main_window.py" line="665" />
         <source>Work</source>
         <translation>업무</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="609" />
+        <location filename="..\ui\main_window.py" line="666" />
         <source>Gaming</source>
         <translation>게임</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="610" />
+        <location filename="..\ui\main_window.py" line="667" />
         <source>Presentation</source>
         <translation>발표</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="611" />
+        <location filename="..\ui\main_window.py" line="668" />
         <source>Dev / Coding</source>
         <translation>개발 / 코딩</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="612" />
+        <location filename="..\ui\main_window.py" line="669" />
         <source>Meeting</source>
         <translation>회의</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="613" />
+        <location filename="..\ui\main_window.py" line="670" />
         <source>Home</source>
         <translation>집</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="614" />
+        <location filename="..\ui\main_window.py" line="671" />
         <source>Office</source>
         <translation>사무실</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="615" />
+        <location filename="..\ui\main_window.py" line="672" />
         <source>Laptop</source>
         <translation>노트북</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="616" />
+        <location filename="..\ui\main_window.py" line="673" />
         <source>Docked / External Monitor</source>
         <translation>도킹 / 외부 모니터</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="617" />
+        <location filename="..\ui\main_window.py" line="674" />
         <source>Clean Desktop</source>
         <translation>깔끔한 바탕화면</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="618" />
+        <location filename="..\ui\main_window.py" line="675" />
         <source>Pre-Update</source>
         <translation>업데이트 전</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="619" />
+        <location filename="..\ui\main_window.py" line="676" />
         <source>Pre-Reboot</source>
         <translation>재부팅 전</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="620" />
+        <location filename="..\ui\main_window.py" line="677" />
         <source>Favourite</source>
         <translation>즐겨찾기</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="621" />
+        <location filename="..\ui\main_window.py" line="678" />
         <source>Test</source>
         <translation>테스트</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="643" />
+        <location filename="..\ui\main_window.py" line="700" />
         <source>Quick Backup</source>
         <translation>빠른 백업</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="652" />
+        <location filename="..\ui\main_window.py" line="709" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
         <translation>Windows 바탕 화면 아이콘 위치를 저장하고 복원하는 간단하면서도 강력한 도구입니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="653" />
+        <location filename="..\ui\main_window.py" line="710" />
         <source>Key Features:</source>
         <translation>주요 기능:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="655" />
+        <location filename="..\ui\main_window.py" line="712" />
         <source>Quick Save:</source>
         <translation>빠른 저장:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="655" />
+        <location filename="..\ui\main_window.py" line="712" />
         <source>Save icons with an optional descriptive tag.</source>
         <translation>선택적 설명 태그와 함께 아이콘을 저장합니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="656" />
+        <location filename="..\ui\main_window.py" line="713" />
         <source>Backup Management:</source>
         <translation>백업 관리:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="656" />
+        <location filename="..\ui\main_window.py" line="713" />
         <source>Select, restore, or delete specific backups.</source>
         <translation>특정 백업을 선택, 복원 또는 삭제합니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="657" />
+        <location filename="..\ui\main_window.py" line="714" />
         <source>Live Diff Preview:</source>
         <translation>실시간 차이 미리 보기:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="657" />
+        <location filename="..\ui\main_window.py" line="714" />
         <source>See which icons will move before restoring.</source>
         <translation>복원 전에 어떤 아이콘이 이동할지 확인합니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="658" />
+        <location filename="..\ui\main_window.py" line="715" />
         <source>Visual Preview:</source>
         <translation>시각적 미리 보기:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="658" />
+        <location filename="..\ui\main_window.py" line="715" />
         <source>See a mini-map of your layout.</source>
         <translation>레이아웃의 미니맵을 확인합니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="659" />
+        <location filename="..\ui\main_window.py" line="716" />
         <source>Backup Comparison:</source>
         <translation>백업 비교:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="659" />
+        <location filename="..\ui\main_window.py" line="716" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
         <translation>임의의 두 백업을 비교하여 추가, 제거 및 이동된 아이콘을 확인합니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="660" />
+        <location filename="..\ui\main_window.py" line="717" />
         <source>Adaptive Scaling:</source>
         <translation>적응형 배율:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="660" />
+        <location filename="..\ui\main_window.py" line="717" />
         <source>Automatic adjustment for different resolutions.</source>
         <translation>다른 해상도에 대한 자동 조정.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="661" />
+        <location filename="..\ui\main_window.py" line="718" />
         <source>Automatic Cleanup:</source>
         <translation>자동 정리:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="661" />
+        <location filename="..\ui\main_window.py" line="718" />
         <source>Set a limit on backups to keep.</source>
         <translation>유지할 백업 수 제한을 설정합니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="662" />
+        <location filename="..\ui\main_window.py" line="719" />
         <source>Random Scramble:</source>
         <translation>무작위 섞기:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="662" />
+        <location filename="..\ui\main_window.py" line="719" />
         <source>Randomize icon positions after backup.</source>
         <translation>백업 후 아이콘 위치를 무작위로 섞습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="663" />
+        <location filename="..\ui\main_window.py" line="720" />
         <source>Tray Integration:</source>
         <translation>트레이 통합:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="663" />
+        <location filename="..\ui\main_window.py" line="720" />
         <source>Quick access via tray.</source>
         <translation>트레이를 통한 빠른 접근.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="665" />
+        <location filename="..\ui\main_window.py" line="722" />
         <source>Version:</source>
         <translation>버전:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="666" />
+        <location filename="..\ui\main_window.py" line="723" />
         <source>Development:</source>
         <translation>개발:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="667" />
+        <location filename="..\ui\main_window.py" line="724" />
         <source>Support this project on Ko-fi</source>
         <translation>Ko-fi에서 이 프로젝트를 지원하세요</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="669" />
+        <location filename="..\ui\main_window.py" line="726" />
         <source>About Desktop Icon Backup Manager</source>
         <translation>Desktop Icon Backup Manager 정보</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="675" />
+        <location filename="..\ui\main_window.py" line="732" />
         <source>No backup files found to delete.</source>
         <translation>삭제할 백업 파일을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="678" />
+        <location filename="..\ui\main_window.py" line="735" />
         <source>No Backups Found</source>
         <translation>백업을 찾을 수 없음</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="679" />
+        <location filename="..\ui\main_window.py" line="736" />
         <source>There are no backup files to delete.</source>
         <translation>삭제할 백업 파일이 없습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="685" />
+        <location filename="..\ui\main_window.py" line="742" />
         <source>WARNING: Delete All Backups</source>
         <translation>경고: 모든 백업 삭제</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="686" />
+        <location filename="..\ui\main_window.py" line="743" />
         <source>Are you absolutely sure you want to permanently delete ALL %n desktop icon backup file(s)?
 
 This action cannot be undone!</source>
@@ -1399,158 +1549,158 @@ This action cannot be undone!</source>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="904" />
-        <location filename="..\ui\main_window.py" line="691" />
+        <location filename="..\ui\main_window.py" line="961" />
+        <location filename="..\ui\main_window.py" line="748" />
         <source>Yes</source>
         <translation>예</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="905" />
-        <location filename="..\ui\main_window.py" line="692" />
+        <location filename="..\ui\main_window.py" line="962" />
+        <location filename="..\ui\main_window.py" line="749" />
         <source>No</source>
         <translation>아니요</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="694" />
+        <location filename="..\ui\main_window.py" line="751" />
         <source>Starting deletion of all backup files...</source>
         <translation>모든 백업 파일 삭제 시작 중...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="934" />
-        <location filename="..\ui\main_window.py" line="702" />
+        <location filename="..\ui\main_window.py" line="991" />
+        <location filename="..\ui\main_window.py" line="759" />
         <source>Success</source>
         <translation>성공</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="703" />
+        <location filename="..\ui\main_window.py" line="760" />
         <source>All backup files have been successfully deleted.</source>
         <translation>모든 백업 파일이 성공적으로 삭제되었습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="709" />
+        <location filename="..\ui\main_window.py" line="766" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>일부 파일을 삭제할 수 없습니다. 자세한 내용은 활동 로그를 확인하세요.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="717" />
+        <location filename="..\ui\main_window.py" line="774" />
         <source>Starting new timestamped backup...</source>
         <translation>새 타임스탬프 백업 시작 중...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="719" />
+        <location filename="..\ui\main_window.py" line="776" />
         <source>  (Tag: %1)</source>
         <translation>  (태그: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="723" />
+        <location filename="..\ui\main_window.py" line="780" />
         <source>Saving...</source>
         <translation>저장 중...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="741" />
+        <location filename="..\ui\main_window.py" line="798" />
         <source>No backup files found to restore!</source>
         <translation>복원할 백업 파일을 찾을 수 없습니다!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="743" />
+        <location filename="..\ui\main_window.py" line="800" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ 복원 실패: 백업 파일을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="763" />
-        <location filename="..\ui\main_window.py" line="762" />
-        <location filename="..\ui\main_window.py" line="757" />
-        <location filename="..\ui\main_window.py" line="756" />
+        <location filename="..\ui\main_window.py" line="820" />
+        <location filename="..\ui\main_window.py" line="819" />
+        <location filename="..\ui\main_window.py" line="814" />
+        <location filename="..\ui\main_window.py" line="813" />
         <source>N/A</source>
         <translation>해당 없음</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="766" />
+        <location filename="..\ui\main_window.py" line="823" />
         <source>N/A (Old Format)</source>
         <translation>해당 없음 (구 형식)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="795" />
+        <location filename="..\ui\main_window.py" line="852" />
         <source>Confirm Restore — Live Preview</source>
         <translation>복원 확인 — 실시간 미리보기</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="805" />
+        <location filename="..\ui\main_window.py" line="862" />
         <source>File</source>
         <translation>파일</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="806" />
+        <location filename="..\ui\main_window.py" line="863" />
         <source>Resolution</source>
         <translation>해상도</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="807" />
+        <location filename="..\ui\main_window.py" line="864" />
         <source>Icons</source>
         <translation>아이콘</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="808" />
+        <location filename="..\ui\main_window.py" line="865" />
         <source>Tag</source>
         <translation>태그</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="809" />
+        <location filename="..\ui\main_window.py" line="866" />
         <source>Timestamp</source>
         <translation>타임스탬프</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="821" />
+        <location filename="..\ui\main_window.py" line="878" />
         <source>will move</source>
         <translation>이동됩니다</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="822" />
+        <location filename="..\ui\main_window.py" line="879" />
         <source>already in place</source>
         <translation>이미 올바른 위치에 있음</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="823" />
+        <location filename="..\ui\main_window.py" line="880" />
         <source>not on desktop</source>
         <translation>바탕 화면에 없음</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="832" />
+        <location filename="..\ui\main_window.py" line="889" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>레이아웃 미리 보기 (저장된 위치 vs 현재):</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="854" />
+        <location filename="..\ui\main_window.py" line="911" />
         <source>↺ Restore</source>
         <translation>↺ 복원</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="861" />
+        <location filename="..\ui\main_window.py" line="918" />
         <source>Cancel</source>
         <translation>취소</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="881" />
+        <location filename="..\ui\main_window.py" line="938" />
         <source>Starting restore from backup '%1'...</source>
         <translation>백업 '%1'에서 복원 시작 중...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="882" />
+        <location filename="..\ui\main_window.py" line="939" />
         <source>latest</source>
         <translation>최신</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="887" />
+        <location filename="..\ui\main_window.py" line="944" />
         <source>Restoring...</source>
         <translation>복원 중...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="900" />
+        <location filename="..\ui\main_window.py" line="957" />
         <source>Confirm Scramble</source>
         <translation>섞기 확인</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="901" />
+        <location filename="..\ui\main_window.py" line="958" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1563,59 +1713,59 @@ Do you want to proceed?</source>
 계속하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="907" />
+        <location filename="..\ui\main_window.py" line="964" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>바탕 화면 아이콘 무작위 섞기 시작 중...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="910" />
+        <location filename="..\ui\main_window.py" line="967" />
         <source>Scrambling icons...</source>
         <translation>아이콘 섞는 중...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="929" />
+        <location filename="..\ui\main_window.py" line="986" />
         <source>Operation completed successfully</source>
         <translation>작업이 성공적으로 완료되었습니다</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="935" />
+        <location filename="..\ui\main_window.py" line="992" />
         <source>Operation completed successfully! (%1)</source>
         <translation>작업이 성공적으로 완료되었습니다! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="942" />
+        <location filename="..\ui\main_window.py" line="999" />
         <source>%1 successful!</source>
         <translation>%1 성공!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="947" />
+        <location filename="..\ui\main_window.py" line="1004" />
         <source>Operation failed</source>
         <translation>작업 실패</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="951" />
+        <location filename="..\ui\main_window.py" line="1008" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>작업 실패 (%1). 자세한 내용은 로그를 확인하세요.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="964" />
+        <location filename="..\ui\main_window.py" line="1021" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ 경고: 디스플레이 메타데이터가 누락되었거나 불완전합니다.</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="969" />
+        <location filename="..\ui\main_window.py" line="1026" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ 경고: 저장됨 (%n개 모니터) vs 현재 (%1개 모니터).</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="977" />
+        <location filename="..\ui\main_window.py" line="1034" />
         <source>Monitor Mismatch Warning</source>
         <translation>모니터 불일치 경고</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="978" />
+        <location filename="..\ui\main_window.py" line="1035" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1624,17 +1774,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 아이콘 위치가 복원되었지만 정확하지 않을 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1000" />
+        <location filename="..\ui\main_window.py" line="1057" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ 경고: 화면 해상도가 저장된 레이아웃과 일치하지 않습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1004" />
+        <location filename="..\ui\main_window.py" line="1061" />
         <source>Resolution Mismatch Warning</source>
         <translation>해상도 불일치 경고</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1005" />
+        <location filename="..\ui\main_window.py" line="1062" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1643,72 +1793,72 @@ Icon positions have been restored, but they may be inaccurate.</source>
 아이콘 위치가 복원되었지만 정확하지 않을 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1017" />
+        <location filename="..\ui\main_window.py" line="1074" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>종료 시 자동 저장이 활성화되었습니다. 자동 백업 수행 중...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1021" />
+        <location filename="..\ui\main_window.py" line="1078" />
         <source>Auto-Save Log</source>
         <translation>자동 저장 로그</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1036" />
+        <location filename="..\ui\main_window.py" line="1093" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>애플리케이션이 트레이로 최소화되었습니다. 클릭하거나 두 번 클릭하여 복원하세요.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1075" />
+        <location filename="..\ui\main_window.py" line="1132" />
         <source>A new version is available! (%1)</source>
         <translation>새 버전을 사용할 수 있습니다! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1080" />
+        <location filename="..\ui\main_window.py" line="1137" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 새 버전을 사용할 수 있습니다: %1 (현재: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1094" />
+        <location filename="..\ui\main_window.py" line="1151" />
         <source>Shortcut</source>
         <translation>단축키</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1095" />
+        <location filename="..\ui\main_window.py" line="1152" />
         <source>Action</source>
         <translation>동작</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1099" />
+        <location filename="..\ui\main_window.py" line="1156" />
         <source>Quick Save current layout</source>
         <translation>현재 레이아웃 빠른 저장</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1103" />
+        <location filename="..\ui\main_window.py" line="1160" />
         <source>Open Backup Manager</source>
         <translation>백업 관리자 열기</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1107" />
+        <location filename="..\ui\main_window.py" line="1164" />
         <source>Open Settings menu</source>
         <translation>설정 메뉴 열기</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1111" />
+        <location filename="..\ui\main_window.py" line="1168" />
         <source>Open Online User Manual</source>
         <translation>온라인 사용자 설명서 열기</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1115" />
+        <location filename="..\ui\main_window.py" line="1172" />
         <source>Exit Application</source>
         <translation>애플리케이션 종료</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1119" />
+        <location filename="..\ui\main_window.py" line="1176" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
         <translation>팁: 버튼 위에 마우스를 올리면 도구 설명에서 추가 단축키를 볼 수 있습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1134" />
+        <location filename="..\ui\main_window.py" line="1191" />
         <source>Close</source>
         <translation>닫기</translation>
     </message>

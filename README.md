@@ -151,6 +151,7 @@ desktop-icon-backup-manager.exe --restore latest --silent
 - **🖼️ Visual Dot-Map Layout Preview** — Mini-map visualization of all icon positions with hover tooltips
 - **🔄 Adaptive Scaling** — Proportional position recalculation when restoring to different resolution or DPI *(unique feature)*
 - **🖥️ Multi-Monitor Full Support** — Save/restore across any monitor configuration with automatic mismatch warnings
+- **👁️ Show/Hide Desktop Icons** — Quickly toggle visibility of all desktop icons (`Ctrl+H` shortcut) without affecting backup data — useful for clean desktop screenshots, presentations, or focus mode
 - **⚖️ Backup Comparison Tool** — Diff any two saved layouts side-by-side *(unique feature)*
 - **✏️ Inline Tag Editing** — Double-click backup tags in the table to rename instantly—no dialog boxes
 - **📤 Export Backups** — Export selected or all backups to ZIP archive or folder for backup, sharing, or off-site storage
@@ -396,6 +397,7 @@ Quick reference for all keyboard commands:
 |----------|--------|
 | `Ctrl+S` | Save quick backup |
 | `Ctrl+M` | Open Backup Manager |
+| `Ctrl+H` | Show/Hide Desktop Icons |
 | `Ctrl+,` | Open Settings |
 | `Ctrl+Q` | Exit application |
 | `F1` | Open User Manual (PDF) |

@@ -1,33 +1,59 @@
 \documentclass[a4paper,11pt]{article}
 
-% Packages
+% --- 1. Encoding and Language (Must be first) ---
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
 \usepackage[english]{babel}
-\usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage{listings}
-\usepackage{fancyhdr}
-\usepackage{enumitem}
-\usepackage{titlesec}
+
+% --- 2. Fonts and Symbols ---
+\usepackage{lmodern}
+\usepackage{textcomp}
 \usepackage{fontawesome5}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{float}
-\usepackage{parskip}
-\usepackage{needspace}
-\usepackage{etoolbox}
 \usepackage{pmboxdraw}
-\usepackage{tcolorbox}
-\usepackage{tikz}
-\tcbuselibrary{skins}
 
+% Special character handling
 \DeclareUnicodeCharacter{2194}{\ensuremath{\leftrightarrow}}
 
-% Page setup
+% --- 3. Layout and Geometry ---
+\usepackage{geometry}
 \geometry{margin=2.5cm}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{enumitem}
+
+% --- 4. Graphics and Colors ---
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+% --- 5. Utilities ---
+\usepackage{listings}
+\usepackage{etoolbox}
+
+% --- 6. Links ---
+\usepackage{hyperref}
+
+% Hyperref Configuration
+\hypersetup{
+  colorlinks=true,
+  linkcolor=primary,
+  filecolor=magenta,
+  urlcolor=blue,
+  pdftitle={Desktop Icon Backup Manager - User Manual},
+  pdfauthor={mapi68},
+  pdfsubject={User manual for Desktop Icon Backup Manager},
+  pdfkeywords={backup, icons, desktop, Windows, manager},
+  pdfpagelayout=TwoPageRight,
+}
+
+% Fancyhdr Configuration
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\thepage}
@@ -35,25 +61,12 @@
 \href{https://ko-fi.com/mapi68}{\faCoffee\ buy me a coffee}}
 \renewcommand{\headrulewidth}{0pt}
 
-% Colors
+% Color Definitions
 \definecolor{primary}{RGB}{0,120,215}
 \definecolor{success}{RGB}{0,166,90}
 \definecolor{warning}{RGB}{255,193,7}
 \definecolor{danger}{RGB}{204,0,0}
 \definecolor{codebg}{RGB}{245,245,245}
-
-% Hyperref setup
-\hypersetup{
-  colorlinks=true,
-  linkcolor=primary,
-  filecolor=primary,
-  urlcolor=primary,
-  pdftitle={Desktop Icon Backup Manager - User Manual},
-  pdfauthor={mapi68},
-  pdfsubject={User manual for Desktop Icon Backup Manager},
-  pdfkeywords={backup, icons, desktop, Windows, manager},
-  pdfpagelayout=TwoPageRight,
-}
 
 % Custom boxes
 \newtcolorbox{infobox}[1][]{
@@ -374,6 +387,10 @@ with a live preview of every change before you commit.
     to see exactly what changed (added, removed, moved icons)
   \item \textbf{Adaptive Scaling}: Automatic adjustment of icon
     positions across different resolutions
+  \item \textbf{Show/Hide Desktop Icons}: Quickly toggle visibility of
+    all desktop icons without affecting backup data --- useful for clean
+    desktop screenshots, presentations, or focus mode. Accessible via
+    \texttt{Ctrl+H} shortcut, button, or File menu submenu
   \item \textbf{Automatic Cleanup}: Configurable limit on the number
     of backups to retain (5, 10, 25, 50, or unlimited)
   \item \textbf{Random Scramble}: Randomize icon positions with
@@ -410,7 +427,7 @@ with a live preview of every change before you commit.
       rights required)
   \end{itemize}
 \end{infobox}
-
+\pagebreak
 \section{Installation and Startup}
 
 \subsection{Installation}
@@ -685,6 +702,65 @@ resizable) that provides:
     Section~\ref{sec:export-import}
 \end{itemize}
 
+\subsubsection{SHOW/HIDE ICONS}
+
+\textcolor{warning}{\textbf{Color: Purple | Shortcut: Ctrl+H | Button
+icon: \faEye}}
+
+Toggles the visibility of all desktop icons without affecting any backup
+data or icon positions. This feature is useful for creating clean desktop
+screenshots, presentations, or focus-mode work sessions.
+
+\textbf{Three Access Methods}:
+\begin{enumerate}
+  \item \textbf{Button}: Click the purple \textbf{SHOW/HIDE ICONS}
+    button on the main window
+  \item \textbf{Keyboard}: Press \texttt{Ctrl+H}
+  \item \textbf{Menu}: \texttt{File > Desktop Icons Visibility >
+    Show/Hide Icons}
+\end{enumerate}
+
+\textbf{Behavior}:
+\begin{itemize}
+  \item If icons are \textbf{currently visible}, clicking toggles them
+    \textit{hidden}
+  \item If icons are \textbf{currently hidden}, clicking toggles them
+    \textit{visible}
+  \item The operation is \textbf{instantaneous}
+  \item Icon \textbf{positions are not affected} --- only visibility
+    changes
+  \item \textbf{No backup is created} --- this is a temporary display toggle
+\end{itemize}
+
+\textbf{System Tray Integration}:
+
+You can also control icon visibility from the system tray menu (right-click
+the tray icon):
+\begin{itemize}
+  \item \textbf{Show/Hide Icon Visibility} --- toggles current state
+  \item \textbf{Show Desktop Icons} --- explicitly show (no-op if visible)
+  \item \textbf{Hide Desktop Icons} --- explicitly hide (no-op if hidden)
+\end{itemize}
+
+\begin{warningbox}[Important: Session Scope]
+  Icon visibility state is \textbf{not persistent} --- if you hide icons
+  and then log out or reboot, icons will return to their normal state on
+  the next login. This is by design: the visibility toggle is a temporary
+  display preference, not a system-level setting.
+\end{warningbox}
+
+\textbf{Use Cases}:
+\begin{itemize}
+  \item \textbf{Screenshots}: Hide icons before capturing desktop images
+    for documentation or tutorials
+  \item \textbf{Presentations}: Display a clean, professional desktop
+    during meetings or demos
+  \item \textbf{Focus Mode}: Minimize visual distractions while working
+    on specific tasks
+  \item \textbf{System Maintenance}: Temporarily hide icons during
+    updates, driver installation, or maintenance tasks
+\end{itemize}
+
 \section{File Menu}
 
 \subsection{Scramble Desktop Icons (Random)}
@@ -719,6 +795,61 @@ icons across the available screen area, creating a chaotic but fun layout.
   \item Margin prevents icons from being placed too close to screen edges
   \item Operation completes even if some icons fail to move
 \end{itemize}
+
+\subsection{Desktop Icons Visibility}
+\label{sec:show-hide-icons}
+
+The \textbf{Show/Hide Desktop Icons} feature allows you to quickly
+toggle the visibility of all desktop icons on your desktop without
+affecting any backup data. This is useful for:
+
+\begin{itemize}
+  \item \textbf{Clean Screenshots}: Hide icons before capturing
+    desktop screenshots
+  \item \textbf{Presentations}: Present a clean, distraction-free desktop
+  \item \textbf{Focus Mode}: Hide visual clutter while working on specific tasks
+  \item \textbf{System Maintenance}: Hide icons temporarily during
+    updates or system changes
+\end{itemize}
+
+\textbf{Three Ways to Toggle Icons}:
+\begin{enumerate}
+  \item \textbf{Menu}: \texttt{File > Desktop Icons Visibility >
+    Show/Hide Icons}
+  \item \textbf{Button}: Main window \texttt{SHOW/HIDE ICONS} button (purple)
+  \item \textbf{Keyboard}: \texttt{Ctrl+H}
+\end{enumerate}
+
+\textbf{Submenu Options}:
+\begin{itemize}
+  \item \textbf{Show/Hide Icons} (\texttt{Ctrl+H}): Toggle visibility
+    --- shows if hidden, hides if visible
+  \item \textbf{Show Icons}: Explicitly show all icons (no-op if
+    already visible)
+  \item \textbf{Hide Icons}: Explicitly hide all icons (no-op if already hidden)
+\end{itemize}
+
+\textbf{System Tray Access}:
+You can also toggle icons from the system tray:
+\begin{itemize}
+  \item Right-click the tray icon to access the context menu
+  \item \textbf{Show/Hide Desktop Icons} --- toggles visibility
+  \item \textbf{Show Desktop Icons} --- explicitly show
+  \item \textbf{Hide Desktop Icons} --- explicitly hide
+\end{itemize}
+
+\begin{infobox}[Important Notes]
+  \begin{itemize}
+    \item Icon visibility is \textbf{independent} of backups ---
+      toggling visibility does \textbf{not} affect saved layouts
+    \item The state is \textbf{not} saved between sessions --- icons
+      return to their previous state on next login/reboot
+    \item This feature uses Windows API to control the desktop icon
+      view window; it does not delete or move any icons
+    \item Some third-party desktop customization tools may interfere
+      with icon visibility control
+  \end{itemize}
+\end{infobox}
 
 \subsection{Export Backups}
 \label{sec:export-import}
@@ -1166,6 +1297,8 @@ The program displays system tray notifications for important events:
     \texttt{Ctrl+S} & Quick Save current layout \\
     \hline
     \texttt{Ctrl+M} & Open Backup Manager \\
+    \hline
+    \texttt{Ctrl+H} & Toggle Show/Hide Desktop Icons \\
     \hline
     \texttt{Ctrl+,} & Open Settings menu \\
     \hline

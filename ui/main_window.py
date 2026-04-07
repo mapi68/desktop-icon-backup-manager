@@ -43,6 +43,7 @@ import win32con
 
 from core.config import Config, resource_path
 from core.icon_manager import DesktopIconManager
+from core.desktop_visibility import DesktopVisibilityManager
 from utils.threads import IconWorker
 from utils.helpers import (
     get_display_metadata,
@@ -58,6 +59,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.manager = DesktopIconManager()
+        self.visibility_manager = DesktopVisibilityManager()
         self.current_resolution = get_display_metadata().get(
             "primary_resolution", self.tr("Unknown")
         )
@@ -99,6 +101,22 @@ class MainWindow(QMainWindow):
         self.action_tray_restore = QAction(self.tr("Restore Latest"), self)
         self.action_tray_restore.triggered.connect(self.start_restore_latest)
         tray_menu.addAction(self.action_tray_restore)
+
+        tray_menu.addSeparator()
+
+        self.action_tray_toggle_icons = QAction(
+            self.tr("Show/Hide Desktop Icons"), self
+        )
+        self.action_tray_toggle_icons.triggered.connect(self.toggle_icon_visibility)
+        tray_menu.addAction(self.action_tray_toggle_icons)
+
+        self.action_tray_show_icons = QAction(self.tr("Show Desktop Icons"), self)
+        self.action_tray_show_icons.triggered.connect(self.show_desktop_icons)
+        tray_menu.addAction(self.action_tray_show_icons)
+
+        self.action_tray_hide_icons = QAction(self.tr("Hide Desktop Icons"), self)
+        self.action_tray_hide_icons.triggered.connect(self.hide_desktop_icons)
+        tray_menu.addAction(self.action_tray_hide_icons)
 
         tray_menu.addSeparator()
 
@@ -144,6 +162,28 @@ class MainWindow(QMainWindow):
         )
         self.action_scramble_icons.triggered.connect(self.start_scramble)
         file_menu.addAction(self.action_scramble_icons)
+
+        file_menu.addSeparator()
+
+        # Desktop icons visibility submenu
+        icons_menu = file_menu.addMenu(self.tr("👁️ Desktop Icons Visibility"))
+
+        action_toggle_icons = QAction(self.tr("Show/Hide Desktop Icons"), self)
+        action_toggle_icons.setShortcut(QKeySequence("Ctrl+H"))
+        action_toggle_icons.setToolTip(
+            self.tr("Toggle visibility of all desktop icons (Ctrl+H)")
+        )
+        action_toggle_icons.triggered.connect(self.toggle_icon_visibility)
+        icons_menu.addAction(action_toggle_icons)
+
+        action_show_icons = QAction(self.tr("Show Icons"), self)
+        action_show_icons.triggered.connect(self.show_desktop_icons)
+        icons_menu.addAction(action_show_icons)
+
+        action_hide_icons = QAction(self.tr("Hide Icons"), self)
+        action_hide_icons.triggered.connect(self.hide_desktop_icons)
+        icons_menu.addAction(action_hide_icons)
+
         file_menu.addSeparator()
 
         self.action_remove_all = QAction(self.tr("Remove All Backups..."), self)
@@ -349,9 +389,18 @@ class MainWindow(QMainWindow):
         self.btn_restore_select.clicked.connect(self.open_backup_manager)
         self.btn_restore_select.setObjectName("backupManagerButton")
 
+        self.btn_toggle_icons = QPushButton(self.tr("👁️ SHOW/HIDE ICONS"))
+        self.btn_toggle_icons.setMinimumHeight(50)
+        self.btn_toggle_icons.setToolTip(
+            self.tr("Show or hide all desktop icons.\n\nShortcut: Ctrl+H")
+        )
+        self.btn_toggle_icons.clicked.connect(self.toggle_icon_visibility)
+        self.btn_toggle_icons.setObjectName("toggleIconsButton")
+
         action_buttons_row.addWidget(self.btn_save_latest, 1)
         action_buttons_row.addWidget(self.btn_restore_latest, 1)
         action_buttons_row.addWidget(self.btn_restore_select, 1)
+        action_buttons_row.addWidget(self.btn_toggle_icons, 1)
 
         layout.addLayout(action_buttons_row)
 
@@ -391,17 +440,20 @@ class MainWindow(QMainWindow):
             QPushButton[objectName="saveButton"],
             QPushButton[objectName="restoreButton"],
             QPushButton[objectName="backupManagerButton"],
+            QPushButton[objectName="toggleIconsButton"],
             QPushButton[objectName="clearLogButton"]
             { color: white; font-weight: bold; border-radius: 6px; padding: 8px; font-size: 13px; }
             QPushButton[objectName="saveButton"]:hover,
             QPushButton[objectName="restoreButton"]:hover,
             QPushButton[objectName="backupManagerButton"]:hover,
+            QPushButton[objectName="toggleIconsButton"]:hover,
             QPushButton[objectName="clearLogButton"]:hover
             { opacity: 0.8; }
             QPushButton:disabled { background-color: #cccccc; color: #666666; }
             QPushButton#saveButton { background-color: #00A65A; }
             QPushButton#backupManagerButton { background-color: #0078D7; }
             QPushButton#restoreButton { background-color: #CC0000; }
+            QPushButton#toggleIconsButton { background-color: #9C27B0; }
             QPushButton#clearLogButton { background-color: #6c757d; }
             QTextEdit { border: 1px solid #ddd; border-radius: 4px; padding: 5px; font-family: 'Consolas', monospace; font-size: 11px; }
             QProgressBar { border: 1px solid #ddd; border-radius: 4px; text-align: center; height: 20px; }
@@ -458,10 +510,7 @@ class MainWindow(QMainWindow):
         manager_shortcut.triggered.connect(self.open_backup_manager)
         self.addAction(manager_shortcut)
 
-        settings_shortcut = QAction(self.tr("Settings"), self)
-        settings_shortcut.setShortcut(QKeySequence("Ctrl+,"))
-        settings_shortcut.triggered.connect(self.show_settings_menu)
-        self.addAction(settings_shortcut)
+
 
     def load_settings(self):
         self.action_start_minimized.setChecked(
@@ -1136,3 +1185,72 @@ class MainWindow(QMainWindow):
         layout.addWidget(btn_close)
 
         dialog.exec()
+
+    def toggle_icon_visibility(self):
+        """Toggle the visibility of desktop icons"""
+        self.log(
+            QCoreApplication.translate(
+                "MainWindow", "Updating desktop icon visibility..."
+            )
+        )
+        success = self.visibility_manager.toggle_icon_visibility(self.log)
+        if success:
+            self.log(
+                QCoreApplication.translate(
+                    "MainWindow",
+                    "Desktop icon visibility updated.",
+                )
+            )
+        else:
+            self.log(
+                QCoreApplication.translate(
+                    "MainWindow",
+                    "✗ Failed to show/hide desktop icons.",
+                )
+            )
+
+    def show_desktop_icons(self):
+        """Show desktop icons"""
+        self.log(
+            QCoreApplication.translate(
+                "MainWindow", "Attempting to show desktop icons..."
+            )
+        )
+        success = self.visibility_manager.show_icons(self.log)
+        if success:
+            self.log(
+                QCoreApplication.translate(
+                    "MainWindow",
+                    "Desktop icons are now visible.",
+                )
+            )
+        else:
+            self.log(
+                QCoreApplication.translate(
+                    "MainWindow",
+                    "✗ Failed to show desktop icons.",
+                )
+            )
+
+    def hide_desktop_icons(self):
+        """Hide desktop icons"""
+        self.log(
+            QCoreApplication.translate(
+                "MainWindow", "Attempting to hide desktop icons..."
+            )
+        )
+        success = self.visibility_manager.hide_icons(self.log)
+        if success:
+            self.log(
+                QCoreApplication.translate(
+                    "MainWindow",
+                    "Desktop icons are now hidden.",
+                )
+            )
+        else:
+            self.log(
+                QCoreApplication.translate(
+                    "MainWindow",
+                    "✗ Failed to hide desktop icons.",
+                )
+            )
