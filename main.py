@@ -168,9 +168,7 @@ class LanguageDialog(QDialog):
 
         self.combo = QComboBox()
         english = [loc for loc in available if loc == ""]
-        others = sorted(
-            [loc for loc in available if loc != ""], key=lambda l: _display_name(l)
-        )
+        others = sorted([loc for loc in available if loc != ""], key=_display_name)
         for locale in english + others:
             self.combo.addItem(_display_name(locale), locale)
 

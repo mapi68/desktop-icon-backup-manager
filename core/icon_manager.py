@@ -100,14 +100,15 @@ class DesktopIconManager:
     def delete_backup(self, filename: str) -> bool:
         """Delete a specific backup file"""
         filepath = os.path.join(Config.BACKUP_DIR, filename)
-        if os.path.exists(filepath):
-            try:
-                os.remove(filepath)
-                return True
-            except OSError as e:
-                logging.error("Error deleting file %s: %s", filepath, e)
-                return False
-        return False
+        if not os.path.exists(filepath):
+            # Already gone — treat as success
+            return True
+        try:
+            os.remove(filepath)
+            return True
+        except OSError as e:
+            logging.error("Error deleting file %s: %s", filepath, e)
+            return False
 
     def delete_all_backups(self, log_callback: Callable[[str], None]) -> bool:
         """Delete all backup files"""

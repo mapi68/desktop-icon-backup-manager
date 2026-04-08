@@ -4,12 +4,12 @@
 <context>
     <name>BackupComparator</name>
     <message>
-        <location filename="..\core\comparator.py" line="37" />
+        <location filename="..\core\comparator.py" line="38" />
         <source>=== COMPARISON RESULTS ===</source>
         <translation>=== REZULTATELE COMPARAȚIEI ===</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\comparator.py" line="43" />
+        <location filename="..\core\comparator.py" line="44" />
         <source>Icon(s) Added: %n</source>
         <translation>
             <numerusform>Pictogramă adăugată: %n</numerusform>
@@ -18,7 +18,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\comparator.py" line="49" />
+        <location filename="..\core\comparator.py" line="50" />
         <source>Icon(s) Removed: %n</source>
         <translation>
             <numerusform>Pictogramă eliminată: %n</numerusform>
@@ -27,7 +27,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\comparator.py" line="55" />
+        <location filename="..\core\comparator.py" line="56" />
         <source>Icon(s) Moved: %n</source>
         <translation>
             <numerusform>Pictogramă mutată: %n</numerusform>
@@ -36,7 +36,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\comparator.py" line="61" />
+        <location filename="..\core\comparator.py" line="62" />
         <source>Icon(s) Unchanged: %n</source>
         <translation>
             <numerusform>Pictogramă neschimbată: %n</numerusform>
@@ -45,22 +45,22 @@
         </translation>
     </message>
     <message>
-        <location filename="..\core\comparator.py" line="69" />
+        <location filename="..\core\comparator.py" line="70" />
         <source>--- ADDED ICONS ---</source>
         <translation>--- PICTOGRAME ADĂUGATE ---</translation>
     </message>
     <message>
-        <location filename="..\core\comparator.py" line="80" />
+        <location filename="..\core\comparator.py" line="81" />
         <source>--- REMOVED ICONS ---</source>
         <translation>--- PICTOGRAME ELIMINATE ---</translation>
     </message>
     <message>
-        <location filename="..\core\comparator.py" line="91" />
+        <location filename="..\core\comparator.py" line="92" />
         <source>--- MOVED ICONS ---</source>
         <translation>--- PICTOGRAME MUTATE ---</translation>
     </message>
     <message>
-        <location filename="..\core\comparator.py" line="101" />
+        <location filename="..\core\comparator.py" line="102" />
         <source>✓ No differences - backups are identical!</source>
         <translation>✓ Nicio diferență – copiile de rezervă sunt identice!</translation>
     </message>
@@ -535,42 +535,42 @@ Sigur doriți să continuați?</translation>
 </context><context>
     <name>CLI</name>
     <message>
-        <location filename="..\main.py" line="268" />
+        <location filename="..\main.py" line="266" />
         <source>Perform a backup</source>
         <translation>Efectuați o copie de rezervă</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="274" />
+        <location filename="..\main.py" line="272" />
         <source>Restore a specific backup or latest</source>
         <translation>Restaurați o copie de rezervă specifică sau cea mai recentă</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="279" />
+        <location filename="..\main.py" line="277" />
         <source>Run without showing the GUI</source>
         <translation>Rulați fără a afișa interfața grafică</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="300" />
+        <location filename="..\main.py" line="298" />
         <source>[SILENT]</source>
         <translation>[SILENȚIOS]</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="305" />
+        <location filename="..\main.py" line="303" />
         <source>Starting silent backup...</source>
         <translation>Se pornește copia de rezervă silențioasă...</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="308" />
+        <location filename="..\main.py" line="306" />
         <source>Silent CLI Backup</source>
         <translation>Copie de rezervă CLI silențioasă</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="322" />
+        <location filename="..\main.py" line="320" />
         <source>Error: No backup files found for latest restore.</source>
         <translation>Eroare: Nu s-au găsit fișiere de rezervă pentru restaurarea celei mai recente copii.</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="330" />
+        <location filename="..\main.py" line="328" />
         <source>Starting silent restore from: %1</source>
         <translation>Se pornește restaurarea silențioasă din: %1</translation>
     </message>
@@ -582,12 +582,12 @@ Sigur doriți să continuați?</translation>
         <translation>Nu se poate găsi controlul ListView al desktopului. Asigurați-vă că pictogramele de pe desktop sunt vizibile.</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="117" />
+        <location filename="..\core\icon_manager.py" line="118" />
         <source>No backup files found to delete.</source>
         <translation>Nu s-au găsit fișiere de rezervă de șters.</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="133" />
+        <location filename="..\core\icon_manager.py" line="134" />
         <source>✓ Successfully deleted %n backup file(s).</source>
         <translation>
             <numerusform>✓ S-a șters cu succes %n fișier de rezervă.</numerusform>
@@ -596,7 +596,7 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="142" />
+        <location filename="..\core\icon_manager.py" line="143" />
         <source>✗ Failed to delete %n backup file(s).</source>
         <translation>
             <numerusform>✗ Ștergerea a %n fișier de rezervă a eșuat.</numerusform>
@@ -605,12 +605,12 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="158" />
+        <location filename="..\core\icon_manager.py" line="159" />
         <source>Automatic cleanup skipped: max_count is disabled (0).</source>
         <translation>Curățarea automată omisă: max_count este dezactivat (0).</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="170" />
+        <location filename="..\core\icon_manager.py" line="171" />
         <source>Cleanup skipped: Current count (%n) is within the limit (%1).</source>
         <translation>
             <numerusform>Curățare omisă: Numărul curent (%n) se încadrează în limita (%1).</numerusform>
@@ -619,7 +619,7 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="183" />
+        <location filename="..\core\icon_manager.py" line="184" />
         <source>Cleanup needed: Current count (%1) exceeds limit (%2). Deleting %n oldest file(s).</source>
         <translation>
             <numerusform>Curățare necesară: Numărul curent (%1) depășește limita (%2). Se șterge %n fișier cel mai vechi.</numerusform>
@@ -628,17 +628,17 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="197" />
+        <location filename="..\core\icon_manager.py" line="198" />
         <source>  Deleted oldest backup: %1</source>
         <translation>  Ștearsă cea mai veche copie de rezervă: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="203" />
+        <location filename="..\core\icon_manager.py" line="204" />
         <source>  Failed to delete: %1</source>
         <translation>  Ștergerea a eșuat: %1</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="209" />
+        <location filename="..\core\icon_manager.py" line="210" />
         <source>Cleanup complete. Total deleted: %n file(s).</source>
         <translation>
             <numerusform>Curățare finalizată. Total șters: %n fișier.</numerusform>
@@ -647,12 +647,12 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="328" />
+        <location filename="..\core\icon_manager.py" line="329" />
         <source>Monitor Resolution: %1</source>
         <translation>Rezoluția monitorului: %1</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="333" />
+        <location filename="..\core\icon_manager.py" line="334" />
         <source>Found %n icon(s). Starting scan...</source>
         <translation>
             <numerusform>S-a găsit %n pictogramă. Se pornește scanarea...</numerusform>
@@ -661,7 +661,7 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="396" />
+        <location filename="..\core\icon_manager.py" line="397" />
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
             <numerusform>✓ S-a salvat %n pictogramă în fișierul de rezervă „%1"</numerusform>
@@ -670,72 +670,72 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="406" />
+        <location filename="..\core\icon_manager.py" line="407" />
         <source>  (Description: %1)</source>
         <translation>  (Descriere: %1)</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="419" />
+        <location filename="..\core\icon_manager.py" line="420" />
         <source>✗ Error saving (I/O): %1</source>
         <translation>✗ Eroare la salvare (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="426" />
+        <location filename="..\core\icon_manager.py" line="427" />
         <source>✗ Error saving: %1</source>
         <translation>✗ Eroare la salvare: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="454" />
+        <location filename="..\core\icon_manager.py" line="455" />
         <source>✗ Error: Backup file not found.</source>
         <translation>✗ Eroare: Fișierul de rezervă nu a fost găsit.</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="464" />
+        <location filename="..\core\icon_manager.py" line="465" />
         <source>Attempting to restore from backup: '%1'</source>
         <translation>Se încearcă restaurarea din copia de rezervă: „%1"</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="469" />
+        <location filename="..\core\icon_manager.py" line="470" />
         <source>Saved Resolution (from filename): %1</source>
         <translation>Rezoluție salvată (din numele fișierului): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="486" />
+        <location filename="..\core\icon_manager.py" line="487" />
         <source>Restoring layout (saved: %1)</source>
         <translation>Se restaurează aspectul (salvat: %1)</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="491" />
+        <location filename="..\core\icon_manager.py" line="492" />
         <source>  Description: %1</source>
         <translation>  Descriere: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="498" />
+        <location filename="..\core\icon_manager.py" line="499" />
         <source>Restoring layout (Old format, no timestamp and metadata)</source>
         <translation>Se restaurează aspectul (Format vechi, fără marcaj de timp și metadate)</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="506" />
+        <location filename="..\core\icon_manager.py" line="507" />
         <source>✗ Error: Invalid backup file format: %1</source>
         <translation>✗ Eroare: Format invalid al fișierului de rezervă: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="513" />
+        <location filename="..\core\icon_manager.py" line="514" />
         <source>✗ Error reading backup file (I/O): %1</source>
         <translation>✗ Eroare la citirea fișierului de rezervă (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="530" />
+        <location filename="..\core\icon_manager.py" line="531" />
         <source>⚠ Warning: Resolution mismatch!</source>
         <translation>⚠ Avertisment: Rezoluție incompatibilă!</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="540" />
+        <location filename="..\core\icon_manager.py" line="541" />
         <source>✓ Adaptive Scaling enabled: X=%1, Y=%2</source>
         <translation>✓ Scalare adaptivă activată: X=%1, Y=%2</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="625" />
+        <location filename="..\core\icon_manager.py" line="626" />
         <source>✓ Restored %n icon(s)</source>
         <translation>
             <numerusform>✓ S-a restaurat %n pictogramă</numerusform>
@@ -744,7 +744,7 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="631" />
+        <location filename="..\core\icon_manager.py" line="632" />
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
             <numerusform>⚠ S-a omis %n pictogramă (nu s-a găsit pe desktop)</numerusform>
@@ -753,22 +753,22 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="645" />
+        <location filename="..\core\icon_manager.py" line="646" />
         <source>✗ Error restoring (I/O): %1</source>
         <translation>✗ Eroare la restaurare (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="652" />
+        <location filename="..\core\icon_manager.py" line="653" />
         <source>✗ Error restoring: %1</source>
         <translation>✗ Eroare la restaurare: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="680" />
+        <location filename="..\core\icon_manager.py" line="681" />
         <source>Redrawing disabled for scrambling...</source>
         <translation>Redesenarea dezactivată pentru amestecare...</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="689" />
+        <location filename="..\core\icon_manager.py" line="690" />
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
             <numerusform>S-a găsit %n pictogramă. Se pornește poziționarea aleatorie...</numerusform>
@@ -777,7 +777,7 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="710" />
+        <location filename="..\core\icon_manager.py" line="711" />
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
             <numerusform>✓ Pozițiile a %n pictograme au fost amestecate.</numerusform>
@@ -786,7 +786,7 @@ Sigur doriți să continuați?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="724" />
+        <location filename="..\core\icon_manager.py" line="725" />
         <source>✗ Error scrambling icons: %1</source>
         <translation>✗ Eroare la amestecarea pictogramelor: %1</translation>
     </message>
@@ -897,12 +897,12 @@ Sigur doriți să continuați?</translation>
 </context><context>
     <name>Main</name>
     <message>
-        <location filename="..\main.py" line="376" />
+        <location filename="..\main.py" line="374" />
         <source>Critical Error</source>
         <translation>Eroare critică</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="377" />
+        <location filename="..\main.py" line="375" />
         <source>Failed to start application:
 %1</source>
         <translation>Pornirea aplicației a eșuat:
@@ -911,292 +911,293 @@ Sigur doriți să continuați?</translation>
 </context><context>
     <name>MainWindow</name>
     <message>
-        <location filename="..\ui\main_window.py" line="1200" />
+        <location filename="..\ui\main_window.py" line="1211" />
         <source>Updating desktop icon visibility...</source>
         <translation>Se actualizează vizibilitatea pictogramelor de pe desktop...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1207" />
+        <location filename="..\ui\main_window.py" line="1218" />
         <source>Desktop icon visibility updated.</source>
         <translation>Vizibilitatea pictogramelor de pe desktop a fost actualizată.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1214" />
+        <location filename="..\ui\main_window.py" line="1225" />
         <source>✗ Failed to show/hide desktop icons.</source>
         <translation>✗ Nu s-au putut afișa/ascunde pictogramele de pe desktop.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1223" />
+        <location filename="..\ui\main_window.py" line="1234" />
         <source>Attempting to show desktop icons...</source>
         <translation>Se încearcă afișarea pictogramelor de pe desktop...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1230" />
+        <location filename="..\ui\main_window.py" line="1241" />
         <source>Desktop icons are now visible.</source>
         <translation>Pictogramele de pe desktop sunt acum vizibile.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1237" />
+        <location filename="..\ui\main_window.py" line="1248" />
         <source>✗ Failed to show desktop icons.</source>
         <translation>✗ Nu s-au putut afișa pictogramele de pe desktop.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1246" />
+        <location filename="..\ui\main_window.py" line="1257" />
         <source>Attempting to hide desktop icons...</source>
         <translation>Se încearcă ascunderea pictogramelor de pe desktop...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1253" />
+        <location filename="..\ui\main_window.py" line="1264" />
         <source>Desktop icons are now hidden.</source>
         <translation>Pictogramele de pe desktop sunt acum ascunse.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1260" />
+        <location filename="..\ui\main_window.py" line="1271" />
         <source>✗ Failed to hide desktop icons.</source>
         <translation>✗ Nu s-au putut ascunde pictogramele de pe desktop.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="64" />
+        <location filename="..\ui\main_window.py" line="63" />
         <source>Unknown</source>
         <translation>Necunoscut</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="95" />
+        <location filename="..\ui\main_window.py" line="94" />
         <source>Quick Save</source>
         <translation>Salvare rapidă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="97" />
+        <location filename="..\ui\main_window.py" line="96" />
         <source>Quick Save (Tray)</source>
         <translation>Salvare rapidă (tavă sistem)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="101" />
+        <location filename="..\ui\main_window.py" line="100" />
         <source>Restore Latest</source>
         <translation>Restaurați cea mai recentă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="171" />
-        <location filename="..\ui\main_window.py" line="108" />
+        <location filename="..\ui\main_window.py" line="1171" />
+        <location filename="..\ui\main_window.py" line="170" />
+        <location filename="..\ui\main_window.py" line="107" />
         <source>Show/Hide Desktop Icons</source>
         <translation>Afișare/Ascundere pictograme desktop</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="113" />
+        <location filename="..\ui\main_window.py" line="112" />
         <source>Show Desktop Icons</source>
         <translation>Afișare pictograme desktop</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="117" />
+        <location filename="..\ui\main_window.py" line="116" />
         <source>Hide Desktop Icons</source>
         <translation>Ascundere pictograme desktop</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="123" />
+        <location filename="..\ui\main_window.py" line="122" />
         <source>Show Window</source>
         <translation>Afișați fereastra</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="127" />
+        <location filename="..\ui\main_window.py" line="126" />
         <source>Exit</source>
         <translation>Ieșire</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="148" />
+        <location filename="..\ui\main_window.py" line="147" />
         <source>Desktop Icon Backup Manager by mapi68</source>
         <translation>Desktop Icon Backup Manager de mapi68</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="153" />
+        <location filename="..\ui\main_window.py" line="152" />
         <source>&amp;File</source>
         <translation>&amp;Fișier</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="156" />
+        <location filename="..\ui\main_window.py" line="155" />
         <source>Scramble Desktop Icons (Random)</source>
         <translation>Amestecați pictogramele de pe desktop (aleatoriu)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="159" />
+        <location filename="..\ui\main_window.py" line="158" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
         <translation>Randomizează pozițiile tuturor pictogramelor de pe desktop după crearea unei copii de rezervă obligatorii.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="169" />
+        <location filename="..\ui\main_window.py" line="168" />
         <source>👁️ Desktop Icons Visibility</source>
         <translation>👁️ Vizibilitatea pictogramelor de pe desktop</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="174" />
+        <location filename="..\ui\main_window.py" line="173" />
         <source>Toggle visibility of all desktop icons (Ctrl+H)</source>
         <translation>Comutare vizibilitate pentru toate pictogramele de pe desktop (Ctrl+H)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="179" />
+        <location filename="..\ui\main_window.py" line="178" />
         <source>Show Icons</source>
         <translation>Afișare pictograme</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="183" />
+        <location filename="..\ui\main_window.py" line="182" />
         <source>Hide Icons</source>
         <translation>Ascundere pictograme</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="189" />
+        <location filename="..\ui\main_window.py" line="188" />
         <source>Remove All Backups...</source>
         <translation>Eliminați toate copiile de rezervă...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="195" />
+        <location filename="..\ui\main_window.py" line="194" />
         <source>📤 Export Backups...</source>
         <translation>📤 Exportați copii de rezervă...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="196" />
+        <location filename="..\ui\main_window.py" line="195" />
         <source>Export backups to a folder or ZIP archive</source>
         <translation>Exportați copiile de rezervă într-un dosar sau arhivă ZIP</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="200" />
+        <location filename="..\ui\main_window.py" line="199" />
         <source>📥 Import Backups...</source>
         <translation>📥 Importați copii de rezervă...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="202" />
+        <location filename="..\ui\main_window.py" line="201" />
         <source>Import backup files (.json) or a ZIP archive</source>
         <translation>Importați fișiere de rezervă (.json) sau o arhivă ZIP</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="208" />
+        <location filename="..\ui\main_window.py" line="207" />
         <source>E&amp;xit</source>
         <translation>Ie&amp;șire</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="468" />
-        <location filename="..\ui\main_window.py" line="213" />
+        <location filename="..\ui\main_window.py" line="467" />
+        <location filename="..\ui\main_window.py" line="212" />
         <source>&amp;Settings</source>
         <translation>&amp;Setări</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="215" />
+        <location filename="..\ui\main_window.py" line="214" />
         <source>Open Settings Menu</source>
         <translation>Deschideți meniul Setări</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1079" />
-        <location filename="..\ui\main_window.py" line="221" />
+        <location filename="..\ui\main_window.py" line="1085" />
+        <location filename="..\ui\main_window.py" line="220" />
         <source>Auto-Save on Exit</source>
         <translation>Salvare automată la ieșire</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="229" />
+        <location filename="..\ui\main_window.py" line="228" />
         <source>Auto-Restore on Startup</source>
         <translation>Restaurare automată la pornire</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="237" />
+        <location filename="..\ui\main_window.py" line="236" />
         <source>Check for Updates on Startup</source>
         <translation>Verificați actualizările la pornire</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="248" />
+        <location filename="..\ui\main_window.py" line="247" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>Activați scalarea adaptivă la restaurare</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="259" />
+        <location filename="..\ui\main_window.py" line="258" />
         <source>Start Minimized to Tray</source>
         <translation>Porniți minimizat în tava sistemului</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="267" />
+        <location filename="..\ui\main_window.py" line="266" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>Minimizați în tava sistemului la închidere (butonul „X")</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="277" />
+        <location filename="..\ui\main_window.py" line="276" />
         <source>Automatic Backup Cleanup Limit</source>
         <translation>Limita de curățare automată a copiilor de rezervă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="282" />
+        <location filename="..\ui\main_window.py" line="281" />
         <source>Disabled (Keep All)</source>
         <translation>Dezactivat (păstrați toate)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="283" />
+        <location filename="..\ui\main_window.py" line="282" />
         <source>Keep Last 5</source>
         <translation>Păstrați ultimele 5</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="284" />
+        <location filename="..\ui\main_window.py" line="283" />
         <source>Keep Last 10</source>
         <translation>Păstrați ultimele 10</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="285" />
+        <location filename="..\ui\main_window.py" line="284" />
         <source>Keep Last 25</source>
         <translation>Păstrați ultimele 25</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="286" />
+        <location filename="..\ui\main_window.py" line="285" />
         <source>Keep Last 50</source>
         <translation>Păstrați ultimele 50</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="297" />
+        <location filename="..\ui\main_window.py" line="296" />
         <source>&amp;Help</source>
         <translation>&amp;Ajutor</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="299" />
+        <location filename="..\ui\main_window.py" line="298" />
         <source>Online User Manual</source>
         <translation>Manual de utilizare online</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1180" />
-        <location filename="..\ui\main_window.py" line="1148" />
-        <location filename="..\ui\main_window.py" line="306" />
+        <location filename="..\ui\main_window.py" line="1191" />
+        <location filename="..\ui\main_window.py" line="1155" />
+        <location filename="..\ui\main_window.py" line="305" />
         <source>Keyboard Shortcuts</source>
         <translation>Comenzi rapide de la tastatură</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="312" />
+        <location filename="..\ui\main_window.py" line="311" />
         <source>Check for Updates...</source>
         <translation>Verificați actualizările...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="318" />
+        <location filename="..\ui\main_window.py" line="317" />
         <source>&amp;About</source>
         <translation>&amp;Despre</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="324" />
+        <location filename="..\ui\main_window.py" line="323" />
         <source>Support on Ko-fi...</source>
         <translation>Susțineți pe Ko-fi...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="339" />
+        <location filename="..\ui\main_window.py" line="338" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>Opțional: Introduceți o etichetă/descriere...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="346" />
+        <location filename="..\ui\main_window.py" line="345" />
         <source>Select a profile to auto-fill the tag field</source>
         <translation>Selectați un profil pentru completarea automată a câmpului de etichetă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="352" />
+        <location filename="..\ui\main_window.py" line="351" />
         <source>Save Tag:</source>
         <translation>Salvați eticheta:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="360" />
+        <location filename="..\ui\main_window.py" line="359" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 SALVAȚI COPIA DE REZERVĂ RAPIDĂ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="364" />
+        <location filename="..\ui\main_window.py" line="363" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -1205,22 +1206,22 @@ Shortcut: Ctrl+S</source>
 Comandă rapidă: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="372" />
+        <location filename="..\ui\main_window.py" line="371" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ RESTAURAȚI CEA MAI RECENTĂ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="375" />
+        <location filename="..\ui\main_window.py" line="374" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>Restaurați pozițiile pictogramelor din CEL MAI RECENT fișier de rezervă găsit.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="380" />
+        <location filename="..\ui\main_window.py" line="379" />
         <source>↺ BACKUP MANAGER</source>
         <translation>↺ MANAGER COPII DE REZERVĂ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="384" />
+        <location filename="..\ui\main_window.py" line="383" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -1229,12 +1230,12 @@ Shortcut: Ctrl+M</source>
 Comandă rapidă: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="392" />
+        <location filename="..\ui\main_window.py" line="391" />
         <source>👁️ SHOW/HIDE ICONS</source>
         <translation>👁️ AFIȘARE/ASCUNDERE PICTOGRAME</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="395" />
+        <location filename="..\ui\main_window.py" line="394" />
         <source>Show or hide all desktop icons.
 
 Shortcut: Ctrl+H</source>
@@ -1243,50 +1244,50 @@ Shortcut: Ctrl+H</source>
 Comandă rapidă: Ctrl+H</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="407" />
+        <location filename="..\ui\main_window.py" line="406" />
         <source>Activity Log:</source>
         <translation>Jurnal de activitate:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="418" />
+        <location filename="..\ui\main_window.py" line="417" />
         <source>Current Resolution: %1</source>
         <translation>Rezoluție curentă: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="425" />
+        <location filename="..\ui\main_window.py" line="424" />
         <source>Support on Ko-fi</source>
         <translation>Susțineți pe Ko-fi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="431" />
+        <location filename="..\ui\main_window.py" line="430" />
         <source>Clear Log</source>
         <translation>Ștergeți jurnalul</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="476" />
+        <location filename="..\ui\main_window.py" line="475" />
         <source>Settings menu not found</source>
         <translation>Meniul Setări nu a fost găsit</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="488" />
+        <location filename="..\ui\main_window.py" line="487" />
         <source>Opening online user manual in browser...</source>
         <translation>Se deschide manualul de utilizare online în browser...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="490" />
+        <location filename="..\ui\main_window.py" line="489" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ Deschiderea URL-ului manualului a eșuat</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1007" />
-        <location filename="..\ui\main_window.py" line="798" />
-        <location filename="..\ui\main_window.py" line="765" />
-        <location filename="..\ui\main_window.py" line="493" />
+        <location filename="..\ui\main_window.py" line="1000" />
+        <location filename="..\ui\main_window.py" line="789" />
+        <location filename="..\ui\main_window.py" line="756" />
+        <location filename="..\ui\main_window.py" line="492" />
         <source>Error</source>
         <translation>Eroare</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="494" />
+        <location filename="..\ui\main_window.py" line="493" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -1297,32 +1298,22 @@ Vizitați manual:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="501" />
+        <location filename="..\ui\main_window.py" line="500" />
         <source>Save</source>
         <translation>Salvare</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="504" />
+        <location filename="..\ui\main_window.py" line="503" />
         <source>Quick Backup (Shortcut)</source>
         <translation>Copie de rezervă rapidă (comandă rapidă)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="508" />
+        <location filename="..\ui\main_window.py" line="507" />
         <source>Backup Manager</source>
         <translation>Manager copii de rezervă</translation>
     </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="513" />
-        <source>Toggle Desktop Icons</source>
-        <translation>Comutare pictograme desktop</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="518" />
-        <source>Settings</source>
-        <translation>Setări</translation>
-    </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="553" />
+        <location filename="..\ui\main_window.py" line="542" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>Limita de curățare automată setată la: %n copie de rezervă (0 = dezactivat).</numerusform>
@@ -1331,249 +1322,249 @@ Vizitați manual:
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1092" />
-        <location filename="..\ui\main_window.py" line="998" />
-        <location filename="..\ui\main_window.py" line="597" />
+        <location filename="..\ui\main_window.py" line="1099" />
+        <location filename="..\ui\main_window.py" line="991" />
+        <location filename="..\ui\main_window.py" line="586" />
         <source>Desktop Icon Manager</source>
         <translation>Manager pictograme desktop</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="627" />
+        <location filename="..\ui\main_window.py" line="616" />
         <source>Backup list updated (item deleted).</source>
         <translation>Lista copiilor de rezervă actualizată (element șters).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="636" />
+        <location filename="..\ui\main_window.py" line="625" />
         <source>Backup list updated.</source>
         <translation>Lista copiilor de rezervă actualizată.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="649" />
+        <location filename="..\ui\main_window.py" line="638" />
         <source>Backup list updated (imported).</source>
         <translation>Lista copiilor de rezervă actualizată (importate).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="663" />
+        <location filename="..\ui\main_window.py" line="652" />
         <source>— Profiles —</source>
         <translation>— Profiluri —</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="665" />
+        <location filename="..\ui\main_window.py" line="654" />
         <source>Work</source>
         <translation>Serviciu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="666" />
+        <location filename="..\ui\main_window.py" line="655" />
         <source>Gaming</source>
         <translation>Jocuri</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="667" />
+        <location filename="..\ui\main_window.py" line="656" />
         <source>Presentation</source>
         <translation>Prezentare</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="668" />
+        <location filename="..\ui\main_window.py" line="657" />
         <source>Dev / Coding</source>
         <translation>Dezvoltare / Programare</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="669" />
+        <location filename="..\ui\main_window.py" line="658" />
         <source>Meeting</source>
         <translation>Întâlnire</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="670" />
+        <location filename="..\ui\main_window.py" line="659" />
         <source>Home</source>
         <translation>Acasă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="671" />
+        <location filename="..\ui\main_window.py" line="660" />
         <source>Office</source>
         <translation>Birou</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="672" />
+        <location filename="..\ui\main_window.py" line="661" />
         <source>Laptop</source>
         <translation>Laptop</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="673" />
+        <location filename="..\ui\main_window.py" line="662" />
         <source>Docked / External Monitor</source>
         <translation>Stație de andocare / Monitor extern</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="674" />
+        <location filename="..\ui\main_window.py" line="663" />
         <source>Clean Desktop</source>
         <translation>Desktop curat</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="675" />
+        <location filename="..\ui\main_window.py" line="664" />
         <source>Pre-Update</source>
         <translation>Înainte de actualizare</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="676" />
+        <location filename="..\ui\main_window.py" line="665" />
         <source>Pre-Reboot</source>
         <translation>Înainte de repornire</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="677" />
+        <location filename="..\ui\main_window.py" line="666" />
         <source>Favourite</source>
         <translation>Favorit</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="678" />
+        <location filename="..\ui\main_window.py" line="667" />
         <source>Test</source>
         <translation>Test</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="700" />
+        <location filename="..\ui\main_window.py" line="689" />
         <source>Quick Backup</source>
         <translation>Copie de rezervă rapidă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="709" />
+        <location filename="..\ui\main_window.py" line="700" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
         <translation>Un instrument simplu dar puternic pentru salvarea și restaurarea pozițiilor pictogramelor de pe desktopul Windows.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="710" />
+        <location filename="..\ui\main_window.py" line="701" />
         <source>Key Features:</source>
         <translation>Caracteristici principale:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="712" />
+        <location filename="..\ui\main_window.py" line="703" />
         <source>Quick Save:</source>
         <translation>Salvare rapidă:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="712" />
+        <location filename="..\ui\main_window.py" line="703" />
         <source>Save icons with an optional descriptive tag.</source>
         <translation>Salvați pictogramele cu o etichetă descriptivă opțională.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="713" />
+        <location filename="..\ui\main_window.py" line="704" />
         <source>Backup Management:</source>
         <translation>Gestionarea copiilor de rezervă:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="713" />
+        <location filename="..\ui\main_window.py" line="704" />
         <source>Select, restore, or delete specific backups.</source>
         <translation>Selectați, restaurați sau ștergeți copii de rezervă specifice.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="714" />
+        <location filename="..\ui\main_window.py" line="705" />
         <source>Live Diff Preview:</source>
         <translation>Previzualizare diferențe în timp real:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="714" />
+        <location filename="..\ui\main_window.py" line="705" />
         <source>See which icons will move before restoring.</source>
         <translation>Vedeți ce pictograme se vor muta înainte de restaurare.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="715" />
+        <location filename="..\ui\main_window.py" line="706" />
         <source>Visual Preview:</source>
         <translation>Previzualizare vizuală:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="715" />
+        <location filename="..\ui\main_window.py" line="706" />
         <source>See a mini-map of your layout.</source>
         <translation>Vedeți o mini-hartă a aspectului dvs.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="716" />
+        <location filename="..\ui\main_window.py" line="707" />
         <source>Backup Comparison:</source>
         <translation>Compararea copiilor de rezervă:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="716" />
+        <location filename="..\ui\main_window.py" line="707" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
         <translation>Comparați orice două copii de rezervă pentru a vedea pictogramele adăugate, eliminate și mutate.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="717" />
+        <location filename="..\ui\main_window.py" line="708" />
         <source>Adaptive Scaling:</source>
         <translation>Scalare adaptivă:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="717" />
+        <location filename="..\ui\main_window.py" line="708" />
         <source>Automatic adjustment for different resolutions.</source>
         <translation>Ajustare automată pentru diferite rezoluții.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="718" />
+        <location filename="..\ui\main_window.py" line="709" />
         <source>Automatic Cleanup:</source>
         <translation>Curățare automată:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="718" />
+        <location filename="..\ui\main_window.py" line="709" />
         <source>Set a limit on backups to keep.</source>
         <translation>Setați o limită pentru copiile de rezervă de păstrat.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="719" />
+        <location filename="..\ui\main_window.py" line="710" />
         <source>Random Scramble:</source>
         <translation>Amestecare aleatorie:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="719" />
+        <location filename="..\ui\main_window.py" line="710" />
         <source>Randomize icon positions after backup.</source>
         <translation>Randomizați pozițiile pictogramelor după copie de rezervă.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="720" />
+        <location filename="..\ui\main_window.py" line="711" />
         <source>Tray Integration:</source>
         <translation>Integrare în tava sistemului:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="720" />
+        <location filename="..\ui\main_window.py" line="711" />
         <source>Quick access via tray.</source>
         <translation>Acces rapid prin tava sistemului.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="722" />
+        <location filename="..\ui\main_window.py" line="713" />
         <source>Version:</source>
         <translation>Versiune:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="723" />
+        <location filename="..\ui\main_window.py" line="714" />
         <source>Development:</source>
         <translation>Dezvoltare:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="724" />
+        <location filename="..\ui\main_window.py" line="715" />
         <source>Support this project on Ko-fi</source>
         <translation>Susțineți acest proiect pe Ko-fi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="726" />
+        <location filename="..\ui\main_window.py" line="717" />
         <source>About Desktop Icon Backup Manager</source>
         <translation>Despre Desktop Icon Backup Manager</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="732" />
+        <location filename="..\ui\main_window.py" line="723" />
         <source>No backup files found to delete.</source>
         <translation>Nu s-au găsit fișiere de rezervă de șters.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="735" />
+        <location filename="..\ui\main_window.py" line="726" />
         <source>No Backups Found</source>
         <translation>Nu s-au găsit copii de rezervă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="736" />
+        <location filename="..\ui\main_window.py" line="727" />
         <source>There are no backup files to delete.</source>
         <translation>Nu există fișiere de rezervă de șters.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="742" />
+        <location filename="..\ui\main_window.py" line="733" />
         <source>WARNING: Delete All Backups</source>
         <translation>AVERTISMENT: Ștergeți toate copiile de rezervă</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="743" />
+        <location filename="..\ui\main_window.py" line="734" />
         <source>Are you absolutely sure you want to permanently delete ALL %n desktop icon backup file(s)?
 
 This action cannot be undone!</source>
@@ -1590,158 +1581,158 @@ Această acțiune nu poate fi anulată!</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="961" />
-        <location filename="..\ui\main_window.py" line="748" />
+        <location filename="..\ui\main_window.py" line="954" />
+        <location filename="..\ui\main_window.py" line="739" />
         <source>Yes</source>
         <translation>Da</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="962" />
-        <location filename="..\ui\main_window.py" line="749" />
+        <location filename="..\ui\main_window.py" line="955" />
+        <location filename="..\ui\main_window.py" line="740" />
         <source>No</source>
         <translation>Nu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="751" />
+        <location filename="..\ui\main_window.py" line="742" />
         <source>Starting deletion of all backup files...</source>
         <translation>Se pornește ștergerea tuturor fișierelor de rezervă...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="991" />
-        <location filename="..\ui\main_window.py" line="759" />
+        <location filename="..\ui\main_window.py" line="984" />
+        <location filename="..\ui\main_window.py" line="750" />
         <source>Success</source>
         <translation>Succes</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="760" />
+        <location filename="..\ui\main_window.py" line="751" />
         <source>All backup files have been successfully deleted.</source>
         <translation>Toate fișierele de rezervă au fost șterse cu succes.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="766" />
+        <location filename="..\ui\main_window.py" line="757" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>Unele fișiere nu au putut fi șterse. Verificați jurnalul de activitate pentru detalii.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="774" />
+        <location filename="..\ui\main_window.py" line="765" />
         <source>Starting new timestamped backup...</source>
         <translation>Se pornește o nouă copie de rezervă cu marcaj de timp...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="776" />
+        <location filename="..\ui\main_window.py" line="767" />
         <source>  (Tag: %1)</source>
         <translation>  (Etichetă: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="780" />
+        <location filename="..\ui\main_window.py" line="771" />
         <source>Saving...</source>
         <translation>Se salvează...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="798" />
+        <location filename="..\ui\main_window.py" line="789" />
         <source>No backup files found to restore!</source>
         <translation>Nu s-au găsit fișiere de rezervă de restaurat!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="800" />
+        <location filename="..\ui\main_window.py" line="791" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ Restaurarea a eșuat: Nu s-au găsit fișiere de rezervă.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="820" />
-        <location filename="..\ui\main_window.py" line="819" />
-        <location filename="..\ui\main_window.py" line="814" />
-        <location filename="..\ui\main_window.py" line="813" />
+        <location filename="..\ui\main_window.py" line="811" />
+        <location filename="..\ui\main_window.py" line="810" />
+        <location filename="..\ui\main_window.py" line="805" />
+        <location filename="..\ui\main_window.py" line="804" />
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="823" />
+        <location filename="..\ui\main_window.py" line="814" />
         <source>N/A (Old Format)</source>
         <translation>N/A (Format vechi)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="852" />
+        <location filename="..\ui\main_window.py" line="843" />
         <source>Confirm Restore — Live Preview</source>
         <translation>Confirmați restaurarea — Previzualizare în timp real</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="862" />
+        <location filename="..\ui\main_window.py" line="853" />
         <source>File</source>
         <translation>Fișier</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="863" />
+        <location filename="..\ui\main_window.py" line="854" />
         <source>Resolution</source>
         <translation>Rezoluție</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="864" />
+        <location filename="..\ui\main_window.py" line="855" />
         <source>Icons</source>
         <translation>Pictograme</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="865" />
+        <location filename="..\ui\main_window.py" line="856" />
         <source>Tag</source>
         <translation>Etichetă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="866" />
+        <location filename="..\ui\main_window.py" line="857" />
         <source>Timestamp</source>
         <translation>Marcaj de timp</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="878" />
+        <location filename="..\ui\main_window.py" line="869" />
         <source>will move</source>
         <translation>se va muta</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="879" />
+        <location filename="..\ui\main_window.py" line="870" />
         <source>already in place</source>
         <translation>deja la locul ei</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="880" />
+        <location filename="..\ui\main_window.py" line="871" />
         <source>not on desktop</source>
         <translation>nu este pe desktop</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="889" />
+        <location filename="..\ui\main_window.py" line="880" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>Previzualizare aspect (poziții salvate față de cele curente):</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="911" />
+        <location filename="..\ui\main_window.py" line="902" />
         <source>↺ Restore</source>
         <translation>↺ Restaurați</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="918" />
+        <location filename="..\ui\main_window.py" line="909" />
         <source>Cancel</source>
         <translation>Anulați</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="938" />
+        <location filename="..\ui\main_window.py" line="929" />
         <source>Starting restore from backup '%1'...</source>
         <translation>Se pornește restaurarea din copia de rezervă „%1"...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="939" />
+        <location filename="..\ui\main_window.py" line="930" />
         <source>latest</source>
         <translation>cea mai recentă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="944" />
+        <location filename="..\ui\main_window.py" line="935" />
         <source>Restoring...</source>
         <translation>Se restaurează...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="957" />
+        <location filename="..\ui\main_window.py" line="950" />
         <source>Confirm Scramble</source>
         <translation>Confirmați amestecarea</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="958" />
+        <location filename="..\ui\main_window.py" line="951" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1754,47 +1745,47 @@ Do you want to proceed?</source>
 Doriți să continuați?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="964" />
+        <location filename="..\ui\main_window.py" line="957" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>Se pornește amestecarea pictogramelor de pe desktop (randomizare)...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="967" />
+        <location filename="..\ui\main_window.py" line="960" />
         <source>Scrambling icons...</source>
         <translation>Se amestecă pictogramele...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="986" />
+        <location filename="..\ui\main_window.py" line="979" />
         <source>Operation completed successfully</source>
         <translation>Operațiunea s-a finalizat cu succes</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="992" />
+        <location filename="..\ui\main_window.py" line="985" />
         <source>Operation completed successfully! (%1)</source>
         <translation>Operațiunea s-a finalizat cu succes! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="999" />
+        <location filename="..\ui\main_window.py" line="992" />
         <source>%1 successful!</source>
         <translation>%1 reușit!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1004" />
+        <location filename="..\ui\main_window.py" line="997" />
         <source>Operation failed</source>
         <translation>Operațiunea a eșuat</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1008" />
+        <location filename="..\ui\main_window.py" line="1001" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>Operațiunea a eșuat (%1). Verificați jurnalul pentru detalii.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1021" />
+        <location filename="..\ui\main_window.py" line="1014" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ Avertisment: Metadatele de afișare lipsesc sau sunt incomplete.</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="1026" />
+        <location filename="..\ui\main_window.py" line="1019" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ Avertisment: Salvat (%n monitor) față de curent (%1 monitor(e)).</numerusform>
@@ -1803,12 +1794,12 @@ Doriți să continuați?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1034" />
+        <location filename="..\ui\main_window.py" line="1027" />
         <source>Monitor Mismatch Warning</source>
         <translation>Avertisment: Monitoare incompatibile</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1035" />
+        <location filename="..\ui\main_window.py" line="1028" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1817,17 +1808,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Pozițiile pictogramelor au fost restaurate, dar pot fi inexacte.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1057" />
+        <location filename="..\ui\main_window.py" line="1050" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ Avertisment: Rezoluțiile ecranului nu corespund cu aspectul salvat.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1061" />
+        <location filename="..\ui\main_window.py" line="1054" />
         <source>Resolution Mismatch Warning</source>
         <translation>Avertisment: Rezoluție incompatibilă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1062" />
+        <location filename="..\ui\main_window.py" line="1055" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1836,72 +1827,82 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Pozițiile pictogramelor au fost restaurate, dar pot fi inexacte.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1074" />
+        <location filename="..\ui\main_window.py" line="1067" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>Salvarea automată la ieșire este activată. Se efectuează copia de rezervă silențioasă...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1078" />
+        <location filename="..\ui\main_window.py" line="1073" />
+        <source>Auto-Save icon layout…</source>
+        <translation>Se salvează automat aspectul pictogramelor…</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1079" />
+        <source>Please wait</source>
+        <translation>Vă rugăm așteptați</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1084" />
         <source>Auto-Save Log</source>
         <translation>Jurnal salvare automată</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1093" />
+        <location filename="..\ui\main_window.py" line="1100" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>Aplicația a fost minimizată în tava sistemului. Faceți clic sau dublu clic pentru restaurare.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1132" />
+        <location filename="..\ui\main_window.py" line="1139" />
         <source>A new version is available! (%1)</source>
         <translation>O nouă versiune este disponibilă! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1137" />
+        <location filename="..\ui\main_window.py" line="1144" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 O nouă versiune este disponibilă: %1 (curentă: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1151" />
+        <location filename="..\ui\main_window.py" line="1158" />
         <source>Shortcut</source>
         <translation>Comandă rapidă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1152" />
+        <location filename="..\ui\main_window.py" line="1159" />
         <source>Action</source>
         <translation>Acțiune</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1156" />
+        <location filename="..\ui\main_window.py" line="1163" />
         <source>Quick Save current layout</source>
         <translation>Salvare rapidă a aspectului curent</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1160" />
+        <location filename="..\ui\main_window.py" line="1167" />
         <source>Open Backup Manager</source>
         <translation>Deschideți Managerul de copii de rezervă</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1164" />
+        <location filename="..\ui\main_window.py" line="1175" />
         <source>Open Settings menu</source>
         <translation>Deschideți meniul Setări</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1168" />
+        <location filename="..\ui\main_window.py" line="1179" />
         <source>Open Online User Manual</source>
         <translation>Deschideți manualul de utilizare online</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1172" />
+        <location filename="..\ui\main_window.py" line="1183" />
         <source>Exit Application</source>
         <translation>Ieșiți din aplicație</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1176" />
+        <location filename="..\ui\main_window.py" line="1187" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
         <translation>Sfat: Treceți cu mouse-ul peste butoane pentru a vedea comenzile rapide suplimentare în sfaturile de ecran.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1191" />
+        <location filename="..\ui\main_window.py" line="1202" />
         <source>Close</source>
         <translation>Închide</translation>
     </message>

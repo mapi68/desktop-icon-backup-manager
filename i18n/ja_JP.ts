@@ -4,55 +4,55 @@
     <context>
     <name>BackupComparator</name>
     <message>
-        <location filename="..\core\comparator.py" line="37" />
+        <location filename="..\core\comparator.py" line="38" />
         <source>=== COMPARISON RESULTS ===</source>
         <translation>=== 比較結果 ===</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\comparator.py" line="43" />
+        <location filename="..\core\comparator.py" line="44" />
         <source>Icon(s) Added: %n</source>
         <translation>
             <numerusform>追加されたアイコン: %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\comparator.py" line="49" />
+        <location filename="..\core\comparator.py" line="50" />
         <source>Icon(s) Removed: %n</source>
         <translation>
             <numerusform>削除されたアイコン: %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\comparator.py" line="55" />
+        <location filename="..\core\comparator.py" line="56" />
         <source>Icon(s) Moved: %n</source>
         <translation>
             <numerusform>移動されたアイコン: %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\comparator.py" line="61" />
+        <location filename="..\core\comparator.py" line="62" />
         <source>Icon(s) Unchanged: %n</source>
         <translation>
             <numerusform>変更なしのアイコン: %n</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\core\comparator.py" line="69" />
+        <location filename="..\core\comparator.py" line="70" />
         <source>--- ADDED ICONS ---</source>
         <translation>--- 追加されたアイコン ---</translation>
     </message>
     <message>
-        <location filename="..\core\comparator.py" line="80" />
+        <location filename="..\core\comparator.py" line="81" />
         <source>--- REMOVED ICONS ---</source>
         <translation>--- 削除されたアイコン ---</translation>
     </message>
     <message>
-        <location filename="..\core\comparator.py" line="91" />
+        <location filename="..\core\comparator.py" line="92" />
         <source>--- MOVED ICONS ---</source>
         <translation>--- 移動されたアイコン ---</translation>
     </message>
     <message>
-        <location filename="..\core\comparator.py" line="101" />
+        <location filename="..\core\comparator.py" line="102" />
         <source>✓ No differences - backups are identical!</source>
         <translation>✓ 差異なし - バックアップは同一です！</translation>
     </message>
@@ -524,42 +524,42 @@ Are you sure you want to proceed?</source>
 </context><context>
     <name>CLI</name>
     <message>
-        <location filename="..\main.py" line="268" />
+        <location filename="..\main.py" line="266" />
         <source>Perform a backup</source>
         <translation>バックアップを実行</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="274" />
+        <location filename="..\main.py" line="272" />
         <source>Restore a specific backup or latest</source>
         <translation>特定のバックアップまたは最新を復元</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="279" />
+        <location filename="..\main.py" line="277" />
         <source>Run without showing the GUI</source>
         <translation>GUIを表示せずに実行</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="300" />
+        <location filename="..\main.py" line="298" />
         <source>[SILENT]</source>
         <translation>[サイレント]</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="305" />
+        <location filename="..\main.py" line="303" />
         <source>Starting silent backup...</source>
         <translation>サイレントバックアップを開始しています...</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="308" />
+        <location filename="..\main.py" line="306" />
         <source>Silent CLI Backup</source>
         <translation>サイレント CLIバックアップ</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="322" />
+        <location filename="..\main.py" line="320" />
         <source>Error: No backup files found for latest restore.</source>
         <translation>エラー: 最新の復元用バックアップファイルが見つかりません。</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="330" />
+        <location filename="..\main.py" line="328" />
         <source>Starting silent restore from: %1</source>
         <translation>サイレント復元を開始しています: %1</translation>
     </message>
@@ -571,189 +571,189 @@ Are you sure you want to proceed?</source>
         <translation>デスクトップの ListView コントロールが見つかりません。デスクトップアイコンが表示されていることを確認してください。</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="117" />
+        <location filename="..\core\icon_manager.py" line="118" />
         <source>No backup files found to delete.</source>
         <translation>削除するバックアップファイルが見つかりません。</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="133" />
+        <location filename="..\core\icon_manager.py" line="134" />
         <source>✓ Successfully deleted %n backup file(s).</source>
         <translation>
             <numerusform>✓ バックアップファイルを %n 件削除しました。</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="142" />
+        <location filename="..\core\icon_manager.py" line="143" />
         <source>✗ Failed to delete %n backup file(s).</source>
         <translation>
             <numerusform>✗ バックアップファイル %n 件の削除に失敗しました。</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="158" />
+        <location filename="..\core\icon_manager.py" line="159" />
         <source>Automatic cleanup skipped: max_count is disabled (0).</source>
         <translation>自動クリーンアップをスキップしました: max_count が無効 (0) です。</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="170" />
+        <location filename="..\core\icon_manager.py" line="171" />
         <source>Cleanup skipped: Current count (%n) is within the limit (%1).</source>
         <translation>
             <numerusform>クリーンアップをスキップしました: 現在の件数 (%n) は上限 (%1) 以内です。</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="183" />
+        <location filename="..\core\icon_manager.py" line="184" />
         <source>Cleanup needed: Current count (%1) exceeds limit (%2). Deleting %n oldest file(s).</source>
         <translation>
             <numerusform>クリーンアップが必要です: 現在の件数 (%1) が上限 (%2) を超えています。最も古いファイルを %n 件削除します。</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="197" />
+        <location filename="..\core\icon_manager.py" line="198" />
         <source>  Deleted oldest backup: %1</source>
         <translation>  最も古いバックアップを削除しました: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="203" />
+        <location filename="..\core\icon_manager.py" line="204" />
         <source>  Failed to delete: %1</source>
         <translation>  削除に失敗しました: %1</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="209" />
+        <location filename="..\core\icon_manager.py" line="210" />
         <source>Cleanup complete. Total deleted: %n file(s).</source>
         <translation>
             <numerusform>クリーンアップ完了。合計削除数: %n 件。</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="328" />
+        <location filename="..\core\icon_manager.py" line="329" />
         <source>Monitor Resolution: %1</source>
         <translation>モニター解像度: %1</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="333" />
+        <location filename="..\core\icon_manager.py" line="334" />
         <source>Found %n icon(s). Starting scan...</source>
         <translation>
             <numerusform>%n 個のアイコンが見つかりました。スキャンを開始しています...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="396" />
+        <location filename="..\core\icon_manager.py" line="397" />
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
             <numerusform>✓ %n 個のアイコンをバックアップファイル「%1」に保存しました</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="406" />
+        <location filename="..\core\icon_manager.py" line="407" />
         <source>  (Description: %1)</source>
         <translation>  (説明: %1)</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="419" />
+        <location filename="..\core\icon_manager.py" line="420" />
         <source>✗ Error saving (I/O): %1</source>
         <translation>✗ 保存エラー (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="426" />
+        <location filename="..\core\icon_manager.py" line="427" />
         <source>✗ Error saving: %1</source>
         <translation>✗ 保存エラー: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="454" />
+        <location filename="..\core\icon_manager.py" line="455" />
         <source>✗ Error: Backup file not found.</source>
         <translation>✗ エラー: バックアップファイルが見つかりません。</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="464" />
+        <location filename="..\core\icon_manager.py" line="465" />
         <source>Attempting to restore from backup: '%1'</source>
         <translation>バックアップから復元を試みています: 「%1」</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="469" />
+        <location filename="..\core\icon_manager.py" line="470" />
         <source>Saved Resolution (from filename): %1</source>
         <translation>保存済み解像度（ファイル名より）: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="486" />
+        <location filename="..\core\icon_manager.py" line="487" />
         <source>Restoring layout (saved: %1)</source>
         <translation>レイアウトを復元中（保存日時: %1）</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="491" />
+        <location filename="..\core\icon_manager.py" line="492" />
         <source>  Description: %1</source>
         <translation>  説明: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="498" />
+        <location filename="..\core\icon_manager.py" line="499" />
         <source>Restoring layout (Old format, no timestamp and metadata)</source>
         <translation>レイアウトを復元中（旧形式、タイムスタンプとメタデータなし）</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="506" />
+        <location filename="..\core\icon_manager.py" line="507" />
         <source>✗ Error: Invalid backup file format: %1</source>
         <translation>✗ エラー: バックアップファイルの形式が無効です: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="513" />
+        <location filename="..\core\icon_manager.py" line="514" />
         <source>✗ Error reading backup file (I/O): %1</source>
         <translation>✗ バックアップファイルの読み込みエラー (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="530" />
+        <location filename="..\core\icon_manager.py" line="531" />
         <source>⚠ Warning: Resolution mismatch!</source>
         <translation>⚠ 警告: 解像度が一致しません！</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="540" />
+        <location filename="..\core\icon_manager.py" line="541" />
         <source>✓ Adaptive Scaling enabled: X=%1, Y=%2</source>
         <translation>✓ アダプティブスケーリングが有効: X=%1, Y=%2</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="625" />
+        <location filename="..\core\icon_manager.py" line="626" />
         <source>✓ Restored %n icon(s)</source>
         <translation>
             <numerusform>✓ %n 個のアイコンを復元しました</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="631" />
+        <location filename="..\core\icon_manager.py" line="632" />
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
             <numerusform>⚠ %n 個のアイコンをスキップしました（デスクトップ上に見つかりません）</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="645" />
+        <location filename="..\core\icon_manager.py" line="646" />
         <source>✗ Error restoring (I/O): %1</source>
         <translation>✗ 復元エラー (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="652" />
+        <location filename="..\core\icon_manager.py" line="653" />
         <source>✗ Error restoring: %1</source>
         <translation>✗ 復元エラー: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="680" />
+        <location filename="..\core\icon_manager.py" line="681" />
         <source>Redrawing disabled for scrambling...</source>
         <translation>スクランブル中は再描画を無効化しています...</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="689" />
+        <location filename="..\core\icon_manager.py" line="690" />
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
             <numerusform>%n 個のアイコンが見つかりました。ランダム配置を開始しています...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="710" />
+        <location filename="..\core\icon_manager.py" line="711" />
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
             <numerusform>✓ %n 個のアイコンの位置をランダムに変更しました。</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="724" />
+        <location filename="..\core\icon_manager.py" line="725" />
         <source>✗ Error scrambling icons: %1</source>
         <translation>✗ アイコンのスクランブルエラー: %1</translation>
     </message>
@@ -864,12 +864,12 @@ Are you sure you want to proceed?</source>
 </context><context>
     <name>Main</name>
     <message>
-        <location filename="..\main.py" line="376" />
+        <location filename="..\main.py" line="374" />
         <source>Critical Error</source>
         <translation>重大なエラー</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="377" />
+        <location filename="..\main.py" line="375" />
         <source>Failed to start application:
 %1</source>
         <translation>アプリケーションの起動に失敗しました:
@@ -878,292 +878,293 @@ Are you sure you want to proceed?</source>
 </context><context>
     <name>MainWindow</name>
     <message>
-        <location filename="..\ui\main_window.py" line="1200" />
+        <location filename="..\ui\main_window.py" line="1211" />
         <source>Updating desktop icon visibility...</source>
         <translation>デスクトップアイコンの表示を更新中...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1207" />
+        <location filename="..\ui\main_window.py" line="1218" />
         <source>Desktop icon visibility updated.</source>
         <translation>デスクトップアイコンの表示が更新されました。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1214" />
+        <location filename="..\ui\main_window.py" line="1225" />
         <source>✗ Failed to show/hide desktop icons.</source>
         <translation>✗ デスクトップアイコンの表示/非表示に失敗しました。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1223" />
+        <location filename="..\ui\main_window.py" line="1234" />
         <source>Attempting to show desktop icons...</source>
         <translation>デスクトップアイコンを表示しています...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1230" />
+        <location filename="..\ui\main_window.py" line="1241" />
         <source>Desktop icons are now visible.</source>
         <translation>デスクトップアイコンが表示されました。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1237" />
+        <location filename="..\ui\main_window.py" line="1248" />
         <source>✗ Failed to show desktop icons.</source>
         <translation>✗ デスクトップアイコンの表示に失敗しました。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1246" />
+        <location filename="..\ui\main_window.py" line="1257" />
         <source>Attempting to hide desktop icons...</source>
         <translation>デスクトップアイコンを非表示にしています...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1253" />
+        <location filename="..\ui\main_window.py" line="1264" />
         <source>Desktop icons are now hidden.</source>
         <translation>デスクトップアイコンが非表示になりました。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1260" />
+        <location filename="..\ui\main_window.py" line="1271" />
         <source>✗ Failed to hide desktop icons.</source>
         <translation>✗ デスクトップアイコンの非表示に失敗しました。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="64" />
+        <location filename="..\ui\main_window.py" line="63" />
         <source>Unknown</source>
         <translation>不明</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="95" />
+        <location filename="..\ui\main_window.py" line="94" />
         <source>Quick Save</source>
         <translation>クイック保存</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="97" />
+        <location filename="..\ui\main_window.py" line="96" />
         <source>Quick Save (Tray)</source>
         <translation>クイック保存（トレイ）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="101" />
+        <location filename="..\ui\main_window.py" line="100" />
         <source>Restore Latest</source>
         <translation>最新を復元</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="171" />
-        <location filename="..\ui\main_window.py" line="108" />
+        <location filename="..\ui\main_window.py" line="1171" />
+        <location filename="..\ui\main_window.py" line="170" />
+        <location filename="..\ui\main_window.py" line="107" />
         <source>Show/Hide Desktop Icons</source>
         <translation>デスクトップアイコンの表示/非表示</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="113" />
+        <location filename="..\ui\main_window.py" line="112" />
         <source>Show Desktop Icons</source>
         <translation>デスクトップアイコンを表示</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="117" />
+        <location filename="..\ui\main_window.py" line="116" />
         <source>Hide Desktop Icons</source>
         <translation>デスクトップアイコンを非表示</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="123" />
+        <location filename="..\ui\main_window.py" line="122" />
         <source>Show Window</source>
         <translation>ウィンドウを表示</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="127" />
+        <location filename="..\ui\main_window.py" line="126" />
         <source>Exit</source>
         <translation>終了</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="148" />
+        <location filename="..\ui\main_window.py" line="147" />
         <source>Desktop Icon Backup Manager by mapi68</source>
         <translation>Desktop Icon Backup Manager by mapi68</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="153" />
+        <location filename="..\ui\main_window.py" line="152" />
         <source>&amp;File</source>
         <translation>ファイル(&amp;F)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="156" />
+        <location filename="..\ui\main_window.py" line="155" />
         <source>Scramble Desktop Icons (Random)</source>
         <translation>デスクトップアイコンをランダム配置</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="159" />
+        <location filename="..\ui\main_window.py" line="158" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
         <translation>必須バックアップを作成した後、すべてのデスクトップアイコンの位置をランダムに変更します。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="169" />
+        <location filename="..\ui\main_window.py" line="168" />
         <source>👁️ Desktop Icons Visibility</source>
         <translation>👁️ デスクトップアイコンの表示設定</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="174" />
+        <location filename="..\ui\main_window.py" line="173" />
         <source>Toggle visibility of all desktop icons (Ctrl+H)</source>
         <translation>すべてのデスクトップアイコンの表示を切り替え (Ctrl+H)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="179" />
+        <location filename="..\ui\main_window.py" line="178" />
         <source>Show Icons</source>
         <translation>アイコンを表示</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="183" />
+        <location filename="..\ui\main_window.py" line="182" />
         <source>Hide Icons</source>
         <translation>アイコンを非表示</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="189" />
+        <location filename="..\ui\main_window.py" line="188" />
         <source>Remove All Backups...</source>
         <translation>すべてのバックアップを削除...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="195" />
+        <location filename="..\ui\main_window.py" line="194" />
         <source>📤 Export Backups...</source>
         <translation>📤 バックアップのエクスポート...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="196" />
+        <location filename="..\ui\main_window.py" line="195" />
         <source>Export backups to a folder or ZIP archive</source>
         <translation>バックアップをフォルダーまたはZIPアーカイブにエクスポートします</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="200" />
+        <location filename="..\ui\main_window.py" line="199" />
         <source>📥 Import Backups...</source>
         <translation>📥 バックアップのインポート...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="202" />
+        <location filename="..\ui\main_window.py" line="201" />
         <source>Import backup files (.json) or a ZIP archive</source>
         <translation>バックアップファイル(.json)またはZIPアーカイブをインポートします</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="208" />
+        <location filename="..\ui\main_window.py" line="207" />
         <source>E&amp;xit</source>
         <translation>終了(&amp;X)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="468" />
-        <location filename="..\ui\main_window.py" line="213" />
+        <location filename="..\ui\main_window.py" line="467" />
+        <location filename="..\ui\main_window.py" line="212" />
         <source>&amp;Settings</source>
         <translation>設定(&amp;S)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="215" />
+        <location filename="..\ui\main_window.py" line="214" />
         <source>Open Settings Menu</source>
         <translation>設定メニューを開く</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1079" />
-        <location filename="..\ui\main_window.py" line="221" />
+        <location filename="..\ui\main_window.py" line="1085" />
+        <location filename="..\ui\main_window.py" line="220" />
         <source>Auto-Save on Exit</source>
         <translation>終了時に自動保存</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="229" />
+        <location filename="..\ui\main_window.py" line="228" />
         <source>Auto-Restore on Startup</source>
         <translation>起動時に自動復元</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="237" />
+        <location filename="..\ui\main_window.py" line="236" />
         <source>Check for Updates on Startup</source>
         <translation>起動時にアップデートを確認</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="248" />
+        <location filename="..\ui\main_window.py" line="247" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>復元時にアダプティブスケーリングを有効化</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="259" />
+        <location filename="..\ui\main_window.py" line="258" />
         <source>Start Minimized to Tray</source>
         <translation>トレイに最小化して起動</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="267" />
+        <location filename="..\ui\main_window.py" line="266" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>閉じるボタン（'X'）でトレイに最小化</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="277" />
+        <location filename="..\ui\main_window.py" line="276" />
         <source>Automatic Backup Cleanup Limit</source>
         <translation>自動バックアップクリーンアップ上限</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="282" />
+        <location filename="..\ui\main_window.py" line="281" />
         <source>Disabled (Keep All)</source>
         <translation>無効（すべて保持）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="283" />
+        <location filename="..\ui\main_window.py" line="282" />
         <source>Keep Last 5</source>
         <translation>最新5件を保持</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="284" />
+        <location filename="..\ui\main_window.py" line="283" />
         <source>Keep Last 10</source>
         <translation>最新10件を保持</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="285" />
+        <location filename="..\ui\main_window.py" line="284" />
         <source>Keep Last 25</source>
         <translation>最新25件を保持</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="286" />
+        <location filename="..\ui\main_window.py" line="285" />
         <source>Keep Last 50</source>
         <translation>最新50件を保持</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="297" />
+        <location filename="..\ui\main_window.py" line="296" />
         <source>&amp;Help</source>
         <translation>ヘルプ(&amp;H)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="299" />
+        <location filename="..\ui\main_window.py" line="298" />
         <source>Online User Manual</source>
         <translation>オンラインユーザーマニュアル</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1180" />
-        <location filename="..\ui\main_window.py" line="1148" />
-        <location filename="..\ui\main_window.py" line="306" />
+        <location filename="..\ui\main_window.py" line="1191" />
+        <location filename="..\ui\main_window.py" line="1155" />
+        <location filename="..\ui\main_window.py" line="305" />
         <source>Keyboard Shortcuts</source>
         <translation>キーボードショートカット</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="312" />
+        <location filename="..\ui\main_window.py" line="311" />
         <source>Check for Updates...</source>
         <translation>アップデートを確認...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="318" />
+        <location filename="..\ui\main_window.py" line="317" />
         <source>&amp;About</source>
         <translation>このソフトについて(&amp;A)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="324" />
+        <location filename="..\ui\main_window.py" line="323" />
         <source>Support on Ko-fi...</source>
         <translation>Ko-fiでサポート...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="339" />
+        <location filename="..\ui\main_window.py" line="338" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>任意: 説明的なタグ/説明を入力...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="346" />
+        <location filename="..\ui\main_window.py" line="345" />
         <source>Select a profile to auto-fill the tag field</source>
         <translation>プロファイルを選択してタグフィールドを自動入力</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="352" />
+        <location filename="..\ui\main_window.py" line="351" />
         <source>Save Tag:</source>
         <translation>保存タグ:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="360" />
+        <location filename="..\ui\main_window.py" line="359" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 クイックバックアップを保存</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="364" />
+        <location filename="..\ui\main_window.py" line="363" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -1172,22 +1173,22 @@ Shortcut: Ctrl+S</source>
 ショートカット: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="372" />
+        <location filename="..\ui\main_window.py" line="371" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ 最新を復元</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="375" />
+        <location filename="..\ui\main_window.py" line="374" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>見つかった最新のバックアップファイルからアイコンの位置を復元します。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="380" />
+        <location filename="..\ui\main_window.py" line="379" />
         <source>↺ BACKUP MANAGER</source>
         <translation>↺ バックアップマネージャー</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="384" />
+        <location filename="..\ui\main_window.py" line="383" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -1196,12 +1197,12 @@ Shortcut: Ctrl+M</source>
 ショートカット: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="392" />
+        <location filename="..\ui\main_window.py" line="391" />
         <source>👁️ SHOW/HIDE ICONS</source>
         <translation>👁️ アイコンの表示/非表示</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="395" />
+        <location filename="..\ui\main_window.py" line="394" />
         <source>Show or hide all desktop icons.
 
 Shortcut: Ctrl+H</source>
@@ -1210,50 +1211,50 @@ Shortcut: Ctrl+H</source>
 ショートカット: Ctrl+H</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="407" />
+        <location filename="..\ui\main_window.py" line="406" />
         <source>Activity Log:</source>
         <translation>アクティビティログ:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="418" />
+        <location filename="..\ui\main_window.py" line="417" />
         <source>Current Resolution: %1</source>
         <translation>現在の解像度: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="425" />
+        <location filename="..\ui\main_window.py" line="424" />
         <source>Support on Ko-fi</source>
         <translation>Ko-fiでサポート</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="431" />
+        <location filename="..\ui\main_window.py" line="430" />
         <source>Clear Log</source>
         <translation>ログを消去</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="476" />
+        <location filename="..\ui\main_window.py" line="475" />
         <source>Settings menu not found</source>
         <translation>設定メニューが見つかりません</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="488" />
+        <location filename="..\ui\main_window.py" line="487" />
         <source>Opening online user manual in browser...</source>
         <translation>ブラウザでオンラインユーザーマニュアルを開いています...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="490" />
+        <location filename="..\ui\main_window.py" line="489" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ マニュアルURLを開けませんでした</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1007" />
-        <location filename="..\ui\main_window.py" line="798" />
-        <location filename="..\ui\main_window.py" line="765" />
-        <location filename="..\ui\main_window.py" line="493" />
+        <location filename="..\ui\main_window.py" line="1000" />
+        <location filename="..\ui\main_window.py" line="789" />
+        <location filename="..\ui\main_window.py" line="756" />
+        <location filename="..\ui\main_window.py" line="492" />
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="494" />
+        <location filename="..\ui\main_window.py" line="493" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -1264,281 +1265,271 @@ Please visit manually:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="501" />
+        <location filename="..\ui\main_window.py" line="500" />
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="504" />
+        <location filename="..\ui\main_window.py" line="503" />
         <source>Quick Backup (Shortcut)</source>
         <translation>クイックバックアップ（ショートカット）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="508" />
+        <location filename="..\ui\main_window.py" line="507" />
         <source>Backup Manager</source>
         <translation>バックアップマネージャー</translation>
     </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="513" />
-        <source>Toggle Desktop Icons</source>
-        <translation>デスクトップアイコンの切り替え</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="518" />
-        <source>Settings</source>
-        <translation>設定</translation>
-    </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="553" />
+        <location filename="..\ui\main_window.py" line="542" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>自動クリーンアップ上限を設定しました: %n 件 (0 = 無効)。</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1092" />
-        <location filename="..\ui\main_window.py" line="998" />
-        <location filename="..\ui\main_window.py" line="597" />
+        <location filename="..\ui\main_window.py" line="1099" />
+        <location filename="..\ui\main_window.py" line="991" />
+        <location filename="..\ui\main_window.py" line="586" />
         <source>Desktop Icon Manager</source>
         <translation>デスクトップアイコンマネージャー</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="627" />
+        <location filename="..\ui\main_window.py" line="616" />
         <source>Backup list updated (item deleted).</source>
         <translation>バックアップリストを更新しました（アイテムを削除）。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="636" />
+        <location filename="..\ui\main_window.py" line="625" />
         <source>Backup list updated.</source>
         <translation>バックアップリストを更新しました。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="649" />
+        <location filename="..\ui\main_window.py" line="638" />
         <source>Backup list updated (imported).</source>
         <translation>バックアップリストを更新しました(インポート済み)。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="663" />
+        <location filename="..\ui\main_window.py" line="652" />
         <source>— Profiles —</source>
         <translation>— プロファイル —</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="665" />
+        <location filename="..\ui\main_window.py" line="654" />
         <source>Work</source>
         <translation>仕事</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="666" />
+        <location filename="..\ui\main_window.py" line="655" />
         <source>Gaming</source>
         <translation>ゲーム</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="667" />
+        <location filename="..\ui\main_window.py" line="656" />
         <source>Presentation</source>
         <translation>プレゼン</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="668" />
+        <location filename="..\ui\main_window.py" line="657" />
         <source>Dev / Coding</source>
         <translation>開発 / コーディング</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="669" />
+        <location filename="..\ui\main_window.py" line="658" />
         <source>Meeting</source>
         <translation>会議</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="670" />
+        <location filename="..\ui\main_window.py" line="659" />
         <source>Home</source>
         <translation>自宅</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="671" />
+        <location filename="..\ui\main_window.py" line="660" />
         <source>Office</source>
         <translation>オフィス</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="672" />
+        <location filename="..\ui\main_window.py" line="661" />
         <source>Laptop</source>
         <translation>ノートPC</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="673" />
+        <location filename="..\ui\main_window.py" line="662" />
         <source>Docked / External Monitor</source>
         <translation>ドック / 外部モニター</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="674" />
+        <location filename="..\ui\main_window.py" line="663" />
         <source>Clean Desktop</source>
         <translation>クリーンデスクトップ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="675" />
+        <location filename="..\ui\main_window.py" line="664" />
         <source>Pre-Update</source>
         <translation>更新前</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="676" />
+        <location filename="..\ui\main_window.py" line="665" />
         <source>Pre-Reboot</source>
         <translation>再起動前</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="677" />
+        <location filename="..\ui\main_window.py" line="666" />
         <source>Favourite</source>
         <translation>お気に入り</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="678" />
+        <location filename="..\ui\main_window.py" line="667" />
         <source>Test</source>
         <translation>テスト</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="700" />
+        <location filename="..\ui\main_window.py" line="689" />
         <source>Quick Backup</source>
         <translation>クイックバックアップ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="709" />
+        <location filename="..\ui\main_window.py" line="700" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
         <translation>Windowsデスクトップアイコンの位置を保存・復元するシンプルで強力なツール。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="710" />
+        <location filename="..\ui\main_window.py" line="701" />
         <source>Key Features:</source>
         <translation>主な機能:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="712" />
+        <location filename="..\ui\main_window.py" line="703" />
         <source>Quick Save:</source>
         <translation>クイック保存:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="712" />
+        <location filename="..\ui\main_window.py" line="703" />
         <source>Save icons with an optional descriptive tag.</source>
         <translation>任意の説明タグを付けてアイコンを保存します。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="713" />
+        <location filename="..\ui\main_window.py" line="704" />
         <source>Backup Management:</source>
         <translation>バックアップ管理:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="713" />
+        <location filename="..\ui\main_window.py" line="704" />
         <source>Select, restore, or delete specific backups.</source>
         <translation>特定のバックアップを選択・復元・削除します。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="714" />
+        <location filename="..\ui\main_window.py" line="705" />
         <source>Live Diff Preview:</source>
         <translation>ライブ差分プレビュー:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="714" />
+        <location filename="..\ui\main_window.py" line="705" />
         <source>See which icons will move before restoring.</source>
         <translation>復元前に移動するアイコンを確認できます。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="715" />
+        <location filename="..\ui\main_window.py" line="706" />
         <source>Visual Preview:</source>
         <translation>ビジュアルプレビュー:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="715" />
+        <location filename="..\ui\main_window.py" line="706" />
         <source>See a mini-map of your layout.</source>
         <translation>レイアウトのミニマップを表示します。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="716" />
+        <location filename="..\ui\main_window.py" line="707" />
         <source>Backup Comparison:</source>
         <translation>バックアップ比較:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="716" />
+        <location filename="..\ui\main_window.py" line="707" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
         <translation>2つのバックアップを比較して、追加・削除・移動されたアイコンを確認できます。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="717" />
+        <location filename="..\ui\main_window.py" line="708" />
         <source>Adaptive Scaling:</source>
         <translation>アダプティブスケーリング:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="717" />
+        <location filename="..\ui\main_window.py" line="708" />
         <source>Automatic adjustment for different resolutions.</source>
         <translation>異なる解像度への自動調整。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="718" />
+        <location filename="..\ui\main_window.py" line="709" />
         <source>Automatic Cleanup:</source>
         <translation>自動クリーンアップ:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="718" />
+        <location filename="..\ui\main_window.py" line="709" />
         <source>Set a limit on backups to keep.</source>
         <translation>保持するバックアップ数の上限を設定します。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="719" />
+        <location filename="..\ui\main_window.py" line="710" />
         <source>Random Scramble:</source>
         <translation>ランダムスクランブル:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="719" />
+        <location filename="..\ui\main_window.py" line="710" />
         <source>Randomize icon positions after backup.</source>
         <translation>バックアップ後にアイコンの位置をランダム化します。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="720" />
+        <location filename="..\ui\main_window.py" line="711" />
         <source>Tray Integration:</source>
         <translation>トレイ統合:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="720" />
+        <location filename="..\ui\main_window.py" line="711" />
         <source>Quick access via tray.</source>
         <translation>トレイからのクイックアクセス。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="722" />
+        <location filename="..\ui\main_window.py" line="713" />
         <source>Version:</source>
         <translation>バージョン:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="723" />
+        <location filename="..\ui\main_window.py" line="714" />
         <source>Development:</source>
         <translation>開発:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="724" />
+        <location filename="..\ui\main_window.py" line="715" />
         <source>Support this project on Ko-fi</source>
         <translation>Ko-fiでこのプロジェクトをサポート</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="726" />
+        <location filename="..\ui\main_window.py" line="717" />
         <source>About Desktop Icon Backup Manager</source>
         <translation>Desktop Icon Backup Manager について</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="732" />
+        <location filename="..\ui\main_window.py" line="723" />
         <source>No backup files found to delete.</source>
         <translation>削除するバックアップファイルが見つかりません。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="735" />
+        <location filename="..\ui\main_window.py" line="726" />
         <source>No Backups Found</source>
         <translation>バックアップが見つかりません</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="736" />
+        <location filename="..\ui\main_window.py" line="727" />
         <source>There are no backup files to delete.</source>
         <translation>削除するバックアップファイルがありません。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="742" />
+        <location filename="..\ui\main_window.py" line="733" />
         <source>WARNING: Delete All Backups</source>
         <translation>警告: すべてのバックアップを削除</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="743" />
+        <location filename="..\ui\main_window.py" line="734" />
         <source>Are you absolutely sure you want to permanently delete ALL %n desktop icon backup file(s)?
 
 This action cannot be undone!</source>
@@ -1549,158 +1540,158 @@ This action cannot be undone!</source>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="961" />
-        <location filename="..\ui\main_window.py" line="748" />
+        <location filename="..\ui\main_window.py" line="954" />
+        <location filename="..\ui\main_window.py" line="739" />
         <source>Yes</source>
         <translation>はい</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="962" />
-        <location filename="..\ui\main_window.py" line="749" />
+        <location filename="..\ui\main_window.py" line="955" />
+        <location filename="..\ui\main_window.py" line="740" />
         <source>No</source>
         <translation>いいえ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="751" />
+        <location filename="..\ui\main_window.py" line="742" />
         <source>Starting deletion of all backup files...</source>
         <translation>すべてのバックアップファイルの削除を開始しています...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="991" />
-        <location filename="..\ui\main_window.py" line="759" />
+        <location filename="..\ui\main_window.py" line="984" />
+        <location filename="..\ui\main_window.py" line="750" />
         <source>Success</source>
         <translation>成功</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="760" />
+        <location filename="..\ui\main_window.py" line="751" />
         <source>All backup files have been successfully deleted.</source>
         <translation>すべてのバックアップファイルを正常に削除しました。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="766" />
+        <location filename="..\ui\main_window.py" line="757" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>一部のファイルを削除できませんでした。詳細はアクティビティログを確認してください。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="774" />
+        <location filename="..\ui\main_window.py" line="765" />
         <source>Starting new timestamped backup...</source>
         <translation>新しいタイムスタンプ付きバックアップを開始しています...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="776" />
+        <location filename="..\ui\main_window.py" line="767" />
         <source>  (Tag: %1)</source>
         <translation>  (タグ: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="780" />
+        <location filename="..\ui\main_window.py" line="771" />
         <source>Saving...</source>
         <translation>保存中...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="798" />
+        <location filename="..\ui\main_window.py" line="789" />
         <source>No backup files found to restore!</source>
         <translation>復元するバックアップファイルが見つかりません！</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="800" />
+        <location filename="..\ui\main_window.py" line="791" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ 復元に失敗しました: バックアップファイルが見つかりません。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="820" />
-        <location filename="..\ui\main_window.py" line="819" />
-        <location filename="..\ui\main_window.py" line="814" />
-        <location filename="..\ui\main_window.py" line="813" />
+        <location filename="..\ui\main_window.py" line="811" />
+        <location filename="..\ui\main_window.py" line="810" />
+        <location filename="..\ui\main_window.py" line="805" />
+        <location filename="..\ui\main_window.py" line="804" />
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="823" />
+        <location filename="..\ui\main_window.py" line="814" />
         <source>N/A (Old Format)</source>
         <translation>N/A（旧形式）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="852" />
+        <location filename="..\ui\main_window.py" line="843" />
         <source>Confirm Restore — Live Preview</source>
         <translation>復元の確認 — ライブプレビュー</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="862" />
+        <location filename="..\ui\main_window.py" line="853" />
         <source>File</source>
         <translation>ファイル</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="863" />
+        <location filename="..\ui\main_window.py" line="854" />
         <source>Resolution</source>
         <translation>解像度</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="864" />
+        <location filename="..\ui\main_window.py" line="855" />
         <source>Icons</source>
         <translation>アイコン</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="865" />
+        <location filename="..\ui\main_window.py" line="856" />
         <source>Tag</source>
         <translation>タグ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="866" />
+        <location filename="..\ui\main_window.py" line="857" />
         <source>Timestamp</source>
         <translation>タイムスタンプ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="878" />
+        <location filename="..\ui\main_window.py" line="869" />
         <source>will move</source>
         <translation>移動されます</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="879" />
+        <location filename="..\ui\main_window.py" line="870" />
         <source>already in place</source>
         <translation>すでに正しい位置にあります</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="880" />
+        <location filename="..\ui\main_window.py" line="871" />
         <source>not on desktop</source>
         <translation>デスクトップに存在しません</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="889" />
+        <location filename="..\ui\main_window.py" line="880" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>レイアウトプレビュー（保存済み vs 現在）:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="911" />
+        <location filename="..\ui\main_window.py" line="902" />
         <source>↺ Restore</source>
         <translation>↺ 復元</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="918" />
+        <location filename="..\ui\main_window.py" line="909" />
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="938" />
+        <location filename="..\ui\main_window.py" line="929" />
         <source>Starting restore from backup '%1'...</source>
         <translation>バックアップ「%1」からの復元を開始しています...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="939" />
+        <location filename="..\ui\main_window.py" line="930" />
         <source>latest</source>
         <translation>最新</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="944" />
+        <location filename="..\ui\main_window.py" line="935" />
         <source>Restoring...</source>
         <translation>復元中...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="957" />
+        <location filename="..\ui\main_window.py" line="950" />
         <source>Confirm Scramble</source>
         <translation>スクランブルの確認</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="958" />
+        <location filename="..\ui\main_window.py" line="951" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1713,59 +1704,59 @@ Do you want to proceed?</source>
 続行しますか？</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="964" />
+        <location filename="..\ui\main_window.py" line="957" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>デスクトップアイコンのスクランブル（ランダム化）を開始しています...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="967" />
+        <location filename="..\ui\main_window.py" line="960" />
         <source>Scrambling icons...</source>
         <translation>アイコンをスクランブル中...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="986" />
+        <location filename="..\ui\main_window.py" line="979" />
         <source>Operation completed successfully</source>
         <translation>操作が正常に完了しました</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="992" />
+        <location filename="..\ui\main_window.py" line="985" />
         <source>Operation completed successfully! (%1)</source>
         <translation>操作が正常に完了しました！（%1）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="999" />
+        <location filename="..\ui\main_window.py" line="992" />
         <source>%1 successful!</source>
         <translation>%1 が成功しました！</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1004" />
+        <location filename="..\ui\main_window.py" line="997" />
         <source>Operation failed</source>
         <translation>操作に失敗しました</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1008" />
+        <location filename="..\ui\main_window.py" line="1001" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>操作に失敗しました（%1）。詳細はログを確認してください。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1021" />
+        <location filename="..\ui\main_window.py" line="1014" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ 警告: ディスプレイのメタデータが欠落または不完全です。</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="1026" />
+        <location filename="..\ui\main_window.py" line="1019" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ 警告: 保存時（%n 台のモニター）と現在（%1 台のモニター）が一致しません。</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1034" />
+        <location filename="..\ui\main_window.py" line="1027" />
         <source>Monitor Mismatch Warning</source>
         <translation>モニター不一致の警告</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1035" />
+        <location filename="..\ui\main_window.py" line="1028" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1774,17 +1765,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 アイコンの位置は復元されましたが、正確でない場合があります。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1057" />
+        <location filename="..\ui\main_window.py" line="1050" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ 警告: 画面の解像度が保存されたレイアウトと一致しません。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1061" />
+        <location filename="..\ui\main_window.py" line="1054" />
         <source>Resolution Mismatch Warning</source>
         <translation>解像度不一致の警告</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1062" />
+        <location filename="..\ui\main_window.py" line="1055" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1793,72 +1784,82 @@ Icon positions have been restored, but they may be inaccurate.</source>
 アイコンの位置は復元されましたが、正確でない場合があります。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1074" />
+        <location filename="..\ui\main_window.py" line="1067" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>終了時の自動保存が有効です。サイレントバックアップを実行しています...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1078" />
+        <location filename="..\ui\main_window.py" line="1073" />
+        <source>Auto-Save icon layout…</source>
+        <translation>アイコンレイアウトを自動保存中…</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1079" />
+        <source>Please wait</source>
+        <translation>お待ちください</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1084" />
         <source>Auto-Save Log</source>
         <translation>自動保存ログ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1093" />
+        <location filename="..\ui\main_window.py" line="1100" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>アプリケーションをトレイに最小化しました。クリックまたはダブルクリックで復元します。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1132" />
+        <location filename="..\ui\main_window.py" line="1139" />
         <source>A new version is available! (%1)</source>
         <translation>新しいバージョンが利用可能です！(%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1137" />
+        <location filename="..\ui\main_window.py" line="1144" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 新しいバージョンが利用可能です: %1 (現在: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1151" />
+        <location filename="..\ui\main_window.py" line="1158" />
         <source>Shortcut</source>
         <translation>ショートカット</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1152" />
+        <location filename="..\ui\main_window.py" line="1159" />
         <source>Action</source>
         <translation>操作</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1156" />
+        <location filename="..\ui\main_window.py" line="1163" />
         <source>Quick Save current layout</source>
         <translation>現在のレイアウトをクイック保存</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1160" />
+        <location filename="..\ui\main_window.py" line="1167" />
         <source>Open Backup Manager</source>
         <translation>バックアップマネージャーを開く</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1164" />
+        <location filename="..\ui\main_window.py" line="1175" />
         <source>Open Settings menu</source>
         <translation>設定メニューを開く</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1168" />
+        <location filename="..\ui\main_window.py" line="1179" />
         <source>Open Online User Manual</source>
         <translation>オンラインユーザーマニュアルを開く</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1172" />
+        <location filename="..\ui\main_window.py" line="1183" />
         <source>Exit Application</source>
         <translation>アプリケーションを終了</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1176" />
+        <location filename="..\ui\main_window.py" line="1187" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
         <translation>ヒント: ボタンにカーソルを合わせると、ツールチップで追加のショートカットを確認できます。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1191" />
+        <location filename="..\ui\main_window.py" line="1202" />
         <source>Close</source>
         <translation>閉じる</translation>
     </message>

@@ -1,12 +1,11 @@
 """Main Window for Desktop Icon Backup Manager"""
 
 from datetime import datetime
+import json
 import os
+import sys
 from pathlib import Path
 from typing import Optional, Dict, Any
-import sys
-import os
-import json
 
 
 from PyQt6.QtWidgets import (
@@ -510,8 +509,6 @@ class MainWindow(QMainWindow):
         manager_shortcut.triggered.connect(self.open_backup_manager)
         self.addAction(manager_shortcut)
 
-
-
     def load_settings(self):
         self.action_start_minimized.setChecked(
             self.settings.value("start_minimized", False, type=bool)
@@ -693,6 +690,8 @@ class MainWindow(QMainWindow):
         self.start_save(description=description)
 
     def start_restore_specific(self, filename: str):
+        if self.worker and self.worker.isRunning():
+            return
         self._start_restore(filename)
 
     def show_about_dialog(self):
@@ -944,6 +943,8 @@ class MainWindow(QMainWindow):
         self.worker.start()
 
     def start_scramble(self):
+        if self.worker and self.worker.isRunning():
+            return
         if _ask(
             self,
             self.tr("Confirm Scramble"),
@@ -1066,11 +1067,25 @@ class MainWindow(QMainWindow):
                     self.tr("Auto-Save on Exit enabled. Performing silent backup...")
                 )
             cleanup_limit = self.settings.value("cleanup_limit", 0, type=int)
+            from PyQt6.QtWidgets import QProgressDialog
+
+            progress = QProgressDialog(
+                self.tr("Auto-Save icon layout…"),
+                None,  # no cancel button
+                0,
+                0,  # indeterminate
+                self,
+            )
+            progress.setWindowTitle(self.tr("Please wait"))
+            progress.setMinimumDuration(0)
+            progress.setValue(0)
+            QApplication.processEvents()
             self.manager.save(
                 lambda msg: print(f"{self.tr('Auto-Save Log')}: {msg}"),
                 description=self.tr("Auto-Save on Exit"),
                 max_backup_count=cleanup_limit,
             )
+            progress.close()
 
     def closeEvent(self, event):
         close_to_tray = self.action_close_to_tray.isChecked()
@@ -1152,14 +1167,18 @@ class MainWindow(QMainWindow):
                 <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Open Backup Manager")}</td>
             </tr>
             <tr style='background-color: #f5f5f5; color: #1a1a1a;'>
+                <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+H</b></td>
+                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Show/Hide Desktop Icons")}</td>
+            </tr>
+            <tr style='background-color: #e8e8e8; color: #1a1a1a;'>
                 <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+,</b></td>
                 <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Open Settings menu")}</td>
             </tr>
-            <tr style='background-color: #e8e8e8; color: #1a1a1a;'>
+            <tr style='background-color: #f5f5f5; color: #1a1a1a;'>
                 <td style='padding: 8px; border: 1px solid #ccc;'><b>F1</b></td>
                 <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Open Online User Manual")}</td>
             </tr>
-            <tr style='background-color: #f5f5f5; color: #1a1a1a;'>
+            <tr style='background-color: #e8e8e8; color: #1a1a1a;'>
                 <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+Q</b></td>
                 <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Exit Application")}</td>
             </tr>

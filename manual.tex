@@ -1791,6 +1791,8 @@ You can create scheduled automatic backups using Windows Task Scheduler:
   \item Use \texttt{--silent} flag to suppress all GUI dialogs
   \item Task runs in background if \textit{Start Minimized} is enabled
   \item Cleanup limits configured in \texttt{settings.ini} are respected
+  \item The \texttt{icon\_backups} folder is always created next to the
+    executable, regardless of the working directory set by the scheduler
 \end{itemize}
 
 \subsection{Batch Operations with JSON}

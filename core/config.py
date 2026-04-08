@@ -3,13 +3,20 @@
 import os
 import sys
 import ctypes
+from pathlib import Path
+
+
+def _default_backup_dir() -> str:
+    """Return an absolute backup dir next to the executable / script."""
+    base = Path(os.path.abspath(sys.argv[0])).parent
+    return str(base / "icon_backups")
 
 
 class Config:
     """Centralized configuration for the application"""
 
     # Backup settings
-    BACKUP_DIR = "icon_backups"
+    BACKUP_DIR = _default_backup_dir()
     MAX_BACKUPS_DEFAULT = 10
     VERSION_FILE = "version.txt"
 

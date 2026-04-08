@@ -34,7 +34,7 @@ def get_display_metadata() -> Dict:
     }
 
     if screens:
-        primary_screen = screens[0]
+        primary_screen = QGuiApplication.primaryScreen()
         metadata["primary_resolution"] = (
             f"{primary_screen.geometry().width()}x{primary_screen.geometry().height()}"
         )

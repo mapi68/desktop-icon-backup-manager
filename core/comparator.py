@@ -1,6 +1,7 @@
 """BackupComparator - moved from icon_manager.py into its own module"""
 
 import json
+import logging
 from typing import Optional
 
 from PyQt6.QtCore import QCoreApplication
@@ -107,5 +108,6 @@ class BackupComparator:
 
             return report
 
-        except (OSError, json.JSONDecodeError, KeyError, TypeError):
+        except (OSError, json.JSONDecodeError, KeyError, TypeError) as e:
+            logging.warning("BackupComparator.compare failed: %s", e)
             return None
