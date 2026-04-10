@@ -391,6 +391,12 @@ with a live preview of every change before you commit.
     all desktop icons without affecting backup data --- useful for clean
     desktop screenshots, presentations, or focus mode. Accessible via
     \texttt{Ctrl+H} shortcut, button, or File menu submenu
+  \item \textbf{Auto-Hide Desktop Icons}: Automatically hide desktop
+    icons after a configurable delay (30~seconds to 30~minutes, or a
+    custom interval in minutes and seconds). Optionally creates an
+    automatic backup before hiding. The countdown is visible in the
+    system tray tooltip. The timer resets whenever icons are shown
+    again (manually, after a restore, or after a scramble)
   \item \textbf{Automatic Cleanup}: Configurable limit on the number
     of backups to retain (5, 10, 25, 50, or unlimited)
   \item \textbf{Random Scramble}: Randomize icon positions with
@@ -434,7 +440,12 @@ with a live preview of every change before you commit.
 
 \textbf{Method 1: Standalone Executable (Recommended)}
 \begin{enumerate}
-  \item Download the latest zip file
+  \item Download the latest zip file from the
+    \href{https://github.com/mapi68/%
+    desktop-icon-backup-manager/releases/latest}{Releases page}:\\
+    \texttt{desktop-icon-backup-manager\_v\input{version.txt}\unskip.zip}\\
+    The archive contains the Windows executable and the
+    PDF user manual.
   \item Extract it in any folder
     (e.g.\ \texttt{C:\textbackslash{}Tools\textbackslash{}}
     or a USB drive --- the program is fully portable)
@@ -449,15 +460,15 @@ without losing settings or backups. No entries are written to
 the Windows registry and no administrator rights are required.
 
 \begin{infobox}[Tip: Sync Across Multiple PCs with OneDrive]
-  Create a new folder inside your OneDrive (e.g.\
-    \texttt{C:\textbackslash{}Users\textbackslash{}YourName%
+  Create a new folder inside your OneDrive
+  (e.g.\ \texttt{C:\textbackslash{}Users\textbackslash{}YourName%
   \textbackslash{}OneDrive\textbackslash{}DIBM\textbackslash{}}),
-  then extract \texttt{desktop-icon-backup-manager.zip} into it.
+  then extract the release ZIP into it.
   Since \texttt{icon\_backups} and \texttt{settings.ini} are always
-  stored next to the \texttt{.exe}, OneDrive will sync them automatically
-  across all your PCs. Run the \texttt{.exe} from that OneDrive folder
-  on each machine. Avoid running the program on two machines at the
-  same time to prevent file conflicts.
+  stored next to the \texttt{.exe}, OneDrive will sync them
+  automatically across all your PCs.  Run the \texttt{.exe} from
+  that OneDrive folder on each machine.  Avoid running the program
+  on two machines at the same time to prevent file conflicts.
 \end{infobox}
 
 \textbf{Method 2: From Python Source}
@@ -537,7 +548,7 @@ For users who want to get started immediately, here is the essential workflow:
 
 \subsection{Interface Overview}
 
-The main interface is divided into five main areas:
+The main interface is divided into seven main areas:
 
 \begin{enumerate}
   \item \textbf{Menu Bar}: Contains File, Settings, and Help menus
@@ -554,7 +565,7 @@ The main interface is divided into five main areas:
     field; the combo resets to its placeholder so the same entry can be
     re-selected. All names are fully translated into the 26 supported
     languages.
-  \item \textbf{Action Buttons}: Three large, color-coded buttons for
+  \item \textbf{Action Buttons}: Four large, color-coded buttons for
     primary operations
   \item \textbf{Activity Log}: Displays operation status, warnings,
     and errors in real-time with timestamps. Every entry is also
@@ -608,12 +619,13 @@ Favourite, Test) --- then edit freely before saving if needed.
   The backup system captures a comprehensive snapshot of the desktop
   environment:
   \begin{itemize}
-    \item \textbf{Display Metadata}: Saves monitor count, screen
-      names, resolutions, and \texttt{devicePixelRatio}.
-    \item \textbf{JSON Schema}: Includes \texttt{icon\_count}, ISO
-      \texttt{timestamp}, \texttt{description}, and exact X/Y coordinates.
-    \item \textbf{Coordinate Precision}: Positions are retrieved via
-      Windows API (\texttt{LVM\_GETITEMPOSITION}).
+    \item \textbf{Display Metadata}: Records monitor count, screen names,
+      individual resolutions, and the \texttt{devicePixelRatio} value.
+    \item \textbf{JSON Schema}: Stores \texttt{icon\_count}, an ISO
+      \texttt{timestamp}, a \texttt{description} field, and exact X/Y
+      pixel coordinates for every icon.
+    \item \textbf{Coordinate Precision}: Icon positions are read through
+      the Windows API message \texttt{LVM\_GETITEMPOSITION}.
   \end{itemize}
 \end{infobox}
 
@@ -704,7 +716,7 @@ resizable) that provides:
 
 \subsubsection{SHOW/HIDE ICONS}
 
-\textcolor{warning}{\textbf{Color: Purple | Shortcut: Ctrl+H | Button
+\textcolor[HTML]{9C27B0}{\textbf{Color: Purple | Shortcut: Ctrl+H | Button
 icon: \faEye}}
 
 Toggles the visibility of all desktop icons without affecting any backup
@@ -737,7 +749,7 @@ screenshots, presentations, or focus-mode work sessions.
 You can also control icon visibility from the system tray menu (right-click
 the tray icon):
 \begin{itemize}
-  \item \textbf{Show/Hide Icon Visibility} --- toggles current state
+  \item \textbf{Show/Hide Desktop Icons} --- toggles current state
   \item \textbf{Show Desktop Icons} --- explicitly show (no-op if visible)
   \item \textbf{Hide Desktop Icons} --- explicitly hide (no-op if hidden)
 \end{itemize}
@@ -941,18 +953,19 @@ Permanently deletes all saved backup files from the
 
 \begin{warningbox}[Warning - Irreversible Operation]
   This action cannot be undone. All backups will be permanently
-  deleted from the system. You will be prompted with the exact number
-  of files to be deleted before confirmation.
+  deleted from the system.
 \end{warningbox}
 
 \textbf{Deletion Process}:
 \begin{enumerate}
-  \item Counts all JSON backup files
-  \item Shows confirmation dialog with file count
-  \item Iterates through each backup file
-  \item Attempts deletion and logs success/failure for each
-  \item Reports final statistics (deleted count, failed count)
-  \item Shows summary dialog
+  \item Counts all JSON backup files; if none exist, shows an
+    informational message and stops
+  \item Shows a confirmation dialog asking whether to proceed
+  \item Iterates through each backup file and attempts deletion
+  \item Logs the total number of successfully deleted files, and
+    the total number of failures (if any)
+  \item Shows a summary dialog: ``Success'' if all files were deleted,
+    or ``Error'' if some could not be removed
 \end{enumerate}
 
 \subsection{Exit}
@@ -1218,6 +1231,83 @@ automatically deleted.
   \end{itemize}
 \end{infobox}
 
+\subsection{Auto-Hide Desktop Icons}
+
+Automatically hides all desktop icons after a configurable delay.
+Accessible from \textbf{Settings > Auto-Hide Desktop Icons} and from
+the \textbf{system tray} context menu (as a quick on/off toggle).
+
+\subsubsection{Enable Auto-Hide Timer}
+
+When enabled, a countdown starts each time desktop icons become visible
+(after a manual show, a restore, or a scramble). When the countdown
+reaches zero, the icons are automatically hidden.
+
+\begin{itemize}
+  \item Stored as \texttt{autohide\_enabled} in \texttt{settings.ini}
+  \item Default: \texttt{false}
+  \item The checkmark is synchronised between the Settings menu and the
+    system tray toggle
+\end{itemize}
+
+\subsubsection{Hide After\ldots\ (Interval Selection)}
+
+Choose a preset or custom interval:
+
+\textbf{Presets}: 30~seconds, 1~minute, 2~minutes, 5~minutes,
+10~minutes, 15~minutes, 30~minutes.
+
+\textbf{Custom}: Opens a dialog with two spin boxes (minutes 0--60 and
+seconds 0--59) for precise intervals such as 1~minute 33~seconds.
+Minimum accepted value: 10~seconds.
+
+\begin{itemize}
+  \item Stored as \texttt{autohide\_seconds} in \texttt{settings.ini}
+  \item Default: \texttt{300} (5~minutes)
+\end{itemize}
+
+\subsubsection{Backup Before Auto-Hide}
+
+When enabled, the application creates a silent backup immediately before
+hiding icons. This ensures you always have a fresh snapshot of the
+visible layout. The backup uses the tag \textit{``Auto-Hide Backup''}
+and respects the configured cleanup limit.
+
+\begin{itemize}
+  \item Stored as \texttt{autohide\_backup\_before\_hide} in
+    \texttt{settings.ini}
+  \item Default: \texttt{true}
+\end{itemize}
+
+\subsubsection{Timer Behavior}
+
+\begin{itemize}
+  \item The timer \textbf{starts} when auto-hide is enabled and icons
+    are visible (including at application startup)
+  \item The timer \textbf{resets} when icons become visible again ---
+    after a manual Show, a Restore, or a Scramble operation
+  \item The timer \textbf{stops} when icons are hidden (manually or by
+    the timer itself), or when auto-hide is disabled
+  \item A live countdown is shown in the \textbf{system tray tooltip}
+    (e.g., \textit{``Auto-Hide in 3:42''})
+  \item When icons are hidden, the tooltip shows
+    \textit{``Desktop icons are hidden''}
+\end{itemize}
+
+\textbf{Example Log Output}:
+\begin{verbatim}
+[18:30:00] Auto-Hide enabled: icons will be hidden after 1 minute(s)
+           33 second(s).
+[18:31:33] Auto-Hide: creating backup before hiding icons...
+[18:31:33] Auto-Hide: hiding desktop icons now.
+\end{verbatim}
+
+\begin{infobox}[Tip]
+  Auto-Hide is particularly useful during presentations or screen-sharing
+  sessions where you want a clean desktop. Enable it, set a short
+  interval, and your desktop tidies itself automatically.
+\end{infobox}
+
 \subsection{Window Position and Size Persistence}
 
 The application automatically remembers your window position and size:
@@ -1248,8 +1338,15 @@ Right-click on the system tray icon to access quick functions:
 \begin{itemize}
   \item \textbf{Quick Save}: Creates immediate backup with tag "Quick
     Save (Tray)"
-  \item \textbf{Restore Latest}: Restores most recent backup without
-    confirmation
+  \item \textbf{Restore Latest}: Restores most recent backup (shows
+    confirmation dialog with live diff preview before proceeding)
+  \item \textbf{Show/Hide Desktop Icons}: Toggles visibility of all
+    desktop icons
+  \item \textbf{Show Desktop Icons}: Forces icons to be visible
+  \item \textbf{Hide Desktop Icons}: Forces icons to be hidden
+  \item \textbf{Auto-Hide Timer}: Checkable toggle to enable or disable
+    the auto-hide countdown --- synchronised with the Settings menu.
+    When active, the tray tooltip displays a live countdown
   \item \textbf{Show Window}: Brings main window to front and activates it
   \item \textbf{Exit}: Completely closes application (bypasses
     "Minimize to Tray" setting)
@@ -1646,11 +1743,13 @@ Example: 20241211_143015.json
 
 \subsubsection{Smart Filename Parsing}
 
-The application features a robust parsing engine for backup identification:
+The application features a robust parsing engine for backup
+identification:
 \begin{itemize}
-  \item \textbf{Format Recognition}: Automatically distinguishes
-    between the modern format (\texttt{Resolution\_Date\_Time.json})
-    and the legacy format (\texttt{Date\_Time.json}).
+  \item \textbf{Format Recognition}: Automatically distinguishes the
+    modern format from the legacy one.\\
+    Modern: \texttt{Resolution\_Date\_Time.json}\\
+    Legacy: \texttt{Date\_Time.json}
   \item \textbf{Fallback System}: If a filename doesn't match
     standard patterns, the manager uses the raw filename as a
     fallback to ensure visibility in the list.
@@ -1714,11 +1813,12 @@ The application features a robust parsing engine for backup identification:
 \section{Command Line Interface (CLI)}
 
 The application supports advanced automation through CLI arguments.
-When \texttt{--backup}, \texttt{--restore}, or \texttt{--silent} is used,
-the program enters headless mode: the graphical user interface is not
-initialized, and the process exits immediately after the operation completes.
-Using \texttt{--silent} alone (without \texttt{--backup} or \texttt{--restore})
-simply exits with code 0.
+When \texttt{-{}-backup}, \texttt{-{}-restore}, or
+\texttt{-{}-silent} is used, the program enters headless mode: the
+graphical user interface is not initialized, and the process exits
+immediately after the operation completes.
+Using \texttt{-{}-silent} alone (without \texttt{-{}-backup} or
+\texttt{-{}-restore}) simply exits with code~0.
 
 \subsection{Available Arguments}
 
@@ -1732,12 +1832,14 @@ simply exits with code 0.
 \end{description}
 
 \begin{infobox}[Example CLI Usage]
-  \texttt{desktop-icon-backup-manager.exe --backup --silent}
+  \begin{flushleft}
+    \texttt{desktop-icon-backup-manager.exe -{}-backup -{}-silent}
 
-  \texttt{desktop-icon-backup-manager.exe --restore latest --silent}
+    \texttt{desktop-icon-backup-manager.exe -{}-restore latest -{}-silent}
 
-  \texttt{desktop-icon-backup-manager.exe --restore
-  "1920x1080\_20241211\_143015.json" --silent}
+    \texttt{desktop-icon-backup-manager.exe -{}-restore
+    "1920x1080\_20241211\_143015.json" -{}-silent}
+  \end{flushleft}
 \end{infobox}
 
 \begin{infobox}[CLI Backup Tag]
@@ -2270,29 +2372,35 @@ storage for archiving.
 \textbf{Key Classes}:
 
 \begin{itemize}
-  \item \texttt{DesktopIconManager}: Core logic for
-    save/restore/scramble; exposes \texttt{get\_current\_icon\_positions()}
-    for live diff
+  \item \texttt{DesktopIconManager}: Core save/restore/scramble
+    logic; also exposes the method used by the live diff:\\
+    \texttt{get\_current\_icon\_positions()}
   \item \texttt{BackupComparator}: Standalone module
-    (\texttt{core/comparator.py}) for diff reports between any two backups
+    (\texttt{core/comparator.py}) for diff reports between
+    any two backups
   \item \texttt{IconWorker}: QThread worker; accepts a shared
-    \texttt{DesktopIconManager} instance to avoid redundant desktop
-    handle detection
-  \item \texttt{MainWindow}: Primary application window and UI orchestration
-  \item \texttt{BackupManagerWindow}: Backup selection dialog with
-    sortable \texttt{QTableWidget} (resizable)
-  \item \texttt{IconPreviewWidget}: Standard single-backup dot-map preview
-  \item \texttt{\_DiffCanvas}: Custom \texttt{QWidget} that paints the
-    live diff overlay (grid, dots, dashed arrows, arrowheads)
-  \item \texttt{\_ColorDot}: Pixel-drawn circle widget used in the legend
-    to guarantee uniform size across all DPI settings
-  \item \texttt{\_ArrowIcon}: Pixel-drawn orange→red arrow widget that
-    illustrates the ``will move'' legend entry
-  \item \texttt{\_LegendPanel}: \texttt{QFrame} with a fixed-row-height
-    \texttt{QGridLayout} (26\,px/row) ensuring perfectly uniform vertical
-    spacing for all legend entries
-  \item \texttt{DiffPreviewWidget}: Composes \texttt{\_DiffCanvas} +
-    \texttt{\_LegendPanel} into the final panel shown in the Backup Manager
+    \texttt{DesktopIconManager} instance to avoid redundant
+    desktop handle detection
+  \item \texttt{MainWindow}: Primary application window and
+    UI orchestration
+  \item \texttt{BackupManagerWindow}: Backup selection dialog
+    with sortable \texttt{QTableWidget} (resizable)
+  \item \texttt{IconPreviewWidget}: Standard single-backup
+    dot-map preview
+  \item \texttt{\_DiffCanvas}: Custom \texttt{QWidget} that
+    paints the live diff overlay (grid, dots, dashed arrows,
+    arrowheads)
+  \item \texttt{\_ColorDot}: Pixel-drawn circle widget used in
+    the legend to guarantee uniform size across all DPI settings
+  \item \texttt{\_ArrowIcon}: Pixel-drawn
+    orange\,\textrightarrow\,red arrow widget that illustrates
+    the ``will move'' legend entry
+  \item \texttt{\_LegendPanel}: \texttt{QFrame} with a
+    fixed-row-height \texttt{QGridLayout} (26\,px/row) ensuring
+    perfectly uniform vertical spacing for all legend entries
+  \item \texttt{DiffPreviewWidget}: Composes
+    \texttt{\_DiffCanvas} + \texttt{\_LegendPanel} into the
+    final panel shown in the Backup Manager
 \end{itemize}
 
 \subsection{Remote Memory Access Process}
@@ -2453,6 +2561,9 @@ check_updates_on_startup=true
 adaptive_scaling_enabled=false
 close_to_tray=false
 cleanup_limit=0
+autohide_enabled=false
+autohide_seconds=300
+autohide_backup_before_hide=true
 geometry=@Rect(100 100 800 650)
 \end{verbatim}
 
@@ -2467,6 +2578,11 @@ geometry=@Rect(100 100 800 650)
   \item[\texttt{check\_updates\_on\_startup}] Check GitHub for a new
     version 10 seconds after launch (default: true)
   \item[\texttt{cleanup\_limit}] Maximum backup files to retain (0 = unlimited)
+  \item[\texttt{autohide\_enabled}] Enable the auto-hide desktop icons timer
+  \item[\texttt{autohide\_seconds}] Auto-hide countdown duration in seconds
+    (default: 300 = 5~minutes)
+  \item[\texttt{autohide\_backup\_before\_hide}] Create a backup before the
+    timer hides icons (default: true)
   \item[\texttt{geometry}] Window position and size in Qt rect format
 \end{description}
 
@@ -2483,7 +2599,9 @@ geometry=@Rect(100 100 800 650)
     \item No data is ever sent online or to external servers
     \item All backups are stored locally on your computer
     \item No telemetry, analytics, or usage tracking
-    \item No network connections made by the program
+    \item No network connections except the optional update check
+      (connects only to GitHub to read \texttt{version.txt};
+      disabled via Settings)
     \item Access only to your own desktop (not other users)
     \item Source code is available for inspection
   \end{itemize}

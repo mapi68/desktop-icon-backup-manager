@@ -71,6 +71,17 @@ class MainWindow(QMainWindow):
         self.worker = None
         self.tray_icon = None
 
+        # ── Auto-Hide timer ──────────────────────────────────────────────────
+        self.autohide_timer = QTimer(self)
+        self.autohide_timer.setSingleShot(True)
+        self.autohide_timer.timeout.connect(self._on_autohide_timeout)
+
+        self._autohide_remaining_sec = 0
+        self.autohide_tick_timer = QTimer(self)
+        self.autohide_tick_timer.setInterval(1000)
+        self.autohide_tick_timer.timeout.connect(self._on_autohide_tick)
+        # ─────────────────────────────────────────────────────────────────────
+
         self.create_tray_icon()
 
         self.DEFAULT_GEOMETRY = QRect(100, 100, 800, 650)
@@ -78,6 +89,11 @@ class MainWindow(QMainWindow):
         self.setup_ui()
         self.setup_shortcuts()
         self.load_settings()
+
+        # Start autohide timer if enabled and icons are currently visible
+        if self.settings.value("autohide_enabled", False, type=bool):
+            if self.visibility_manager.get_current_visibility_state():
+                self._start_autohide_timer()
 
         if self.settings.value("auto_restore_on_startup", False, type=bool):
             QTimer.singleShot(1000, self.start_restore_latest)
@@ -119,6 +135,14 @@ class MainWindow(QMainWindow):
 
         tray_menu.addSeparator()
 
+        self.action_tray_autohide = QAction(
+            self.tr("⏱️ Auto-Hide Timer"), self, checkable=True
+        )
+        self.action_tray_autohide.triggered.connect(self._toggle_autohide)
+        tray_menu.addAction(self.action_tray_autohide)
+
+        tray_menu.addSeparator()
+
         self.action_tray_show = QAction(self.tr("Show Window"), self)
         self.action_tray_show.triggered.connect(self.show_window)
         tray_menu.addAction(self.action_tray_show)
@@ -144,7 +168,7 @@ class MainWindow(QMainWindow):
         self.close()
 
     def setup_ui(self):
-        self.setWindowTitle(self.tr("Desktop Icon Backup Manager by mapi68"))
+        self.setWindowTitle("Desktop Icon Backup Manager")
         self.setWindowIcon(QIcon(resource_path("icon.ico")))
 
         menu_bar = self.menuBar()
@@ -273,7 +297,7 @@ class MainWindow(QMainWindow):
         settings_menu.addSeparator()
 
         # Group 4: cleanup
-        self.cleanup_group = QMenu(self.tr("Automatic Backup Cleanup Limit"), self)
+        self.cleanup_group = QMenu(self.tr("🗑️ Automatic Backup Cleanup Limit"), self)
         settings_menu.addMenu(self.cleanup_group)
         self.cleanup_actions = {}
 
@@ -292,6 +316,65 @@ class MainWindow(QMainWindow):
             )
             self.cleanup_group.addAction(action)
             self.cleanup_actions[limit] = action
+
+        settings_menu.addSeparator()
+
+        # Group 5: auto-hide desktop icons
+        self.autohide_group = QMenu(self.tr("⏱️ Auto-Hide Desktop Icons"), self)
+        settings_menu.addMenu(self.autohide_group)
+
+        self.action_autohide_enabled = QAction(
+            self.tr("Enable Auto-Hide Timer"), self, checkable=True
+        )
+        self.action_autohide_enabled.triggered.connect(self._toggle_autohide)
+        self.autohide_group.addAction(self.action_autohide_enabled)
+
+        self.autohide_group.addSeparator()
+
+        self.autohide_time_group = QMenu(self.tr("Hide After..."), self)
+        self.autohide_group.addMenu(self.autohide_time_group)
+        self.autohide_time_actions = {}
+
+        # Values are in seconds
+        autohide_intervals = {
+            self.tr("30 seconds"): 30,
+            self.tr("1 minute"): 60,
+            self.tr("2 minutes"): 120,
+            self.tr("5 minutes"): 300,
+            self.tr("10 minutes"): 600,
+            self.tr("15 minutes"): 900,
+            self.tr("30 minutes"): 1800,
+        }
+
+        for text, seconds in autohide_intervals.items():
+            action = QAction(text, self, checkable=True)
+            action.triggered.connect(
+                lambda checked, s=seconds: self._set_autohide_seconds(s)
+            )
+            self.autohide_time_group.addAction(action)
+            self.autohide_time_actions[seconds] = action
+
+        self.autohide_time_group.addSeparator()
+
+        self.action_autohide_custom = QAction(
+            self.tr("Custom..."), self, checkable=True
+        )
+        self.action_autohide_custom.triggered.connect(
+            lambda checked: self._ask_custom_autohide_time()
+        )
+        self.autohide_time_group.addAction(self.action_autohide_custom)
+
+        self.autohide_group.addSeparator()
+
+        self.action_autohide_backup = QAction(
+            self.tr("Backup Before Auto-Hide"), self, checkable=True
+        )
+        self.action_autohide_backup.triggered.connect(
+            lambda checked: self.settings.setValue(
+                "autohide_backup_before_hide", checked
+            )
+        )
+        self.autohide_group.addAction(self.action_autohide_backup)
 
         help_menu = menu_bar.addMenu(self.tr("&Help"))
 
@@ -532,6 +615,16 @@ class MainWindow(QMainWindow):
         current_limit = self.settings.value("cleanup_limit", 0, type=int)
         self._update_cleanup_menu_check(current_limit)
 
+        # Auto-hide settings
+        autohide_on = self.settings.value("autohide_enabled", False, type=bool)
+        self.action_autohide_enabled.setChecked(autohide_on)
+        self.action_tray_autohide.setChecked(autohide_on)
+        current_autohide_sec = self.settings.value("autohide_seconds", 300, type=int)
+        self._update_autohide_time_menu_check(current_autohide_sec)
+        self.action_autohide_backup.setChecked(
+            self.settings.value("autohide_backup_before_hide", True, type=bool)
+        )
+
         geometry = self.settings.value("geometry", self.DEFAULT_GEOMETRY, type=QRect)
         self.setGeometry(geometry)
 
@@ -550,6 +643,204 @@ class MainWindow(QMainWindow):
         for limit, action in self.cleanup_actions.items():
             action.setChecked(limit == current_limit)
 
+    # ── Auto-Hide Desktop Icons ──────────────────────────────────────────────
+
+    def _toggle_autohide(self, checked: bool):
+        """Enable or disable the auto-hide timer."""
+        self.settings.setValue("autohide_enabled", checked)
+        # Keep both menu and tray checkmarks in sync
+        self.action_autohide_enabled.setChecked(checked)
+        self.action_tray_autohide.setChecked(checked)
+        if checked:
+            total_sec = self.settings.value("autohide_seconds", 300, type=int)
+            self.log(
+                self.tr("Auto-Hide enabled: icons will be hidden after %1.").replace(
+                    "%1", self._format_duration(total_sec)
+                )
+            )
+            # Start only if icons are currently visible
+            if self.visibility_manager.get_current_visibility_state():
+                self._start_autohide_timer()
+        else:
+            self._stop_autohide_timer()
+            self.log(self.tr("Auto-Hide disabled."))
+
+    def _set_autohide_seconds(self, seconds: int):
+        """Change the auto-hide interval (in seconds)."""
+        self.settings.setValue("autohide_seconds", seconds)
+        self._update_autohide_time_menu_check(seconds)
+        self.log(
+            self.tr("Auto-Hide interval set to %1.").replace(
+                "%1", self._format_duration(seconds)
+            )
+        )
+        # Restart the timer if auto-hide is active
+        if self.settings.value("autohide_enabled", False, type=bool):
+            if self.visibility_manager.get_current_visibility_state():
+                self._start_autohide_timer()
+
+    def _update_autohide_time_menu_check(self, current_seconds: int):
+        """Update checkmarks in the auto-hide interval submenu."""
+        is_preset = False
+        for seconds, action in self.autohide_time_actions.items():
+            matched = seconds == current_seconds
+            action.setChecked(matched)
+            if matched:
+                is_preset = True
+        # If no preset matched, the value is custom
+        self.action_autohide_custom.setChecked(not is_preset)
+        if not is_preset:
+            self.action_autohide_custom.setText(
+                self.tr("Custom (%1)").replace(
+                    "%1", self._format_duration(current_seconds)
+                )
+            )
+        else:
+            self.action_autohide_custom.setText(self.tr("Custom..."))
+
+    def _ask_custom_autohide_time(self):
+        """Show a dialog with minutes + seconds spin boxes for custom interval."""
+        from PyQt6.QtWidgets import (
+            QDialog,
+            QVBoxLayout,
+            QHBoxLayout,
+            QLabel,
+            QSpinBox,
+            QPushButton,
+            QDialogButtonBox,
+        )
+
+        current = self.settings.value("autohide_seconds", 300, type=int)
+        cur_m, cur_s = divmod(current, 60)
+
+        dlg = QDialog(self)
+        dlg.setWindowTitle(self.tr("Custom Auto-Hide Interval"))
+        dlg.setFixedWidth(320)
+
+        layout = QVBoxLayout(dlg)
+        layout.setSpacing(12)
+        layout.setContentsMargins(20, 20, 20, 20)
+
+        layout.addWidget(QLabel(self.tr("Hide desktop icons after:")))
+
+        row = QHBoxLayout()
+
+        spin_min = QSpinBox()
+        spin_min.setRange(0, 60)
+        spin_min.setValue(cur_m)
+        spin_min.setSuffix(f"  {self.tr('minutes')}")
+        spin_min.setMinimumWidth(110)
+        row.addWidget(spin_min)
+
+        spin_sec = QSpinBox()
+        spin_sec.setRange(0, 59)
+        spin_sec.setValue(cur_s)
+        spin_sec.setSuffix(f"  {self.tr('seconds')}")
+        spin_sec.setMinimumWidth(90)
+        row.addWidget(spin_sec)
+
+        layout.addLayout(row)
+
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
+        )
+        buttons.accepted.connect(dlg.accept)
+        buttons.rejected.connect(dlg.reject)
+        layout.addWidget(buttons)
+
+        if dlg.exec() == QDialog.DialogCode.Accepted:
+            total = spin_min.value() * 60 + spin_sec.value()
+            if total < 10:
+                total = 10  # minimum 10 seconds
+            self._set_autohide_seconds(total)
+
+    def _format_duration(self, seconds: int) -> str:
+        """Format seconds as translatable 'X minutes Y seconds' etc."""
+        m, s = divmod(seconds, 60)
+        if m and s:
+            return (
+                self.tr("%n minute(s)", "duration", m)
+                + " "
+                + self.tr("%n second(s)", "duration", s)
+            )
+        elif m:
+            return self.tr("%n minute(s)", "duration", m)
+        else:
+            return self.tr("%n second(s)", "duration", s)
+
+    def _start_autohide_timer(self):
+        """Start (or restart) the auto-hide countdown."""
+        if not self.settings.value("autohide_enabled", False, type=bool):
+            return
+        total_sec = self.settings.value("autohide_seconds", 300, type=int)
+        self._autohide_remaining_sec = total_sec
+        self.autohide_timer.start(total_sec * 1000)
+        self.autohide_tick_timer.start()
+        self._update_tray_autohide_tooltip()
+
+    def _stop_autohide_timer(self):
+        """Stop the auto-hide countdown and reset the tray tooltip."""
+        self.autohide_timer.stop()
+        self.autohide_tick_timer.stop()
+        self._autohide_remaining_sec = 0
+        self._update_tray_autohide_tooltip()
+
+    def _on_autohide_tick(self):
+        """Called every second to update the countdown tooltip."""
+        if self._autohide_remaining_sec > 0:
+            self._autohide_remaining_sec -= 1
+        self._update_tray_autohide_tooltip()
+
+    def _update_tray_autohide_tooltip(self):
+        """Update the tray icon tooltip with auto-hide status."""
+        base = "Desktop Icon Backup Manager"
+        if not self.settings.value("autohide_enabled", False, type=bool):
+            self.tray_icon.setToolTip(base)
+            return
+
+        is_visible = self.visibility_manager.get_current_visibility_state()
+        if not is_visible:
+            self.tray_icon.setToolTip(f"{base}\n{self.tr('Desktop icons are hidden')}")
+            return
+
+        remaining = self._autohide_remaining_sec
+        if remaining > 0:
+            mins, secs = divmod(remaining, 60)
+            self.tray_icon.setToolTip(
+                f"{base}\n{self.tr('Auto-Hide in %1').replace('%1', f'{mins}:{secs:02d}')}"
+            )
+        else:
+            self.tray_icon.setToolTip(base)
+
+    def _on_autohide_timeout(self):
+        """Called when the auto-hide timer expires — hide the desktop icons."""
+        self.autohide_tick_timer.stop()
+        self._autohide_remaining_sec = 0
+
+        # Optional backup before hiding
+        if self.settings.value("autohide_backup_before_hide", True, type=bool):
+            self.log(self.tr("Auto-Hide: creating backup before hiding icons..."))
+            cleanup_limit = self.settings.value("cleanup_limit", 0, type=int)
+            self.manager.save(
+                lambda msg: self.log(f"  {msg}"),
+                description=self.tr("Auto-Hide Backup"),
+                max_backup_count=cleanup_limit,
+            )
+
+        self.log(self.tr("Auto-Hide: hiding desktop icons now."))
+        self.visibility_manager.hide_icons(self.log)
+        self._update_tray_autohide_tooltip()
+
+    def _restart_autohide_if_icons_visible(self):
+        """Convenience: restart the auto-hide timer when icons become visible."""
+        if self.settings.value("autohide_enabled", False, type=bool):
+            if self.visibility_manager.get_current_visibility_state():
+                self._start_autohide_timer()
+            else:
+                self._stop_autohide_timer()
+
+    # ─────────────────────────────────────────────────────────────────────────
+
     def log(self, message: str):
         timestamp = datetime.now().strftime("%H:%M:%S")
         self.log_area.append(f"[{timestamp}] {message}")
@@ -560,6 +851,14 @@ class MainWindow(QMainWindow):
             self._trim_log_file()
         except OSError:
             pass
+
+        if not self.isVisible() and ("✗" in message or "CRITICAL ERROR" in message):
+            self.tray_icon.showMessage(
+                self.tr("Desktop Icon Manager"),
+                message,
+                QSystemTrayIcon.MessageIcon.Warning,
+                5000,
+            )
 
     def _trim_log_file(self, max_lines: int = 500):
         """Keep only the last max_lines lines in the log file."""
@@ -580,14 +879,6 @@ class MainWindow(QMainWindow):
                 self.log_path.unlink()
         except OSError:
             pass
-
-        if not self.isVisible() and ("✗" in message or "CRITICAL ERROR" in message):
-            self.tray_icon.showMessage(
-                self.tr("Desktop Icon Manager"),
-                message,
-                QSystemTrayIcon.MessageIcon.Warning,
-                5000,
-            )
 
     def toggle_buttons(self, enabled: bool):
         self.btn_save_latest.setEnabled(enabled)
@@ -714,7 +1005,7 @@ class MainWindow(QMainWindow):
             f"<b>{self.tr('Development:')}</b> mapi68<br></p>"
             f"<p><a href='https://ko-fi.com/mapi68'>{self.tr('Support this project on Ko-fi')}</a></p>"
         )
-        QMessageBox.about(self, self.tr("About Desktop Icon Backup Manager"), html)
+        QMessageBox.about(self, self.tr("About") + " Desktop Icon Backup Manager", html)
 
     def confirm_and_delete_all_backups(self):
         backup_count = len(self.manager.get_all_backup_filenames())
@@ -732,9 +1023,7 @@ class MainWindow(QMainWindow):
             self,
             self.tr("WARNING: Delete All Backups"),
             self.tr(
-                "Are you absolutely sure you want to permanently delete ALL %n desktop icon backup file(s)?\n\nThis action cannot be undone!",
-                None,
-                backup_count,
+                "Are you absolutely sure you want to permanently delete all desktop icon backup files?\n\nThis action cannot be undone!"
             ),
             self.tr("Yes"),
             self.tr("No"),
@@ -993,6 +1282,9 @@ class MainWindow(QMainWindow):
                     QSystemTrayIcon.MessageIcon.Information,
                     2000,
                 )
+            # After a restore or scramble the icons are visible → restart timer
+            if mode in ("restore", "scramble"):
+                self._restart_autohide_if_icons_visible()
         else:
             self.statusBar().showMessage(self.tr("Operation failed"), 3000)
             QMessageBox.warning(
@@ -1220,6 +1512,7 @@ class MainWindow(QMainWindow):
                     "Desktop icon visibility updated.",
                 )
             )
+            self._restart_autohide_if_icons_visible()
         else:
             self.log(
                 QCoreApplication.translate(
@@ -1243,6 +1536,7 @@ class MainWindow(QMainWindow):
                     "Desktop icons are now visible.",
                 )
             )
+            self._restart_autohide_if_icons_visible()
         else:
             self.log(
                 QCoreApplication.translate(
@@ -1266,6 +1560,7 @@ class MainWindow(QMainWindow):
                     "Desktop icons are now hidden.",
                 )
             )
+            self._stop_autohide_timer()
         else:
             self.log(
                 QCoreApplication.translate(

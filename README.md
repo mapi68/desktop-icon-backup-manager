@@ -141,7 +141,7 @@ desktop-icon-backup-manager.exe --restore latest --silent
 - **↺ One-Click Restore** — Restore icon positions from the latest backup or pick any snapshot from your backup history
 - **🏷️ Custom Tags & Descriptions** — Label each backup with meaningful names for easy identification and organization
 - **📋 Quick-Access Profiles Dropdown** — 14 pre-made profile names for instant tagging:
-  - *Work, Gaming, Presentation, Dev/Coding, Meeting, Home, Office, Laptop, Docked/External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favorite, Test*
+  - *Work, Gaming, Presentation, Dev/Coding, Meeting, Home, Office, Laptop, Docked/External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favourite, Test*
   - One-click selection pre-fills the tag field; edit further if needed
 - **📊 Complete Metadata Tracking** — Every backup records screen resolution, DPI scaling, monitor count, and arrangement
 
@@ -152,6 +152,7 @@ desktop-icon-backup-manager.exe --restore latest --silent
 - **🔄 Adaptive Scaling** — Proportional position recalculation when restoring to different resolution or DPI *(unique feature)*
 - **🖥️ Multi-Monitor Full Support** — Save/restore across any monitor configuration with automatic mismatch warnings
 - **👁️ Show/Hide Desktop Icons** — Quickly toggle visibility of all desktop icons (`Ctrl+H` shortcut) without affecting backup data — useful for clean desktop screenshots, presentations, or focus mode
+- **⏱️ Auto-Hide Desktop Icons** — Automatically hide desktop icons after a configurable delay (30 seconds to 30 minutes preset, or custom minutes + seconds up to 60 min 59 sec). Optional automatic backup before hiding. Timer resets when icons are shown again. Live countdown visible in system tray tooltip
 - **⚖️ Backup Comparison Tool** — Diff any two saved layouts side-by-side *(unique feature)*
 - **✏️ Inline Tag Editing** — Double-click backup tags in the table to rename instantly—no dialog boxes
 - **📤 Export Backups** — Export selected or all backups to ZIP archive or folder for backup, sharing, or off-site storage
@@ -203,6 +204,7 @@ Desktop Icon Backup Manager is the most comprehensive solution. Here's how it co
 | **Auto-restore on startup** | ✅ | ⚠️ via shortcut | ✅ | ❌ |
 | **Automatic update checker** | ✅ | ❌ | ❌ | ❌ |
 | **System tray integration** | ✅ | ✅ | ✅ | ❌ |
+| **Auto-hide desktop icons with timer** | ✅ | ❌ | ❌ | ❌ |
 | **Open source (MIT license)** | ✅ | ❌ | ❌ | — |
 | **Portable executable** | ✅ | ✅ | ✅ | — |
 | **Windows 11 25H2 support** | ✅ | ✅ | ⚠️ | — |
@@ -232,7 +234,8 @@ Desktop Icon Backup Manager is the most comprehensive solution. Here's how it co
 No installation. No Python. No dependencies. Download, extract, and run.
 
 1. Visit the [Releases page](https://github.com/mapi68/desktop-icon-backup-manager/releases)
-2. Download the latest ZIP file
+2. Download the [latest release](https://github.com/mapi68/desktop-icon-backup-manager/releases/latest) (`desktop-icon-backup-manager_v*.zip`)
+   - The ZIP contains the Windows executable and the PDF user manual
 3. Extract to any folder (e.g., `C:\Tools\Desktop Icon Backup Manager\`)
 4. Run `Desktop Icon Backup Manager.exe`
 5. The `icon_backups` folder and `settings.ini` are created automatically on first run
@@ -270,7 +273,7 @@ python main.py
    - Leave blank for default `Quick Backup` label
 
 2. **Alternative:** Click the **📋 Profiles** dropdown to the right of the tag field
-   - Choose one of 14 pre-made names (Work, Gaming, Presentation, Dev/Coding, Meeting, Home, Office, Laptop, Docked/External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favorite, Test)
+   - Choose one of 14 pre-made names (Work, Gaming, Presentation, Dev/Coding, Meeting, Home, Office, Laptop, Docked/External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favourite, Test)
    - The selected name is instantly copied into the tag field
    - Edit further if needed, then save
 
@@ -366,6 +369,9 @@ desktop-icon-backup-manager.exe --restore "1920x1080_20241211_143015.json" --sil
 | **Minimize to Tray on Close** | Clicking the close (X) button hides to tray instead of quitting | `false` |
 | **Check for Updates on Startup** | Automatically check GitHub for new version 10 seconds after launch | `true` |
 | **Auto-Cleanup Limit** | Auto-delete oldest backups—keep 5, 10, 25, 50, or unlimited | `0` (unlimited) |
+| **Auto-Hide Desktop Icons** | Automatically hide icons after a configurable delay | `false` |
+| **Auto-Hide Interval** | Timer duration before hiding (preset or custom minutes + seconds) | `300` (5 minutes) |
+| **Backup Before Auto-Hide** | Create an automatic backup before the auto-hide timer hides icons | `true` |
 
 ### Configuration File (settings.ini)
 
@@ -380,6 +386,9 @@ check_updates_on_startup=true
 adaptive_scaling_enabled=false
 close_to_tray=false
 cleanup_limit=0
+autohide_enabled=false
+autohide_seconds=300
+autohide_backup_before_hide=true
 geometry=@Rect(100 100 800 650)
 ```
 
@@ -400,7 +409,7 @@ Quick reference for all keyboard commands:
 | `Ctrl+H` | Show/Hide Desktop Icons |
 | `Ctrl+,` | Open Settings |
 | `Ctrl+Q` | Exit application |
-| `F1` | Open User Manual (PDF) |
+| `F1` | Open Online User Manual |
 
 ---
 
@@ -448,7 +457,7 @@ Backups are stored as human-readable JSON text files in the `icon_backups` subfo
 Yes — in the Backup Manager, double-click the tag cell in the first column to edit it directly in the table. Changes are saved to the `.json` file immediately.
 
 **What are Profiles and how do I use them?**
-Profiles is a dropdown menu next to the tag field containing 14 pre-made names (Work, Gaming, Presentation, Dev/Coding, Meeting, Home, Office, Laptop, Docked/External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favorite, Test) to help you tag backups consistently. Select one and the name is instantly copied into the tag field—edit further if needed before saving. All profile names are fully translated to 26 supported languages.
+Profiles is a dropdown menu next to the tag field containing 14 pre-made names (Work, Gaming, Presentation, Dev/Coding, Meeting, Home, Office, Laptop, Docked/External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favourite, Test) to help you tag backups consistently. Select one and the name is instantly copied into the tag field—edit further if needed before saving. All profile names are fully translated to 26 supported languages.
 
 **Can I transfer backups to another PC?**
 Yes — use **📤 Export Backups...** in the Backup Manager to package backups as a ZIP archive or copy to a folder. On the target machine, use **📥 Import Backups...** to bring them in. Existing files are automatically skipped to prevent overwriting.
@@ -652,12 +661,12 @@ Desktop Icon Backup Manager is built on the shoulders of excellent open-source p
   <br><br><br>
 </p>
 
-### Live Diff Preview — The Unique Feature
+### Backup Comparison Results
 
 <p align="center">
-  <img src="images/DIBM_5.png" alt="Live diff preview - unique feature showing exactly which desktop icons will move before restoring" width="80%">
+  <img src="images/DIBM_5.png" alt="Comparison Results interface showing added, removed, and moved icons between two saved desktop layouts" width="80%">
   <br><br>
-  <em>Live diff preview (unique feature) — see exactly which icons will move (orange→red), stay (blue), or be skipped (green) before restoring</em>
+  <em>Comparison Results — see exactly which icons were added (green), removed (red), or moved (yellow) between any two saved layouts</em>
   <br><br><br>
 </p>
 

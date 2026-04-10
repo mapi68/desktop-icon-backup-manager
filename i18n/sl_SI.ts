@@ -932,47 +932,47 @@ Ali ste prepričani, da želite nadaljevati?</translation>
 </context><context>
     <name>MainWindow</name>
     <message>
-        <location filename="..\ui\main_window.py" line="1211" />
+        <location filename="..\ui\main_window.py" line="1503" />
         <source>Updating desktop icon visibility...</source>
         <translation>Posodabljanje vidnosti ikon namizja...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1218" />
+        <location filename="..\ui\main_window.py" line="1510" />
         <source>Desktop icon visibility updated.</source>
         <translation>Vidnost ikon namizja posodobljena.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1225" />
+        <location filename="..\ui\main_window.py" line="1518" />
         <source>✗ Failed to show/hide desktop icons.</source>
         <translation>✗ Ni uspelo prikazati/skriti ikon namizja.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1234" />
+        <location filename="..\ui\main_window.py" line="1527" />
         <source>Attempting to show desktop icons...</source>
         <translation>Poskus prikaza ikon namizja...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1241" />
+        <location filename="..\ui\main_window.py" line="1534" />
         <source>Desktop icons are now visible.</source>
         <translation>Ikone namizja so zdaj vidne.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1248" />
+        <location filename="..\ui\main_window.py" line="1542" />
         <source>✗ Failed to show desktop icons.</source>
         <translation>✗ Ni uspelo prikazati ikon namizja.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1257" />
+        <location filename="..\ui\main_window.py" line="1551" />
         <source>Attempting to hide desktop icons...</source>
         <translation>Poskus skrivanja ikon namizja...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1264" />
+        <location filename="..\ui\main_window.py" line="1558" />
         <source>Desktop icons are now hidden.</source>
         <translation>Ikone namizja so zdaj skrite.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1271" />
+        <location filename="..\ui\main_window.py" line="1566" />
         <source>✗ Failed to hide desktop icons.</source>
         <translation>✗ Ni uspelo skriti ikon namizja.</translation>
     </message>
@@ -982,243 +982,304 @@ Ali ste prepričani, da želite nadaljevati?</translation>
         <translation>Neznano</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="94" />
+        <location filename="..\ui\main_window.py" line="110" />
         <source>Quick Save</source>
         <translation>Hitro shrani</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="96" />
+        <location filename="..\ui\main_window.py" line="112" />
         <source>Quick Save (Tray)</source>
         <translation>Hitro shrani (sistemska vrstica)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="100" />
+        <location filename="..\ui\main_window.py" line="116" />
         <source>Restore Latest</source>
         <translation>Obnovi najnovejšo</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1171" />
-        <location filename="..\ui\main_window.py" line="170" />
-        <location filename="..\ui\main_window.py" line="107" />
+        <location filename="..\ui\main_window.py" line="1463" />
+        <location filename="..\ui\main_window.py" line="194" />
+        <location filename="..\ui\main_window.py" line="123" />
         <source>Show/Hide Desktop Icons</source>
         <translation>Prikaži/Skrij ikone namizja</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="112" />
+        <location filename="..\ui\main_window.py" line="128" />
         <source>Show Desktop Icons</source>
         <translation>Prikaži ikone namizja</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="116" />
+        <location filename="..\ui\main_window.py" line="132" />
         <source>Hide Desktop Icons</source>
         <translation>Skrij ikone namizja</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="122" />
+        <location filename="..\ui\main_window.py" line="139" />
+        <source>⏱️ Auto-Hide Timer</source>
+        <translation>⏱️ Časovnik samodejnega skrivanja</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="146" />
         <source>Show Window</source>
         <translation>Prikaži okno</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="126" />
+        <location filename="..\ui\main_window.py" line="150" />
         <source>Exit</source>
         <translation>Izhod</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="147" />
-        <source>Desktop Icon Backup Manager by mapi68</source>
-        <translation>Desktop Icon Backup Manager – mapi68</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="152" />
+        <location filename="..\ui\main_window.py" line="176" />
         <source>&amp;File</source>
         <translation>&amp;Datoteka</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="155" />
+        <location filename="..\ui\main_window.py" line="179" />
         <source>Scramble Desktop Icons (Random)</source>
         <translation>Premeši ikone namizja (naključno)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="158" />
+        <location filename="..\ui\main_window.py" line="182" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
         <translation>Naključno razporedi vse ikone namizja po ustvaritvi obvezne varnostne kopije.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="168" />
+        <location filename="..\ui\main_window.py" line="192" />
         <source>👁️ Desktop Icons Visibility</source>
         <translation>👁️ Vidnost ikon namizja</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="173" />
+        <location filename="..\ui\main_window.py" line="197" />
         <source>Toggle visibility of all desktop icons (Ctrl+H)</source>
         <translation>Preklopi vidnost vseh ikon namizja (Ctrl+H)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="178" />
+        <location filename="..\ui\main_window.py" line="202" />
         <source>Show Icons</source>
         <translation>Prikaži ikone</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="182" />
+        <location filename="..\ui\main_window.py" line="206" />
         <source>Hide Icons</source>
         <translation>Skrij ikone</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="188" />
+        <location filename="..\ui\main_window.py" line="212" />
         <source>Remove All Backups...</source>
         <translation>Odstrani vse varnostne kopije...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="194" />
+        <location filename="..\ui\main_window.py" line="218" />
         <source>📤 Export Backups...</source>
         <translation>📤 Izvozi varnostne kopije...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="195" />
+        <location filename="..\ui\main_window.py" line="219" />
         <source>Export backups to a folder or ZIP archive</source>
         <translation>Izvozite varnostne kopije v mapo ali ZIP-arhiv</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="199" />
+        <location filename="..\ui\main_window.py" line="223" />
         <source>📥 Import Backups...</source>
         <translation>📥 Uvozi varnostne kopije...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="201" />
+        <location filename="..\ui\main_window.py" line="225" />
         <source>Import backup files (.json) or a ZIP archive</source>
         <translation>Uvozite datoteke varnostnih kopij (.json) ali ZIP-arhiv</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="207" />
+        <location filename="..\ui\main_window.py" line="231" />
         <source>E&amp;xit</source>
         <translation>I&amp;zhod</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="467" />
-        <location filename="..\ui\main_window.py" line="212" />
+        <location filename="..\ui\main_window.py" line="550" />
+        <location filename="..\ui\main_window.py" line="236" />
         <source>&amp;Settings</source>
         <translation>&amp;Nastavitve</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="214" />
+        <location filename="..\ui\main_window.py" line="238" />
         <source>Open Settings Menu</source>
         <translation>Odpri meni nastavitev</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1085" />
-        <location filename="..\ui\main_window.py" line="220" />
+        <location filename="..\ui\main_window.py" line="1377" />
+        <location filename="..\ui\main_window.py" line="244" />
         <source>Auto-Save on Exit</source>
         <translation>Samodejno shrani ob izhodu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="228" />
+        <location filename="..\ui\main_window.py" line="252" />
         <source>Auto-Restore on Startup</source>
         <translation>Samodejno obnovi ob zagonu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="236" />
+        <location filename="..\ui\main_window.py" line="260" />
         <source>Check for Updates on Startup</source>
         <translation>Preveri posodobitve ob zagonu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="247" />
+        <location filename="..\ui\main_window.py" line="271" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>Omogoči prilagodljivo skaliranje pri obnovi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="258" />
+        <location filename="..\ui\main_window.py" line="282" />
         <source>Start Minimized to Tray</source>
         <translation>Zaženi minimizirano v sistemsko vrstico</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="266" />
+        <location filename="..\ui\main_window.py" line="290" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>Minimiziraj v sistemsko vrstico ob zapiranju (gumb 'X')</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="276" />
-        <source>Automatic Backup Cleanup Limit</source>
-        <translation>Meja samodejnega čiščenja varnostnih kopij</translation>
+        <location filename="..\ui\main_window.py" line="300" />
+        <source>🗑️ Automatic Backup Cleanup Limit</source>
+        <translation>🗑️ Omejitev samodejnega čiščenja varnostnih kopij</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="281" />
+        <location filename="..\ui\main_window.py" line="305" />
         <source>Disabled (Keep All)</source>
         <translation>Onemogočeno (ohrani vse)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="282" />
+        <location filename="..\ui\main_window.py" line="306" />
         <source>Keep Last 5</source>
         <translation>Ohrani zadnjih 5</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="283" />
+        <location filename="..\ui\main_window.py" line="307" />
         <source>Keep Last 10</source>
         <translation>Ohrani zadnjih 10</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="284" />
+        <location filename="..\ui\main_window.py" line="308" />
         <source>Keep Last 25</source>
         <translation>Ohrani zadnjih 25</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="285" />
+        <location filename="..\ui\main_window.py" line="309" />
         <source>Keep Last 50</source>
         <translation>Ohrani zadnjih 50</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="296" />
+        <location filename="..\ui\main_window.py" line="323" />
+        <source>⏱️ Auto-Hide Desktop Icons</source>
+        <translation>⏱️ Samodejno skrij ikone namizja</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="327" />
+        <source>Enable Auto-Hide Timer</source>
+        <translation>Omogoči časovnik samodejnega skrivanja</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="334" />
+        <source>Hide After...</source>
+        <translation>Skrij po...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="340" />
+        <source>30 seconds</source>
+        <translation>30 sekund</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="341" />
+        <source>1 minute</source>
+        <translation>1 minuta</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="342" />
+        <source>2 minutes</source>
+        <translation>2 minuti</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="343" />
+        <source>5 minutes</source>
+        <translation>5 minut</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="344" />
+        <source>10 minutes</source>
+        <translation>10 minut</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="345" />
+        <source>15 minutes</source>
+        <translation>15 minut</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="346" />
+        <source>30 minutes</source>
+        <translation>30 minut</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="699" />
+        <location filename="..\ui\main_window.py" line="360" />
+        <source>Custom...</source>
+        <translation>Po meri...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="370" />
+        <source>Backup Before Auto-Hide</source>
+        <translation>Varnostna kopija pred samodejnim skrivanjem</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="379" />
         <source>&amp;Help</source>
         <translation>&amp;Pomoč</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="298" />
+        <location filename="..\ui\main_window.py" line="381" />
         <source>Online User Manual</source>
         <translation>Spletni uporabniški priročnik</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1191" />
-        <location filename="..\ui\main_window.py" line="1155" />
-        <location filename="..\ui\main_window.py" line="305" />
+        <location filename="..\ui\main_window.py" line="1483" />
+        <location filename="..\ui\main_window.py" line="1447" />
+        <location filename="..\ui\main_window.py" line="388" />
         <source>Keyboard Shortcuts</source>
         <translation>Bližnjice na tipkovnici</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="311" />
+        <location filename="..\ui\main_window.py" line="394" />
         <source>Check for Updates...</source>
         <translation>Preveri posodobitve...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="317" />
+        <location filename="..\ui\main_window.py" line="400" />
         <source>&amp;About</source>
         <translation>&amp;O programu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="323" />
+        <location filename="..\ui\main_window.py" line="406" />
         <source>Support on Ko-fi...</source>
         <translation>Podpri na Ko-fi...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="338" />
+        <location filename="..\ui\main_window.py" line="421" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>Neobvezno: Vnesite opisno oznako/opis...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="345" />
+        <location filename="..\ui\main_window.py" line="428" />
         <source>Select a profile to auto-fill the tag field</source>
         <translation>Izberite profil za samodejno izpolnitev polja oznake</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="351" />
+        <location filename="..\ui\main_window.py" line="434" />
         <source>Save Tag:</source>
         <translation>Shrani oznako:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="359" />
+        <location filename="..\ui\main_window.py" line="442" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 HITRO SHRANI VARNOSTNO KOPIJO</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="363" />
+        <location filename="..\ui\main_window.py" line="446" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -1227,22 +1288,22 @@ Shortcut: Ctrl+S</source>
 Bližnjica: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="371" />
+        <location filename="..\ui\main_window.py" line="454" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ OBNOVI NAJNOVEJŠO</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="374" />
+        <location filename="..\ui\main_window.py" line="457" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>Obnovi pozicije ikon iz NAJNOVEJŠE najdene varnostne kopije.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="379" />
+        <location filename="..\ui\main_window.py" line="462" />
         <source>↺ BACKUP MANAGER</source>
         <translation>↺ BACKUP MANAGER</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="383" />
+        <location filename="..\ui\main_window.py" line="466" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -1251,12 +1312,12 @@ Shortcut: Ctrl+M</source>
 Bližnjica: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="391" />
+        <location filename="..\ui\main_window.py" line="474" />
         <source>👁️ SHOW/HIDE ICONS</source>
         <translation>👁️ PRIKAŽI/SKRIJ IKONE</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="394" />
+        <location filename="..\ui\main_window.py" line="477" />
         <source>Show or hide all desktop icons.
 
 Shortcut: Ctrl+H</source>
@@ -1265,50 +1326,50 @@ Shortcut: Ctrl+H</source>
 Bližnjica: Ctrl+H</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="406" />
+        <location filename="..\ui\main_window.py" line="489" />
         <source>Activity Log:</source>
         <translation>Dnevnik dejavnosti:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="417" />
+        <location filename="..\ui\main_window.py" line="500" />
         <source>Current Resolution: %1</source>
         <translation>Trenutna ločljivost: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="424" />
+        <location filename="..\ui\main_window.py" line="507" />
         <source>Support on Ko-fi</source>
         <translation>Podpri na Ko-fi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="430" />
+        <location filename="..\ui\main_window.py" line="513" />
         <source>Clear Log</source>
         <translation>Počisti dnevnik</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="475" />
+        <location filename="..\ui\main_window.py" line="558" />
         <source>Settings menu not found</source>
         <translation>Meni nastavitev ni najden</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="487" />
+        <location filename="..\ui\main_window.py" line="570" />
         <source>Opening online user manual in browser...</source>
         <translation>Odpiranje spletnega priročnika v brskalniku...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="489" />
+        <location filename="..\ui\main_window.py" line="572" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ Odpiranje URL-ja priročnika ni uspelo</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1000" />
-        <location filename="..\ui\main_window.py" line="789" />
-        <location filename="..\ui\main_window.py" line="756" />
-        <location filename="..\ui\main_window.py" line="492" />
+        <location filename="..\ui\main_window.py" line="1292" />
+        <location filename="..\ui\main_window.py" line="1078" />
+        <location filename="..\ui\main_window.py" line="1045" />
+        <location filename="..\ui\main_window.py" line="575" />
         <source>Error</source>
         <translation>Napaka</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="493" />
+        <location filename="..\ui\main_window.py" line="576" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -1319,22 +1380,22 @@ Obiščite ročno:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="500" />
+        <location filename="..\ui\main_window.py" line="583" />
         <source>Save</source>
         <translation>Shrani</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="503" />
+        <location filename="..\ui\main_window.py" line="586" />
         <source>Quick Backup (Shortcut)</source>
         <translation>Hitra varnostna kopija (bližnjica)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="507" />
+        <location filename="..\ui\main_window.py" line="590" />
         <source>Backup Manager</source>
         <translation>Backup Manager</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="542" />
+        <location filename="..\ui\main_window.py" line="635" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>Meja samodejnega čiščenja nastavljena na: %n varnostno kopijo (0 = Onemogočeno).</numerusform>
@@ -1344,420 +1405,498 @@ Obiščite ročno:
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1099" />
-        <location filename="..\ui\main_window.py" line="991" />
-        <location filename="..\ui\main_window.py" line="586" />
+        <location filename="..\ui\main_window.py" line="657" />
+        <source>Auto-Hide enabled: icons will be hidden after %1.</source>
+        <translation>Samodejno skrivanje omogočeno: ikone bodo skrite čez %1.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="666" />
+        <source>Auto-Hide disabled.</source>
+        <translation>Samodejno skrivanje onemogočeno.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="673" />
+        <source>Auto-Hide interval set to %1.</source>
+        <translation>Interval samodejnega skrivanja nastavljen na %1.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="694" />
+        <source>Custom (%1)</source>
+        <translation>Po meri (%1)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="717" />
+        <source>Custom Auto-Hide Interval</source>
+        <translation>Interval samodejnega skrivanja po meri</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="724" />
+        <source>Hide desktop icons after:</source>
+        <translation>Skrij ikone namizja po:</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="731" />
+        <source>minutes</source>
+        <translation>minut</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="738" />
+        <source>seconds</source>
+        <translation>sekund</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="..\ui\main_window.py" line="767" />
+        <location filename="..\ui\main_window.py" line="762" />
+        <source>%n minute(s)</source>
+        <comment>duration</comment>
+        <translation>
+            <numerusform>%n minuta</numerusform>
+            <numerusform>%n minuti</numerusform>
+            <numerusform>%n minute</numerusform>
+            <numerusform>%n minut</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="..\ui\main_window.py" line="769" />
+        <location filename="..\ui\main_window.py" line="764" />
+        <source>%n second(s)</source>
+        <comment>duration</comment>
+        <translation>
+            <numerusform>%n sekunda</numerusform>
+            <numerusform>%n sekundi</numerusform>
+            <numerusform>%n sekunde</numerusform>
+            <numerusform>%n sekund</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="803" />
+        <source>Desktop icons are hidden</source>
+        <translation>Ikone namizja so skrite</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="810" />
+        <source>Auto-Hide in %1</source>
+        <translation>Samodejno skrivanje čez %1</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="822" />
+        <source>Auto-Hide: creating backup before hiding icons...</source>
+        <translation>Samodejno skrivanje: ustvarjanje varnostne kopije pred skrivanjem ikon...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="826" />
+        <source>Auto-Hide Backup</source>
+        <translation>Varnostna kopija samodejnega skrivanja</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="830" />
+        <source>Auto-Hide: hiding desktop icons now.</source>
+        <translation>Samodejno skrivanje: skrivanje ikon namizja.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1391" />
+        <location filename="..\ui\main_window.py" line="1280" />
+        <location filename="..\ui\main_window.py" line="857" />
         <source>Desktop Icon Manager</source>
         <translation>Desktop Icon Manager</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="616" />
+        <location filename="..\ui\main_window.py" line="907" />
         <source>Backup list updated (item deleted).</source>
         <translation>Seznam varnostnih kopij posodobljen (element izbrisan).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="625" />
+        <location filename="..\ui\main_window.py" line="916" />
         <source>Backup list updated.</source>
         <translation>Seznam varnostnih kopij posodobljen.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="638" />
+        <location filename="..\ui\main_window.py" line="929" />
         <source>Backup list updated (imported).</source>
         <translation>Seznam varnostnih kopij posodobljen (uvoženo).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="652" />
+        <location filename="..\ui\main_window.py" line="943" />
         <source>— Profiles —</source>
         <translation>— Profili —</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="654" />
+        <location filename="..\ui\main_window.py" line="945" />
         <source>Work</source>
         <translation>Delo</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="655" />
+        <location filename="..\ui\main_window.py" line="946" />
         <source>Gaming</source>
         <translation>Igranje</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="656" />
+        <location filename="..\ui\main_window.py" line="947" />
         <source>Presentation</source>
         <translation>Predstavitev</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="657" />
+        <location filename="..\ui\main_window.py" line="948" />
         <source>Dev / Coding</source>
         <translation>Razvoj / Kodiranje</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="658" />
+        <location filename="..\ui\main_window.py" line="949" />
         <source>Meeting</source>
         <translation>Sestanek</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="659" />
+        <location filename="..\ui\main_window.py" line="950" />
         <source>Home</source>
         <translation>Dom</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="660" />
+        <location filename="..\ui\main_window.py" line="951" />
         <source>Office</source>
         <translation>Pisarna</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="661" />
+        <location filename="..\ui\main_window.py" line="952" />
         <source>Laptop</source>
         <translation>Prenosnik</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="662" />
+        <location filename="..\ui\main_window.py" line="953" />
         <source>Docked / External Monitor</source>
         <translation>Priključen / Zunanji zaslon</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="663" />
+        <location filename="..\ui\main_window.py" line="954" />
         <source>Clean Desktop</source>
         <translation>Čisto namizje</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="664" />
+        <location filename="..\ui\main_window.py" line="955" />
         <source>Pre-Update</source>
         <translation>Pred posodobitvijo</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="665" />
+        <location filename="..\ui\main_window.py" line="956" />
         <source>Pre-Reboot</source>
         <translation>Pred ponovnim zagonom</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="666" />
+        <location filename="..\ui\main_window.py" line="957" />
         <source>Favourite</source>
         <translation>Priljubljena</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="667" />
+        <location filename="..\ui\main_window.py" line="958" />
         <source>Test</source>
         <translation>Test</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="689" />
+        <location filename="..\ui\main_window.py" line="980" />
         <source>Quick Backup</source>
         <translation>Hitra varnostna kopija</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="700" />
+        <location filename="..\ui\main_window.py" line="991" />
         <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
         <translation>Preprosto, a zmogljivo orodje za shranjevanje in obnavljanje pozicij ikon namizja Windows.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="701" />
+        <location filename="..\ui\main_window.py" line="992" />
         <source>Key Features:</source>
         <translation>Ključne funkcije:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="703" />
+        <location filename="..\ui\main_window.py" line="994" />
         <source>Quick Save:</source>
         <translation>Hitro shranjevanje:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="703" />
+        <location filename="..\ui\main_window.py" line="994" />
         <source>Save icons with an optional descriptive tag.</source>
         <translation>Shranite ikone z neobvezno opisno oznako.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="704" />
+        <location filename="..\ui\main_window.py" line="995" />
         <source>Backup Management:</source>
         <translation>Upravljanje varnostnih kopij:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="704" />
+        <location filename="..\ui\main_window.py" line="995" />
         <source>Select, restore, or delete specific backups.</source>
         <translation>Izberite, obnovite ali izbrišite določene varnostne kopije.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="705" />
+        <location filename="..\ui\main_window.py" line="996" />
         <source>Live Diff Preview:</source>
         <translation>Predogled razlik v živo:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="705" />
+        <location filename="..\ui\main_window.py" line="996" />
         <source>See which icons will move before restoring.</source>
         <translation>Preverite, katere ikone se bodo premaknile, preden obnovite.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="706" />
+        <location filename="..\ui\main_window.py" line="997" />
         <source>Visual Preview:</source>
         <translation>Vizualni predogled:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="706" />
+        <location filename="..\ui\main_window.py" line="997" />
         <source>See a mini-map of your layout.</source>
         <translation>Oglejte si mini-zemljevid vaše postavitve.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="707" />
+        <location filename="..\ui\main_window.py" line="998" />
         <source>Backup Comparison:</source>
         <translation>Primerjava varnostnih kopij:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="707" />
+        <location filename="..\ui\main_window.py" line="998" />
         <source>Compare any two backups to see added, removed, and moved icons.</source>
         <translation>Primerjajte dve varnostni kopiji in si oglejte dodane, odstranjene in premaknjene ikone.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="708" />
+        <location filename="..\ui\main_window.py" line="999" />
         <source>Adaptive Scaling:</source>
         <translation>Prilagodljivo skaliranje:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="708" />
+        <location filename="..\ui\main_window.py" line="999" />
         <source>Automatic adjustment for different resolutions.</source>
         <translation>Samodejno prilagajanje za različne ločljivosti.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="709" />
+        <location filename="..\ui\main_window.py" line="1000" />
         <source>Automatic Cleanup:</source>
         <translation>Samodejno čiščenje:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="709" />
+        <location filename="..\ui\main_window.py" line="1000" />
         <source>Set a limit on backups to keep.</source>
         <translation>Nastavite mejo za število varnostnih kopij.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="710" />
+        <location filename="..\ui\main_window.py" line="1001" />
         <source>Random Scramble:</source>
         <translation>Naključno mešanje:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="710" />
+        <location filename="..\ui\main_window.py" line="1001" />
         <source>Randomize icon positions after backup.</source>
         <translation>Naključno razporedite pozicije ikon po varnostnem kopiranju.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="711" />
+        <location filename="..\ui\main_window.py" line="1002" />
         <source>Tray Integration:</source>
         <translation>Integracija sistemske vrstice:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="711" />
+        <location filename="..\ui\main_window.py" line="1002" />
         <source>Quick access via tray.</source>
         <translation>Hiter dostop prek sistemske vrstice.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="713" />
+        <location filename="..\ui\main_window.py" line="1004" />
         <source>Version:</source>
         <translation>Različica:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="714" />
+        <location filename="..\ui\main_window.py" line="1005" />
         <source>Development:</source>
         <translation>Razvoj:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="715" />
+        <location filename="..\ui\main_window.py" line="1006" />
         <source>Support this project on Ko-fi</source>
         <translation>Podprite ta projekt na Ko-fi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="717" />
-        <source>About Desktop Icon Backup Manager</source>
-        <translation>O programu Desktop Icon Backup Manager</translation>
+        <location filename="..\ui\main_window.py" line="1008" />
+        <source>About</source>
+        <translation>O programu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="723" />
+        <location filename="..\ui\main_window.py" line="1014" />
         <source>No backup files found to delete.</source>
         <translation>Ni najdenih datotek varnostnih kopij za brisanje.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="726" />
+        <location filename="..\ui\main_window.py" line="1017" />
         <source>No Backups Found</source>
         <translation>Ni najdenih varnostnih kopij</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="727" />
+        <location filename="..\ui\main_window.py" line="1018" />
         <source>There are no backup files to delete.</source>
         <translation>Ni datotek varnostnih kopij za brisanje.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="733" />
+        <location filename="..\ui\main_window.py" line="1024" />
         <source>WARNING: Delete All Backups</source>
         <translation>OPOZORILO: Izbrišite vse varnostne kopije</translation>
     </message>
-    <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="734" />
-        <source>Are you absolutely sure you want to permanently delete ALL %n desktop icon backup file(s)?
+    <message>
+        <location filename="..\ui\main_window.py" line="1025" />
+        <source>Are you absolutely sure you want to permanently delete all desktop icon backup files?
 
 This action cannot be undone!</source>
-        <translation>
-            <numerusform>Ali ste absolutno prepričani, da želite trajno izbrisati VSO %n datoteko varnostne kopije ikon namizja?
+        <translation>Ali ste popolnoma prepričani, da želite trajno izbrisati vse datoteke varnostnih kopij ikon namizja?
 
-Tega dejanja ni mogoče razveljaviti!</numerusform>
-            <numerusform>Ali ste absolutno prepričani, da želite trajno izbrisati VSE %n datoteki varnostnih kopij ikon namizja?
-
-Tega dejanja ni mogoče razveljaviti!</numerusform>
-            <numerusform>Ali ste absolutno prepričani, da želite trajno izbrisati VSE %n datoteke varnostnih kopij ikon namizja?
-
-Tega dejanja ni mogoče razveljaviti!</numerusform>
-            <numerusform>Ali ste absolutno prepričani, da želite trajno izbrisati VSEH %n datotek varnostnih kopij ikon namizja?
-
-Tega dejanja ni mogoče razveljaviti!</numerusform>
-        </translation>
+Tega dejanja ni mogoče razveljaviti!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="954" />
-        <location filename="..\ui\main_window.py" line="739" />
+        <location filename="..\ui\main_window.py" line="1243" />
+        <location filename="..\ui\main_window.py" line="1028" />
         <source>Yes</source>
         <translation>Da</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="955" />
-        <location filename="..\ui\main_window.py" line="740" />
+        <location filename="..\ui\main_window.py" line="1244" />
+        <location filename="..\ui\main_window.py" line="1029" />
         <source>No</source>
         <translation>Ne</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="742" />
+        <location filename="..\ui\main_window.py" line="1031" />
         <source>Starting deletion of all backup files...</source>
         <translation>Začenjam brisanje vseh datotek varnostnih kopij...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="984" />
-        <location filename="..\ui\main_window.py" line="750" />
+        <location filename="..\ui\main_window.py" line="1273" />
+        <location filename="..\ui\main_window.py" line="1039" />
         <source>Success</source>
         <translation>Uspeh</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="751" />
+        <location filename="..\ui\main_window.py" line="1040" />
         <source>All backup files have been successfully deleted.</source>
         <translation>Vse datoteke varnostnih kopij so bile uspešno izbrisane.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="757" />
+        <location filename="..\ui\main_window.py" line="1046" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>Nekaterih datotek ni bilo mogoče izbrisati. Preverite dnevnik dejavnosti za podrobnosti.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="765" />
+        <location filename="..\ui\main_window.py" line="1054" />
         <source>Starting new timestamped backup...</source>
         <translation>Začenjam novo varnostno kopijo s časovnim žigom...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="767" />
+        <location filename="..\ui\main_window.py" line="1056" />
         <source>  (Tag: %1)</source>
         <translation>  (Oznaka: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="771" />
+        <location filename="..\ui\main_window.py" line="1060" />
         <source>Saving...</source>
         <translation>Shranjujem...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="789" />
+        <location filename="..\ui\main_window.py" line="1078" />
         <source>No backup files found to restore!</source>
         <translation>Ni najdenih datotek varnostnih kopij za obnovitev!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="791" />
+        <location filename="..\ui\main_window.py" line="1080" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ Obnovitev ni uspela: Ni najdenih datotek varnostnih kopij.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="811" />
-        <location filename="..\ui\main_window.py" line="810" />
-        <location filename="..\ui\main_window.py" line="805" />
-        <location filename="..\ui\main_window.py" line="804" />
+        <location filename="..\ui\main_window.py" line="1100" />
+        <location filename="..\ui\main_window.py" line="1099" />
+        <location filename="..\ui\main_window.py" line="1094" />
+        <location filename="..\ui\main_window.py" line="1093" />
         <source>N/A</source>
         <translation>N/D</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="814" />
+        <location filename="..\ui\main_window.py" line="1103" />
         <source>N/A (Old Format)</source>
         <translation>N/D (stara oblika)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="843" />
+        <location filename="..\ui\main_window.py" line="1132" />
         <source>Confirm Restore — Live Preview</source>
         <translation>Potrdi obnovitev — predogled v živo</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="853" />
+        <location filename="..\ui\main_window.py" line="1142" />
         <source>File</source>
         <translation>Datoteka</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="854" />
+        <location filename="..\ui\main_window.py" line="1143" />
         <source>Resolution</source>
         <translation>Ločljivost</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="855" />
+        <location filename="..\ui\main_window.py" line="1144" />
         <source>Icons</source>
         <translation>Ikone</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="856" />
+        <location filename="..\ui\main_window.py" line="1145" />
         <source>Tag</source>
         <translation>Oznaka</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="857" />
+        <location filename="..\ui\main_window.py" line="1146" />
         <source>Timestamp</source>
         <translation>Časovni žig</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="869" />
+        <location filename="..\ui\main_window.py" line="1158" />
         <source>will move</source>
         <translation>bo premaknjeno</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="870" />
+        <location filename="..\ui\main_window.py" line="1159" />
         <source>already in place</source>
         <translation>že na mestu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="871" />
+        <location filename="..\ui\main_window.py" line="1160" />
         <source>not on desktop</source>
         <translation>ni na namizju</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="880" />
+        <location filename="..\ui\main_window.py" line="1169" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>Predogled postavitve (shranjene vs. trenutne pozicije):</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="902" />
+        <location filename="..\ui\main_window.py" line="1191" />
         <source>↺ Restore</source>
         <translation>↺ Obnovi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="909" />
+        <location filename="..\ui\main_window.py" line="1198" />
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="929" />
+        <location filename="..\ui\main_window.py" line="1218" />
         <source>Starting restore from backup '%1'...</source>
         <translation>Začenjam obnovitev iz varnostne kopije '%1'...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="930" />
+        <location filename="..\ui\main_window.py" line="1219" />
         <source>latest</source>
         <translation>najnovejša</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="935" />
+        <location filename="..\ui\main_window.py" line="1224" />
         <source>Restoring...</source>
         <translation>Obnavljam...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="950" />
+        <location filename="..\ui\main_window.py" line="1239" />
         <source>Confirm Scramble</source>
         <translation>Potrdi mešanje</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="951" />
+        <location filename="..\ui\main_window.py" line="1240" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1770,47 +1909,47 @@ Do you want to proceed?</source>
 Ali želite nadaljevati?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="957" />
+        <location filename="..\ui\main_window.py" line="1246" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>Začenjam mešanje ikon namizja (naključna razporeditev)...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="960" />
+        <location filename="..\ui\main_window.py" line="1249" />
         <source>Scrambling icons...</source>
         <translation>Mešam ikone...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="979" />
+        <location filename="..\ui\main_window.py" line="1268" />
         <source>Operation completed successfully</source>
         <translation>Operacija je bila uspešno zaključena</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="985" />
+        <location filename="..\ui\main_window.py" line="1274" />
         <source>Operation completed successfully! (%1)</source>
         <translation>Operacija je bila uspešno zaključena! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="992" />
+        <location filename="..\ui\main_window.py" line="1281" />
         <source>%1 successful!</source>
         <translation>%1 uspešno!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="997" />
+        <location filename="..\ui\main_window.py" line="1289" />
         <source>Operation failed</source>
         <translation>Operacija ni uspela</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1001" />
+        <location filename="..\ui\main_window.py" line="1293" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>Operacija ni uspela (%1). Preverite dnevnik za podrobnosti.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1014" />
+        <location filename="..\ui\main_window.py" line="1306" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ Opozorilo: Metapodatki zaslona manjkajo ali so nepopolni.</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="1019" />
+        <location filename="..\ui\main_window.py" line="1311" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ Opozorilo: Shranjeno (%n zaslon) vs. Trenutno (%1 zaslon).</numerusform>
@@ -1820,12 +1959,12 @@ Ali želite nadaljevati?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1027" />
+        <location filename="..\ui\main_window.py" line="1319" />
         <source>Monitor Mismatch Warning</source>
         <translation>Opozorilo o neskladju zaslonov</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1028" />
+        <location filename="..\ui\main_window.py" line="1320" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1834,17 +1973,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Pozicije ikon so bile obnovljene, a morda niso točne.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1050" />
+        <location filename="..\ui\main_window.py" line="1342" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ Opozorilo: Ločljivosti zaslona se ne ujemajo s shranjeno postavitvijo.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1054" />
+        <location filename="..\ui\main_window.py" line="1346" />
         <source>Resolution Mismatch Warning</source>
         <translation>Opozorilo o neskladju ločljivosti</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1055" />
+        <location filename="..\ui\main_window.py" line="1347" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1853,82 +1992,82 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Pozicije ikon so bile obnovljene, a morda niso točne.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1067" />
+        <location filename="..\ui\main_window.py" line="1359" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>Samodejno shranjevanje ob izhodu je omogočeno. Izvajam tiho varnostno kopiranje...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1073" />
+        <location filename="..\ui\main_window.py" line="1365" />
         <source>Auto-Save icon layout…</source>
         <translation>Samodejno shranjevanje postavitve ikon…</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1079" />
+        <location filename="..\ui\main_window.py" line="1371" />
         <source>Please wait</source>
         <translation>Prosim počakajte</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1084" />
+        <location filename="..\ui\main_window.py" line="1376" />
         <source>Auto-Save Log</source>
         <translation>Dnevnik samodejnega shranjevanja</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1100" />
+        <location filename="..\ui\main_window.py" line="1392" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>Aplikacija je minimizirana v sistemsko vrstico. Kliknite ali dvokliknite za obnovitev.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1139" />
+        <location filename="..\ui\main_window.py" line="1431" />
         <source>A new version is available! (%1)</source>
         <translation>Na voljo je nova različica! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1144" />
+        <location filename="..\ui\main_window.py" line="1436" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 Na voljo je nova različica: %1 (trenutna: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1158" />
+        <location filename="..\ui\main_window.py" line="1450" />
         <source>Shortcut</source>
         <translation>Bližnjica</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1159" />
+        <location filename="..\ui\main_window.py" line="1451" />
         <source>Action</source>
         <translation>Dejanje</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1163" />
+        <location filename="..\ui\main_window.py" line="1455" />
         <source>Quick Save current layout</source>
         <translation>Hitro shrani trenutno postavitev</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1167" />
+        <location filename="..\ui\main_window.py" line="1459" />
         <source>Open Backup Manager</source>
         <translation>Odpri Backup Manager</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1175" />
+        <location filename="..\ui\main_window.py" line="1467" />
         <source>Open Settings menu</source>
         <translation>Odpri meni nastavitev</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1179" />
+        <location filename="..\ui\main_window.py" line="1471" />
         <source>Open Online User Manual</source>
         <translation>Odpri spletni uporabniški priročnik</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1183" />
+        <location filename="..\ui\main_window.py" line="1475" />
         <source>Exit Application</source>
         <translation>Zapri aplikacijo</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1187" />
+        <location filename="..\ui\main_window.py" line="1479" />
         <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
         <translation>Nasvet: Premaknite miško nad gumbe za prikaz dodatnih bližnjic v orodnih namigih.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1202" />
+        <location filename="..\ui\main_window.py" line="1494" />
         <source>Close</source>
         <translation>Zapri</translation>
     </message>
