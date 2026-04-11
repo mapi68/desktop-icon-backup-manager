@@ -72,7 +72,10 @@ def parse_backup_filename(filename: str) -> Tuple[str, str, str]:
             except ValueError:
                 return clean_name, "N/A", clean_name
 
-        dt_object = datetime.strptime(timestamp_part, "%Y%m%d_%H%M%S")
+        try:
+            dt_object = datetime.strptime(timestamp_part, "%Y%m%d_%H%M%S")
+        except ValueError:
+            return clean_name, "N/A", clean_name
         readable_date = dt_object.strftime("%Y/%m/%d %H:%M:%S")
         return readable_date, resolution, timestamp_part
 

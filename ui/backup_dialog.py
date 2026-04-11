@@ -590,17 +590,8 @@ class BackupManagerWindow(QDialog):
 
         dialog = QDialog(self)
         dialog.setWindowTitle(self.tr("Comparison Results"))
+        dialog.setObjectName("ComparisonDialog")
         dialog.resize(650, 550)
-        dialog.setStyleSheet("""
-            QLabel { border: 1px solid palette(mid);
-                     border-radius: 4px; padding: 12px; font-family: 'Segoe UI'; font-size: 11px; }
-            QTextEdit { border: 1px solid palette(mid);
-                        border-radius: 4px; font-family: 'Consolas', monospace; font-size: 11px; }
-            QPushButton { color: #ffffff; background-color: #0078D7; border: none;
-                          border-radius: 4px; padding: 8px 16px; font-family: 'Segoe UI';
-                          font-size: 11px; font-weight: bold; }
-            QPushButton:hover { background-color: #106EBE; }
-        """)
 
         layout = QVBoxLayout(dialog)
         layout.setSpacing(10)
@@ -669,6 +660,7 @@ class BackupManagerWindow(QDialog):
             return
         new_tag = item.text().strip()
         filepath = os.path.join(Config.BACKUP_DIR, filename)
+        old_tag = ""
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -690,7 +682,7 @@ class BackupManagerWindow(QDialog):
             )
             # Revert the cell text to the old value
             self.table.blockSignals(True)
-            item.setText(old_tag if "old_tag" in dir() else "")
+            item.setText(old_tag)
             self.table.blockSignals(False)
 
     # ── Export ────────────────────────────────────────────────────────────────
@@ -879,8 +871,15 @@ class BackupManagerWindow(QDialog):
                         continue
                     try:
                         data = zf.read(name)
-                        # Validate it's parseable JSON before saving
-                        json.loads(data)
+                        parsed = json.loads(data)
+                        # Validate backup structure
+                        if not self._is_valid_backup(parsed):
+                            errors.append(
+                                self.tr(
+                                    "%1: not a valid backup file (missing 'icons' dictionary)"
+                                ).replace("%1", base)
+                            )
+                            continue
                         with open(dest, "wb") as f:
                             f.write(data)
                         imported += 1
@@ -902,11 +901,37 @@ class BackupManagerWindow(QDialog):
             return 0, 1, []
         try:
             with open(json_path, "r", encoding="utf-8") as f:
-                json.load(f)  # validate
+                parsed = json.load(f)
+            # Validate backup structure
+            if not self._is_valid_backup(parsed):
+                return (
+                    0,
+                    0,
+                    [
+                        self.tr(
+                            "%1: not a valid backup file (missing 'icons' dictionary)"
+                        ).replace("%1", base)
+                    ],
+                )
             shutil.copy2(json_path, dest)
             return 1, 0, []
         except (json.JSONDecodeError, OSError) as e:
             return 0, 0, [f"{base}: {e}"]
+
+    @staticmethod
+    def _is_valid_backup(data) -> bool:
+        """Check that parsed JSON has the expected backup structure."""
+        if not isinstance(data, dict):
+            return False
+        # New format: must have 'icons' key with a dict value
+        if "icons" in data:
+            return isinstance(data["icons"], dict)
+        # Legacy format: top-level dict of icon_name -> [x, y]
+        # Accept if all values are lists/tuples of 2 numbers
+        if len(data) == 0:
+            return True
+        sample = next(iter(data.values()))
+        return isinstance(sample, (list, tuple)) and len(sample) == 2
 
 
 class _PickBackupDialog(QDialog):

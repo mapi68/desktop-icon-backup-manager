@@ -1441,16 +1441,58 @@ startup if the option is enabled in Settings).
   \item \textbf{Check Again}: Re-fetches the remote version without closing
 \end{itemize}
 
+\subsection{Statistics Dashboard}
+
+Opens a dashboard dialog showing aggregated statistics about your backup
+history. All data is computed in real time from the backup files and
+persistent counters stored in \texttt{settings.ini}.
+
+\textbf{Top stat cards}:
+\begin{itemize}
+  \item \textbf{Total backups}: Live count of all \texttt{.json} files
+    currently present in the \texttt{icon\_backups} folder
+  \item \textbf{Restores}: Lifetime count of all restore operations
+  \item \textbf{Saves}: Lifetime count of all save operations
+    (persisted in \texttt{settings.ini})
+  \item \textbf{Disk usage}: Total size of all \texttt{.json} files
+    in the \texttt{icon\_backups} folder
+  \item \textbf{Avg icons}: Average number of desktop icons across
+    all saved backups
+\end{itemize}
+
+\textbf{Backups per month}: A bar chart showing how many backups were
+created in each of the last six months. The tallest bar is highlighted
+in a darker shade.
+
+\textbf{Top resolutions}: A ranked list of the most frequently used
+screen resolutions across all backups, shown as horizontal progress
+bars with percentages.
+
+\textbf{Most moved icons}: A ranked list (gold / silver / bronze
+badges) of the desktop icons that changed position most often between
+consecutive backups. An icon is counted as ``moved'' when its
+coordinates shift by more than 4\,px in either axis. Requires at least
+two backups to produce results.
+
+\textbf{Activity}: Quick reference showing the date of the first and
+last backup, the total number of save and scramble operations, and the most
+frequently used tag/description.
+
+\textbf{Note}: The total backup count is computed live from the
+\texttt{icon\_backups} folder, so it stays accurate even after
+importing, exporting, or manually deleting files.
+The restore, save, and scramble counters are stored in
+\texttt{settings.ini} under the \texttt{[Statistics]} section
+because those operations leave no trace in the backup files.
+
 \subsection{About Dialog}
 
 Displays program information including:
 
 \begin{itemize}
   \item Program name and description
-  \item Complete feature list with descriptions
   \item Current version number
-  \item Developer information (mapi68)
-  \item Quick reference to key features
+  \item Developer information
 \end{itemize}
 
 \section{Advanced Backup Management}
@@ -2565,6 +2607,11 @@ autohide_enabled=false
 autohide_seconds=300
 autohide_backup_before_hide=true
 geometry=@Rect(100 100 800 650)
+
+[Statistics]
+total_restores_performed=0
+total_saves_performed=0
+total_scrambles=0
 \end{verbatim}
 
 \textbf{Settings Explanation}:
@@ -2584,6 +2631,11 @@ geometry=@Rect(100 100 800 650)
   \item[\texttt{autohide\_backup\_before\_hide}] Create a backup before the
     timer hides icons (default: true)
   \item[\texttt{geometry}] Window position and size in Qt rect format
+  \item[\texttt{total\_restores\_performed}] Lifetime count of
+    successful restore operations (used by Statistics Dashboard)
+  \item[\texttt{total\_saves\_performed}] Lifetime count of
+    successful save operations (used by Statistics Dashboard)
+  \item[\texttt{total\_scrambles}] Lifetime count of scramble operations
 \end{description}
 
 \begin{infobox}[Manual Configuration]
@@ -2705,6 +2757,15 @@ manually overridden.
   \centering
   \includegraphics[width=0.8\textwidth]{images/DIBM_6.png}
   \caption{Confirmation dialog before restoring a backup}
+\end{figure}
+
+\vfill
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/DIBM_7.png}
+  \caption{Statistics Dashboard showing backup history, resolutions,
+  and most moved icons}
 \end{figure}
 
 \newpage

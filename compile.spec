@@ -81,6 +81,7 @@ a = Analysis(
         ('icon.png', '.'),
         ('i18n/*.qm', 'i18n'),
         ('version.txt', '.'),
+        ('styles/theme.qss', 'styles'),
         *[(_qm, 'qt_translations') for _qm in _qtbase_qms],
     ],
     hiddenimports=[],

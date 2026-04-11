@@ -23,6 +23,8 @@ from PyQt6.QtGui import QIcon
 from core.config import Config, resource_path
 from core.icon_manager import DesktopIconManager
 from ui.main_window import MainWindow
+from utils.single_instance import ensure_single_instance
+from utils.logging_config import init_logging
 
 _LOCALE_NAMES = {
     "": "English",
@@ -143,22 +145,7 @@ class LanguageDialog(QDialog):
         super().__init__(parent)
         self.setWindowTitle("Language")
         self.setFixedWidth(280)
-        # Only style interactive controls with accent color.
-        # Background/text inherit the system theme automatically.
-        self.setStyleSheet("""
-            QLabel { font-size: 13px; }
-            QComboBox {
-                border: 1px solid palette(mid); border-radius: 4px;
-                padding: 4px 8px; font-size: 13px;
-            }
-            QPushButton {
-                background: #0078D7; color: #fff;
-                border: none; border-radius: 4px;
-                padding: 6px 20px; font-size: 13px;
-            }
-            QPushButton:hover { background: #106EBE; }
-            QCheckBox { font-size: 11px; }
-        """)
+        self.setObjectName("LanguageDialog")
 
         layout = QVBoxLayout(self)
         layout.setSpacing(12)
@@ -213,6 +200,17 @@ if __name__ == "__main__":
     settings_file_path = app_path / "settings.ini"
     settings = QSettings(str(settings_file_path), QSettings.Format.IniFormat)
 
+    # ── Structured logging ────────────────────────────────────────────────────
+    init_logging(app_path / "history.log", console=True)
+
+    # ── Load centralized theme ────────────────────────────────────────────────
+    _theme_path = resource_path(os.path.join("styles", "theme.qss"))
+    try:
+        with open(_theme_path, "r", encoding="utf-8") as _f:
+            app.setStyleSheet(_f.read())
+    except OSError:
+        pass  # theme file missing — fall back to Qt defaults
+
     # ── Determine language ────────────────────────────────────────────────────
     pre_parser = argparse.ArgumentParser(add_help=False)
     pre_parser.add_argument("--lang", type=str, default=None)
@@ -257,6 +255,11 @@ if __name__ == "__main__":
         settings.setValue("language", chosen_locale)
 
     translator = load_language(app, chosen_locale)
+
+    # ── Single instance guard (after translator is installed) ─────────────────
+    _instance_lock = ensure_single_instance(app)
+    if _instance_lock is None:
+        sys.exit(0)
 
     # ── CLI argument parsing ──────────────────────────────────────────────────
     parser = argparse.ArgumentParser(description="Desktop Icon Backup Manager CLI")

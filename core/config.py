@@ -37,14 +37,6 @@ class Config:
     ICON_DOT_SIZE = 8
     ICON_DOT_MARGIN = 5
 
-    # Colors
-    COLOR_BACKGROUND = "#1a1a1a"
-    COLOR_BORDER = "#333"
-    COLOR_TEXT_DIM = "#666"
-    COLOR_ICON_DOT = "#0078d7"
-    COLOR_TOOLTIP_BG = "#ffffdc"
-    COLOR_TOOLTIP_TEXT = "#000000"
-
     # Tray notification duration (ms)
     TRAY_NOTIFICATION_DURATION = 2000
     UPDATE_CHECK_DELAY_MS = 10000

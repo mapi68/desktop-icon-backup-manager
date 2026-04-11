@@ -11,6 +11,8 @@ from ctypes import windll, byref, POINTER
 
 from PyQt6.QtCore import QCoreApplication
 
+logger = logging.getLogger("dibm")
+
 
 class DesktopVisibilityManager:
     """Manages showing/hiding of desktop icons using Win32 API"""
@@ -30,7 +32,7 @@ class DesktopVisibilityManager:
                     self.hwnd_progman, 0, "SHELLDLL_DefView", None
                 )
         except Exception as e:
-            logging.error("Error updating window handles: %s", e)
+            logger.error("Error updating window handles: %s", e)
 
     def toggle_icon_visibility(
         self, log_callback: Optional[Callable[[str], None]] = None
@@ -49,7 +51,7 @@ class DesktopVisibilityManager:
                 )
                 if log_callback:
                     log_callback(f"✗ {error_msg}")
-                logging.error(error_msg)
+                logger.error(error_msg)
                 return False
 
             # Get current visibility state
@@ -68,7 +70,7 @@ class DesktopVisibilityManager:
             ).replace("%1", str(e))
             if log_callback:
                 log_callback(f"✗ {error_msg}")
-            logging.error(error_msg)
+            logger.error(error_msg)
             return False
 
     def show_icons(self, log_callback: Optional[Callable[[str], None]] = None) -> bool:
@@ -97,7 +99,7 @@ class DesktopVisibilityManager:
             ).replace("%1", str(e))
             if log_callback:
                 log_callback(f"✗ {error_msg}")
-            logging.error(error_msg)
+            logger.error(error_msg)
             return False
 
     def hide_icons(self, log_callback: Optional[Callable[[str], None]] = None) -> bool:
@@ -126,7 +128,7 @@ class DesktopVisibilityManager:
             ).replace("%1", str(e))
             if log_callback:
                 log_callback(f"✗ {error_msg}")
-            logging.error(error_msg)
+            logger.error(error_msg)
             return False
 
     def _are_icons_visible(self) -> bool:
@@ -144,7 +146,7 @@ class DesktopVisibilityManager:
             return is_visible
 
         except Exception as e:
-            logging.error("Error checking icon visibility: %s", e)
+            logger.error("Error checking icon visibility: %s", e)
             # Default to True if we can't determine
             return True
 
@@ -168,7 +170,7 @@ class DesktopVisibilityManager:
             )
             if log_callback:
                 log_callback(success_msg)
-            logging.info("Desktop icons hidden")
+            logger.info("Desktop icons hidden")
             return True
 
         except Exception as e:
@@ -177,7 +179,7 @@ class DesktopVisibilityManager:
             ).replace("%1", str(e))
             if log_callback:
                 log_callback(f"✗ {error_msg}")
-            logging.error(error_msg)
+            logger.error(error_msg)
             return False
 
     def _show_icons(self, log_callback: Optional[Callable[[str], None]] = None) -> bool:
@@ -202,7 +204,7 @@ class DesktopVisibilityManager:
             )
             if log_callback:
                 log_callback(success_msg)
-            logging.info("Desktop icons shown")
+            logger.info("Desktop icons shown")
             return True
 
         except Exception as e:
@@ -211,7 +213,7 @@ class DesktopVisibilityManager:
             ).replace("%1", str(e))
             if log_callback:
                 log_callback(f"✗ {error_msg}")
-            logging.error(error_msg)
+            logger.error(error_msg)
             return False
 
     def get_current_visibility_state(self) -> Optional[bool]:
@@ -223,5 +225,5 @@ class DesktopVisibilityManager:
             self._update_window_handles()
             return self._are_icons_visible()
         except Exception as e:
-            logging.error("Error getting visibility state: %s", e)
+            logger.error("Error getting visibility state: %s", e)
             return None

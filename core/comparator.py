@@ -6,6 +6,8 @@ from typing import Optional
 
 from PyQt6.QtCore import QCoreApplication
 
+logger = logging.getLogger("dibm")
+
 
 class BackupComparator:
     """Compare two backup files to find differences"""
@@ -109,5 +111,5 @@ class BackupComparator:
             return report
 
         except (OSError, json.JSONDecodeError, KeyError, TypeError) as e:
-            logging.warning("BackupComparator.compare failed: %s", e)
+            logger.warning("BackupComparator.compare failed: %s", e)
             return None

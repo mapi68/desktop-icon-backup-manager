@@ -1,5 +1,6 @@
 """Main Window for Desktop Icon Backup Manager"""
 
+import logging
 from datetime import datetime
 import json
 import os
@@ -52,6 +53,9 @@ from utils.helpers import (
 from ui.backup_dialog import BackupManagerWindow, _ask
 from ui.update_dialog import UpdateDialog
 from ui.preview_widget import DiffPreviewWidget, make_legend_widget
+from utils.logging_config import get_logger, attach_gui_handler, clear_log_file
+
+logger = get_logger()
 
 
 class MainWindow(QMainWindow):
@@ -70,6 +74,8 @@ class MainWindow(QMainWindow):
 
         self.worker = None
         self.tray_icon = None
+        self._force_quit = False
+        self._autohide_worker = None
 
         # ── Auto-Hide timer ──────────────────────────────────────────────────
         self.autohide_timer = QTimer(self)
@@ -87,6 +93,10 @@ class MainWindow(QMainWindow):
         self.DEFAULT_GEOMETRY = QRect(100, 100, 800, 650)
 
         self.setup_ui()
+
+        # Attach structured logging to the GUI log area
+        self._gui_log_handler = attach_gui_handler(self.log_area)
+
         self.setup_shortcuts()
         self.load_settings()
 
@@ -165,6 +175,7 @@ class MainWindow(QMainWindow):
         self.raise_()
 
     def exit_application(self):
+        self._force_quit = True
         self.close()
 
     def setup_ui(self):
@@ -389,6 +400,10 @@ class MainWindow(QMainWindow):
         action_shortcuts.triggered.connect(self.show_shortcuts_dialog)
         help_menu.addAction(action_shortcuts)
 
+        action_stats = QAction(self.tr("Statistics Dashboard"), self)
+        action_stats.triggered.connect(self.show_stats_dialog)
+        help_menu.addAction(action_stats)
+
         help_menu.addSeparator()
 
         action_check_updates = QAction(self.tr("Check for Updates..."), self)
@@ -518,29 +533,7 @@ class MainWindow(QMainWindow):
 
         layout.addLayout(log_button_layout)
 
-        self.setStyleSheet("""
-            QPushButton[objectName="saveButton"],
-            QPushButton[objectName="restoreButton"],
-            QPushButton[objectName="backupManagerButton"],
-            QPushButton[objectName="toggleIconsButton"],
-            QPushButton[objectName="clearLogButton"]
-            { color: white; font-weight: bold; border-radius: 6px; padding: 8px; font-size: 13px; }
-            QPushButton[objectName="saveButton"]:hover,
-            QPushButton[objectName="restoreButton"]:hover,
-            QPushButton[objectName="backupManagerButton"]:hover,
-            QPushButton[objectName="toggleIconsButton"]:hover,
-            QPushButton[objectName="clearLogButton"]:hover
-            { opacity: 0.8; }
-            QPushButton:disabled { background-color: #cccccc; color: #666666; }
-            QPushButton#saveButton { background-color: #00A65A; }
-            QPushButton#backupManagerButton { background-color: #0078D7; }
-            QPushButton#restoreButton { background-color: #CC0000; }
-            QPushButton#toggleIconsButton { background-color: #9C27B0; }
-            QPushButton#clearLogButton { background-color: #6c757d; }
-            QTextEdit { border: 1px solid #ddd; border-radius: 4px; padding: 5px; font-family: 'Consolas', monospace; font-size: 11px; }
-            QProgressBar { border: 1px solid #ddd; border-radius: 4px; text-align: center; height: 20px; }
-            QProgressBar::chunk { background-color: #0078D7; border-radius: 3px; }
-        """)
+        # Styles are loaded from styles/theme.qss at application level
 
     def show_settings_menu(self):
         menu_bar = self.menuBar()
@@ -817,16 +810,29 @@ class MainWindow(QMainWindow):
         self.autohide_tick_timer.stop()
         self._autohide_remaining_sec = 0
 
-        # Optional backup before hiding
+        # Optional backup before hiding — run asynchronously via IconWorker
         if self.settings.value("autohide_backup_before_hide", True, type=bool):
             self.log(self.tr("Auto-Hide: creating backup before hiding icons..."))
             cleanup_limit = self.settings.value("cleanup_limit", 0, type=int)
-            self.manager.save(
-                lambda msg: self.log(f"  {msg}"),
+            self._autohide_worker = IconWorker(
+                "save",
                 description=self.tr("Auto-Hide Backup"),
                 max_backup_count=cleanup_limit,
+                manager=self.manager,
             )
+            self._autohide_worker.log_signal.connect(lambda msg: self.log(f"  {msg}"))
+            self._autohide_worker.finished_signal.connect(self._on_autohide_backup_done)
+            self._autohide_worker.start()
+        else:
+            self._do_autohide_icons()
 
+    def _on_autohide_backup_done(self, success: bool, metadata):
+        """Called when the pre-autohide backup finishes."""
+        self._autohide_worker = None
+        self._do_autohide_icons()
+
+    def _do_autohide_icons(self):
+        """Actually hide the desktop icons (called after optional backup)."""
         self.log(self.tr("Auto-Hide: hiding desktop icons now."))
         self.visibility_manager.hide_icons(self.log)
         self._update_tray_autohide_tooltip()
@@ -842,15 +848,8 @@ class MainWindow(QMainWindow):
     # ─────────────────────────────────────────────────────────────────────────
 
     def log(self, message: str):
-        timestamp = datetime.now().strftime("%H:%M:%S")
-        self.log_area.append(f"[{timestamp}] {message}")
-        try:
-            full_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            with open(self.log_path, "a", encoding="utf-8") as f:
-                f.write(f"[{full_date}] {message}\n")
-            self._trim_log_file()
-        except OSError:
-            pass
+        """Log a message via the structured logger (file + GUI + console)."""
+        logger.info(message)
 
         if not self.isVisible() and ("✗" in message or "CRITICAL ERROR" in message):
             self.tray_icon.showMessage(
@@ -860,25 +859,10 @@ class MainWindow(QMainWindow):
                 5000,
             )
 
-    def _trim_log_file(self, max_lines: int = 500):
-        """Keep only the last max_lines lines in the log file."""
-        try:
-            with open(self.log_path, "r", encoding="utf-8") as f:
-                lines = f.readlines()
-            if len(lines) > max_lines:
-                with open(self.log_path, "w", encoding="utf-8") as f:
-                    f.writelines(lines[-max_lines:])
-        except OSError:
-            pass
-
     def clear_log(self):
         """Clear the log area and the history file."""
         self.log_area.clear()
-        try:
-            if self.log_path.exists():
-                self.log_path.unlink()
-        except OSError:
-            pass
+        clear_log_file(self.log_path)
 
     def toggle_buttons(self, enabled: bool):
         self.btn_save_latest.setEnabled(enabled)
@@ -986,26 +970,119 @@ class MainWindow(QMainWindow):
         self._start_restore(filename)
 
     def show_about_dialog(self):
-        html = (
-            f"<h2>Desktop Icon Backup Manager</h2>"
-            f"<p>{self.tr('A simple yet powerful tool to save and restore Windows desktop icon positions.')}</p>"
-            f"<h3>{self.tr('Key Features:')}</h3>"
-            f"<ul>"
-            f"<li><b>{self.tr('Quick Save:')}</b> {self.tr('Save icons with an optional descriptive tag.')}</li>"
-            f"<li><b>{self.tr('Backup Management:')}</b> {self.tr('Select, restore, or delete specific backups.')}</li>"
-            f"<li><b>{self.tr('Live Diff Preview:')}</b> {self.tr('See which icons will move before restoring.')}</li>"
-            f"<li><b>{self.tr('Visual Preview:')}</b> {self.tr('See a mini-map of your layout.')}</li>"
-            f"<li><b>{self.tr('Backup Comparison:')}</b> {self.tr('Compare any two backups to see added, removed, and moved icons.')}</li>"
-            f"<li><b>{self.tr('Adaptive Scaling:')}</b> {self.tr('Automatic adjustment for different resolutions.')}</li>"
-            f"<li><b>{self.tr('Automatic Cleanup:')}</b> {self.tr('Set a limit on backups to keep.')}</li>"
-            f"<li><b>{self.tr('Random Scramble:')}</b> {self.tr('Randomize icon positions after backup.')}</li>"
-            f"<li><b>{self.tr('Tray Integration:')}</b> {self.tr('Quick access via tray.')}</li>"
-            f"</ul>"
-            f"<p><b>{self.tr('Version:')}</b> {Config.VERSION}<br>"
-            f"<b>{self.tr('Development:')}</b> mapi68<br></p>"
-            f"<p><a href='https://ko-fi.com/mapi68'>{self.tr('Support this project on Ko-fi')}</a></p>"
+        from PyQt6.QtWidgets import (
+            QDialog,
+            QVBoxLayout,
+            QHBoxLayout,
+            QLabel,
+            QPushButton,
         )
-        QMessageBox.about(self, self.tr("About") + " Desktop Icon Backup Manager", html)
+        from PyQt6.QtGui import QPixmap, QFont
+        from PyQt6.QtCore import Qt, QSize
+
+        dlg = QDialog(self)
+        dlg.setWindowTitle(self.tr("About") + " — Desktop Icon Backup Manager")
+        dlg.setFixedSize(420, 340)
+
+        root = QVBoxLayout(dlg)
+        root.setSpacing(0)
+        root.setContentsMargins(0, 0, 0, 0)
+
+        # ── Top banner ────────────────────────────────────────────────────
+        banner = QWidget()
+        banner.setStyleSheet("background: #0078D7;")
+        banner.setFixedHeight(90)
+        banner_lay = QHBoxLayout(banner)
+        banner_lay.setContentsMargins(24, 0, 24, 0)
+        banner_lay.setSpacing(16)
+
+        icon_lbl = QLabel()
+        pix = QPixmap(resource_path("icon.png"))
+        if not pix.isNull():
+            icon_lbl.setPixmap(
+                pix.scaled(
+                    QSize(52, 52),
+                    Qt.AspectRatioMode.KeepAspectRatio,
+                    Qt.TransformationMode.SmoothTransformation,
+                )
+            )
+        icon_lbl.setStyleSheet("background: transparent;")
+        banner_lay.addWidget(icon_lbl)
+
+        title_col = QVBoxLayout()
+        title_col.setSpacing(2)
+        app_name = QLabel("Desktop Icon Backup Manager")
+        app_name.setStyleSheet(
+            "font-size: 16px; font-weight: bold; color: #ffffff;"
+            " background: transparent;"
+        )
+        title_col.addWidget(app_name)
+        banner_lay.addLayout(title_col)
+        banner_lay.addStretch()
+        root.addWidget(banner)
+
+        # ── Body ──────────────────────────────────────────────────────────
+        body = QVBoxLayout()
+        body.setSpacing(14)
+        body.setContentsMargins(24, 20, 24, 16)
+
+        desc = QLabel(
+            self.tr(
+                "A simple yet powerful tool to save and restore "
+                "Windows desktop icon positions."
+            )
+        )
+        desc.setWordWrap(True)
+        desc.setStyleSheet("font-size: 13px;")
+        body.addWidget(desc)
+
+        # ── Info grid ─────────────────────────────────────────────────────
+        info_grid = QVBoxLayout()
+        info_grid.setSpacing(6)
+
+        for label, value, color in [
+            (self.tr("Version:"), Config.VERSION, "palette(text)"),
+            (self.tr("Development:"), "mapi68", "palette(text)"),
+        ]:
+            row = QHBoxLayout()
+            row.setSpacing(8)
+            lbl = QLabel(f"<b>{label}</b>")
+            lbl.setFixedWidth(100)
+            lbl.setStyleSheet("font-size: 12px; color: palette(placeholderText);")
+            val = QLabel(value)
+            val.setStyleSheet(f"font-size: 12px; color: {color};")
+            row.addWidget(lbl)
+            row.addWidget(val)
+            row.addStretch()
+            info_grid.addLayout(row)
+
+        body.addLayout(info_grid)
+        body.addStretch()
+
+        # ── Bottom buttons ────────────────────────────────────────────────
+        btn_row = QHBoxLayout()
+        btn_row.setSpacing(10)
+
+        kofi_btn = QPushButton(self.tr("Support on Ko-fi"))
+        kofi_btn.setStyleSheet(
+            "QPushButton { background: #FF5E5B; color: white; border: none;"
+            " border-radius: 4px; padding: 7px 16px; font-size: 12px;"
+            " font-weight: bold; }"
+            "QPushButton:hover { background: #E54542; }"
+        )
+        kofi_btn.clicked.connect(self.open_kofi)
+
+        close_btn = QPushButton(self.tr("Close"))
+        close_btn.setMinimumHeight(32)
+        close_btn.clicked.connect(dlg.accept)
+
+        btn_row.addWidget(kofi_btn)
+        btn_row.addStretch()
+        btn_row.addWidget(close_btn)
+        body.addLayout(btn_row)
+
+        root.addLayout(body)
+        dlg.exec()
 
     def confirm_and_delete_all_backups(self):
         backup_count = len(self.manager.get_all_backup_filenames())
@@ -1049,6 +1126,8 @@ class MainWindow(QMainWindow):
                 )
 
     def start_save(self, description: Optional[str] = None):
+        if self.worker and self.worker.isRunning():
+            return
         cleanup_limit = self.settings.value("cleanup_limit", 0, type=int)
 
         self.log(self.tr("Starting new timestamped backup..."))
@@ -1071,6 +1150,8 @@ class MainWindow(QMainWindow):
         self.worker.start()
 
     def start_restore_latest(self):
+        if self.worker and self.worker.isRunning():
+            return
         latest_backup_file = self.manager.get_latest_backup_filename()
 
         if not latest_backup_file:
@@ -1255,10 +1336,24 @@ class MainWindow(QMainWindow):
             self.worker.start()
 
     def on_operation_finished(self, success: bool, saved_metadata: Optional[Dict]):
+        # BUG 1 fix: capture mode locally before clearing self.worker
         mode = self.worker.mode if self.worker else "unknown"
+        self.worker = None
 
         if mode == "restore" and success:
             self._check_display_metadata(saved_metadata)
+
+        # ── Increment persistent statistics counters ──────────────────────
+        if success:
+            if mode == "restore":
+                n = self.settings.value("stats/total_restores_performed", 0, type=int)
+                self.settings.setValue("stats/total_restores_performed", n + 1)
+            elif mode == "scramble":
+                n = self.settings.value("stats/total_scrambles", 0, type=int)
+                self.settings.setValue("stats/total_scrambles", n + 1)
+            elif mode == "save":
+                n = self.settings.value("stats/total_saves_performed", 0, type=int)
+                self.settings.setValue("stats/total_saves_performed", n + 1)
 
         self.toggle_buttons(True)
         self.show_progress(False)
@@ -1295,9 +1390,9 @@ class MainWindow(QMainWindow):
                 ),
             )
 
-        self.worker = None
-
     def _check_display_metadata(self, saved_metadata: Dict):
+        if not saved_metadata:
+            return
         current_metadata = get_display_metadata()
         saved_count = saved_metadata.get("monitor_count")
         current_count = current_metadata.get("monitor_count")
@@ -1383,7 +1478,7 @@ class MainWindow(QMainWindow):
         close_to_tray = self.action_close_to_tray.isChecked()
         is_pyinstaller = getattr(sys, "frozen", False)
 
-        if close_to_tray and self.isVisible():
+        if close_to_tray and not self._force_quit and self.isVisible():
             self.settings.setValue("geometry", self.geometry())
             event.ignore()
             self.hide()
@@ -1399,6 +1494,10 @@ class MainWindow(QMainWindow):
 
         self._run_final_cleanup()
         event.accept()
+
+        # Hide tray icon to avoid ghost icon in taskbar
+        if self.tray_icon:
+            self.tray_icon.hide()
 
         if is_pyinstaller:
             try:
@@ -1442,41 +1541,58 @@ class MainWindow(QMainWindow):
         dlg = UpdateDialog(self)
         dlg.exec()
 
+    def show_stats_dialog(self):
+        from ui.stats_dialog import StatsDialog
+
+        dlg = StatsDialog(self.settings, self)
+        dlg.exec()
+
     def show_shortcuts_dialog(self):
+        # Derive colors from the current system palette for light/dark compatibility
+        pal = self.palette()
+        _c = lambda role: pal.color(role).name()
+        c_header_bg = _c(pal.ColorRole.Dark)
+        c_header_fg = _c(pal.ColorRole.BrightText)
+        c_border = _c(pal.ColorRole.Mid)
+        c_row_even = _c(pal.ColorRole.AlternateBase)
+        c_row_odd = _c(pal.ColorRole.Base)
+        c_text = _c(pal.ColorRole.Text)
+        c_dim = _c(pal.ColorRole.PlaceholderText)
+
         shortcuts_text = f"""
         <h2>{self.tr("Keyboard Shortcuts")}</h2>
         <table style='width:100%; border-collapse: collapse;'>
-            <tr style='background-color: #2b2b2b; color: #ffffff;'>
-                <th style='padding: 8px; text-align: left; border: 1px solid #444;'>{self.tr("Shortcut")}</th>
-                <th style='padding: 8px; text-align: left; border: 1px solid #444;'>{self.tr("Action")}</th>
+            <tr style='background-color: {c_header_bg}; color: {c_header_fg};'>
+                <th style='padding: 8px; text-align: left; border: 1px solid {c_border};'>{self.tr("Shortcut")}</th>
+                <th style='padding: 8px; text-align: left; border: 1px solid {c_border};'>{self.tr("Action")}</th>
             </tr>
-            <tr style='background-color: #f5f5f5; color: #1a1a1a;'>
-                <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+S</b></td>
-                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Quick Save current layout")}</td>
+            <tr style='background-color: {c_row_odd}; color: {c_text};'>
+                <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+S</b></td>
+                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Quick Save current layout")}</td>
             </tr>
-            <tr style='background-color: #e8e8e8; color: #1a1a1a;'>
-                <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+M</b></td>
-                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Open Backup Manager")}</td>
+            <tr style='background-color: {c_row_even}; color: {c_text};'>
+                <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+M</b></td>
+                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Open Backup Manager")}</td>
             </tr>
-            <tr style='background-color: #f5f5f5; color: #1a1a1a;'>
-                <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+H</b></td>
-                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Show/Hide Desktop Icons")}</td>
+            <tr style='background-color: {c_row_odd}; color: {c_text};'>
+                <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+H</b></td>
+                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Show/Hide Desktop Icons")}</td>
             </tr>
-            <tr style='background-color: #e8e8e8; color: #1a1a1a;'>
-                <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+,</b></td>
-                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Open Settings menu")}</td>
+            <tr style='background-color: {c_row_even}; color: {c_text};'>
+                <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+,</b></td>
+                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Open Settings menu")}</td>
             </tr>
-            <tr style='background-color: #f5f5f5; color: #1a1a1a;'>
-                <td style='padding: 8px; border: 1px solid #ccc;'><b>F1</b></td>
-                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Open Online User Manual")}</td>
+            <tr style='background-color: {c_row_odd}; color: {c_text};'>
+                <td style='padding: 8px; border: 1px solid {c_border};'><b>F1</b></td>
+                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Open Online User Manual")}</td>
             </tr>
-            <tr style='background-color: #e8e8e8; color: #1a1a1a;'>
-                <td style='padding: 8px; border: 1px solid #ccc;'><b>Ctrl+Q</b></td>
-                <td style='padding: 8px; border: 1px solid #ccc;'>{self.tr("Exit Application")}</td>
+            <tr style='background-color: {c_row_even}; color: {c_text};'>
+                <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+Q</b></td>
+                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Exit Application")}</td>
             </tr>
         </table>
         <br>
-        <p style='color: {Config.COLOR_TEXT_DIM}; font-size: 11px;'>{self.tr("Tip: Hover over buttons to see additional shortcuts in tooltips.")}</p>
+        <p style='color: {c_dim}; font-size: 11px;'>{self.tr("Tip: Hover over buttons to see additional shortcuts in tooltips.")}</p>
         """
 
         dialog = QDialog(self)
@@ -1499,72 +1615,30 @@ class MainWindow(QMainWindow):
 
     def toggle_icon_visibility(self):
         """Toggle the visibility of desktop icons"""
-        self.log(
-            QCoreApplication.translate(
-                "MainWindow", "Updating desktop icon visibility..."
-            )
-        )
+        self.log(self.tr("Updating desktop icon visibility..."))
         success = self.visibility_manager.toggle_icon_visibility(self.log)
         if success:
-            self.log(
-                QCoreApplication.translate(
-                    "MainWindow",
-                    "Desktop icon visibility updated.",
-                )
-            )
+            self.log(self.tr("Desktop icon visibility updated."))
             self._restart_autohide_if_icons_visible()
         else:
-            self.log(
-                QCoreApplication.translate(
-                    "MainWindow",
-                    "✗ Failed to show/hide desktop icons.",
-                )
-            )
+            self.log(self.tr("✗ Failed to show/hide desktop icons."))
 
     def show_desktop_icons(self):
         """Show desktop icons"""
-        self.log(
-            QCoreApplication.translate(
-                "MainWindow", "Attempting to show desktop icons..."
-            )
-        )
+        self.log(self.tr("Attempting to show desktop icons..."))
         success = self.visibility_manager.show_icons(self.log)
         if success:
-            self.log(
-                QCoreApplication.translate(
-                    "MainWindow",
-                    "Desktop icons are now visible.",
-                )
-            )
+            self.log(self.tr("Desktop icons are now visible."))
             self._restart_autohide_if_icons_visible()
         else:
-            self.log(
-                QCoreApplication.translate(
-                    "MainWindow",
-                    "✗ Failed to show desktop icons.",
-                )
-            )
+            self.log(self.tr("✗ Failed to show desktop icons."))
 
     def hide_desktop_icons(self):
         """Hide desktop icons"""
-        self.log(
-            QCoreApplication.translate(
-                "MainWindow", "Attempting to hide desktop icons..."
-            )
-        )
+        self.log(self.tr("Attempting to hide desktop icons..."))
         success = self.visibility_manager.hide_icons(self.log)
         if success:
-            self.log(
-                QCoreApplication.translate(
-                    "MainWindow",
-                    "Desktop icons are now hidden.",
-                )
-            )
+            self.log(self.tr("Desktop icons are now hidden."))
             self._stop_autohide_timer()
         else:
-            self.log(
-                QCoreApplication.translate(
-                    "MainWindow",
-                    "✗ Failed to hide desktop icons.",
-                )
-            )
+            self.log(self.tr("✗ Failed to hide desktop icons."))

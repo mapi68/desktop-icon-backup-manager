@@ -119,24 +119,9 @@ class UpdateDialog(QDialog):
     # ── Internal helpers ──────────────────────────────────────────────────────
 
     def _apply_style(self):
-        # Only style buttons and progress bar with accent color.
-        # Background and text colors are left to Qt so the dialog
-        # inherits the system theme (light or dark) automatically.
-        self.setStyleSheet("""
-            QLabel { font-size: 13px; }
-            QPushButton {
-                background: #0078D7; color: #fff;
-                border: none; border-radius: 4px;
-                padding: 8px 22px; font-size: 13px;
-            }
-            QPushButton:hover    { background: #106EBE; }
-            QPushButton:disabled { background: #aaa; color: #eee; }
-            QProgressBar {
-                border: 1px solid palette(mid);
-                border-radius: 3px;
-            }
-            QProgressBar::chunk { background: #0078D7; border-radius: 3px; }
-        """)
+        # Styles are loaded from styles/theme.qss at application level.
+        # UpdateDialog is matched by class name in the QSS.
+        pass
 
     def _start_check(self):
         self.lbl_latest.setText(self.tr("Checking..."))

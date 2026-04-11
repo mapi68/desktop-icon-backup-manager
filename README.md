@@ -158,6 +158,7 @@ desktop-icon-backup-manager.exe --restore latest --silent
 - **📤 Export Backups** — Export selected or all backups to ZIP archive or folder for backup, sharing, or off-site storage
 - **📥 Import Backups** — Import `.json` backup files or ZIP archives from other machines—duplicates safely skipped
 - **🗑️ Smart Auto-Cleanup** — Automatically manage backup count (keep 5, 10, 25, 50, or unlimited most recent)
+- **📊 Statistics Dashboard** — Visual overview of your backup history: total backups, restores, saves, disk usage, backups per month chart, top resolutions, most moved icons ranking, and activity summary
 - **⚡ System Tray Integration** — Save or restore silently from taskbar tray icon without opening main window
 
 ### Automation & Command-Line (CLI) Features
@@ -205,6 +206,7 @@ Desktop Icon Backup Manager is the most comprehensive solution. Here's how it co
 | **Automatic update checker** | ✅ | ❌ | ❌ | ❌ |
 | **System tray integration** | ✅ | ✅ | ✅ | ❌ |
 | **Auto-hide desktop icons with timer** | ✅ | ❌ | ❌ | ❌ |
+| **Statistics dashboard** | ✅ | ❌ | ❌ | ❌ |
 | **Open source (MIT license)** | ✅ | ❌ | ❌ | — |
 | **Portable executable** | ✅ | ✅ | ✅ | — |
 | **Windows 11 25H2 support** | ✅ | ✅ | ⚠️ | — |
@@ -390,6 +392,11 @@ autohide_enabled=false
 autohide_seconds=300
 autohide_backup_before_hide=true
 geometry=@Rect(100 100 800 650)
+
+[Statistics]
+total_restores_performed=0
+total_saves_performed=0
+total_scrambles=0
 ```
 
 Invalid values automatically reset to defaults on next launch.
@@ -676,6 +683,15 @@ Desktop Icon Backup Manager is built on the shoulders of excellent open-source p
   <img src="images/DIBM_6.png" alt="Confirmation dialog before restoring a desktop icon backup" width="50%">
   <br><br>
   <em>Confirmation dialog — always confirms before applying changes to prevent accidental icon movement</em>
+  <br><br><br>
+</p>
+
+### Statistics Dashboard
+
+<p align="center">
+  <img src="images/DIBM_7.png" alt="Statistics Dashboard showing backup history, resolutions, most moved icons, and activity summary" width="80%">
+  <br><br>
+  <em>Statistics Dashboard — visual overview of total backups, restores, saves, disk usage, backups per month, top resolutions, and most moved icons</em>
   <br><br><br>
 </p>
 

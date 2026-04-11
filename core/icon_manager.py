@@ -23,6 +23,8 @@ from utils.helpers import (
     parse_resolution_string,
 )
 
+logger = logging.getLogger("dibm")
+
 
 def _pack_lparam(x: int, y: int) -> int:
     """
@@ -107,7 +109,7 @@ class DesktopIconManager:
             os.remove(filepath)
             return True
         except OSError as e:
-            logging.error("Error deleting file %s: %s", filepath, e)
+            logger.error("Error deleting file %s: %s", filepath, e)
             return False
 
     def delete_all_backups(self, log_callback: Callable[[str], None]) -> bool:
@@ -281,9 +283,9 @@ class DesktopIconManager:
                 if icon_name:
                     icons[icon_name] = (x, y)
         except Exception as e:
-            logging.error("Error reading current icon positions: %s", e)
+            logger.error("Error reading current icon positions: %s", e)
         finally:
-            if remote_memory and process_handle:
+            if remote_memory and remote_memory != 0 and process_handle:
                 win32process.VirtualFreeEx(
                     process_handle, remote_memory, 0, Win32Constants.MEM_RELEASE
                 )
@@ -430,7 +432,7 @@ class DesktopIconManager:
             )
             return False
         finally:
-            if remote_memory and process_handle:
+            if remote_memory and remote_memory != 0 and process_handle:
                 win32process.VirtualFreeEx(
                     process_handle, remote_memory, 0, Win32Constants.MEM_RELEASE
                 )
@@ -658,7 +660,7 @@ class DesktopIconManager:
         finally:
             win32gui.SendMessage(self.hwnd_listview, win32con.WM_SETREDRAW, 1, 0)
             win32gui.InvalidateRect(self.hwnd_listview, None, True)
-            if remote_memory and process_handle:
+            if remote_memory and remote_memory != 0 and process_handle:
                 win32process.VirtualFreeEx(
                     process_handle, remote_memory, 0, Win32Constants.MEM_RELEASE
                 )

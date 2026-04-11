@@ -1,0 +1,208 @@
+/*
+ * Desktop Icon Backup Manager — Centralized Theme
+ *
+ * All widget styles are gathered here from previously inline CSS.
+ * Uses palette() references wherever possible so the theme works
+ * correctly in both light and dark system modes.
+ *
+ * Accent color:  #0078D7  (Windows blue)
+ * Accent hover:  #106EBE
+ */
+
+/* ═══════════════════════════════════════════════════════════════════════
+ *  Main Window — action buttons
+ * ═══════════════════════════════════════════════════════════════════════ */
+
+QPushButton[objectName="saveButton"],
+QPushButton[objectName="restoreButton"],
+QPushButton[objectName="backupManagerButton"],
+QPushButton[objectName="toggleIconsButton"],
+QPushButton[objectName="clearLogButton"] {
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 13px;
+}
+
+QPushButton[objectName="saveButton"]:hover,
+QPushButton[objectName="restoreButton"]:hover,
+QPushButton[objectName="backupManagerButton"]:hover,
+QPushButton[objectName="toggleIconsButton"]:hover,
+QPushButton[objectName="clearLogButton"]:hover {
+    opacity: 0.8;
+}
+
+QPushButton:disabled {
+    background-color: palette(midlight);
+    color: palette(dark);
+}
+
+QPushButton#saveButton          { background-color: #00A65A; }
+QPushButton#backupManagerButton { background-color: #0078D7; }
+QPushButton#restoreButton       { background-color: #CC0000; }
+QPushButton#toggleIconsButton   { background-color: #9C27B0; }
+QPushButton#clearLogButton      { background-color: #6c757d; }
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+ *  Main Window — log area and progress bar
+ * ═══════════════════════════════════════════════════════════════════════ */
+
+QTextEdit {
+    border: 1px solid palette(mid);
+    border-radius: 4px;
+    padding: 5px;
+    font-family: 'Consolas', monospace;
+    font-size: 11px;
+}
+
+QProgressBar {
+    border: 1px solid palette(mid);
+    border-radius: 4px;
+    text-align: center;
+    height: 20px;
+}
+
+QProgressBar::chunk {
+    background-color: #0078D7;
+    border-radius: 3px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+ *  Update Dialog
+ * ═══════════════════════════════════════════════════════════════════════ */
+
+UpdateDialog QLabel {
+    font-size: 13px;
+}
+
+UpdateDialog QPushButton {
+    background: #0078D7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 22px;
+    font-size: 13px;
+}
+
+UpdateDialog QPushButton:hover {
+    background: #106EBE;
+}
+
+UpdateDialog QPushButton:disabled {
+    background: #aaa;
+    color: #eee;
+}
+
+UpdateDialog QProgressBar {
+    border: 1px solid palette(mid);
+    border-radius: 3px;
+}
+
+UpdateDialog QProgressBar::chunk {
+    background: #0078D7;
+    border-radius: 3px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+ *  Language Dialog (main.py)
+ * ═══════════════════════════════════════════════════════════════════════ */
+
+LanguageDialog QLabel {
+    font-size: 13px;
+}
+
+LanguageDialog QComboBox {
+    border: 1px solid palette(mid);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+LanguageDialog QPushButton {
+    background: #0078D7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 20px;
+    font-size: 13px;
+}
+
+LanguageDialog QPushButton:hover {
+    background: #106EBE;
+}
+
+LanguageDialog QCheckBox {
+    font-size: 11px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+ *  Legend Panel (preview_widget.py)
+ * ═══════════════════════════════════════════════════════════════════════ */
+
+QFrame#LegendPanel {
+    border: 1px solid palette(mid);
+    border-radius: 7px;
+}
+
+QFrame#LegendPanel QLabel {
+    background: transparent;
+    border: none;
+    font-family: 'Segoe UI';
+    font-size: 11px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+ *  Icon Preview Widget (preview_widget.py)
+ * ═══════════════════════════════════════════════════════════════════════ */
+
+IconPreviewWidget {
+    background-color: palette(base);
+    border: 2px solid palette(mid);
+    border-radius: 4px;
+}
+
+IconPreviewWidget QToolTip {
+    font-family: 'Segoe UI';
+    font-size: 12px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════
+ *  Comparison Dialog (backup_dialog.py)
+ * ═══════════════════════════════════════════════════════════════════════ */
+
+QDialog#ComparisonDialog QLabel {
+    border: 1px solid palette(mid);
+    border-radius: 4px;
+    padding: 12px;
+    font-family: 'Segoe UI';
+    font-size: 11px;
+}
+
+QDialog#ComparisonDialog QTextEdit {
+    border: 1px solid palette(mid);
+    border-radius: 4px;
+    font-family: 'Consolas', monospace;
+    font-size: 11px;
+}
+
+QDialog#ComparisonDialog QPushButton {
+    color: #ffffff;
+    background-color: #0078D7;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-family: 'Segoe UI';
+    font-size: 11px;
+    font-weight: bold;
+}
+
+QDialog#ComparisonDialog QPushButton:hover {
+    background-color: #106EBE;
+}

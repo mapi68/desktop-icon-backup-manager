@@ -317,18 +317,7 @@ class _LegendPanel(QFrame):
         super().__init__(parent)
         self.setObjectName("LegendPanel")
         self.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
-        self.setStyleSheet("""
-            QFrame#LegendPanel {
-                border: 1px solid palette(mid);
-                border-radius: 7px;
-            }
-            QLabel {
-                background: transparent;
-                border: none;
-                font-family: 'Segoe UI';
-                font-size: 11px;
-            }
-        """)
+        # Styles loaded from styles/theme.qss via QFrame#LegendPanel selector
 
         grid = QGridLayout(self)
         grid.setContentsMargins(12, 8, 16, 8)
@@ -387,20 +376,12 @@ class IconPreviewWidget(QWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+        self.setObjectName("IconPreviewWidget")
         self.setFixedSize(Config.PREVIEW_WIDTH, Config.PREVIEW_HEIGHT)
         self.icons: Dict[str, Tuple[int, int]] = {}
         self.screen_res: Tuple[int, int] = (1920, 1080)
         self.setMouseTracking(True)
-        self.setStyleSheet("""
-            QWidget {
-                background-color: palette(base);
-                border: 2px solid palette(mid);
-                border-radius: 4px;
-            }
-            QToolTip {
-                font-family: 'Segoe UI'; font-size: 12px;
-            }
-        """)
+        # Styles loaded from styles/theme.qss via IconPreviewWidget selector
 
     def update_preview(self, icons: Dict, res_tuple: Tuple[int, int]):
         self.icons = icons
