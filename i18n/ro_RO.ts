@@ -1243,11 +1243,6 @@ Comandă rapidă: Ctrl+S</translation>
         <translation>Restaurați pozițiile pictogramelor din CEL MAI RECENT fișier de rezervă găsit.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="477" />
-        <source>↺ BACKUP MANAGER</source>
-        <translation>↺ MANAGER COPII DE REZERVĂ</translation>
-    </message>
-    <message>
         <location filename="..\ui\main_window.py" line="481" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
@@ -1334,11 +1329,6 @@ Vizitați manual:
         <location filename="..\ui\main_window.py" line="579" />
         <source>Quick Backup (Shortcut)</source>
         <translation>Copie de rezervă rapidă (comandă rapidă)</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="583" />
-        <source>Backup Manager</source>
-        <translation>Manager copii de rezervă</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="628" />
@@ -1891,8 +1881,8 @@ Pozițiile pictogramelor au fost restaurate, dar pot fi inexacte.</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1575" />
-        <source>Open Backup Manager</source>
-        <translation>Deschideți Managerul de copii de rezervă</translation>
+        <source>Open</source>
+        <translation>Deschide</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1583" />
@@ -1979,88 +1969,88 @@ Pozițiile pictogramelor au fost restaurate, dar pot fi inexacte.</translation>
 </context><context>
     <name>StatsDialog</name>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="212" />
+        <location filename="..\ui\stats_dialog.py" line="214" />
         <source>Statistics Dashboard</source>
         <translation>Tablou de bord statistici</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="234" />
+        <location filename="..\ui\stats_dialog.py" line="236" />
         <source>Total backups</source>
         <translation>Total copii de rezervă</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="238" />
+        <location filename="..\ui\stats_dialog.py" line="240" />
         <source>Restores</source>
         <translation>Restaurări</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="322" />
-        <location filename="..\ui\stats_dialog.py" line="241" />
+        <location filename="..\ui\stats_dialog.py" line="324" />
+        <location filename="..\ui\stats_dialog.py" line="243" />
         <source>Saves</source>
         <translation>Salvări</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="245" />
+        <location filename="..\ui\stats_dialog.py" line="247" />
         <source>Disk usage</source>
         <translation>Utilizare disc</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="252" />
+        <location filename="..\ui\stats_dialog.py" line="254" />
         <source>Avg icons</source>
         <translation>Mediu pictograme</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="263" />
+        <location filename="..\ui\stats_dialog.py" line="265" />
         <source>Backups per month</source>
         <translation>Copii de rezervă pe lună</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="281" />
+        <location filename="..\ui\stats_dialog.py" line="283" />
         <source>Top resolutions</source>
         <translation>Rezoluții principale</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="301" />
+        <location filename="..\ui\stats_dialog.py" line="303" />
         <source>Most moved icons</source>
         <translation>Pictogramele cele mai mutate</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="305" />
+        <location filename="..\ui\stats_dialog.py" line="307" />
         <source>moved %1×</source>
         <translation>mutat %1×</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="308" />
+        <location filename="..\ui\stats_dialog.py" line="310" />
         <source>Not enough data (need 2+ backups)</source>
         <translation>Date insuficiente (sunt necesare 2+ copii de rezervă)</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="317" />
+        <location filename="..\ui\stats_dialog.py" line="319" />
         <source>Activity</source>
         <translation>Activitate</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="320" />
+        <location filename="..\ui\stats_dialog.py" line="322" />
         <source>First backup</source>
         <translation>Prima copie de rezervă</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="321" />
+        <location filename="..\ui\stats_dialog.py" line="323" />
         <source>Last backup</source>
         <translation>Ultima copie de rezervă</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="323" />
+        <location filename="..\ui\stats_dialog.py" line="325" />
         <source>Scrambles</source>
         <translation>Amestecare</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="328" />
+        <location filename="..\ui\stats_dialog.py" line="330" />
         <source>Most used tag</source>
         <translation>Eticheta cea mai utilizată</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="358" />
+        <location filename="..\ui\stats_dialog.py" line="360" />
         <source>Close</source>
         <translation>Închide</translation>
     </message>

@@ -621,8 +621,8 @@ Are you sure you want to proceed?</source>
         <source>✓ Successfully deleted %n backup file(s).</source>
         <translation>
             <numerusform>✓ لم يتم حذف أي ملف نسخ احتياطي.</numerusform>
-            <numerusform>✓ تم حذف ملف نسخ احتياطي واحد بنجاح.</numerusform>
-            <numerusform>✓ تم حذف ملفَي نسخ احتياطيتين بنجاح.</numerusform>
+            <numerusform>✓ تم حذف %n ملف نسخ احتياطي بنجاح.</numerusform>
+            <numerusform>✓ تم حذف %n ملفَي نسخ احتياطي بنجاح.</numerusform>
             <numerusform>✓ تم حذف %n ملفات نسخ احتياطية بنجاح.</numerusform>
             <numerusform>✓ تم حذف %n ملف نسخ احتياطي بنجاح.</numerusform>
             <numerusform>✓ تم حذف %n ملف نسخ احتياطي بنجاح.</numerusform>
@@ -633,8 +633,8 @@ Are you sure you want to proceed?</source>
         <source>✗ Failed to delete %n backup file(s).</source>
         <translation>
             <numerusform>✗ لم يفشل حذف أي ملف.</numerusform>
-            <numerusform>✗ فشل حذف ملف نسخ احتياطي واحد.</numerusform>
-            <numerusform>✗ فشل حذف ملفَي نسخ احتياطيتين.</numerusform>
+            <numerusform>✗ فشل حذف %n ملف نسخ احتياطي.</numerusform>
+            <numerusform>✗ فشل حذف %n ملفَي نسخ احتياطي.</numerusform>
             <numerusform>✗ فشل حذف %n ملفات نسخ احتياطية.</numerusform>
             <numerusform>✗ فشل حذف %n ملف نسخ احتياطي.</numerusform>
             <numerusform>✗ فشل حذف %n ملف نسخ احتياطي.</numerusform>
@@ -649,7 +649,7 @@ Are you sure you want to proceed?</source>
         <location filename="..\core\icon_manager.py" line="173" />
         <source>Cleanup skipped: Current count (%n) is within the limit (%1).</source>
         <translation>
-            <numerusform>تم تخطي التنظيف: العدد الحالي (0) ضمن الحد (%1).</numerusform>
+            <numerusform>تم تخطي التنظيف: العدد الحالي (%n) ضمن الحد (%1).</numerusform>
             <numerusform>تم تخطي التنظيف: العدد الحالي (%n) ضمن الحد (%1).</numerusform>
             <numerusform>تم تخطي التنظيف: العدد الحالي (%n) ضمن الحد (%1).</numerusform>
             <numerusform>تم تخطي التنظيف: العدد الحالي (%n) ضمن الحد (%1).</numerusform>
@@ -662,8 +662,8 @@ Are you sure you want to proceed?</source>
         <source>Cleanup needed: Current count (%1) exceeds limit (%2). Deleting %n oldest file(s).</source>
         <translation>
             <numerusform>التنظيف غير مطلوب: العدد الحالي (%1) لا يتجاوز الحد (%2).</numerusform>
-            <numerusform>التنظيف مطلوب: العدد الحالي (%1) يتجاوز الحد (%2). جارٍ حذف أقدم ملف.</numerusform>
-            <numerusform>التنظيف مطلوب: العدد الحالي (%1) يتجاوز الحد (%2). جارٍ حذف أقدم ملفين.</numerusform>
+            <numerusform>التنظيف مطلوب: العدد الحالي (%1) يتجاوز الحد (%2). جارٍ حذف أقدم %n ملف.</numerusform>
+            <numerusform>التنظيف مطلوب: العدد الحالي (%1) يتجاوز الحد (%2). جارٍ حذف أقدم %n ملف.</numerusform>
             <numerusform>التنظيف مطلوب: العدد الحالي (%1) يتجاوز الحد (%2). جارٍ حذف %n أقدم ملفات.</numerusform>
             <numerusform>التنظيف مطلوب: العدد الحالي (%1) يتجاوز الحد (%2). جارٍ حذف %n أقدم ملف.</numerusform>
             <numerusform>التنظيف مطلوب: العدد الحالي (%1) يتجاوز الحد (%2). جارٍ حذف %n أقدم ملف.</numerusform>
@@ -684,8 +684,8 @@ Are you sure you want to proceed?</source>
         <source>Cleanup complete. Total deleted: %n file(s).</source>
         <translation>
             <numerusform>اكتمل التنظيف. لم يتم حذف أي ملف.</numerusform>
-            <numerusform>اكتمل التنظيف. إجمالي المحذوف: ملف واحد.</numerusform>
-            <numerusform>اكتمل التنظيف. إجمالي المحذوف: ملفان.</numerusform>
+            <numerusform>اكتمل التنظيف. إجمالي المحذوف: %n ملف.</numerusform>
+            <numerusform>اكتمل التنظيف. إجمالي المحذوف: %n ملف.</numerusform>
             <numerusform>اكتمل التنظيف. إجمالي المحذوف: %n ملفات.</numerusform>
             <numerusform>اكتمل التنظيف. إجمالي المحذوف: %n ملفاً.</numerusform>
             <numerusform>اكتمل التنظيف. إجمالي المحذوف: %n ملف.</numerusform>
@@ -701,8 +701,8 @@ Are you sure you want to proceed?</source>
         <source>Found %n icon(s). Starting scan...</source>
         <translation>
             <numerusform>لم يتم العثور على أيقونات. بدء الفحص...</numerusform>
-            <numerusform>تم العثور على أيقونة واحدة. بدء الفحص...</numerusform>
-            <numerusform>تم العثور على أيقونتين. بدء الفحص...</numerusform>
+            <numerusform>تم العثور على %n أيقونة. بدء الفحص...</numerusform>
+            <numerusform>تم العثور على %n أيقونة. بدء الفحص...</numerusform>
             <numerusform>تم العثور على %n أيقونات. بدء الفحص...</numerusform>
             <numerusform>تم العثور على %n أيقونة. بدء الفحص...</numerusform>
             <numerusform>تم العثور على %n أيقونة. بدء الفحص...</numerusform>
@@ -713,8 +713,8 @@ Are you sure you want to proceed?</source>
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
             <numerusform>✓ لم يتم حفظ أي أيقونة في ملف النسخة الاحتياطية '%1'</numerusform>
-            <numerusform>✓ تم حفظ أيقونة واحدة في ملف النسخة الاحتياطية '%1'</numerusform>
-            <numerusform>✓ تم حفظ أيقونتين في ملف النسخة الاحتياطية '%1'</numerusform>
+            <numerusform>✓ تم حفظ %n أيقونة في ملف النسخة الاحتياطية '%1'</numerusform>
+            <numerusform>✓ تم حفظ %n أيقونة في ملف النسخة الاحتياطية '%1'</numerusform>
             <numerusform>✓ تم حفظ %n أيقونات في ملف النسخة الاحتياطية '%1'</numerusform>
             <numerusform>✓ تم حفظ %n أيقونة في ملف النسخة الاحتياطية '%1'</numerusform>
             <numerusform>✓ تم حفظ %n أيقونة في ملف النسخة الاحتياطية '%1'</numerusform>
@@ -790,8 +790,8 @@ Are you sure you want to proceed?</source>
         <source>✓ Restored %n icon(s)</source>
         <translation>
             <numerusform>✓ لم يتم استعادة أي أيقونة</numerusform>
-            <numerusform>✓ تمت استعادة أيقونة واحدة</numerusform>
-            <numerusform>✓ تمت استعادة أيقونتين</numerusform>
+            <numerusform>✓ تمت استعادة %n أيقونة</numerusform>
+            <numerusform>✓ تمت استعادة %n أيقونة</numerusform>
             <numerusform>✓ تمت استعادة %n أيقونات</numerusform>
             <numerusform>✓ تمت استعادة %n أيقونة</numerusform>
             <numerusform>✓ تمت استعادة %n أيقونة</numerusform>
@@ -802,8 +802,8 @@ Are you sure you want to proceed?</source>
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
             <numerusform>⚠ لم يتم تخطي أي أيقونة</numerusform>
-            <numerusform>⚠ تم تخطي أيقونة واحدة (غير موجودة على سطح المكتب)</numerusform>
-            <numerusform>⚠ تم تخطي أيقونتين (غير موجودتين على سطح المكتب)</numerusform>
+            <numerusform>⚠ تم تخطي %n أيقونة (غير موجودة على سطح المكتب)</numerusform>
+            <numerusform>⚠ تم تخطي %n أيقونة (غير موجودة على سطح المكتب)</numerusform>
             <numerusform>⚠ تم تخطي %n أيقونات (غير موجودة على سطح المكتب)</numerusform>
             <numerusform>⚠ تم تخطي %n أيقونة (غير موجودة على سطح المكتب)</numerusform>
             <numerusform>⚠ تم تخطي %n أيقونة (غير موجودة على سطح المكتب)</numerusform>
@@ -829,8 +829,8 @@ Are you sure you want to proceed?</source>
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
             <numerusform>لم يتم العثور على أيقونات. بدء التموضع العشوائي...</numerusform>
-            <numerusform>تم العثور على أيقونة واحدة. بدء التموضع العشوائي...</numerusform>
-            <numerusform>تم العثور على أيقونتين. بدء التموضع العشوائي...</numerusform>
+            <numerusform>تم العثور على %n أيقونة. بدء التموضع العشوائي...</numerusform>
+            <numerusform>تم العثور على %n أيقونة. بدء التموضع العشوائي...</numerusform>
             <numerusform>تم العثور على %n أيقونات. بدء التموضع العشوائي...</numerusform>
             <numerusform>تم العثور على %n أيقونة. بدء التموضع العشوائي...</numerusform>
             <numerusform>تم العثور على %n أيقونة. بدء التموضع العشوائي...</numerusform>
@@ -841,8 +841,8 @@ Are you sure you want to proceed?</source>
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
             <numerusform>✓ لم يتم تبعثر أي أيقونة.</numerusform>
-            <numerusform>✓ تم تبعثر موضع أيقونة واحدة.</numerusform>
-            <numerusform>✓ تم تبعثر موضع أيقونتين.</numerusform>
+            <numerusform>✓ تم تبعثر موضع %n أيقونة.</numerusform>
+            <numerusform>✓ تم تبعثر موضع %n أيقونة.</numerusform>
             <numerusform>✓ تم تبعثر مواضع %n أيقونات.</numerusform>
             <numerusform>✓ تم تبعثر مواضع %n أيقونة.</numerusform>
             <numerusform>✓ تم تبعثر مواضع %n أيقونة.</numerusform>
@@ -1300,11 +1300,6 @@ Shortcut: Ctrl+S</source>
         <translation>استعادة مواضع الأيقونات من أحدث ملف نسخة احتياطية موجود.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="477" />
-        <source>↺ BACKUP MANAGER</source>
-        <translation>↺ مدير النسخ الاحتياطية</translation>
-    </message>
-    <message>
         <location filename="..\ui\main_window.py" line="481" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
@@ -1392,18 +1387,13 @@ Please visit manually:
         <source>Quick Backup (Shortcut)</source>
         <translation>نسخ احتياطي سريع (اختصار)</translation>
     </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="583" />
-        <source>Backup Manager</source>
-        <translation>مدير النسخ الاحتياطية</translation>
-    </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="628" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
-            <numerusform>تم تعيين حد التنظيف التلقائي على: 0 (معطّل).</numerusform>
-            <numerusform>تم تعيين حد التنظيف التلقائي على: نسخة احتياطية واحدة.</numerusform>
-            <numerusform>تم تعيين حد التنظيف التلقائي على: نسختان احتياطيتان.</numerusform>
+            <numerusform>تم تعيين حد التنظيف التلقائي على: %n (معطّل).</numerusform>
+            <numerusform>تم تعيين حد التنظيف التلقائي على: %n نسخة احتياطية.</numerusform>
+            <numerusform>تم تعيين حد التنظيف التلقائي على: %n نسخة احتياطية.</numerusform>
             <numerusform>تم تعيين حد التنظيف التلقائي على: %n نسخ احتياطية.</numerusform>
             <numerusform>تم تعيين حد التنظيف التلقائي على: %n نسخة احتياطية.</numerusform>
             <numerusform>تم تعيين حد التنظيف التلقائي على: %n نسخة احتياطية.</numerusform>
@@ -1455,9 +1445,9 @@ Please visit manually:
         <source>%n minute(s)</source>
         <comment>duration</comment>
         <translation>
-            <numerusform>دقيقة واحدة</numerusform>
-            <numerusform>دقيقة واحدة</numerusform>
-            <numerusform>دقيقتان</numerusform>
+            <numerusform>%n دقيقة</numerusform>
+            <numerusform>%n دقيقة</numerusform>
+            <numerusform>%n دقيقة</numerusform>
             <numerusform>%n دقائق</numerusform>
             <numerusform>%n دقيقة</numerusform>
             <numerusform>%n دقيقة</numerusform>
@@ -1469,9 +1459,9 @@ Please visit manually:
         <source>%n second(s)</source>
         <comment>duration</comment>
         <translation>
-            <numerusform>ثانية واحدة</numerusform>
-            <numerusform>ثانية واحدة</numerusform>
-            <numerusform>ثانيتان</numerusform>
+            <numerusform>%n ثانية</numerusform>
+            <numerusform>%n ثانية</numerusform>
+            <numerusform>%n ثانية</numerusform>
             <numerusform>%n ثوانٍ</numerusform>
             <numerusform>%n ثانية</numerusform>
             <numerusform>%n ثانية</numerusform>
@@ -1867,9 +1857,9 @@ Do you want to proceed?</source>
         <location filename="..\ui\main_window.py" line="1406" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
-            <numerusform>⚠ تحذير: المحفوظ (0 شاشات) مقابل الحالي (%1 شاشة).</numerusform>
-            <numerusform>⚠ تحذير: المحفوظ (شاشة واحدة) مقابل الحالي (%1 شاشة).</numerusform>
-            <numerusform>⚠ تحذير: المحفوظ (شاشتان) مقابل الحالي (%1 شاشة).</numerusform>
+            <numerusform>⚠ تحذير: المحفوظ (%n شاشة) مقابل الحالي (%1 شاشة).</numerusform>
+            <numerusform>⚠ تحذير: المحفوظ (%n شاشة) مقابل الحالي (%1 شاشة).</numerusform>
+            <numerusform>⚠ تحذير: المحفوظ (%n شاشة) مقابل الحالي (%1 شاشة).</numerusform>
             <numerusform>⚠ تحذير: المحفوظ (%n شاشات) مقابل الحالي (%1 شاشة).</numerusform>
             <numerusform>⚠ تحذير: المحفوظ (%n شاشة) مقابل الحالي (%1 شاشة).</numerusform>
             <numerusform>⚠ تحذير: المحفوظ (%n شاشة) مقابل الحالي (%1 شاشة).</numerusform>
@@ -1960,8 +1950,8 @@ Icon positions have been restored, but they may be inaccurate.</source>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1575" />
-        <source>Open Backup Manager</source>
-        <translation>فتح مدير النسخ الاحتياطية</translation>
+        <source>Open</source>
+        <translation>فتح</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1583" />
@@ -2048,88 +2038,88 @@ Icon positions have been restored, but they may be inaccurate.</source>
 </context><context>
     <name>StatsDialog</name>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="212" />
+        <location filename="..\ui\stats_dialog.py" line="214" />
         <source>Statistics Dashboard</source>
         <translation>لوحة الإحصائيات</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="234" />
+        <location filename="..\ui\stats_dialog.py" line="236" />
         <source>Total backups</source>
         <translation>إجمالي النسخ الاحتياطية</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="238" />
+        <location filename="..\ui\stats_dialog.py" line="240" />
         <source>Restores</source>
         <translation>عمليات الاستعادة</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="322" />
-        <location filename="..\ui\stats_dialog.py" line="241" />
+        <location filename="..\ui\stats_dialog.py" line="324" />
+        <location filename="..\ui\stats_dialog.py" line="243" />
         <source>Saves</source>
         <translation>عمليات الحفظ</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="245" />
+        <location filename="..\ui\stats_dialog.py" line="247" />
         <source>Disk usage</source>
         <translation>استخدام القرص</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="252" />
+        <location filename="..\ui\stats_dialog.py" line="254" />
         <source>Avg icons</source>
         <translation>متوسط الرموز</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="263" />
+        <location filename="..\ui\stats_dialog.py" line="265" />
         <source>Backups per month</source>
         <translation>نسخ احتياطية شهرياً</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="281" />
+        <location filename="..\ui\stats_dialog.py" line="283" />
         <source>Top resolutions</source>
         <translation>أعلى الدقات</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="301" />
+        <location filename="..\ui\stats_dialog.py" line="303" />
         <source>Most moved icons</source>
         <translation>الرموز الأكثر تحركاً</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="305" />
+        <location filename="..\ui\stats_dialog.py" line="307" />
         <source>moved %1×</source>
         <translation>تم نقله %1×</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="308" />
+        <location filename="..\ui\stats_dialog.py" line="310" />
         <source>Not enough data (need 2+ backups)</source>
         <translation>بيانات غير كافية (يلزم نسختان احتياطيتان أو أكثر)</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="317" />
+        <location filename="..\ui\stats_dialog.py" line="319" />
         <source>Activity</source>
         <translation>النشاط</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="320" />
+        <location filename="..\ui\stats_dialog.py" line="322" />
         <source>First backup</source>
         <translation>أول نسخة احتياطية</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="321" />
+        <location filename="..\ui\stats_dialog.py" line="323" />
         <source>Last backup</source>
         <translation>آخر نسخة احتياطية</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="323" />
+        <location filename="..\ui\stats_dialog.py" line="325" />
         <source>Scrambles</source>
         <translation>عمليات الخلط</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="328" />
+        <location filename="..\ui\stats_dialog.py" line="330" />
         <source>Most used tag</source>
         <translation>الوسم الأكثر استخداماً</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="358" />
+        <location filename="..\ui\stats_dialog.py" line="360" />
         <source>Close</source>
         <translation>إغلاق</translation>
     </message>

@@ -1246,11 +1246,6 @@ Shortcut: Ctrl+S</source>
         <translation>Восстановить позиции значков из ПОСЛЕДНЕГО найденного файла резервной копии.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="477" />
-        <source>↺ BACKUP MANAGER</source>
-        <translation>↺ МЕНЕДЖЕР КОПИЙ</translation>
-    </message>
-    <message>
         <location filename="..\ui\main_window.py" line="481" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
@@ -1337,11 +1332,6 @@ Please visit manually:
         <location filename="..\ui\main_window.py" line="579" />
         <source>Quick Backup (Shortcut)</source>
         <translation>Быстрая резервная копия (горячая клавиша)</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="583" />
-        <source>Backup Manager</source>
-        <translation>Менеджер резервных копий</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="628" />
@@ -1894,8 +1884,8 @@ Icon positions have been restored, but they may be inaccurate.</source>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1575" />
-        <source>Open Backup Manager</source>
-        <translation>Открыть менеджер резервных копий</translation>
+        <source>Open</source>
+        <translation>Открыть</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1583" />
@@ -1982,88 +1972,88 @@ Icon positions have been restored, but they may be inaccurate.</source>
 </context><context>
     <name>StatsDialog</name>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="212" />
+        <location filename="..\ui\stats_dialog.py" line="214" />
         <source>Statistics Dashboard</source>
         <translation>Панель статистики</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="234" />
+        <location filename="..\ui\stats_dialog.py" line="236" />
         <source>Total backups</source>
         <translation>Всего резервных копий</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="238" />
+        <location filename="..\ui\stats_dialog.py" line="240" />
         <source>Restores</source>
         <translation>Восстановления</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="322" />
-        <location filename="..\ui\stats_dialog.py" line="241" />
+        <location filename="..\ui\stats_dialog.py" line="324" />
+        <location filename="..\ui\stats_dialog.py" line="243" />
         <source>Saves</source>
         <translation>Сохранения</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="245" />
+        <location filename="..\ui\stats_dialog.py" line="247" />
         <source>Disk usage</source>
         <translation>Использование диска</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="252" />
+        <location filename="..\ui\stats_dialog.py" line="254" />
         <source>Avg icons</source>
         <translation>Среднее кол-во значков</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="263" />
+        <location filename="..\ui\stats_dialog.py" line="265" />
         <source>Backups per month</source>
         <translation>Резервных копий в месяц</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="281" />
+        <location filename="..\ui\stats_dialog.py" line="283" />
         <source>Top resolutions</source>
         <translation>Наиболее частые разрешения</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="301" />
+        <location filename="..\ui\stats_dialog.py" line="303" />
         <source>Most moved icons</source>
         <translation>Наиболее перемещённые значки</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="305" />
+        <location filename="..\ui\stats_dialog.py" line="307" />
         <source>moved %1×</source>
         <translation>перемещён %1×</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="308" />
+        <location filename="..\ui\stats_dialog.py" line="310" />
         <source>Not enough data (need 2+ backups)</source>
         <translation>Недостаточно данных (необходимо 2+ резервных копии)</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="317" />
+        <location filename="..\ui\stats_dialog.py" line="319" />
         <source>Activity</source>
         <translation>Активность</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="320" />
+        <location filename="..\ui\stats_dialog.py" line="322" />
         <source>First backup</source>
         <translation>Первая резервная копия</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="321" />
+        <location filename="..\ui\stats_dialog.py" line="323" />
         <source>Last backup</source>
         <translation>Последняя резервная копия</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="323" />
+        <location filename="..\ui\stats_dialog.py" line="325" />
         <source>Scrambles</source>
         <translation>Перемешивания</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="328" />
+        <location filename="..\ui\stats_dialog.py" line="330" />
         <source>Most used tag</source>
         <translation>Наиболее используемый тег</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="358" />
+        <location filename="..\ui\stats_dialog.py" line="360" />
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>

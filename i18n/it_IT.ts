@@ -621,7 +621,7 @@ Sei sicuro di voler procedere?</translation>
         <location filename="..\core\icon_manager.py" line="186" />
         <source>Cleanup needed: Current count (%1) exceeds limit (%2). Deleting %n oldest file(s).</source>
         <translation>
-            <numerusform>Pulizia necessaria: il conteggio attuale (%1) supera il limite (%2). Eliminazione del file più vecchio.</numerusform>
+            <numerusform>Pulizia necessaria: il conteggio attuale (%1) supera il limite (%2). Eliminazione di %n file più vecchio.</numerusform>
             <numerusform>Pulizia necessaria: il conteggio attuale (%1) supera il limite (%2). Eliminazione dei %n file più vecchi.</numerusform>
         </translation>
     </message>
@@ -1228,11 +1228,6 @@ Scorciatoia: Ctrl+S</translation>
         <translation>Ripristina le posizioni delle icone dal file di backup trovato PIÙ RECENTE.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="477" />
-        <source>↺ BACKUP MANAGER</source>
-        <translation>↺ GESTIONE BACKUP</translation>
-    </message>
-    <message>
         <location filename="..\ui\main_window.py" line="481" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
@@ -1251,7 +1246,7 @@ Scorciatoia: Ctrl+M</translation>
         <source>Show or hide all desktop icons.
 
 Shortcut: Ctrl+H</source>
-        <translation>Mostra o nascondi tutte le icone del desktop.
+        <translation>Mostra o nasconde tutte le icone del desktop.
 
 Scorciatoia: Ctrl+H</translation>
     </message>
@@ -1319,11 +1314,6 @@ Visita manualmente:
         <location filename="..\ui\main_window.py" line="579" />
         <source>Quick Backup (Shortcut)</source>
         <translation>Backup rapido (scorciatoia)</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="583" />
-        <source>Backup Manager</source>
-        <translation>Gestione backup</translation>
     </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="628" />
@@ -1872,8 +1862,8 @@ Le posizioni delle icone sono state ripristinate, ma potrebbero non essere accur
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1575" />
-        <source>Open Backup Manager</source>
-        <translation>Apri Gestione backup</translation>
+        <source>Open</source>
+        <translation>Apri</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1583" />
@@ -1960,88 +1950,88 @@ Le posizioni delle icone sono state ripristinate, ma potrebbero non essere accur
 </context><context>
     <name>StatsDialog</name>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="212" />
+        <location filename="..\ui\stats_dialog.py" line="214" />
         <source>Statistics Dashboard</source>
         <translation>Dashboard statistiche</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="234" />
+        <location filename="..\ui\stats_dialog.py" line="236" />
         <source>Total backups</source>
         <translation>Backup totali</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="238" />
+        <location filename="..\ui\stats_dialog.py" line="240" />
         <source>Restores</source>
         <translation>Ripristini</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="322" />
-        <location filename="..\ui\stats_dialog.py" line="241" />
+        <location filename="..\ui\stats_dialog.py" line="324" />
+        <location filename="..\ui\stats_dialog.py" line="243" />
         <source>Saves</source>
         <translation>Salvataggi</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="245" />
+        <location filename="..\ui\stats_dialog.py" line="247" />
         <source>Disk usage</source>
         <translation>Utilizzo disco</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="252" />
+        <location filename="..\ui\stats_dialog.py" line="254" />
         <source>Avg icons</source>
         <translation>Icone medie</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="263" />
+        <location filename="..\ui\stats_dialog.py" line="265" />
         <source>Backups per month</source>
         <translation>Backup al mese</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="281" />
+        <location filename="..\ui\stats_dialog.py" line="283" />
         <source>Top resolutions</source>
         <translation>Risoluzioni più utilizzate</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="301" />
+        <location filename="..\ui\stats_dialog.py" line="303" />
         <source>Most moved icons</source>
         <translation>Icone più spostate</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="305" />
+        <location filename="..\ui\stats_dialog.py" line="307" />
         <source>moved %1×</source>
         <translation>spostata %1×</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="308" />
+        <location filename="..\ui\stats_dialog.py" line="310" />
         <source>Not enough data (need 2+ backups)</source>
         <translation>Dati insufficienti (sono necessari 2+ backup)</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="317" />
+        <location filename="..\ui\stats_dialog.py" line="319" />
         <source>Activity</source>
         <translation>Attività</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="320" />
+        <location filename="..\ui\stats_dialog.py" line="322" />
         <source>First backup</source>
         <translation>Primo backup</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="321" />
+        <location filename="..\ui\stats_dialog.py" line="323" />
         <source>Last backup</source>
         <translation>Ultimo backup</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="323" />
+        <location filename="..\ui\stats_dialog.py" line="325" />
         <source>Scrambles</source>
         <translation>Rimescolamenti</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="328" />
+        <location filename="..\ui\stats_dialog.py" line="330" />
         <source>Most used tag</source>
         <translation>Tag più utilizzato</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="358" />
+        <location filename="..\ui\stats_dialog.py" line="360" />
         <source>Close</source>
         <translation>Chiudi</translation>
     </message>

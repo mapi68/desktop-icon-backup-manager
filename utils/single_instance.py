@@ -18,16 +18,17 @@ import sys
 from PyQt6.QtWidgets import QMessageBox
 
 _MUTEX_NAME = "Global\\DesktopIconBackupManager_SingleInstance_v1"
-_APP_KEY    = "DesktopIconBackupManager_SingleInstance_v1"
+_APP_KEY = "DesktopIconBackupManager_SingleInstance_v1"
 
-_MSG_TITLE  = "Desktop Icon Backup Manager"
-_MSG_BODY   = (
+_MSG_TITLE = "Desktop Icon Backup Manager"
+_MSG_BODY = (
     "Another instance of the application is already running.\n\n"
     "Check the system tray for the running instance."
 )
 
 
 # ── Win32 mutex implementation ────────────────────────────────────────────────
+
 
 class _Win32Lock:
     """Holds a Win32 named mutex for the lifetime of the process."""
@@ -39,6 +40,7 @@ class _Win32Lock:
         if self._handle is not None:
             try:
                 import ctypes
+
                 ctypes.windll.kernel32.CloseHandle(self._handle)
             except Exception:
                 pass
@@ -79,6 +81,7 @@ def _try_win32_lock():
 
 # ── QSharedMemory fallback ────────────────────────────────────────────────────
 
+
 class _ShmLock:
     """RAII-style lock: keeps QSharedMemory attached while alive."""
 
@@ -109,6 +112,7 @@ def _try_shm_lock():
 
 
 # ── Public API ────────────────────────────────────────────────────────────────
+
 
 def ensure_single_instance(app) -> object | None:
     """

@@ -12,7 +12,7 @@
         <location filename="..\core\comparator.py" line="46" />
         <source>Icon(s) Added: %n</source>
         <translation>
-            <numerusform>1 icône ajoutée</numerusform>
+            <numerusform>%n icône ajoutée</numerusform>
             <numerusform>%n icônes ajoutées</numerusform>
         </translation>
     </message>
@@ -20,7 +20,7 @@
         <location filename="..\core\comparator.py" line="52" />
         <source>Icon(s) Removed: %n</source>
         <translation>
-            <numerusform>1 icône supprimée</numerusform>
+            <numerusform>%n icône supprimée</numerusform>
             <numerusform>%n icônes supprimées</numerusform>
         </translation>
     </message>
@@ -28,7 +28,7 @@
         <location filename="..\core\comparator.py" line="58" />
         <source>Icon(s) Moved: %n</source>
         <translation>
-            <numerusform>1 icône déplacée</numerusform>
+            <numerusform>%n icône déplacée</numerusform>
             <numerusform>%n icônes déplacées</numerusform>
         </translation>
     </message>
@@ -36,7 +36,7 @@
         <location filename="..\core\comparator.py" line="64" />
         <source>Icon(s) Unchanged: %n</source>
         <translation>
-            <numerusform>1 icône inchangée</numerusform>
+            <numerusform>%n icône inchangée</numerusform>
             <numerusform>%n icônes inchangées</numerusform>
         </translation>
     </message>
@@ -592,7 +592,7 @@ Horodatage : %5
         <location filename="..\core\icon_manager.py" line="136" />
         <source>✓ Successfully deleted %n backup file(s).</source>
         <translation>
-            <numerusform>✓ 1 fichier de sauvegarde supprimé avec succès.</numerusform>
+            <numerusform>✓ %n fichier de sauvegarde supprimé avec succès.</numerusform>
             <numerusform>✓ %n fichiers de sauvegarde supprimés avec succès.</numerusform>
         </translation>
     </message>
@@ -600,7 +600,7 @@ Horodatage : %5
         <location filename="..\core\icon_manager.py" line="145" />
         <source>✗ Failed to delete %n backup file(s).</source>
         <translation>
-            <numerusform>✗ Impossible de supprimer 1 fichier de sauvegarde.</numerusform>
+            <numerusform>✗ Impossible de supprimer %n fichier de sauvegarde.</numerusform>
             <numerusform>✗ Impossible de supprimer %n fichiers de sauvegarde.</numerusform>
         </translation>
     </message>
@@ -621,7 +621,7 @@ Horodatage : %5
         <location filename="..\core\icon_manager.py" line="186" />
         <source>Cleanup needed: Current count (%1) exceeds limit (%2). Deleting %n oldest file(s).</source>
         <translation>
-            <numerusform>Nettoyage nécessaire : Le nombre (%1) dépasse la limite (%2). Suppression de 1 fichier le plus ancien.</numerusform>
+            <numerusform>Nettoyage nécessaire : Le nombre (%1) dépasse la limite (%2). Suppression de %n fichier le plus ancien.</numerusform>
             <numerusform>Nettoyage nécessaire : Le nombre (%1) dépasse la limite (%2). Suppression de %n fichiers les plus anciens.</numerusform>
         </translation>
     </message>
@@ -639,7 +639,7 @@ Horodatage : %5
         <location filename="..\core\icon_manager.py" line="212" />
         <source>Cleanup complete. Total deleted: %n file(s).</source>
         <translation>
-            <numerusform>Nettoyage terminé. Total supprimé : 1 fichier.</numerusform>
+            <numerusform>Nettoyage terminé. Total supprimé : %n fichier.</numerusform>
             <numerusform>Nettoyage terminé. Total supprimé : %n fichiers.</numerusform>
         </translation>
     </message>
@@ -652,7 +652,7 @@ Horodatage : %5
         <location filename="..\core\icon_manager.py" line="336" />
         <source>Found %n icon(s). Starting scan...</source>
         <translation>
-            <numerusform>1 icône trouvée. Démarrage de l'analyse...</numerusform>
+            <numerusform>%n icône trouvée. Démarrage de l'analyse...</numerusform>
             <numerusform>%n icônes trouvées. Démarrage de l'analyse...</numerusform>
         </translation>
     </message>
@@ -660,7 +660,7 @@ Horodatage : %5
         <location filename="..\core\icon_manager.py" line="399" />
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
-            <numerusform>✓ 1 icône sauvegardée dans le fichier '%1'</numerusform>
+            <numerusform>✓ %n icône sauvegardée dans le fichier '%1'</numerusform>
             <numerusform>✓ %n icônes sauvegardées dans le fichier '%1'</numerusform>
         </translation>
     </message>
@@ -733,7 +733,7 @@ Horodatage : %5
         <location filename="..\core\icon_manager.py" line="628" />
         <source>✓ Restored %n icon(s)</source>
         <translation>
-            <numerusform>✓ 1 icône restaurée</numerusform>
+            <numerusform>✓ %n icône restaurée</numerusform>
             <numerusform>✓ %n icônes restaurées</numerusform>
         </translation>
     </message>
@@ -741,7 +741,7 @@ Horodatage : %5
         <location filename="..\core\icon_manager.py" line="634" />
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
-            <numerusform>⚠ 1 icône ignorée (introuvable sur le bureau)</numerusform>
+            <numerusform>⚠ %n icône ignorée (introuvable sur le bureau)</numerusform>
             <numerusform>⚠ %n icônes ignorées (introuvables sur le bureau)</numerusform>
         </translation>
     </message>
@@ -764,7 +764,7 @@ Horodatage : %5
         <location filename="..\core\icon_manager.py" line="692" />
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
-            <numerusform>1 icône trouvée. Démarrage du positionnement aléatoire...</numerusform>
+            <numerusform>%n icône trouvée. Démarrage du positionnement aléatoire...</numerusform>
             <numerusform>%n icônes trouvées. Démarrage du positionnement aléatoire...</numerusform>
         </translation>
     </message>
@@ -772,7 +772,7 @@ Horodatage : %5
         <location filename="..\core\icon_manager.py" line="713" />
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
-            <numerusform>✓ Position mélangée pour 1 icône.</numerusform>
+            <numerusform>✓ Position mélangée pour %n icône.</numerusform>
             <numerusform>✓ Positions mélangées pour %n icônes.</numerusform>
         </translation>
     </message>
@@ -1228,11 +1228,6 @@ Raccourci : Ctrl+S</translation>
         <translation>Restaurer les positions des icônes depuis le fichier de sauvegarde LE PLUS RÉCENT trouvé.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="477" />
-        <source>↺ BACKUP MANAGER</source>
-        <translation>↺ GESTIONNAIRE DE SAUVEGARDES</translation>
-    </message>
-    <message>
         <location filename="..\ui\main_window.py" line="481" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
@@ -1320,16 +1315,11 @@ Veuillez visiter manuellement :
         <source>Quick Backup (Shortcut)</source>
         <translation>Sauvegarde rapide (Raccourci)</translation>
     </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="583" />
-        <source>Backup Manager</source>
-        <translation>Gestionnaire de sauvegardes</translation>
-    </message>
     <message numerus="yes">
         <location filename="..\ui\main_window.py" line="628" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
-            <numerusform>Limite de nettoyage automatique définie sur : 1 sauvegarde (0 = Désactivé).</numerusform>
+            <numerusform>Limite de nettoyage automatique définie sur : %n sauvegarde (0 = Désactivé).</numerusform>
             <numerusform>Limite de nettoyage automatique définie sur : %n sauvegardes (0 = Désactivé).</numerusform>
         </translation>
     </message>
@@ -1783,7 +1773,7 @@ Voulez-vous continuer ?</translation>
         <location filename="..\ui\main_window.py" line="1406" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
-            <numerusform>⚠ Avertissement : Sauvegardé (1 moniteur) vs Actuel (%1 moniteur(s)).</numerusform>
+            <numerusform>⚠ Avertissement : Sauvegardé (%n moniteur) vs Actuel (%1 moniteur(s)).</numerusform>
             <numerusform>⚠ Avertissement : Sauvegardé (%n moniteurs) vs Actuel (%1 moniteur(s)).</numerusform>
         </translation>
     </message>
@@ -1872,8 +1862,8 @@ Les positions des icônes ont été restaurées, mais elles peuvent être inexac
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1575" />
-        <source>Open Backup Manager</source>
-        <translation>Ouvrir le gestionnaire de sauvegardes</translation>
+        <source>Open</source>
+        <translation>Ouvrir</translation>
     </message>
     <message>
         <location filename="..\ui\main_window.py" line="1583" />
@@ -1960,88 +1950,88 @@ Les positions des icônes ont été restaurées, mais elles peuvent être inexac
 </context><context>
     <name>StatsDialog</name>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="212" />
+        <location filename="..\ui\stats_dialog.py" line="214" />
         <source>Statistics Dashboard</source>
         <translation>Tableau de bord des statistiques</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="234" />
+        <location filename="..\ui\stats_dialog.py" line="236" />
         <source>Total backups</source>
         <translation>Total des sauvegardes</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="238" />
+        <location filename="..\ui\stats_dialog.py" line="240" />
         <source>Restores</source>
         <translation>Restaurations</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="322" />
-        <location filename="..\ui\stats_dialog.py" line="241" />
+        <location filename="..\ui\stats_dialog.py" line="324" />
+        <location filename="..\ui\stats_dialog.py" line="243" />
         <source>Saves</source>
         <translation>Sauvegardes</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="245" />
+        <location filename="..\ui\stats_dialog.py" line="247" />
         <source>Disk usage</source>
         <translation>Utilisation du disque</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="252" />
+        <location filename="..\ui\stats_dialog.py" line="254" />
         <source>Avg icons</source>
         <translation>Moy. icônes</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="263" />
+        <location filename="..\ui\stats_dialog.py" line="265" />
         <source>Backups per month</source>
         <translation>Sauvegardes par mois</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="281" />
+        <location filename="..\ui\stats_dialog.py" line="283" />
         <source>Top resolutions</source>
         <translation>Résolutions principales</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="301" />
+        <location filename="..\ui\stats_dialog.py" line="303" />
         <source>Most moved icons</source>
         <translation>Icônes les plus déplacées</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="305" />
+        <location filename="..\ui\stats_dialog.py" line="307" />
         <source>moved %1×</source>
         <translation>déplacé %1×</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="308" />
+        <location filename="..\ui\stats_dialog.py" line="310" />
         <source>Not enough data (need 2+ backups)</source>
         <translation>Données insuffisantes (2+ sauvegardes requises)</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="317" />
+        <location filename="..\ui\stats_dialog.py" line="319" />
         <source>Activity</source>
         <translation>Activité</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="320" />
+        <location filename="..\ui\stats_dialog.py" line="322" />
         <source>First backup</source>
         <translation>Première sauvegarde</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="321" />
+        <location filename="..\ui\stats_dialog.py" line="323" />
         <source>Last backup</source>
         <translation>Dernière sauvegarde</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="323" />
+        <location filename="..\ui\stats_dialog.py" line="325" />
         <source>Scrambles</source>
         <translation>Mélanges aléatoires</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="328" />
+        <location filename="..\ui\stats_dialog.py" line="330" />
         <source>Most used tag</source>
         <translation>Étiquette la plus utilisée</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="358" />
+        <location filename="..\ui\stats_dialog.py" line="360" />
         <source>Close</source>
         <translation>Fermer</translation>
     </message>

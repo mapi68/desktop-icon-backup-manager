@@ -474,7 +474,7 @@ class MainWindow(QMainWindow):
         self.btn_restore_latest.clicked.connect(self.start_restore_latest)
         self.btn_restore_latest.setObjectName("restoreButton")
 
-        self.btn_restore_select = QPushButton(self.tr("↺ BACKUP MANAGER"))
+        self.btn_restore_select = QPushButton("↺ BACKUP MANAGER")
         self.btn_restore_select.setMinimumHeight(50)
 
         self.btn_restore_select.setToolTip(
@@ -580,7 +580,7 @@ class MainWindow(QMainWindow):
         )
         self.addAction(save_shortcut)
 
-        manager_shortcut = QAction(self.tr("Backup Manager"), self)
+        manager_shortcut = QAction("Backup Manager", self)
         manager_shortcut.setShortcut(QKeySequence("Ctrl+M"))
         manager_shortcut.triggered.connect(self.open_backup_manager)
         self.addAction(manager_shortcut)
@@ -981,7 +981,7 @@ class MainWindow(QMainWindow):
         from PyQt6.QtCore import Qt, QSize
 
         dlg = QDialog(self)
-        dlg.setWindowTitle(self.tr("About") + " — Desktop Icon Backup Manager")
+        dlg.setWindowTitle(self.tr("About") + " — " + "Desktop Icon Backup Manager")
         dlg.setFixedSize(420, 340)
 
         root = QVBoxLayout(dlg)
@@ -1572,7 +1572,7 @@ class MainWindow(QMainWindow):
             </tr>
             <tr style='background-color: {c_row_even}; color: {c_text};'>
                 <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+M</b></td>
-                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Open Backup Manager")}</td>
+                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Open") + " Backup Manager"}</td>
             </tr>
             <tr style='background-color: {c_row_odd}; color: {c_text};'>
                 <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+H</b></td>
