@@ -51,6 +51,8 @@ from utils.helpers import (
     get_resolution_from_filename,
 )
 from ui.backup_dialog import BackupManagerWindow, _ask
+import ui.autohide as autohide
+import ui.dialogs as dialogs
 from ui.update_dialog import UpdateDialog
 from ui.preview_widget import DiffPreviewWidget, make_legend_widget
 from utils.logging_config import get_logger, attach_gui_handler, clear_log_file
@@ -636,214 +638,48 @@ class MainWindow(QMainWindow):
         for limit, action in self.cleanup_actions.items():
             action.setChecked(limit == current_limit)
 
-    # ── Auto-Hide Desktop Icons ──────────────────────────────────────────────
+    # ── Auto-Hide Desktop Icons (logica in ui/autohide.py) ──────────────────
 
     def _toggle_autohide(self, checked: bool):
-        """Enable or disable the auto-hide timer."""
-        self.settings.setValue("autohide_enabled", checked)
-        # Keep both menu and tray checkmarks in sync
-        self.action_autohide_enabled.setChecked(checked)
-        self.action_tray_autohide.setChecked(checked)
-        if checked:
-            total_sec = self.settings.value("autohide_seconds", 300, type=int)
-            self.log(
-                self.tr("Auto-Hide enabled: icons will be hidden after %1.").replace(
-                    "%1", self._format_duration(total_sec)
-                )
-            )
-            # Start only if icons are currently visible
-            if self.visibility_manager.get_current_visibility_state():
-                self._start_autohide_timer()
-        else:
-            self._stop_autohide_timer()
-            self.log(self.tr("Auto-Hide disabled."))
+        autohide.toggle_autohide(self, checked)
 
     def _set_autohide_seconds(self, seconds: int):
-        """Change the auto-hide interval (in seconds)."""
-        self.settings.setValue("autohide_seconds", seconds)
-        self._update_autohide_time_menu_check(seconds)
-        self.log(
-            self.tr("Auto-Hide interval set to %1.").replace(
-                "%1", self._format_duration(seconds)
-            )
-        )
-        # Restart the timer if auto-hide is active
-        if self.settings.value("autohide_enabled", False, type=bool):
-            if self.visibility_manager.get_current_visibility_state():
-                self._start_autohide_timer()
+        autohide.set_autohide_seconds(self, seconds)
 
     def _update_autohide_time_menu_check(self, current_seconds: int):
-        """Update checkmarks in the auto-hide interval submenu."""
-        is_preset = False
-        for seconds, action in self.autohide_time_actions.items():
-            matched = seconds == current_seconds
-            action.setChecked(matched)
-            if matched:
-                is_preset = True
-        # If no preset matched, the value is custom
-        self.action_autohide_custom.setChecked(not is_preset)
-        if not is_preset:
-            self.action_autohide_custom.setText(
-                self.tr("Custom (%1)").replace(
-                    "%1", self._format_duration(current_seconds)
-                )
-            )
-        else:
-            self.action_autohide_custom.setText(self.tr("Custom..."))
+        autohide.update_autohide_time_menu_check(self, current_seconds)
 
     def _ask_custom_autohide_time(self):
-        """Show a dialog with minutes + seconds spin boxes for custom interval."""
-        from PyQt6.QtWidgets import (
-            QDialog,
-            QVBoxLayout,
-            QHBoxLayout,
-            QLabel,
-            QSpinBox,
-            QPushButton,
-            QDialogButtonBox,
-        )
-
-        current = self.settings.value("autohide_seconds", 300, type=int)
-        cur_m, cur_s = divmod(current, 60)
-
-        dlg = QDialog(self)
-        dlg.setWindowTitle(self.tr("Custom Auto-Hide Interval"))
-        dlg.setFixedWidth(320)
-
-        layout = QVBoxLayout(dlg)
-        layout.setSpacing(12)
-        layout.setContentsMargins(20, 20, 20, 20)
-
-        layout.addWidget(QLabel(self.tr("Hide desktop icons after:")))
-
-        row = QHBoxLayout()
-
-        spin_min = QSpinBox()
-        spin_min.setRange(0, 60)
-        spin_min.setValue(cur_m)
-        spin_min.setSuffix(f"  {self.tr('minutes')}")
-        spin_min.setMinimumWidth(110)
-        row.addWidget(spin_min)
-
-        spin_sec = QSpinBox()
-        spin_sec.setRange(0, 59)
-        spin_sec.setValue(cur_s)
-        spin_sec.setSuffix(f"  {self.tr('seconds')}")
-        spin_sec.setMinimumWidth(90)
-        row.addWidget(spin_sec)
-
-        layout.addLayout(row)
-
-        buttons = QDialogButtonBox(
-            QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel
-        )
-        buttons.accepted.connect(dlg.accept)
-        buttons.rejected.connect(dlg.reject)
-        layout.addWidget(buttons)
-
-        if dlg.exec() == QDialog.DialogCode.Accepted:
-            total = spin_min.value() * 60 + spin_sec.value()
-            if total < 10:
-                total = 10  # minimum 10 seconds
-            self._set_autohide_seconds(total)
+        autohide.ask_custom_autohide_time(self)
 
     def _format_duration(self, seconds: int) -> str:
-        """Format seconds as translatable 'X minutes Y seconds' etc."""
-        m, s = divmod(seconds, 60)
-        if m and s:
-            return (
-                self.tr("%n minute(s)", "duration", m)
-                + " "
-                + self.tr("%n second(s)", "duration", s)
-            )
-        elif m:
-            return self.tr("%n minute(s)", "duration", m)
-        else:
-            return self.tr("%n second(s)", "duration", s)
+        return autohide.format_duration(self, seconds)
 
     def _start_autohide_timer(self):
-        """Start (or restart) the auto-hide countdown."""
-        if not self.settings.value("autohide_enabled", False, type=bool):
-            return
-        total_sec = self.settings.value("autohide_seconds", 300, type=int)
-        self._autohide_remaining_sec = total_sec
-        self.autohide_timer.start(total_sec * 1000)
-        self.autohide_tick_timer.start()
-        self._update_tray_autohide_tooltip()
+        autohide.start_autohide_timer(self)
 
     def _stop_autohide_timer(self):
-        """Stop the auto-hide countdown and reset the tray tooltip."""
-        self.autohide_timer.stop()
-        self.autohide_tick_timer.stop()
-        self._autohide_remaining_sec = 0
-        self._update_tray_autohide_tooltip()
+        autohide.stop_autohide_timer(self)
 
     def _on_autohide_tick(self):
-        """Called every second to update the countdown tooltip."""
-        if self._autohide_remaining_sec > 0:
-            self._autohide_remaining_sec -= 1
-        self._update_tray_autohide_tooltip()
+        autohide.on_autohide_tick(self)
 
     def _update_tray_autohide_tooltip(self):
-        """Update the tray icon tooltip with auto-hide status."""
-        base = "Desktop Icon Backup Manager"
-        if not self.settings.value("autohide_enabled", False, type=bool):
-            self.tray_icon.setToolTip(base)
-            return
-
-        is_visible = self.visibility_manager.get_current_visibility_state()
-        if not is_visible:
-            self.tray_icon.setToolTip(f"{base}\n{self.tr('Desktop icons are hidden')}")
-            return
-
-        remaining = self._autohide_remaining_sec
-        if remaining > 0:
-            mins, secs = divmod(remaining, 60)
-            self.tray_icon.setToolTip(
-                f"{base}\n{self.tr('Auto-Hide in %1').replace('%1', f'{mins}:{secs:02d}')}"
-            )
-        else:
-            self.tray_icon.setToolTip(base)
+        autohide.update_tray_autohide_tooltip(self)
 
     def _on_autohide_timeout(self):
-        """Called when the auto-hide timer expires — hide the desktop icons."""
-        self.autohide_tick_timer.stop()
-        self._autohide_remaining_sec = 0
-
-        # Optional backup before hiding — run asynchronously via IconWorker
-        if self.settings.value("autohide_backup_before_hide", True, type=bool):
-            self.log(self.tr("Auto-Hide: creating backup before hiding icons..."))
-            cleanup_limit = self.settings.value("cleanup_limit", 0, type=int)
-            self._autohide_worker = IconWorker(
-                "save",
-                description=self.tr("Auto-Hide Backup"),
-                max_backup_count=cleanup_limit,
-                manager=self.manager,
-            )
-            self._autohide_worker.log_signal.connect(lambda msg: self.log(f"  {msg}"))
-            self._autohide_worker.finished_signal.connect(self._on_autohide_backup_done)
-            self._autohide_worker.start()
-        else:
-            self._do_autohide_icons()
+        autohide.on_autohide_timeout(self)
 
     def _on_autohide_backup_done(self, success: bool, metadata):
-        """Called when the pre-autohide backup finishes."""
-        self._autohide_worker = None
-        self._do_autohide_icons()
+        autohide.on_autohide_backup_done(self, success, metadata)
 
     def _do_autohide_icons(self):
-        """Actually hide the desktop icons (called after optional backup)."""
-        self.log(self.tr("Auto-Hide: hiding desktop icons now."))
-        self.visibility_manager.hide_icons(self.log)
-        self._update_tray_autohide_tooltip()
+        autohide.do_autohide_icons(self)
 
     def _restart_autohide_if_icons_visible(self):
-        """Convenience: restart the auto-hide timer when icons become visible."""
-        if self.settings.value("autohide_enabled", False, type=bool):
-            if self.visibility_manager.get_current_visibility_state():
-                self._start_autohide_timer()
-            else:
-                self._stop_autohide_timer()
+        autohide.restart_autohide_if_icons_visible(self)
+
+    # ─────────────────────────────────────────────────────────────────────────
 
     # ─────────────────────────────────────────────────────────────────────────
 
@@ -970,119 +806,7 @@ class MainWindow(QMainWindow):
         self._start_restore(filename)
 
     def show_about_dialog(self):
-        from PyQt6.QtWidgets import (
-            QDialog,
-            QVBoxLayout,
-            QHBoxLayout,
-            QLabel,
-            QPushButton,
-        )
-        from PyQt6.QtGui import QPixmap, QFont
-        from PyQt6.QtCore import Qt, QSize
-
-        dlg = QDialog(self)
-        dlg.setWindowTitle(self.tr("About") + " — " + "Desktop Icon Backup Manager")
-        dlg.setFixedSize(420, 340)
-
-        root = QVBoxLayout(dlg)
-        root.setSpacing(0)
-        root.setContentsMargins(0, 0, 0, 0)
-
-        # ── Top banner ────────────────────────────────────────────────────
-        banner = QWidget()
-        banner.setStyleSheet("background: #0078D7;")
-        banner.setFixedHeight(90)
-        banner_lay = QHBoxLayout(banner)
-        banner_lay.setContentsMargins(24, 0, 24, 0)
-        banner_lay.setSpacing(16)
-
-        icon_lbl = QLabel()
-        pix = QPixmap(resource_path("icon.png"))
-        if not pix.isNull():
-            icon_lbl.setPixmap(
-                pix.scaled(
-                    QSize(52, 52),
-                    Qt.AspectRatioMode.KeepAspectRatio,
-                    Qt.TransformationMode.SmoothTransformation,
-                )
-            )
-        icon_lbl.setStyleSheet("background: transparent;")
-        banner_lay.addWidget(icon_lbl)
-
-        title_col = QVBoxLayout()
-        title_col.setSpacing(2)
-        app_name = QLabel("Desktop Icon Backup Manager")
-        app_name.setStyleSheet(
-            "font-size: 16px; font-weight: bold; color: #ffffff;"
-            " background: transparent;"
-        )
-        title_col.addWidget(app_name)
-        banner_lay.addLayout(title_col)
-        banner_lay.addStretch()
-        root.addWidget(banner)
-
-        # ── Body ──────────────────────────────────────────────────────────
-        body = QVBoxLayout()
-        body.setSpacing(14)
-        body.setContentsMargins(24, 20, 24, 16)
-
-        desc = QLabel(
-            self.tr(
-                "A simple yet powerful tool to save and restore "
-                "Windows desktop icon positions."
-            )
-        )
-        desc.setWordWrap(True)
-        desc.setStyleSheet("font-size: 13px;")
-        body.addWidget(desc)
-
-        # ── Info grid ─────────────────────────────────────────────────────
-        info_grid = QVBoxLayout()
-        info_grid.setSpacing(6)
-
-        for label, value, color in [
-            (self.tr("Version:"), Config.VERSION, "palette(text)"),
-            (self.tr("Development:"), "mapi68", "palette(text)"),
-        ]:
-            row = QHBoxLayout()
-            row.setSpacing(8)
-            lbl = QLabel(f"<b>{label}</b>")
-            lbl.setFixedWidth(100)
-            lbl.setStyleSheet("font-size: 12px; color: palette(placeholderText);")
-            val = QLabel(value)
-            val.setStyleSheet(f"font-size: 12px; color: {color};")
-            row.addWidget(lbl)
-            row.addWidget(val)
-            row.addStretch()
-            info_grid.addLayout(row)
-
-        body.addLayout(info_grid)
-        body.addStretch()
-
-        # ── Bottom buttons ────────────────────────────────────────────────
-        btn_row = QHBoxLayout()
-        btn_row.setSpacing(10)
-
-        kofi_btn = QPushButton(self.tr("Support on Ko-fi"))
-        kofi_btn.setStyleSheet(
-            "QPushButton { background: #FF5E5B; color: white; border: none;"
-            " border-radius: 4px; padding: 7px 16px; font-size: 12px;"
-            " font-weight: bold; }"
-            "QPushButton:hover { background: #E54542; }"
-        )
-        kofi_btn.clicked.connect(self.open_kofi)
-
-        close_btn = QPushButton(self.tr("Close"))
-        close_btn.setMinimumHeight(32)
-        close_btn.clicked.connect(dlg.accept)
-
-        btn_row.addWidget(kofi_btn)
-        btn_row.addStretch()
-        btn_row.addWidget(close_btn)
-        body.addLayout(btn_row)
-
-        root.addLayout(body)
-        dlg.exec()
+        dialogs.show_about_dialog(self)
 
     def confirm_and_delete_all_backups(self):
         backup_count = len(self.manager.get_all_backup_filenames())
@@ -1548,70 +1272,7 @@ class MainWindow(QMainWindow):
         dlg.exec()
 
     def show_shortcuts_dialog(self):
-        # Derive colors from the current system palette for light/dark compatibility
-        pal = self.palette()
-        _c = lambda role: pal.color(role).name()
-        c_header_bg = _c(pal.ColorRole.Dark)
-        c_header_fg = _c(pal.ColorRole.BrightText)
-        c_border = _c(pal.ColorRole.Mid)
-        c_row_even = _c(pal.ColorRole.AlternateBase)
-        c_row_odd = _c(pal.ColorRole.Base)
-        c_text = _c(pal.ColorRole.Text)
-        c_dim = _c(pal.ColorRole.PlaceholderText)
-
-        shortcuts_text = f"""
-        <h2>{self.tr("Keyboard Shortcuts")}</h2>
-        <table style='width:100%; border-collapse: collapse;'>
-            <tr style='background-color: {c_header_bg}; color: {c_header_fg};'>
-                <th style='padding: 8px; text-align: left; border: 1px solid {c_border};'>{self.tr("Shortcut")}</th>
-                <th style='padding: 8px; text-align: left; border: 1px solid {c_border};'>{self.tr("Action")}</th>
-            </tr>
-            <tr style='background-color: {c_row_odd}; color: {c_text};'>
-                <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+S</b></td>
-                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Quick Save current layout")}</td>
-            </tr>
-            <tr style='background-color: {c_row_even}; color: {c_text};'>
-                <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+M</b></td>
-                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Open") + " Backup Manager"}</td>
-            </tr>
-            <tr style='background-color: {c_row_odd}; color: {c_text};'>
-                <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+H</b></td>
-                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Show/Hide Desktop Icons")}</td>
-            </tr>
-            <tr style='background-color: {c_row_even}; color: {c_text};'>
-                <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+,</b></td>
-                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Open Settings menu")}</td>
-            </tr>
-            <tr style='background-color: {c_row_odd}; color: {c_text};'>
-                <td style='padding: 8px; border: 1px solid {c_border};'><b>F1</b></td>
-                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Open Online User Manual")}</td>
-            </tr>
-            <tr style='background-color: {c_row_even}; color: {c_text};'>
-                <td style='padding: 8px; border: 1px solid {c_border};'><b>Ctrl+Q</b></td>
-                <td style='padding: 8px; border: 1px solid {c_border};'>{self.tr("Exit Application")}</td>
-            </tr>
-        </table>
-        <br>
-        <p style='color: {c_dim}; font-size: 11px;'>{self.tr("Tip: Hover over buttons to see additional shortcuts in tooltips.")}</p>
-        """
-
-        dialog = QDialog(self)
-        dialog.setWindowTitle(self.tr("Keyboard Shortcuts"))
-        dialog.setMinimumWidth(Config.SHORTCUTS_DIALOG_MIN_WIDTH)
-        dialog.setMinimumHeight(Config.SHORTCUTS_DIALOG_MIN_HEIGHT)
-
-        layout = QVBoxLayout(dialog)
-
-        text_browser = QTextEdit()
-        text_browser.setReadOnly(True)
-        text_browser.setHtml(shortcuts_text)
-        layout.addWidget(text_browser)
-
-        btn_close = QPushButton(self.tr("Close"))
-        btn_close.clicked.connect(dialog.accept)
-        layout.addWidget(btn_close)
-
-        dialog.exec()
+        dialogs.show_shortcuts_dialog(self)
 
     def toggle_icon_visibility(self):
         """Toggle the visibility of desktop icons"""

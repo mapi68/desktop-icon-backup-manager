@@ -902,314 +902,471 @@ Are you sure you want to proceed?</source>
 </context><context>
     <name>MainWindow</name>
     <message>
-        <location filename="..\ui\main_window.py" line="67" />
-        <source>Unknown</source>
-        <translation>अज्ञात</translation>
+        <location filename="..\ui\autohide.py" line="25" />
+        <source>Auto-Hide enabled: icons will be hidden after %1.</source>
+        <translation>ऑटो-हाइड सक्षम: आइकन %1 के बाद छिपाए जाएंगे।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="120" />
-        <source>Quick Save</source>
-        <translation>त्वरित सहेजें</translation>
+        <location filename="..\ui\autohide.py" line="34" />
+        <source>Auto-Hide disabled.</source>
+        <translation>ऑटो-हाइड अक्षम।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="122" />
-        <source>Quick Save (Tray)</source>
-        <translation>त्वरित सहेजें (ट्रे)</translation>
+        <location filename="..\ui\autohide.py" line="42" />
+        <source>Auto-Hide interval set to %1.</source>
+        <translation>ऑटो-हाइड अंतराल %1 पर सेट किया गया।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="126" />
-        <source>Restore Latest</source>
-        <translation>नवीनतम पुनर्स्थापित करें</translation>
+        <location filename="..\ui\autohide.py" line="64" />
+        <source>Custom (%1)</source>
+        <translation>कस्टम (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1579" />
-        <location filename="..\ui\main_window.py" line="205" />
-        <location filename="..\ui\main_window.py" line="133" />
-        <source>Show/Hide Desktop Icons</source>
-        <translation>डेस्कटॉप आइकन दिखाएँ/छिपाएँ</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="138" />
-        <source>Show Desktop Icons</source>
-        <translation>डेस्कटॉप आइकन दिखाएँ</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="142" />
-        <source>Hide Desktop Icons</source>
-        <translation>डेस्कटॉप आइकन छिपाएँ</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="149" />
-        <source>⏱️ Auto-Hide Timer</source>
-        <translation>⏱️ ऑटो-हाइड टाइमर</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="156" />
-        <source>Show Window</source>
-        <translation>विंडो दिखाएं</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="160" />
-        <source>Exit</source>
-        <translation>बाहर निकलें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="187" />
-        <source>&amp;File</source>
-        <translation>&amp;फ़ाइल</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="190" />
-        <source>Scramble Desktop Icons (Random)</source>
-        <translation>डेस्कटॉप आइकन फेरबदल करें (यादृच्छिक)</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="193" />
-        <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
-        <translation>अनिवार्य बैकअप बनाने के बाद सभी डेस्कटॉप आइकन की स्थिति यादृच्छिक करता है।</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="203" />
-        <source>👁️ Desktop Icons Visibility</source>
-        <translation>👁️ डेस्कटॉप आइकन दृश्यता</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="208" />
-        <source>Toggle visibility of all desktop icons (Ctrl+H)</source>
-        <translation>सभी डेस्कटॉप आइकन की दृश्यता टॉगल करें (Ctrl+H)</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="213" />
-        <source>Show Icons</source>
-        <translation>आइकन दिखाएँ</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="217" />
-        <source>Hide Icons</source>
-        <translation>आइकन छिपाएँ</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="223" />
-        <source>Remove All Backups...</source>
-        <translation>सभी बैकअप हटाएं...</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="229" />
-        <source>📤 Export Backups...</source>
-        <translation>📤 बैकअप निर्यात करें...</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="230" />
-        <source>Export backups to a folder or ZIP archive</source>
-        <translation>बैकअप को किसी फ़ोल्डर या ZIP संग्रह में निर्यात करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="234" />
-        <source>📥 Import Backups...</source>
-        <translation>📥 बैकअप आयात करें...</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="236" />
-        <source>Import backup files (.json) or a ZIP archive</source>
-        <translation>बैकअप फ़ाइलें (.json) या ZIP संग्रह आयात करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="242" />
-        <source>E&amp;xit</source>
-        <translation>बा&amp;हर निकलें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="543" />
-        <location filename="..\ui\main_window.py" line="247" />
-        <source>&amp;Settings</source>
-        <translation>&amp;सेटिंग्स</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="249" />
-        <source>Open Settings Menu</source>
-        <translation>सेटिंग्स मेनू खोलें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1472" />
-        <location filename="..\ui\main_window.py" line="255" />
-        <source>Auto-Save on Exit</source>
-        <translation>बाहर निकलने पर स्वतः सहेजें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="263" />
-        <source>Auto-Restore on Startup</source>
-        <translation>स्टार्टअप पर स्वतः पुनर्स्थापित करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="271" />
-        <source>Check for Updates on Startup</source>
-        <translation>स्टार्टअप पर अपडेट जांचें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="282" />
-        <source>Enable Adaptive Scaling on Restore</source>
-        <translation>पुनर्स्थापना पर अनुकूली स्केलिंग सक्षम करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="293" />
-        <source>Start Minimized to Tray</source>
-        <translation>सिस्टम ट्रे में न्यूनतम करके प्रारंभ करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="301" />
-        <source>Minimize to Tray on Close ('X' button)</source>
-        <translation>बंद करने पर ट्रे में न्यूनतम करें ('X' बटन)</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="311" />
-        <source>🗑️ Automatic Backup Cleanup Limit</source>
-        <translation>🗑️ स्वचालित बैकअप सफाई सीमा</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="316" />
-        <source>Disabled (Keep All)</source>
-        <translation>अक्षम (सभी रखें)</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="317" />
-        <source>Keep Last 5</source>
-        <translation>अंतिम 5 रखें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="318" />
-        <source>Keep Last 10</source>
-        <translation>अंतिम 10 रखें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="319" />
-        <source>Keep Last 25</source>
-        <translation>अंतिम 25 रखें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="320" />
-        <source>Keep Last 50</source>
-        <translation>अंतिम 50 रखें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="334" />
-        <source>⏱️ Auto-Hide Desktop Icons</source>
-        <translation>⏱️ डेस्कटॉप आइकन स्वचालित रूप से छिपाएं</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="338" />
-        <source>Enable Auto-Hide Timer</source>
-        <translation>ऑटो-हाइड टाइमर सक्षम करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="345" />
-        <source>Hide After...</source>
-        <translation>इसके बाद छिपाएं...</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="351" />
-        <source>30 seconds</source>
-        <translation>30 सेकंड</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="352" />
-        <source>1 minute</source>
-        <translation>1 मिनट</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="353" />
-        <source>2 minutes</source>
-        <translation>2 मिनट</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="354" />
-        <source>5 minutes</source>
-        <translation>5 मिनट</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="355" />
-        <source>10 minutes</source>
-        <translation>10 मिनट</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="356" />
-        <source>15 minutes</source>
-        <translation>15 मिनट</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="357" />
-        <source>30 minutes</source>
-        <translation>30 मिनट</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="692" />
-        <location filename="..\ui\main_window.py" line="371" />
+        <location filename="..\ui\main_window.py" line="373" />
+        <location filename="..\ui\autohide.py" line="70" />
         <source>Custom...</source>
         <translation>कस्टम...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="381" />
-        <source>Backup Before Auto-Hide</source>
-        <translation>ऑटो-हाइड से पहले बैकअप</translation>
+        <location filename="..\ui\autohide.py" line="81" />
+        <source>Custom Auto-Hide Interval</source>
+        <translation>कस्टम ऑटो-हाइड अंतराल</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="390" />
-        <source>&amp;Help</source>
-        <translation>&amp;सहायता</translation>
+        <location filename="..\ui\autohide.py" line="90" />
+        <source>Hide desktop icons after:</source>
+        <translation>इसके बाद डेस्कटॉप आइकन छिपाएं:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="392" />
-        <source>Online User Manual</source>
-        <translation>ऑनलाइन उपयोगकर्ता मैनुअल</translation>
+        <location filename="..\ui\autohide.py" line="98" />
+        <source>minutes</source>
+        <translation>मिनट</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1599" />
-        <location filename="..\ui\main_window.py" line="1563" />
-        <location filename="..\ui\main_window.py" line="399" />
+        <location filename="..\ui\autohide.py" line="105" />
+        <source>seconds</source>
+        <translation>सेकंड</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="..\ui\autohide.py" line="135" />
+        <location filename="..\ui\autohide.py" line="130" />
+        <source>%n minute(s)</source>
+        <comment>duration</comment>
+        <translation>
+            <numerusform>%n मिनट</numerusform>
+            <numerusform>%n मिनट</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="..\ui\autohide.py" line="137" />
+        <location filename="..\ui\autohide.py" line="132" />
+        <source>%n second(s)</source>
+        <comment>duration</comment>
+        <translation>
+            <numerusform>%n सेकंड</numerusform>
+            <numerusform>%n सेकंड</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="..\ui\autohide.py" line="176" />
+        <source>Desktop icons are hidden</source>
+        <translation>डेस्कटॉप आइकन छिपे हुए हैं</translation>
+    </message>
+    <message>
+        <location filename="..\ui\autohide.py" line="184" />
+        <source>Auto-Hide in %1</source>
+        <translation>ऑटो-हाइड %1 में</translation>
+    </message>
+    <message>
+        <location filename="..\ui\autohide.py" line="198" />
+        <source>Auto-Hide: creating backup before hiding icons...</source>
+        <translation>ऑटो-हाइड: आइकन छिपाने से पहले बैकअप बनाया जा रहा है...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\autohide.py" line="205" />
+        <source>Auto-Hide Backup</source>
+        <translation>ऑटो-हाइड बैकअप</translation>
+    </message>
+    <message>
+        <location filename="..\ui\autohide.py" line="227" />
+        <source>Auto-Hide: hiding desktop icons now.</source>
+        <translation>ऑटो-हाइड: डेस्कटॉप आइकन अभी छिपाए जा रहे हैं।</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="22" />
+        <source>About</source>
+        <translation>के बारे में</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="71" />
+        <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
+        <translation>Windows डेस्कटॉप आइकन स्थितियाँ सहेजने और पुनर्स्थापित करने के लिए एक सरल लेकिन शक्तिशाली उपकरण।</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="87" />
+        <source>Version:</source>
+        <translation>संस्करण:</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="92" />
+        <source>Development:</source>
+        <translation>विकास:</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="524" />
+        <location filename="..\ui\dialogs.py" line="116" />
+        <source>Support on Ko-fi</source>
+        <translation>Ko-fi पर समर्थन करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="199" />
+        <location filename="..\ui\dialogs.py" line="125" />
+        <source>Close</source>
+        <translation>बंद करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="401" />
+        <location filename="..\ui\dialogs.py" line="187" />
+        <location filename="..\ui\dialogs.py" line="150" />
         <source>Keyboard Shortcuts</source>
         <translation>कीबोर्ड शॉर्टकट</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="403" />
+        <location filename="..\ui\dialogs.py" line="153" />
+        <source>Shortcut</source>
+        <translation>शॉर्टकट</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="154" />
+        <source>Action</source>
+        <translation>क्रिया</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="158" />
+        <source>Quick Save current layout</source>
+        <translation>वर्तमान लेआउट त्वरित सहेजें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="162" />
+        <source>Open</source>
+        <translation>खोलें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="207" />
+        <location filename="..\ui\main_window.py" line="135" />
+        <location filename="..\ui\dialogs.py" line="166" />
+        <source>Show/Hide Desktop Icons</source>
+        <translation>डेस्कटॉप आइकन दिखाएँ/छिपाएँ</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="170" />
+        <source>Open Settings menu</source>
+        <translation>सेटिंग्स मेनू खोलें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="174" />
+        <source>Open Online User Manual</source>
+        <translation>ऑनलाइन उपयोगकर्ता मैनुअल खोलें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="178" />
+        <source>Exit Application</source>
+        <translation>एप्लिकेशन बंद करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\dialogs.py" line="182" />
+        <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
+        <translation>सुझाव: टूलटिप्स में अतिरिक्त शॉर्टकट देखने के लिए बटनों पर माउस ले जाएं।</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="69" />
+        <source>Unknown</source>
+        <translation>अज्ञात</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="122" />
+        <source>Quick Save</source>
+        <translation>त्वरित सहेजें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="124" />
+        <source>Quick Save (Tray)</source>
+        <translation>त्वरित सहेजें (ट्रे)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="128" />
+        <source>Restore Latest</source>
+        <translation>नवीनतम पुनर्स्थापित करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="140" />
+        <source>Show Desktop Icons</source>
+        <translation>डेस्कटॉप आइकन दिखाएँ</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="144" />
+        <source>Hide Desktop Icons</source>
+        <translation>डेस्कटॉप आइकन छिपाएँ</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="151" />
+        <source>⏱️ Auto-Hide Timer</source>
+        <translation>⏱️ ऑटो-हाइड टाइमर</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="158" />
+        <source>Show Window</source>
+        <translation>विंडो दिखाएं</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="162" />
+        <source>Exit</source>
+        <translation>बाहर निकलें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="189" />
+        <source>&amp;File</source>
+        <translation>&amp;फ़ाइल</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="192" />
+        <source>Scramble Desktop Icons (Random)</source>
+        <translation>डेस्कटॉप आइकन फेरबदल करें (यादृच्छिक)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="195" />
+        <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
+        <translation>अनिवार्य बैकअप बनाने के बाद सभी डेस्कटॉप आइकन की स्थिति यादृच्छिक करता है।</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="205" />
+        <source>👁️ Desktop Icons Visibility</source>
+        <translation>👁️ डेस्कटॉप आइकन दृश्यता</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="210" />
+        <source>Toggle visibility of all desktop icons (Ctrl+H)</source>
+        <translation>सभी डेस्कटॉप आइकन की दृश्यता टॉगल करें (Ctrl+H)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="215" />
+        <source>Show Icons</source>
+        <translation>आइकन दिखाएँ</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="219" />
+        <source>Hide Icons</source>
+        <translation>आइकन छिपाएँ</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="225" />
+        <source>Remove All Backups...</source>
+        <translation>सभी बैकअप हटाएं...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="231" />
+        <source>📤 Export Backups...</source>
+        <translation>📤 बैकअप निर्यात करें...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="232" />
+        <source>Export backups to a folder or ZIP archive</source>
+        <translation>बैकअप को किसी फ़ोल्डर या ZIP संग्रह में निर्यात करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="236" />
+        <source>📥 Import Backups...</source>
+        <translation>📥 बैकअप आयात करें...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="238" />
+        <source>Import backup files (.json) or a ZIP archive</source>
+        <translation>बैकअप फ़ाइलें (.json) या ZIP संग्रह आयात करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="244" />
+        <source>E&amp;xit</source>
+        <translation>बा&amp;हर निकलें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="545" />
+        <location filename="..\ui\main_window.py" line="249" />
+        <source>&amp;Settings</source>
+        <translation>&amp;सेटिंग्स</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="251" />
+        <source>Open Settings Menu</source>
+        <translation>सेटिंग्स मेनू खोलें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1196" />
+        <location filename="..\ui\main_window.py" line="257" />
+        <source>Auto-Save on Exit</source>
+        <translation>बाहर निकलने पर स्वतः सहेजें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="265" />
+        <source>Auto-Restore on Startup</source>
+        <translation>स्टार्टअप पर स्वतः पुनर्स्थापित करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="273" />
+        <source>Check for Updates on Startup</source>
+        <translation>स्टार्टअप पर अपडेट जांचें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="284" />
+        <source>Enable Adaptive Scaling on Restore</source>
+        <translation>पुनर्स्थापना पर अनुकूली स्केलिंग सक्षम करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="295" />
+        <source>Start Minimized to Tray</source>
+        <translation>सिस्टम ट्रे में न्यूनतम करके प्रारंभ करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="303" />
+        <source>Minimize to Tray on Close ('X' button)</source>
+        <translation>बंद करने पर ट्रे में न्यूनतम करें ('X' बटन)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="313" />
+        <source>🗑️ Automatic Backup Cleanup Limit</source>
+        <translation>🗑️ स्वचालित बैकअप सफाई सीमा</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="318" />
+        <source>Disabled (Keep All)</source>
+        <translation>अक्षम (सभी रखें)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="319" />
+        <source>Keep Last 5</source>
+        <translation>अंतिम 5 रखें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="320" />
+        <source>Keep Last 10</source>
+        <translation>अंतिम 10 रखें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="321" />
+        <source>Keep Last 25</source>
+        <translation>अंतिम 25 रखें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="322" />
+        <source>Keep Last 50</source>
+        <translation>अंतिम 50 रखें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="336" />
+        <source>⏱️ Auto-Hide Desktop Icons</source>
+        <translation>⏱️ डेस्कटॉप आइकन स्वचालित रूप से छिपाएं</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="340" />
+        <source>Enable Auto-Hide Timer</source>
+        <translation>ऑटो-हाइड टाइमर सक्षम करें</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="347" />
+        <source>Hide After...</source>
+        <translation>इसके बाद छिपाएं...</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="353" />
+        <source>30 seconds</source>
+        <translation>30 सेकंड</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="354" />
+        <source>1 minute</source>
+        <translation>1 मिनट</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="355" />
+        <source>2 minutes</source>
+        <translation>2 मिनट</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="356" />
+        <source>5 minutes</source>
+        <translation>5 मिनट</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="357" />
+        <source>10 minutes</source>
+        <translation>10 मिनट</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="358" />
+        <source>15 minutes</source>
+        <translation>15 मिनट</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="359" />
+        <source>30 minutes</source>
+        <translation>30 मिनट</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="383" />
+        <source>Backup Before Auto-Hide</source>
+        <translation>ऑटो-हाइड से पहले बैकअप</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="392" />
+        <source>&amp;Help</source>
+        <translation>&amp;सहायता</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="394" />
+        <source>Online User Manual</source>
+        <translation>ऑनलाइन उपयोगकर्ता मैनुअल</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="405" />
         <source>Statistics Dashboard</source>
         <translation>सांख्यिकी डैशबोर्ड</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="409" />
+        <location filename="..\ui\main_window.py" line="411" />
         <source>Check for Updates...</source>
         <translation>अपडेट जांचें...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="415" />
+        <location filename="..\ui\main_window.py" line="417" />
         <source>&amp;About</source>
         <translation>&amp;के बारे में</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="421" />
+        <location filename="..\ui\main_window.py" line="423" />
         <source>Support on Ko-fi...</source>
         <translation>Ko-fi पर समर्थन करें...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="436" />
+        <location filename="..\ui\main_window.py" line="438" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>वैकल्पिक: एक वर्णनात्मक टैग/विवरण दर्ज करें...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="443" />
+        <location filename="..\ui\main_window.py" line="445" />
         <source>Select a profile to auto-fill the tag field</source>
         <translation>टैग फ़ील्ड स्वतः भरने के लिए कोई प्रोफ़ाइल चुनें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="449" />
+        <location filename="..\ui\main_window.py" line="451" />
         <source>Save Tag:</source>
         <translation>सहेजें टैग:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="457" />
+        <location filename="..\ui\main_window.py" line="459" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 त्वरित बैकअप सहेजें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="461" />
+        <location filename="..\ui\main_window.py" line="463" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -1218,17 +1375,17 @@ Shortcut: Ctrl+S</source>
 शॉर्टकट: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="469" />
+        <location filename="..\ui\main_window.py" line="471" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ नवीनतम पुनर्स्थापित करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="472" />
+        <location filename="..\ui\main_window.py" line="474" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>पाई गई नवीनतम बैकअप फ़ाइल से आइकन स्थितियाँ पुनर्स्थापित करें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="481" />
+        <location filename="..\ui\main_window.py" line="483" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -1237,12 +1394,12 @@ Shortcut: Ctrl+M</source>
 शॉर्टकट: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="489" />
+        <location filename="..\ui\main_window.py" line="491" />
         <source>👁️ SHOW/HIDE ICONS</source>
         <translation>👁️ आइकन दिखाएँ/छिपाएँ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="492" />
+        <location filename="..\ui\main_window.py" line="494" />
         <source>Show or hide all desktop icons.
 
 Shortcut: Ctrl+H</source>
@@ -1251,51 +1408,45 @@ Shortcut: Ctrl+H</source>
 शॉर्टकट: Ctrl+H</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="504" />
+        <location filename="..\ui\main_window.py" line="506" />
         <source>Activity Log:</source>
         <translation>गतिविधि लॉग:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="515" />
+        <location filename="..\ui\main_window.py" line="517" />
         <source>Current Resolution: %1</source>
         <translation>वर्तमान रिज़ॉल्यूशन: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1066" />
-        <location filename="..\ui\main_window.py" line="522" />
-        <source>Support on Ko-fi</source>
-        <translation>Ko-fi पर समर्थन करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="528" />
+        <location filename="..\ui\main_window.py" line="530" />
         <source>Clear Log</source>
         <translation>लॉग साफ़ करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="551" />
+        <location filename="..\ui\main_window.py" line="553" />
         <source>Settings menu not found</source>
         <translation>सेटिंग्स मेनू नहीं मिला</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="563" />
+        <location filename="..\ui\main_window.py" line="565" />
         <source>Opening online user manual in browser...</source>
         <translation>ब्राउज़र में ऑनलाइन उपयोगकर्ता मैनुअल खोला जा रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="565" />
+        <location filename="..\ui\main_window.py" line="567" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ मैनुअल URL खोलने में विफल</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1387" />
-        <location filename="..\ui\main_window.py" line="1159" />
-        <location filename="..\ui\main_window.py" line="1122" />
-        <location filename="..\ui\main_window.py" line="568" />
+        <location filename="..\ui\main_window.py" line="1111" />
+        <location filename="..\ui\main_window.py" line="883" />
+        <location filename="..\ui\main_window.py" line="846" />
+        <location filename="..\ui\main_window.py" line="570" />
         <source>Error</source>
         <translation>त्रुटि</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="569" />
+        <location filename="..\ui\main_window.py" line="571" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -1306,17 +1457,17 @@ Please visit manually:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="576" />
+        <location filename="..\ui\main_window.py" line="578" />
         <source>Save</source>
         <translation>सहेजें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="579" />
+        <location filename="..\ui\main_window.py" line="581" />
         <source>Quick Backup (Shortcut)</source>
         <translation>त्वरित बैकअप (शॉर्टकट)</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="628" />
+        <location filename="..\ui\main_window.py" line="630" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>स्वचालित सफाई सीमा निर्धारित: %n बैकअप (0 = अक्षम)।</numerusform>
@@ -1324,240 +1475,129 @@ Please visit manually:
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="650" />
-        <source>Auto-Hide enabled: icons will be hidden after %1.</source>
-        <translation>ऑटो-हाइड सक्षम: आइकन %1 के बाद छिपाए जाएंगे।</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="659" />
-        <source>Auto-Hide disabled.</source>
-        <translation>ऑटो-हाइड अक्षम।</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="666" />
-        <source>Auto-Hide interval set to %1.</source>
-        <translation>ऑटो-हाइड अंतराल %1 पर सेट किया गया।</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="687" />
-        <source>Custom (%1)</source>
-        <translation>कस्टम (%1)</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="710" />
-        <source>Custom Auto-Hide Interval</source>
-        <translation>कस्टम ऑटो-हाइड अंतराल</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="717" />
-        <source>Hide desktop icons after:</source>
-        <translation>इसके बाद डेस्कटॉप आइकन छिपाएं:</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="724" />
-        <source>minutes</source>
-        <translation>मिनट</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="731" />
-        <source>seconds</source>
-        <translation>सेकंड</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="760" />
-        <location filename="..\ui\main_window.py" line="755" />
-        <source>%n minute(s)</source>
-        <comment>duration</comment>
-        <translation>
-            <numerusform>%n मिनट</numerusform>
-            <numerusform>%n मिनट</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="762" />
-        <location filename="..\ui\main_window.py" line="757" />
-        <source>%n second(s)</source>
-        <comment>duration</comment>
-        <translation>
-            <numerusform>%n सेकंड</numerusform>
-            <numerusform>%n सेकंड</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="796" />
-        <source>Desktop icons are hidden</source>
-        <translation>डेस्कटॉप आइकन छिपे हुए हैं</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="803" />
-        <source>Auto-Hide in %1</source>
-        <translation>ऑटो-हाइड %1 में</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="815" />
-        <source>Auto-Hide: creating backup before hiding icons...</source>
-        <translation>ऑटो-हाइड: आइकन छिपाने से पहले बैकअप बनाया जा रहा है...</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="819" />
-        <source>Auto-Hide Backup</source>
-        <translation>ऑटो-हाइड बैकअप</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="836" />
-        <source>Auto-Hide: hiding desktop icons now.</source>
-        <translation>ऑटो-हाइड: डेस्कटॉप आइकन अभी छिपाए जा रहे हैं।</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1486" />
-        <location filename="..\ui\main_window.py" line="1375" />
-        <location filename="..\ui\main_window.py" line="856" />
+        <location filename="..\ui\main_window.py" line="1210" />
+        <location filename="..\ui\main_window.py" line="1099" />
+        <location filename="..\ui\main_window.py" line="692" />
         <source>Desktop Icon Manager</source>
         <translation>डेस्कटॉप आइकन प्रबंधक</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="891" />
+        <location filename="..\ui\main_window.py" line="727" />
         <source>Backup list updated (item deleted).</source>
         <translation>बैकअप सूची अपडेट की गई (आइटम हटाया गया)।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="900" />
+        <location filename="..\ui\main_window.py" line="736" />
         <source>Backup list updated.</source>
         <translation>बैकअप सूची अपडेट की गई।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="913" />
+        <location filename="..\ui\main_window.py" line="749" />
         <source>Backup list updated (imported).</source>
         <translation>बैकअप सूची अपडेट की गई (आयात की गई)।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="927" />
+        <location filename="..\ui\main_window.py" line="763" />
         <source>— Profiles —</source>
         <translation>— प्रोफ़ाइल —</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="929" />
+        <location filename="..\ui\main_window.py" line="765" />
         <source>Work</source>
         <translation>काम</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="930" />
+        <location filename="..\ui\main_window.py" line="766" />
         <source>Gaming</source>
         <translation>गेमिंग</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="931" />
+        <location filename="..\ui\main_window.py" line="767" />
         <source>Presentation</source>
         <translation>प्रस्तुति</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="932" />
+        <location filename="..\ui\main_window.py" line="768" />
         <source>Dev / Coding</source>
         <translation>डेव / कोडिंग</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="933" />
+        <location filename="..\ui\main_window.py" line="769" />
         <source>Meeting</source>
         <translation>मीटिंग</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="934" />
+        <location filename="..\ui\main_window.py" line="770" />
         <source>Home</source>
         <translation>घर</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="935" />
+        <location filename="..\ui\main_window.py" line="771" />
         <source>Office</source>
         <translation>कार्यालय</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="936" />
+        <location filename="..\ui\main_window.py" line="772" />
         <source>Laptop</source>
         <translation>लैपटॉप</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="937" />
+        <location filename="..\ui\main_window.py" line="773" />
         <source>Docked / External Monitor</source>
         <translation>डॉक्ड / बाहरी मॉनिटर</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="938" />
+        <location filename="..\ui\main_window.py" line="774" />
         <source>Clean Desktop</source>
         <translation>साफ डेस्कटॉप</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="939" />
+        <location filename="..\ui\main_window.py" line="775" />
         <source>Pre-Update</source>
         <translation>अपडेट से पहले</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="940" />
+        <location filename="..\ui\main_window.py" line="776" />
         <source>Pre-Reboot</source>
         <translation>रीबूट से पहले</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="941" />
+        <location filename="..\ui\main_window.py" line="777" />
         <source>Favourite</source>
         <translation>पसंदीदा</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="942" />
+        <location filename="..\ui\main_window.py" line="778" />
         <source>Test</source>
         <translation>परीक्षण</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="964" />
+        <location filename="..\ui\main_window.py" line="800" />
         <source>Quick Backup</source>
         <translation>त्वरित बैकअप</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="984" />
-        <source>About</source>
-        <translation>के बारे में</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1030" />
-        <source>A simple yet powerful tool to save and restore Windows desktop icon positions.</source>
-        <translation>Windows डेस्कटॉप आइकन स्थितियाँ सहेजने और पुनर्स्थापित करने के लिए एक सरल लेकिन शक्तिशाली उपकरण।</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1044" />
-        <source>Version:</source>
-        <translation>संस्करण:</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1045" />
-        <source>Development:</source>
-        <translation>विकास:</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1610" />
-        <location filename="..\ui\main_window.py" line="1075" />
-        <source>Close</source>
-        <translation>बंद करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1091" />
+        <location filename="..\ui\main_window.py" line="815" />
         <source>No backup files found to delete.</source>
         <translation>हटाने के लिए कोई बैकअप फ़ाइल नहीं मिली।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1094" />
+        <location filename="..\ui\main_window.py" line="818" />
         <source>No Backups Found</source>
         <translation>कोई बैकअप नहीं मिला</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1095" />
+        <location filename="..\ui\main_window.py" line="819" />
         <source>There are no backup files to delete.</source>
         <translation>हटाने के लिए कोई बैकअप फ़ाइल नहीं है।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1101" />
+        <location filename="..\ui\main_window.py" line="825" />
         <source>WARNING: Delete All Backups</source>
         <translation>चेतावनी: सभी बैकअप हटाएं</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1102" />
+        <location filename="..\ui\main_window.py" line="826" />
         <source>Are you absolutely sure you want to permanently delete all desktop icon backup files?
 
 This action cannot be undone!</source>
@@ -1566,158 +1606,158 @@ This action cannot be undone!</source>
 यह क्रिया पूर्ववत नहीं की जा सकती!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1324" />
-        <location filename="..\ui\main_window.py" line="1105" />
+        <location filename="..\ui\main_window.py" line="1048" />
+        <location filename="..\ui\main_window.py" line="829" />
         <source>Yes</source>
         <translation>हाँ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1325" />
-        <location filename="..\ui\main_window.py" line="1106" />
+        <location filename="..\ui\main_window.py" line="1049" />
+        <location filename="..\ui\main_window.py" line="830" />
         <source>No</source>
         <translation>नहीं</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1108" />
+        <location filename="..\ui\main_window.py" line="832" />
         <source>Starting deletion of all backup files...</source>
         <translation>सभी बैकअप फ़ाइलें हटाई जा रही हैं...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1368" />
-        <location filename="..\ui\main_window.py" line="1116" />
+        <location filename="..\ui\main_window.py" line="1092" />
+        <location filename="..\ui\main_window.py" line="840" />
         <source>Success</source>
         <translation>सफलता</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1117" />
+        <location filename="..\ui\main_window.py" line="841" />
         <source>All backup files have been successfully deleted.</source>
         <translation>सभी बैकअप फ़ाइलें सफलतापूर्वक हटा दी गई हैं।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1123" />
+        <location filename="..\ui\main_window.py" line="847" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>कुछ फ़ाइलें नहीं हटाई जा सकीं। विवरण के लिए गतिविधि लॉग देखें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1133" />
+        <location filename="..\ui\main_window.py" line="857" />
         <source>Starting new timestamped backup...</source>
         <translation>नया टाइमस्टैम्प बैकअप शुरू हो रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1135" />
+        <location filename="..\ui\main_window.py" line="859" />
         <source>  (Tag: %1)</source>
         <translation>  (टैग: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1139" />
+        <location filename="..\ui\main_window.py" line="863" />
         <source>Saving...</source>
         <translation>सहेजा जा रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1159" />
+        <location filename="..\ui\main_window.py" line="883" />
         <source>No backup files found to restore!</source>
         <translation>पुनर्स्थापित करने के लिए कोई बैकअप फ़ाइल नहीं मिली!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1161" />
+        <location filename="..\ui\main_window.py" line="885" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ पुनर्स्थापना विफल: कोई बैकअप फ़ाइल नहीं मिली।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1181" />
-        <location filename="..\ui\main_window.py" line="1180" />
-        <location filename="..\ui\main_window.py" line="1175" />
-        <location filename="..\ui\main_window.py" line="1174" />
+        <location filename="..\ui\main_window.py" line="905" />
+        <location filename="..\ui\main_window.py" line="904" />
+        <location filename="..\ui\main_window.py" line="899" />
+        <location filename="..\ui\main_window.py" line="898" />
         <source>N/A</source>
         <translation>उपलब्ध नहीं</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1184" />
+        <location filename="..\ui\main_window.py" line="908" />
         <source>N/A (Old Format)</source>
         <translation>उपलब्ध नहीं (पुराना प्रारूप)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1213" />
+        <location filename="..\ui\main_window.py" line="937" />
         <source>Confirm Restore — Live Preview</source>
         <translation>पुनर्स्थापना की पुष्टि करें — लाइव पूर्वावलोकन</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1223" />
+        <location filename="..\ui\main_window.py" line="947" />
         <source>File</source>
         <translation>फ़ाइल</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1224" />
+        <location filename="..\ui\main_window.py" line="948" />
         <source>Resolution</source>
         <translation>रिज़ॉल्यूशन</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1225" />
+        <location filename="..\ui\main_window.py" line="949" />
         <source>Icons</source>
         <translation>आइकन</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1226" />
+        <location filename="..\ui\main_window.py" line="950" />
         <source>Tag</source>
         <translation>टैग</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1227" />
+        <location filename="..\ui\main_window.py" line="951" />
         <source>Timestamp</source>
         <translation>टाइमस्टैम्प</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1239" />
+        <location filename="..\ui\main_window.py" line="963" />
         <source>will move</source>
         <translation>स्थानांतरित होगा</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1240" />
+        <location filename="..\ui\main_window.py" line="964" />
         <source>already in place</source>
         <translation>पहले से सही स्थान पर</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1241" />
+        <location filename="..\ui\main_window.py" line="965" />
         <source>not on desktop</source>
         <translation>डेस्कटॉप पर नहीं है</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1250" />
+        <location filename="..\ui\main_window.py" line="974" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>लेआउट पूर्वावलोकन (सहेजी गई स्थितियाँ बनाम वर्तमान):</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1272" />
+        <location filename="..\ui\main_window.py" line="996" />
         <source>↺ Restore</source>
         <translation>↺ पुनर्स्थापित करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1279" />
+        <location filename="..\ui\main_window.py" line="1003" />
         <source>Cancel</source>
         <translation>रद्द करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1299" />
+        <location filename="..\ui\main_window.py" line="1023" />
         <source>Starting restore from backup '%1'...</source>
         <translation>बैकअप '%1' से पुनर्स्थापना शुरू हो रही है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1300" />
+        <location filename="..\ui\main_window.py" line="1024" />
         <source>latest</source>
         <translation>नवीनतम</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1305" />
+        <location filename="..\ui\main_window.py" line="1029" />
         <source>Restoring...</source>
         <translation>पुनर्स्थापित किया जा रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1320" />
+        <location filename="..\ui\main_window.py" line="1044" />
         <source>Confirm Scramble</source>
         <translation>फेरबदल की पुष्टि करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1321" />
+        <location filename="..\ui\main_window.py" line="1045" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1730,47 +1770,47 @@ Do you want to proceed?</source>
 क्या आप आगे बढ़ना चाहते हैं?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1327" />
+        <location filename="..\ui\main_window.py" line="1051" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>डेस्कटॉप आइकन यादृच्छिक फेरबदल शुरू हो रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1330" />
+        <location filename="..\ui\main_window.py" line="1054" />
         <source>Scrambling icons...</source>
         <translation>आइकन फेरबदल किए जा रहे हैं...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1363" />
+        <location filename="..\ui\main_window.py" line="1087" />
         <source>Operation completed successfully</source>
         <translation>ऑपरेशन सफलतापूर्वक पूर्ण हुआ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1369" />
+        <location filename="..\ui\main_window.py" line="1093" />
         <source>Operation completed successfully! (%1)</source>
         <translation>ऑपरेशन सफलतापूर्वक पूर्ण हुआ! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1376" />
+        <location filename="..\ui\main_window.py" line="1100" />
         <source>%1 successful!</source>
         <translation>%1 सफल!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1384" />
+        <location filename="..\ui\main_window.py" line="1108" />
         <source>Operation failed</source>
         <translation>ऑपरेशन विफल</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1388" />
+        <location filename="..\ui\main_window.py" line="1112" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>ऑपरेशन विफल (%1)। विवरण के लिए लॉग देखें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1401" />
+        <location filename="..\ui\main_window.py" line="1125" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ चेतावनी: डिस्प्ले मेटाडेटा अनुपस्थित या अधूरा है।</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="1406" />
+        <location filename="..\ui\main_window.py" line="1130" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ चेतावनी: सहेजा गया (%n मॉनिटर) बनाम वर्तमान (%1 मॉनिटर)।</numerusform>
@@ -1778,12 +1818,12 @@ Do you want to proceed?</source>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1414" />
+        <location filename="..\ui\main_window.py" line="1138" />
         <source>Monitor Mismatch Warning</source>
         <translation>मॉनिटर असंगति चेतावनी</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1415" />
+        <location filename="..\ui\main_window.py" line="1139" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1792,17 +1832,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 आइकन स्थितियाँ पुनर्स्थापित की गई हैं, लेकिन वे सटीक नहीं हो सकतीं।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1437" />
+        <location filename="..\ui\main_window.py" line="1161" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ चेतावनी: स्क्रीन रिज़ॉल्यूशन सहेजे गए लेआउट से मेल नहीं खाता।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1441" />
+        <location filename="..\ui\main_window.py" line="1165" />
         <source>Resolution Mismatch Warning</source>
         <translation>रिज़ॉल्यूशन असंगति चेतावनी</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1442" />
+        <location filename="..\ui\main_window.py" line="1166" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1811,122 +1851,82 @@ Icon positions have been restored, but they may be inaccurate.</source>
 आइकन स्थितियाँ पुनर्स्थापित की गई हैं, लेकिन वे सटीक नहीं हो सकतीं।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1454" />
+        <location filename="..\ui\main_window.py" line="1178" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>बाहर निकलने पर स्वतः सहेजें सक्षम है। मौन बैकअप किया जा रहा है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1460" />
+        <location filename="..\ui\main_window.py" line="1184" />
         <source>Auto-Save icon layout…</source>
         <translation>आइकन लेआउट स्वतः सहेजा जा रहा है…</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1466" />
+        <location filename="..\ui\main_window.py" line="1190" />
         <source>Please wait</source>
         <translation>कृपया प्रतीक्षा करें</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1471" />
+        <location filename="..\ui\main_window.py" line="1195" />
         <source>Auto-Save Log</source>
         <translation>स्वतः सहेजें लॉग</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1487" />
+        <location filename="..\ui\main_window.py" line="1211" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>एप्लिकेशन ट्रे में न्यूनतम किया गया। पुनर्स्थापित करने के लिए क्लिक या डबल-क्लिक करें।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1530" />
+        <location filename="..\ui\main_window.py" line="1254" />
         <source>A new version is available! (%1)</source>
         <translation>एक नया संस्करण उपलब्ध है! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1535" />
+        <location filename="..\ui\main_window.py" line="1259" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 एक नया संस्करण उपलब्ध है: %1 (वर्तमान: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1566" />
-        <source>Shortcut</source>
-        <translation>शॉर्टकट</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1567" />
-        <source>Action</source>
-        <translation>क्रिया</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1571" />
-        <source>Quick Save current layout</source>
-        <translation>वर्तमान लेआउट त्वरित सहेजें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1575" />
-        <source>Open</source>
-        <translation>खोलें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1583" />
-        <source>Open Settings menu</source>
-        <translation>सेटिंग्स मेनू खोलें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1587" />
-        <source>Open Online User Manual</source>
-        <translation>ऑनलाइन उपयोगकर्ता मैनुअल खोलें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1591" />
-        <source>Exit Application</source>
-        <translation>एप्लिकेशन बंद करें</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1595" />
-        <source>Tip: Hover over buttons to see additional shortcuts in tooltips.</source>
-        <translation>सुझाव: टूलटिप्स में अतिरिक्त शॉर्टकट देखने के लिए बटनों पर माउस ले जाएं।</translation>
-    </message>
-    <message>
-        <location filename="..\ui\main_window.py" line="1618" />
+        <location filename="..\ui\main_window.py" line="1279" />
         <source>Updating desktop icon visibility...</source>
         <translation>डेस्कटॉप आइकन दृश्यता अपडेट हो रही है...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1621" />
+        <location filename="..\ui\main_window.py" line="1282" />
         <source>Desktop icon visibility updated.</source>
         <translation>डेस्कटॉप आइकन दृश्यता अपडेट की गई।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1624" />
+        <location filename="..\ui\main_window.py" line="1285" />
         <source>✗ Failed to show/hide desktop icons.</source>
         <translation>✗ डेस्कटॉप आइकन दिखाने/छिपाने में विफल।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1628" />
+        <location filename="..\ui\main_window.py" line="1289" />
         <source>Attempting to show desktop icons...</source>
         <translation>डेस्कटॉप आइकन दिखाने का प्रयास...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1631" />
+        <location filename="..\ui\main_window.py" line="1292" />
         <source>Desktop icons are now visible.</source>
         <translation>डेस्कटॉप आइकन अब दृश्यमान हैं।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1634" />
+        <location filename="..\ui\main_window.py" line="1295" />
         <source>✗ Failed to show desktop icons.</source>
         <translation>✗ डेस्कटॉप आइकन दिखाने में विफल।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1638" />
+        <location filename="..\ui\main_window.py" line="1299" />
         <source>Attempting to hide desktop icons...</source>
         <translation>डेस्कटॉप आइकन छिपाने का प्रयास...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1641" />
+        <location filename="..\ui\main_window.py" line="1302" />
         <source>Desktop icons are now hidden.</source>
         <translation>डेस्कटॉप आइकन अब छिपे हुए हैं।</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1644" />
+        <location filename="..\ui\main_window.py" line="1305" />
         <source>✗ Failed to hide desktop icons.</source>
         <translation>✗ डेस्कटॉप आइकन छिपाने में विफल।</translation>
     </message>
