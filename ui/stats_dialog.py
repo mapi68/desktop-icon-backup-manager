@@ -124,17 +124,19 @@ def _make_stat_card(
     title: str, value: str, accent: str = "#378ADD", parent=None
 ) -> QFrame:
     card = QFrame(parent)
+    card.setMinimumHeight(90)
     card.setStyleSheet(
         f"QFrame {{ background: palette(button); border: 1px solid palette(mid);"
         f" border-left: 3px solid {accent};"
-        f" border-radius: 8px; padding: 10px; }}"
+        f" border-radius: 8px; }}"
     )
     lay = QVBoxLayout(card)
-    lay.setContentsMargins(12, 10, 12, 10)
+    lay.setContentsMargins(8, 10, 8, 10)
     lay.setSpacing(2)
 
     t = QLabel(title)
     t.setAlignment(Qt.AlignmentFlag.AlignCenter)
+    t.setWordWrap(True)
     t.setStyleSheet(
         "font-size: 11px; color: palette(placeholderText);"
         " background: transparent; border: none;"
