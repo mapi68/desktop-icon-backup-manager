@@ -17,7 +17,7 @@ from PyQt6.QtWidgets import (
     QPushButton,
     QCheckBox,
 )
-from PyQt6.QtCore import QSettings, QTranslator, QLocale, QCoreApplication, QTimer
+from PyQt6.QtCore import QSettings, QTranslator, QLocale, QCoreApplication, QTimer, QLibraryInfo
 from PyQt6.QtGui import QIcon
 
 from core.config import Config, resource_path
@@ -111,8 +111,6 @@ def load_language(app: QApplication, locale: str) -> QTranslator:
     # Also load Qt's own base translations so standard buttons
     # (Yes/No/OK/Cancel/Close/…) appear in the chosen language.
     if locale:
-        from PyQt6.QtCore import QLibraryInfo
-
         qt_translator = QTranslator()
         lang_short = locale.split("_")[0]  # e.g. "it" from "it_IT"
 

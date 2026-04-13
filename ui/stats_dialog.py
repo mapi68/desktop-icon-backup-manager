@@ -1,5 +1,7 @@
 """Statistics Dashboard Dialog for Desktop Icon Backup Manager."""
 
+from datetime import datetime
+
 from PyQt6.QtWidgets import (
     QDialog,
     QVBoxLayout,
@@ -268,9 +270,7 @@ class StatsDialog(QDialog):
         chart_data = []
         for month_key, count in data["backups_per_month"]:
             try:
-                from datetime import datetime as _dt
-
-                label = _dt.strptime(month_key, "%Y-%m").strftime("%b")
+                label = datetime.strptime(month_key, "%Y-%m").strftime("%b")
             except ValueError:
                 label = month_key
             chart_data.append((label, count))

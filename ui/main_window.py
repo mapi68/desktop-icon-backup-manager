@@ -25,6 +25,7 @@ from PyQt6.QtWidgets import (
     QMenu,
     QLineEdit,
     QComboBox,
+    QSizePolicy,
 )
 
 from PyQt6.QtCore import (
@@ -49,6 +50,7 @@ from utils.helpers import (
     get_display_metadata,
     get_readable_date,
     get_resolution_from_filename,
+    parse_resolution_string,
 )
 from ui.backup_dialog import BackupManagerWindow, _ask
 import ui.autohide as autohide
@@ -736,9 +738,7 @@ class MainWindow(QMainWindow):
             lambda: self.log(self.tr("Backup list updated."))
         )
         # Trigger export immediately after the dialog is shown
-        from PyQt6.QtCore import QTimer as _QTimer
-
-        _QTimer.singleShot(0, manager_window.export_backups)
+        QTimer.singleShot(0, manager_window.export_backups)
         manager_window.exec()
 
     def _import_backups_direct(self):
@@ -748,9 +748,7 @@ class MainWindow(QMainWindow):
         manager_window.list_changed_signal.connect(
             lambda: self.log(self.tr("Backup list updated (imported)."))
         )
-        from PyQt6.QtCore import QTimer as _QTimer
-
-        _QTimer.singleShot(0, manager_window.import_backups)
+        QTimer.singleShot(0, manager_window.import_backups)
         manager_window.exec()
 
     # ── Named profiles ────────────────────────────────────────────────────────
@@ -889,8 +887,6 @@ class MainWindow(QMainWindow):
 
     def _show_restore_preview_dialog(self, filename: str):
         """Show a restore confirmation dialog with a live diff preview."""
-        from utils.helpers import parse_resolution_string
-
         filepath = os.path.join(Config.BACKUP_DIR, filename)
         formatted_date = get_readable_date(filename)
         resolution = get_resolution_from_filename(filename)
@@ -984,9 +980,7 @@ class MainWindow(QMainWindow):
         preview_row.addWidget(preview_widget, stretch=1)
 
         legend = make_legend_widget()
-        from PyQt6.QtWidgets import QSizePolicy as QSP
-
-        legend.setSizePolicy(QSP.Policy.Preferred, QSP.Policy.Expanding)
+        legend.setSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
         legend.setMinimumWidth(320)
         preview_row.addWidget(legend)
         layout.addLayout(preview_row, stretch=1)
@@ -1241,8 +1235,6 @@ class MainWindow(QMainWindow):
         self._update_worker.start()
 
     def _on_silent_update_result(self, remote: str):
-        from core.config import Config
-
         try:
             current = tuple(int(x) for x in Config.VERSION.split("."))
             latest = tuple(int(x) for x in remote.split("."))

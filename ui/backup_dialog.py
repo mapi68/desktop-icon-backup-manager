@@ -23,6 +23,9 @@ from PyQt6.QtWidgets import (
     QSizePolicy,
     QFileDialog,
     QStyledItemDelegate,
+    QInputDialog,
+    QListWidget,
+    QListWidgetItem,
 )
 from PyQt6.QtCore import Qt, pyqtSignal, QSize, QRect, QCoreApplication
 from PyQt6.QtGui import QAction, QColor, QFont, QPainter
@@ -357,9 +360,7 @@ class BackupManagerWindow(QDialog):
             desc = data.get("description", self.tr("None"))
             ts_raw = data.get("timestamp", self.tr("N/A"))
             try:
-                from datetime import datetime as _dt
-
-                ts = _dt.fromisoformat(ts_raw).strftime("%Y/%m/%d %H:%M:%S")
+                ts = datetime.fromisoformat(ts_raw).strftime("%Y/%m/%d %H:%M:%S")
             except Exception:
                 ts = ts_raw
             count = len(saved_icons)
@@ -701,8 +702,6 @@ class BackupManagerWindow(QDialog):
             return
 
         # Ask what to export
-        from PyQt6.QtWidgets import QInputDialog
-
         choice_map = {
             self.tr("All backups (%1 files)").replace("%1", str(len(all_files))): "all",
         }
@@ -945,8 +944,6 @@ class _PickBackupDialog(QDialog):
 
         layout = QVBoxLayout(self)
         layout.addWidget(QLabel(self.tr("Select the second backup file:")))
-
-        from PyQt6.QtWidgets import QListWidget, QListWidgetItem
 
         self.list = QListWidget()
         for fn in filenames:
