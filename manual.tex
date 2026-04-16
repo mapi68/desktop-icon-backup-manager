@@ -1033,11 +1033,26 @@ the program normally (not via Task Manager or system crash).
   \item If backup fails, application still exits
 \end{itemize}
 
+\textbf{Smart Deduplication}:
+
+If a \textbf{Quick Backup} was performed manually within the last
+\textbf{10 seconds} before closing, the Auto-Save is automatically
+skipped to avoid creating a redundant identical backup. The application
+detects this by reading the \texttt{timestamp} field of the most recent
+\texttt{.json} file in the backup folder.
+
+\begin{infobox}[Note]
+  This deduplication only applies when Auto-Save on Exit is enabled.
+  If the backup folder is empty or the timestamp cannot be read, the
+  Auto-Save proceeds normally as a safety fallback.
+\end{infobox}
+
 \textbf{Interaction with Other Settings}:
 \begin{itemize}
   \item Works independently of "Minimize to Tray on Close"
   \item Complements "Auto-Restore on Startup" for seamless layout preservation
   \item Cleanup limit prevents unlimited backup accumulation
+  \item Skips redundant save if a Quick Backup was made in the last 10 seconds
 \end{itemize}
 
 \subsection{Auto-Restore on Startup}

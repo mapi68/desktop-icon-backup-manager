@@ -1167,30 +1167,67 @@ class MainWindow(QMainWindow):
             self.settings.setValue("geometry", self.geometry())
 
         if self.action_auto_save.isChecked():
-            if self.isVisible():
-                self.log(
-                    self.tr("Auto-Save on Exit enabled. Performing silent backup...")
-                )
-            cleanup_limit = self.settings.value("cleanup_limit", 0, type=int)
-            from PyQt6.QtWidgets import QProgressDialog
+            # Skip auto-save if a quick save was performed in the last 10 seconds
+            _skip_auto_save = False
+            try:
+                import os as _os
+                import json as _json
+                from datetime import datetime as _datetime
 
-            progress = QProgressDialog(
-                self.tr("Auto-Save icon layout…"),
-                None,  # no cancel button
-                0,
-                0,  # indeterminate
-                self,
-            )
-            progress.setWindowTitle(self.tr("Please wait"))
-            progress.setMinimumDuration(0)
-            progress.setValue(0)
-            QApplication.processEvents()
-            self.manager.save(
-                lambda msg: print(f"{self.tr('Auto-Save Log')}: {msg}"),
-                description=self.tr("Auto-Save on Exit"),
-                max_backup_count=cleanup_limit,
-            )
-            progress.close()
+                _backup_files = [
+                    f for f in _os.listdir(Config.BACKUP_DIR) if f.endswith(".json")
+                ]
+                if _backup_files:
+                    _backup_files.sort(reverse=True)
+                    _latest_path = _os.path.join(Config.BACKUP_DIR, _backup_files[0])
+                    with open(_latest_path, "r", encoding="utf-8") as _f:
+                        _latest_data = _json.load(_f)
+                    _ts_str = _latest_data.get("timestamp", "")
+                    if _ts_str:
+                        _ts = _datetime.fromisoformat(_ts_str)
+                        # Strip tzinfo if present to compare as naive local time
+                        if _ts.tzinfo is not None:
+                            _ts = _ts.replace(tzinfo=None)
+                        _now = _datetime.now()
+                        _seconds_ago = (_now - _ts).total_seconds()
+                        if _seconds_ago <= Config.AUTO_SAVE_SKIP_SECONDS:
+                            _skip_auto_save = True
+                            if self.isVisible():
+                                self.log(
+                                    self.tr(
+                                        "Auto-Save skipped: a Quick Save was performed less than 10 seconds ago."
+                                    )
+                                )
+            except Exception:
+                pass  # If anything goes wrong, proceed normally with auto-save
+
+            if not _skip_auto_save:
+                if self.isVisible():
+                    self.log(
+                        self.tr(
+                            "Auto-Save on Exit enabled. Performing silent backup..."
+                        )
+                    )
+                cleanup_limit = self.settings.value("cleanup_limit", 0, type=int)
+                from PyQt6.QtWidgets import QProgressDialog
+
+                progress = QProgressDialog(
+                    self.tr("Auto-Save icon layout…"),
+                    None,  # no cancel button
+                    0,
+                    0,  # indeterminate
+                    self,
+                )
+                progress.setWindowTitle(self.tr("Please wait"))
+                progress.setMinimumDuration(0)
+                progress.setValue(0)
+                QApplication.processEvents()
+                self.manager.save(
+                    lambda msg: print(f"{self.tr('Auto-Save Log')}: {msg}"),
+                    description=self.tr("Auto-Save on Exit"),
+                    max_backup_count=cleanup_limit,
+                )
+                progress.close()
 
     def closeEvent(self, event):
         close_to_tray = self.action_close_to_tray.isChecked()

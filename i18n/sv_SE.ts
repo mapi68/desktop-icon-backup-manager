@@ -63,7 +63,7 @@
 </context><context>
     <name>BackupManagerWindow</name>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="461" />
+        <location filename="..\ui\backup_dialog.py" line="462" />
         <source>%n icon will be moved</source>
         <comment>%n icons will be moved</comment>
         <translation>
@@ -72,7 +72,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="462" />
+        <location filename="..\ui\backup_dialog.py" line="463" />
         <source>%n icon already in place</source>
         <comment>%n icons already in place</comment>
         <translation>
@@ -81,7 +81,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="463" />
+        <location filename="..\ui\backup_dialog.py" line="464" />
         <source>%n icon not on desktop</source>
         <comment>%n icons not on desktop</comment>
         <translation>
@@ -90,155 +90,155 @@
         </translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="104" />
+        <location filename="..\ui\backup_dialog.py" line="107" />
         <source>Select, Restore, or Delete Backup</source>
         <translation>Välj, återställ eller ta bort säkerhetskopia</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="114" />
+        <location filename="..\ui\backup_dialog.py" line="117" />
         <source>Select a backup to restore or right-click for options.</source>
         <translation>Välj en säkerhetskopia att återställa eller högerklicka för alternativ.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="120" />
+        <location filename="..\ui\backup_dialog.py" line="123" />
         <source>Search by tag, resolution, or date...</source>
         <translation>Sök efter tagg, upplösning eller datum...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="137" />
+        <location filename="..\ui\backup_dialog.py" line="140" />
         <source>Tag / Description</source>
         <translation>Tagg / Beskrivning</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="369" />
-        <location filename="..\ui\backup_dialog.py" line="138" />
+        <location filename="..\ui\backup_dialog.py" line="370" />
+        <location filename="..\ui\backup_dialog.py" line="141" />
         <source>Resolution</source>
         <translation>Upplösning</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="368" />
-        <location filename="..\ui\backup_dialog.py" line="139" />
+        <location filename="..\ui\backup_dialog.py" line="369" />
+        <location filename="..\ui\backup_dialog.py" line="142" />
         <source>Icons</source>
         <translation>Ikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="371" />
-        <location filename="..\ui\backup_dialog.py" line="140" />
+        <location filename="..\ui\backup_dialog.py" line="372" />
+        <location filename="..\ui\backup_dialog.py" line="143" />
         <source>Timestamp</source>
         <translation>Tidsstämpel</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="190" />
+        <location filename="..\ui\backup_dialog.py" line="193" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>Layoutförhandsvisning (sparade positioner vs. aktuella):</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="336" />
-        <location filename="..\ui\backup_dialog.py" line="200" />
+        <location filename="..\ui\backup_dialog.py" line="339" />
+        <location filename="..\ui\backup_dialog.py" line="203" />
         <source>Select a backup to see details.</source>
         <translation>Välj en säkerhetskopia för att se detaljer.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="226" />
+        <location filename="..\ui\backup_dialog.py" line="229" />
         <source>Restore Selected Layout</source>
         <translation>Återställ vald layout</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="230" />
+        <location filename="..\ui\backup_dialog.py" line="233" />
         <source>📊 Compare Two Selected...</source>
         <translation>📊 Jämför två valda...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="234" />
+        <location filename="..\ui\backup_dialog.py" line="237" />
         <source>📤 Export Backups...</source>
         <translation>📤 Exportera säkerhetskopior...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="236" />
+        <location filename="..\ui\backup_dialog.py" line="239" />
         <source>Export selected or all backups to a folder or ZIP archive</source>
         <translation>Exportera vald eller alla säkerhetskopior till en mapp eller ett ZIP-arkiv</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="240" />
+        <location filename="..\ui\backup_dialog.py" line="243" />
         <source>📥 Import Backups...</source>
         <translation>📥 Importera säkerhetskopior...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="242" />
+        <location filename="..\ui\backup_dialog.py" line="245" />
         <source>Import backup files (.json) or a ZIP archive from another installation</source>
         <translation>Importera säkerhetskopieringsfiler (.json) eller ett ZIP-arkiv från en annan installation</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="248" />
+        <location filename="..\ui\backup_dialog.py" line="251" />
         <source>Close</source>
         <translation>Stäng</translation>
     </message>
     <message>
+        <location filename="..\ui\backup_dialog.py" line="433" />
         <location filename="..\ui\backup_dialog.py" line="432" />
-        <location filename="..\ui\backup_dialog.py" line="431" />
-        <location filename="..\ui\backup_dialog.py" line="358" />
-        <location filename="..\ui\backup_dialog.py" line="284" />
-        <location filename="..\ui\backup_dialog.py" line="278" />
+        <location filename="..\ui\backup_dialog.py" line="361" />
+        <location filename="..\ui\backup_dialog.py" line="287" />
+        <location filename="..\ui\backup_dialog.py" line="281" />
         <source>N/A</source>
         <translation>Ej tillgängligt</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="297" />
+        <location filename="..\ui\backup_dialog.py" line="300" />
         <source>Double-click to edit the tag/description</source>
         <translation>Dubbelklicka för att redigera taggen/beskrivningen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="319" />
+        <location filename="..\ui\backup_dialog.py" line="322" />
         <source>No backups found.</source>
         <translation>Inga säkerhetskopior hittades.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="357" />
+        <location filename="..\ui\backup_dialog.py" line="360" />
         <source>None</source>
         <translation>Ingen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="367" />
+        <location filename="..\ui\backup_dialog.py" line="368" />
         <source>File</source>
         <translation>Fil</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="370" />
+        <location filename="..\ui\backup_dialog.py" line="371" />
         <source>Description</source>
         <translation>Beskrivning</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="680" />
-        <location filename="..\ui\backup_dialog.py" line="585" />
-        <location filename="..\ui\backup_dialog.py" line="536" />
-        <location filename="..\ui\backup_dialog.py" line="519" />
-        <location filename="..\ui\backup_dialog.py" line="493" />
-        <location filename="..\ui\backup_dialog.py" line="377" />
+        <location filename="..\ui\backup_dialog.py" line="681" />
+        <location filename="..\ui\backup_dialog.py" line="586" />
+        <location filename="..\ui\backup_dialog.py" line="537" />
+        <location filename="..\ui\backup_dialog.py" line="520" />
+        <location filename="..\ui\backup_dialog.py" line="494" />
+        <location filename="..\ui\backup_dialog.py" line="378" />
         <source>Error</source>
         <translation>Fel</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="402" />
+        <location filename="..\ui\backup_dialog.py" line="403" />
         <source>🔄 Restore Selected</source>
         <translation>🔄 Återställ vald</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="405" />
+        <location filename="..\ui\backup_dialog.py" line="406" />
         <source>🗑️ Delete Selected</source>
         <translation>🗑️ Ta bort vald</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="409" />
+        <location filename="..\ui\backup_dialog.py" line="410" />
         <source>📊 Compare with Latest</source>
         <translation>📊 Jämför med senaste</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="468" />
+        <location filename="..\ui\backup_dialog.py" line="469" />
         <source>Confirm Restore</source>
         <translation>Bekräfta återställning</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="469" />
+        <location filename="..\ui\backup_dialog.py" line="470" />
         <source>Restore icon positions from the selected backup file:
 
 File: %1
@@ -259,31 +259,31 @@ Tidsstämpel: %5
 Vill du fortsätta?</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="508" />
-        <location filename="..\ui\backup_dialog.py" line="484" />
+        <location filename="..\ui\backup_dialog.py" line="509" />
+        <location filename="..\ui\backup_dialog.py" line="485" />
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="509" />
-        <location filename="..\ui\backup_dialog.py" line="485" />
+        <location filename="..\ui\backup_dialog.py" line="510" />
+        <location filename="..\ui\backup_dialog.py" line="486" />
         <source>No</source>
         <translation>Nej</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="494" />
+        <location filename="..\ui\backup_dialog.py" line="495" />
         <source>Failed to load backup file:
 %1</source>
         <translation>Det gick inte att läsa in säkerhetskopian:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="504" />
+        <location filename="..\ui\backup_dialog.py" line="505" />
         <source>Confirm Delete</source>
         <translation>Bekräfta borttagning</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="505" />
+        <location filename="..\ui\backup_dialog.py" line="506" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
@@ -292,206 +292,206 @@ Vill du fortsätta?</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="515" />
+        <location filename="..\ui\backup_dialog.py" line="516" />
         <source>Success</source>
         <translation>Åtgärd lyckades</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="515" />
+        <location filename="..\ui\backup_dialog.py" line="516" />
         <source>Backup deleted successfully.</source>
         <translation>Säkerhetskopian togs bort.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="519" />
+        <location filename="..\ui\backup_dialog.py" line="520" />
         <source>Failed to delete backup file.</source>
         <translation>Det gick inte att ta bort säkerhetskopian.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="559" />
-        <location filename="..\ui\backup_dialog.py" line="528" />
+        <location filename="..\ui\backup_dialog.py" line="560" />
+        <location filename="..\ui\backup_dialog.py" line="529" />
         <source>No Selection</source>
         <translation>Inget valt</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="529" />
+        <location filename="..\ui\backup_dialog.py" line="530" />
         <source>Please select a backup to compare.</source>
         <translation>Välj en säkerhetskopia att jämföra.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="536" />
+        <location filename="..\ui\backup_dialog.py" line="537" />
         <source>No latest backup found</source>
         <translation>Ingen senaste säkerhetskopia hittades</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="543" />
+        <location filename="..\ui\backup_dialog.py" line="544" />
         <source>Same Backup</source>
         <translation>Samma säkerhetskopia</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="544" />
+        <location filename="..\ui\backup_dialog.py" line="545" />
         <source>You selected the latest backup. Nothing to compare.</source>
         <translation>Du valde den senaste säkerhetskopian. Inget att jämföra.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="560" />
+        <location filename="..\ui\backup_dialog.py" line="561" />
         <source>Please select a backup first.</source>
         <translation>Välj en säkerhetskopia först.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="569" />
+        <location filename="..\ui\backup_dialog.py" line="570" />
         <source>Not Enough Backups</source>
         <translation>Inte tillräckligt med säkerhetskopior</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="570" />
+        <location filename="..\ui\backup_dialog.py" line="571" />
         <source>There is only one backup. Nothing to compare against.</source>
         <translation>Det finns bara en säkerhetskopia. Inget att jämföra med.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="585" />
+        <location filename="..\ui\backup_dialog.py" line="586" />
         <source>Failed to compare backups</source>
         <translation>Det gick inte att jämföra säkerhetskopiorna</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="589" />
+        <location filename="..\ui\backup_dialog.py" line="590" />
         <source>latest</source>
         <translation>senaste</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="592" />
+        <location filename="..\ui\backup_dialog.py" line="593" />
         <source>Comparison Results</source>
         <translation>Jämförelseresultat</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="601" />
+        <location filename="..\ui\backup_dialog.py" line="602" />
         <source>Comparing Backups:</source>
         <translation>Jämför säkerhetskopior:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="612" />
+        <location filename="..\ui\backup_dialog.py" line="613" />
         <source>✓ Close</source>
         <translation>✓ Stäng</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="681" />
+        <location filename="..\ui\backup_dialog.py" line="682" />
         <source>Failed to save tag: %1</source>
         <translation>Det gick inte att spara taggen: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="698" />
+        <location filename="..\ui\backup_dialog.py" line="699" />
         <source>No Backups</source>
         <translation>Inga säkerhetskopior</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="699" />
+        <location filename="..\ui\backup_dialog.py" line="700" />
         <source>There are no backup files to export.</source>
         <translation>Det finns inga säkerhetskopieringsfiler att exportera.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="707" />
+        <location filename="..\ui\backup_dialog.py" line="706" />
         <source>All backups (%1 files)</source>
         <translation>Alla säkerhetskopior (%1 filer)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="711" />
+        <location filename="..\ui\backup_dialog.py" line="710" />
         <source>Selected backup only (%1)</source>
         <translation>Endast vald säkerhetskopia (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="717" />
+        <location filename="..\ui\backup_dialog.py" line="716" />
         <source>Export Backups</source>
         <translation>Exportera säkerhetskopior</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="718" />
+        <location filename="..\ui\backup_dialog.py" line="717" />
         <source>What do you want to export?</source>
         <translation>Vad vill du exportera?</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="730" />
+        <location filename="..\ui\backup_dialog.py" line="729" />
         <source>ZIP archive (.zip)</source>
         <translation>ZIP-arkiv (.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="731" />
+        <location filename="..\ui\backup_dialog.py" line="730" />
         <source>Folder (copy .json files)</source>
         <translation>Mapp (kopiera .json-filer)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="735" />
+        <location filename="..\ui\backup_dialog.py" line="734" />
         <source>Export Format</source>
         <translation>Exportformat</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="736" />
+        <location filename="..\ui\backup_dialog.py" line="735" />
         <source>Choose export format:</source>
         <translation>Välj exportformat:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="751" />
+        <location filename="..\ui\backup_dialog.py" line="750" />
         <source>Save ZIP Archive</source>
         <translation>Spara ZIP-arkiv</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="753" />
+        <location filename="..\ui\backup_dialog.py" line="752" />
         <source>ZIP Archives (*.zip)</source>
         <translation>ZIP Archives (*.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="803" />
-        <location filename="..\ui\backup_dialog.py" line="765" />
+        <location filename="..\ui\backup_dialog.py" line="802" />
+        <location filename="..\ui\backup_dialog.py" line="764" />
         <source>Export Successful</source>
         <translation>Export lyckades</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="804" />
-        <location filename="..\ui\backup_dialog.py" line="766" />
+        <location filename="..\ui\backup_dialog.py" line="803" />
+        <location filename="..\ui\backup_dialog.py" line="765" />
         <source>Exported %1 backup(s) to:
 %2</source>
         <translation>%1 säkerhetskopia/kopior exporterades till:
 %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="773" />
+        <location filename="..\ui\backup_dialog.py" line="772" />
         <source>Export Failed</source>
         <translation>Export misslyckades</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="774" />
+        <location filename="..\ui\backup_dialog.py" line="773" />
         <source>Could not create ZIP archive:
 %1</source>
         <translation>Det gick inte att skapa ZIP-arkivet:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="778" />
+        <location filename="..\ui\backup_dialog.py" line="777" />
         <source>Select Destination Folder</source>
         <translation>Välj målmapp</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="795" />
+        <location filename="..\ui\backup_dialog.py" line="794" />
         <source>Export Partial</source>
         <translation>Delvis export</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="796" />
+        <location filename="..\ui\backup_dialog.py" line="795" />
         <source>Exported %1 file(s). Errors:
 %2</source>
         <translation>%1 fil(er) exporterades. Fel:
 %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="815" />
+        <location filename="..\ui\backup_dialog.py" line="814" />
         <source>Import Backups</source>
         <translation>Importera säkerhetskopior</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="817" />
+        <location filename="..\ui\backup_dialog.py" line="816" />
         <source>Backup files (*.json *.zip)</source>
         <translation>Backup files (*.json *.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="843" />
+        <location filename="..\ui\backup_dialog.py" line="842" />
         <source>Import complete.
 
 ✓ Imported: %1
@@ -502,77 +502,77 @@ Vill du fortsätta?</translation>
 ⏭ Hoppades över (finns redan): %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="848" />
+        <location filename="..\ui\backup_dialog.py" line="847" />
         <source>Errors:
 %1</source>
         <translation>Fel:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="849" />
+        <location filename="..\ui\backup_dialog.py" line="848" />
         <source>Import Results</source>
         <translation>Importresultat</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="851" />
+        <location filename="..\ui\backup_dialog.py" line="850" />
         <source>Import Successful</source>
         <translation>Import lyckades</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="863" />
+        <location filename="..\ui\backup_dialog.py" line="862" />
         <source>No .json files found in: %1</source>
         <translation>Inga .json-filer hittades i: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="911" />
-        <location filename="..\ui\backup_dialog.py" line="878" />
+        <location filename="..\ui\backup_dialog.py" line="910" />
+        <location filename="..\ui\backup_dialog.py" line="877" />
         <source>%1: not a valid backup file (missing 'icons' dictionary)</source>
         <translation>%1: ogiltig säkerhetskopieringsfil (ordlistan 'icons' saknas)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="890" />
+        <location filename="..\ui\backup_dialog.py" line="889" />
         <source>Invalid ZIP file %1: %2</source>
         <translation>Ogiltig ZIP-fil %1: %2</translation>
     </message>
 </context><context>
     <name>CLI</name>
     <message>
-        <location filename="..\main.py" line="269" />
+        <location filename="..\main.py" line="274" />
         <source>Perform a backup</source>
         <translation>Utför en säkerhetskopiering</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="275" />
+        <location filename="..\main.py" line="280" />
         <source>Restore a specific backup or latest</source>
         <translation>Återställ en specifik säkerhetskopia eller den senaste</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="280" />
+        <location filename="..\main.py" line="285" />
         <source>Run without showing the GUI</source>
         <translation>Kör utan att visa gränssnittet</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="301" />
+        <location filename="..\main.py" line="306" />
         <source>[SILENT]</source>
         <translation>[TYST]</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="306" />
+        <location filename="..\main.py" line="311" />
         <source>Starting silent backup...</source>
         <translation>Startar tyst säkerhetskopiering...</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="309" />
+        <location filename="..\main.py" line="314" />
         <source>Silent CLI Backup</source>
         <translation>Tyst säkerhetskopiering via kommandorad</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="323" />
+        <location filename="..\main.py" line="328" />
         <source>Error: No backup files found for latest restore.</source>
         <translation>Fel: Inga säkerhetskopior hittades för senaste återställning.</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="331" />
+        <location filename="..\main.py" line="336" />
         <source>Starting silent restore from: %1</source>
         <translation>Startar tyst återställning från: %1</translation>
     </message>
@@ -888,12 +888,12 @@ Vill du fortsätta?</translation>
 </context><context>
     <name>Main</name>
     <message>
-        <location filename="..\main.py" line="377" />
+        <location filename="..\main.py" line="382" />
         <source>Critical Error</source>
         <translation>Kritiskt fel</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="378" />
+        <location filename="..\main.py" line="383" />
         <source>Failed to start application:
 %1</source>
         <translation>Det gick inte att starta programmet:
@@ -922,7 +922,7 @@ Vill du fortsätta?</translation>
         <translation>Anpassad (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="373" />
+        <location filename="..\ui\main_window.py" line="375" />
         <location filename="..\ui\autohide.py" line="70" />
         <source>Custom...</source>
         <translation>Anpassad...</translation>
@@ -1013,7 +1013,7 @@ Vill du fortsätta?</translation>
         <translation>Utveckling:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="524" />
+        <location filename="..\ui\main_window.py" line="526" />
         <location filename="..\ui\dialogs.py" line="116" />
         <source>Support on Ko-fi</source>
         <translation>Stöd på Ko-fi</translation>
@@ -1025,7 +1025,7 @@ Vill du fortsätta?</translation>
         <translation>Stäng</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="401" />
+        <location filename="..\ui\main_window.py" line="403" />
         <location filename="..\ui\dialogs.py" line="187" />
         <location filename="..\ui\dialogs.py" line="150" />
         <source>Keyboard Shortcuts</source>
@@ -1052,8 +1052,8 @@ Vill du fortsätta?</translation>
         <translation>Öppna</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="207" />
-        <location filename="..\ui\main_window.py" line="135" />
+        <location filename="..\ui\main_window.py" line="209" />
+        <location filename="..\ui\main_window.py" line="137" />
         <location filename="..\ui\dialogs.py" line="166" />
         <source>Show/Hide Desktop Icons</source>
         <translation>Visa/Dölj skrivbordsikoner</translation>
@@ -1079,294 +1079,294 @@ Vill du fortsätta?</translation>
         <translation>Tips: Håll muspekaren över knappar för att se ytterligare genvägar i verktygstips.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="69" />
+        <location filename="..\ui\main_window.py" line="71" />
         <source>Unknown</source>
         <translation>Okänd</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="122" />
+        <location filename="..\ui\main_window.py" line="124" />
         <source>Quick Save</source>
         <translation>Snabbspara</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="124" />
+        <location filename="..\ui\main_window.py" line="126" />
         <source>Quick Save (Tray)</source>
         <translation>Snabbspara (fält)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="128" />
+        <location filename="..\ui\main_window.py" line="130" />
         <source>Restore Latest</source>
         <translation>Återställ senaste</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="140" />
+        <location filename="..\ui\main_window.py" line="142" />
         <source>Show Desktop Icons</source>
         <translation>Visa skrivbordsikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="144" />
+        <location filename="..\ui\main_window.py" line="146" />
         <source>Hide Desktop Icons</source>
         <translation>Dölj skrivbordsikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="151" />
+        <location filename="..\ui\main_window.py" line="153" />
         <source>⏱️ Auto-Hide Timer</source>
         <translation>⏱️ Timer för automatisk döljning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="158" />
+        <location filename="..\ui\main_window.py" line="160" />
         <source>Show Window</source>
         <translation>Visa fönster</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="162" />
+        <location filename="..\ui\main_window.py" line="164" />
         <source>Exit</source>
         <translation>Avsluta</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="189" />
+        <location filename="..\ui\main_window.py" line="191" />
         <source>&amp;File</source>
         <translation>&amp;Arkiv</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="192" />
+        <location filename="..\ui\main_window.py" line="194" />
         <source>Scramble Desktop Icons (Random)</source>
         <translation>Blanda skrivbordsikoner (slumpmässigt)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="195" />
+        <location filename="..\ui\main_window.py" line="197" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
         <translation>Placerar alla skrivbordsikoner slumpmässigt efter att ha skapat en obligatorisk säkerhetskopia.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="205" />
+        <location filename="..\ui\main_window.py" line="207" />
         <source>👁️ Desktop Icons Visibility</source>
         <translation>👁️ Synlighet för skrivbordsikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="210" />
+        <location filename="..\ui\main_window.py" line="212" />
         <source>Toggle visibility of all desktop icons (Ctrl+H)</source>
         <translation>Växla synlighet för alla skrivbordsikoner (Ctrl+H)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="215" />
+        <location filename="..\ui\main_window.py" line="217" />
         <source>Show Icons</source>
         <translation>Visa ikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="219" />
+        <location filename="..\ui\main_window.py" line="221" />
         <source>Hide Icons</source>
         <translation>Dölj ikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="225" />
+        <location filename="..\ui\main_window.py" line="227" />
         <source>Remove All Backups...</source>
         <translation>Ta bort alla säkerhetskopior...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="231" />
+        <location filename="..\ui\main_window.py" line="233" />
         <source>📤 Export Backups...</source>
         <translation>📤 Exportera säkerhetskopior...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="232" />
+        <location filename="..\ui\main_window.py" line="234" />
         <source>Export backups to a folder or ZIP archive</source>
         <translation>Exportera säkerhetskopior till en mapp eller ett ZIP-arkiv</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="236" />
+        <location filename="..\ui\main_window.py" line="238" />
         <source>📥 Import Backups...</source>
         <translation>📥 Importera säkerhetskopior...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="238" />
+        <location filename="..\ui\main_window.py" line="240" />
         <source>Import backup files (.json) or a ZIP archive</source>
         <translation>Importera säkerhetskopieringsfiler (.json) eller ett ZIP-arkiv</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="244" />
+        <location filename="..\ui\main_window.py" line="246" />
         <source>E&amp;xit</source>
         <translation>A&amp;vsluta</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="545" />
-        <location filename="..\ui\main_window.py" line="249" />
+        <location filename="..\ui\main_window.py" line="547" />
+        <location filename="..\ui\main_window.py" line="251" />
         <source>&amp;Settings</source>
         <translation>&amp;Inställningar</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="251" />
+        <location filename="..\ui\main_window.py" line="253" />
         <source>Open Settings Menu</source>
         <translation>Öppna inställningsmenyn</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1196" />
-        <location filename="..\ui\main_window.py" line="257" />
+        <location filename="..\ui\main_window.py" line="1227" />
+        <location filename="..\ui\main_window.py" line="259" />
         <source>Auto-Save on Exit</source>
         <translation>Spara automatiskt vid avslut</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="265" />
+        <location filename="..\ui\main_window.py" line="267" />
         <source>Auto-Restore on Startup</source>
         <translation>Återställ automatiskt vid start</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="273" />
+        <location filename="..\ui\main_window.py" line="275" />
         <source>Check for Updates on Startup</source>
         <translation>Sök efter uppdateringar vid start</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="284" />
+        <location filename="..\ui\main_window.py" line="286" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>Aktivera adaptiv skalning vid återställning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="295" />
+        <location filename="..\ui\main_window.py" line="297" />
         <source>Start Minimized to Tray</source>
         <translation>Starta minimerat i systemfältet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="303" />
+        <location filename="..\ui\main_window.py" line="305" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>Minimera till systemfältet vid stängning (knappen "X")</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="313" />
+        <location filename="..\ui\main_window.py" line="315" />
         <source>🗑️ Automatic Backup Cleanup Limit</source>
         <translation>🗑️ Gräns för automatisk rensning av säkerhetskopior</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="318" />
+        <location filename="..\ui\main_window.py" line="320" />
         <source>Disabled (Keep All)</source>
         <translation>Inaktiverat (behåll alla)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="319" />
+        <location filename="..\ui\main_window.py" line="321" />
         <source>Keep Last 5</source>
         <translation>Behåll de 5 senaste</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="320" />
+        <location filename="..\ui\main_window.py" line="322" />
         <source>Keep Last 10</source>
         <translation>Behåll de 10 senaste</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="321" />
+        <location filename="..\ui\main_window.py" line="323" />
         <source>Keep Last 25</source>
         <translation>Behåll de 25 senaste</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="322" />
+        <location filename="..\ui\main_window.py" line="324" />
         <source>Keep Last 50</source>
         <translation>Behåll de 50 senaste</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="336" />
+        <location filename="..\ui\main_window.py" line="338" />
         <source>⏱️ Auto-Hide Desktop Icons</source>
         <translation>⏱️ Dölj skrivbordsikoner automatiskt</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="340" />
+        <location filename="..\ui\main_window.py" line="342" />
         <source>Enable Auto-Hide Timer</source>
         <translation>Aktivera timer för automatisk döljning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="347" />
+        <location filename="..\ui\main_window.py" line="349" />
         <source>Hide After...</source>
         <translation>Dölj efter...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="353" />
+        <location filename="..\ui\main_window.py" line="355" />
         <source>30 seconds</source>
         <translation>30 sekunder</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="354" />
+        <location filename="..\ui\main_window.py" line="356" />
         <source>1 minute</source>
         <translation>1 minut</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="355" />
+        <location filename="..\ui\main_window.py" line="357" />
         <source>2 minutes</source>
         <translation>2 minuter</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="356" />
+        <location filename="..\ui\main_window.py" line="358" />
         <source>5 minutes</source>
         <translation>5 minuter</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="357" />
+        <location filename="..\ui\main_window.py" line="359" />
         <source>10 minutes</source>
         <translation>10 minuter</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="358" />
+        <location filename="..\ui\main_window.py" line="360" />
         <source>15 minutes</source>
         <translation>15 minuter</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="359" />
+        <location filename="..\ui\main_window.py" line="361" />
         <source>30 minutes</source>
         <translation>30 minuter</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="383" />
+        <location filename="..\ui\main_window.py" line="385" />
         <source>Backup Before Auto-Hide</source>
         <translation>Säkerhetskopia före automatisk döljning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="392" />
+        <location filename="..\ui\main_window.py" line="394" />
         <source>&amp;Help</source>
         <translation>&amp;Hjälp</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="394" />
+        <location filename="..\ui\main_window.py" line="396" />
         <source>Online User Manual</source>
         <translation>Användarhandbok online</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="405" />
+        <location filename="..\ui\main_window.py" line="407" />
         <source>Statistics Dashboard</source>
         <translation>Statistikpanel</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="411" />
+        <location filename="..\ui\main_window.py" line="413" />
         <source>Check for Updates...</source>
         <translation>Sök efter uppdateringar...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="417" />
+        <location filename="..\ui\main_window.py" line="419" />
         <source>&amp;About</source>
         <translation>&amp;Om</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="423" />
+        <location filename="..\ui\main_window.py" line="425" />
         <source>Support on Ko-fi...</source>
         <translation>Stöd på Ko-fi...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="438" />
+        <location filename="..\ui\main_window.py" line="440" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>Valfritt: Ange en beskrivande tagg/beskrivning...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="445" />
+        <location filename="..\ui\main_window.py" line="447" />
         <source>Select a profile to auto-fill the tag field</source>
         <translation>Välj en profil för att fylla i tagfältet automatiskt</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="451" />
+        <location filename="..\ui\main_window.py" line="453" />
         <source>Save Tag:</source>
         <translation>Spartagg:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="459" />
+        <location filename="..\ui\main_window.py" line="461" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 SNABBSPARA SÄKERHETSKOPIA</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="463" />
+        <location filename="..\ui\main_window.py" line="465" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -1375,17 +1375,17 @@ Shortcut: Ctrl+S</source>
 Genväg: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="471" />
+        <location filename="..\ui\main_window.py" line="473" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ ÅTERSTÄLL SENASTE</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="474" />
+        <location filename="..\ui\main_window.py" line="476" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>Återställ ikonpositioner från den SENASTE säkerhetskopian.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="483" />
+        <location filename="..\ui\main_window.py" line="485" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -1394,12 +1394,12 @@ Shortcut: Ctrl+M</source>
 Genväg: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="491" />
+        <location filename="..\ui\main_window.py" line="493" />
         <source>👁️ SHOW/HIDE ICONS</source>
         <translation>👁️ VISA/DÖLJ IKONER</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="494" />
+        <location filename="..\ui\main_window.py" line="496" />
         <source>Show or hide all desktop icons.
 
 Shortcut: Ctrl+H</source>
@@ -1408,45 +1408,45 @@ Shortcut: Ctrl+H</source>
 Genväg: Ctrl+H</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="506" />
+        <location filename="..\ui\main_window.py" line="508" />
         <source>Activity Log:</source>
         <translation>Aktivitetslogg:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="517" />
+        <location filename="..\ui\main_window.py" line="519" />
         <source>Current Resolution: %1</source>
         <translation>Aktuell upplösning: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="530" />
+        <location filename="..\ui\main_window.py" line="532" />
         <source>Clear Log</source>
         <translation>Rensa logg</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="553" />
+        <location filename="..\ui\main_window.py" line="555" />
         <source>Settings menu not found</source>
         <translation>Inställningsmenyn hittades inte</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="565" />
+        <location filename="..\ui\main_window.py" line="567" />
         <source>Opening online user manual in browser...</source>
         <translation>Öppnar användarhandboken online i webbläsaren...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="567" />
+        <location filename="..\ui\main_window.py" line="569" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ Det gick inte att öppna handbokens URL</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1111" />
-        <location filename="..\ui\main_window.py" line="883" />
-        <location filename="..\ui\main_window.py" line="846" />
-        <location filename="..\ui\main_window.py" line="570" />
+        <location filename="..\ui\main_window.py" line="1105" />
+        <location filename="..\ui\main_window.py" line="881" />
+        <location filename="..\ui\main_window.py" line="844" />
+        <location filename="..\ui\main_window.py" line="572" />
         <source>Error</source>
         <translation>Fel</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="571" />
+        <location filename="..\ui\main_window.py" line="573" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -1457,17 +1457,17 @@ Besök manuellt:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="578" />
+        <location filename="..\ui\main_window.py" line="580" />
         <source>Save</source>
         <translation>Spara</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="581" />
+        <location filename="..\ui\main_window.py" line="583" />
         <source>Quick Backup (Shortcut)</source>
         <translation>Snabb säkerhetskopia (genväg)</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="630" />
+        <location filename="..\ui\main_window.py" line="632" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>Automatisk rensningsgräns inställd på: %n säkerhetskopia (0 = Inaktiverat).</numerusform>
@@ -1475,19 +1475,19 @@ Besök manuellt:
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1210" />
-        <location filename="..\ui\main_window.py" line="1099" />
-        <location filename="..\ui\main_window.py" line="692" />
+        <location filename="..\ui\main_window.py" line="1241" />
+        <location filename="..\ui\main_window.py" line="1093" />
+        <location filename="..\ui\main_window.py" line="694" />
         <source>Desktop Icon Manager</source>
         <translation>Skrivbordsikonhanteraren</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="727" />
+        <location filename="..\ui\main_window.py" line="729" />
         <source>Backup list updated (item deleted).</source>
         <translation>Säkerhetskopielistan uppdaterad (objekt borttaget).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="736" />
+        <location filename="..\ui\main_window.py" line="738" />
         <source>Backup list updated.</source>
         <translation>Säkerhetskopielistan uppdaterades.</translation>
     </message>
@@ -1497,107 +1497,107 @@ Besök manuellt:
         <translation>Säkerhetskopielistan uppdaterades (importerad).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="763" />
+        <location filename="..\ui\main_window.py" line="761" />
         <source>— Profiles —</source>
         <translation>— Profiler —</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="765" />
+        <location filename="..\ui\main_window.py" line="763" />
         <source>Work</source>
         <translation>Arbete</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="766" />
+        <location filename="..\ui\main_window.py" line="764" />
         <source>Gaming</source>
         <translation>Gaming</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="767" />
+        <location filename="..\ui\main_window.py" line="765" />
         <source>Presentation</source>
         <translation>Presentation</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="768" />
+        <location filename="..\ui\main_window.py" line="766" />
         <source>Dev / Coding</source>
         <translation>Utveckling / Kodning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="769" />
+        <location filename="..\ui\main_window.py" line="767" />
         <source>Meeting</source>
         <translation>Möte</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="770" />
+        <location filename="..\ui\main_window.py" line="768" />
         <source>Home</source>
         <translation>Hemma</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="771" />
+        <location filename="..\ui\main_window.py" line="769" />
         <source>Office</source>
         <translation>Kontor</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="772" />
+        <location filename="..\ui\main_window.py" line="770" />
         <source>Laptop</source>
         <translation>Bärbar</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="773" />
+        <location filename="..\ui\main_window.py" line="771" />
         <source>Docked / External Monitor</source>
         <translation>Dockad / Extern skärm</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="774" />
+        <location filename="..\ui\main_window.py" line="772" />
         <source>Clean Desktop</source>
         <translation>Rent skrivbord</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="775" />
+        <location filename="..\ui\main_window.py" line="773" />
         <source>Pre-Update</source>
         <translation>Före uppdatering</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="776" />
+        <location filename="..\ui\main_window.py" line="774" />
         <source>Pre-Reboot</source>
         <translation>Före omstart</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="777" />
+        <location filename="..\ui\main_window.py" line="775" />
         <source>Favourite</source>
         <translation>Favorit</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="778" />
+        <location filename="..\ui\main_window.py" line="776" />
         <source>Test</source>
         <translation>Test</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="800" />
+        <location filename="..\ui\main_window.py" line="798" />
         <source>Quick Backup</source>
         <translation>Snabb säkerhetskopia</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="815" />
+        <location filename="..\ui\main_window.py" line="813" />
         <source>No backup files found to delete.</source>
         <translation>Inga säkerhetskopior hittades att ta bort.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="818" />
+        <location filename="..\ui\main_window.py" line="816" />
         <source>No Backups Found</source>
         <translation>Inga säkerhetskopior hittades</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="819" />
+        <location filename="..\ui\main_window.py" line="817" />
         <source>There are no backup files to delete.</source>
         <translation>Det finns inga säkerhetskopior att ta bort.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="825" />
+        <location filename="..\ui\main_window.py" line="823" />
         <source>WARNING: Delete All Backups</source>
         <translation>VARNING: Ta bort alla säkerhetskopior</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="826" />
+        <location filename="..\ui\main_window.py" line="824" />
         <source>Are you absolutely sure you want to permanently delete all desktop icon backup files?
 
 This action cannot be undone!</source>
@@ -1606,158 +1606,158 @@ This action cannot be undone!</source>
 Denna åtgärd kan inte ångras!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1048" />
-        <location filename="..\ui\main_window.py" line="829" />
+        <location filename="..\ui\main_window.py" line="1042" />
+        <location filename="..\ui\main_window.py" line="827" />
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1049" />
-        <location filename="..\ui\main_window.py" line="830" />
+        <location filename="..\ui\main_window.py" line="1043" />
+        <location filename="..\ui\main_window.py" line="828" />
         <source>No</source>
         <translation>Nej</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="832" />
+        <location filename="..\ui\main_window.py" line="830" />
         <source>Starting deletion of all backup files...</source>
         <translation>Startar borttagning av alla säkerhetskopior...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1092" />
-        <location filename="..\ui\main_window.py" line="840" />
+        <location filename="..\ui\main_window.py" line="1086" />
+        <location filename="..\ui\main_window.py" line="838" />
         <source>Success</source>
         <translation>Åtgärd lyckades</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="841" />
+        <location filename="..\ui\main_window.py" line="839" />
         <source>All backup files have been successfully deleted.</source>
         <translation>Alla säkerhetskopior har tagits bort.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="847" />
+        <location filename="..\ui\main_window.py" line="845" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>Vissa filer kunde inte tas bort. Kontrollera aktivitetsloggen för mer information.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="857" />
+        <location filename="..\ui\main_window.py" line="855" />
         <source>Starting new timestamped backup...</source>
         <translation>Startar ny säkerhetskopia med tidsstämpel...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="859" />
+        <location filename="..\ui\main_window.py" line="857" />
         <source>  (Tag: %1)</source>
         <translation>  (Tagg: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="863" />
+        <location filename="..\ui\main_window.py" line="861" />
         <source>Saving...</source>
         <translation>Sparar...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="883" />
+        <location filename="..\ui\main_window.py" line="881" />
         <source>No backup files found to restore!</source>
         <translation>Inga säkerhetskopior hittades att återställa!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="885" />
+        <location filename="..\ui\main_window.py" line="883" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ Återställning misslyckades: Inga säkerhetskopior hittades.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="905" />
-        <location filename="..\ui\main_window.py" line="904" />
-        <location filename="..\ui\main_window.py" line="899" />
-        <location filename="..\ui\main_window.py" line="898" />
+        <location filename="..\ui\main_window.py" line="901" />
+        <location filename="..\ui\main_window.py" line="900" />
+        <location filename="..\ui\main_window.py" line="895" />
+        <location filename="..\ui\main_window.py" line="894" />
         <source>N/A</source>
         <translation>Ej tillgängligt</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="908" />
+        <location filename="..\ui\main_window.py" line="904" />
         <source>N/A (Old Format)</source>
         <translation>Ej tillgängligt (gammalt format)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="937" />
+        <location filename="..\ui\main_window.py" line="933" />
         <source>Confirm Restore — Live Preview</source>
         <translation>Bekräfta återställning — Direktförhandsvisning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="947" />
+        <location filename="..\ui\main_window.py" line="943" />
         <source>File</source>
         <translation>Fil</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="948" />
+        <location filename="..\ui\main_window.py" line="944" />
         <source>Resolution</source>
         <translation>Upplösning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="949" />
+        <location filename="..\ui\main_window.py" line="945" />
         <source>Icons</source>
         <translation>Ikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="950" />
+        <location filename="..\ui\main_window.py" line="946" />
         <source>Tag</source>
         <translation>Etikett</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="951" />
+        <location filename="..\ui\main_window.py" line="947" />
         <source>Timestamp</source>
         <translation>Tidsstämpel</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="963" />
+        <location filename="..\ui\main_window.py" line="959" />
         <source>will move</source>
         <translation>kommer att flyttas</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="964" />
+        <location filename="..\ui\main_window.py" line="960" />
         <source>already in place</source>
         <translation>redan på rätt plats</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="965" />
+        <location filename="..\ui\main_window.py" line="961" />
         <source>not on desktop</source>
         <translation>finns inte på skrivbordet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="974" />
+        <location filename="..\ui\main_window.py" line="970" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>Layoutförhandsvisning (sparade positioner vs. aktuella):</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="996" />
+        <location filename="..\ui\main_window.py" line="990" />
         <source>↺ Restore</source>
         <translation>↺ Återställ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1003" />
+        <location filename="..\ui\main_window.py" line="997" />
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1023" />
+        <location filename="..\ui\main_window.py" line="1017" />
         <source>Starting restore from backup '%1'...</source>
         <translation>Startar återställning från säkerhetskopia '%1'...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1024" />
+        <location filename="..\ui\main_window.py" line="1018" />
         <source>latest</source>
         <translation>senaste</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1029" />
+        <location filename="..\ui\main_window.py" line="1023" />
         <source>Restoring...</source>
         <translation>Återställer...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1044" />
+        <location filename="..\ui\main_window.py" line="1038" />
         <source>Confirm Scramble</source>
         <translation>Bekräfta blandning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1045" />
+        <location filename="..\ui\main_window.py" line="1039" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1770,47 +1770,47 @@ Do you want to proceed?</source>
 Vill du fortsätta?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1051" />
+        <location filename="..\ui\main_window.py" line="1045" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>Startar slumpmässig blandning av skrivbordsikoner...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1054" />
+        <location filename="..\ui\main_window.py" line="1048" />
         <source>Scrambling icons...</source>
         <translation>Blandar ikoner...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1087" />
+        <location filename="..\ui\main_window.py" line="1081" />
         <source>Operation completed successfully</source>
         <translation>Åtgärden slutfördes</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1093" />
+        <location filename="..\ui\main_window.py" line="1087" />
         <source>Operation completed successfully! (%1)</source>
         <translation>Åtgärden slutfördes! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1100" />
+        <location filename="..\ui\main_window.py" line="1094" />
         <source>%1 successful!</source>
         <translation>%1 lyckades!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1108" />
+        <location filename="..\ui\main_window.py" line="1102" />
         <source>Operation failed</source>
         <translation>Åtgärden misslyckades</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1112" />
+        <location filename="..\ui\main_window.py" line="1106" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>Åtgärden misslyckades (%1). Kontrollera loggen för mer information.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1125" />
+        <location filename="..\ui\main_window.py" line="1119" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ Varning: Skärmmetadata saknas eller är ofullständig.</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="1130" />
+        <location filename="..\ui\main_window.py" line="1124" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ Varning: Sparad (%n skärm) vs. aktuell (%1 skärm).</numerusform>
@@ -1818,12 +1818,12 @@ Vill du fortsätta?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1138" />
+        <location filename="..\ui\main_window.py" line="1132" />
         <source>Monitor Mismatch Warning</source>
         <translation>Varning om skärmavvikelse</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1139" />
+        <location filename="..\ui\main_window.py" line="1133" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1832,17 +1832,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Ikonpositioner har återställts, men de kan vara felaktiga.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1161" />
+        <location filename="..\ui\main_window.py" line="1155" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ Varning: Skärmupplösningarna stämmer inte med den sparade layouten.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1165" />
+        <location filename="..\ui\main_window.py" line="1159" />
         <source>Resolution Mismatch Warning</source>
         <translation>Varning om upplösningsavvikelse</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1166" />
+        <location filename="..\ui\main_window.py" line="1160" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1851,82 +1851,87 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Ikonpositioner har återställts, men de kan vara felaktiga.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1178" />
+        <location filename="..\ui\main_window.py" line="1197" />
+        <source>Auto-Save skipped: a Quick Save was performed less than 10 seconds ago.</source>
+        <translation>Automatisk sparning hoppades över: En snabbsparning utfördes för mindre än 10 sekunder sedan.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1207" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>Spara automatiskt vid avslut är aktiverat. Utför tyst säkerhetskopiering...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1184" />
+        <location filename="..\ui\main_window.py" line="1215" />
         <source>Auto-Save icon layout…</source>
         <translation>Sparar ikonlayout automatiskt…</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1190" />
+        <location filename="..\ui\main_window.py" line="1221" />
         <source>Please wait</source>
         <translation>Vänta</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1195" />
+        <location filename="..\ui\main_window.py" line="1226" />
         <source>Auto-Save Log</source>
         <translation>Logg för automatisk sparning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1211" />
+        <location filename="..\ui\main_window.py" line="1242" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>Programmet minimerades till systemfältet. Klicka eller dubbelklicka för att återställa.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1254" />
+        <location filename="..\ui\main_window.py" line="1283" />
         <source>A new version is available! (%1)</source>
         <translation>En ny version är tillgänglig! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1259" />
+        <location filename="..\ui\main_window.py" line="1288" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 En ny version är tillgänglig: %1 (nuvarande: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1279" />
+        <location filename="..\ui\main_window.py" line="1308" />
         <source>Updating desktop icon visibility...</source>
         <translation>Uppdaterar synlighet för skrivbordsikoner...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1282" />
+        <location filename="..\ui\main_window.py" line="1311" />
         <source>Desktop icon visibility updated.</source>
         <translation>Synlighet för skrivbordsikoner uppdaterad.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1285" />
+        <location filename="..\ui\main_window.py" line="1314" />
         <source>✗ Failed to show/hide desktop icons.</source>
         <translation>✗ Kunde inte visa/dölja skrivbordsikoner.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1289" />
+        <location filename="..\ui\main_window.py" line="1318" />
         <source>Attempting to show desktop icons...</source>
         <translation>Försöker visa skrivbordsikoner...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1292" />
+        <location filename="..\ui\main_window.py" line="1321" />
         <source>Desktop icons are now visible.</source>
         <translation>Skrivbordsikonerna är nu synliga.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1295" />
+        <location filename="..\ui\main_window.py" line="1324" />
         <source>✗ Failed to show desktop icons.</source>
         <translation>✗ Kunde inte visa skrivbordsikoner.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1299" />
+        <location filename="..\ui\main_window.py" line="1328" />
         <source>Attempting to hide desktop icons...</source>
         <translation>Försöker dölja skrivbordsikoner...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1302" />
+        <location filename="..\ui\main_window.py" line="1331" />
         <source>Desktop icons are now hidden.</source>
         <translation>Skrivbordsikonerna är nu dolda.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1305" />
+        <location filename="..\ui\main_window.py" line="1334" />
         <source>✗ Failed to hide desktop icons.</source>
         <translation>✗ Kunde inte dölja skrivbordsikoner.</translation>
     </message>
@@ -1950,38 +1955,38 @@ Ikonpositioner har återställts, men de kan vara felaktiga.</translation>
 </context><context>
     <name>StatsDialog</name>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="214" />
+        <location filename="..\ui\stats_dialog.py" line="216" />
         <source>Statistics Dashboard</source>
         <translation>Statistikpanel</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="236" />
+        <location filename="..\ui\stats_dialog.py" line="238" />
         <source>Total backups</source>
         <translation>Totalt antal säkerhetskopior</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="240" />
+        <location filename="..\ui\stats_dialog.py" line="242" />
         <source>Restores</source>
         <translation>Återställningar</translation>
     </message>
     <message>
         <location filename="..\ui\stats_dialog.py" line="324" />
-        <location filename="..\ui\stats_dialog.py" line="243" />
+        <location filename="..\ui\stats_dialog.py" line="245" />
         <source>Saves</source>
         <translation>Sparningar</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="247" />
+        <location filename="..\ui\stats_dialog.py" line="249" />
         <source>Disk usage</source>
         <translation>Diskanvändning</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="254" />
+        <location filename="..\ui\stats_dialog.py" line="256" />
         <source>Avg icons</source>
         <translation>Genomsnittliga ikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="265" />
+        <location filename="..\ui\stats_dialog.py" line="267" />
         <source>Backups per month</source>
         <translation>Säkerhetskopior per månad</translation>
     </message>
@@ -2145,22 +2150,22 @@ Ikonpositioner har återställts, men de kan vara felaktiga.</translation>
 </context><context>
     <name>_PickBackupDialog</name>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="943" />
+        <location filename="..\ui\backup_dialog.py" line="942" />
         <source>Pick Backup to Compare Against</source>
         <translation>Välj säkerhetskopia att jämföra med</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="947" />
+        <location filename="..\ui\backup_dialog.py" line="946" />
         <source>Select the second backup file:</source>
         <translation>Välj den andra säkerhetskopieringsfilen:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="961" />
+        <location filename="..\ui\backup_dialog.py" line="958" />
         <source>Compare</source>
         <translation>Jämför</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="963" />
+        <location filename="..\ui\backup_dialog.py" line="960" />
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>

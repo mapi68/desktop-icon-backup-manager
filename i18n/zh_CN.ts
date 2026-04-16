@@ -59,7 +59,7 @@
 </context><context>
     <name>BackupManagerWindow</name>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="461" />
+        <location filename="..\ui\backup_dialog.py" line="462" />
         <source>%n icon will be moved</source>
         <comment>%n icons will be moved</comment>
         <translation>
@@ -67,7 +67,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="462" />
+        <location filename="..\ui\backup_dialog.py" line="463" />
         <source>%n icon already in place</source>
         <comment>%n icons already in place</comment>
         <translation>
@@ -75,7 +75,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="463" />
+        <location filename="..\ui\backup_dialog.py" line="464" />
         <source>%n icon not on desktop</source>
         <comment>%n icons not on desktop</comment>
         <translation>
@@ -83,155 +83,155 @@
         </translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="104" />
+        <location filename="..\ui\backup_dialog.py" line="107" />
         <source>Select, Restore, or Delete Backup</source>
         <translation>选择、还原或删除备份</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="114" />
+        <location filename="..\ui\backup_dialog.py" line="117" />
         <source>Select a backup to restore or right-click for options.</source>
         <translation>选择要还原的备份，或右键单击查看选项。</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="120" />
+        <location filename="..\ui\backup_dialog.py" line="123" />
         <source>Search by tag, resolution, or date...</source>
         <translation>按标签、分辨率或日期搜索...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="137" />
+        <location filename="..\ui\backup_dialog.py" line="140" />
         <source>Tag / Description</source>
         <translation>标签 / 描述</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="369" />
-        <location filename="..\ui\backup_dialog.py" line="138" />
+        <location filename="..\ui\backup_dialog.py" line="370" />
+        <location filename="..\ui\backup_dialog.py" line="141" />
         <source>Resolution</source>
         <translation>分辨率</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="368" />
-        <location filename="..\ui\backup_dialog.py" line="139" />
+        <location filename="..\ui\backup_dialog.py" line="369" />
+        <location filename="..\ui\backup_dialog.py" line="142" />
         <source>Icons</source>
         <translation>图标</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="371" />
-        <location filename="..\ui\backup_dialog.py" line="140" />
+        <location filename="..\ui\backup_dialog.py" line="372" />
+        <location filename="..\ui\backup_dialog.py" line="143" />
         <source>Timestamp</source>
         <translation>时间戳</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="190" />
+        <location filename="..\ui\backup_dialog.py" line="193" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>布局预览（已保存位置与当前位置）：</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="336" />
-        <location filename="..\ui\backup_dialog.py" line="200" />
+        <location filename="..\ui\backup_dialog.py" line="339" />
+        <location filename="..\ui\backup_dialog.py" line="203" />
         <source>Select a backup to see details.</source>
         <translation>选择备份以查看详细信息。</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="226" />
+        <location filename="..\ui\backup_dialog.py" line="229" />
         <source>Restore Selected Layout</source>
         <translation>还原所选布局</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="230" />
+        <location filename="..\ui\backup_dialog.py" line="233" />
         <source>📊 Compare Two Selected...</source>
         <translation>📊 比较所选两个...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="234" />
+        <location filename="..\ui\backup_dialog.py" line="237" />
         <source>📤 Export Backups...</source>
         <translation>📤 导出备份...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="236" />
+        <location filename="..\ui\backup_dialog.py" line="239" />
         <source>Export selected or all backups to a folder or ZIP archive</source>
         <translation>将选定的或所有备份导出到文件夹或ZIP压缩包</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="240" />
+        <location filename="..\ui\backup_dialog.py" line="243" />
         <source>📥 Import Backups...</source>
         <translation>📥 导入备份...</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="242" />
+        <location filename="..\ui\backup_dialog.py" line="245" />
         <source>Import backup files (.json) or a ZIP archive from another installation</source>
         <translation>从另一个安装导入备份文件(.json)或ZIP压缩包</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="248" />
+        <location filename="..\ui\backup_dialog.py" line="251" />
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
+        <location filename="..\ui\backup_dialog.py" line="433" />
         <location filename="..\ui\backup_dialog.py" line="432" />
-        <location filename="..\ui\backup_dialog.py" line="431" />
-        <location filename="..\ui\backup_dialog.py" line="358" />
-        <location filename="..\ui\backup_dialog.py" line="284" />
-        <location filename="..\ui\backup_dialog.py" line="278" />
+        <location filename="..\ui\backup_dialog.py" line="361" />
+        <location filename="..\ui\backup_dialog.py" line="287" />
+        <location filename="..\ui\backup_dialog.py" line="281" />
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="297" />
+        <location filename="..\ui\backup_dialog.py" line="300" />
         <source>Double-click to edit the tag/description</source>
         <translation>双击以编辑标签/描述</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="319" />
+        <location filename="..\ui\backup_dialog.py" line="322" />
         <source>No backups found.</source>
         <translation>未找到备份。</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="357" />
+        <location filename="..\ui\backup_dialog.py" line="360" />
         <source>None</source>
         <translation>无</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="367" />
+        <location filename="..\ui\backup_dialog.py" line="368" />
         <source>File</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="370" />
+        <location filename="..\ui\backup_dialog.py" line="371" />
         <source>Description</source>
         <translation>描述</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="680" />
-        <location filename="..\ui\backup_dialog.py" line="585" />
-        <location filename="..\ui\backup_dialog.py" line="536" />
-        <location filename="..\ui\backup_dialog.py" line="519" />
-        <location filename="..\ui\backup_dialog.py" line="493" />
-        <location filename="..\ui\backup_dialog.py" line="377" />
+        <location filename="..\ui\backup_dialog.py" line="681" />
+        <location filename="..\ui\backup_dialog.py" line="586" />
+        <location filename="..\ui\backup_dialog.py" line="537" />
+        <location filename="..\ui\backup_dialog.py" line="520" />
+        <location filename="..\ui\backup_dialog.py" line="494" />
+        <location filename="..\ui\backup_dialog.py" line="378" />
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="402" />
+        <location filename="..\ui\backup_dialog.py" line="403" />
         <source>🔄 Restore Selected</source>
         <translation>🔄 还原所选</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="405" />
+        <location filename="..\ui\backup_dialog.py" line="406" />
         <source>🗑️ Delete Selected</source>
         <translation>🗑️ 删除所选</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="409" />
+        <location filename="..\ui\backup_dialog.py" line="410" />
         <source>📊 Compare with Latest</source>
         <translation>📊 与最新版本比较</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="468" />
+        <location filename="..\ui\backup_dialog.py" line="469" />
         <source>Confirm Restore</source>
         <translation>确认还原</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="469" />
+        <location filename="..\ui\backup_dialog.py" line="470" />
         <source>Restore icon positions from the selected backup file:
 
 File: %1
@@ -252,31 +252,31 @@ Are you sure you want to proceed?</source>
 确定要继续吗？</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="508" />
-        <location filename="..\ui\backup_dialog.py" line="484" />
+        <location filename="..\ui\backup_dialog.py" line="509" />
+        <location filename="..\ui\backup_dialog.py" line="485" />
         <source>Yes</source>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="509" />
-        <location filename="..\ui\backup_dialog.py" line="485" />
+        <location filename="..\ui\backup_dialog.py" line="510" />
+        <location filename="..\ui\backup_dialog.py" line="486" />
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="494" />
+        <location filename="..\ui\backup_dialog.py" line="495" />
         <source>Failed to load backup file:
 %1</source>
         <translation>无法加载备份文件：
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="504" />
+        <location filename="..\ui\backup_dialog.py" line="505" />
         <source>Confirm Delete</source>
         <translation>确认删除</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="505" />
+        <location filename="..\ui\backup_dialog.py" line="506" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
@@ -285,206 +285,206 @@ Are you sure you want to proceed?</source>
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="515" />
+        <location filename="..\ui\backup_dialog.py" line="516" />
         <source>Success</source>
         <translation>成功</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="515" />
+        <location filename="..\ui\backup_dialog.py" line="516" />
         <source>Backup deleted successfully.</source>
         <translation>备份已成功删除。</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="519" />
+        <location filename="..\ui\backup_dialog.py" line="520" />
         <source>Failed to delete backup file.</source>
         <translation>无法删除备份文件。</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="559" />
-        <location filename="..\ui\backup_dialog.py" line="528" />
+        <location filename="..\ui\backup_dialog.py" line="560" />
+        <location filename="..\ui\backup_dialog.py" line="529" />
         <source>No Selection</source>
         <translation>未选择</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="529" />
+        <location filename="..\ui\backup_dialog.py" line="530" />
         <source>Please select a backup to compare.</source>
         <translation>请选择要比较的备份。</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="536" />
+        <location filename="..\ui\backup_dialog.py" line="537" />
         <source>No latest backup found</source>
         <translation>未找到最新备份</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="543" />
+        <location filename="..\ui\backup_dialog.py" line="544" />
         <source>Same Backup</source>
         <translation>相同备份</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="544" />
+        <location filename="..\ui\backup_dialog.py" line="545" />
         <source>You selected the latest backup. Nothing to compare.</source>
         <translation>您选择了最新备份，没有可比较的内容。</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="560" />
+        <location filename="..\ui\backup_dialog.py" line="561" />
         <source>Please select a backup first.</source>
         <translation>请先选择一个备份。</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="569" />
+        <location filename="..\ui\backup_dialog.py" line="570" />
         <source>Not Enough Backups</source>
         <translation>备份数量不足</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="570" />
+        <location filename="..\ui\backup_dialog.py" line="571" />
         <source>There is only one backup. Nothing to compare against.</source>
         <translation>只有一个备份，没有可比较的内容。</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="585" />
+        <location filename="..\ui\backup_dialog.py" line="586" />
         <source>Failed to compare backups</source>
         <translation>备份比较失败</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="589" />
+        <location filename="..\ui\backup_dialog.py" line="590" />
         <source>latest</source>
         <translation>最新</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="592" />
+        <location filename="..\ui\backup_dialog.py" line="593" />
         <source>Comparison Results</source>
         <translation>比较结果</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="601" />
+        <location filename="..\ui\backup_dialog.py" line="602" />
         <source>Comparing Backups:</source>
         <translation>正在比较备份：</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="612" />
+        <location filename="..\ui\backup_dialog.py" line="613" />
         <source>✓ Close</source>
         <translation>✓ 关闭</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="681" />
+        <location filename="..\ui\backup_dialog.py" line="682" />
         <source>Failed to save tag: %1</source>
         <translation>保存标签失败：%1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="698" />
+        <location filename="..\ui\backup_dialog.py" line="699" />
         <source>No Backups</source>
         <translation>无备份</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="699" />
+        <location filename="..\ui\backup_dialog.py" line="700" />
         <source>There are no backup files to export.</source>
         <translation>没有可导出的备份文件。</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="707" />
+        <location filename="..\ui\backup_dialog.py" line="706" />
         <source>All backups (%1 files)</source>
         <translation>所有备份（%1个文件）</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="711" />
+        <location filename="..\ui\backup_dialog.py" line="710" />
         <source>Selected backup only (%1)</source>
         <translation>仅选定的备份（%1）</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="717" />
+        <location filename="..\ui\backup_dialog.py" line="716" />
         <source>Export Backups</source>
         <translation>导出备份</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="718" />
+        <location filename="..\ui\backup_dialog.py" line="717" />
         <source>What do you want to export?</source>
         <translation>您要导出什么？</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="730" />
+        <location filename="..\ui\backup_dialog.py" line="729" />
         <source>ZIP archive (.zip)</source>
         <translation>ZIP压缩包(.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="731" />
+        <location filename="..\ui\backup_dialog.py" line="730" />
         <source>Folder (copy .json files)</source>
         <translation>文件夹（复制.json文件）</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="735" />
+        <location filename="..\ui\backup_dialog.py" line="734" />
         <source>Export Format</source>
         <translation>导出格式</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="736" />
+        <location filename="..\ui\backup_dialog.py" line="735" />
         <source>Choose export format:</source>
         <translation>选择导出格式：</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="751" />
+        <location filename="..\ui\backup_dialog.py" line="750" />
         <source>Save ZIP Archive</source>
         <translation>保存ZIP压缩包</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="753" />
+        <location filename="..\ui\backup_dialog.py" line="752" />
         <source>ZIP Archives (*.zip)</source>
         <translation>ZIP Archives (*.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="803" />
-        <location filename="..\ui\backup_dialog.py" line="765" />
+        <location filename="..\ui\backup_dialog.py" line="802" />
+        <location filename="..\ui\backup_dialog.py" line="764" />
         <source>Export Successful</source>
         <translation>导出成功</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="804" />
-        <location filename="..\ui\backup_dialog.py" line="766" />
+        <location filename="..\ui\backup_dialog.py" line="803" />
+        <location filename="..\ui\backup_dialog.py" line="765" />
         <source>Exported %1 backup(s) to:
 %2</source>
         <translation>已将%1个备份导出到：
 %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="773" />
+        <location filename="..\ui\backup_dialog.py" line="772" />
         <source>Export Failed</source>
         <translation>导出失败</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="774" />
+        <location filename="..\ui\backup_dialog.py" line="773" />
         <source>Could not create ZIP archive:
 %1</source>
         <translation>无法创建ZIP压缩包：
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="778" />
+        <location filename="..\ui\backup_dialog.py" line="777" />
         <source>Select Destination Folder</source>
         <translation>选择目标文件夹</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="795" />
+        <location filename="..\ui\backup_dialog.py" line="794" />
         <source>Export Partial</source>
         <translation>部分导出</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="796" />
+        <location filename="..\ui\backup_dialog.py" line="795" />
         <source>Exported %1 file(s). Errors:
 %2</source>
         <translation>已导出%1个文件。错误：
 %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="815" />
+        <location filename="..\ui\backup_dialog.py" line="814" />
         <source>Import Backups</source>
         <translation>导入备份</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="817" />
+        <location filename="..\ui\backup_dialog.py" line="816" />
         <source>Backup files (*.json *.zip)</source>
         <translation>Backup files (*.json *.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="843" />
+        <location filename="..\ui\backup_dialog.py" line="842" />
         <source>Import complete.
 
 ✓ Imported: %1
@@ -495,77 +495,77 @@ Are you sure you want to proceed?</source>
 ⏭ 已跳过（已存在）：%2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="848" />
+        <location filename="..\ui\backup_dialog.py" line="847" />
         <source>Errors:
 %1</source>
         <translation>错误：
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="849" />
+        <location filename="..\ui\backup_dialog.py" line="848" />
         <source>Import Results</source>
         <translation>导入结果</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="851" />
+        <location filename="..\ui\backup_dialog.py" line="850" />
         <source>Import Successful</source>
         <translation>导入成功</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="863" />
+        <location filename="..\ui\backup_dialog.py" line="862" />
         <source>No .json files found in: %1</source>
         <translation>在%1中未找到.json文件</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="911" />
-        <location filename="..\ui\backup_dialog.py" line="878" />
+        <location filename="..\ui\backup_dialog.py" line="910" />
+        <location filename="..\ui\backup_dialog.py" line="877" />
         <source>%1: not a valid backup file (missing 'icons' dictionary)</source>
         <translation>%1: 无效的备份文件（缺少 'icons' 字典）</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="890" />
+        <location filename="..\ui\backup_dialog.py" line="889" />
         <source>Invalid ZIP file %1: %2</source>
         <translation>无效的ZIP文件%1：%2</translation>
     </message>
 </context><context>
     <name>CLI</name>
     <message>
-        <location filename="..\main.py" line="269" />
+        <location filename="..\main.py" line="274" />
         <source>Perform a backup</source>
         <translation>执行备份</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="275" />
+        <location filename="..\main.py" line="280" />
         <source>Restore a specific backup or latest</source>
         <translation>还原特定备份或最新备份</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="280" />
+        <location filename="..\main.py" line="285" />
         <source>Run without showing the GUI</source>
         <translation>在不显示图形界面的情况下运行</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="301" />
+        <location filename="..\main.py" line="306" />
         <source>[SILENT]</source>
         <translation>[静默]</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="306" />
+        <location filename="..\main.py" line="311" />
         <source>Starting silent backup...</source>
         <translation>正在启动静默备份...</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="309" />
+        <location filename="..\main.py" line="314" />
         <source>Silent CLI Backup</source>
         <translation>静默命令行备份</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="323" />
+        <location filename="..\main.py" line="328" />
         <source>Error: No backup files found for latest restore.</source>
         <translation>错误：未找到用于最新还原的备份文件。</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="331" />
+        <location filename="..\main.py" line="336" />
         <source>Starting silent restore from: %1</source>
         <translation>正在从以下位置启动静默还原：%1</translation>
     </message>
@@ -870,12 +870,12 @@ Are you sure you want to proceed?</source>
 </context><context>
     <name>Main</name>
     <message>
-        <location filename="..\main.py" line="377" />
+        <location filename="..\main.py" line="382" />
         <source>Critical Error</source>
         <translation>严重错误</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="378" />
+        <location filename="..\main.py" line="383" />
         <source>Failed to start application:
 %1</source>
         <translation>启动应用程序失败：
@@ -904,7 +904,7 @@ Are you sure you want to proceed?</source>
         <translation>自定义 (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="373" />
+        <location filename="..\ui\main_window.py" line="375" />
         <location filename="..\ui\autohide.py" line="70" />
         <source>Custom...</source>
         <translation>自定义...</translation>
@@ -993,7 +993,7 @@ Are you sure you want to proceed?</source>
         <translation>开发者：</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="524" />
+        <location filename="..\ui\main_window.py" line="526" />
         <location filename="..\ui\dialogs.py" line="116" />
         <source>Support on Ko-fi</source>
         <translation>在 Ko-fi 上支持</translation>
@@ -1005,7 +1005,7 @@ Are you sure you want to proceed?</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="401" />
+        <location filename="..\ui\main_window.py" line="403" />
         <location filename="..\ui\dialogs.py" line="187" />
         <location filename="..\ui\dialogs.py" line="150" />
         <source>Keyboard Shortcuts</source>
@@ -1032,8 +1032,8 @@ Are you sure you want to proceed?</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="207" />
-        <location filename="..\ui\main_window.py" line="135" />
+        <location filename="..\ui\main_window.py" line="209" />
+        <location filename="..\ui\main_window.py" line="137" />
         <location filename="..\ui\dialogs.py" line="166" />
         <source>Show/Hide Desktop Icons</source>
         <translation>显示/隐藏桌面图标</translation>
@@ -1059,294 +1059,294 @@ Are you sure you want to proceed?</source>
         <translation>提示：将鼠标悬停在按钮上可在工具提示中查看其他快捷键。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="69" />
+        <location filename="..\ui\main_window.py" line="71" />
         <source>Unknown</source>
         <translation>未知</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="122" />
+        <location filename="..\ui\main_window.py" line="124" />
         <source>Quick Save</source>
         <translation>快速保存</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="124" />
+        <location filename="..\ui\main_window.py" line="126" />
         <source>Quick Save (Tray)</source>
         <translation>快速保存（托盘）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="128" />
+        <location filename="..\ui\main_window.py" line="130" />
         <source>Restore Latest</source>
         <translation>还原最新版本</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="140" />
+        <location filename="..\ui\main_window.py" line="142" />
         <source>Show Desktop Icons</source>
         <translation>显示桌面图标</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="144" />
+        <location filename="..\ui\main_window.py" line="146" />
         <source>Hide Desktop Icons</source>
         <translation>隐藏桌面图标</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="151" />
+        <location filename="..\ui\main_window.py" line="153" />
         <source>⏱️ Auto-Hide Timer</source>
         <translation>⏱️ 自动隐藏计时器</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="158" />
+        <location filename="..\ui\main_window.py" line="160" />
         <source>Show Window</source>
         <translation>显示窗口</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="162" />
+        <location filename="..\ui\main_window.py" line="164" />
         <source>Exit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="189" />
+        <location filename="..\ui\main_window.py" line="191" />
         <source>&amp;File</source>
         <translation>文件(&amp;F)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="192" />
+        <location filename="..\ui\main_window.py" line="194" />
         <source>Scramble Desktop Icons (Random)</source>
         <translation>随机排列桌面图标</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="195" />
+        <location filename="..\ui\main_window.py" line="197" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
         <translation>创建强制备份后，随机排列所有桌面图标的位置。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="205" />
+        <location filename="..\ui\main_window.py" line="207" />
         <source>👁️ Desktop Icons Visibility</source>
         <translation>👁️ 桌面图标可见性</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="210" />
+        <location filename="..\ui\main_window.py" line="212" />
         <source>Toggle visibility of all desktop icons (Ctrl+H)</source>
         <translation>切换所有桌面图标的可见性 (Ctrl+H)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="215" />
+        <location filename="..\ui\main_window.py" line="217" />
         <source>Show Icons</source>
         <translation>显示图标</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="219" />
+        <location filename="..\ui\main_window.py" line="221" />
         <source>Hide Icons</source>
         <translation>隐藏图标</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="225" />
+        <location filename="..\ui\main_window.py" line="227" />
         <source>Remove All Backups...</source>
         <translation>删除所有备份...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="231" />
+        <location filename="..\ui\main_window.py" line="233" />
         <source>📤 Export Backups...</source>
         <translation>📤 导出备份...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="232" />
+        <location filename="..\ui\main_window.py" line="234" />
         <source>Export backups to a folder or ZIP archive</source>
         <translation>将备份导出到文件夹或ZIP压缩包</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="236" />
+        <location filename="..\ui\main_window.py" line="238" />
         <source>📥 Import Backups...</source>
         <translation>📥 导入备份...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="238" />
+        <location filename="..\ui\main_window.py" line="240" />
         <source>Import backup files (.json) or a ZIP archive</source>
         <translation>导入备份文件(.json)或ZIP压缩包</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="244" />
+        <location filename="..\ui\main_window.py" line="246" />
         <source>E&amp;xit</source>
         <translation>退出(&amp;X)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="545" />
-        <location filename="..\ui\main_window.py" line="249" />
+        <location filename="..\ui\main_window.py" line="547" />
+        <location filename="..\ui\main_window.py" line="251" />
         <source>&amp;Settings</source>
         <translation>设置(&amp;S)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="251" />
+        <location filename="..\ui\main_window.py" line="253" />
         <source>Open Settings Menu</source>
         <translation>打开设置菜单</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1196" />
-        <location filename="..\ui\main_window.py" line="257" />
+        <location filename="..\ui\main_window.py" line="1227" />
+        <location filename="..\ui\main_window.py" line="259" />
         <source>Auto-Save on Exit</source>
         <translation>退出时自动保存</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="265" />
+        <location filename="..\ui\main_window.py" line="267" />
         <source>Auto-Restore on Startup</source>
         <translation>启动时自动还原</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="273" />
+        <location filename="..\ui\main_window.py" line="275" />
         <source>Check for Updates on Startup</source>
         <translation>启动时检查更新</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="284" />
+        <location filename="..\ui\main_window.py" line="286" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>还原时启用自适应缩放</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="295" />
+        <location filename="..\ui\main_window.py" line="297" />
         <source>Start Minimized to Tray</source>
         <translation>启动时最小化到托盘</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="303" />
+        <location filename="..\ui\main_window.py" line="305" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>关闭时最小化到托盘（"X"按钮）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="313" />
+        <location filename="..\ui\main_window.py" line="315" />
         <source>🗑️ Automatic Backup Cleanup Limit</source>
         <translation>🗑️ 自动备份清理限制</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="318" />
+        <location filename="..\ui\main_window.py" line="320" />
         <source>Disabled (Keep All)</source>
         <translation>已禁用（保留全部）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="319" />
+        <location filename="..\ui\main_window.py" line="321" />
         <source>Keep Last 5</source>
         <translation>保留最近 5 个</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="320" />
+        <location filename="..\ui\main_window.py" line="322" />
         <source>Keep Last 10</source>
         <translation>保留最近 10 个</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="321" />
+        <location filename="..\ui\main_window.py" line="323" />
         <source>Keep Last 25</source>
         <translation>保留最近 25 个</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="322" />
+        <location filename="..\ui\main_window.py" line="324" />
         <source>Keep Last 50</source>
         <translation>保留最近 50 个</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="336" />
+        <location filename="..\ui\main_window.py" line="338" />
         <source>⏱️ Auto-Hide Desktop Icons</source>
         <translation>⏱️ 自动隐藏桌面图标</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="340" />
+        <location filename="..\ui\main_window.py" line="342" />
         <source>Enable Auto-Hide Timer</source>
         <translation>启用自动隐藏计时器</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="347" />
+        <location filename="..\ui\main_window.py" line="349" />
         <source>Hide After...</source>
         <translation>隐藏于...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="353" />
+        <location filename="..\ui\main_window.py" line="355" />
         <source>30 seconds</source>
         <translation>30秒</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="354" />
+        <location filename="..\ui\main_window.py" line="356" />
         <source>1 minute</source>
         <translation>1分钟</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="355" />
+        <location filename="..\ui\main_window.py" line="357" />
         <source>2 minutes</source>
         <translation>2分钟</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="356" />
+        <location filename="..\ui\main_window.py" line="358" />
         <source>5 minutes</source>
         <translation>5分钟</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="357" />
+        <location filename="..\ui\main_window.py" line="359" />
         <source>10 minutes</source>
         <translation>10分钟</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="358" />
+        <location filename="..\ui\main_window.py" line="360" />
         <source>15 minutes</source>
         <translation>15分钟</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="359" />
+        <location filename="..\ui\main_window.py" line="361" />
         <source>30 minutes</source>
         <translation>30分钟</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="383" />
+        <location filename="..\ui\main_window.py" line="385" />
         <source>Backup Before Auto-Hide</source>
         <translation>自动隐藏前备份</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="392" />
+        <location filename="..\ui\main_window.py" line="394" />
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="394" />
+        <location filename="..\ui\main_window.py" line="396" />
         <source>Online User Manual</source>
         <translation>在线用户手册</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="405" />
+        <location filename="..\ui\main_window.py" line="407" />
         <source>Statistics Dashboard</source>
         <translation>统计仪表板</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="411" />
+        <location filename="..\ui\main_window.py" line="413" />
         <source>Check for Updates...</source>
         <translation>检查更新...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="417" />
+        <location filename="..\ui\main_window.py" line="419" />
         <source>&amp;About</source>
         <translation>关于(&amp;A)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="423" />
+        <location filename="..\ui\main_window.py" line="425" />
         <source>Support on Ko-fi...</source>
         <translation>在 Ko-fi 上支持...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="438" />
+        <location filename="..\ui\main_window.py" line="440" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>可选：输入描述性标签/描述...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="445" />
+        <location filename="..\ui\main_window.py" line="447" />
         <source>Select a profile to auto-fill the tag field</source>
         <translation>选择一个配置文件以自动填写标签字段</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="451" />
+        <location filename="..\ui\main_window.py" line="453" />
         <source>Save Tag:</source>
         <translation>保存标签：</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="459" />
+        <location filename="..\ui\main_window.py" line="461" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 快速保存备份</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="463" />
+        <location filename="..\ui\main_window.py" line="465" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -1355,17 +1355,17 @@ Shortcut: Ctrl+S</source>
 快捷键：Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="471" />
+        <location filename="..\ui\main_window.py" line="473" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ 还原最新版本</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="474" />
+        <location filename="..\ui\main_window.py" line="476" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>从找到的最新备份文件还原图标位置。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="483" />
+        <location filename="..\ui\main_window.py" line="485" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -1374,12 +1374,12 @@ Shortcut: Ctrl+M</source>
 快捷键：Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="491" />
+        <location filename="..\ui\main_window.py" line="493" />
         <source>👁️ SHOW/HIDE ICONS</source>
         <translation>👁️ 显示/隐藏图标</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="494" />
+        <location filename="..\ui\main_window.py" line="496" />
         <source>Show or hide all desktop icons.
 
 Shortcut: Ctrl+H</source>
@@ -1388,45 +1388,45 @@ Shortcut: Ctrl+H</source>
 快捷键: Ctrl+H</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="506" />
+        <location filename="..\ui\main_window.py" line="508" />
         <source>Activity Log:</source>
         <translation>活动日志：</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="517" />
+        <location filename="..\ui\main_window.py" line="519" />
         <source>Current Resolution: %1</source>
         <translation>当前分辨率：%1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="530" />
+        <location filename="..\ui\main_window.py" line="532" />
         <source>Clear Log</source>
         <translation>清除日志</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="553" />
+        <location filename="..\ui\main_window.py" line="555" />
         <source>Settings menu not found</source>
         <translation>未找到设置菜单</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="565" />
+        <location filename="..\ui\main_window.py" line="567" />
         <source>Opening online user manual in browser...</source>
         <translation>正在浏览器中打开在线用户手册...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="567" />
+        <location filename="..\ui\main_window.py" line="569" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ 无法打开手册网址</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1111" />
-        <location filename="..\ui\main_window.py" line="883" />
-        <location filename="..\ui\main_window.py" line="846" />
-        <location filename="..\ui\main_window.py" line="570" />
+        <location filename="..\ui\main_window.py" line="1105" />
+        <location filename="..\ui\main_window.py" line="881" />
+        <location filename="..\ui\main_window.py" line="844" />
+        <location filename="..\ui\main_window.py" line="572" />
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="571" />
+        <location filename="..\ui\main_window.py" line="573" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -1437,36 +1437,36 @@ Please visit manually:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="578" />
+        <location filename="..\ui\main_window.py" line="580" />
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="581" />
+        <location filename="..\ui\main_window.py" line="583" />
         <source>Quick Backup (Shortcut)</source>
         <translation>快速备份（快捷键）</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="630" />
+        <location filename="..\ui\main_window.py" line="632" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>自动清理限制已设置为：%n 个备份（0 = 已禁用）。</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1210" />
-        <location filename="..\ui\main_window.py" line="1099" />
-        <location filename="..\ui\main_window.py" line="692" />
+        <location filename="..\ui\main_window.py" line="1241" />
+        <location filename="..\ui\main_window.py" line="1093" />
+        <location filename="..\ui\main_window.py" line="694" />
         <source>Desktop Icon Manager</source>
         <translation>桌面图标管理器</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="727" />
+        <location filename="..\ui\main_window.py" line="729" />
         <source>Backup list updated (item deleted).</source>
         <translation>备份列表已更新（条目已删除）。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="736" />
+        <location filename="..\ui\main_window.py" line="738" />
         <source>Backup list updated.</source>
         <translation>备份列表已更新。</translation>
     </message>
@@ -1476,107 +1476,107 @@ Please visit manually:
         <translation>备份列表已更新（已导入）。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="763" />
+        <location filename="..\ui\main_window.py" line="761" />
         <source>— Profiles —</source>
         <translation>— 配置文件 —</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="765" />
+        <location filename="..\ui\main_window.py" line="763" />
         <source>Work</source>
         <translation>工作</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="766" />
+        <location filename="..\ui\main_window.py" line="764" />
         <source>Gaming</source>
         <translation>游戏</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="767" />
+        <location filename="..\ui\main_window.py" line="765" />
         <source>Presentation</source>
         <translation>演示</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="768" />
+        <location filename="..\ui\main_window.py" line="766" />
         <source>Dev / Coding</source>
         <translation>开发 / 编程</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="769" />
+        <location filename="..\ui\main_window.py" line="767" />
         <source>Meeting</source>
         <translation>会议</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="770" />
+        <location filename="..\ui\main_window.py" line="768" />
         <source>Home</source>
         <translation>家</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="771" />
+        <location filename="..\ui\main_window.py" line="769" />
         <source>Office</source>
         <translation>办公室</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="772" />
+        <location filename="..\ui\main_window.py" line="770" />
         <source>Laptop</source>
         <translation>笔记本</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="773" />
+        <location filename="..\ui\main_window.py" line="771" />
         <source>Docked / External Monitor</source>
         <translation>扩展坞 / 外接显示器</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="774" />
+        <location filename="..\ui\main_window.py" line="772" />
         <source>Clean Desktop</source>
         <translation>整洁桌面</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="775" />
+        <location filename="..\ui\main_window.py" line="773" />
         <source>Pre-Update</source>
         <translation>更新前</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="776" />
+        <location filename="..\ui\main_window.py" line="774" />
         <source>Pre-Reboot</source>
         <translation>重启前</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="777" />
+        <location filename="..\ui\main_window.py" line="775" />
         <source>Favourite</source>
         <translation>收藏</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="778" />
+        <location filename="..\ui\main_window.py" line="776" />
         <source>Test</source>
         <translation>测试</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="800" />
+        <location filename="..\ui\main_window.py" line="798" />
         <source>Quick Backup</source>
         <translation>快速备份</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="815" />
+        <location filename="..\ui\main_window.py" line="813" />
         <source>No backup files found to delete.</source>
         <translation>未找到可删除的备份文件。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="818" />
+        <location filename="..\ui\main_window.py" line="816" />
         <source>No Backups Found</source>
         <translation>未找到备份</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="819" />
+        <location filename="..\ui\main_window.py" line="817" />
         <source>There are no backup files to delete.</source>
         <translation>没有可删除的备份文件。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="825" />
+        <location filename="..\ui\main_window.py" line="823" />
         <source>WARNING: Delete All Backups</source>
         <translation>警告：删除所有备份</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="826" />
+        <location filename="..\ui\main_window.py" line="824" />
         <source>Are you absolutely sure you want to permanently delete all desktop icon backup files?
 
 This action cannot be undone!</source>
@@ -1585,158 +1585,158 @@ This action cannot be undone!</source>
 此操作无法撤消！</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1048" />
-        <location filename="..\ui\main_window.py" line="829" />
+        <location filename="..\ui\main_window.py" line="1042" />
+        <location filename="..\ui\main_window.py" line="827" />
         <source>Yes</source>
         <translation>是</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1049" />
-        <location filename="..\ui\main_window.py" line="830" />
+        <location filename="..\ui\main_window.py" line="1043" />
+        <location filename="..\ui\main_window.py" line="828" />
         <source>No</source>
         <translation>否</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="832" />
+        <location filename="..\ui\main_window.py" line="830" />
         <source>Starting deletion of all backup files...</source>
         <translation>正在开始删除所有备份文件...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1092" />
-        <location filename="..\ui\main_window.py" line="840" />
+        <location filename="..\ui\main_window.py" line="1086" />
+        <location filename="..\ui\main_window.py" line="838" />
         <source>Success</source>
         <translation>成功</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="841" />
+        <location filename="..\ui\main_window.py" line="839" />
         <source>All backup files have been successfully deleted.</source>
         <translation>所有备份文件已成功删除。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="847" />
+        <location filename="..\ui\main_window.py" line="845" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>某些文件无法删除。请查看活动日志了解详情。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="857" />
+        <location filename="..\ui\main_window.py" line="855" />
         <source>Starting new timestamped backup...</source>
         <translation>正在创建新的带时间戳备份...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="859" />
+        <location filename="..\ui\main_window.py" line="857" />
         <source>  (Tag: %1)</source>
         <translation>  （标签：%1）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="863" />
+        <location filename="..\ui\main_window.py" line="861" />
         <source>Saving...</source>
         <translation>正在保存...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="883" />
+        <location filename="..\ui\main_window.py" line="881" />
         <source>No backup files found to restore!</source>
         <translation>未找到可还原的备份文件！</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="885" />
+        <location filename="..\ui\main_window.py" line="883" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ 还原失败：未找到备份文件。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="905" />
-        <location filename="..\ui\main_window.py" line="904" />
-        <location filename="..\ui\main_window.py" line="899" />
-        <location filename="..\ui\main_window.py" line="898" />
+        <location filename="..\ui\main_window.py" line="901" />
+        <location filename="..\ui\main_window.py" line="900" />
+        <location filename="..\ui\main_window.py" line="895" />
+        <location filename="..\ui\main_window.py" line="894" />
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="908" />
+        <location filename="..\ui\main_window.py" line="904" />
         <source>N/A (Old Format)</source>
         <translation>N/A（旧格式）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="937" />
+        <location filename="..\ui\main_window.py" line="933" />
         <source>Confirm Restore — Live Preview</source>
         <translation>确认还原 — 实时预览</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="947" />
+        <location filename="..\ui\main_window.py" line="943" />
         <source>File</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="948" />
+        <location filename="..\ui\main_window.py" line="944" />
         <source>Resolution</source>
         <translation>分辨率</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="949" />
+        <location filename="..\ui\main_window.py" line="945" />
         <source>Icons</source>
         <translation>图标</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="950" />
+        <location filename="..\ui\main_window.py" line="946" />
         <source>Tag</source>
         <translation>标签</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="951" />
+        <location filename="..\ui\main_window.py" line="947" />
         <source>Timestamp</source>
         <translation>时间戳</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="963" />
+        <location filename="..\ui\main_window.py" line="959" />
         <source>will move</source>
         <translation>将被移动</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="964" />
+        <location filename="..\ui\main_window.py" line="960" />
         <source>already in place</source>
         <translation>已在正确位置</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="965" />
+        <location filename="..\ui\main_window.py" line="961" />
         <source>not on desktop</source>
         <translation>不在桌面上</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="974" />
+        <location filename="..\ui\main_window.py" line="970" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>布局预览（已保存位置与当前位置）：</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="996" />
+        <location filename="..\ui\main_window.py" line="990" />
         <source>↺ Restore</source>
         <translation>↺ 还原</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1003" />
+        <location filename="..\ui\main_window.py" line="997" />
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1023" />
+        <location filename="..\ui\main_window.py" line="1017" />
         <source>Starting restore from backup '%1'...</source>
         <translation>正在从备份"%1"开始还原...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1024" />
+        <location filename="..\ui\main_window.py" line="1018" />
         <source>latest</source>
         <translation>最新</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1029" />
+        <location filename="..\ui\main_window.py" line="1023" />
         <source>Restoring...</source>
         <translation>正在还原...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1044" />
+        <location filename="..\ui\main_window.py" line="1038" />
         <source>Confirm Scramble</source>
         <translation>确认随机排列</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1045" />
+        <location filename="..\ui\main_window.py" line="1039" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1749,59 +1749,59 @@ Do you want to proceed?</source>
 是否要继续？</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1051" />
+        <location filename="..\ui\main_window.py" line="1045" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>正在开始桌面图标随机排列...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1054" />
+        <location filename="..\ui\main_window.py" line="1048" />
         <source>Scrambling icons...</source>
         <translation>正在随机排列图标...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1087" />
+        <location filename="..\ui\main_window.py" line="1081" />
         <source>Operation completed successfully</source>
         <translation>操作已成功完成</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1093" />
+        <location filename="..\ui\main_window.py" line="1087" />
         <source>Operation completed successfully! (%1)</source>
         <translation>操作已成功完成！(%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1100" />
+        <location filename="..\ui\main_window.py" line="1094" />
         <source>%1 successful!</source>
         <translation>%1 成功！</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1108" />
+        <location filename="..\ui\main_window.py" line="1102" />
         <source>Operation failed</source>
         <translation>操作失败</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1112" />
+        <location filename="..\ui\main_window.py" line="1106" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>操作失败 (%1)。请查看日志了解详情。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1125" />
+        <location filename="..\ui\main_window.py" line="1119" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ 警告：显示器元数据缺失或不完整。</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="1130" />
+        <location filename="..\ui\main_window.py" line="1124" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ 警告：已保存（%n 台显示器）与当前（%1 台显示器）不一致。</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1138" />
+        <location filename="..\ui\main_window.py" line="1132" />
         <source>Monitor Mismatch Warning</source>
         <translation>显示器不匹配警告</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1139" />
+        <location filename="..\ui\main_window.py" line="1133" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1810,17 +1810,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 图标位置已还原，但可能不准确。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1161" />
+        <location filename="..\ui\main_window.py" line="1155" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ 警告：屏幕分辨率与已保存的布局不匹配。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1165" />
+        <location filename="..\ui\main_window.py" line="1159" />
         <source>Resolution Mismatch Warning</source>
         <translation>分辨率不匹配警告</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1166" />
+        <location filename="..\ui\main_window.py" line="1160" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1829,82 +1829,87 @@ Icon positions have been restored, but they may be inaccurate.</source>
 图标位置已还原，但可能不准确。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1178" />
+        <location filename="..\ui\main_window.py" line="1197" />
+        <source>Auto-Save skipped: a Quick Save was performed less than 10 seconds ago.</source>
+        <translation>自动保存已跳过：10 秒内执行了快速保存。</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1207" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>退出时自动保存已启用。正在执行静默备份...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1184" />
+        <location filename="..\ui\main_window.py" line="1215" />
         <source>Auto-Save icon layout…</source>
         <translation>正在自动保存图标布局…</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1190" />
+        <location filename="..\ui\main_window.py" line="1221" />
         <source>Please wait</source>
         <translation>请稍候</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1195" />
+        <location filename="..\ui\main_window.py" line="1226" />
         <source>Auto-Save Log</source>
         <translation>自动保存日志</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1211" />
+        <location filename="..\ui\main_window.py" line="1242" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>应用程序已最小化到托盘。单击或双击可还原。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1254" />
+        <location filename="..\ui\main_window.py" line="1283" />
         <source>A new version is available! (%1)</source>
         <translation>有新版本可用！(%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1259" />
+        <location filename="..\ui\main_window.py" line="1288" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 有新版本可用：%1（当前：%2）</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1279" />
+        <location filename="..\ui\main_window.py" line="1308" />
         <source>Updating desktop icon visibility...</source>
         <translation>正在更新桌面图标可见性...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1282" />
+        <location filename="..\ui\main_window.py" line="1311" />
         <source>Desktop icon visibility updated.</source>
         <translation>桌面图标可见性已更新。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1285" />
+        <location filename="..\ui\main_window.py" line="1314" />
         <source>✗ Failed to show/hide desktop icons.</source>
         <translation>✗ 显示/隐藏桌面图标失败。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1289" />
+        <location filename="..\ui\main_window.py" line="1318" />
         <source>Attempting to show desktop icons...</source>
         <translation>正在尝试显示桌面图标...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1292" />
+        <location filename="..\ui\main_window.py" line="1321" />
         <source>Desktop icons are now visible.</source>
         <translation>桌面图标现在可见。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1295" />
+        <location filename="..\ui\main_window.py" line="1324" />
         <source>✗ Failed to show desktop icons.</source>
         <translation>✗ 显示桌面图标失败。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1299" />
+        <location filename="..\ui\main_window.py" line="1328" />
         <source>Attempting to hide desktop icons...</source>
         <translation>正在尝试隐藏桌面图标...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1302" />
+        <location filename="..\ui\main_window.py" line="1331" />
         <source>Desktop icons are now hidden.</source>
         <translation>桌面图标现在已隐藏。</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1305" />
+        <location filename="..\ui\main_window.py" line="1334" />
         <source>✗ Failed to hide desktop icons.</source>
         <translation>✗ 隐藏桌面图标失败。</translation>
     </message>
@@ -1928,38 +1933,38 @@ Icon positions have been restored, but they may be inaccurate.</source>
 </context><context>
     <name>StatsDialog</name>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="214" />
+        <location filename="..\ui\stats_dialog.py" line="216" />
         <source>Statistics Dashboard</source>
         <translation>统计仪表板</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="236" />
+        <location filename="..\ui\stats_dialog.py" line="238" />
         <source>Total backups</source>
         <translation>备份总数</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="240" />
+        <location filename="..\ui\stats_dialog.py" line="242" />
         <source>Restores</source>
         <translation>还原次数</translation>
     </message>
     <message>
         <location filename="..\ui\stats_dialog.py" line="324" />
-        <location filename="..\ui\stats_dialog.py" line="243" />
+        <location filename="..\ui\stats_dialog.py" line="245" />
         <source>Saves</source>
         <translation>保存次数</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="247" />
+        <location filename="..\ui\stats_dialog.py" line="249" />
         <source>Disk usage</source>
         <translation>磁盘使用量</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="254" />
+        <location filename="..\ui\stats_dialog.py" line="256" />
         <source>Avg icons</source>
         <translation>平均图标数</translation>
     </message>
     <message>
-        <location filename="..\ui\stats_dialog.py" line="265" />
+        <location filename="..\ui\stats_dialog.py" line="267" />
         <source>Backups per month</source>
         <translation>每月备份数</translation>
     </message>
@@ -2123,22 +2128,22 @@ Icon positions have been restored, but they may be inaccurate.</source>
 </context><context>
     <name>_PickBackupDialog</name>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="943" />
+        <location filename="..\ui\backup_dialog.py" line="942" />
         <source>Pick Backup to Compare Against</source>
         <translation>选择要比较的备份</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="947" />
+        <location filename="..\ui\backup_dialog.py" line="946" />
         <source>Select the second backup file:</source>
         <translation>选择第二个备份文件：</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="961" />
+        <location filename="..\ui\backup_dialog.py" line="958" />
         <source>Compare</source>
         <translation>比较</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="963" />
+        <location filename="..\ui\backup_dialog.py" line="960" />
         <source>Cancel</source>
         <translation>取消</translation>
     </message>

@@ -151,12 +151,34 @@ def init_logging(log_path: Path, *, console: bool = False) -> None:
 
 
 def clear_log_file(log_path: Path) -> None:
-    """Delete the log file and its backup (called from GUI 'Clear Log')."""
+    """Clear the log file and its backup (called from GUI 'Clear Log').
+
+    Instead of deleting the file (which would leave the RotatingFileHandler
+    with a stale file descriptor), we close the handler, truncate the file,
+    then reopen the handler so logging continues normally.
+    """
+    logger = get_logger()
+
+    # Find and close the RotatingFileHandler
+    file_handler: Optional[logging.handlers.RotatingFileHandler] = None
+    for h in logger.handlers:
+        if isinstance(h, logging.handlers.RotatingFileHandler):
+            file_handler = h
+            break
+
+    if file_handler is not None:
+        file_handler.close()
+        logger.removeHandler(file_handler)
+
+    # Truncate main log file and its backup
     try:
         if log_path.exists():
-            log_path.unlink()
+            log_path.write_text("", encoding="utf-8")
         backup = log_path.with_suffix(".log.1")
         if backup.exists():
             backup.unlink()
     except OSError:
         pass
+
+    # Reattach a fresh handler so logging continues
+    setup_file_handler(log_path)

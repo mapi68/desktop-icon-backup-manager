@@ -17,7 +17,14 @@ from PyQt6.QtWidgets import (
     QPushButton,
     QCheckBox,
 )
-from PyQt6.QtCore import QSettings, QTranslator, QLocale, QCoreApplication, QTimer, QLibraryInfo
+from PyQt6.QtCore import (
+    QSettings,
+    QTranslator,
+    QLocale,
+    QCoreApplication,
+    QTimer,
+    QLibraryInfo,
+)
 from PyQt6.QtGui import QIcon
 
 from core.config import Config, resource_path
