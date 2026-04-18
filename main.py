@@ -3,7 +3,42 @@
 import sys
 import os
 import argparse
+import ctypes
 from pathlib import Path
+
+
+# ── DPI awareness (must run BEFORE creating QApplication) ─────────────────────
+# Without this, on Windows with display scaling > 100% (typical on 2K / 4K
+# monitors), Qt reports a logical, DPI-scaled screen resolution while Win32
+# LVM_GETITEMPOSITION returns physical pixel coordinates. The mismatch makes
+# some icons — especially those near the bottom edge — appear to be "missing"
+# in the Backup Manager preview because they get clamped onto the canvas
+# border. Declaring the process as Per-Monitor-v2 DPI-aware aligns Qt's
+# reported geometry with Win32's pixel coordinates.
+def _enable_dpi_awareness() -> None:
+    if sys.platform != "win32":
+        return
+    # Per-Monitor v2 (Windows 10 1703+)
+    try:
+        ctypes.windll.user32.SetProcessDpiAwarenessContext(ctypes.c_void_p(-4))
+        return
+    except (AttributeError, OSError):
+        pass
+    # System DPI Aware (Windows 8.1+)
+    try:
+        ctypes.windll.shcore.SetProcessDpiAwareness(1)
+        return
+    except (AttributeError, OSError):
+        pass
+    # Vista+ fallback
+    try:
+        ctypes.windll.user32.SetProcessDPIAware()
+    except (AttributeError, OSError):
+        pass
+
+
+_enable_dpi_awareness()
+
 
 from PyQt6.QtWidgets import (
     QApplication,

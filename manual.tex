@@ -622,10 +622,17 @@ Favourite, Test) --- then edit freely before saving if needed.
     \item \textbf{Display Metadata}: Records monitor count, screen names,
       individual resolutions, and the \texttt{devicePixelRatio} value.
     \item \textbf{JSON Schema}: Stores \texttt{icon\_count}, an ISO
-      \texttt{timestamp}, a \texttt{description} field, and exact X/Y
+      \texttt{timestamp}, a \texttt{description} field, a
+      \texttt{dpi\_aware} boolean flag (see below), and exact X/Y
       pixel coordinates for every icon.
     \item \textbf{Coordinate Precision}: Icon positions are read through
       the Windows API message \texttt{LVM\_GETITEMPOSITION}.
+    \item \textbf{DPI Awareness Flag}: The
+      \texttt{dpi\_aware} field records that the backup was captured
+      with a Per-Monitor-v2 DPI-aware process. This means saved
+      coordinates are in physical pixels and the saved resolution
+      matches the monitor's physical dimensions regardless of Windows
+      display scaling.
   \end{itemize}
 \end{infobox}
 
@@ -1113,6 +1120,20 @@ button that opens the releases page in your browser.
 Enables intelligent scaling of icon positions when restoring a backup
 created at a different screen resolution.
 
+\begin{infobox}[DPI Awareness]
+  The application declares itself Per-Monitor-v2 DPI-aware.
+  This has an important consequence on resolution values: the saved
+  resolution is always a physical pixel dimension, regardless of
+  the Windows display scaling factor (100\%, 125\%, 150\%, 200\%).
+  For example, a 2560$\times$1440 monitor at 125\% scaling saves
+  as \texttt{2560x1440}.
+
+  Because both the saved resolution and the icon coordinates are
+  captured in the same coordinate system (physical pixels), adaptive
+  scaling produces consistent results whether you run at 4K 100\%,
+  2K 150\%, or any other DPI configuration.
+\end{infobox}
+
 \subsubsection{How Adaptive Scaling Works}
 
 The system calculates independent scaling factors for X and Y axes
@@ -1570,6 +1591,22 @@ automatically fetches the \textit{current} live icon positions from the
 desktop and overlays them against the saved positions, giving you a
 visual diff \textit{before} you commit to restoring.
 
+\textbf{Aspect-ratio preserved canvas}: The preview draws a
+virtual screen rectangle that preserves the aspect ratio of the saved
+resolution (letterboxed inside the widget with empty bands on the sides
+when needed). This ensures icon positions in the preview reflect their
+real relative position on the desktop, with no horizontal or vertical
+squashing.
+
+\textbf{Windows 11 taskbar mock-up}: The bottom of the preview
+canvas shows a stylised Windows 11 taskbar, containing a centered cluster
+of Start, Search and Task view icons, plus a right-side system tray with
+Wi-Fi, volume and battery glyphs. The tray clock displays the
+\textit{backup's own timestamp} --- time on top (HH:MM) and date below
+(DD/MM/YYYY) --- so you can see at a glance when the snapshot was taken.
+Icons whose saved $y$-coordinate falls inside the taskbar area are those
+that would be hidden behind the real Windows taskbar after restore.
+
 The preview canvas draws a subtle grid to convey the desktop space,
 and each icon state is rendered with a distinct visual treatment:
 
@@ -1585,9 +1622,9 @@ and each icon state is rendered with a distinct visual treatment:
     (will be skipped during restore).
 \end{itemize}
 
-\textbf{Legend}: A compact 3-row panel below the canvas uses custom
-pixel-drawn dot and arrow icons (not Unicode characters) so that
-every row has exactly the same height and spacing, regardless of
+\textbf{Legend}: A compact 3-row panel to the right of the info panel
+uses custom pixel-drawn dot and arrow icons (not Unicode characters) so
+that every row has exactly the same height and spacing, regardless of
 system font or DPI.  Rows are arranged with a fixed-height
 \texttt{QGridLayout} (26\,px per row) to guarantee uniform vertical
 spacing.
@@ -1782,7 +1819,6 @@ Backups are stored as human-readable JSON files in the
 
 \subsubsection{File Naming Convention}
 
-\textbf{Modern Format (current version)}:
 \begin{verbatim}
 [Resolution]_[Date]_[Time].json
 
@@ -1790,31 +1826,20 @@ Pattern: {width}x{height}_{YYYYMMDD}_{HHMMSS}.json
 Example: 1920x1080_20241211_143015.json
 \end{verbatim}
 
-\textbf{Legacy Format (compatibility)}:
-\begin{verbatim}
-[Date]_[Time].json
+\subsubsection{Filename Parsing}
 
-Pattern: {YYYYMMDD}_{HHMMSS}.json
-Example: 20241211_143015.json
-\end{verbatim}
-
-\subsubsection{Smart Filename Parsing}
-
-The application features a robust parsing engine for backup
-identification:
+The application uses a strict regex parser for backup identification:
 \begin{itemize}
-  \item \textbf{Format Recognition}: Automatically distinguishes the
-    modern format from the legacy one.\\
-    Modern: \texttt{Resolution\_Date\_Time.json}\\
-    Legacy: \texttt{Date\_Time.json}
-  \item \textbf{Fallback System}: If a filename doesn't match
-    standard patterns, the manager uses the raw filename as a
-    fallback to ensure visibility in the list.
+  \item \textbf{Format Recognition}: Filenames that do not match the
+    exact \texttt{Resolution\_Date\_Time.json} pattern are treated as
+    malformed and flagged as ``N/A'' in the backup list.
+  \item \textbf{Fail-Fast Validation}: Calendrically impossible dates
+    (e.g.\ \texttt{20240230}) are also rejected, so only real,
+    parseable timestamps are accepted.
 \end{itemize}
 
-\subsubsection{JSON File Structure (Complete)}
+\subsubsection{JSON File Structure}
 
-\textbf{Modern Format with Full Metadata}:
 \begin{verbatim}
 {
     "timestamp": "2024-12-11T14:30:15.123456",
@@ -1854,16 +1879,6 @@ identification:
         "User Files": [250, 800],
         "Shortcuts": [250, 950]
     }
-}
-\end{verbatim}
-
-\textbf{Legacy Format (Old Backups)}:
-\begin{verbatim}
-{
-    "This PC": [100, 200],
-    "Recycle Bin": [100, 350],
-    "Documents": [100, 500],
-    ...
 }
 \end{verbatim}
 

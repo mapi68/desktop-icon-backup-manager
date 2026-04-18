@@ -59,7 +59,7 @@
 </context><context>
     <name>BackupManagerWindow</name>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="462" />
+        <location filename="..\ui\backup_dialog.py" line="486" />
         <source>%n icon will be moved</source>
         <comment>%n icons will be moved</comment>
         <translation>
@@ -67,7 +67,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="463" />
+        <location filename="..\ui\backup_dialog.py" line="487" />
         <source>%n icon already in place</source>
         <comment>%n icons already in place</comment>
         <translation>
@@ -75,7 +75,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="464" />
+        <location filename="..\ui\backup_dialog.py" line="488" />
         <source>%n icon not on desktop</source>
         <comment>%n icons not on desktop</comment>
         <translation>
@@ -103,19 +103,19 @@
         <translation>태그 / 설명</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="370" />
+        <location filename="..\ui\backup_dialog.py" line="394" />
         <location filename="..\ui\backup_dialog.py" line="141" />
         <source>Resolution</source>
         <translation>해상도</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="369" />
+        <location filename="..\ui\backup_dialog.py" line="393" />
         <location filename="..\ui\backup_dialog.py" line="142" />
         <source>Icons</source>
         <translation>아이콘</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="372" />
+        <location filename="..\ui\backup_dialog.py" line="396" />
         <location filename="..\ui\backup_dialog.py" line="143" />
         <source>Timestamp</source>
         <translation>타임스탬프</translation>
@@ -167,9 +167,9 @@
         <translation>닫기</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="433" />
-        <location filename="..\ui\backup_dialog.py" line="432" />
-        <location filename="..\ui\backup_dialog.py" line="361" />
+        <location filename="..\ui\backup_dialog.py" line="457" />
+        <location filename="..\ui\backup_dialog.py" line="456" />
+        <location filename="..\ui\backup_dialog.py" line="389" />
         <location filename="..\ui\backup_dialog.py" line="287" />
         <location filename="..\ui\backup_dialog.py" line="281" />
         <source>N/A</source>
@@ -186,52 +186,52 @@
         <translation>백업을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="360" />
+        <location filename="..\ui\backup_dialog.py" line="385" />
         <source>None</source>
         <translation>없음</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="368" />
+        <location filename="..\ui\backup_dialog.py" line="392" />
         <source>File</source>
         <translation>파일</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="371" />
+        <location filename="..\ui\backup_dialog.py" line="395" />
         <source>Description</source>
         <translation>설명</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="681" />
-        <location filename="..\ui\backup_dialog.py" line="586" />
-        <location filename="..\ui\backup_dialog.py" line="537" />
-        <location filename="..\ui\backup_dialog.py" line="520" />
-        <location filename="..\ui\backup_dialog.py" line="494" />
-        <location filename="..\ui\backup_dialog.py" line="378" />
+        <location filename="..\ui\backup_dialog.py" line="705" />
+        <location filename="..\ui\backup_dialog.py" line="610" />
+        <location filename="..\ui\backup_dialog.py" line="561" />
+        <location filename="..\ui\backup_dialog.py" line="544" />
+        <location filename="..\ui\backup_dialog.py" line="518" />
+        <location filename="..\ui\backup_dialog.py" line="402" />
         <source>Error</source>
         <translation>오류</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="403" />
+        <location filename="..\ui\backup_dialog.py" line="427" />
         <source>🔄 Restore Selected</source>
         <translation>🔄 선택 항목 복원</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="406" />
+        <location filename="..\ui\backup_dialog.py" line="430" />
         <source>🗑️ Delete Selected</source>
         <translation>🗑️ 선택 항목 삭제</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="410" />
+        <location filename="..\ui\backup_dialog.py" line="434" />
         <source>📊 Compare with Latest</source>
         <translation>📊 최신 항목과 비교</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="469" />
+        <location filename="..\ui\backup_dialog.py" line="493" />
         <source>Confirm Restore</source>
         <translation>복원 확인</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="470" />
+        <location filename="..\ui\backup_dialog.py" line="494" />
         <source>Restore icon positions from the selected backup file:
 
 File: %1
@@ -252,31 +252,31 @@ Are you sure you want to proceed?</source>
 계속하시겠습니까?</translation>
     </message>
     <message>
+        <location filename="..\ui\backup_dialog.py" line="533" />
         <location filename="..\ui\backup_dialog.py" line="509" />
-        <location filename="..\ui\backup_dialog.py" line="485" />
         <source>Yes</source>
         <translation>예</translation>
     </message>
     <message>
+        <location filename="..\ui\backup_dialog.py" line="534" />
         <location filename="..\ui\backup_dialog.py" line="510" />
-        <location filename="..\ui\backup_dialog.py" line="486" />
         <source>No</source>
         <translation>아니요</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="495" />
+        <location filename="..\ui\backup_dialog.py" line="519" />
         <source>Failed to load backup file:
 %1</source>
         <translation>백업 파일 로드 실패:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="505" />
+        <location filename="..\ui\backup_dialog.py" line="529" />
         <source>Confirm Delete</source>
         <translation>삭제 확인</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="506" />
+        <location filename="..\ui\backup_dialog.py" line="530" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
@@ -285,206 +285,206 @@ Are you sure you want to proceed?</source>
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="516" />
+        <location filename="..\ui\backup_dialog.py" line="540" />
         <source>Success</source>
         <translation>성공</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="516" />
+        <location filename="..\ui\backup_dialog.py" line="540" />
         <source>Backup deleted successfully.</source>
         <translation>백업이 성공적으로 삭제되었습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="520" />
+        <location filename="..\ui\backup_dialog.py" line="544" />
         <source>Failed to delete backup file.</source>
         <translation>백업 파일 삭제에 실패했습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="560" />
-        <location filename="..\ui\backup_dialog.py" line="529" />
+        <location filename="..\ui\backup_dialog.py" line="584" />
+        <location filename="..\ui\backup_dialog.py" line="553" />
         <source>No Selection</source>
         <translation>선택 없음</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="530" />
+        <location filename="..\ui\backup_dialog.py" line="554" />
         <source>Please select a backup to compare.</source>
         <translation>비교할 백업을 선택하세요.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="537" />
+        <location filename="..\ui\backup_dialog.py" line="561" />
         <source>No latest backup found</source>
         <translation>최신 백업을 찾을 수 없습니다</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="544" />
+        <location filename="..\ui\backup_dialog.py" line="568" />
         <source>Same Backup</source>
         <translation>동일한 백업</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="545" />
+        <location filename="..\ui\backup_dialog.py" line="569" />
         <source>You selected the latest backup. Nothing to compare.</source>
         <translation>최신 백업을 선택했습니다. 비교할 항목이 없습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="561" />
+        <location filename="..\ui\backup_dialog.py" line="585" />
         <source>Please select a backup first.</source>
         <translation>먼저 백업을 선택하세요.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="570" />
+        <location filename="..\ui\backup_dialog.py" line="594" />
         <source>Not Enough Backups</source>
         <translation>백업 부족</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="571" />
+        <location filename="..\ui\backup_dialog.py" line="595" />
         <source>There is only one backup. Nothing to compare against.</source>
         <translation>백업이 하나뿐입니다. 비교할 항목이 없습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="586" />
+        <location filename="..\ui\backup_dialog.py" line="610" />
         <source>Failed to compare backups</source>
         <translation>백업 비교 실패</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="590" />
+        <location filename="..\ui\backup_dialog.py" line="614" />
         <source>latest</source>
         <translation>최신</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="593" />
+        <location filename="..\ui\backup_dialog.py" line="617" />
         <source>Comparison Results</source>
         <translation>비교 결과</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="602" />
+        <location filename="..\ui\backup_dialog.py" line="626" />
         <source>Comparing Backups:</source>
         <translation>백업 비교 중:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="613" />
+        <location filename="..\ui\backup_dialog.py" line="637" />
         <source>✓ Close</source>
         <translation>✓ 닫기</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="682" />
+        <location filename="..\ui\backup_dialog.py" line="706" />
         <source>Failed to save tag: %1</source>
         <translation>태그 저장 실패: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="699" />
+        <location filename="..\ui\backup_dialog.py" line="723" />
         <source>No Backups</source>
         <translation>백업 없음</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="700" />
+        <location filename="..\ui\backup_dialog.py" line="724" />
         <source>There are no backup files to export.</source>
         <translation>내보낼 백업 파일이 없습니다.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="706" />
+        <location filename="..\ui\backup_dialog.py" line="730" />
         <source>All backups (%1 files)</source>
         <translation>모든 백업 (%1개 파일)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="710" />
+        <location filename="..\ui\backup_dialog.py" line="734" />
         <source>Selected backup only (%1)</source>
         <translation>선택한 백업만 (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="716" />
+        <location filename="..\ui\backup_dialog.py" line="740" />
         <source>Export Backups</source>
         <translation>백업 내보내기</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="717" />
+        <location filename="..\ui\backup_dialog.py" line="741" />
         <source>What do you want to export?</source>
         <translation>무엇을 내보내시겠습니까?</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="729" />
+        <location filename="..\ui\backup_dialog.py" line="753" />
         <source>ZIP archive (.zip)</source>
         <translation>ZIP 아카이브 (.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="730" />
+        <location filename="..\ui\backup_dialog.py" line="754" />
         <source>Folder (copy .json files)</source>
         <translation>폴더 (.json 파일 복사)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="734" />
+        <location filename="..\ui\backup_dialog.py" line="758" />
         <source>Export Format</source>
         <translation>내보내기 형식</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="735" />
+        <location filename="..\ui\backup_dialog.py" line="759" />
         <source>Choose export format:</source>
         <translation>내보내기 형식 선택:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="750" />
+        <location filename="..\ui\backup_dialog.py" line="774" />
         <source>Save ZIP Archive</source>
         <translation>ZIP 아카이브 저장</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="752" />
+        <location filename="..\ui\backup_dialog.py" line="776" />
         <source>ZIP Archives (*.zip)</source>
         <translation>ZIP Archives (*.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="802" />
-        <location filename="..\ui\backup_dialog.py" line="764" />
+        <location filename="..\ui\backup_dialog.py" line="826" />
+        <location filename="..\ui\backup_dialog.py" line="788" />
         <source>Export Successful</source>
         <translation>내보내기 성공</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="803" />
-        <location filename="..\ui\backup_dialog.py" line="765" />
+        <location filename="..\ui\backup_dialog.py" line="827" />
+        <location filename="..\ui\backup_dialog.py" line="789" />
         <source>Exported %1 backup(s) to:
 %2</source>
         <translation>%1개의 백업을 내보냈습니다:
 %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="772" />
+        <location filename="..\ui\backup_dialog.py" line="796" />
         <source>Export Failed</source>
         <translation>내보내기 실패</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="773" />
+        <location filename="..\ui\backup_dialog.py" line="797" />
         <source>Could not create ZIP archive:
 %1</source>
         <translation>ZIP 아카이브를 만들 수 없습니다:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="777" />
+        <location filename="..\ui\backup_dialog.py" line="801" />
         <source>Select Destination Folder</source>
         <translation>대상 폴더 선택</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="794" />
+        <location filename="..\ui\backup_dialog.py" line="818" />
         <source>Export Partial</source>
         <translation>부분 내보내기</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="795" />
+        <location filename="..\ui\backup_dialog.py" line="819" />
         <source>Exported %1 file(s). Errors:
 %2</source>
         <translation>%1개의 파일을 내보냈습니다. 오류:
 %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="814" />
+        <location filename="..\ui\backup_dialog.py" line="838" />
         <source>Import Backups</source>
         <translation>백업 가져오기</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="816" />
+        <location filename="..\ui\backup_dialog.py" line="840" />
         <source>Backup files (*.json *.zip)</source>
         <translation>Backup files (*.json *.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="842" />
+        <location filename="..\ui\backup_dialog.py" line="866" />
         <source>Import complete.
 
 ✓ Imported: %1
@@ -495,77 +495,77 @@ Are you sure you want to proceed?</source>
 ⏭ 건너뜀 (이미 존재): %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="847" />
+        <location filename="..\ui\backup_dialog.py" line="871" />
         <source>Errors:
 %1</source>
         <translation>오류:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="848" />
+        <location filename="..\ui\backup_dialog.py" line="872" />
         <source>Import Results</source>
         <translation>가져오기 결과</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="850" />
+        <location filename="..\ui\backup_dialog.py" line="874" />
         <source>Import Successful</source>
         <translation>가져오기 성공</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="862" />
+        <location filename="..\ui\backup_dialog.py" line="886" />
         <source>No .json files found in: %1</source>
         <translation>%1에서 .json 파일을 찾을 수 없습니다</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="910" />
-        <location filename="..\ui\backup_dialog.py" line="877" />
+        <location filename="..\ui\backup_dialog.py" line="934" />
+        <location filename="..\ui\backup_dialog.py" line="901" />
         <source>%1: not a valid backup file (missing 'icons' dictionary)</source>
         <translation>%1: 유효하지 않은 백업 파일('icons' 사전 누락)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="889" />
+        <location filename="..\ui\backup_dialog.py" line="913" />
         <source>Invalid ZIP file %1: %2</source>
         <translation>잘못된 ZIP 파일 %1: %2</translation>
     </message>
 </context><context>
     <name>CLI</name>
     <message>
-        <location filename="..\main.py" line="274" />
+        <location filename="..\main.py" line="309" />
         <source>Perform a backup</source>
         <translation>백업 수행</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="280" />
+        <location filename="..\main.py" line="315" />
         <source>Restore a specific backup or latest</source>
         <translation>특정 백업 또는 최신 백업 복원</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="285" />
+        <location filename="..\main.py" line="320" />
         <source>Run without showing the GUI</source>
         <translation>GUI 없이 실행</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="306" />
+        <location filename="..\main.py" line="341" />
         <source>[SILENT]</source>
         <translation>[자동]</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="311" />
+        <location filename="..\main.py" line="346" />
         <source>Starting silent backup...</source>
         <translation>자동 백업 시작 중...</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="314" />
+        <location filename="..\main.py" line="349" />
         <source>Silent CLI Backup</source>
         <translation>자동 CLI 백업</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="328" />
+        <location filename="..\main.py" line="363" />
         <source>Error: No backup files found for latest restore.</source>
         <translation>오류: 최신 복원에 사용할 백업 파일을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="336" />
+        <location filename="..\main.py" line="371" />
         <source>Starting silent restore from: %1</source>
         <translation>자동 복원 시작 중: %1</translation>
     </message>
@@ -644,122 +644,122 @@ Are you sure you want to proceed?</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="399" />
+        <location filename="..\core\icon_manager.py" line="405" />
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
             <numerusform>✓ 아이콘 %n개를 백업 파일 '%1'에 저장했습니다</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="409" />
+        <location filename="..\core\icon_manager.py" line="415" />
         <source>  (Description: %1)</source>
         <translation>  (설명: %1)</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="422" />
+        <location filename="..\core\icon_manager.py" line="428" />
         <source>✗ Error saving (I/O): %1</source>
         <translation>✗ 저장 오류 (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="429" />
+        <location filename="..\core\icon_manager.py" line="435" />
         <source>✗ Error saving: %1</source>
         <translation>✗ 저장 오류: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="457" />
+        <location filename="..\core\icon_manager.py" line="463" />
         <source>✗ Error: Backup file not found.</source>
         <translation>✗ 오류: 백업 파일을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="467" />
+        <location filename="..\core\icon_manager.py" line="473" />
         <source>Attempting to restore from backup: '%1'</source>
         <translation>백업에서 복원 시도 중: '%1'</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="472" />
+        <location filename="..\core\icon_manager.py" line="478" />
         <source>Saved Resolution (from filename): %1</source>
         <translation>저장된 해상도 (파일명에서): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="489" />
+        <location filename="..\core\icon_manager.py" line="496" />
+        <source>✗ Error: Invalid backup structure (missing 'icons' dictionary).</source>
+        <translation>✗ 오류: 백업 구조가 잘못되었습니다('icons' 사전 누락).</translation>
+    </message>
+    <message>
+        <location filename="..\core\icon_manager.py" line="507" />
         <source>Restoring layout (saved: %1)</source>
         <translation>레이아웃 복원 중 (저장 시간: %1)</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="494" />
+        <location filename="..\core\icon_manager.py" line="512" />
         <source>  Description: %1</source>
         <translation>  설명: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="501" />
-        <source>Restoring layout (Old format, no timestamp and metadata)</source>
-        <translation>레이아웃 복원 중 (구 형식, 타임스탬프 및 메타데이터 없음)</translation>
-    </message>
-    <message>
-        <location filename="..\core\icon_manager.py" line="509" />
+        <location filename="..\core\icon_manager.py" line="519" />
         <source>✗ Error: Invalid backup file format: %1</source>
         <translation>✗ 오류: 잘못된 백업 파일 형식: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="516" />
+        <location filename="..\core\icon_manager.py" line="526" />
         <source>✗ Error reading backup file (I/O): %1</source>
         <translation>✗ 백업 파일 읽기 오류 (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="533" />
+        <location filename="..\core\icon_manager.py" line="543" />
         <source>⚠ Warning: Resolution mismatch!</source>
         <translation>⚠ 경고: 해상도 불일치!</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="543" />
+        <location filename="..\core\icon_manager.py" line="553" />
         <source>✓ Adaptive Scaling enabled: X=%1, Y=%2</source>
         <translation>✓ 적응형 배율 활성화됨: X=%1, Y=%2</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="628" />
+        <location filename="..\core\icon_manager.py" line="638" />
         <source>✓ Restored %n icon(s)</source>
         <translation>
             <numerusform>✓ 아이콘 %n개 복원됨</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="634" />
+        <location filename="..\core\icon_manager.py" line="644" />
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
             <numerusform>⚠ 아이콘 %n개 건너뜀 (바탕 화면에서 찾을 수 없음)</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="648" />
+        <location filename="..\core\icon_manager.py" line="658" />
         <source>✗ Error restoring (I/O): %1</source>
         <translation>✗ 복원 오류 (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="655" />
+        <location filename="..\core\icon_manager.py" line="665" />
         <source>✗ Error restoring: %1</source>
         <translation>✗ 복원 오류: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="683" />
+        <location filename="..\core\icon_manager.py" line="693" />
         <source>Redrawing disabled for scrambling...</source>
         <translation>섞기 중 다시 그리기 비활성화됨...</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="692" />
+        <location filename="..\core\icon_manager.py" line="702" />
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
             <numerusform>아이콘 %n개 발견. 무작위 배치 시작 중...</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="713" />
+        <location filename="..\core\icon_manager.py" line="723" />
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
             <numerusform>✓ 아이콘 %n개의 위치를 무작위로 섞었습니다.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="727" />
+        <location filename="..\core\icon_manager.py" line="737" />
         <source>✗ Error scrambling icons: %1</source>
         <translation>✗ 아이콘 섞기 오류: %1</translation>
     </message>
@@ -816,7 +816,7 @@ Are you sure you want to proceed?</source>
 </context><context>
     <name>IconPreviewWidget</name>
     <message>
-        <location filename="..\ui\preview_widget.py" line="406" />
+        <location filename="..\ui\preview_widget.py" line="832" />
         <source>No Preview Available</source>
         <translation>미리 보기 없음</translation>
     </message>
@@ -870,12 +870,12 @@ Are you sure you want to proceed?</source>
 </context><context>
     <name>Main</name>
     <message>
-        <location filename="..\main.py" line="382" />
+        <location filename="..\main.py" line="417" />
         <source>Critical Error</source>
         <translation>심각한 오류</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="383" />
+        <location filename="..\main.py" line="418" />
         <source>Failed to start application:
 %1</source>
         <translation>애플리케이션 시작 실패:
@@ -2089,61 +2089,61 @@ Icon positions have been restored, but they may be inaccurate.</source>
 </context><context>
     <name>_DiffCanvas</name>
     <message>
-        <location filename="..\ui\preview_widget.py" line="216" />
+        <location filename="..\ui\preview_widget.py" line="587" />
         <source>No Preview Available</source>
         <translation>미리 보기 없음</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="276" />
+        <location filename="..\ui\preview_widget.py" line="658" />
         <source>✓ already in place</source>
         <translation>✓ 이미 제자리에 있음</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="278" />
+        <location filename="..\ui\preview_widget.py" line="660" />
         <source>↕ will move</source>
         <translation>↕ 이동될 예정</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="281" />
+        <location filename="..\ui\preview_widget.py" line="662" />
         <source>⚠ not on desktop</source>
         <translation>⚠ 바탕 화면에 없음</translation>
     </message>
 </context><context>
     <name>_LegendPanel</name>
     <message>
-        <location filename="..\ui\preview_widget.py" line="311" />
+        <location filename="..\ui\preview_widget.py" line="692" />
         <source>Already in place, will not move</source>
         <translation>이미 제자리에 있으며 이동하지 않습니다</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="312" />
+        <location filename="..\ui\preview_widget.py" line="693" />
         <source>Will move  (orange = now,  red = target)</source>
         <translation>이동될 예정  (주황색 = 현재,  빨간색 = 목표)</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="313" />
+        <location filename="..\ui\preview_widget.py" line="694" />
         <source>In backup, not on desktop</source>
         <translation>백업에는 있지만 바탕 화면에는 없음</translation>
     </message>
 </context><context>
     <name>_PickBackupDialog</name>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="942" />
+        <location filename="..\ui\backup_dialog.py" line="963" />
         <source>Pick Backup to Compare Against</source>
         <translation>비교할 백업 선택</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="946" />
+        <location filename="..\ui\backup_dialog.py" line="967" />
         <source>Select the second backup file:</source>
         <translation>두 번째 백업 파일 선택:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="958" />
+        <location filename="..\ui\backup_dialog.py" line="979" />
         <source>Compare</source>
         <translation>비교</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="960" />
+        <location filename="..\ui\backup_dialog.py" line="981" />
         <source>Cancel</source>
         <translation>취소</translation>
     </message>

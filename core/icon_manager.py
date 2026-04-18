@@ -389,6 +389,12 @@ class DesktopIconManager:
                 "icon_count": len(icons),
                 "description": description if description else "",
                 "display_metadata": display_metadata,
+                # True from the moment the app declared itself DPI-aware.
+                # Old backups (missing this key) were saved with a
+                # DPI-unaware process, so their "resolution" is Windows'
+                # logical/scaled size while "icons" hold physical pixels.
+                # Restore logic uses this flag to compensate automatically.
+                "dpi_aware": True,
                 "icons": icons,
             }
 
@@ -481,28 +487,32 @@ class DesktopIconManager:
             with open(filepath, "r", encoding="utf-8") as f:
                 profile_data = json.load(f)
 
-            if isinstance(profile_data, dict) and "icons" in profile_data:
-                saved_icons = profile_data["icons"]
-                saved_metadata = profile_data.get("display_metadata")
-                description = profile_data.get("description", "N/A")
-                log_callback(
-                    QCoreApplication.translate(
-                        "DesktopIconManager", "Restoring layout (saved: %1)"
-                    ).replace("%1", str(readable_date))
-                )
-                log_callback(
-                    QCoreApplication.translate(
-                        "DesktopIconManager", "  Description: %1"
-                    ).replace("%1", str(description))
-                )
-            else:
-                saved_icons = profile_data
+            if not (
+                isinstance(profile_data, dict)
+                and "icons" in profile_data
+                and isinstance(profile_data["icons"], dict)
+            ):
                 log_callback(
                     QCoreApplication.translate(
                         "DesktopIconManager",
-                        "Restoring layout (Old format, no timestamp and metadata)",
+                        "✗ Error: Invalid backup structure (missing 'icons' dictionary).",
                     )
                 )
+                return False, None
+
+            saved_icons = profile_data["icons"]
+            saved_metadata = profile_data.get("display_metadata")
+            description = profile_data.get("description", "N/A")
+            log_callback(
+                QCoreApplication.translate(
+                    "DesktopIconManager", "Restoring layout (saved: %1)"
+                ).replace("%1", str(readable_date))
+            )
+            log_callback(
+                QCoreApplication.translate(
+                    "DesktopIconManager", "  Description: %1"
+                ).replace("%1", str(description))
+            )
 
         except json.JSONDecodeError as e:
             log_callback(

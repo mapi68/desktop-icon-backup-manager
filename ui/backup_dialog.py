@@ -107,8 +107,8 @@ class BackupManagerWindow(QDialog):
         self.setWindowTitle(self.tr("Select, Restore, or Delete Backup"))
         # Bug 6 fix: use setMinimumSize instead of setFixedSize so it
         # adapts to high-DPI / small screens.
-        self.setMinimumSize(1200, 600)
-        self.resize(1600, 800)
+        self.setMinimumSize(1000, 550)
+        self.resize(1300, 720)
 
         root = QVBoxLayout(self)
         root.setSpacing(8)
@@ -355,14 +355,38 @@ class BackupManagerWindow(QDialog):
             except Exception:
                 current_icons = {}
 
-            self.preview_widget.update_preview(saved_icons, current_icons, res_tuple)
+            # Build clock strings for the preview's taskbar mock-up from the
+            # backup's own timestamp, so the tray clock shows when THIS
+            # snapshot was taken (not the current time).
+            ts_raw = data.get("timestamp", "")
+            try:
+                dt_bk = datetime.fromisoformat(ts_raw)
+                clock_time = dt_bk.strftime("%H:%M")
+                clock_date = dt_bk.strftime("%d/%m/%Y")
+            except (TypeError, ValueError):
+                # Fallback to the filename's timestamp
+                _, _, ts_file = parse_backup_filename(filename)
+                try:
+                    dt_bk = datetime.strptime(ts_file, "%Y%m%d_%H%M%S")
+                    clock_time = dt_bk.strftime("%H:%M")
+                    clock_date = dt_bk.strftime("%d/%m/%Y")
+                except ValueError:
+                    clock_time = "--:--"
+                    clock_date = "--/--/----"
+
+            self.preview_widget.update_preview(
+                saved_icons,
+                current_icons,
+                res_tuple,
+                clock_time=clock_time,
+                clock_date=clock_date,
+            )
 
             desc = data.get("description", self.tr("None"))
-            ts_raw = data.get("timestamp", self.tr("N/A"))
             try:
                 ts = datetime.fromisoformat(ts_raw).strftime("%Y/%m/%d %H:%M:%S")
-            except Exception:
-                ts = ts_raw
+            except (TypeError, ValueError):
+                ts = ts_raw or self.tr("N/A")
             count = len(saved_icons)
             info = (
                 f"<b>{self.tr('File')}:</b> {filename}<br>"
@@ -919,18 +943,15 @@ class BackupManagerWindow(QDialog):
 
     @staticmethod
     def _is_valid_backup(data) -> bool:
-        """Check that parsed JSON has the expected backup structure."""
+        """Check that parsed JSON has the expected backup structure.
+
+        A valid backup is a dict with an 'icons' key mapping to a dict.
+        """
         if not isinstance(data, dict):
             return False
-        # New format: must have 'icons' key with a dict value
-        if "icons" in data:
-            return isinstance(data["icons"], dict)
-        # Legacy format: top-level dict of icon_name -> [x, y]
-        # Accept if all values are lists/tuples of 2 numbers
-        if len(data) == 0:
-            return True
-        sample = next(iter(data.values()))
-        return isinstance(sample, (list, tuple)) and len(sample) == 2
+        if "icons" not in data:
+            return False
+        return isinstance(data["icons"], dict)
 
 
 class _PickBackupDialog(QDialog):

@@ -63,7 +63,7 @@
 </context><context>
     <name>BackupManagerWindow</name>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="462" />
+        <location filename="..\ui\backup_dialog.py" line="486" />
         <source>%n icon will be moved</source>
         <comment>%n icons will be moved</comment>
         <translation>
@@ -72,7 +72,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="463" />
+        <location filename="..\ui\backup_dialog.py" line="487" />
         <source>%n icon already in place</source>
         <comment>%n icons already in place</comment>
         <translation>
@@ -81,7 +81,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="464" />
+        <location filename="..\ui\backup_dialog.py" line="488" />
         <source>%n icon not on desktop</source>
         <comment>%n icons not on desktop</comment>
         <translation>
@@ -110,19 +110,19 @@
         <translation>Tunniste / Kuvaus</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="370" />
+        <location filename="..\ui\backup_dialog.py" line="394" />
         <location filename="..\ui\backup_dialog.py" line="141" />
         <source>Resolution</source>
         <translation>Resoluutio</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="369" />
+        <location filename="..\ui\backup_dialog.py" line="393" />
         <location filename="..\ui\backup_dialog.py" line="142" />
         <source>Icons</source>
         <translation>Kuvakkeet</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="372" />
+        <location filename="..\ui\backup_dialog.py" line="396" />
         <location filename="..\ui\backup_dialog.py" line="143" />
         <source>Timestamp</source>
         <translation>Aikaleima</translation>
@@ -174,9 +174,9 @@
         <translation>Sulje</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="433" />
-        <location filename="..\ui\backup_dialog.py" line="432" />
-        <location filename="..\ui\backup_dialog.py" line="361" />
+        <location filename="..\ui\backup_dialog.py" line="457" />
+        <location filename="..\ui\backup_dialog.py" line="456" />
+        <location filename="..\ui\backup_dialog.py" line="389" />
         <location filename="..\ui\backup_dialog.py" line="287" />
         <location filename="..\ui\backup_dialog.py" line="281" />
         <source>N/A</source>
@@ -193,52 +193,52 @@
         <translation>Varmuuskopioita ei löydy.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="360" />
+        <location filename="..\ui\backup_dialog.py" line="385" />
         <source>None</source>
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="368" />
+        <location filename="..\ui\backup_dialog.py" line="392" />
         <source>File</source>
         <translation>Tiedosto</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="371" />
+        <location filename="..\ui\backup_dialog.py" line="395" />
         <source>Description</source>
         <translation>Kuvaus</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="681" />
-        <location filename="..\ui\backup_dialog.py" line="586" />
-        <location filename="..\ui\backup_dialog.py" line="537" />
-        <location filename="..\ui\backup_dialog.py" line="520" />
-        <location filename="..\ui\backup_dialog.py" line="494" />
-        <location filename="..\ui\backup_dialog.py" line="378" />
+        <location filename="..\ui\backup_dialog.py" line="705" />
+        <location filename="..\ui\backup_dialog.py" line="610" />
+        <location filename="..\ui\backup_dialog.py" line="561" />
+        <location filename="..\ui\backup_dialog.py" line="544" />
+        <location filename="..\ui\backup_dialog.py" line="518" />
+        <location filename="..\ui\backup_dialog.py" line="402" />
         <source>Error</source>
         <translation>Virhe</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="403" />
+        <location filename="..\ui\backup_dialog.py" line="427" />
         <source>🔄 Restore Selected</source>
         <translation>🔄 Palauta valittu</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="406" />
+        <location filename="..\ui\backup_dialog.py" line="430" />
         <source>🗑️ Delete Selected</source>
         <translation>🗑️ Poista valittu</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="410" />
+        <location filename="..\ui\backup_dialog.py" line="434" />
         <source>📊 Compare with Latest</source>
         <translation>📊 Vertaile uusimpaan</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="469" />
+        <location filename="..\ui\backup_dialog.py" line="493" />
         <source>Confirm Restore</source>
         <translation>Vahvista palautus</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="470" />
+        <location filename="..\ui\backup_dialog.py" line="494" />
         <source>Restore icon positions from the selected backup file:
 
 File: %1
@@ -259,31 +259,31 @@ Aikaleima: %5
 Haluatko varmasti jatkaa?</translation>
     </message>
     <message>
+        <location filename="..\ui\backup_dialog.py" line="533" />
         <location filename="..\ui\backup_dialog.py" line="509" />
-        <location filename="..\ui\backup_dialog.py" line="485" />
         <source>Yes</source>
         <translation>Kyllä</translation>
     </message>
     <message>
+        <location filename="..\ui\backup_dialog.py" line="534" />
         <location filename="..\ui\backup_dialog.py" line="510" />
-        <location filename="..\ui\backup_dialog.py" line="486" />
         <source>No</source>
         <translation>Ei</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="495" />
+        <location filename="..\ui\backup_dialog.py" line="519" />
         <source>Failed to load backup file:
 %1</source>
         <translation>Varmuuskopiotiedoston lataaminen epäonnistui:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="505" />
+        <location filename="..\ui\backup_dialog.py" line="529" />
         <source>Confirm Delete</source>
         <translation>Vahvista poisto</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="506" />
+        <location filename="..\ui\backup_dialog.py" line="530" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
@@ -292,206 +292,206 @@ Haluatko varmasti jatkaa?</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="516" />
+        <location filename="..\ui\backup_dialog.py" line="540" />
         <source>Success</source>
         <translation>Onnistui</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="516" />
+        <location filename="..\ui\backup_dialog.py" line="540" />
         <source>Backup deleted successfully.</source>
         <translation>Varmuuskopio poistettu onnistuneesti.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="520" />
+        <location filename="..\ui\backup_dialog.py" line="544" />
         <source>Failed to delete backup file.</source>
         <translation>Varmuuskopiotiedoston poistaminen epäonnistui.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="560" />
-        <location filename="..\ui\backup_dialog.py" line="529" />
+        <location filename="..\ui\backup_dialog.py" line="584" />
+        <location filename="..\ui\backup_dialog.py" line="553" />
         <source>No Selection</source>
         <translation>Ei valintaa</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="530" />
+        <location filename="..\ui\backup_dialog.py" line="554" />
         <source>Please select a backup to compare.</source>
         <translation>Valitse varmuuskopio vertailua varten.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="537" />
+        <location filename="..\ui\backup_dialog.py" line="561" />
         <source>No latest backup found</source>
         <translation>Uusinta varmuuskopiota ei löydy</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="544" />
+        <location filename="..\ui\backup_dialog.py" line="568" />
         <source>Same Backup</source>
         <translation>Sama varmuuskopio</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="545" />
+        <location filename="..\ui\backup_dialog.py" line="569" />
         <source>You selected the latest backup. Nothing to compare.</source>
         <translation>Valitsit uusimman varmuuskopion. Ei mitään vertailtavaa.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="561" />
+        <location filename="..\ui\backup_dialog.py" line="585" />
         <source>Please select a backup first.</source>
         <translation>Valitse ensin varmuuskopio.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="570" />
+        <location filename="..\ui\backup_dialog.py" line="594" />
         <source>Not Enough Backups</source>
         <translation>Ei riittävästi varmuuskopioita</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="571" />
+        <location filename="..\ui\backup_dialog.py" line="595" />
         <source>There is only one backup. Nothing to compare against.</source>
         <translation>Varmuuskopioita on vain yksi. Ei mitään, johon vertailla.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="586" />
+        <location filename="..\ui\backup_dialog.py" line="610" />
         <source>Failed to compare backups</source>
         <translation>Varmuuskopioiden vertailu epäonnistui</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="590" />
+        <location filename="..\ui\backup_dialog.py" line="614" />
         <source>latest</source>
         <translation>uusin</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="593" />
+        <location filename="..\ui\backup_dialog.py" line="617" />
         <source>Comparison Results</source>
         <translation>Vertailun tulokset</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="602" />
+        <location filename="..\ui\backup_dialog.py" line="626" />
         <source>Comparing Backups:</source>
         <translation>Vertaillaan varmuuskopioita:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="613" />
+        <location filename="..\ui\backup_dialog.py" line="637" />
         <source>✓ Close</source>
         <translation>✓ Sulje</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="682" />
+        <location filename="..\ui\backup_dialog.py" line="706" />
         <source>Failed to save tag: %1</source>
         <translation>Tunnisteen tallentaminen epäonnistui: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="699" />
+        <location filename="..\ui\backup_dialog.py" line="723" />
         <source>No Backups</source>
         <translation>Ei varmuuskopioita</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="700" />
+        <location filename="..\ui\backup_dialog.py" line="724" />
         <source>There are no backup files to export.</source>
         <translation>Ei vietäviä varmuuskopiotiedostoja.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="706" />
+        <location filename="..\ui\backup_dialog.py" line="730" />
         <source>All backups (%1 files)</source>
         <translation>Kaikki varmuuskopiot (%1 tiedostoa)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="710" />
+        <location filename="..\ui\backup_dialog.py" line="734" />
         <source>Selected backup only (%1)</source>
         <translation>Vain valittu varmuuskopio (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="716" />
+        <location filename="..\ui\backup_dialog.py" line="740" />
         <source>Export Backups</source>
         <translation>Vie varmuuskopiot</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="717" />
+        <location filename="..\ui\backup_dialog.py" line="741" />
         <source>What do you want to export?</source>
         <translation>Mitä haluat viedä?</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="729" />
+        <location filename="..\ui\backup_dialog.py" line="753" />
         <source>ZIP archive (.zip)</source>
         <translation>ZIP-arkisto (.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="730" />
+        <location filename="..\ui\backup_dialog.py" line="754" />
         <source>Folder (copy .json files)</source>
         <translation>Kansio (kopioi .json-tiedostot)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="734" />
+        <location filename="..\ui\backup_dialog.py" line="758" />
         <source>Export Format</source>
         <translation>Vientimuoto</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="735" />
+        <location filename="..\ui\backup_dialog.py" line="759" />
         <source>Choose export format:</source>
         <translation>Valitse vientimuoto:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="750" />
+        <location filename="..\ui\backup_dialog.py" line="774" />
         <source>Save ZIP Archive</source>
         <translation>Tallenna ZIP-arkisto</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="752" />
+        <location filename="..\ui\backup_dialog.py" line="776" />
         <source>ZIP Archives (*.zip)</source>
         <translation>ZIP-arkistot (*.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="802" />
-        <location filename="..\ui\backup_dialog.py" line="764" />
+        <location filename="..\ui\backup_dialog.py" line="826" />
+        <location filename="..\ui\backup_dialog.py" line="788" />
         <source>Export Successful</source>
         <translation>Vienti onnistui</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="803" />
-        <location filename="..\ui\backup_dialog.py" line="765" />
+        <location filename="..\ui\backup_dialog.py" line="827" />
+        <location filename="..\ui\backup_dialog.py" line="789" />
         <source>Exported %1 backup(s) to:
 %2</source>
         <translation>Viety %1 varmuuskopio(ta) kohteeseen:
 %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="772" />
+        <location filename="..\ui\backup_dialog.py" line="796" />
         <source>Export Failed</source>
         <translation>Vienti epäonnistui</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="773" />
+        <location filename="..\ui\backup_dialog.py" line="797" />
         <source>Could not create ZIP archive:
 %1</source>
         <translation>ZIP-arkiston luominen epäonnistui:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="777" />
+        <location filename="..\ui\backup_dialog.py" line="801" />
         <source>Select Destination Folder</source>
         <translation>Valitse kohdekansio</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="794" />
+        <location filename="..\ui\backup_dialog.py" line="818" />
         <source>Export Partial</source>
         <translation>Osittainen vienti</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="795" />
+        <location filename="..\ui\backup_dialog.py" line="819" />
         <source>Exported %1 file(s). Errors:
 %2</source>
         <translation>Viety %1 tiedosto(a). Virheet:
 %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="814" />
+        <location filename="..\ui\backup_dialog.py" line="838" />
         <source>Import Backups</source>
         <translation>Tuo varmuuskopiot</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="816" />
+        <location filename="..\ui\backup_dialog.py" line="840" />
         <source>Backup files (*.json *.zip)</source>
         <translation>Varmuuskopiotiedostot (*.json *.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="842" />
+        <location filename="..\ui\backup_dialog.py" line="866" />
         <source>Import complete.
 
 ✓ Imported: %1
@@ -502,77 +502,77 @@ Haluatko varmasti jatkaa?</translation>
 ⏭ Ohitettu (jo olemassa): %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="847" />
+        <location filename="..\ui\backup_dialog.py" line="871" />
         <source>Errors:
 %1</source>
         <translation>Virheet:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="848" />
+        <location filename="..\ui\backup_dialog.py" line="872" />
         <source>Import Results</source>
         <translation>Tuonnin tulokset</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="850" />
+        <location filename="..\ui\backup_dialog.py" line="874" />
         <source>Import Successful</source>
         <translation>Tuonti onnistui</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="862" />
+        <location filename="..\ui\backup_dialog.py" line="886" />
         <source>No .json files found in: %1</source>
         <translation>.json-tiedostoja ei löydy kohteesta: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="910" />
-        <location filename="..\ui\backup_dialog.py" line="877" />
+        <location filename="..\ui\backup_dialog.py" line="934" />
+        <location filename="..\ui\backup_dialog.py" line="901" />
         <source>%1: not a valid backup file (missing 'icons' dictionary)</source>
         <translation>%1: virheellinen varmuuskopiotiedosto ('icons'-hakemisto puuttuu)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="889" />
+        <location filename="..\ui\backup_dialog.py" line="913" />
         <source>Invalid ZIP file %1: %2</source>
         <translation>Virheellinen ZIP-tiedosto %1: %2</translation>
     </message>
 </context><context>
     <name>CLI</name>
     <message>
-        <location filename="..\main.py" line="274" />
+        <location filename="..\main.py" line="309" />
         <source>Perform a backup</source>
         <translation>Tee varmuuskopio</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="280" />
+        <location filename="..\main.py" line="315" />
         <source>Restore a specific backup or latest</source>
         <translation>Palauta tietty varmuuskopio tai uusin</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="285" />
+        <location filename="..\main.py" line="320" />
         <source>Run without showing the GUI</source>
         <translation>Suorita ilman graafista käyttöliittymää</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="306" />
+        <location filename="..\main.py" line="341" />
         <source>[SILENT]</source>
         <translation>[HILJAINEN]</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="311" />
+        <location filename="..\main.py" line="346" />
         <source>Starting silent backup...</source>
         <translation>Käynnistetään hiljainen varmuuskopio...</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="314" />
+        <location filename="..\main.py" line="349" />
         <source>Silent CLI Backup</source>
         <translation>Hiljainen CLI-varmuuskopio</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="328" />
+        <location filename="..\main.py" line="363" />
         <source>Error: No backup files found for latest restore.</source>
         <translation>Virhe: Uusimman palautuksen varmuuskopiotiedostoja ei löydy.</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="336" />
+        <location filename="..\main.py" line="371" />
         <source>Starting silent restore from: %1</source>
         <translation>Käynnistetään hiljainen palautus kohteesta: %1</translation>
     </message>
@@ -657,7 +657,7 @@ Haluatko varmasti jatkaa?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="399" />
+        <location filename="..\core\icon_manager.py" line="405" />
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
             <numerusform>✓ Tallennettu %n kuvake varmuuskopiotiedostoon „%1"</numerusform>
@@ -665,72 +665,72 @@ Haluatko varmasti jatkaa?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="409" />
+        <location filename="..\core\icon_manager.py" line="415" />
         <source>  (Description: %1)</source>
         <translation>  (Kuvaus: %1)</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="422" />
+        <location filename="..\core\icon_manager.py" line="428" />
         <source>✗ Error saving (I/O): %1</source>
         <translation>✗ Tallennusvirhe (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="429" />
+        <location filename="..\core\icon_manager.py" line="435" />
         <source>✗ Error saving: %1</source>
         <translation>✗ Tallennusvirhe: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="457" />
+        <location filename="..\core\icon_manager.py" line="463" />
         <source>✗ Error: Backup file not found.</source>
         <translation>✗ Virhe: Varmuuskopiotiedostoa ei löydy.</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="467" />
+        <location filename="..\core\icon_manager.py" line="473" />
         <source>Attempting to restore from backup: '%1'</source>
         <translation>Yritetään palauttaa varmuuskopiosta: „%1"</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="472" />
+        <location filename="..\core\icon_manager.py" line="478" />
         <source>Saved Resolution (from filename): %1</source>
         <translation>Tallennettu resoluutio (tiedostonimestä): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="489" />
+        <location filename="..\core\icon_manager.py" line="496" />
+        <source>✗ Error: Invalid backup structure (missing 'icons' dictionary).</source>
+        <translation>✗ Virhe: Virheellinen varmuuskopion rakenne ('icons'-sanakirja puuttuu).</translation>
+    </message>
+    <message>
+        <location filename="..\core\icon_manager.py" line="507" />
         <source>Restoring layout (saved: %1)</source>
         <translation>Palautetaan asettelu (tallennettu: %1)</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="494" />
+        <location filename="..\core\icon_manager.py" line="512" />
         <source>  Description: %1</source>
         <translation>  Kuvaus: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="501" />
-        <source>Restoring layout (Old format, no timestamp and metadata)</source>
-        <translation>Palautetaan asettelu (Vanha muoto, ei aikaleimaa eikä metatietoja)</translation>
-    </message>
-    <message>
-        <location filename="..\core\icon_manager.py" line="509" />
+        <location filename="..\core\icon_manager.py" line="519" />
         <source>✗ Error: Invalid backup file format: %1</source>
         <translation>✗ Virhe: Virheellinen varmuuskopiotiedoston muoto: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="516" />
+        <location filename="..\core\icon_manager.py" line="526" />
         <source>✗ Error reading backup file (I/O): %1</source>
         <translation>✗ Virhe varmuuskopiotiedoston lukemisessa (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="533" />
+        <location filename="..\core\icon_manager.py" line="543" />
         <source>⚠ Warning: Resolution mismatch!</source>
         <translation>⚠ Varoitus: Resoluutio ei täsmää!</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="543" />
+        <location filename="..\core\icon_manager.py" line="553" />
         <source>✓ Adaptive Scaling enabled: X=%1, Y=%2</source>
         <translation>✓ Adaptiivinen skaalaus käytössä: X=%1, Y=%2</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="628" />
+        <location filename="..\core\icon_manager.py" line="638" />
         <source>✓ Restored %n icon(s)</source>
         <translation>
             <numerusform>✓ Palautettu %n kuvake</numerusform>
@@ -738,7 +738,7 @@ Haluatko varmasti jatkaa?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="634" />
+        <location filename="..\core\icon_manager.py" line="644" />
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
             <numerusform>⚠ Ohitettu %n kuvake (ei löydy työpöydältä)</numerusform>
@@ -746,22 +746,22 @@ Haluatko varmasti jatkaa?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="648" />
+        <location filename="..\core\icon_manager.py" line="658" />
         <source>✗ Error restoring (I/O): %1</source>
         <translation>✗ Palautusvirhe (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="655" />
+        <location filename="..\core\icon_manager.py" line="665" />
         <source>✗ Error restoring: %1</source>
         <translation>✗ Palautusvirhe: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="683" />
+        <location filename="..\core\icon_manager.py" line="693" />
         <source>Redrawing disabled for scrambling...</source>
         <translation>Uudelleenpiirtäminen poistettu käytöstä satunnaistamista varten...</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="692" />
+        <location filename="..\core\icon_manager.py" line="702" />
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
             <numerusform>Löytyi %n kuvake. Käynnistetään satunnainen sijoittelu...</numerusform>
@@ -769,7 +769,7 @@ Haluatko varmasti jatkaa?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="713" />
+        <location filename="..\core\icon_manager.py" line="723" />
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
             <numerusform>✓ Satunnaistettu %n kuvakkeen sijainti.</numerusform>
@@ -777,7 +777,7 @@ Haluatko varmasti jatkaa?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="727" />
+        <location filename="..\core\icon_manager.py" line="737" />
         <source>✗ Error scrambling icons: %1</source>
         <translation>✗ Virhe kuvakkeiden satunnaistamisessa: %1</translation>
     </message>
@@ -834,7 +834,7 @@ Haluatko varmasti jatkaa?</translation>
 </context><context>
     <name>IconPreviewWidget</name>
     <message>
-        <location filename="..\ui\preview_widget.py" line="406" />
+        <location filename="..\ui\preview_widget.py" line="832" />
         <source>No Preview Available</source>
         <translation>Esikatselu ei ole saatavilla</translation>
     </message>
@@ -888,12 +888,12 @@ Haluatko varmasti jatkaa?</translation>
 </context><context>
     <name>Main</name>
     <message>
-        <location filename="..\main.py" line="382" />
+        <location filename="..\main.py" line="417" />
         <source>Critical Error</source>
         <translation>Kriittinen virhe</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="383" />
+        <location filename="..\main.py" line="418" />
         <source>Failed to start application:
 %1</source>
         <translation>Sovelluksen käynnistäminen epäonnistui:
@@ -2111,61 +2111,61 @@ Kuvakesijainnit on palautettu, mutta ne saattavat olla epätarkkoja.</translatio
 </context><context>
     <name>_DiffCanvas</name>
     <message>
-        <location filename="..\ui\preview_widget.py" line="216" />
+        <location filename="..\ui\preview_widget.py" line="587" />
         <source>No Preview Available</source>
         <translation>Esikatselu ei ole saatavilla</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="276" />
+        <location filename="..\ui\preview_widget.py" line="658" />
         <source>✓ already in place</source>
         <translation>✓ jo paikallaan</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="278" />
+        <location filename="..\ui\preview_widget.py" line="660" />
         <source>↕ will move</source>
         <translation>↕ siirtyy</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="281" />
+        <location filename="..\ui\preview_widget.py" line="662" />
         <source>⚠ not on desktop</source>
         <translation>⚠ ei työpöydällä</translation>
     </message>
 </context><context>
     <name>_LegendPanel</name>
     <message>
-        <location filename="..\ui\preview_widget.py" line="311" />
+        <location filename="..\ui\preview_widget.py" line="692" />
         <source>Already in place, will not move</source>
         <translation>Jo paikallaan, ei siirry</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="312" />
+        <location filename="..\ui\preview_widget.py" line="693" />
         <source>Will move  (orange = now,  red = target)</source>
         <translation>Siirtyy (oranssi = nyt, punainen = kohde)</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="313" />
+        <location filename="..\ui\preview_widget.py" line="694" />
         <source>In backup, not on desktop</source>
         <translation>Varmuuskopiossa, ei työpöydällä</translation>
     </message>
 </context><context>
     <name>_PickBackupDialog</name>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="942" />
+        <location filename="..\ui\backup_dialog.py" line="963" />
         <source>Pick Backup to Compare Against</source>
         <translation>Valitse vertailtava varmuuskopio</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="946" />
+        <location filename="..\ui\backup_dialog.py" line="967" />
         <source>Select the second backup file:</source>
         <translation>Valitse toinen varmuuskopiotiedosto:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="958" />
+        <location filename="..\ui\backup_dialog.py" line="979" />
         <source>Compare</source>
         <translation>Vertaile</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="960" />
+        <location filename="..\ui\backup_dialog.py" line="981" />
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>

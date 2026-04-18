@@ -85,6 +85,8 @@ Before restoring any backup, you see a **real-time, color-coded visual overlay**
 
 **No other free Windows desktop icon tool offers this feature.** You always know precisely what will happen before clicking Restore—eliminating surprises and accidental icon movement.
 
+The preview canvas preserves your monitor's aspect ratio and includes a stylised **Windows 11 taskbar mock-up** at the bottom, so you can immediately see which icons would fall behind the real taskbar after restore. The tray clock on the mock-up shows the **backup's own timestamp** (time and date it was captured), not the current time.
+
 #### Color Legend:
 | Indicator | Meaning |
 |-----------|---------|
@@ -96,9 +98,11 @@ Before restoring any backup, you see a **real-time, color-coded visual overlay**
 
 Restoring a backup from a 1920×1080 monitor onto a 2560×1440 display? **Icon positions are automatically recalculated proportionally**, so they land in the correct area of your new screen. Icons no longer pile up in corners when resolution changes—this includes DPI scaling differences.
 
+The application is natively **Per-Monitor-v2 DPI-aware**, so saved resolutions are always physical pixels regardless of Windows display scaling. A 2560×1440 monitor at 125% scaling saves as `2560×1440` — saved resolution and icon coordinates stay in the same coordinate system on 2K, 4K and fractional-scaling displays.
+
 **Works seamlessly across:**
 - Different resolution changes (1080p ↔ 1440p ↔ 4K)
-- DPI scaling differences (100% ↔ 125% ↔ 150%)
+- DPI scaling differences (100% ↔ 125% ↔ 150% ↔ 200%)
 - Multiple monitor configurations
 
 ### ⚖️ Compare Any Two Backups
@@ -143,7 +147,7 @@ desktop-icon-backup-manager.exe --restore latest --silent
 - **📋 Quick-Access Profiles Dropdown** — 14 pre-made profile names for instant tagging:
   - *Work, Gaming, Presentation, Dev/Coding, Meeting, Home, Office, Laptop, Docked/External Monitor, Clean Desktop, Pre-Update, Pre-Reboot, Favourite, Test*
   - One-click selection pre-fills the tag field; edit further if needed
-- **📊 Complete Metadata Tracking** — Every backup records screen resolution, DPI scaling, monitor count, and arrangement
+- **📊 Complete Metadata Tracking** — Every backup records screen resolution (physical pixels, DPI-aware), DPI scaling factor, monitor count, and arrangement
 
 ### Advanced Features — What Sets This Tool Apart
 
@@ -489,6 +493,7 @@ This is a standout feature. Select any backup in the Backup Manager and the **li
 - **Blue icons** — Already in correct position, won't move
 - **Orange → Red arrows** — Will move (orange = current, red = destination)
 - **Green icons** — In backup but not on desktop, will be skipped
+- A **Windows 11 taskbar mock-up** at the bottom of the canvas (with the backup's timestamp as tray clock) shows which icons would end up behind the real taskbar after restore.
 
 ### Multi-Monitor & Resolution Questions
 

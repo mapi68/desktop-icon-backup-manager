@@ -18,9 +18,7 @@ from PyQt6.QtCore import QCoreApplication  # noqa: F401  (re-exported for caller
 #   1920x1080_20240815_143005.json
 #   3840x2160_20241231_235959.json
 #
-# This is the ONLY accepted format. Legacy filenames without a resolution
-# prefix are no longer recognised. Loose split-based parsing has been
-# replaced with a strict regex to fail fast on malformed input.
+# Parsed with a strict regex that fails fast on malformed input.
 _BACKUP_FILENAME_RE = re.compile(
     r"""
     \A

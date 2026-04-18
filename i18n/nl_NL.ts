@@ -63,7 +63,7 @@
 </context><context>
     <name>BackupManagerWindow</name>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="462" />
+        <location filename="..\ui\backup_dialog.py" line="486" />
         <source>%n icon will be moved</source>
         <comment>%n icons will be moved</comment>
         <translation>
@@ -72,7 +72,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="463" />
+        <location filename="..\ui\backup_dialog.py" line="487" />
         <source>%n icon already in place</source>
         <comment>%n icons already in place</comment>
         <translation>
@@ -81,7 +81,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\backup_dialog.py" line="464" />
+        <location filename="..\ui\backup_dialog.py" line="488" />
         <source>%n icon not on desktop</source>
         <comment>%n icons not on desktop</comment>
         <translation>
@@ -110,19 +110,19 @@
         <translation>Tag / Beschrijving</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="370" />
+        <location filename="..\ui\backup_dialog.py" line="394" />
         <location filename="..\ui\backup_dialog.py" line="141" />
         <source>Resolution</source>
         <translation>Resolutie</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="369" />
+        <location filename="..\ui\backup_dialog.py" line="393" />
         <location filename="..\ui\backup_dialog.py" line="142" />
         <source>Icons</source>
         <translation>Pictogrammen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="372" />
+        <location filename="..\ui\backup_dialog.py" line="396" />
         <location filename="..\ui\backup_dialog.py" line="143" />
         <source>Timestamp</source>
         <translation>Tijdstempel</translation>
@@ -174,9 +174,9 @@
         <translation>Sluiten</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="433" />
-        <location filename="..\ui\backup_dialog.py" line="432" />
-        <location filename="..\ui\backup_dialog.py" line="361" />
+        <location filename="..\ui\backup_dialog.py" line="457" />
+        <location filename="..\ui\backup_dialog.py" line="456" />
+        <location filename="..\ui\backup_dialog.py" line="389" />
         <location filename="..\ui\backup_dialog.py" line="287" />
         <location filename="..\ui\backup_dialog.py" line="281" />
         <source>N/A</source>
@@ -193,52 +193,52 @@
         <translation>Geen back-ups gevonden.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="360" />
+        <location filename="..\ui\backup_dialog.py" line="385" />
         <source>None</source>
         <translation>Geen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="368" />
+        <location filename="..\ui\backup_dialog.py" line="392" />
         <source>File</source>
         <translation>Bestand</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="371" />
+        <location filename="..\ui\backup_dialog.py" line="395" />
         <source>Description</source>
         <translation>Beschrijving</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="681" />
-        <location filename="..\ui\backup_dialog.py" line="586" />
-        <location filename="..\ui\backup_dialog.py" line="537" />
-        <location filename="..\ui\backup_dialog.py" line="520" />
-        <location filename="..\ui\backup_dialog.py" line="494" />
-        <location filename="..\ui\backup_dialog.py" line="378" />
+        <location filename="..\ui\backup_dialog.py" line="705" />
+        <location filename="..\ui\backup_dialog.py" line="610" />
+        <location filename="..\ui\backup_dialog.py" line="561" />
+        <location filename="..\ui\backup_dialog.py" line="544" />
+        <location filename="..\ui\backup_dialog.py" line="518" />
+        <location filename="..\ui\backup_dialog.py" line="402" />
         <source>Error</source>
         <translation>Fout</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="403" />
+        <location filename="..\ui\backup_dialog.py" line="427" />
         <source>🔄 Restore Selected</source>
         <translation>🔄 Geselecteerde herstellen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="406" />
+        <location filename="..\ui\backup_dialog.py" line="430" />
         <source>🗑️ Delete Selected</source>
         <translation>🗑️ Geselecteerde verwijderen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="410" />
+        <location filename="..\ui\backup_dialog.py" line="434" />
         <source>📊 Compare with Latest</source>
         <translation>📊 Vergelijken met nieuwste</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="469" />
+        <location filename="..\ui\backup_dialog.py" line="493" />
         <source>Confirm Restore</source>
         <translation>Herstel bevestigen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="470" />
+        <location filename="..\ui\backup_dialog.py" line="494" />
         <source>Restore icon positions from the selected backup file:
 
 File: %1
@@ -259,31 +259,31 @@ Tijdstempel: %5
 Weet u zeker dat u wilt doorgaan?</translation>
     </message>
     <message>
+        <location filename="..\ui\backup_dialog.py" line="533" />
         <location filename="..\ui\backup_dialog.py" line="509" />
-        <location filename="..\ui\backup_dialog.py" line="485" />
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
+        <location filename="..\ui\backup_dialog.py" line="534" />
         <location filename="..\ui\backup_dialog.py" line="510" />
-        <location filename="..\ui\backup_dialog.py" line="486" />
         <source>No</source>
         <translation>Nee</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="495" />
+        <location filename="..\ui\backup_dialog.py" line="519" />
         <source>Failed to load backup file:
 %1</source>
         <translation>Back-upbestand laden mislukt:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="505" />
+        <location filename="..\ui\backup_dialog.py" line="529" />
         <source>Confirm Delete</source>
         <translation>Verwijdering bevestigen</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="506" />
+        <location filename="..\ui\backup_dialog.py" line="530" />
         <source>Are you sure you want to delete this backup?
 
 %1</source>
@@ -292,206 +292,206 @@ Weet u zeker dat u wilt doorgaan?</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="516" />
+        <location filename="..\ui\backup_dialog.py" line="540" />
         <source>Success</source>
         <translation>Geslaagd</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="516" />
+        <location filename="..\ui\backup_dialog.py" line="540" />
         <source>Backup deleted successfully.</source>
         <translation>Back-up succesvol verwijderd.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="520" />
+        <location filename="..\ui\backup_dialog.py" line="544" />
         <source>Failed to delete backup file.</source>
         <translation>Back-upbestand verwijderen mislukt.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="560" />
-        <location filename="..\ui\backup_dialog.py" line="529" />
+        <location filename="..\ui\backup_dialog.py" line="584" />
+        <location filename="..\ui\backup_dialog.py" line="553" />
         <source>No Selection</source>
         <translation>Geen selectie</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="530" />
+        <location filename="..\ui\backup_dialog.py" line="554" />
         <source>Please select a backup to compare.</source>
         <translation>Selecteer een back-up om te vergelijken.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="537" />
+        <location filename="..\ui\backup_dialog.py" line="561" />
         <source>No latest backup found</source>
         <translation>Geen nieuwste back-up gevonden</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="544" />
+        <location filename="..\ui\backup_dialog.py" line="568" />
         <source>Same Backup</source>
         <translation>Zelfde back-up</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="545" />
+        <location filename="..\ui\backup_dialog.py" line="569" />
         <source>You selected the latest backup. Nothing to compare.</source>
         <translation>U heeft de nieuwste back-up geselecteerd. Niets te vergelijken.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="561" />
+        <location filename="..\ui\backup_dialog.py" line="585" />
         <source>Please select a backup first.</source>
         <translation>Selecteer eerst een back-up.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="570" />
+        <location filename="..\ui\backup_dialog.py" line="594" />
         <source>Not Enough Backups</source>
         <translation>Niet genoeg back-ups</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="571" />
+        <location filename="..\ui\backup_dialog.py" line="595" />
         <source>There is only one backup. Nothing to compare against.</source>
         <translation>Er is slechts één back-up. Niets om mee te vergelijken.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="586" />
+        <location filename="..\ui\backup_dialog.py" line="610" />
         <source>Failed to compare backups</source>
         <translation>Back-ups vergelijken mislukt</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="590" />
+        <location filename="..\ui\backup_dialog.py" line="614" />
         <source>latest</source>
         <translation>nieuwste</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="593" />
+        <location filename="..\ui\backup_dialog.py" line="617" />
         <source>Comparison Results</source>
         <translation>Vergelijkingsresultaten</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="602" />
+        <location filename="..\ui\backup_dialog.py" line="626" />
         <source>Comparing Backups:</source>
         <translation>Back-ups vergelijken:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="613" />
+        <location filename="..\ui\backup_dialog.py" line="637" />
         <source>✓ Close</source>
         <translation>✓ Sluiten</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="682" />
+        <location filename="..\ui\backup_dialog.py" line="706" />
         <source>Failed to save tag: %1</source>
         <translation>Tag opslaan mislukt: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="699" />
+        <location filename="..\ui\backup_dialog.py" line="723" />
         <source>No Backups</source>
         <translation>Geen back-ups</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="700" />
+        <location filename="..\ui\backup_dialog.py" line="724" />
         <source>There are no backup files to export.</source>
         <translation>Er zijn geen back-upbestanden om te exporteren.</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="706" />
+        <location filename="..\ui\backup_dialog.py" line="730" />
         <source>All backups (%1 files)</source>
         <translation>Alle back-ups (%1 bestanden)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="710" />
+        <location filename="..\ui\backup_dialog.py" line="734" />
         <source>Selected backup only (%1)</source>
         <translation>Alleen geselecteerde back-up (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="716" />
+        <location filename="..\ui\backup_dialog.py" line="740" />
         <source>Export Backups</source>
         <translation>Back-ups exporteren</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="717" />
+        <location filename="..\ui\backup_dialog.py" line="741" />
         <source>What do you want to export?</source>
         <translation>Wat wilt u exporteren?</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="729" />
+        <location filename="..\ui\backup_dialog.py" line="753" />
         <source>ZIP archive (.zip)</source>
         <translation>ZIP-archief (.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="730" />
+        <location filename="..\ui\backup_dialog.py" line="754" />
         <source>Folder (copy .json files)</source>
         <translation>Map (.json-bestanden kopiëren)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="734" />
+        <location filename="..\ui\backup_dialog.py" line="758" />
         <source>Export Format</source>
         <translation>Exportindeling</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="735" />
+        <location filename="..\ui\backup_dialog.py" line="759" />
         <source>Choose export format:</source>
         <translation>Exportindeling kiezen:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="750" />
+        <location filename="..\ui\backup_dialog.py" line="774" />
         <source>Save ZIP Archive</source>
         <translation>ZIP-archief opslaan</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="752" />
+        <location filename="..\ui\backup_dialog.py" line="776" />
         <source>ZIP Archives (*.zip)</source>
         <translation>ZIP Archives (*.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="802" />
-        <location filename="..\ui\backup_dialog.py" line="764" />
+        <location filename="..\ui\backup_dialog.py" line="826" />
+        <location filename="..\ui\backup_dialog.py" line="788" />
         <source>Export Successful</source>
         <translation>Export geslaagd</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="803" />
-        <location filename="..\ui\backup_dialog.py" line="765" />
+        <location filename="..\ui\backup_dialog.py" line="827" />
+        <location filename="..\ui\backup_dialog.py" line="789" />
         <source>Exported %1 backup(s) to:
 %2</source>
         <translation>%1 back-up(s) geëxporteerd naar:
 %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="772" />
+        <location filename="..\ui\backup_dialog.py" line="796" />
         <source>Export Failed</source>
         <translation>Export mislukt</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="773" />
+        <location filename="..\ui\backup_dialog.py" line="797" />
         <source>Could not create ZIP archive:
 %1</source>
         <translation>Kan geen ZIP-archief maken:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="777" />
+        <location filename="..\ui\backup_dialog.py" line="801" />
         <source>Select Destination Folder</source>
         <translation>Doelmap selecteren</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="794" />
+        <location filename="..\ui\backup_dialog.py" line="818" />
         <source>Export Partial</source>
         <translation>Gedeeltelijke export</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="795" />
+        <location filename="..\ui\backup_dialog.py" line="819" />
         <source>Exported %1 file(s). Errors:
 %2</source>
         <translation>%1 bestand(en) geëxporteerd. Fouten:
 %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="814" />
+        <location filename="..\ui\backup_dialog.py" line="838" />
         <source>Import Backups</source>
         <translation>Back-ups importeren</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="816" />
+        <location filename="..\ui\backup_dialog.py" line="840" />
         <source>Backup files (*.json *.zip)</source>
         <translation>Backup files (*.json *.zip)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="842" />
+        <location filename="..\ui\backup_dialog.py" line="866" />
         <source>Import complete.
 
 ✓ Imported: %1
@@ -502,77 +502,77 @@ Weet u zeker dat u wilt doorgaan?</translation>
 ⏭ Overgeslagen (bestaan al): %2</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="847" />
+        <location filename="..\ui\backup_dialog.py" line="871" />
         <source>Errors:
 %1</source>
         <translation>Fouten:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="848" />
+        <location filename="..\ui\backup_dialog.py" line="872" />
         <source>Import Results</source>
         <translation>Importresultaten</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="850" />
+        <location filename="..\ui\backup_dialog.py" line="874" />
         <source>Import Successful</source>
         <translation>Import geslaagd</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="862" />
+        <location filename="..\ui\backup_dialog.py" line="886" />
         <source>No .json files found in: %1</source>
         <translation>Geen .json-bestanden gevonden in: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="910" />
-        <location filename="..\ui\backup_dialog.py" line="877" />
+        <location filename="..\ui\backup_dialog.py" line="934" />
+        <location filename="..\ui\backup_dialog.py" line="901" />
         <source>%1: not a valid backup file (missing 'icons' dictionary)</source>
         <translation>%1: ongeldig back-upbestand (woordenboek 'icons' ontbreekt)</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="889" />
+        <location filename="..\ui\backup_dialog.py" line="913" />
         <source>Invalid ZIP file %1: %2</source>
         <translation>Ongeldig ZIP-bestand %1: %2</translation>
     </message>
 </context><context>
     <name>CLI</name>
     <message>
-        <location filename="..\main.py" line="274" />
+        <location filename="..\main.py" line="309" />
         <source>Perform a backup</source>
         <translation>Back-up uitvoeren</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="280" />
+        <location filename="..\main.py" line="315" />
         <source>Restore a specific backup or latest</source>
         <translation>Een specifieke of de nieuwste back-up herstellen</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="285" />
+        <location filename="..\main.py" line="320" />
         <source>Run without showing the GUI</source>
         <translation>Uitvoeren zonder GUI te tonen</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="306" />
+        <location filename="..\main.py" line="341" />
         <source>[SILENT]</source>
         <translation>[STIL]</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="311" />
+        <location filename="..\main.py" line="346" />
         <source>Starting silent backup...</source>
         <translation>Stille back-up starten...</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="314" />
+        <location filename="..\main.py" line="349" />
         <source>Silent CLI Backup</source>
         <translation>Stille CLI-back-up</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="328" />
+        <location filename="..\main.py" line="363" />
         <source>Error: No backup files found for latest restore.</source>
         <translation>Fout: Geen back-upbestanden gevonden voor het nieuwste herstel.</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="336" />
+        <location filename="..\main.py" line="371" />
         <source>Starting silent restore from: %1</source>
         <translation>Stil herstel starten vanuit: %1</translation>
     </message>
@@ -657,7 +657,7 @@ Weet u zeker dat u wilt doorgaan?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="399" />
+        <location filename="..\core\icon_manager.py" line="405" />
         <source>✓ Saved %n icon(s) to backup file '%1'</source>
         <translation>
             <numerusform>✓ %n pictogram opgeslagen in back-upbestand '%1'</numerusform>
@@ -665,72 +665,72 @@ Weet u zeker dat u wilt doorgaan?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="409" />
+        <location filename="..\core\icon_manager.py" line="415" />
         <source>  (Description: %1)</source>
         <translation>  (Beschrijving: %1)</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="422" />
+        <location filename="..\core\icon_manager.py" line="428" />
         <source>✗ Error saving (I/O): %1</source>
         <translation>✗ Fout bij opslaan (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="429" />
+        <location filename="..\core\icon_manager.py" line="435" />
         <source>✗ Error saving: %1</source>
         <translation>✗ Fout bij opslaan: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="457" />
+        <location filename="..\core\icon_manager.py" line="463" />
         <source>✗ Error: Backup file not found.</source>
         <translation>✗ Fout: Back-upbestand niet gevonden.</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="467" />
+        <location filename="..\core\icon_manager.py" line="473" />
         <source>Attempting to restore from backup: '%1'</source>
         <translation>Herstellen vanuit back-up proberen: '%1'</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="472" />
+        <location filename="..\core\icon_manager.py" line="478" />
         <source>Saved Resolution (from filename): %1</source>
         <translation>Opgeslagen resolutie (uit bestandsnaam): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="489" />
+        <location filename="..\core\icon_manager.py" line="496" />
+        <source>✗ Error: Invalid backup structure (missing 'icons' dictionary).</source>
+        <translation>✗ Fout: Ongeldige back-upstructuur ('icons'-woordenboek ontbreekt).</translation>
+    </message>
+    <message>
+        <location filename="..\core\icon_manager.py" line="507" />
         <source>Restoring layout (saved: %1)</source>
         <translation>Lay-out herstellen (opgeslagen: %1)</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="494" />
+        <location filename="..\core\icon_manager.py" line="512" />
         <source>  Description: %1</source>
         <translation>  Beschrijving: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="501" />
-        <source>Restoring layout (Old format, no timestamp and metadata)</source>
-        <translation>Lay-out herstellen (Oud formaat, geen tijdstempel en metadata)</translation>
-    </message>
-    <message>
-        <location filename="..\core\icon_manager.py" line="509" />
+        <location filename="..\core\icon_manager.py" line="519" />
         <source>✗ Error: Invalid backup file format: %1</source>
         <translation>✗ Fout: Ongeldig back-upbestandsformaat: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="516" />
+        <location filename="..\core\icon_manager.py" line="526" />
         <source>✗ Error reading backup file (I/O): %1</source>
         <translation>✗ Fout bij lezen van back-upbestand (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="533" />
+        <location filename="..\core\icon_manager.py" line="543" />
         <source>⚠ Warning: Resolution mismatch!</source>
         <translation>⚠ Waarschuwing: Resolutie komt niet overeen!</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="543" />
+        <location filename="..\core\icon_manager.py" line="553" />
         <source>✓ Adaptive Scaling enabled: X=%1, Y=%2</source>
         <translation>✓ Adaptief schalen ingeschakeld: X=%1, Y=%2</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="628" />
+        <location filename="..\core\icon_manager.py" line="638" />
         <source>✓ Restored %n icon(s)</source>
         <translation>
             <numerusform>✓ %n pictogram hersteld</numerusform>
@@ -738,7 +738,7 @@ Weet u zeker dat u wilt doorgaan?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="634" />
+        <location filename="..\core\icon_manager.py" line="644" />
         <source>⚠ Skipped %n icon(s) (not found on desktop)</source>
         <translation>
             <numerusform>⚠ %n pictogram overgeslagen (niet gevonden op bureaublad)</numerusform>
@@ -746,22 +746,22 @@ Weet u zeker dat u wilt doorgaan?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="648" />
+        <location filename="..\core\icon_manager.py" line="658" />
         <source>✗ Error restoring (I/O): %1</source>
         <translation>✗ Fout bij herstellen (I/O): %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="655" />
+        <location filename="..\core\icon_manager.py" line="665" />
         <source>✗ Error restoring: %1</source>
         <translation>✗ Fout bij herstellen: %1</translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="683" />
+        <location filename="..\core\icon_manager.py" line="693" />
         <source>Redrawing disabled for scrambling...</source>
         <translation>Opnieuw tekenen uitgeschakeld voor schudden...</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="692" />
+        <location filename="..\core\icon_manager.py" line="702" />
         <source>Found %n icon(s). Starting random positioning...</source>
         <translation>
             <numerusform>%n pictogram gevonden. Willekeurige positionering starten...</numerusform>
@@ -769,7 +769,7 @@ Weet u zeker dat u wilt doorgaan?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="..\core\icon_manager.py" line="713" />
+        <location filename="..\core\icon_manager.py" line="723" />
         <source>✓ Scrambled positions for %n icon(s).</source>
         <translation>
             <numerusform>✓ Posities voor %n pictogram geschud.</numerusform>
@@ -777,7 +777,7 @@ Weet u zeker dat u wilt doorgaan?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\core\icon_manager.py" line="727" />
+        <location filename="..\core\icon_manager.py" line="737" />
         <source>✗ Error scrambling icons: %1</source>
         <translation>✗ Fout bij schudden van pictogrammen: %1</translation>
     </message>
@@ -834,7 +834,7 @@ Weet u zeker dat u wilt doorgaan?</translation>
 </context><context>
     <name>IconPreviewWidget</name>
     <message>
-        <location filename="..\ui\preview_widget.py" line="406" />
+        <location filename="..\ui\preview_widget.py" line="832" />
         <source>No Preview Available</source>
         <translation>Geen voorvertoning beschikbaar</translation>
     </message>
@@ -888,12 +888,12 @@ Weet u zeker dat u wilt doorgaan?</translation>
 </context><context>
     <name>Main</name>
     <message>
-        <location filename="..\main.py" line="382" />
+        <location filename="..\main.py" line="417" />
         <source>Critical Error</source>
         <translation>Kritieke fout</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="383" />
+        <location filename="..\main.py" line="418" />
         <source>Failed to start application:
 %1</source>
         <translation>Starten van applicatie mislukt:
@@ -2111,61 +2111,61 @@ Pictogramposities zijn hersteld, maar kunnen onnauwkeurig zijn.</translation>
 </context><context>
     <name>_DiffCanvas</name>
     <message>
-        <location filename="..\ui\preview_widget.py" line="216" />
+        <location filename="..\ui\preview_widget.py" line="587" />
         <source>No Preview Available</source>
         <translation>Geen voorvertoning beschikbaar</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="276" />
+        <location filename="..\ui\preview_widget.py" line="658" />
         <source>✓ already in place</source>
         <translation>✓ al op zijn plaats</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="278" />
+        <location filename="..\ui\preview_widget.py" line="660" />
         <source>↕ will move</source>
         <translation>↕ wordt verplaatst</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="281" />
+        <location filename="..\ui\preview_widget.py" line="662" />
         <source>⚠ not on desktop</source>
         <translation>⚠ niet op bureaublad</translation>
     </message>
 </context><context>
     <name>_LegendPanel</name>
     <message>
-        <location filename="..\ui\preview_widget.py" line="311" />
+        <location filename="..\ui\preview_widget.py" line="692" />
         <source>Already in place, will not move</source>
         <translation>Al op zijn plaats, wordt niet verplaatst</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="312" />
+        <location filename="..\ui\preview_widget.py" line="693" />
         <source>Will move  (orange = now,  red = target)</source>
         <translation>Wordt verplaatst  (oranje = nu,  rood = doel)</translation>
     </message>
     <message>
-        <location filename="..\ui\preview_widget.py" line="313" />
+        <location filename="..\ui\preview_widget.py" line="694" />
         <source>In backup, not on desktop</source>
         <translation>In back-up, niet op bureaublad</translation>
     </message>
 </context><context>
     <name>_PickBackupDialog</name>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="942" />
+        <location filename="..\ui\backup_dialog.py" line="963" />
         <source>Pick Backup to Compare Against</source>
         <translation>Back-up selecteren om mee te vergelijken</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="946" />
+        <location filename="..\ui\backup_dialog.py" line="967" />
         <source>Select the second backup file:</source>
         <translation>Selecteer het tweede back-upbestand:</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="958" />
+        <location filename="..\ui\backup_dialog.py" line="979" />
         <source>Compare</source>
         <translation>Vergelijken</translation>
     </message>
     <message>
-        <location filename="..\ui\backup_dialog.py" line="960" />
+        <location filename="..\ui\backup_dialog.py" line="981" />
         <source>Cancel</source>
         <translation>Annuleren</translation>
     </message>
