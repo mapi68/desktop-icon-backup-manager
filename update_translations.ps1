@@ -1,4 +1,4 @@
-#Requires -Version 5.1
+﻿#Requires -Version 5.1
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
@@ -13,26 +13,18 @@ function Write-Err    { param($msg) Write-Host $msg -ForegroundColor Red }
 Clear-Host
 Write-Header "Translation Update Process"
 
-# ── Create new locale file? ───────────────────────────────────────────────────
-$newLocale = Read-Host "Create a new locale file? Enter locale code (e.g. en_US) or leave blank to skip"
-if ($newLocale -ne '') {
-    $newFile = Join-Path $i18nPath "$newLocale.ts"
-    if (Test-Path $newFile) {
-        Write-Warn "  WARNING: $newFile already exists, skipping creation."
-    } else {
-        Write-Host "  Creating: $newFile"
-        & pylupdate6.exe . -ts $newFile
-        if ($LASTEXITCODE -ne 0) { Write-Err "  ERROR: Failed to create $newFile"; Read-Host; exit 1 }
-        Write-Ok "  Done: $newFile created successfully."
-    }
-}
-
 # ── --no-obsolete flag? ───────────────────────────────────────────────────────
 $noObsolete = $null
-$choice = Read-Host "`nUse --no-obsolete flag? Removes unused strings from .ts files [Y/n/c to cancel]"
-switch -Regex ($choice.ToLower()) {
-    '^c$' { Write-Host "  Cancelled by user."; Read-Host; exit 0 }
-    '^n$' { Write-Host "  Option: obsolete strings will be KEPT" }
+do {
+    $choice = Read-Host "Use --no-obsolete flag? Removes unused strings from .ts files [Y/n/c to cancel]"
+    $choiceLower = $choice.ToLower()
+    $validChoice = $choiceLower -in @('y', 'n', 'c', '')
+    if (-not $validChoice) { Write-Warn "  Invalid input. Please enter Y, n, or c." }
+} while (-not $validChoice)
+
+switch ($choiceLower) {
+    'c'     { Write-Host "  Cancelled by user."; Read-Host; exit 0 }
+    'n'     { Write-Host "  Option: obsolete strings will be KEPT" }
     default {
         $noObsolete = '--no-obsolete'
         Write-Host "  Option: obsolete strings will be REMOVED"
@@ -40,8 +32,60 @@ switch -Regex ($choice.ToLower()) {
 }
 
 # ── Collect .ts files ─────────────────────────────────────────────────────────
-$tsFiles = Get-ChildItem -Path $i18nPath -Filter "*.ts" | Sort-Object Name
-if ($tsFiles.Count -eq 0) { Write-Err "No .ts files found in '$i18nPath'"; Read-Host; exit 1 }
+$allTsFiles = Get-ChildItem -Path $i18nPath -Filter "*.ts" | Sort-Object Name
+if ($allTsFiles.Count -eq 0) { Write-Err "No .ts files found in '$i18nPath'"; Read-Host "Press ENTER to exit"; exit 1 }
+
+# ── Filter by locale? ─────────────────────────────────────────────────────────
+$availableCodes = ($allTsFiles | ForEach-Object { $_.BaseName }) -join ', '
+Write-Host "`nAvailable locales: $availableCodes"
+$localeFilter = Read-Host "Process only specific locale(s)? Enter one or more codes separated by commas, or leave blank for ALL"
+
+$localeFilterList = @()
+if ($localeFilter -ne '') {
+    $localeFilterList = @($localeFilter -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne '' })
+    $notFound = @($localeFilterList | Where-Object { -not (Test-Path (Join-Path $i18nPath "$_.ts")) })
+    if ($notFound.Count -gt 0) {
+        Write-Err "  ERROR: The following locale(s) were not found: $($notFound -join ', ')"
+        Read-Host "Press ENTER to exit"
+        exit 1
+    }
+    Write-Host "  Filter: $($localeFilterList -join ', ') will be processed."
+} else {
+    Write-Host "  Filter: ALL locales will be processed."
+}
+
+# ── Create new locale file? ───────────────────────────────────────────────────
+$newLocale = Read-Host "`nCreate a new locale file? Enter locale code (e.g. en_US) or leave blank to skip"
+if ($newLocale -ne '') {
+    $newFile = Join-Path $i18nPath "$newLocale.ts"
+    if (Test-Path $newFile) {
+        Write-Warn "  WARNING: $newFile already exists, skipping creation."
+    } else {
+        Write-Host "  Creating: $newFile"
+        & pylupdate6.exe . -ts $newFile
+        if ($LASTEXITCODE -ne 0) { Write-Err "  ERROR: Failed to create $newFile"; Read-Host "Press ENTER to exit"; exit 1 }
+        Write-Ok "  Done: $newFile created successfully."
+    }
+}
+
+# ── Apply locale filter ───────────────────────────────────────────────────────
+if ($localeFilterList.Count -gt 0) {
+    $tsFiles = $allTsFiles | Where-Object { $localeFilterList -contains $_.BaseName }
+} else {
+    $tsFiles = $allTsFiles
+}
+
+# ── Auto-include newly created locale if not already in selection ─────────────
+if ($newLocale -ne '') {
+    $alreadyIncluded = $tsFiles | Where-Object { $_.BaseName -eq $newLocale }
+    if (-not $alreadyIncluded) {
+        $newLocaleFile = Get-ChildItem -Path $i18nPath -Filter "$newLocale.ts" -ErrorAction SilentlyContinue
+        if ($newLocaleFile) {
+            Write-Warn "  NOTE: Newly created locale '$newLocale' added to processing list."
+            $tsFiles = @($tsFiles) + @($newLocaleFile) | Sort-Object Name
+        }
+    }
+}
 
 # Results table initialization
 $results = [ordered]@{}
@@ -54,24 +98,36 @@ foreach ($f in $tsFiles) {
     }
 }
 
+$startTime = Get-Date
+
 # ── STEP 1: pylupdate6 ────────────────────────────────────────────────────────
 Write-Header "[1/2] Updating source strings..."
 foreach ($f in $tsFiles) {
     Write-Host "  Updating: $($f.Name)"
-    $args = @('.')
-    if ($noObsolete) { $args += $noObsolete }
-    $args += @('-ts', "$i18nPath/$($f.Name)")
-    & pylupdate6.exe @args
+    $cmdArgs = @('.')
+    if ($noObsolete) { $cmdArgs += $noObsolete }
+    $cmdArgs += @('-ts', (Join-Path $i18nPath $f.Name))
+    & pylupdate6.exe @cmdArgs
     $results[$f.BaseName].Update = if ($LASTEXITCODE -eq 0) { 'OK' } else { 'ERROR' }
+
+    if ($results[$f.BaseName].Update -eq 'ERROR') {
+        Write-Warn "  WARNING: Update failed for $($f.Name) - skipping compile step for this file."
+    }
 }
 
 # ── STEP 2: pyside6-lrelease ──────────────────────────────────────────────────
 Write-Header "[2/2] Compiling binary files..."
 foreach ($f in $tsFiles) {
+    if ($results[$f.BaseName].Update -eq 'ERROR') {
+        Write-Warn "  Skipping compile for $($f.Name) due to update error."
+        $results[$f.BaseName].Compile = 'SKIPPED'
+        continue
+    }
+
     Write-Host "  Compiling: $($f.Name)"
 
     # Capture all output (stdout and stderr) as strings
-    $rawOutput = & pyside6-lrelease.exe "$i18nPath/$($f.Name)" 2>&1
+    $rawOutput = & pyside6-lrelease.exe (Join-Path $i18nPath $f.Name) 2>&1
 
     $results[$f.BaseName].Compile = if ($LASTEXITCODE -eq 0) { 'OK' } else { 'ERROR' }
 
@@ -93,7 +149,7 @@ foreach ($f in $tsFiles) {
             $unf += [int]$Matches[1]
         }
 
-        # Match "Ignored 25 untranslated" (This solves your specific issue)
+        # Match "Ignored 25 untranslated"
         if ($l -match 'Ignored\s+(\d+)\s+untranslated') {
             $unf += [int]$Matches[1]
         }
@@ -106,11 +162,23 @@ foreach ($f in $tsFiles) {
 # ── SUMMARY ───────────────────────────────────────────────────────────────────
 Write-Header "SUMMARY"
 
+$elapsed = (Get-Date) - $startTime
+$elapsedStr = '{0:mm\:ss}' -f $elapsed
+
+if ($localeFilterList.Count -gt 0) {
+    Write-Host "  Locale filter : $($localeFilterList -join ', ')"
+} else {
+    Write-Host "  Locale filter : ALL"
+}
+Write-Host "  Elapsed time  : $elapsedStr"
+Write-Host ""
+
 $fmt = "  {0,-12}  {1,-8}  {2,-8}  {3,9}  {4,10}"
 Write-Host ($fmt -f "Locale", "Update", "Compile", "Finished", "Unfinished")
 Write-Host ($fmt -f ("-" * 12), ("-" * 8), ("-" * 8), ("-" * 9), ("-" * 10))
 
 $errU = 0; $errC = 0; $warns = 0
+$totalFin = 0; $totalUnf = 0
 
 foreach ($locale in $results.Keys) {
     $r = $results[$locale]
@@ -118,6 +186,8 @@ foreach ($locale in $results.Keys) {
 
     if ($r.Update -eq 'ERROR') { $errU++ }
     if ($r.Compile -eq 'ERROR') { $errC++ }
+    $totalFin += $r.Finished
+    $totalUnf += $r.Unfinished
 
     if ($r.Update -eq 'ERROR' -or $r.Compile -eq 'ERROR') {
         Write-Err $row
@@ -129,12 +199,13 @@ foreach ($locale in $results.Keys) {
     }
 }
 
-Write-Host ("  " + ("-" * 53))
+Write-Host ($fmt -f ("-" * 12), ("-" * 8), ("-" * 8), ("-" * 9), ("-" * 10))
+Write-Host ($fmt -f "TOTAL", "", "", $totalFin, $totalUnf)
 Write-Host ""
 
-if ($errU -gt 0) { Write-Err "  Update errors: $errU file(s)" }
-if ($errC -gt 0) { Write-Err "  Compile errors: $errC file(s)" }
-if ($warns -gt 0) { Write-Warn "  Untranslated: $warns file(s)" }
+if ($errU -gt 0) { Write-Err "  Update errors   : $errU file(s)" }
+if ($errC -gt 0) { Write-Err "  Compile errors  : $errC file(s)" }
+if ($warns -gt 0) { Write-Warn "  Untranslated    : $warns file(s)" }
 
 Write-Host ""
 if ($errU -eq 0 -and $errC -eq 0) {
