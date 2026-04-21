@@ -920,54 +920,54 @@ Opravdu chcete pokračovat?</translation>
 </context><context>
     <name>MainWindow</name>
     <message>
-        <location filename="..\ui\autohide.py" line="25" />
+        <location filename="..\ui\autohide.py" line="29" />
         <source>Auto-Hide enabled: icons will be hidden after %1.</source>
         <translation>Automatické skrytí povoleno: ikony budou skryty po %1.</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="34" />
+        <location filename="..\ui\autohide.py" line="39" />
         <source>Auto-Hide disabled.</source>
         <translation>Automatické skrytí zakázáno.</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="42" />
+        <location filename="..\ui\autohide.py" line="47" />
         <source>Auto-Hide interval set to %1.</source>
         <translation>Interval automatického skrytí nastaven na %1.</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="64" />
+        <location filename="..\ui\autohide.py" line="69" />
         <source>Custom (%1)</source>
         <translation>Vlastní (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="375" />
-        <location filename="..\ui\autohide.py" line="70" />
+        <location filename="..\ui\main_window.py" line="390" />
+        <location filename="..\ui\autohide.py" line="75" />
         <source>Custom...</source>
         <translation>Vlastní...</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="81" />
+        <location filename="..\ui\autohide.py" line="86" />
         <source>Custom Auto-Hide Interval</source>
         <translation>Vlastní interval automatického skrytí</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="90" />
+        <location filename="..\ui\autohide.py" line="95" />
         <source>Hide desktop icons after:</source>
         <translation>Skrýt ikony plochy po:</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="98" />
+        <location filename="..\ui\autohide.py" line="103" />
         <source>minutes</source>
         <translation>minuty</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="105" />
+        <location filename="..\ui\autohide.py" line="110" />
         <source>seconds</source>
         <translation>sekund</translation>
     </message>
     <message numerus="yes">
+        <location filename="..\ui\autohide.py" line="140" />
         <location filename="..\ui\autohide.py" line="135" />
-        <location filename="..\ui\autohide.py" line="130" />
         <source>%n minute(s)</source>
         <comment>duration</comment>
         <translation>
@@ -977,8 +977,8 @@ Opravdu chcete pokračovat?</translation>
         </translation>
     </message>
     <message numerus="yes">
+        <location filename="..\ui\autohide.py" line="142" />
         <location filename="..\ui\autohide.py" line="137" />
-        <location filename="..\ui\autohide.py" line="132" />
         <source>%n second(s)</source>
         <comment>duration</comment>
         <translation>
@@ -988,27 +988,47 @@ Opravdu chcete pokračovat?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="176" />
+        <location filename="..\ui\autohide.py" line="189" />
         <source>Desktop icons are hidden</source>
         <translation>Ikony plochy jsou skryté</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="184" />
+        <location filename="..\ui\autohide.py" line="197" />
         <source>Auto-Hide in %1</source>
         <translation>Automatické skrytí za %1</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="198" />
+        <location filename="..\ui\autohide.py" line="229" />
+        <source>⏱ Auto-Hide in %1</source>
+        <translation>⏱ Automatické skrytí za %1</translation>
+    </message>
+    <message>
+        <location filename="..\ui\autohide.py" line="244" />
+        <source>⏱ Auto-Hide armed (%1)</source>
+        <translation>⏱ Automatické skrytí aktivní (%1)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\autohide.py" line="282" />
+        <source>Auto-Hide</source>
+        <translation>Automatické skrytí</translation>
+    </message>
+    <message>
+        <location filename="..\ui\autohide.py" line="283" />
+        <source>Desktop icons will be hidden in %1.</source>
+        <translation>Ikony plochy budou skryty za %1.</translation>
+    </message>
+    <message>
+        <location filename="..\ui\autohide.py" line="306" />
         <source>Auto-Hide: creating backup before hiding icons...</source>
         <translation>Automatické skrytí: vytváření zálohy před skrytím ikon...</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="205" />
+        <location filename="..\ui\autohide.py" line="313" />
         <source>Auto-Hide Backup</source>
         <translation>Záloha automatického skrytí</translation>
     </message>
     <message>
-        <location filename="..\ui\autohide.py" line="227" />
+        <location filename="..\ui\autohide.py" line="335" />
         <source>Auto-Hide: hiding desktop icons now.</source>
         <translation>Automatické skrytí: skrývání ikon plochy.</translation>
     </message>
@@ -1033,7 +1053,7 @@ Opravdu chcete pokračovat?</translation>
         <translation>Vývoj:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="526" />
+        <location filename="..\ui\main_window.py" line="614" />
         <location filename="..\ui\dialogs.py" line="116" />
         <source>Support on Ko-fi</source>
         <translation>Podpora na Ko-fi</translation>
@@ -1045,7 +1065,7 @@ Opravdu chcete pokračovat?</translation>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="403" />
+        <location filename="..\ui\main_window.py" line="426" />
         <location filename="..\ui\dialogs.py" line="187" />
         <location filename="..\ui\dialogs.py" line="150" />
         <source>Keyboard Shortcuts</source>
@@ -1072,8 +1092,8 @@ Opravdu chcete pokračovat?</translation>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="209" />
-        <location filename="..\ui\main_window.py" line="137" />
+        <location filename="..\ui\main_window.py" line="224" />
+        <location filename="..\ui\main_window.py" line="152" />
         <location filename="..\ui\dialogs.py" line="166" />
         <source>Show/Hide Desktop Icons</source>
         <translation>Zobrazit/Skrýt ikony na ploše</translation>
@@ -1099,294 +1119,304 @@ Opravdu chcete pokračovat?</translation>
         <translation>Tip: Najeďte myší na tlačítka pro zobrazení dalších zkratek v popisech.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="71" />
+        <location filename="..\ui\main_window.py" line="75" />
         <source>Unknown</source>
         <translation>Neznámý</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="124" />
+        <location filename="..\ui\main_window.py" line="139" />
         <source>Quick Save</source>
         <translation>Rychlé uložení</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="126" />
+        <location filename="..\ui\main_window.py" line="141" />
         <source>Quick Save (Tray)</source>
         <translation>Rychlé uložení (panel)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="130" />
+        <location filename="..\ui\main_window.py" line="145" />
         <source>Restore Latest</source>
         <translation>Obnovit nejnovější</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="142" />
+        <location filename="..\ui\main_window.py" line="157" />
         <source>Show Desktop Icons</source>
         <translation>Zobrazit ikony na ploše</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="146" />
+        <location filename="..\ui\main_window.py" line="161" />
         <source>Hide Desktop Icons</source>
         <translation>Skrýt ikony na ploše</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="153" />
+        <location filename="..\ui\main_window.py" line="168" />
         <source>⏱️ Auto-Hide Timer</source>
         <translation>⏱️ Časovač automatického skrytí</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="160" />
+        <location filename="..\ui\main_window.py" line="175" />
         <source>Show Window</source>
         <translation>Zobrazit okno</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="164" />
+        <location filename="..\ui\main_window.py" line="179" />
         <source>Exit</source>
         <translation>Ukončit</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="191" />
+        <location filename="..\ui\main_window.py" line="206" />
         <source>&amp;File</source>
         <translation>&amp;Soubor</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="194" />
+        <location filename="..\ui\main_window.py" line="209" />
         <source>Scramble Desktop Icons (Random)</source>
         <translation>Náhodně přemístit ikony plochy</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="197" />
+        <location filename="..\ui\main_window.py" line="212" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
         <translation>Náhodně přemístí pozice všech ikon plochy po vytvoření povinné zálohy.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="207" />
+        <location filename="..\ui\main_window.py" line="222" />
         <source>👁️ Desktop Icons Visibility</source>
         <translation>👁️ Viditelnost ikon na ploše</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="212" />
+        <location filename="..\ui\main_window.py" line="227" />
         <source>Toggle visibility of all desktop icons (Ctrl+H)</source>
         <translation>Přepnout viditelnost všech ikon na ploše (Ctrl+H)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="217" />
+        <location filename="..\ui\main_window.py" line="232" />
         <source>Show Icons</source>
         <translation>Zobrazit ikony</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="221" />
+        <location filename="..\ui\main_window.py" line="236" />
         <source>Hide Icons</source>
         <translation>Skrýt ikony</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="227" />
+        <location filename="..\ui\main_window.py" line="242" />
         <source>Remove All Backups...</source>
         <translation>Odebrat všechny zálohy...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="233" />
+        <location filename="..\ui\main_window.py" line="248" />
         <source>📤 Export Backups...</source>
         <translation>📤 Exportovat zálohy...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="234" />
+        <location filename="..\ui\main_window.py" line="249" />
         <source>Export backups to a folder or ZIP archive</source>
         <translation>Exportovat zálohy do složky nebo archivu ZIP</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="238" />
+        <location filename="..\ui\main_window.py" line="253" />
         <source>📥 Import Backups...</source>
         <translation>📥 Importovat zálohy...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="240" />
+        <location filename="..\ui\main_window.py" line="255" />
         <source>Import backup files (.json) or a ZIP archive</source>
         <translation>Importovat záložní soubory (.json) nebo archiv ZIP</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="246" />
+        <location filename="..\ui\main_window.py" line="261" />
         <source>E&amp;xit</source>
         <translation>U&amp;končit</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="547" />
-        <location filename="..\ui\main_window.py" line="251" />
+        <location filename="..\ui\main_window.py" line="635" />
+        <location filename="..\ui\main_window.py" line="266" />
         <source>&amp;Settings</source>
         <translation>&amp;Nastavení</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="253" />
+        <location filename="..\ui\main_window.py" line="268" />
         <source>Open Settings Menu</source>
         <translation>Otevřít nabídku Nastavení</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1227" />
-        <location filename="..\ui\main_window.py" line="259" />
+        <location filename="..\ui\main_window.py" line="1318" />
+        <location filename="..\ui\main_window.py" line="274" />
         <source>Auto-Save on Exit</source>
         <translation>Automatické uložení při ukončení</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="267" />
+        <location filename="..\ui\main_window.py" line="282" />
         <source>Auto-Restore on Startup</source>
         <translation>Automatické obnovení při spuštění</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="275" />
+        <location filename="..\ui\main_window.py" line="290" />
         <source>Check for Updates on Startup</source>
         <translation>Kontrolovat aktualizace při spuštění</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="286" />
+        <location filename="..\ui\main_window.py" line="301" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>Povolit adaptivní škálování při obnovení</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="297" />
+        <location filename="..\ui\main_window.py" line="312" />
         <source>Start Minimized to Tray</source>
         <translation>Spustit minimalizovaně do panelu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="305" />
+        <location filename="..\ui\main_window.py" line="320" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>Minimalizovat do panelu při zavření (tlačítko „X")</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="315" />
+        <location filename="..\ui\main_window.py" line="330" />
         <source>🗑️ Automatic Backup Cleanup Limit</source>
         <translation>🗑️ Limit automatického čištění záloh</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="320" />
+        <location filename="..\ui\main_window.py" line="335" />
         <source>Disabled (Keep All)</source>
         <translation>Zakázáno (zachovat vše)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="321" />
+        <location filename="..\ui\main_window.py" line="336" />
         <source>Keep Last 5</source>
         <translation>Zachovat posledních 5</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="322" />
+        <location filename="..\ui\main_window.py" line="337" />
         <source>Keep Last 10</source>
         <translation>Zachovat posledních 10</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="323" />
+        <location filename="..\ui\main_window.py" line="338" />
         <source>Keep Last 25</source>
         <translation>Zachovat posledních 25</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="324" />
+        <location filename="..\ui\main_window.py" line="339" />
         <source>Keep Last 50</source>
         <translation>Zachovat posledních 50</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="338" />
+        <location filename="..\ui\main_window.py" line="353" />
         <source>⏱️ Auto-Hide Desktop Icons</source>
         <translation>⏱️ Automaticky skrýt ikony plochy</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="342" />
+        <location filename="..\ui\main_window.py" line="357" />
         <source>Enable Auto-Hide Timer</source>
         <translation>Povolit časovač automatického skrytí</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="349" />
+        <location filename="..\ui\main_window.py" line="364" />
         <source>Hide After...</source>
         <translation>Skrýt po...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="355" />
+        <location filename="..\ui\main_window.py" line="370" />
         <source>30 seconds</source>
         <translation>30 sekund</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="356" />
+        <location filename="..\ui\main_window.py" line="371" />
         <source>1 minute</source>
         <translation>1 minuta</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="357" />
+        <location filename="..\ui\main_window.py" line="372" />
         <source>2 minutes</source>
         <translation>2 minuty</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="358" />
+        <location filename="..\ui\main_window.py" line="373" />
         <source>5 minutes</source>
         <translation>5 minut</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="359" />
+        <location filename="..\ui\main_window.py" line="374" />
         <source>10 minutes</source>
         <translation>10 minut</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="360" />
+        <location filename="..\ui\main_window.py" line="375" />
         <source>15 minutes</source>
         <translation>15 minut</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="361" />
+        <location filename="..\ui\main_window.py" line="376" />
         <source>30 minutes</source>
         <translation>30 minut</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="385" />
+        <location filename="..\ui\main_window.py" line="400" />
         <source>Backup Before Auto-Hide</source>
         <translation>Záloha před automatickým skrytím</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="394" />
+        <location filename="..\ui\main_window.py" line="410" />
+        <source>Notify Before Hiding (1 min / 10 s)</source>
+        <translation>Upozornit před skrytím (1 min / 10 s)</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="417" />
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="396" />
+        <location filename="..\ui\main_window.py" line="419" />
         <source>Online User Manual</source>
         <translation>Online uživatelská příručka</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="407" />
+        <location filename="..\ui\main_window.py" line="430" />
         <source>Statistics Dashboard</source>
         <translation>Statistický přehled</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="413" />
+        <location filename="..\ui\main_window.py" line="436" />
         <source>Check for Updates...</source>
         <translation>Zkontrolovat aktualizace...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="419" />
+        <location filename="..\ui\main_window.py" line="442" />
         <source>&amp;About</source>
         <translation>&amp;O programu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="425" />
+        <location filename="..\ui\main_window.py" line="448" />
         <source>Support on Ko-fi...</source>
         <translation>Podpora na Ko-fi...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="440" />
+        <location filename="..\ui\main_window.py" line="509" />
+        <source>Disable Auto-Hide</source>
+        <translation>Zakázat automatické skrytí</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="528" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>Volitelné: Zadejte popisný tag/popis...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="447" />
+        <location filename="..\ui\main_window.py" line="535" />
         <source>Select a profile to auto-fill the tag field</source>
         <translation>Vyberte profil pro automatické vyplnění pole tagu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="453" />
+        <location filename="..\ui\main_window.py" line="541" />
         <source>Save Tag:</source>
         <translation>Uložit tag:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="461" />
+        <location filename="..\ui\main_window.py" line="549" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 ULOŽIT RYCHLOU ZÁLOHU</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="465" />
+        <location filename="..\ui\main_window.py" line="553" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -1395,17 +1425,17 @@ Shortcut: Ctrl+S</source>
 Zkratka: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="473" />
+        <location filename="..\ui\main_window.py" line="561" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ OBNOVIT NEJNOVĚJŠÍ</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="476" />
+        <location filename="..\ui\main_window.py" line="564" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>Obnovit pozice ikon z NEJNOVĚJŠÍHO nalezeného záložního souboru.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="485" />
+        <location filename="..\ui\main_window.py" line="573" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -1414,12 +1444,12 @@ Shortcut: Ctrl+M</source>
 Zkratka: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="493" />
+        <location filename="..\ui\main_window.py" line="581" />
         <source>👁️ SHOW/HIDE ICONS</source>
         <translation>👁️ ZOBRAZIT/SKRÝT IKONY</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="496" />
+        <location filename="..\ui\main_window.py" line="584" />
         <source>Show or hide all desktop icons.
 
 Shortcut: Ctrl+H</source>
@@ -1428,45 +1458,45 @@ Shortcut: Ctrl+H</source>
 Zkratka: Ctrl+H</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="508" />
+        <location filename="..\ui\main_window.py" line="596" />
         <source>Activity Log:</source>
         <translation>Protokol aktivit:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="519" />
+        <location filename="..\ui\main_window.py" line="607" />
         <source>Current Resolution: %1</source>
         <translation>Aktuální rozlišení: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="532" />
+        <location filename="..\ui\main_window.py" line="620" />
         <source>Clear Log</source>
         <translation>Vymazat protokol</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="555" />
+        <location filename="..\ui\main_window.py" line="643" />
         <source>Settings menu not found</source>
         <translation>Nabídka Nastavení nebyla nalezena</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="567" />
+        <location filename="..\ui\main_window.py" line="655" />
         <source>Opening online user manual in browser...</source>
         <translation>Otevírání online uživatelské příručky v prohlížeči...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="569" />
+        <location filename="..\ui\main_window.py" line="657" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ Nepodařilo se otevřít URL příručky</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1105" />
-        <location filename="..\ui\main_window.py" line="881" />
-        <location filename="..\ui\main_window.py" line="844" />
-        <location filename="..\ui\main_window.py" line="572" />
+        <location filename="..\ui\main_window.py" line="1196" />
+        <location filename="..\ui\main_window.py" line="972" />
+        <location filename="..\ui\main_window.py" line="935" />
+        <location filename="..\ui\main_window.py" line="660" />
         <source>Error</source>
         <translation>Chyba</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="573" />
+        <location filename="..\ui\main_window.py" line="661" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -1477,17 +1507,17 @@ Navštivte prosím ručně:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="580" />
+        <location filename="..\ui\main_window.py" line="668" />
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="583" />
+        <location filename="..\ui\main_window.py" line="671" />
         <source>Quick Backup (Shortcut)</source>
         <translation>Rychlá záloha (zkratka)</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="632" />
+        <location filename="..\ui\main_window.py" line="723" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>Limit automatického čištění nastaven na: %n zálohu (0 = zakázáno).</numerusform>
@@ -1496,129 +1526,129 @@ Navštivte prosím ručně:
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1241" />
-        <location filename="..\ui\main_window.py" line="1093" />
-        <location filename="..\ui\main_window.py" line="694" />
+        <location filename="..\ui\main_window.py" line="1332" />
+        <location filename="..\ui\main_window.py" line="1184" />
+        <location filename="..\ui\main_window.py" line="785" />
         <source>Desktop Icon Manager</source>
         <translation>Správce ikon plochy</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="729" />
+        <location filename="..\ui\main_window.py" line="820" />
         <source>Backup list updated (item deleted).</source>
         <translation>Seznam záloh aktualizován (položka smazána).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="738" />
+        <location filename="..\ui\main_window.py" line="829" />
         <source>Backup list updated.</source>
         <translation>Seznam záloh aktualizován.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="749" />
+        <location filename="..\ui\main_window.py" line="840" />
         <source>Backup list updated (imported).</source>
         <translation>Seznam záloh aktualizován (importováno).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="761" />
+        <location filename="..\ui\main_window.py" line="852" />
         <source>— Profiles —</source>
         <translation>— Profily —</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="763" />
+        <location filename="..\ui\main_window.py" line="854" />
         <source>Work</source>
         <translation>Práce</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="764" />
+        <location filename="..\ui\main_window.py" line="855" />
         <source>Gaming</source>
         <translation>Hry</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="765" />
+        <location filename="..\ui\main_window.py" line="856" />
         <source>Presentation</source>
         <translation>Prezentace</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="766" />
+        <location filename="..\ui\main_window.py" line="857" />
         <source>Dev / Coding</source>
         <translation>Vývoj / Programování</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="767" />
+        <location filename="..\ui\main_window.py" line="858" />
         <source>Meeting</source>
         <translation>Schůzka</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="768" />
+        <location filename="..\ui\main_window.py" line="859" />
         <source>Home</source>
         <translation>Domov</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="769" />
+        <location filename="..\ui\main_window.py" line="860" />
         <source>Office</source>
         <translation>Kancelář</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="770" />
+        <location filename="..\ui\main_window.py" line="861" />
         <source>Laptop</source>
         <translation>Laptop</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="771" />
+        <location filename="..\ui\main_window.py" line="862" />
         <source>Docked / External Monitor</source>
         <translation>Dokovací stanice / Externí monitor</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="772" />
+        <location filename="..\ui\main_window.py" line="863" />
         <source>Clean Desktop</source>
         <translation>Čistá plocha</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="773" />
+        <location filename="..\ui\main_window.py" line="864" />
         <source>Pre-Update</source>
         <translation>Před aktualizací</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="774" />
+        <location filename="..\ui\main_window.py" line="865" />
         <source>Pre-Reboot</source>
         <translation>Před restartem</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="775" />
+        <location filename="..\ui\main_window.py" line="866" />
         <source>Favourite</source>
         <translation>Oblíbené</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="776" />
+        <location filename="..\ui\main_window.py" line="867" />
         <source>Test</source>
         <translation>Test</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="798" />
+        <location filename="..\ui\main_window.py" line="889" />
         <source>Quick Backup</source>
         <translation>Rychlá záloha</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="813" />
+        <location filename="..\ui\main_window.py" line="904" />
         <source>No backup files found to delete.</source>
         <translation>Nenalezeny žádné záložní soubory ke smazání.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="816" />
+        <location filename="..\ui\main_window.py" line="907" />
         <source>No Backups Found</source>
         <translation>Nenalezeny žádné zálohy</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="817" />
+        <location filename="..\ui\main_window.py" line="908" />
         <source>There are no backup files to delete.</source>
         <translation>Nejsou k dispozici žádné záložní soubory ke smazání.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="823" />
+        <location filename="..\ui\main_window.py" line="914" />
         <source>WARNING: Delete All Backups</source>
         <translation>VAROVÁNÍ: Smazat všechny zálohy</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="824" />
+        <location filename="..\ui\main_window.py" line="915" />
         <source>Are you absolutely sure you want to permanently delete all desktop icon backup files?
 
 This action cannot be undone!</source>
@@ -1627,158 +1657,158 @@ This action cannot be undone!</source>
 Tuto akci nelze vrátit zpět!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1042" />
-        <location filename="..\ui\main_window.py" line="827" />
+        <location filename="..\ui\main_window.py" line="1133" />
+        <location filename="..\ui\main_window.py" line="918" />
         <source>Yes</source>
         <translation>Ano</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1043" />
-        <location filename="..\ui\main_window.py" line="828" />
+        <location filename="..\ui\main_window.py" line="1134" />
+        <location filename="..\ui\main_window.py" line="919" />
         <source>No</source>
         <translation>Ne</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="830" />
+        <location filename="..\ui\main_window.py" line="921" />
         <source>Starting deletion of all backup files...</source>
         <translation>Spouštění mazání všech záložních souborů...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1086" />
-        <location filename="..\ui\main_window.py" line="838" />
+        <location filename="..\ui\main_window.py" line="1177" />
+        <location filename="..\ui\main_window.py" line="929" />
         <source>Success</source>
         <translation>Úspěch</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="839" />
+        <location filename="..\ui\main_window.py" line="930" />
         <source>All backup files have been successfully deleted.</source>
         <translation>Všechny záložní soubory byly úspěšně smazány.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="845" />
+        <location filename="..\ui\main_window.py" line="936" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>Některé soubory nebylo možné smazat. Podrobnosti naleznete v protokolu aktivit.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="855" />
+        <location filename="..\ui\main_window.py" line="946" />
         <source>Starting new timestamped backup...</source>
         <translation>Spouštění nové zálohy s časovým razítkem...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="857" />
+        <location filename="..\ui\main_window.py" line="948" />
         <source>  (Tag: %1)</source>
         <translation>  (Tag: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="861" />
+        <location filename="..\ui\main_window.py" line="952" />
         <source>Saving...</source>
         <translation>Ukládání...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="881" />
+        <location filename="..\ui\main_window.py" line="972" />
         <source>No backup files found to restore!</source>
         <translation>Nenalezeny žádné záložní soubory pro obnovení!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="883" />
+        <location filename="..\ui\main_window.py" line="974" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ Obnovení se nezdařilo: Nenalezeny žádné záložní soubory.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="901" />
-        <location filename="..\ui\main_window.py" line="900" />
-        <location filename="..\ui\main_window.py" line="895" />
-        <location filename="..\ui\main_window.py" line="894" />
+        <location filename="..\ui\main_window.py" line="992" />
+        <location filename="..\ui\main_window.py" line="991" />
+        <location filename="..\ui\main_window.py" line="986" />
+        <location filename="..\ui\main_window.py" line="985" />
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="904" />
+        <location filename="..\ui\main_window.py" line="995" />
         <source>N/A (Old Format)</source>
         <translation>N/A (Starý formát)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="933" />
+        <location filename="..\ui\main_window.py" line="1024" />
         <source>Confirm Restore — Live Preview</source>
         <translation>Potvrdit obnovení — živý náhled</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="943" />
+        <location filename="..\ui\main_window.py" line="1034" />
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="944" />
+        <location filename="..\ui\main_window.py" line="1035" />
         <source>Resolution</source>
         <translation>Rozlišení</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="945" />
+        <location filename="..\ui\main_window.py" line="1036" />
         <source>Icons</source>
         <translation>Ikony</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="946" />
+        <location filename="..\ui\main_window.py" line="1037" />
         <source>Tag</source>
         <translation>Tag</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="947" />
+        <location filename="..\ui\main_window.py" line="1038" />
         <source>Timestamp</source>
         <translation>Časové razítko</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="959" />
+        <location filename="..\ui\main_window.py" line="1050" />
         <source>will move</source>
         <translation>přesune se</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="960" />
+        <location filename="..\ui\main_window.py" line="1051" />
         <source>already in place</source>
         <translation>již na místě</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="961" />
+        <location filename="..\ui\main_window.py" line="1052" />
         <source>not on desktop</source>
         <translation>není na ploše</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="970" />
+        <location filename="..\ui\main_window.py" line="1061" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>Náhled rozvržení (uložené pozice vs. aktuální):</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="990" />
+        <location filename="..\ui\main_window.py" line="1081" />
         <source>↺ Restore</source>
         <translation>↺ Obnovit</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="997" />
+        <location filename="..\ui\main_window.py" line="1088" />
         <source>Cancel</source>
         <translation>Zrušit</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1017" />
+        <location filename="..\ui\main_window.py" line="1108" />
         <source>Starting restore from backup '%1'...</source>
         <translation>Spouštění obnovení ze zálohy „%1"...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1018" />
+        <location filename="..\ui\main_window.py" line="1109" />
         <source>latest</source>
         <translation>nejnovější</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1023" />
+        <location filename="..\ui\main_window.py" line="1114" />
         <source>Restoring...</source>
         <translation>Obnovování...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1038" />
+        <location filename="..\ui\main_window.py" line="1129" />
         <source>Confirm Scramble</source>
         <translation>Potvrdit náhodné přemístění</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1039" />
+        <location filename="..\ui\main_window.py" line="1130" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1791,47 +1821,47 @@ Do you want to proceed?</source>
 Chcete pokračovat?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1045" />
+        <location filename="..\ui\main_window.py" line="1136" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>Spouštění náhodného přemísťování ikon plochy...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1048" />
+        <location filename="..\ui\main_window.py" line="1139" />
         <source>Scrambling icons...</source>
         <translation>Náhodné přemísťování ikon...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1081" />
+        <location filename="..\ui\main_window.py" line="1172" />
         <source>Operation completed successfully</source>
         <translation>Operace byla úspěšně dokončena</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1087" />
+        <location filename="..\ui\main_window.py" line="1178" />
         <source>Operation completed successfully! (%1)</source>
         <translation>Operace byla úspěšně dokončena! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1094" />
+        <location filename="..\ui\main_window.py" line="1185" />
         <source>%1 successful!</source>
         <translation>%1 bylo úspěšné!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1102" />
+        <location filename="..\ui\main_window.py" line="1193" />
         <source>Operation failed</source>
         <translation>Operace se nezdařila</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1106" />
+        <location filename="..\ui\main_window.py" line="1197" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>Operace se nezdařila (%1). Podrobnosti naleznete v protokolu.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1119" />
+        <location filename="..\ui\main_window.py" line="1210" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ Varování: Metadata zobrazení chybí nebo jsou neúplná.</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="1124" />
+        <location filename="..\ui\main_window.py" line="1215" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ Varování: Uloženo (%n monitor) vs. aktuální (%1 monitor(ů)).</numerusform>
@@ -1840,12 +1870,12 @@ Chcete pokračovat?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1132" />
+        <location filename="..\ui\main_window.py" line="1223" />
         <source>Monitor Mismatch Warning</source>
         <translation>Varování: Neshoda monitorů</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1133" />
+        <location filename="..\ui\main_window.py" line="1224" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1854,17 +1884,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Pozice ikon byly obnoveny, ale mohou být nepřesné.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1155" />
+        <location filename="..\ui\main_window.py" line="1246" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ Varování: Rozlišení obrazovky neodpovídá uloženému rozvržení.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1159" />
+        <location filename="..\ui\main_window.py" line="1250" />
         <source>Resolution Mismatch Warning</source>
         <translation>Varování: Neshoda rozlišení</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1160" />
+        <location filename="..\ui\main_window.py" line="1251" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1873,87 +1903,87 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Pozice ikon byly obnoveny, ale mohou být nepřesné.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1197" />
+        <location filename="..\ui\main_window.py" line="1288" />
         <source>Auto-Save skipped: a Quick Save was performed less than 10 seconds ago.</source>
         <translation>Automatické uložení přeskočeno: Rychlé uložení bylo provedeno před méně než 10 sekundami.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1207" />
+        <location filename="..\ui\main_window.py" line="1298" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>Automatické uložení při ukončení povoleno. Provádění tiché zálohy...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1215" />
+        <location filename="..\ui\main_window.py" line="1306" />
         <source>Auto-Save icon layout…</source>
         <translation>Automatické ukládání rozvržení ikon…</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1221" />
+        <location filename="..\ui\main_window.py" line="1312" />
         <source>Please wait</source>
         <translation>Prosím čekejte</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1226" />
+        <location filename="..\ui\main_window.py" line="1317" />
         <source>Auto-Save Log</source>
         <translation>Protokol automatického ukládání</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1242" />
+        <location filename="..\ui\main_window.py" line="1333" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>Aplikace minimalizována do panelu. Kliknutím nebo dvojklikem obnovíte.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1283" />
+        <location filename="..\ui\main_window.py" line="1374" />
         <source>A new version is available! (%1)</source>
         <translation>Je dostupná nová verze! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1288" />
+        <location filename="..\ui\main_window.py" line="1379" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 Je dostupná nová verze: %1 (aktuální: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1308" />
+        <location filename="..\ui\main_window.py" line="1399" />
         <source>Updating desktop icon visibility...</source>
         <translation>Aktualizace viditelnosti ikon na ploše...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1311" />
+        <location filename="..\ui\main_window.py" line="1402" />
         <source>Desktop icon visibility updated.</source>
         <translation>Viditelnost ikon na ploše byla aktualizována.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1314" />
+        <location filename="..\ui\main_window.py" line="1405" />
         <source>✗ Failed to show/hide desktop icons.</source>
         <translation>✗ Nepodařilo se zobrazit/skrýt ikony na ploše.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1318" />
+        <location filename="..\ui\main_window.py" line="1409" />
         <source>Attempting to show desktop icons...</source>
         <translation>Pokus o zobrazení ikon na ploše...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1321" />
+        <location filename="..\ui\main_window.py" line="1412" />
         <source>Desktop icons are now visible.</source>
         <translation>Ikony na ploše jsou nyní viditelné.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1324" />
+        <location filename="..\ui\main_window.py" line="1415" />
         <source>✗ Failed to show desktop icons.</source>
         <translation>✗ Nepodařilo se zobrazit ikony na ploše.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1328" />
+        <location filename="..\ui\main_window.py" line="1419" />
         <source>Attempting to hide desktop icons...</source>
         <translation>Pokus o skrytí ikon na ploše...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1331" />
+        <location filename="..\ui\main_window.py" line="1422" />
         <source>Desktop icons are now hidden.</source>
         <translation>Ikony na ploše jsou nyní skryté.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1334" />
+        <location filename="..\ui\main_window.py" line="1425" />
         <source>✗ Failed to hide desktop icons.</source>
         <translation>✗ Nepodařilo se skrýt ikony na ploše.</translation>
     </message>

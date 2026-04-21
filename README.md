@@ -156,7 +156,7 @@ desktop-icon-backup-manager.exe --restore latest --silent
 - **🔄 Adaptive Scaling** — Proportional position recalculation when restoring to different resolution or DPI *(unique feature)*
 - **🖥️ Multi-Monitor Full Support** — Save/restore across any monitor configuration with automatic mismatch warnings
 - **👁️ Show/Hide Desktop Icons** — Quickly toggle visibility of all desktop icons (`Ctrl+H` shortcut) without affecting backup data — useful for clean desktop screenshots, presentations, or focus mode
-- **⏱️ Auto-Hide Desktop Icons** — Automatically hide desktop icons after a configurable delay (30 seconds to 30 minutes preset, or custom minutes + seconds up to 60 min 59 sec). Optional automatic backup before hiding. Timer resets when icons are shown again. Live countdown visible in system tray tooltip
+- **⏱️ Auto-Hide Desktop Icons** — Automatically hide desktop icons after a configurable delay (30 seconds to 30 minutes preset, or custom minutes + seconds up to 60 min 59 sec). Optional automatic backup before hiding. Timer resets when icons are shown again. **Live countdown banner** inside the main window (label + progress bar + one-click disable button), system tray tooltip, and optional **desktop notifications** 1 minute and 10 seconds before the hide
 - **⚖️ Backup Comparison Tool** — Diff any two saved layouts side-by-side *(unique feature)*
 - **✏️ Inline Tag Editing** — Double-click backup tags in the table to rename instantly—no dialog boxes
 - **📤 Export Backups** — Export selected or all backups to ZIP archive or folder for backup, sharing, or off-site storage
@@ -378,6 +378,7 @@ desktop-icon-backup-manager.exe --restore "1920x1080_20241211_143015.json" --sil
 | **Auto-Hide Desktop Icons** | Automatically hide icons after a configurable delay | `false` |
 | **Auto-Hide Interval** | Timer duration before hiding (preset or custom minutes + seconds) | `300` (5 minutes) |
 | **Backup Before Auto-Hide** | Create an automatic backup before the auto-hide timer hides icons | `true` |
+| **Notify Before Hiding** | Show a desktop notification 1 minute and 10 seconds before the auto-hide fires | `true` |
 
 ### Configuration File (settings.ini)
 
@@ -395,6 +396,7 @@ cleanup_limit=0
 autohide_enabled=false
 autohide_seconds=300
 autohide_backup_before_hide=true
+autohide_notify_enabled=true
 geometry=@Rect(100 100 800 650)
 
 [Statistics]

@@ -26,6 +26,8 @@ from PyQt6.QtWidgets import (
     QLineEdit,
     QComboBox,
     QSizePolicy,
+    QToolButton,
+    QFrame,
 )
 
 from PyQt6.QtCore import (
@@ -36,6 +38,8 @@ from PyQt6.QtCore import (
     QRect,
     QTimer,
     QUrl,
+    Qt,
+    QSize,
 )
 from PyQt6.QtGui import QAction, QKeySequence, QIcon, QDesktopServices, QCursor
 
@@ -87,9 +91,17 @@ class MainWindow(QMainWindow):
         self.autohide_timer.timeout.connect(self._on_autohide_timeout)
 
         self._autohide_remaining_sec = 0
+        self._autohide_total_sec = 0
+        self._autohide_notified = set()
         self.autohide_tick_timer = QTimer(self)
         self.autohide_tick_timer.setInterval(1000)
         self.autohide_tick_timer.timeout.connect(self._on_autohide_tick)
+
+        # Countdown row widgets (created in setup_ui, always-present)
+        self.autohide_status_frame = None
+        self.autohide_status_label = None
+        self.autohide_status_bar = None
+        self.autohide_status_stop_btn = None
         # ─────────────────────────────────────────────────────────────────────
 
         self.create_tray_icon()
@@ -108,6 +120,9 @@ class MainWindow(QMainWindow):
         if self.settings.value("autohide_enabled", False, type=bool):
             if self.visibility_manager.get_current_visibility_state():
                 self._start_autohide_timer()
+
+        # Refresh the countdown row so it reflects the initial state
+        autohide.update_statusbar_countdown(self)
 
         if self.settings.value("auto_restore_on_startup", False, type=bool):
             QTimer.singleShot(1000, self.start_restore_latest)
@@ -391,6 +406,14 @@ class MainWindow(QMainWindow):
         )
         self.autohide_group.addAction(self.action_autohide_backup)
 
+        self.action_autohide_notify = QAction(
+            self.tr("Notify Before Hiding (1 min / 10 s)"), self, checkable=True
+        )
+        self.action_autohide_notify.triggered.connect(
+            lambda checked: self.settings.setValue("autohide_notify_enabled", checked)
+        )
+        self.autohide_group.addAction(self.action_autohide_notify)
+
         help_menu = menu_bar.addMenu(self.tr("&Help"))
 
         action_manual = QAction(self.tr("Online User Manual"), self)
@@ -430,6 +453,71 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout(central_widget)
         layout.setSpacing(10)
+
+        # ── Auto-Hide countdown row (shown only when the timer is armed) ──
+        self.autohide_status_frame = QFrame()
+        self.autohide_status_frame.setObjectName("autohideStatusFrame")
+        self.autohide_status_frame.setVisible(False)
+        self.autohide_status_frame.setStyleSheet(
+            "QFrame#autohideStatusFrame {"
+            " background-color: rgba(0, 120, 215, 180);"
+            " border: 1px solid #0078D7;"
+            " border-radius: 6px;"
+            "}"
+        )
+
+        ah_row = QHBoxLayout(self.autohide_status_frame)
+        ah_row.setContentsMargins(10, 6, 6, 6)
+        ah_row.setSpacing(10)
+
+        self.autohide_status_label = QLabel()
+        self.autohide_status_label.setStyleSheet(
+            "QLabel { color: palette(window-text); font-weight: 600;"
+            " background: transparent; border: none; }"
+        )
+        ah_row.addWidget(self.autohide_status_label)
+
+        self.autohide_status_bar = QProgressBar()
+        self.autohide_status_bar.setTextVisible(False)
+        self.autohide_status_bar.setFixedHeight(8)
+        self.autohide_status_bar.setMinimumWidth(160)
+        self.autohide_status_bar.setSizePolicy(
+            QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed
+        )
+        self.autohide_status_bar.setStyleSheet(
+            "QProgressBar { border: 1px solid rgba(255, 255, 255, 60);"
+            " border-radius: 4px; background-color: rgba(0, 0, 0, 60); }"
+            "QProgressBar::chunk { background-color: #4DA3E8; border-radius: 3px; }"
+        )
+        ah_row.addWidget(self.autohide_status_bar, 1)
+
+        from ui.autohide_icons import make_stop_icon
+        from PyQt6.QtGui import QColor, QPalette
+
+        # Pick an icon color that contrasts with the banner fill on either theme.
+        # In dark mode the translucent blue fill reads dark → white icon wins.
+        # In light mode the fill reads pale → a darker blue icon is visible.
+        app_palette = QApplication.palette()
+        is_dark = app_palette.color(QPalette.ColorRole.Window).value() < 128
+        icon_color = QColor("#FFFFFF") if is_dark else QColor("#0C447C")
+        self.autohide_status_stop_btn = QToolButton()
+        self.autohide_status_stop_btn.setIcon(make_stop_icon(18, icon_color))
+        self.autohide_status_stop_btn.setIconSize(QSize(18, 18))
+        self.autohide_status_stop_btn.setFixedSize(26, 26)
+        self.autohide_status_stop_btn.setAutoRaise(True)
+        self.autohide_status_stop_btn.setCursor(Qt.CursorShape.PointingHandCursor)
+        self.autohide_status_stop_btn.setToolTip(self.tr("Disable Auto-Hide"))
+        self.autohide_status_stop_btn.setStyleSheet(
+            "QToolButton { border: none; background: transparent;"
+            " border-radius: 13px; padding: 0; }"
+            "QToolButton:hover { background: #CC0000; }"
+        )
+        self.autohide_status_stop_btn.clicked.connect(
+            lambda: self._toggle_autohide(False)
+        )
+        ah_row.addWidget(self.autohide_status_stop_btn)
+
+        layout.addWidget(self.autohide_status_frame)
 
         self.progress_bar = QProgressBar()
         self.progress_bar.setVisible(False)
@@ -620,6 +708,9 @@ class MainWindow(QMainWindow):
         self._update_autohide_time_menu_check(current_autohide_sec)
         self.action_autohide_backup.setChecked(
             self.settings.value("autohide_backup_before_hide", True, type=bool)
+        )
+        self.action_autohide_notify.setChecked(
+            self.settings.value("autohide_notify_enabled", True, type=bool)
         )
 
         geometry = self.settings.value("geometry", self.DEFAULT_GEOMETRY, type=QRect)

@@ -394,9 +394,12 @@ with a live preview of every change before you commit.
   \item \textbf{Auto-Hide Desktop Icons}: Automatically hide desktop
     icons after a configurable delay (30~seconds to 30~minutes, or a
     custom interval in minutes and seconds). Optionally creates an
-    automatic backup before hiding. The countdown is visible in the
-    system tray tooltip. The timer resets whenever icons are shown
-    again (manually, after a restore, or after a scramble)
+    automatic backup before hiding. A live countdown banner is shown
+    inside the main window (label, progress bar, and a one-click
+    disable button) and in the system tray tooltip. Optional desktop
+    notifications are emitted 1~minute and 10~seconds before the hide.
+    The timer resets whenever icons are shown again (manually, after a
+    restore, or after a scramble)
   \item \textbf{Automatic Cleanup}: Configurable limit on the number
     of backups to retain (5, 10, 25, 50, or unlimited)
   \item \textbf{Random Scramble}: Randomize icon positions with
@@ -1315,16 +1318,60 @@ and respects the configured cleanup limit.
   \item Default: \texttt{true}
 \end{itemize}
 
+\subsubsection{Notify Before Hiding}
+
+When enabled, the application emits a desktop notification
+(system tray balloon) as the deadline approaches, giving you a chance
+to interact with the desktop before the icons disappear.
+
+\begin{itemize}
+  \item Two thresholds, fired once per timer cycle:
+    \textbf{60~seconds} and \textbf{10~seconds} before the hide
+  \item The notification title is \textit{``Auto-Hide''} and the body
+    reads \textit{``Desktop icons will be hidden in 1:00''} (or
+    \textit{``\ldots in 10s''})
+  \item Thresholds are reset every time the timer starts or restarts,
+    so you get the full sequence again after any Show/Restore/Scramble
+  \item Stored as \texttt{autohide\_notify\_enabled} in
+    \texttt{settings.ini}
+  \item Default: \texttt{true}
+\end{itemize}
+
+\subsubsection{In-Window Countdown Banner}
+
+While the timer is running, the main window shows a compact
+\textbf{countdown banner} just below the menu bar. It contains:
+
+\begin{itemize}
+  \item A label with the current remaining time, for example
+    \textit{``Auto-Hide in 4:37''}
+  \item A thin horizontal progress bar that fills from right to left
+    as the deadline approaches
+  \item A small \textbf{stop button} on the right side that disables
+    Auto-Hide with a single click, equivalent to unchecking
+    \textit{``Enable Auto-Hide Timer''} from the menu
+\end{itemize}
+
+The banner is visible whenever Auto-Hide is enabled. While the timer is
+actively counting down, it shows the remaining time together with the
+progress bar. When the feature is enabled but the timer is not currently
+ticking --- for example at application launch if Auto-Hide was already
+persisted as enabled --- the banner shows the configured interval
+without the progress bar, so the state is always obvious at a glance.
+
 \subsubsection{Timer Behavior}
 
 \begin{itemize}
-  \item The timer \textbf{starts} when auto-hide is enabled and icons
-    are visible (including at application startup)
+  \item The timer \textbf{starts} as soon as Auto-Hide is enabled
+    (either from the Settings menu or from the tray). It also starts
+    at application launch when Auto-Hide is already enabled and icons
+    are visible
   \item The timer \textbf{resets} when icons become visible again ---
     after a manual Show, a Restore, or a Scramble operation
   \item The timer \textbf{stops} when icons are hidden (manually or by
     the timer itself), or when auto-hide is disabled
-  \item A live countdown is shown in the \textbf{system tray tooltip}
+  \item A live countdown is shown in the \textbf{main-window banner}
+    and in the \textbf{system tray tooltip}
     (e.g., \textit{``Auto-Hide in 3:42''})
   \item When icons are hidden, the tooltip shows
     \textit{``Desktop icons are hidden''}
@@ -1382,7 +1429,8 @@ Right-click on the system tray icon to access quick functions:
   \item \textbf{Hide Desktop Icons}: Forces icons to be hidden
   \item \textbf{Auto-Hide Timer}: Checkable toggle to enable or disable
     the auto-hide countdown --- synchronised with the Settings menu.
-    When active, the tray tooltip displays a live countdown
+    When active, both the tray tooltip and the in-window banner
+    display a live countdown
   \item \textbf{Show Window}: Brings main window to front and activates it
   \item \textbf{Exit}: Completely closes application (bypasses
     "Minimize to Tray" setting)
@@ -1830,9 +1878,10 @@ Example: 1920x1080_20241211_143015.json
 
 The application uses a strict regex parser for backup identification:
 \begin{itemize}
-  \item \textbf{Format Recognition}: Filenames that do not match the
-    exact \texttt{Resolution\_Date\_Time.json} pattern are treated as
-    malformed and flagged as ``N/A'' in the backup list.
+  \item \textbf{Format Recognition}: The expected filename pattern is
+    \texttt{Resolution\_Date\_Time.json}. Filenames that do not match
+    this exact pattern are treated as malformed and flagged as
+    ``N/A'' in the backup list.
   \item \textbf{Fail-Fast Validation}: Calendrically impossible dates
     (e.g.\ \texttt{20240230}) are also rejected, so only real,
     parseable timestamps are accepted.
@@ -2636,6 +2685,7 @@ cleanup_limit=0
 autohide_enabled=false
 autohide_seconds=300
 autohide_backup_before_hide=true
+autohide_notify_enabled=true
 geometry=@Rect(100 100 800 650)
 
 [Statistics]
@@ -2660,6 +2710,8 @@ total_scrambles=0
     (default: 300 = 5~minutes)
   \item[\texttt{autohide\_backup\_before\_hide}] Create a backup before the
     timer hides icons (default: true)
+  \item[\texttt{autohide\_notify\_enabled}] Show a desktop notification
+    1~minute and 10~seconds before the timer hides icons (default: true)
   \item[\texttt{geometry}] Window position and size in Qt rect format
   \item[\texttt{total\_restores\_performed}] Lifetime count of
     successful restore operations (used by Statistics Dashboard)
