@@ -60,7 +60,7 @@ from PyQt6.QtCore import (
     QTimer,
     QLibraryInfo,
 )
-from PyQt6.QtGui import QIcon
+from PyQt6.QtGui import QIcon, QPalette, QColor
 
 from core.config import Config, resource_path
 from core.icon_manager import DesktopIconManager
@@ -229,6 +229,68 @@ class LanguageDialog(QDialog):
         return self.remember_cb.isChecked()
 
 
+# ── Theme helpers ─────────────────────────────────────────────────────────────
+
+
+def _build_light_palette() -> QPalette:
+    """Return a QPalette that reproduces a clean light appearance."""
+    p = QPalette()
+    p.setColor(QPalette.ColorRole.Window, QColor(0xF0, 0xF0, 0xF0))
+    p.setColor(QPalette.ColorRole.WindowText, QColor(0x00, 0x00, 0x00))
+    p.setColor(QPalette.ColorRole.Base, QColor(0xFF, 0xFF, 0xFF))
+    p.setColor(QPalette.ColorRole.AlternateBase, QColor(0xE8, 0xE8, 0xE8))
+    p.setColor(QPalette.ColorRole.ToolTipBase, QColor(0xFF, 0xFF, 0xDC))
+    p.setColor(QPalette.ColorRole.ToolTipText, QColor(0x00, 0x00, 0x00))
+    p.setColor(QPalette.ColorRole.Text, QColor(0x00, 0x00, 0x00))
+    p.setColor(QPalette.ColorRole.Button, QColor(0xE0, 0xE0, 0xE0))
+    p.setColor(QPalette.ColorRole.ButtonText, QColor(0x00, 0x00, 0x00))
+    p.setColor(QPalette.ColorRole.BrightText, QColor(0xFF, 0x00, 0x00))
+    p.setColor(QPalette.ColorRole.Link, QColor(0x00, 0x78, 0xD7))
+    p.setColor(QPalette.ColorRole.Highlight, QColor(0x00, 0x78, 0xD7))
+    p.setColor(QPalette.ColorRole.HighlightedText, QColor(0xFF, 0xFF, 0xFF))
+    p.setColor(QPalette.ColorRole.Mid, QColor(0xA0, 0xA0, 0xA0))
+    p.setColor(QPalette.ColorRole.Midlight, QColor(0xD0, 0xD0, 0xD0))
+    p.setColor(QPalette.ColorRole.Dark, QColor(0x80, 0x80, 0x80))
+    p.setColor(QPalette.ColorRole.Shadow, QColor(0x60, 0x60, 0x60))
+    return p
+
+
+def _build_dark_palette() -> QPalette:
+    """Return a QPalette that reproduces a dark appearance."""
+    p = QPalette()
+    p.setColor(QPalette.ColorRole.Window, QColor(0x2B, 0x2B, 0x2B))
+    p.setColor(QPalette.ColorRole.WindowText, QColor(0xF0, 0xF0, 0xF0))
+    p.setColor(QPalette.ColorRole.Base, QColor(0x1E, 0x1E, 0x1E))
+    p.setColor(QPalette.ColorRole.AlternateBase, QColor(0x35, 0x35, 0x35))
+    p.setColor(QPalette.ColorRole.ToolTipBase, QColor(0x2B, 0x2B, 0x2B))
+    p.setColor(QPalette.ColorRole.ToolTipText, QColor(0xF0, 0xF0, 0xF0))
+    p.setColor(QPalette.ColorRole.Text, QColor(0xF0, 0xF0, 0xF0))
+    p.setColor(QPalette.ColorRole.Button, QColor(0x3C, 0x3C, 0x3C))
+    p.setColor(QPalette.ColorRole.ButtonText, QColor(0xF0, 0xF0, 0xF0))
+    p.setColor(QPalette.ColorRole.BrightText, QColor(0xFF, 0x60, 0x60))
+    p.setColor(QPalette.ColorRole.Link, QColor(0x4E, 0xB0, 0xFF))
+    p.setColor(QPalette.ColorRole.Highlight, QColor(0x00, 0x78, 0xD7))
+    p.setColor(QPalette.ColorRole.HighlightedText, QColor(0xFF, 0xFF, 0xFF))
+    p.setColor(QPalette.ColorRole.Mid, QColor(0x55, 0x55, 0x55))
+    p.setColor(QPalette.ColorRole.Midlight, QColor(0x45, 0x45, 0x45))
+    p.setColor(QPalette.ColorRole.Dark, QColor(0x18, 0x18, 0x18))
+    p.setColor(QPalette.ColorRole.Shadow, QColor(0x0A, 0x0A, 0x0A))
+    return p
+
+
+def apply_theme(app: QApplication, mode: str) -> None:
+    """Apply a colour palette according to *mode* ("system" | "light" | "dark").
+
+    "system" leaves the palette untouched so Qt inherits the OS setting.
+    "light" and "dark" force the corresponding hand-crafted palette.
+    """
+    if mode == "dark":
+        app.setPalette(_build_dark_palette())
+    elif mode == "light":
+        app.setPalette(_build_light_palette())
+    # "system" → do nothing; Qt already uses the system palette by default
+
+
 # ── Entry point ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     if QApplication.instance():
@@ -250,6 +312,12 @@ if __name__ == "__main__":
             app.setStyleSheet(_f.read())
     except OSError:
         pass  # theme file missing — fall back to Qt defaults
+
+    # ── Apply colour-mode (system / light / dark) ─────────────────────────────
+    # Must run after setStyleSheet and before any window is created so that
+    # the palette is already set when widgets compute their geometry.
+    _theme_mode = settings.value("theme_mode", Config.THEME_MODE_DEFAULT)
+    apply_theme(app, _theme_mode)
 
     # ── Determine language ────────────────────────────────────────────────────
     pre_parser = argparse.ArgumentParser(add_help=False)

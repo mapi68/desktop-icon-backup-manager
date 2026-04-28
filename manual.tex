@@ -402,6 +402,8 @@ with a live preview of every change before you commit.
     restore, or after a scramble)
   \item \textbf{Automatic Cleanup}: Configurable limit on the number
     of backups to retain (5, 10, 25, 50, or unlimited)
+  \item \textbf{Theme}: Choose between Light, Dark, or Use System
+    Setting colour schemes, applied instantly with no restart required
   \item \textbf{Random Scramble}: Randomize icon positions with
     automatic preventive backup
   \item \textbf{System Tray Integration}: Quick access to main
@@ -1389,6 +1391,42 @@ without the progress bar, so the state is always obvious at a glance.
   Auto-Hide is particularly useful during presentations or screen-sharing
   sessions where you want a clean desktop. Enable it, set a short
   interval, and your desktop tidies itself automatically.
+\end{infobox}
+
+\subsection{Theme}
+
+Controls the application's colour scheme. Accessible from
+\textbf{Settings > Theme}.
+
+Three options are available:
+
+\begin{description}
+  \item[\textbf{Use System Setting}] The application follows the
+    Windows colour mode (Light or Dark) configured in
+    \textit{Settings > Personalisation > Colours}. This is the
+    default. If Windows switches mode, restart the application for the
+    change to propagate.
+  \item[\textbf{Light}] Forces a light palette regardless of the
+    Windows system setting.
+  \item[\textbf{Dark}] Forces a dark palette regardless of the
+    Windows system setting.
+\end{description}
+
+\textbf{Behaviour}:
+\begin{itemize}
+  \item The selected option is indicated by a checkmark in the
+    \textbf{Settings > Theme} submenu.
+  \item The palette is applied \textbf{immediately} --- no restart is
+    required.
+  \item Stored as \texttt{theme\_mode} in \texttt{settings.ini}
+    (\texttt{system} / \texttt{light} / \texttt{dark}).
+  \item Default: \texttt{system}.
+\end{itemize}
+
+\begin{infobox}[Note]
+  The Theme setting controls the application's own palette only. It does
+  not change the Windows system colour mode or affect any other
+  application.
 \end{infobox}
 
 \subsection{Window Position and Size Persistence}
@@ -2686,6 +2724,7 @@ autohide_enabled=false
 autohide_seconds=300
 autohide_backup_before_hide=true
 autohide_notify_enabled=true
+theme_mode=system
 geometry=@Rect(100 100 800 650)
 
 [Statistics]
@@ -2712,6 +2751,9 @@ total_scrambles=0
     timer hides icons (default: true)
   \item[\texttt{autohide\_notify\_enabled}] Show a desktop notification
     1~minute and 10~seconds before the timer hides icons (default: true)
+  \item[\texttt{theme\_mode}] Application colour scheme:
+    \texttt{system} (follow Windows setting), \texttt{light}, or
+    \texttt{dark} (default: \texttt{system})
   \item[\texttt{geometry}] Window position and size in Qt rect format
   \item[\texttt{total\_restores\_performed}] Lifetime count of
     successful restore operations (used by Statistics Dashboard)

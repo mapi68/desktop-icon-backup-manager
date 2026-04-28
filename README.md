@@ -177,6 +177,7 @@ desktop-icon-backup-manager.exe --restore latest --silent
 
 - **📋 Sortable & Filterable Backup Table** — Sort backups by tag, resolution, icon count, or timestamp; real-time search filtering
 - **🎨 Color-Coded Tag Bar** — Each unique tag gets a distinct color indicator on the left edge of backup rows—consistent tags always show same color for instant visual recognition
+- **🌓 Theme Selection** — Choose between **Light**, **Dark**, or **Use System Setting** (follows Windows appearance). Applied instantly with no restart required. Configurable via **Settings → 🎨 Theme**
 - **↔️ Fully Resizable Windows** — All windows adapt to any screen size, resolution, or DPI scaling
 - **🌍 26 Language Support** — Auto-detected from Windows locale, manually selectable:
   - Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hindi, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Slovenian, Spanish, Swedish, Turkish, Ukrainian
@@ -210,6 +211,7 @@ Desktop Icon Backup Manager is the most comprehensive solution. Here's how it co
 | **Automatic update checker** | ✅ | ❌ | ❌ | ❌ |
 | **System tray integration** | ✅ | ✅ | ✅ | ❌ |
 | **Auto-hide desktop icons with timer** | ✅ | ❌ | ❌ | ❌ |
+| **Light / Dark / System theme** | ✅ | ❌ | ❌ | ❌ |
 | **Statistics dashboard** | ✅ | ❌ | ❌ | ❌ |
 | **Open source (MIT license)** | ✅ | ❌ | ❌ | — |
 | **Portable executable** | ✅ | ✅ | ✅ | — |
@@ -379,6 +381,7 @@ desktop-icon-backup-manager.exe --restore "1920x1080_20241211_143015.json" --sil
 | **Auto-Hide Interval** | Timer duration before hiding (preset or custom minutes + seconds) | `300` (5 minutes) |
 | **Backup Before Auto-Hide** | Create an automatic backup before the auto-hide timer hides icons | `true` |
 | **Notify Before Hiding** | Show a desktop notification 1 minute and 10 seconds before the auto-hide fires | `true` |
+| **Theme** | Application colour scheme: `Use System Setting`, `Light`, or `Dark` | `Use System Setting` |
 
 ### Configuration File (settings.ini)
 
@@ -397,6 +400,7 @@ autohide_enabled=false
 autohide_seconds=300
 autohide_backup_before_hide=true
 autohide_notify_enabled=true
+theme_mode=system
 geometry=@Rect(100 100 800 650)
 
 [Statistics]
@@ -671,7 +675,7 @@ Desktop Icon Backup Manager is built on the shoulders of excellent open-source p
 <p align="center">
   <img src="images/DIBM_4.png" alt="Dark mode - Desktop Icon Backup Manager with Italian language and multi-monitor support" width="80%">
   <br><br>
-  <em>Dark mode with full multi-language support (shown in Italian) — supports 26 languages</em>
+  <em>Dark mode with full multi-language support (shown in Italian)</strong></em>
   <br><br><br>
 </p>
 

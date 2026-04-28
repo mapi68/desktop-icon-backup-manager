@@ -537,42 +537,42 @@ Er du sikker på, at du vil fortsætte?</translation>
 </context><context>
     <name>CLI</name>
     <message>
-        <location filename="..\main.py" line="309" />
+        <location filename="..\main.py" line="377" />
         <source>Perform a backup</source>
         <translation>Udfør en sikkerhedskopi</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="315" />
+        <location filename="..\main.py" line="383" />
         <source>Restore a specific backup or latest</source>
         <translation>Gendan en bestemt sikkerhedskopi eller den seneste</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="320" />
+        <location filename="..\main.py" line="388" />
         <source>Run without showing the GUI</source>
         <translation>Kør uden at vise GUI</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="341" />
+        <location filename="..\main.py" line="409" />
         <source>[SILENT]</source>
         <translation>[STILLE]</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="346" />
+        <location filename="..\main.py" line="414" />
         <source>Starting silent backup...</source>
         <translation>Starter stille sikkerhedskopiering...</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="349" />
+        <location filename="..\main.py" line="417" />
         <source>Silent CLI Backup</source>
         <translation>Stille CLI-sikkerhedskopi</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="363" />
+        <location filename="..\main.py" line="431" />
         <source>Error: No backup files found for latest restore.</source>
         <translation>Fejl: Ingen sikkerhedskopifiler fundet til seneste gendannelse.</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="371" />
+        <location filename="..\main.py" line="439" />
         <source>Starting silent restore from: %1</source>
         <translation>Starter stille gendannelse fra: %1</translation>
     </message>
@@ -888,12 +888,12 @@ Er du sikker på, at du vil fortsætte?</translation>
 </context><context>
     <name>Main</name>
     <message>
-        <location filename="..\main.py" line="417" />
+        <location filename="..\main.py" line="485" />
         <source>Critical Error</source>
         <translation>Kritisk fejl</translation>
     </message>
     <message>
-        <location filename="..\main.py" line="418" />
+        <location filename="..\main.py" line="486" />
         <source>Failed to start application:
 %1</source>
         <translation>Kunne ikke starte programmet:
@@ -922,7 +922,7 @@ Er du sikker på, at du vil fortsætte?</translation>
         <translation>Brugerdefineret (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="390" />
+        <location filename="..\ui\main_window.py" line="398" />
         <location filename="..\ui\autohide.py" line="75" />
         <source>Custom...</source>
         <translation>Brugerdefineret...</translation>
@@ -1033,7 +1033,7 @@ Er du sikker på, at du vil fortsætte?</translation>
         <translation>Udvikling:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="614" />
+        <location filename="..\ui\main_window.py" line="640" />
         <location filename="..\ui\dialogs.py" line="116" />
         <source>Support on Ko-fi</source>
         <translation>Støt på Ko-fi</translation>
@@ -1045,7 +1045,7 @@ Er du sikker på, at du vil fortsætte?</translation>
         <translation>Luk</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="426" />
+        <location filename="..\ui\main_window.py" line="452" />
         <location filename="..\ui\dialogs.py" line="187" />
         <location filename="..\ui\dialogs.py" line="150" />
         <source>Keyboard Shortcuts</source>
@@ -1072,8 +1072,8 @@ Er du sikker på, at du vil fortsætte?</translation>
         <translation>Åbn</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="224" />
-        <location filename="..\ui\main_window.py" line="152" />
+        <location filename="..\ui\main_window.py" line="232" />
+        <location filename="..\ui\main_window.py" line="160" />
         <location filename="..\ui\dialogs.py" line="166" />
         <source>Show/Hide Desktop Icons</source>
         <translation>Vis/Skjul skrivebordsikoner</translation>
@@ -1099,304 +1099,331 @@ Er du sikker på, at du vil fortsætte?</translation>
         <translation>Tip: Hold musen over knapper for at se yderligere genveje i værktøjstips.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="75" />
+        <location filename="..\ui\main_window.py" line="780" />
+        <source>Theme changed to: %1</source>
+        <translation>Tema ændret til: %1</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="83" />
         <source>Unknown</source>
         <translation>Ukendt</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="139" />
+        <location filename="..\ui\main_window.py" line="147" />
         <source>Quick Save</source>
         <translation>Hurtiggem</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="141" />
+        <location filename="..\ui\main_window.py" line="149" />
         <source>Quick Save (Tray)</source>
         <translation>Hurtiggem (proceslinje)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="145" />
+        <location filename="..\ui\main_window.py" line="153" />
         <source>Restore Latest</source>
         <translation>Gendan seneste</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="157" />
+        <location filename="..\ui\main_window.py" line="165" />
         <source>Show Desktop Icons</source>
         <translation>Vis skrivebordsikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="161" />
+        <location filename="..\ui\main_window.py" line="169" />
         <source>Hide Desktop Icons</source>
         <translation>Skjul skrivebordsikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="168" />
+        <location filename="..\ui\main_window.py" line="176" />
         <source>⏱️ Auto-Hide Timer</source>
         <translation>⏱️ Auto-skjul timer</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="175" />
+        <location filename="..\ui\main_window.py" line="183" />
         <source>Show Window</source>
         <translation>Vis vindue</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="179" />
+        <location filename="..\ui\main_window.py" line="187" />
         <source>Exit</source>
         <translation>Afslut</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="206" />
+        <location filename="..\ui\main_window.py" line="214" />
         <source>&amp;File</source>
         <translation>&amp;Fil</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="209" />
+        <location filename="..\ui\main_window.py" line="217" />
         <source>Scramble Desktop Icons (Random)</source>
         <translation>Bland skrivebordsikoner (tilfældig)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="212" />
+        <location filename="..\ui\main_window.py" line="220" />
         <source>Randomizes the position of all desktop icons after creating a mandatory backup.</source>
         <translation>Tilfældiggør positionen af alle skrivebordsikoner efter oprettelse af en obligatorisk sikkerhedskopi.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="222" />
+        <location filename="..\ui\main_window.py" line="230" />
         <source>👁️ Desktop Icons Visibility</source>
         <translation>👁️ Synlighed for skrivebordsikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="227" />
+        <location filename="..\ui\main_window.py" line="235" />
         <source>Toggle visibility of all desktop icons (Ctrl+H)</source>
         <translation>Skift synlighed for alle skrivebordsikoner (Ctrl+H)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="232" />
+        <location filename="..\ui\main_window.py" line="240" />
         <source>Show Icons</source>
         <translation>Vis ikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="236" />
+        <location filename="..\ui\main_window.py" line="244" />
         <source>Hide Icons</source>
         <translation>Skjul ikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="242" />
+        <location filename="..\ui\main_window.py" line="250" />
         <source>Remove All Backups...</source>
         <translation>Fjern alle sikkerhedskopier...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="248" />
+        <location filename="..\ui\main_window.py" line="256" />
         <source>📤 Export Backups...</source>
         <translation>📤 Eksportér sikkerhedskopier...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="249" />
+        <location filename="..\ui\main_window.py" line="257" />
         <source>Export backups to a folder or ZIP archive</source>
         <translation>Eksportér sikkerhedskopier til en mappe eller ZIP-arkiv</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="253" />
+        <location filename="..\ui\main_window.py" line="261" />
         <source>📥 Import Backups...</source>
         <translation>📥 Importér sikkerhedskopier...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="255" />
+        <location filename="..\ui\main_window.py" line="263" />
         <source>Import backup files (.json) or a ZIP archive</source>
         <translation>Importér sikkerhedskopifiler (.json) eller et ZIP-arkiv</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="261" />
+        <location filename="..\ui\main_window.py" line="269" />
         <source>E&amp;xit</source>
         <translation>A&amp;fslut</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="635" />
-        <location filename="..\ui\main_window.py" line="266" />
+        <location filename="..\ui\main_window.py" line="661" />
+        <location filename="..\ui\main_window.py" line="274" />
         <source>&amp;Settings</source>
         <translation>&amp;Indstillinger</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="268" />
+        <location filename="..\ui\main_window.py" line="276" />
         <source>Open Settings Menu</source>
         <translation>Åbn indstillingsmenu</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1318" />
-        <location filename="..\ui\main_window.py" line="274" />
+        <location filename="..\ui\main_window.py" line="1374" />
+        <location filename="..\ui\main_window.py" line="282" />
         <source>Auto-Save on Exit</source>
         <translation>Auto-gem ved afslutning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="282" />
+        <location filename="..\ui\main_window.py" line="290" />
         <source>Auto-Restore on Startup</source>
         <translation>Auto-gendan ved opstart</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="290" />
+        <location filename="..\ui\main_window.py" line="298" />
         <source>Check for Updates on Startup</source>
         <translation>Tjek for opdateringer ved opstart</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="301" />
+        <location filename="..\ui\main_window.py" line="309" />
         <source>Enable Adaptive Scaling on Restore</source>
         <translation>Aktivér adaptiv skalering ved gendannelse</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="312" />
+        <location filename="..\ui\main_window.py" line="320" />
         <source>Start Minimized to Tray</source>
         <translation>Start minimeret i proceslinje</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="320" />
+        <location filename="..\ui\main_window.py" line="328" />
         <source>Minimize to Tray on Close ('X' button)</source>
         <translation>Minimer til proceslinje ved lukning ('X'-knap)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="330" />
+        <location filename="..\ui\main_window.py" line="338" />
         <source>🗑️ Automatic Backup Cleanup Limit</source>
         <translation>🗑️ Grænse for automatisk backup-oprydning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="335" />
+        <location filename="..\ui\main_window.py" line="343" />
         <source>Disabled (Keep All)</source>
         <translation>Deaktiveret (behold alle)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="336" />
+        <location filename="..\ui\main_window.py" line="344" />
         <source>Keep Last 5</source>
         <translation>Behold de seneste 5</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="337" />
+        <location filename="..\ui\main_window.py" line="345" />
         <source>Keep Last 10</source>
         <translation>Behold de seneste 10</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="338" />
+        <location filename="..\ui\main_window.py" line="346" />
         <source>Keep Last 25</source>
         <translation>Behold de seneste 25</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="339" />
+        <location filename="..\ui\main_window.py" line="347" />
         <source>Keep Last 50</source>
         <translation>Behold de seneste 50</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="353" />
+        <location filename="..\ui\main_window.py" line="361" />
         <source>⏱️ Auto-Hide Desktop Icons</source>
         <translation>⏱️ Skjul skrivebordsikoner automatisk</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="357" />
+        <location filename="..\ui\main_window.py" line="365" />
         <source>Enable Auto-Hide Timer</source>
         <translation>Aktiver auto-skjul timer</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="364" />
+        <location filename="..\ui\main_window.py" line="372" />
         <source>Hide After...</source>
         <translation>Skjul efter...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="370" />
+        <location filename="..\ui\main_window.py" line="378" />
         <source>30 seconds</source>
         <translation>30 sekunder</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="371" />
+        <location filename="..\ui\main_window.py" line="379" />
         <source>1 minute</source>
         <translation>1 minut</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="372" />
+        <location filename="..\ui\main_window.py" line="380" />
         <source>2 minutes</source>
         <translation>2 minutter</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="373" />
+        <location filename="..\ui\main_window.py" line="381" />
         <source>5 minutes</source>
         <translation>5 minutter</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="374" />
+        <location filename="..\ui\main_window.py" line="382" />
         <source>10 minutes</source>
         <translation>10 minutter</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="375" />
+        <location filename="..\ui\main_window.py" line="383" />
         <source>15 minutes</source>
         <translation>15 minutter</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="376" />
+        <location filename="..\ui\main_window.py" line="384" />
         <source>30 minutes</source>
         <translation>30 minutter</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="400" />
+        <location filename="..\ui\main_window.py" line="408" />
         <source>Backup Before Auto-Hide</source>
         <translation>Backup før automatisk skjulning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="410" />
+        <location filename="..\ui\main_window.py" line="418" />
         <source>Notify Before Hiding (1 min / 10 s)</source>
         <translation>Giv besked før skjulning (1 min / 10 sek)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="417" />
+        <location filename="..\ui\main_window.py" line="428" />
+        <source>🎨 Theme</source>
+        <translation>🎨 Tema</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="433" />
+        <source>Use System Setting</source>
+        <translation>Brug systemindstilling</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="776" />
+        <location filename="..\ui\main_window.py" line="434" />
+        <source>Light</source>
+        <translation>Lys</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="777" />
+        <location filename="..\ui\main_window.py" line="435" />
+        <source>Dark</source>
+        <translation>Mørk</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="443" />
         <source>&amp;Help</source>
         <translation>&amp;Hjælp</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="419" />
+        <location filename="..\ui\main_window.py" line="445" />
         <source>Online User Manual</source>
         <translation>Online brugervejledning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="430" />
+        <location filename="..\ui\main_window.py" line="456" />
         <source>Statistics Dashboard</source>
         <translation>Statistik-dashboard</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="436" />
+        <location filename="..\ui\main_window.py" line="462" />
         <source>Check for Updates...</source>
         <translation>Tjek for opdateringer...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="442" />
+        <location filename="..\ui\main_window.py" line="468" />
         <source>&amp;About</source>
         <translation>&amp;Om</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="448" />
+        <location filename="..\ui\main_window.py" line="474" />
         <source>Support on Ko-fi...</source>
         <translation>Støt på Ko-fi...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="509" />
+        <location filename="..\ui\main_window.py" line="535" />
         <source>Disable Auto-Hide</source>
         <translation>Deaktiver automatisk skjulning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="528" />
+        <location filename="..\ui\main_window.py" line="554" />
         <source>Optional: Enter a descriptive tag/description...</source>
         <translation>Valgfrit: Indtast et beskrivende tag/beskrivelse...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="535" />
+        <location filename="..\ui\main_window.py" line="561" />
         <source>Select a profile to auto-fill the tag field</source>
         <translation>Vælg en profil til automatisk udfyldning af tagfeltet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="541" />
+        <location filename="..\ui\main_window.py" line="567" />
         <source>Save Tag:</source>
         <translation>Gem tag:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="549" />
+        <location filename="..\ui\main_window.py" line="575" />
         <source>💾 SAVE QUICK BACKUP</source>
         <translation>💾 GEM HURTIG SIKKERHEDSKOPI</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="553" />
+        <location filename="..\ui\main_window.py" line="579" />
         <source>Save current desktop icon positions to a new file, using the tag above.
 
 Shortcut: Ctrl+S</source>
@@ -1405,17 +1432,17 @@ Shortcut: Ctrl+S</source>
 Genvej: Ctrl+S</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="561" />
+        <location filename="..\ui\main_window.py" line="587" />
         <source>↺ RESTORE LATEST</source>
         <translation>↺ GENDAN SENESTE</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="564" />
+        <location filename="..\ui\main_window.py" line="590" />
         <source>Restore icon positions from the LATEST backup file found.</source>
         <translation>Gendan ikonpositioner fra den SENESTE fundne sikkerhedskopifil.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="573" />
+        <location filename="..\ui\main_window.py" line="599" />
         <source>Opens a window to select a specific backup file to restore or delete.
 
 Shortcut: Ctrl+M</source>
@@ -1424,12 +1451,12 @@ Shortcut: Ctrl+M</source>
 Genvej: Ctrl+M</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="581" />
+        <location filename="..\ui\main_window.py" line="607" />
         <source>👁️ SHOW/HIDE ICONS</source>
         <translation>👁️ VIS/SKJUL IKONER</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="584" />
+        <location filename="..\ui\main_window.py" line="610" />
         <source>Show or hide all desktop icons.
 
 Shortcut: Ctrl+H</source>
@@ -1438,45 +1465,45 @@ Shortcut: Ctrl+H</source>
 Genvej: Ctrl+H</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="596" />
+        <location filename="..\ui\main_window.py" line="622" />
         <source>Activity Log:</source>
         <translation>Aktivitetslog:</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="607" />
+        <location filename="..\ui\main_window.py" line="633" />
         <source>Current Resolution: %1</source>
         <translation>Aktuel opløsning: %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="620" />
+        <location filename="..\ui\main_window.py" line="646" />
         <source>Clear Log</source>
         <translation>Ryd log</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="643" />
+        <location filename="..\ui\main_window.py" line="669" />
         <source>Settings menu not found</source>
         <translation>Indstillingsmenu ikke fundet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="655" />
+        <location filename="..\ui\main_window.py" line="681" />
         <source>Opening online user manual in browser...</source>
         <translation>Åbner online brugervejledning i browser...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="657" />
+        <location filename="..\ui\main_window.py" line="683" />
         <source>✗ Failed to open manual URL</source>
         <translation>✗ Kunne ikke åbne vejlednings-URL</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1196" />
-        <location filename="..\ui\main_window.py" line="972" />
-        <location filename="..\ui\main_window.py" line="935" />
-        <location filename="..\ui\main_window.py" line="660" />
+        <location filename="..\ui\main_window.py" line="1252" />
+        <location filename="..\ui\main_window.py" line="1028" />
+        <location filename="..\ui\main_window.py" line="991" />
+        <location filename="..\ui\main_window.py" line="686" />
         <source>Error</source>
         <translation>Fejl</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="661" />
+        <location filename="..\ui\main_window.py" line="687" />
         <source>Could not open the online manual.
 
 Please visit manually:
@@ -1487,17 +1514,17 @@ Besøg venligst manuelt:
 %1</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="668" />
+        <location filename="..\ui\main_window.py" line="694" />
         <source>Save</source>
         <translation>Gem</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="671" />
+        <location filename="..\ui\main_window.py" line="697" />
         <source>Quick Backup (Shortcut)</source>
         <translation>Hurtig sikkerhedskopi (genvej)</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="723" />
+        <location filename="..\ui\main_window.py" line="753" />
         <source>Automatic cleanup limit set to: %n backup(s) (0 = Disabled).</source>
         <translation>
             <numerusform>Automatisk oprydningsgrænse sat til: %n sikkerhedskopi (0 = Deaktiveret).</numerusform>
@@ -1505,129 +1532,134 @@ Besøg venligst manuelt:
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1332" />
-        <location filename="..\ui\main_window.py" line="1184" />
-        <location filename="..\ui\main_window.py" line="785" />
+        <location filename="..\ui\main_window.py" line="775" />
+        <source>System</source>
+        <translation>System</translation>
+    </message>
+    <message>
+        <location filename="..\ui\main_window.py" line="1388" />
+        <location filename="..\ui\main_window.py" line="1240" />
+        <location filename="..\ui\main_window.py" line="841" />
         <source>Desktop Icon Manager</source>
         <translation>Desktop Icon Manager</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="820" />
+        <location filename="..\ui\main_window.py" line="876" />
         <source>Backup list updated (item deleted).</source>
         <translation>Sikkerhedskopiliste opdateret (element slettet).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="829" />
+        <location filename="..\ui\main_window.py" line="885" />
         <source>Backup list updated.</source>
         <translation>Sikkerhedskopiliste opdateret.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="840" />
+        <location filename="..\ui\main_window.py" line="896" />
         <source>Backup list updated (imported).</source>
         <translation>Sikkerhedskopiliste opdateret (importeret).</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="852" />
+        <location filename="..\ui\main_window.py" line="908" />
         <source>— Profiles —</source>
         <translation>— Profiler —</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="854" />
+        <location filename="..\ui\main_window.py" line="910" />
         <source>Work</source>
         <translation>Arbejde</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="855" />
+        <location filename="..\ui\main_window.py" line="911" />
         <source>Gaming</source>
         <translation>Spil</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="856" />
+        <location filename="..\ui\main_window.py" line="912" />
         <source>Presentation</source>
         <translation>Præsentation</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="857" />
+        <location filename="..\ui\main_window.py" line="913" />
         <source>Dev / Coding</source>
         <translation>Udvikling / Kodning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="858" />
+        <location filename="..\ui\main_window.py" line="914" />
         <source>Meeting</source>
         <translation>Møde</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="859" />
+        <location filename="..\ui\main_window.py" line="915" />
         <source>Home</source>
         <translation>Hjem</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="860" />
+        <location filename="..\ui\main_window.py" line="916" />
         <source>Office</source>
         <translation>Kontor</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="861" />
+        <location filename="..\ui\main_window.py" line="917" />
         <source>Laptop</source>
         <translation>Bærbar</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="862" />
+        <location filename="..\ui\main_window.py" line="918" />
         <source>Docked / External Monitor</source>
         <translation>Tilsluttet / Ekstern skærm</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="863" />
+        <location filename="..\ui\main_window.py" line="919" />
         <source>Clean Desktop</source>
         <translation>Rent skrivebord</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="864" />
+        <location filename="..\ui\main_window.py" line="920" />
         <source>Pre-Update</source>
         <translation>Før opdatering</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="865" />
+        <location filename="..\ui\main_window.py" line="921" />
         <source>Pre-Reboot</source>
         <translation>Før genstart</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="866" />
+        <location filename="..\ui\main_window.py" line="922" />
         <source>Favourite</source>
         <translation>Favorit</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="867" />
+        <location filename="..\ui\main_window.py" line="923" />
         <source>Test</source>
         <translation>Test</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="889" />
+        <location filename="..\ui\main_window.py" line="945" />
         <source>Quick Backup</source>
         <translation>Hurtig sikkerhedskopi</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="904" />
+        <location filename="..\ui\main_window.py" line="960" />
         <source>No backup files found to delete.</source>
         <translation>Ingen sikkerhedskopifiler fundet til sletning.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="907" />
+        <location filename="..\ui\main_window.py" line="963" />
         <source>No Backups Found</source>
         <translation>Ingen sikkerhedskopier fundet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="908" />
+        <location filename="..\ui\main_window.py" line="964" />
         <source>There are no backup files to delete.</source>
         <translation>Der er ingen sikkerhedskopifiler at slette.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="914" />
+        <location filename="..\ui\main_window.py" line="970" />
         <source>WARNING: Delete All Backups</source>
         <translation>ADVARSEL: Slet alle sikkerhedskopier</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="915" />
+        <location filename="..\ui\main_window.py" line="971" />
         <source>Are you absolutely sure you want to permanently delete all desktop icon backup files?
 
 This action cannot be undone!</source>
@@ -1636,158 +1668,158 @@ This action cannot be undone!</source>
 Denne handling kan ikke fortrydes!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1133" />
-        <location filename="..\ui\main_window.py" line="918" />
+        <location filename="..\ui\main_window.py" line="1189" />
+        <location filename="..\ui\main_window.py" line="974" />
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1134" />
-        <location filename="..\ui\main_window.py" line="919" />
+        <location filename="..\ui\main_window.py" line="1190" />
+        <location filename="..\ui\main_window.py" line="975" />
         <source>No</source>
         <translation>Nej</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="921" />
+        <location filename="..\ui\main_window.py" line="977" />
         <source>Starting deletion of all backup files...</source>
         <translation>Starter sletning af alle sikkerhedskopifiler...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1177" />
-        <location filename="..\ui\main_window.py" line="929" />
+        <location filename="..\ui\main_window.py" line="1233" />
+        <location filename="..\ui\main_window.py" line="985" />
         <source>Success</source>
         <translation>Succes</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="930" />
+        <location filename="..\ui\main_window.py" line="986" />
         <source>All backup files have been successfully deleted.</source>
         <translation>Alle sikkerhedskopifiler er blevet slettet.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="936" />
+        <location filename="..\ui\main_window.py" line="992" />
         <source>Some files could not be deleted. Check the Activity Log for details.</source>
         <translation>Nogle filer kunne ikke slettes. Tjek aktivitetsloggen for detaljer.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="946" />
+        <location filename="..\ui\main_window.py" line="1002" />
         <source>Starting new timestamped backup...</source>
         <translation>Starter ny sikkerhedskopi med tidsstempel...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="948" />
+        <location filename="..\ui\main_window.py" line="1004" />
         <source>  (Tag: %1)</source>
         <translation>  (Tag: %1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="952" />
+        <location filename="..\ui\main_window.py" line="1008" />
         <source>Saving...</source>
         <translation>Gemmer...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="972" />
+        <location filename="..\ui\main_window.py" line="1028" />
         <source>No backup files found to restore!</source>
         <translation>Ingen sikkerhedskopifiler fundet til gendannelse!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="974" />
+        <location filename="..\ui\main_window.py" line="1030" />
         <source>✗ Restore failed: No backup files found.</source>
         <translation>✗ Gendannelse mislykkedes: Ingen sikkerhedskopifiler fundet.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="992" />
-        <location filename="..\ui\main_window.py" line="991" />
-        <location filename="..\ui\main_window.py" line="986" />
-        <location filename="..\ui\main_window.py" line="985" />
+        <location filename="..\ui\main_window.py" line="1048" />
+        <location filename="..\ui\main_window.py" line="1047" />
+        <location filename="..\ui\main_window.py" line="1042" />
+        <location filename="..\ui\main_window.py" line="1041" />
         <source>N/A</source>
         <translation>I/T</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="995" />
+        <location filename="..\ui\main_window.py" line="1051" />
         <source>N/A (Old Format)</source>
         <translation>I/T (gammelt format)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1024" />
+        <location filename="..\ui\main_window.py" line="1080" />
         <source>Confirm Restore — Live Preview</source>
         <translation>Bekræft gendannelse — live forhåndsvisning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1034" />
+        <location filename="..\ui\main_window.py" line="1090" />
         <source>File</source>
         <translation>Fil</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1035" />
+        <location filename="..\ui\main_window.py" line="1091" />
         <source>Resolution</source>
         <translation>Opløsning</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1036" />
+        <location filename="..\ui\main_window.py" line="1092" />
         <source>Icons</source>
         <translation>Ikoner</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1037" />
+        <location filename="..\ui\main_window.py" line="1093" />
         <source>Tag</source>
         <translation>Tag</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1038" />
+        <location filename="..\ui\main_window.py" line="1094" />
         <source>Timestamp</source>
         <translation>Tidsstempel</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1050" />
+        <location filename="..\ui\main_window.py" line="1106" />
         <source>will move</source>
         <translation>flyttes</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1051" />
+        <location filename="..\ui\main_window.py" line="1107" />
         <source>already in place</source>
         <translation>allerede på plads</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1052" />
+        <location filename="..\ui\main_window.py" line="1108" />
         <source>not on desktop</source>
         <translation>ikke på skrivebordet</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1061" />
+        <location filename="..\ui\main_window.py" line="1117" />
         <source>Layout Preview (saved positions vs current):</source>
         <translation>Layoutvisning (gemte positioner vs. aktuelle):</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1081" />
+        <location filename="..\ui\main_window.py" line="1137" />
         <source>↺ Restore</source>
         <translation>↺ Gendan</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1088" />
+        <location filename="..\ui\main_window.py" line="1144" />
         <source>Cancel</source>
         <translation>Annuller</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1108" />
+        <location filename="..\ui\main_window.py" line="1164" />
         <source>Starting restore from backup '%1'...</source>
         <translation>Starter gendannelse fra sikkerhedskopi '%1'...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1109" />
+        <location filename="..\ui\main_window.py" line="1165" />
         <source>latest</source>
         <translation>seneste</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1114" />
+        <location filename="..\ui\main_window.py" line="1170" />
         <source>Restoring...</source>
         <translation>Gendanner...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1129" />
+        <location filename="..\ui\main_window.py" line="1185" />
         <source>Confirm Scramble</source>
         <translation>Bekræft blanding</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1130" />
+        <location filename="..\ui\main_window.py" line="1186" />
         <source>Are you sure you want to randomize the positions of ALL desktop icons?
 
 **A mandatory backup will be created first**.
@@ -1800,47 +1832,47 @@ Do you want to proceed?</source>
 Vil du fortsætte?</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1136" />
+        <location filename="..\ui\main_window.py" line="1192" />
         <source>Starting desktop icon scrambling (randomization)...</source>
         <translation>Starter blanding af skrivebordsikoner (tilfældiggørelse)...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1139" />
+        <location filename="..\ui\main_window.py" line="1195" />
         <source>Scrambling icons...</source>
         <translation>Blander ikoner...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1172" />
+        <location filename="..\ui\main_window.py" line="1228" />
         <source>Operation completed successfully</source>
         <translation>Handling fuldført</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1178" />
+        <location filename="..\ui\main_window.py" line="1234" />
         <source>Operation completed successfully! (%1)</source>
         <translation>Handling fuldført! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1185" />
+        <location filename="..\ui\main_window.py" line="1241" />
         <source>%1 successful!</source>
         <translation>%1 gennemført!</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1193" />
+        <location filename="..\ui\main_window.py" line="1249" />
         <source>Operation failed</source>
         <translation>Handling mislykkedes</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1197" />
+        <location filename="..\ui\main_window.py" line="1253" />
         <source>Operation failed (%1). Check the log for details.</source>
         <translation>Handling mislykkedes (%1). Tjek loggen for detaljer.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1210" />
+        <location filename="..\ui\main_window.py" line="1266" />
         <source>⚠ Warning: Display metadata missing or incomplete.</source>
         <translation>⚠ Advarsel: Skærmmetadata mangler eller er ufuldstændige.</translation>
     </message>
     <message numerus="yes">
-        <location filename="..\ui\main_window.py" line="1215" />
+        <location filename="..\ui\main_window.py" line="1271" />
         <source>⚠ Warning: Saved (%n monitor(s)) vs Current (%1 monitor(s)).</source>
         <translation>
             <numerusform>⚠ Advarsel: Gemt (%n skærm) vs. Aktuel (%1 skærm).</numerusform>
@@ -1848,12 +1880,12 @@ Vil du fortsætte?</translation>
         </translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1223" />
+        <location filename="..\ui\main_window.py" line="1279" />
         <source>Monitor Mismatch Warning</source>
         <translation>Advarsel om skærmafvigelse</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1224" />
+        <location filename="..\ui\main_window.py" line="1280" />
         <source>The layout was saved with %1 monitor(s), but you currently have %2 monitor(s) connected.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1862,17 +1894,17 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Ikonpositioner er gendannet, men de er muligvis unøjagtige.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1246" />
+        <location filename="..\ui\main_window.py" line="1302" />
         <source>⚠ Warning: Screen resolutions do not match the saved layout.</source>
         <translation>⚠ Advarsel: Skærmopløsninger stemmer ikke overens med det gemte layout.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1250" />
+        <location filename="..\ui\main_window.py" line="1306" />
         <source>Resolution Mismatch Warning</source>
         <translation>Advarsel om opløsningsafvigelse</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1251" />
+        <location filename="..\ui\main_window.py" line="1307" />
         <source>The screen resolutions for one or more monitors do not match the saved layout.
 
 Icon positions have been restored, but they may be inaccurate.</source>
@@ -1881,87 +1913,87 @@ Icon positions have been restored, but they may be inaccurate.</source>
 Ikonpositioner er gendannet, men de er muligvis unøjagtige.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1288" />
+        <location filename="..\ui\main_window.py" line="1344" />
         <source>Auto-Save skipped: a Quick Save was performed less than 10 seconds ago.</source>
         <translation>Automatisk gem sprunget over: En hurtig gem blev udført for mindre end 10 sekunder siden.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1298" />
+        <location filename="..\ui\main_window.py" line="1354" />
         <source>Auto-Save on Exit enabled. Performing silent backup...</source>
         <translation>Auto-gem ved afslutning aktiveret. Udfører stille sikkerhedskopiering...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1306" />
+        <location filename="..\ui\main_window.py" line="1362" />
         <source>Auto-Save icon layout…</source>
         <translation>Gemmer ikonlayout automatisk…</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1312" />
+        <location filename="..\ui\main_window.py" line="1368" />
         <source>Please wait</source>
         <translation>Vent venligst</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1317" />
+        <location filename="..\ui\main_window.py" line="1373" />
         <source>Auto-Save Log</source>
         <translation>Auto-gem-log</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1333" />
+        <location filename="..\ui\main_window.py" line="1389" />
         <source>Application minimized to tray. Click or double-click to restore.</source>
         <translation>Program minimeret til proceslinjen. Klik eller dobbeltklik for at gendanne.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1374" />
+        <location filename="..\ui\main_window.py" line="1430" />
         <source>A new version is available! (%1)</source>
         <translation>En ny version er tilgængelig! (%1)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1379" />
+        <location filename="..\ui\main_window.py" line="1435" />
         <source>🔔 A new version is available: %1 (current: %2)</source>
         <translation>🔔 En ny version er tilgængelig: %1 (aktuel: %2)</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1399" />
+        <location filename="..\ui\main_window.py" line="1455" />
         <source>Updating desktop icon visibility...</source>
         <translation>Opdaterer synlighed for skrivebordsikoner...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1402" />
+        <location filename="..\ui\main_window.py" line="1458" />
         <source>Desktop icon visibility updated.</source>
         <translation>Synlighed for skrivebordsikoner opdateret.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1405" />
+        <location filename="..\ui\main_window.py" line="1461" />
         <source>✗ Failed to show/hide desktop icons.</source>
         <translation>✗ Kunne ikke vise/skjule skrivebordsikoner.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1409" />
+        <location filename="..\ui\main_window.py" line="1465" />
         <source>Attempting to show desktop icons...</source>
         <translation>Forsøger at vise skrivebordsikoner...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1412" />
+        <location filename="..\ui\main_window.py" line="1468" />
         <source>Desktop icons are now visible.</source>
         <translation>Skrivebordsikonerne er nu synlige.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1415" />
+        <location filename="..\ui\main_window.py" line="1471" />
         <source>✗ Failed to show desktop icons.</source>
         <translation>✗ Kunne ikke vise skrivebordsikoner.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1419" />
+        <location filename="..\ui\main_window.py" line="1475" />
         <source>Attempting to hide desktop icons...</source>
         <translation>Forsøger at skjule skrivebordsikoner...</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1422" />
+        <location filename="..\ui\main_window.py" line="1478" />
         <source>Desktop icons are now hidden.</source>
         <translation>Skrivebordsikonerne er nu skjulte.</translation>
     </message>
     <message>
-        <location filename="..\ui\main_window.py" line="1425" />
+        <location filename="..\ui\main_window.py" line="1481" />
         <source>✗ Failed to hide desktop icons.</source>
         <translation>✗ Kunne ikke skjule skrivebordsikoner.</translation>
     </message>

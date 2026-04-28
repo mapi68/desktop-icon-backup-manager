@@ -41,7 +41,15 @@ from PyQt6.QtCore import (
     Qt,
     QSize,
 )
-from PyQt6.QtGui import QAction, QKeySequence, QIcon, QDesktopServices, QCursor
+from PyQt6.QtGui import (
+    QAction,
+    QKeySequence,
+    QIcon,
+    QDesktopServices,
+    QCursor,
+    QPalette,
+    QColor,
+)
 
 import win32gui
 import win32con
@@ -414,6 +422,24 @@ class MainWindow(QMainWindow):
         )
         self.autohide_group.addAction(self.action_autohide_notify)
 
+        settings_menu.addSeparator()
+
+        # Group 6: colour theme
+        self.theme_group = QMenu(self.tr("🎨 Theme"), self)
+        settings_menu.addMenu(self.theme_group)
+
+        self._theme_actions: dict[str, QAction] = {}
+        _theme_options = [
+            ("system", self.tr("Use System Setting")),
+            ("light", self.tr("Light")),
+            ("dark", self.tr("Dark")),
+        ]
+        for _mode, _label in _theme_options:
+            _act = QAction(_label, self, checkable=True)
+            _act.triggered.connect(lambda checked, m=_mode: self._set_theme_mode(m))
+            self.theme_group.addAction(_act)
+            self._theme_actions[_mode] = _act
+
         help_menu = menu_bar.addMenu(self.tr("&Help"))
 
         action_manual = QAction(self.tr("Online User Manual"), self)
@@ -700,6 +726,10 @@ class MainWindow(QMainWindow):
         current_limit = self.settings.value("cleanup_limit", 0, type=int)
         self._update_cleanup_menu_check(current_limit)
 
+        # Theme mode
+        current_theme = self.settings.value("theme_mode", "system")
+        self._update_theme_menu_check(current_theme)
+
         # Auto-hide settings
         autohide_on = self.settings.value("autohide_enabled", False, type=bool)
         self.action_autohide_enabled.setChecked(autohide_on)
@@ -730,6 +760,32 @@ class MainWindow(QMainWindow):
     def _update_cleanup_menu_check(self, current_limit: int):
         for limit, action in self.cleanup_actions.items():
             action.setChecked(limit == current_limit)
+
+    # ── Colour Theme ─────────────────────────────────────────────────────────
+
+    def _set_theme_mode(self, mode: str) -> None:
+        """Save *mode* and apply the palette immediately (no restart needed)."""
+        self.settings.setValue("theme_mode", mode)
+        self._update_theme_menu_check(mode)
+        # Import lazily to avoid a circular import with main.py
+        from main import apply_theme
+
+        apply_theme(QApplication.instance(), mode)
+        _mode_labels = {
+            "system": self.tr("System"),
+            "light": self.tr("Light"),
+            "dark": self.tr("Dark"),
+        }
+        self.log(
+            QCoreApplication.translate(
+                "MainWindow",
+                "Theme changed to: %1",
+            ).replace("%1", _mode_labels.get(mode, mode))
+        )
+
+    def _update_theme_menu_check(self, current_mode: str) -> None:
+        for mode, action in self._theme_actions.items():
+            action.setChecked(mode == current_mode)
 
     # ── Auto-Hide Desktop Icons (logica in ui/autohide.py) ──────────────────
 

@@ -44,6 +44,9 @@ class Config:
     TRAY_NOTIFICATION_DURATION = 2000
     UPDATE_CHECK_DELAY_MS = 10000
 
+    # Theme mode: "system" | "light" | "dark"
+    THEME_MODE_DEFAULT = "system"
+
     # Application version (will be overridden from file)
     VERSION = "0.0.0"
 
