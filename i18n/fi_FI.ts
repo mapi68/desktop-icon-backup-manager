@@ -799,7 +799,7 @@ Haluatko varmasti jatkaa?</translation>
         <translation>Työpöydän kuvakkeet ovat jo näkyvissä.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>Virhe työpöydän kuvakkeiden näyttämisessä: %1</translation>
@@ -810,13 +810,13 @@ Haluatko varmasti jatkaa?</translation>
         <translation>Työpöydän kuvakkeet ovat jo piilotettuja.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>Virhe työpöydän kuvakkeiden piilottamisessa: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>Työpöydän näkymäikkunaa ei löydy.</translation>
@@ -827,9 +827,19 @@ Haluatko varmasti jatkaa?</translation>
         <translation>✓ Työpöydän kuvakkeet piilotettu onnistuneesti.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>Työpöydän kuvakkeet piilotettu</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ Työpöydän kuvakkeet näytetty onnistuneesti.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>Työpöydän kuvakkeet näytetty</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

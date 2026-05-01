@@ -781,7 +781,7 @@ Are you sure you want to proceed?</source>
         <translation>桌面图标已经可见。</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>显示桌面图标时出错: %1</translation>
@@ -792,13 +792,13 @@ Are you sure you want to proceed?</source>
         <translation>桌面图标已经隐藏。</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>隐藏桌面图标时出错: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>无法找到桌面视图窗口。</translation>
@@ -809,9 +809,19 @@ Are you sure you want to proceed?</source>
         <translation>✓ 桌面图标已成功隐藏。</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>桌面图标已隐藏</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ 桌面图标已成功显示。</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>桌面图标已显示</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

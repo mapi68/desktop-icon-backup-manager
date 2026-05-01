@@ -799,7 +799,7 @@ Are you sure you want to proceed?</source>
         <translation>Τα εικονίδια επιφάνειας εργασίας είναι ήδη ορατά.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>Σφάλμα κατά την εμφάνιση εικονιδίων επιφάνειας εργασίας: %1</translation>
@@ -810,13 +810,13 @@ Are you sure you want to proceed?</source>
         <translation>Τα εικονίδια επιφάνειας εργασίας είναι ήδη κρυμμένα.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>Σφάλμα κατά την απόκρυψη εικονιδίων επιφάνειας εργασίας: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>Αδυναμία εντοπισμού του παραθύρου προβολής επιφάνειας εργασίας.</translation>
@@ -827,9 +827,19 @@ Are you sure you want to proceed?</source>
         <translation>✓ Τα εικονίδια επιφάνειας εργασίας αποκρύφτηκαν επιτυχώς.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>Τα εικονίδια επιφάνειας εργασίας αποκρύφτηκαν</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ Τα εικονίδια επιφάνειας εργασίας εμφανίστηκαν επιτυχώς.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>Τα εικονίδια επιφάνειας εργασίας εμφανίστηκαν</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

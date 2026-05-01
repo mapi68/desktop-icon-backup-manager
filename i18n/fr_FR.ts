@@ -799,7 +799,7 @@ Horodatage : %5
         <translation>Les icônes du bureau sont déjà visibles.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>Erreur lors de l'affichage des icônes du bureau : %1</translation>
@@ -810,13 +810,13 @@ Horodatage : %5
         <translation>Les icônes du bureau sont déjà masquées.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>Erreur lors du masquage des icônes du bureau : %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>Impossible de localiser la fenêtre d'affichage du bureau.</translation>
@@ -827,9 +827,19 @@ Horodatage : %5
         <translation>✓ Icônes du bureau masquées avec succès.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>Icônes du bureau masquées</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ Icônes du bureau affichées avec succès.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>Icônes du bureau affichées</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

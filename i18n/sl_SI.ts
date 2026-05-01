@@ -835,7 +835,7 @@ Ali ste prepričani, da želite nadaljevati?</translation>
         <translation>Ikone namizja so že vidne.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>Napaka pri prikazovanju ikon namizja: %1</translation>
@@ -846,13 +846,13 @@ Ali ste prepričani, da želite nadaljevati?</translation>
         <translation>Ikone namizja so že skrite.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>Napaka pri skrivanju ikon namizja: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>Ni mogoče najti okna pogleda namizja.</translation>
@@ -863,9 +863,19 @@ Ali ste prepričani, da želite nadaljevati?</translation>
         <translation>✓ Ikone namizja so bile uspešno skrite.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>Ikone namizja so skrite</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ Ikone namizja so bile uspešno prikazane.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>Ikone namizja so prikazane</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

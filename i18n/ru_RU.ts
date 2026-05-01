@@ -817,7 +817,7 @@ Are you sure you want to proceed?</source>
         <translation>Значки рабочего стола уже отображаются.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>Ошибка отображения значков рабочего стола: %1</translation>
@@ -828,13 +828,13 @@ Are you sure you want to proceed?</source>
         <translation>Значки рабочего стола уже скрыты.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>Ошибка скрытия значков рабочего стола: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>Не удалось найти окно представления рабочего стола.</translation>
@@ -845,9 +845,19 @@ Are you sure you want to proceed?</source>
         <translation>✓ Значки рабочего стола успешно скрыты.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>Значки рабочего стола скрыты</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ Значки рабочего стола успешно отображены.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>Значки рабочего стола отображены</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

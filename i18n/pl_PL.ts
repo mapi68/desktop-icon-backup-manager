@@ -817,7 +817,7 @@ Czy na pewno chcesz kontynuować?</translation>
         <translation>Ikony pulpitu są już widoczne.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>Błąd wyświetlania ikon pulpitu: %1</translation>
@@ -828,13 +828,13 @@ Czy na pewno chcesz kontynuować?</translation>
         <translation>Ikony pulpitu są już ukryte.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>Błąd ukrywania ikon pulpitu: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>Nie można zlokalizować okna widoku pulpitu.</translation>
@@ -845,9 +845,19 @@ Czy na pewno chcesz kontynuować?</translation>
         <translation>✓ Ikony pulpitu zostały pomyślnie ukryte.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>Ikony pulpitu są ukryte</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ Ikony pulpitu zostały pomyślnie wyświetlone.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>Ikony pulpitu są wyświetlone</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

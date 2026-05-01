@@ -799,7 +799,7 @@ Er du sikker på at du vil fortsette?</translation>
         <translation>Skrivebordsikonene er allerede synlige.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>Feil ved visning av skrivebordsikoner: %1</translation>
@@ -810,13 +810,13 @@ Er du sikker på at du vil fortsette?</translation>
         <translation>Skrivebordsikonene er allerede skjulte.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>Feil ved skjuling av skrivebordsikoner: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>Kan ikke finne skrivebordsvisningsvinduet.</translation>
@@ -827,9 +827,19 @@ Er du sikker på at du vil fortsette?</translation>
         <translation>✓ Skrivebordsikoner ble skjult.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>Skrivebordsikoner er skjult</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ Skrivebordsikoner ble vist.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>Skrivebordsikoner er vist</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

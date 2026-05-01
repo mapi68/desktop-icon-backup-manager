@@ -170,7 +170,11 @@ class DesktopVisibilityManager:
             )
             if log_callback:
                 log_callback(success_msg)
-            logger.info("Desktop icons hidden")
+            logger.info(
+                QCoreApplication.translate(
+                    "DesktopVisibilityManager", "Desktop icons hidden"
+                )
+            )
             return True
 
         except Exception as e:
@@ -204,7 +208,11 @@ class DesktopVisibilityManager:
             )
             if log_callback:
                 log_callback(success_msg)
-            logger.info("Desktop icons shown")
+            logger.info(
+                QCoreApplication.translate(
+                    "DesktopVisibilityManager", "Desktop icons shown"
+                )
+            )
             return True
 
         except Exception as e:

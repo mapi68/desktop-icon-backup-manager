@@ -799,7 +799,7 @@ Tem certeza de que deseja continuar?</translation>
         <translation>Os ícones da área de trabalho já estão visíveis.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>Erro ao exibir os ícones da área de trabalho: %1</translation>
@@ -810,13 +810,13 @@ Tem certeza de que deseja continuar?</translation>
         <translation>Os ícones da área de trabalho já estão ocultos.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>Erro ao ocultar os ícones da área de trabalho: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>Não foi possível localizar a janela de visualização da área de trabalho.</translation>
@@ -827,9 +827,19 @@ Tem certeza de que deseja continuar?</translation>
         <translation>✓ Ícones da área de trabalho ocultados com sucesso.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>Ícones da área de trabalho ocultos</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ Ícones da área de trabalho exibidos com sucesso.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>Ícones da área de trabalho exibidos</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

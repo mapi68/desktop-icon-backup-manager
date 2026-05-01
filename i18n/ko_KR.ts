@@ -781,7 +781,7 @@ Are you sure you want to proceed?</source>
         <translation>바탕 화면 아이콘이 이미 표시되어 있습니다.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>바탕 화면 아이콘 표시 오류: %1</translation>
@@ -792,13 +792,13 @@ Are you sure you want to proceed?</source>
         <translation>바탕 화면 아이콘이 이미 숨겨져 있습니다.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>바탕 화면 아이콘 숨기기 오류: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>바탕 화면 보기 창을 찾을 수 없습니다.</translation>
@@ -809,9 +809,19 @@ Are you sure you want to proceed?</source>
         <translation>✓ 바탕 화면 아이콘이 성공적으로 숨겨졌습니다.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>바탕 화면 아이콘 숨겨짐</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ 바탕 화면 아이콘이 성공적으로 표시되었습니다.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>바탕 화면 아이콘 표시됨</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

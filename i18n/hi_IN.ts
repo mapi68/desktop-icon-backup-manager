@@ -799,7 +799,7 @@ Are you sure you want to proceed?</source>
         <translation>डेस्कटॉप आइकन पहले से दृश्यमान हैं।</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>डेस्कटॉप आइकन दिखाने में त्रुटि: %1</translation>
@@ -810,13 +810,13 @@ Are you sure you want to proceed?</source>
         <translation>डेस्कटॉप आइकन पहले से छिपे हुए हैं।</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>डेस्कटॉप आइकन छिपाने में त्रुटि: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>डेस्कटॉप दृश्य विंडो का पता लगाने में असमर्थ।</translation>
@@ -827,9 +827,19 @@ Are you sure you want to proceed?</source>
         <translation>✓ डेस्कटॉप आइकन सफलतापूर्वक छिपाए गए।</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>डेस्कटॉप आइकन छिपाए गए</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ डेस्कटॉप आइकन सफलतापूर्वक दिखाए गए।</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>डेस्कटॉप आइकन दिखाए गए</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>

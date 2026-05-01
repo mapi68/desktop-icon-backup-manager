@@ -799,7 +799,7 @@ Marca de tiempo: %5
         <translation>Los iconos del escritorio ya son visibles.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="211" />
+        <location filename="..\core\desktop_visibility.py" line="219" />
         <location filename="..\core\desktop_visibility.py" line="97" />
         <source>Error showing desktop icons: %1</source>
         <translation>Error al mostrar los iconos del escritorio: %1</translation>
@@ -810,13 +810,13 @@ Marca de tiempo: %5
         <translation>Los iconos del escritorio ya están ocultos.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="177" />
+        <location filename="..\core\desktop_visibility.py" line="181" />
         <location filename="..\core\desktop_visibility.py" line="126" />
         <source>Error hiding desktop icons: %1</source>
         <translation>Error al ocultar los iconos del escritorio: %1</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="191" />
+        <location filename="..\core\desktop_visibility.py" line="195" />
         <location filename="..\core\desktop_visibility.py" line="157" />
         <source>Unable to locate the desktop view window.</source>
         <translation>No se puede localizar la ventana de vista del escritorio.</translation>
@@ -827,9 +827,19 @@ Marca de tiempo: %5
         <translation>✓ Iconos del escritorio ocultados correctamente.</translation>
     </message>
     <message>
-        <location filename="..\core\desktop_visibility.py" line="202" />
+        <location filename="..\core\desktop_visibility.py" line="174" />
+        <source>Desktop icons hidden</source>
+        <translation>Iconos del escritorio ocultos</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="206" />
         <source>✓ Desktop icons shown successfully.</source>
         <translation>✓ Iconos del escritorio mostrados correctamente.</translation>
+    </message>
+    <message>
+        <location filename="..\core\desktop_visibility.py" line="212" />
+        <source>Desktop icons shown</source>
+        <translation>Iconos del escritorio visibles</translation>
     </message>
 </context><context>
     <name>IconPreviewWidget</name>
