@@ -38,7 +38,7 @@ class Config:
     ICON_DOT_MARGIN = 5
 
     # Seconds threshold to skip Auto-Save if a Quick Save was recently performed
-    AUTO_SAVE_SKIP_SECONDS = 10
+    AUTO_SAVE_SKIP_SECONDS = 20
 
     # Tray notification duration (ms)
     TRAY_NOTIFICATION_DURATION = 2000

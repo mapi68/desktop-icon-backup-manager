@@ -1048,14 +1048,15 @@ the program normally (not via Task Manager or system crash).
 \textbf{Smart Deduplication}:
 
 If a \textbf{Quick Backup} was performed manually within the last
-\textbf{10 seconds} before closing, the Auto-Save is automatically
+\textbf{\texttt{AUTO\_SAVE\_SKIP\_SECONDS} seconds} before closing,
+the Auto-Save is automatically
 skipped to avoid creating a redundant identical backup. The application
-detects this by reading the \texttt{timestamp} field of the most recent
-\texttt{.json} file in the backup folder.
+tracks the time of the last completed backup in memory for a reliable
+and instant check.
 
 \begin{infobox}[Note]
   This deduplication only applies when Auto-Save on Exit is enabled.
-  If the backup folder is empty or the timestamp cannot be read, the
+  If no manual backup has been performed in the current session, the
   Auto-Save proceeds normally as a safety fallback.
 \end{infobox}
 
@@ -1064,7 +1065,8 @@ detects this by reading the \texttt{timestamp} field of the most recent
   \item Works independently of "Minimize to Tray on Close"
   \item Complements "Auto-Restore on Startup" for seamless layout preservation
   \item Cleanup limit prevents unlimited backup accumulation
-  \item Skips redundant save if a Quick Backup was made in the last 10 seconds
+  \item Skips redundant save if a Quick Backup was made within the
+    last \texttt{AUTO\_SAVE\_SKIP\_SECONDS} seconds
 \end{itemize}
 
 \subsection{Auto-Restore on Startup}

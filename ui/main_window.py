@@ -91,6 +91,9 @@ class MainWindow(QMainWindow):
         self.worker = None
         self.tray_icon = None
         self._force_quit = False
+        self._last_manual_backup_time: Optional[float] = (
+            None  # tracks last manual backup (monotonic)
+        )
         self._autohide_worker = None
 
         # ── Auto-Hide timer ──────────────────────────────────────────────────
@@ -1219,6 +1222,9 @@ class MainWindow(QMainWindow):
             elif mode == "save":
                 n = self.settings.value("stats/total_saves_performed", 0, type=int)
                 self.settings.setValue("stats/total_saves_performed", n + 1)
+                import time
+
+                self._last_manual_backup_time = time.monotonic()
 
         self.toggle_buttons(True)
         self.show_progress(False)
@@ -1314,39 +1320,20 @@ class MainWindow(QMainWindow):
             self.settings.setValue("geometry", self.geometry())
 
         if self.action_auto_save.isChecked():
-            # Skip auto-save if a quick save was performed in the last 10 seconds
-            _skip_auto_save = False
-            try:
-                import os as _os
-                import json as _json
-                from datetime import datetime as _datetime
+            # Skip auto-save if a manual backup was performed in the last N seconds
+            import time
 
-                _backup_files = [
-                    f for f in _os.listdir(Config.BACKUP_DIR) if f.endswith(".json")
-                ]
-                if _backup_files:
-                    _backup_files.sort(reverse=True)
-                    _latest_path = _os.path.join(Config.BACKUP_DIR, _backup_files[0])
-                    with open(_latest_path, "r", encoding="utf-8") as _f:
-                        _latest_data = _json.load(_f)
-                    _ts_str = _latest_data.get("timestamp", "")
-                    if _ts_str:
-                        _ts = _datetime.fromisoformat(_ts_str)
-                        # Strip tzinfo if present to compare as naive local time
-                        if _ts.tzinfo is not None:
-                            _ts = _ts.replace(tzinfo=None)
-                        _now = _datetime.now()
-                        _seconds_ago = (_now - _ts).total_seconds()
-                        if _seconds_ago <= Config.AUTO_SAVE_SKIP_SECONDS:
-                            _skip_auto_save = True
-                            if self.isVisible():
-                                self.log(
-                                    self.tr(
-                                        "Auto-Save skipped: a Quick Save was performed less than 10 seconds ago."
-                                    )
-                                )
-            except Exception:
-                pass  # If anything goes wrong, proceed normally with auto-save
+            _skip_auto_save = False
+            if self._last_manual_backup_time is not None:
+                _seconds_ago = time.monotonic() - self._last_manual_backup_time
+                if _seconds_ago <= Config.AUTO_SAVE_SKIP_SECONDS:
+                    _skip_auto_save = True
+                    if self.isVisible():
+                        self.log(
+                            self.tr(
+                                "Auto-Save skipped: a Quick Save was performed less than %1 seconds ago."
+                            ).replace("%1", str(Config.AUTO_SAVE_SKIP_SECONDS))
+                        )
 
             if not _skip_auto_save:
                 if self.isVisible():
