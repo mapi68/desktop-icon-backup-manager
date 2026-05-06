@@ -193,6 +193,8 @@ class MainWindow(QMainWindow):
 
         self.tray_icon.setContextMenu(tray_menu)
         self.tray_icon.activated.connect(self.tray_icon_activated)
+        self.tray_icon.messageClicked.connect(self._on_tray_message_clicked)
+        self._tray_message_is_update = False
         self.tray_icon.show()
 
     def tray_icon_activated(self, reason: QSystemTrayIcon.ActivationReason):
@@ -1412,6 +1414,7 @@ class MainWindow(QMainWindow):
         except ValueError:
             return
         if latest > current:
+            self._tray_message_is_update = True
             self.tray_icon.showMessage(
                 "Desktop Icon Backup Manager",
                 self.tr("A new version is available! (%1)").replace("%1", remote),
@@ -1427,6 +1430,13 @@ class MainWindow(QMainWindow):
     def show_update_dialog(self):
         dlg = UpdateDialog(self)
         dlg.exec()
+
+    def _on_tray_message_clicked(self):
+        if self._tray_message_is_update:
+            self._tray_message_is_update = False
+            from ui.update_dialog import UpdateDialog as _UD
+
+            QDesktopServices.openUrl(QUrl(_UD.RELEASES_URL))
 
     def show_stats_dialog(self):
         from ui.stats_dialog import StatsDialog
