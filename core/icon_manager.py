@@ -87,7 +87,13 @@ class DesktopIconManager:
         if not os.path.exists(Config.BACKUP_DIR):
             return []
         backup_files = [f for f in os.listdir(Config.BACKUP_DIR) if f.endswith(".json")]
-        backup_files.sort(key=lambda f: parse_backup_filename(f)[2], reverse=True)
+
+        def _sort_key(fn: str):
+            ts = parse_backup_filename(fn)[2]
+            # (is_valid, timestamp): valid files first when reverse=True
+            return (ts != "N/A", ts)
+
+        backup_files.sort(key=_sort_key, reverse=True)
         return backup_files
 
     def get_latest_backup_filename(self) -> Optional[str]:
@@ -557,13 +563,13 @@ class DesktopIconManager:
                 .replace("%2", f"{scale_y:.3f}")
             )
 
-        win32gui.SendMessage(self.hwnd_listview, win32con.WM_SETREDRAW, 0, 0)
-
         pid = win32process.GetWindowThreadProcessId(self.hwnd_listview)[1]
         process_handle = None
         remote_memory = None
 
         try:
+            win32gui.SendMessage(self.hwnd_listview, win32con.WM_SETREDRAW, 0, 0)
+
             process_handle = win32api.OpenProcess(
                 win32con.PROCESS_ALL_ACCESS, False, pid
             )
@@ -686,6 +692,8 @@ class DesktopIconManager:
         try:
             screen_width = win32api.GetSystemMetrics(win32con.SM_CXVIRTUALSCREEN)
             screen_height = win32api.GetSystemMetrics(win32con.SM_CYVIRTUALSCREEN)
+            origin_x = win32api.GetSystemMetrics(win32con.SM_XVIRTUALSCREEN)
+            origin_y = win32api.GetSystemMetrics(win32con.SM_YVIRTUALSCREEN)
             margin = 100
 
             win32gui.SendMessage(self.hwnd_listview, win32con.WM_SETREDRAW, 0, 0)
@@ -711,8 +719,12 @@ class DesktopIconManager:
                 if progress_callback:
                     progress_callback(int((i / count) * 100))
 
-                rand_x = random.randint(margin, screen_width - margin)
-                rand_y = random.randint(margin, screen_height - margin)
+                rand_x = random.randint(
+                    origin_x + margin, origin_x + screen_width - margin
+                )
+                rand_y = random.randint(
+                    origin_y + margin, origin_y + screen_height - margin
+                )
 
                 lparam = _pack_lparam(rand_x, rand_y)
                 win32gui.SendMessage(

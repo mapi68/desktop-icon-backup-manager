@@ -205,7 +205,7 @@ def _draw_win11_taskbar(
 
     # Only decorate if there's enough room
     if bar_h < 10:
-        return bar_y
+        return bar_y, bar_h
 
     icon_color = QColor("#E6E6E6") if dark_theme else QColor("#2B2B2B")
     accent = QColor("#0078D4")  # Windows accent blue
@@ -372,7 +372,7 @@ def _draw_win11_taskbar(
     dot_r = max(1, wf_size // 10)
     p.drawEllipse(cx_wf - dot_r, cy_wf - dot_r, dot_r * 2, dot_r * 2)
 
-    return bar_y
+    return bar_y, bar_h
 
 
 # ── _DiffCanvas ───────────────────────────────────────────────────────────────
@@ -414,6 +414,7 @@ class _DiffCanvas(QWidget):
         self._res: Tuple[int, int] = (1920, 1080)
         self._clock_time: str = "12:34"
         self._clock_date: str = "17/04/2026"
+        self._bar_h: int = 0  # set each paint from _draw_win11_taskbar
         self.setMouseTracking(True)
 
     def set_data(self, saved, current, res, clock_time=None, clock_date=None):
@@ -459,11 +460,21 @@ class _DiffCanvas(QWidget):
         Returns (px, py, out_of_range). When out_of_range is True, the point
         has been snapped to the nearest edge of the virtual screen and should
         be drawn with the out-of-range marker instead of the normal dot.
+
+        Y is projected onto the usable canvas height (sh - _bar_h) mapped to
+        the usable screen height (rh - TASKBAR_PX_REAL), so that icons near
+        the bottom of the desktop are not rendered inside the taskbar mock-up.
         """
+        _TASKBAR_PX_REAL = 48  # Win11 default taskbar height in physical pixels
         ox, oy, sw, sh = self._screen_rect()
         rw, rh = self._res
         rw = rw if rw > 0 else 1
         rh = rh if rh > 0 else 1
+
+        # Usable heights: exclude the taskbar from both domains so the
+        # mapping stays proportionally correct.
+        sh_usable = max(1, sh - self._bar_h)
+        rh_usable = max(1, rh - _TASKBAR_PX_REAL)
 
         # Tolerance: a few pixels in screen space, to avoid false positives
         # from rounding/quantization right at the edge.
@@ -474,9 +485,9 @@ class _DiffCanvas(QWidget):
         # Always clamp to the drawable rectangle (needed for both regular
         # drawing and the out-of-range marker).
         cx = max(0.0, min(float(x), float(rw)))
-        cy = max(0.0, min(float(y), float(rh)))
+        cy = max(0.0, min(float(y), float(rh_usable)))
         px = int(ox + cx * sw / rw)
-        py = int(oy + cy * sh / rh)
+        py = int(oy + cy * sh_usable / rh_usable)
         return px, py, out
 
     @staticmethod
@@ -566,7 +577,7 @@ class _DiffCanvas(QWidget):
         # Pass the *extended* visual rect (bg_x, bg_w) so the taskbar fill
         # reaches the same left/right edges as the grid background — no
         # mismatched strips on the sides.
-        _draw_win11_taskbar(
+        _, self._bar_h = _draw_win11_taskbar(
             p,
             bg_x,
             oy,
@@ -766,6 +777,7 @@ class IconPreviewWidget(QWidget):
         self.setFixedSize(Config.PREVIEW_WIDTH, Config.PREVIEW_HEIGHT)
         self.icons: Dict[str, Tuple[int, int]] = {}
         self.screen_res: Tuple[int, int] = (1920, 1080)
+        self._bar_h: int = 0  # set each paint from _draw_win11_taskbar
         self.setMouseTracking(True)
         # Styles loaded from styles/theme.qss via IconPreviewWidget selector
 
@@ -788,17 +800,20 @@ class IconPreviewWidget(QWidget):
         return ox, oy, sw, sh
 
     def _project(self, x: float, y: float) -> Tuple[int, int, bool]:
+        _TASKBAR_PX_REAL = 48
         ox, oy, sw, sh = self._screen_rect()
         rw, rh = self.screen_res
         rw = rw if rw > 0 else 1
         rh = rh if rh > 0 else 1
+        sh_usable = max(1, sh - self._bar_h)
+        rh_usable = max(1, rh - _TASKBAR_PX_REAL)
         tol_x = max(2, int(rw * 0.002))
         tol_y = max(2, int(rh * 0.002))
         out = (x < -tol_x) or (y < -tol_y) or (x > rw + tol_x) or (y > rh + tol_y)
         cx = max(0.0, min(float(x), float(rw)))
-        cy = max(0.0, min(float(y), float(rh)))
+        cy = max(0.0, min(float(y), float(rh_usable)))
         px = int(ox + cx * sw / rw)
-        py = int(oy + cy * sh / rh)
+        py = int(oy + cy * sh_usable / rh_usable)
         return px, py, out
 
     def paintEvent(self, _):
@@ -822,7 +837,7 @@ class IconPreviewWidget(QWidget):
         p.setBrush(Qt.BrushStyle.NoBrush)
         p.drawRoundedRect(bg_x, bg_y, bg_w, bg_h, 4, 4)
         # Windows 11 taskbar mock-up
-        _draw_win11_taskbar(p, ox, oy, sw, sh, self.screen_res[1], pal)
+        _, self._bar_h = _draw_win11_taskbar(p, ox, oy, sw, sh, self.screen_res[1], pal)
 
         if not self.icons:
             p.setPen(pal.color(pal.ColorRole.PlaceholderText))

@@ -23,7 +23,6 @@ class Config:
     # Win32 memory settings
     REMOTE_BUFFER_SIZE = 4096
     TEXT_BUFFER_OFFSET = 256
-    TEXT_BUFFER_SIZE = 2048
 
     # UI dimensions
     PREVIEW_WIDTH = 450

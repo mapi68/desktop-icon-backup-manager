@@ -6,8 +6,6 @@ import win32api
 import win32con
 import win32gui
 import win32process
-from ctypes import c_int, c_char_p, c_void_p, wintypes
-from ctypes import windll, byref, POINTER
 
 from PyQt6.QtCore import QCoreApplication
 
