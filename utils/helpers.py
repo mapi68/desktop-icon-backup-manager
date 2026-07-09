@@ -56,8 +56,8 @@ def get_display_metadata() -> Dict:
             {
                 "id": i,
                 "name": s.name(),
-                "width": s.geometry().width(),
-                "height": s.geometry().height(),
+                "width": round(s.geometry().width() * s.devicePixelRatio()),
+                "height": round(s.geometry().height() * s.devicePixelRatio()),
                 "pixel_density": s.devicePixelRatio(),
             }
             for i, s in enumerate(screens)
@@ -66,9 +66,10 @@ def get_display_metadata() -> Dict:
 
     if screens:
         primary_screen = QGuiApplication.primaryScreen()
-        metadata["primary_resolution"] = (
-            f"{primary_screen.geometry().width()}x{primary_screen.geometry().height()}"
-        )
+        dpr = primary_screen.devicePixelRatio() or 1.0
+        primary_w = round(primary_screen.geometry().width() * dpr)
+        primary_h = round(primary_screen.geometry().height() * dpr)
+        metadata["primary_resolution"] = f"{primary_w}x{primary_h}"
     else:
         metadata["primary_resolution"] = "UnknownResolution"
     return metadata

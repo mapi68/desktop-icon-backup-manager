@@ -627,17 +627,14 @@ Favourite, Test) --- then edit freely before saving if needed.
     \item \textbf{Display Metadata}: Records monitor count, screen names,
       individual resolutions, and the \texttt{devicePixelRatio} value.
     \item \textbf{JSON Schema}: Stores \texttt{icon\_count}, an ISO
-      \texttt{timestamp}, a \texttt{description} field, a
-      \texttt{dpi\_aware} boolean flag (see below), and exact X/Y
+      \texttt{timestamp}, a \texttt{description} field, and exact X/Y
       pixel coordinates for every icon.
     \item \textbf{Coordinate Precision}: Icon positions are read through
-      the Windows API message \texttt{LVM\_GETITEMPOSITION}.
-    \item \textbf{DPI Awareness Flag}: The
-      \texttt{dpi\_aware} field records that the backup was captured
-      with a Per-Monitor-v2 DPI-aware process. This means saved
-      coordinates are in physical pixels and the saved resolution
-      matches the monitor's physical dimensions regardless of Windows
-      display scaling.
+      the Windows API message \texttt{LVM\_GETITEMPOSITION}. The
+      application declares itself Per-Monitor-v2 DPI-aware at startup,
+      so both the saved coordinates and the saved resolution are in
+      physical pixels, matching the monitor's physical dimensions
+      regardless of Windows display scaling.
   \end{itemize}
 \end{infobox}
 

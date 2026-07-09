@@ -62,6 +62,7 @@ from utils.helpers import (
     get_display_metadata,
     get_readable_date,
     get_resolution_from_filename,
+    parse_backup_filename,
     parse_resolution_string,
 )
 from ui.backup_dialog import BackupManagerWindow, _ask
@@ -1046,6 +1047,7 @@ class MainWindow(QMainWindow):
         description = self.tr("N/A")
         icon_count = self.tr("N/A")
         saved_icons = {}
+        data = {}
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -1061,6 +1063,25 @@ class MainWindow(QMainWindow):
             current_icons = {}
 
         res_tuple = parse_resolution_string(resolution) or (1920, 1080)
+
+        # Build clock strings for the preview's taskbar mock-up from the
+        # backup's own timestamp, so the tray clock shows when THIS
+        # snapshot was taken (not the current time). Mirrors the logic in
+        # BackupDialog.on_selection_changed.
+        ts_raw = data.get("timestamp", "") if isinstance(data, dict) else ""
+        try:
+            dt_bk = datetime.fromisoformat(ts_raw)
+            clock_time = dt_bk.strftime("%H:%M")
+            clock_date = dt_bk.strftime("%d/%m/%Y")
+        except (TypeError, ValueError):
+            _, _, ts_file = parse_backup_filename(filename)
+            try:
+                dt_bk = datetime.strptime(ts_file, "%Y%m%d_%H%M%S")
+                clock_time = dt_bk.strftime("%H:%M")
+                clock_date = dt_bk.strftime("%d/%m/%Y")
+            except ValueError:
+                clock_time = "--:--"
+                clock_date = "--/--/----"
 
         # Count what will actually change
         moved = sum(
@@ -1128,7 +1149,13 @@ class MainWindow(QMainWindow):
         # Preview canvas + legend side by side
         preview_row = QHBoxLayout()
         preview_widget = DiffPreviewWidget()
-        preview_widget.update_preview(saved_icons, current_icons, res_tuple)
+        preview_widget.update_preview(
+            saved_icons,
+            current_icons,
+            res_tuple,
+            clock_time=clock_time,
+            clock_date=clock_date,
+        )
         preview_row.addWidget(preview_widget, stretch=1)
 
         legend = make_legend_widget()
