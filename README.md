@@ -13,7 +13,7 @@
     "price": "0",
     "priceCurrency": "USD"
   },
-  "license": "https://opensource.org/licenses/MIT",
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
   "creator": {
     "@type": "Person",
     "name": "mapi68"
@@ -35,7 +35,7 @@
 [![Latest Release Downloads](https://img.shields.io/github/downloads/mapi68/desktop-icon-backup-manager/latest/total?style=for-the-badge&logo=github-actions&color=a855f7)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
 
 [![Latest Release](https://img.shields.io/github/v/release/mapi68/desktop-icon-backup-manager?style=for-the-badge&logo=github&color=2ea44f)](https://github.com/mapi68/desktop-icon-backup-manager/releases)
-[![MIT License](https://img.shields.io/badge/License-MIT-41AD49?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
+[![GPLv3 License](https://img.shields.io/badge/License-GPLv3-41AD49?style=for-the-badge&logo=gnu&logoColor=white)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 </div>
 
@@ -131,9 +131,9 @@ desktop-icon-backup-manager.exe --backup --silent
 desktop-icon-backup-manager.exe --restore latest --silent
 ```
 
-### 🔓 Completely Open Source (MIT Licensed)
+### 🔓 Completely Open Source (GPLv3 Licensed)
 
-**Every line of code** is publicly available on GitHub under the MIT license—auditable, transparent, and forkable. No telemetry, no ads, no accounts, no cloud services. Your backup files are plain JSON text—human-readable and portable between machines.
+**Every line of code** is publicly available on GitHub under the GPLv3 license—auditable, transparent, and forkable. No telemetry, no ads, no accounts, no cloud services. Your backup files are plain JSON text—human-readable and portable between machines.
 
 ---
 
@@ -213,7 +213,7 @@ Desktop Icon Backup Manager is the most comprehensive solution. Here's how it co
 | **Auto-hide desktop icons with timer** | ✅ | ❌ | ❌ | ❌ |
 | **Light / Dark / System theme** | ✅ | ❌ | ❌ | ❌ |
 | **Statistics dashboard** | ✅ | ❌ | ❌ | ❌ |
-| **Open source (MIT license)** | ✅ | ❌ | ❌ | — |
+| **Open source (GPLv3 license)** | ✅ | ❌ | ❌ | — |
 | **Portable executable** | ✅ | ✅ | ✅ | — |
 | **Windows 11 25H2 support** | ✅ | ✅ | ⚠️ | — |
 | **Multi-language UI** | ✅ | ❌ | ✅ | — |
@@ -519,7 +519,7 @@ Then switch between them instantly with one click.
 ### Feature & Technical Questions
 
 **Is Desktop Icon Backup Manager truly free?**
-Completely free, forever, MIT licensed. No ads, no telemetry, no required accounts, no nag screens. Source code is on GitHub for inspection and contribution.
+Completely free, forever, GPLv3 licensed. No ads, no telemetry, no required accounts, no nag screens. Source code is on GitHub for inspection and contribution.
 
 **Will antivirus software flag the .exe?**
 Some antivirus tools flag programs that interact with Windows Explorer's memory, even when using only standard Win32 API calls—the same ones Windows uses internally. If flagged, add the `.exe` to your whitelist. Full source code is available on GitHub for independent verification.
@@ -529,7 +529,7 @@ All three tools save and restore desktop icon positions. Desktop Icon Backup Man
 - **Live diff preview** — see exactly which icons will move
 - **Cross-backup comparison** — diff any two saved layouts
 - **Visual layout preview** — mini-map of all icon positions
-- **Open-source MIT-licensed code** — fully auditable
+- **Open-source GPLv3-licensed code** — fully auditable
 
 See the [detailed comparison table](#comparison-desktop-icon-backup-manager-vs-competitors) above for complete details.
 
@@ -719,7 +719,7 @@ Desktop Icon Backup Manager is built on the shoulders of excellent open-source p
 
 ## License & Legal Information
 
-Desktop Icon Backup Manager is released under the **MIT License**, one of the most permissive open-source licenses available.
+Desktop Icon Backup Manager is released under the **GNU General Public License v3.0 (GPLv3)**, a strong copyleft open-source license.
 
 **You are free to:**
 - Use the software for any purpose, commercial or personal
@@ -728,10 +728,12 @@ Desktop Icon Backup Manager is released under the **MIT License**, one of the mo
 - Use the software privately
 
 **You must:**
-- Include a copy of the license
-- Include a copyright notice
+- Include a copy of the license and the original copyright notice
+- State any significant changes made to the code
+- Make the complete source code available when distributing the software (or any derivative)
+- License any modifications or derivative works under GPLv3 as well
 
-**See the full license:** [MIT License](https://opensource.org/licenses/MIT)
+**See the full license:** [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
 
 
 
