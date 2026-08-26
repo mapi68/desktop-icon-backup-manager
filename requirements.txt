@@ -1,5 +1,5 @@
 PyQt6==6.11.0
-PyQt6-Qt6==6.11.1
+PyQt6-Qt6==6.11.2
 PyQt6_sip==13.12.0
 pywin32==312
 pywin32-ctypes==0.2.3
