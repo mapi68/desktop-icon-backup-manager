@@ -1,31 +1,40 @@
-name: Build PDF Manual
+name: Deploy Website Only (reuse existing PDF)
 
 on:
   workflow_dispatch:
-  workflow_call: # Required for orchestration
+  push:
+    branches:
+      - master
+    paths:
+      - 'web/**' # Only trigger when files inside web/ change
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  build_latex:
+  deploy_website:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
-
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: manual.tex
 
       - name: Prepare Pages folder
         run: |
           mkdir -p _site
           cp -r web/* _site/
-          cp manual.pdf _site/
+
+      - name: Download the currently published manual.pdf
+        run: |
+          curl -f -o _site/manual.pdf https://mapi68.github.io/desktop-icon-backup-manager/manual.pdf
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desktop Icon Backup Manager: pin your desktop in place</title>
+<meta name="description" content="Save, compare, and restore Windows desktop icon layouts. Live diff preview, adaptive scaling, multi-monitor support. Free and open source.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f2e9d8;
+    --paper: #fbf5e8;
+    --ink: #23180c;
+    --ink-dim: #6b5c46;
+    --line: #ddccaa;
+    --line-strong: #c9b487;
+    --rust: #c1501f;
+    --rust-dark: #9c3d16;
+    --teal: #21645c;
+    --mustard: #c68a1f;
+    --blue: #33587d;
+    --orange: #c1501f;
+    --red: #a53a2b;
+    --green: #2f6d4a;
+    --mono: 'JetBrains Mono', monospace;
+    --display: 'Fraunces', serif;
+    --body: 'Inter', sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    background-image:
+      radial-gradient(circle, rgba(35,24,12,.09) 1px, transparent 1px);
+    background-size:22px 22px;
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--rust-dark);
+    font-weight:600;
+  }
+  h1,h2,h3{font-family:var(--display); font-weight:600; letter-spacing:-.01em; color:var(--ink);}
+
+  ::selection{background:var(--rust); color:var(--paper);}
+
+  /* NAV */
+  header{
+    position:sticky; top:0; z-index:60;
+    background:rgba(242,233,216,.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1.5px solid var(--ink);
+  }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px; max-width:1120px; margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:600; font-size:17px;}
+  .pin-mark{
+    width:11px; height:11px; border-radius:50%;
+    background:var(--rust);
+    box-shadow:0 0 0 2px var(--paper), 0 0 0 3px var(--ink);
+    flex-shrink:0;
+  }
+  .navlinks{gap:30px; font-size:14px; color:var(--ink-dim); font-weight:500; display:none;}
+  .navlinks a{padding-bottom:2px; border-bottom:1.5px solid transparent; transition:border-color .15s, color .15s;}
+  .navlinks a:hover{color:var(--ink); border-color:var(--rust);}
+  @media(min-width:860px){.navlinks{display:flex;}}
+  .btn{
+    font-family:var(--mono); font-size:12.5px; font-weight:600;
+    padding:10px 18px; border-radius:3px;
+    border:1.5px solid var(--ink); text-decoration:none;
+    transition:transform .12s, box-shadow .12s;
+    white-space:nowrap; display:inline-block;
+    box-shadow:3px 3px 0 var(--ink);
+  }
+  .btn:hover{transform:translate(-1.5px,-1.5px); box-shadow:4.5px 4.5px 0 var(--ink);}
+  .btn:active{transform:translate(1px,1px); box-shadow:1.5px 1.5px 0 var(--ink);}
+  .btn-primary{background:var(--rust); color:var(--paper); border-color:var(--ink);}
+  .btn-ghost{background:var(--paper); color:var(--ink);}
+
+  /* HERO */
+  .hero{padding:76px 0 88px;}
+  .hero-grid{display:grid; grid-template-columns:1fr; gap:56px; align-items:center;}
+  @media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;}}
+  .hero .eyebrow{margin-bottom:16px; display:block;}
+  .hero h1{font-size:clamp(36px,5.6vw,58px); line-height:1.02; margin-bottom:22px;}
+  .hero h1 em{font-style:italic; color:var(--rust); font-weight:500;}
+  .hero p.lead{color:var(--ink-dim); font-size:18px; max-width:44ch; margin-bottom:30px;}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:26px;}
+  .stat-row{display:flex; gap:26px; font-family:var(--mono); font-size:12.5px; color:var(--ink-dim); flex-wrap:wrap;}
+  .stat-row b{color:var(--ink); font-weight:700;}
+
+  /* CORKBOARD MOCK */
+  .board{
+    position:relative;
+    background:var(--paper);
+    border:1.5px solid var(--ink);
+    border-radius:8px;
+    padding:30px;
+    aspect-ratio:5/4.3;
+    box-shadow:6px 6px 0 rgba(35,24,12,.18);
+  }
+  .board::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image: radial-gradient(circle, rgba(35,24,12,.14) 1px, transparent 1px);
+    background-size:16px 16px;
+    border-radius:8px;
+    pointer-events:none;
+  }
+  .card{
+    position:absolute; width:104px;
+    background:#fffdf6;
+    border:1px solid var(--line-strong);
+    border-radius:3px;
+    padding:10px 8px 9px;
+    box-shadow:2px 3px 6px rgba(35,24,12,.16);
+    font-family:var(--mono); font-size:9.5px; color:var(--ink-dim); text-align:center;
+  }
+  .card .icoglyph{
+    width:34px; height:34px; margin:0 auto 8px; border-radius:5px;
+    display:flex; align-items:center; justify-content:center; font-size:16px;
+  }
+  .pin{
+    position:absolute; top:-7px; left:50%; transform:translateX(-50%);
+    width:13px; height:13px; border-radius:50%;
+    box-shadow:0 2px 3px rgba(0,0,0,.35), inset 0 -2px 3px rgba(0,0,0,.2), inset 0 2px 2px rgba(255,255,255,.5);
+  }
+  .card.blue{transform:rotate(-4deg);}
+  .card.blue .icoglyph{background:rgba(51,88,125,.14); box-shadow:0 0 0 1.5px rgba(51,88,125,.55);}
+  .card.blue .pin{background:var(--blue);}
+  .card.mustard{transform:rotate(3deg);}
+  .card.mustard .icoglyph{background:rgba(198,138,31,.16); box-shadow:0 0 0 1.5px rgba(198,138,31,.6);}
+  .card.mustard .pin{background:var(--mustard);}
+  .card.rust{transform:rotate(-2deg); outline:2px dashed var(--rust); outline-offset:3px;}
+  .card.rust .icoglyph{background:rgba(193,80,31,.16); box-shadow:0 0 0 1.5px rgba(193,80,31,.65);}
+  .card.rust .pin{background:var(--rust);}
+  .card.ghost{opacity:.55; transform:rotate(5deg); border-style:dashed;}
+  .card.ghost .icoglyph{background:rgba(47,109,74,.14); box-shadow:0 0 0 1.5px rgba(47,109,74,.5);}
+  .card.ghost .pin{background:var(--green);}
+  .thread{
+    position:absolute; height:2px; background:var(--rust);
+    transform-origin:0 0; opacity:.75;
+  }
+  .board-caption{
+    position:absolute; bottom:16px; right:18px;
+    font-family:var(--mono); font-size:10px; color:var(--ink-dim);
+    background:var(--paper); padding:3px 8px; border:1px solid var(--line); border-radius:3px;
+  }
+  .legend{display:flex; gap:18px; flex-wrap:wrap; margin-top:18px; font-family:var(--mono); font-size:11.5px; color:var(--ink-dim);}
+  .legend span{display:inline-flex; align-items:center; gap:6px;}
+  .legend i{width:9px; height:9px; border-radius:50%; display:inline-block;}
+
+  /* SECTION shared */
+  section{padding:80px 0;}
+  .rule{border-top:1.5px solid var(--ink); opacity:.9;}
+  .section-head{max-width:58ch; margin-bottom:48px;}
+  .section-head .eyebrow{display:block; margin-bottom:10px;}
+  .section-head h2{font-size:clamp(26px,3.6vw,36px);}
+  .section-head p{color:var(--ink-dim); margin-top:14px; font-size:16px;}
+
+  /* TRIGGERS */
+  .triggers{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  @media(max-width:820px){.triggers{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.triggers{grid-template-columns:1fr;}}
+  .trigger{
+    background:var(--paper); border:1.5px solid var(--ink); border-radius:6px; padding:20px;
+    box-shadow:3px 3px 0 rgba(35,24,12,.14);
+  }
+  .trigger .k{font-family:var(--mono); font-size:10.5px; color:var(--rust-dark); text-transform:uppercase; letter-spacing:.08em; font-weight:700;}
+  .trigger .v{margin-top:10px; font-size:14.5px; color:var(--ink);}
+
+  /* FEATURES */
+  .feature-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px;}
+  .feature{background:var(--paper); border:1.5px solid var(--ink); border-radius:6px; padding:26px; box-shadow:3px 3px 0 rgba(35,24,12,.14);}
+  .feature .tag{
+    display:inline-block; font-family:var(--mono); font-size:10px; color:var(--paper); font-weight:700;
+    background:var(--rust); border-radius:3px; padding:3px 8px; margin-bottom:14px; letter-spacing:.04em;
+  }
+  .feature h3{font-size:18px; margin-bottom:9px;}
+  .feature p{color:var(--ink-dim); font-size:14px;}
+
+  /* COMPARISON */
+  .table-wrap{overflow-x:auto; border:1.5px solid var(--ink); border-radius:6px; background:var(--paper);}
+  table{width:100%; border-collapse:collapse; font-size:13.5px; min-width:640px;}
+  th,td{padding:13px 18px; text-align:left; border-bottom:1px solid var(--line);}
+  th{font-family:var(--mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-dim); border-bottom:1.5px solid var(--ink);}
+  td.yes{color:var(--teal); font-weight:700;}
+  td.no{color:var(--ink-dim);}
+  tr:last-child td{border-bottom:none;}
+
+  /* CLI */
+  .cli{
+    background:var(--ink); border:1.5px solid var(--ink); border-radius:6px;
+    padding:22px 24px; font-family:var(--mono); font-size:13px; color:#f2e9d8;
+    overflow-x:auto; box-shadow:4px 4px 0 rgba(35,24,12,.2);
+  }
+  .cli .c1{color:#8d7c60;}
+  .cli .c2{color:#e8b56a;}
+
+  /* STEPS */
+  .steps{counter-reset:step; display:grid; gap:20px;}
+  .step{display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:flex-start;}
+  .step .n{
+    counter-increment:step; font-family:var(--display); font-weight:700; font-size:16px; color:var(--paper);
+    width:36px; height:36px; background:var(--ink); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .step .n::before{content: counter(step);}
+  .step .body h4{font-size:16px; margin-bottom:5px; font-family:var(--display); font-weight:600;}
+  .step .body p{color:var(--ink-dim); font-size:14.5px;}
+
+  /* SCREENSHOTS */
+  .shots{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  @media(max-width:900px){.shots{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.shots{grid-template-columns:1fr;}}
+  .shot{
+    background:var(--paper); border:1.5px solid var(--ink); border-radius:6px; overflow:hidden;
+    box-shadow:3px 3px 0 rgba(35,24,12,.14);
+  }
+  .shot .frame{position:relative; overflow:hidden; border-bottom:1.5px solid var(--ink);}
+  .shot img{width:100%; height:auto; display:block; cursor:zoom-in; transition:transform .35s ease;}
+  .shot .frame:hover img{transform:scale(1.035);}
+  .zoom-badge{
+    position:absolute; top:10px; right:10px;
+    background:var(--ink); color:var(--paper); font-family:var(--mono); font-size:10px;
+    padding:4px 8px; border-radius:3px; opacity:0; transition:opacity .2s; pointer-events:none;
+  }
+  .shot .frame:hover .zoom-badge{opacity:1;}
+  .shot .cap{padding:15px 17px; font-size:13.5px; color:var(--ink-dim);}
+  .shot .cap b{color:var(--ink); font-weight:600; font-family:var(--display);}
+
+  /* LIGHTBOX */
+  .lightbox{
+    display:none; position:fixed; inset:0; z-index:300;
+    background:rgba(20,14,8,.92);
+    overflow:auto; text-align:center; padding:56px 24px;
+    cursor:zoom-out;
+  }
+  .lightbox.open{display:block;}
+  .lightbox img{
+    display:inline-block; width:auto; height:auto; max-width:none;
+    margin:0 auto; border-radius:5px; box-shadow:0 24px 70px rgba(0,0,0,.6);
+    border:1px solid rgba(255,255,255,.1);
+  }
+  .lightbox-close{
+    position:fixed; top:20px; right:26px; z-index:301;
+    width:42px; height:42px; border-radius:50%;
+    background:rgba(255,255,255,.1); border:1.5px solid rgba(255,255,255,.35);
+    color:#f2e9d8; font-size:19px; line-height:1; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .lightbox-close:hover{background:rgba(255,255,255,.2);}
+  .lightbox-hint{
+    position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
+    font-family:var(--mono); font-size:11.5px; color:#c9bda3; z-index:301;
+    background:rgba(0,0,0,.3); padding:5px 12px; border-radius:20px;
+  }
+
+  /* FAQ */
+  details{
+    border:1.5px solid var(--ink); border-radius:6px; padding:18px 20px; margin-bottom:12px;
+    background:var(--paper); box-shadow:2px 2px 0 rgba(35,24,12,.1);
+  }
+  summary{cursor:pointer; font-weight:600; font-size:15px; list-style:none; display:flex; justify-content:space-between; align-items:center; font-family:var(--display);}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:'+'; color:var(--rust); font-family:var(--mono); font-size:19px; font-weight:700;}
+  details[open] summary::after{content:'−';}
+  details p{margin-top:13px; color:var(--ink-dim); font-size:14.5px; font-family:var(--body);}
+
+  /* FOOTER */
+  footer{padding:50px 0 60px; text-align:center;}
+  footer p{color:var(--ink-dim); font-size:13px; font-family:var(--mono);}
+  footer a{color:var(--rust-dark); text-decoration:none; border-bottom:1px solid var(--rust-dark);}
+
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} .shot img{transition:none;} }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="brand" style="text-decoration: none;"><span class="pin-mark"></span>Desktop Icon Backup Manager</a>
+    <div class="navlinks">
+      <a href="#problem">The problem</a>
+      <a href="#features">Features</a>
+      <a href="#compare">Compare</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#start">Get started</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-primary" href="https://github.com/mapi68/desktop-icon-backup-manager/releases/latest">Download</a>
+  </nav>
+  <div class="wrap" style="text-align:center; padding-top:8px; padding-bottom:8px;">
+    <a href="https://ko-fi.com/mapi68" target="_blank" rel="noopener" style="display:inline-block;">
+      <img src="https://img.shields.io/badge/Ko--fi-Buy_me_a_coffee-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=0D1117" alt="Buy me a coffee on Ko-fi" style="display:inline-block; width:auto; max-width:none;">
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Windows 7 · 8 · 10 · 11, free &amp; open source</span>
+      <h1>Pin your icons down. <em>For good.</em></h1>
+      <p class="lead">Windows keeps knocking your desktop icons out of place: after an update, a resolution change, a monitor swap. This tool remembers exactly where everything goes, and shows you what's about to move before it moves.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/mapi68/desktop-icon-backup-manager/releases/latest">↓ Download latest release</a>
+        <a class="btn btn-ghost" href="https://mapi68.github.io/desktop-icon-backup-manager/manual.pdf">User manual (PDF)</a>
+        <a class="btn btn-ghost" href="https://github.com/mapi68/desktop-icon-backup-manager">Source code</a>
+      </div>
+      <div class="stat-row">
+        <span><b>26</b> languages</span>
+        <span><b>GPLv3</b> licensed</span>
+        <span><b>Zero</b> install required</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="board" id="board">
+        <div class="card blue" style="top:12%; left:8%;"><div class="pin"></div><div class="icoglyph">📁</div>Documents</div>
+        <div class="card ghost" style="top:14%; left:60%;"><div class="pin"></div><div class="icoglyph">🗑️</div>Recycle Bin</div>
+        <div class="card rust" style="top:52%; left:36%;"><div class="pin"></div><div class="icoglyph">🗑️</div>Recycle Bin</div>
+        <div class="card mustard" style="top:46%; left:6%;"><div class="pin"></div><div class="icoglyph">💻</div>This PC</div>
+        <div class="card blue" style="top:56%; left:70%;"><div class="pin"></div><div class="icoglyph">⬇️</div>Downloads</div>
+        <div class="board-caption">last saved · 12:07</div>
+      </div>
+      <div class="legend">
+        <span><i style="background:var(--blue)"></i>staying put</span>
+        <span><i style="background:var(--mustard)"></i>needs restoring</span>
+        <span><i style="background:var(--rust)"></i>target position</span>
+        <span><i style="background:var(--green)"></i>backup only</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The problem</span>
+      <h2>A Windows bug that's outlived four major versions</h2>
+      <p>Icons rearrange themselves in a handful of very ordinary situations, and putting them back by hand gets old the second time it happens.</p>
+    </div>
+    <div class="triggers">
+      <div class="trigger"><div class="k">Windows updates</div><div class="v">Icons reset to the left, auto-sort alphabetically, or scatter at random</div></div>
+      <div class="trigger"><div class="k">External monitors</div><div class="v">Unplug a second screen and the whole layout collapses onto the primary one</div></div>
+      <div class="trigger"><div class="k">Full-screen games</div><div class="v">A resolution change on launch or exit scrambles every icon position</div></div>
+      <div class="trigger"><div class="k">Sleep &amp; lock screen</div><div class="v">Icons drift after standby, especially along the right edge</div></div>
+      <div class="trigger"><div class="k">Resolution or DPI</div><div class="v">Changing scaling piles everything into the top-left corner</div></div>
+      <div class="trigger"><div class="k">Plain reboot</div><div class="v">Windows ignores your careful layout and auto-arranges anyway</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Core features</span>
+      <h2>More than a save button</h2>
+      <p>A few things here, like the live diff preview and cross-backup comparison, you won't find in comparable tools.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature"><span class="tag">Unique</span><h3>Live diff preview</h3><p>Before restoring, see exactly which icons will move, which stay put, and which exist only in the backup, with a taskbar mock-up carrying the backup's own timestamp.</p></div>
+      <div class="feature"><span class="tag">Unique</span><h3>Adaptive scaling</h3><p>Restoring onto a different resolution recalculates every position proportionally. Per-monitor DPI aware, so fractional scaling doesn't throw it off.</p></div>
+      <div class="feature"><span class="tag">Unique</span><h3>Compare any two backups</h3><p>See what was added, removed, or moved between two saved snapshots, side by side.</p></div>
+      <div class="feature"><span class="tag">Display</span><h3>Multi-monitor aware</h3><p>Every backup records monitor count, resolution, and arrangement, with a warning if the setup differs at restore time.</p></div>
+      <div class="feature"><span class="tag">Automation</span><h3>Command-line automation</h3><p>Silent backup and restore via CLI, ready to plug into Task Scheduler for a backup on every login.</p></div>
+      <div class="feature"><span class="tag">Utility</span><h3>Auto-hide with timer</h3><p>Hides desktop icons after a configurable delay, with an optional backup first and a warning before it fires.</p></div>
+      <div class="feature"><span class="tag">Analytics</span><h3>Statistics dashboard</h3><p>An overview of backups, restores, disk usage, top resolutions, and the icons that move most often.</p></div>
+      <div class="feature"><span class="tag">Portability</span><h3>Export &amp; import</h3><p>Package backups as ZIP or folder to move to another PC; importing skips duplicates automatically.</p></div>
+      <div class="feature"><span class="tag">Safety</span><h3>Automatic safety snapshots</h3><p>Creates an emergency restore point right before applying any changes, so you can instantly undo if needed.</p></div>
+
+      <div class="feature" style="grid-column: 1 / -1;">
+        <h3>26 languages</h3>
+        <p style="margin-bottom:14px;">Auto-detected from the Windows locale, manually selectable too.</p>
+        <p style="font-family:var(--mono); font-size:12.5px; color:var(--ink-dim); line-height:1.9;">Arabic, Chinese (Simplified), Chinese (Traditional), Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hindi, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Slovenian, Spanish, Swedish, Turkish, Ukrainian.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section id="compare">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Comparison</span>
+      <h2>How it stacks up</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Feature</th><th>Desktop Icon Backup Manager</th><th>ReIcon</th><th>DesktopOK</th></tr></thead>
+        <tbody>
+          <tr><td>Live visual diff preview</td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+          <tr><td>Compare any two backups</td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+          <tr><td>Adaptive scaling on resolution change</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">No</td></tr>
+          <tr><td>Multi-monitor support</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+          <tr><td>CLI / Task Scheduler automation</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="no">No</td></tr>
+          <tr><td>Open source (GPLv3)</td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+          <tr><td>Statistics dashboard</td><td class="yes">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section id="screenshots">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Screenshots</span>
+      <h2>What it looks like</h2>
+      <p>Click any image to open it at full, actual-pixel size.</p>
+    </div>
+    <div class="shots">
+      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_1.png" alt="Desktop Icon Backup Manager main window" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Main window</b>: save or restore your layout in one click</div></div>
+      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_2.png" alt="Backup Manager window with search and live diff preview" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Backup Manager</b>: browse history, search by tag, preview the diff</div></div>
+      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_4.png" alt="Dark mode with Italian language and multi-monitor support" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Dark mode</b>: full multi-language support, shown here in Italian</div></div>
+      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_5.png" alt="Comparison results between two saved desktop layouts" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Backup comparison</b>: added, removed, and moved icons between two snapshots</div></div>
+      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_6.png" alt="Restore confirmation dialog" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Restore confirmation</b>: always confirms before applying changes</div></div>
+      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_7.png" alt="Statistics dashboard" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Statistics dashboard</b>: backups, restores, disk usage, activity over time</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section id="start">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Get started</span>
+      <h2>Up and running in under a minute</h2>
+      <p>No installation, no external dependencies for the executable.</p>
+    </div>
+    <div class="steps" style="margin-bottom:40px;">
+      <div class="step"><div class="n"></div><div class="body"><h4>Download the release</h4><p>Grab the latest ZIP from the releases page: it contains the executable and the PDF manual.</p></div></div>
+      <div class="step"><div class="n"></div><div class="body"><h4>Extract to a folder</h4><p>For example <code>C:\Tools\Desktop Icon Backup Manager\</code>, no administrator rights needed.</p></div></div>
+      <div class="step"><div class="n"></div><div class="body"><h4>Run the executable</h4><p>The backups folder and settings file are created automatically on first launch.</p></div></div>
+      <div class="step"><div class="n"></div><div class="body"><h4>Save your first backup</h4><p>Click "Save Quick Backup", or press <code>Ctrl+S</code>. Done.</p></div></div>
+    </div>
+    <div class="cli"><span class="c1"># silent backup, no window</span><br>desktop-icon-backup-manager.exe --backup --silent<br><br><span class="c1"># restore the most recent layout</span><br>desktop-icon-backup-manager.exe <span class="c2">--restore latest --silent</span></div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Before you start</h2>
+    </div>
+    <details>
+      <summary>Why do my desktop icons keep moving in Windows 11?</summary>
+      <p>It's a long-standing Windows bug Microsoft has never fixed, present from Windows 7 through the latest Windows 11 builds. Windows silently changes screen resolution when you connect a monitor, launch a game, or wake from sleep, and that scrambles icon positions.</p>
+    </details>
+    <details>
+      <summary>Is it really free?</summary>
+      <p>Yes, completely free, GPLv3 licensed. No ads, no telemetry, no required accounts.</p>
+    </details>
+    <details>
+      <summary>Does it handle multiple monitors and different resolutions?</summary>
+      <p>Yes, every backup records the full monitor configuration. Restoring on a different setup triggers a warning, and adaptive scaling recalculates positions proportionally when enabled.</p>
+    </details>
+    <details>
+      <summary>Can I automate backups?</summary>
+      <p>Yes, via the command line (<code>--backup --silent</code>), which plugs into Windows Task Scheduler for an automatic backup on every login.</p>
+    </details>
+    <details>
+      <summary>Will antivirus software flag it?</summary>
+      <p>Some antivirus tools flag programs that interact with Explorer's memory, even when using only standard Windows APIs. The full source code is public on GitHub for independent verification.</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="https://ko-fi.com/mapi68" target="_blank" rel="noopener" style="display:inline-block; margin-bottom:18px; border-bottom:none;">
+      <img src="https://img.shields.io/badge/Ko--fi-Buy_me_a_coffee-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=0D1117" alt="Buy me a coffee on Ko-fi" style="display:inline-block; width:auto; max-width:none;">
+    </a>
+    <p>Released under the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPLv3</a> license · <a href="https://github.com/mapi68/desktop-icon-backup-manager">Source on GitHub</a> · <a href="https://mapi68.github.io/desktop-icon-backup-manager/manual.pdf">PDF manual</a></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">✕</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-hint">Click anywhere or press Esc to close</div>
+</div>
+
+<script>
+  function openLightbox(src, alt){
+    var lb = document.getElementById('lightbox');
+    var img = document.getElementById('lightbox-img');
+    img.src = src;
+    img.alt = alt;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e){
+    if(e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')){
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+</body>
+</html>
