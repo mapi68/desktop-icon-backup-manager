@@ -5,23 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Desktop Icon Backup Manager: pin your desktop in place</title>
 <meta name="description" content="Save, compare, and restore Windows desktop icon layouts. Live diff preview, adaptive scaling, multi-monitor support. Free and open source.">
+<link rel="icon" type="image/x-icon" href="icon.ico">
+<link rel="icon" type="image/png" sizes="1024x1024" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #f2e9d8;
-    --paper: #fbf5e8;
-    --ink: #23180c;
-    --ink-dim: #6b5c46;
-    --line: #ddccaa;
-    --line-strong: #c9b487;
-    --rust: #c1501f;
-    --rust-dark: #9c3d16;
-    --teal: #21645c;
+    --bg: #eef3f9;
+    --paper: #ffffff;
+    --ink: #16273a;
+    --ink-dim: #55708a;
+    --line: #cddce8;
+    --line-strong: #9fb8cd;
+    --rust: #2f6fb0;
+    --rust-dark: #1d4d80;
+    --teal: #1f7a68;
     --mustard: #c68a1f;
-    --blue: #33587d;
-    --orange: #c1501f;
+    --blue: #3a6ea8;
+    --orange: #2f6fb0;
     --red: #a53a2b;
     --green: #2f6d4a;
     --mono: 'JetBrains Mono', monospace;
@@ -33,7 +36,7 @@
   body{
     background:var(--bg);
     background-image:
-      radial-gradient(circle, rgba(35,24,12,.09) 1px, transparent 1px);
+      radial-gradient(circle, rgba(22,39,58,.08) 1px, transparent 1px);
     background-size:22px 22px;
     color:var(--ink);
     font-family:var(--body);
@@ -58,7 +61,7 @@
   /* NAV */
   header{
     position:sticky; top:0; z-index:60;
-    background:rgba(242,233,216,.86);
+    background:rgba(238,243,249,.86);
     backdrop-filter:blur(10px);
     border-bottom:1.5px solid var(--ink);
   }
@@ -95,6 +98,11 @@
   .hero-grid{display:grid; grid-template-columns:1fr; gap:56px; align-items:center;}
   @media(min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;}}
   .hero .eyebrow{margin-bottom:16px; display:block;}
+  .wordmark{
+    font-family:var(--display); font-weight:700; letter-spacing:-.01em;
+    font-size:clamp(20px,2.4vw,26px); color:var(--rust-dark);
+    margin-bottom:14px;
+  }
   .hero h1{font-size:clamp(36px,5.6vw,58px); line-height:1.02; margin-bottom:22px;}
   .hero h1 em{font-style:italic; color:var(--rust); font-weight:500;}
   .hero p.lead{color:var(--ink-dim); font-size:18px; max-width:44ch; margin-bottom:30px;}
@@ -110,23 +118,23 @@
     border-radius:8px;
     padding:30px;
     aspect-ratio:5/4.3;
-    box-shadow:6px 6px 0 rgba(35,24,12,.18);
+    box-shadow:6px 6px 0 rgba(22,39,58,.16);
   }
   .board::before{
     content:'';
     position:absolute; inset:0;
-    background-image: radial-gradient(circle, rgba(35,24,12,.14) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(22,39,58,.12) 1px, transparent 1px);
     background-size:16px 16px;
     border-radius:8px;
     pointer-events:none;
   }
   .card{
     position:absolute; width:104px;
-    background:#fffdf6;
+    background:#fbfdff;
     border:1px solid var(--line-strong);
     border-radius:3px;
     padding:10px 8px 9px;
-    box-shadow:2px 3px 6px rgba(35,24,12,.16);
+    box-shadow:2px 3px 6px rgba(22,39,58,.14);
     font-family:var(--mono); font-size:9.5px; color:var(--ink-dim); text-align:center;
   }
   .card .icoglyph{
@@ -168,7 +176,10 @@
   .rule{border-top:1.5px solid var(--ink); opacity:.9;}
   .section-head{max-width:58ch; margin-bottom:48px;}
   .section-head .eyebrow{display:block; margin-bottom:10px;}
-  .section-head h2{font-size:clamp(26px,3.6vw,36px);}
+  .section-head h2{font-size:clamp(26px,3.6vw,36px); display:flex; align-items:flex-start; gap:14px;}
+  .section-head h2 span{white-space:nowrap;}
+  .h2-icon{width:34px; height:34px; border-radius:8px; flex-shrink:0; margin-top:6px;}
+  @media(max-width:640px){.section-head h2{font-size:clamp(19px,5.6vw,26px);}}
   .section-head p{color:var(--ink-dim); margin-top:14px; font-size:16px;}
 
   /* TRIGGERS */
@@ -177,14 +188,14 @@
   @media(max-width:520px){.triggers{grid-template-columns:1fr;}}
   .trigger{
     background:var(--paper); border:1.5px solid var(--ink); border-radius:6px; padding:20px;
-    box-shadow:3px 3px 0 rgba(35,24,12,.14);
+    box-shadow:3px 3px 0 rgba(22,39,58,.12);
   }
   .trigger .k{font-family:var(--mono); font-size:10.5px; color:var(--rust-dark); text-transform:uppercase; letter-spacing:.08em; font-weight:700;}
   .trigger .v{margin-top:10px; font-size:14.5px; color:var(--ink);}
 
   /* FEATURES */
   .feature-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px;}
-  .feature{background:var(--paper); border:1.5px solid var(--ink); border-radius:6px; padding:26px; box-shadow:3px 3px 0 rgba(35,24,12,.14);}
+  .feature{background:var(--paper); border:1.5px solid var(--ink); border-radius:6px; padding:26px; box-shadow:3px 3px 0 rgba(22,39,58,.12);}
   .feature .tag{
     display:inline-block; font-family:var(--mono); font-size:10px; color:var(--paper); font-weight:700;
     background:var(--rust); border-radius:3px; padding:3px 8px; margin-bottom:14px; letter-spacing:.04em;
@@ -204,11 +215,11 @@
   /* CLI */
   .cli{
     background:var(--ink); border:1.5px solid var(--ink); border-radius:6px;
-    padding:22px 24px; font-family:var(--mono); font-size:13px; color:#f2e9d8;
-    overflow-x:auto; box-shadow:4px 4px 0 rgba(35,24,12,.2);
+    padding:22px 24px; font-family:var(--mono); font-size:13px; color:#eef3f9;
+    overflow-x:auto; box-shadow:4px 4px 0 rgba(22,39,58,.18);
   }
-  .cli .c1{color:#8d7c60;}
-  .cli .c2{color:#e8b56a;}
+  .cli .c1{color:#5f7f9c;}
+  .cli .c2{color:#7fc0f0;}
 
   /* STEPS */
   .steps{counter-reset:step; display:grid; gap:20px;}
@@ -228,7 +239,7 @@
   @media(max-width:560px){.shots{grid-template-columns:1fr;}}
   .shot{
     background:var(--paper); border:1.5px solid var(--ink); border-radius:6px; overflow:hidden;
-    box-shadow:3px 3px 0 rgba(35,24,12,.14);
+    box-shadow:3px 3px 0 rgba(22,39,58,.12);
   }
   .shot .frame{position:relative; overflow:hidden; border-bottom:1.5px solid var(--ink);}
   .shot img{width:100%; height:auto; display:block; cursor:zoom-in; transition:transform .35s ease;}
@@ -245,7 +256,7 @@
   /* LIGHTBOX */
   .lightbox{
     display:none; position:fixed; inset:0; z-index:300;
-    background:rgba(20,14,8,.92);
+    background:rgba(10,20,32,.92);
     overflow:auto; text-align:center; padding:56px 24px;
     cursor:zoom-out;
   }
@@ -259,20 +270,20 @@
     position:fixed; top:20px; right:26px; z-index:301;
     width:42px; height:42px; border-radius:50%;
     background:rgba(255,255,255,.1); border:1.5px solid rgba(255,255,255,.35);
-    color:#f2e9d8; font-size:19px; line-height:1; cursor:pointer;
+    color:#eef3f9; font-size:19px; line-height:1; cursor:pointer;
     display:flex; align-items:center; justify-content:center;
   }
   .lightbox-close:hover{background:rgba(255,255,255,.2);}
   .lightbox-hint{
     position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
-    font-family:var(--mono); font-size:11.5px; color:#c9bda3; z-index:301;
+    font-family:var(--mono); font-size:11.5px; color:#a9c7de; z-index:301;
     background:rgba(0,0,0,.3); padding:5px 12px; border-radius:20px;
   }
 
   /* FAQ */
   details{
     border:1.5px solid var(--ink); border-radius:6px; padding:18px 20px; margin-bottom:12px;
-    background:var(--paper); box-shadow:2px 2px 0 rgba(35,24,12,.1);
+    background:var(--paper); box-shadow:2px 2px 0 rgba(22,39,58,.09);
   }
   summary{cursor:pointer; font-weight:600; font-size:15px; list-style:none; display:flex; justify-content:space-between; align-items:center; font-family:var(--display);}
   summary::-webkit-details-marker{display:none;}
@@ -292,7 +303,7 @@
 
 <header>
   <nav>
-    <a href="#" class="brand" style="text-decoration: none;"><span class="pin-mark"></span>Desktop Icon Backup Manager</a>
+    <a href="#" class="brand" style="text-decoration: none;">Desktop Icon Backup Manager</a>
     <div class="navlinks">
       <a href="#problem">The problem</a>
       <a href="#features">Features</a>
@@ -313,6 +324,7 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
+      <div class="wordmark">Desktop Icon Backup Manager</div>
       <span class="eyebrow">Windows 7 · 8 · 10 · 11, free &amp; open source</span>
       <h1>Pin your icons down. <em>For good.</em></h1>
       <p class="lead">Windows keeps knocking your desktop icons out of place: after an update, a resolution change, a monitor swap. This tool remembers exactly where everything goes, and shows you what's about to move before it moves.</p>
@@ -353,7 +365,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">The problem</span>
-      <h2>A Windows bug that's outlived four major versions</h2>
+      <h2><img src="icon.png" class="h2-icon" alt=""><span>A Windows bug that's outlived four major versions</span></h2>
       <p>Icons rearrange themselves in a handful of very ordinary situations, and putting them back by hand gets old the second time it happens.</p>
     </div>
     <div class="triggers">
@@ -373,7 +385,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Core features</span>
-      <h2>More than a save button</h2>
+      <h2><img src="icon.png" class="h2-icon" alt=""><span>More than a save button</span></h2>
       <p>A few things here, like the live diff preview and cross-backup comparison, you won't find in comparable tools.</p>
     </div>
     <div class="feature-grid">
@@ -402,7 +414,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Comparison</span>
-      <h2>How it stacks up</h2>
+      <h2><img src="icon.png" class="h2-icon" alt=""><span>How it stacks up</span></h2>
     </div>
     <div class="table-wrap">
       <table>
@@ -427,16 +439,16 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Screenshots</span>
-      <h2>What it looks like</h2>
+      <h2><img src="icon.png" class="h2-icon" alt=""><span>What it looks like</span></h2>
       <p>Click any image to open it at full, actual-pixel size.</p>
     </div>
     <div class="shots">
-      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_1.png" alt="Desktop Icon Backup Manager main window" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Main window</b>: save or restore your layout in one click</div></div>
-      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_2.png" alt="Backup Manager window with search and live diff preview" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Backup Manager</b>: browse history, search by tag, preview the diff</div></div>
-      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_4.png" alt="Dark mode with Italian language and multi-monitor support" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Dark mode</b>: full multi-language support, shown here in Italian</div></div>
-      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_5.png" alt="Comparison results between two saved desktop layouts" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Backup comparison</b>: added, removed, and moved icons between two snapshots</div></div>
-      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_6.png" alt="Restore confirmation dialog" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Restore confirmation</b>: always confirms before applying changes</div></div>
-      <div class="shot"><div class="frame"><img src="https://github.com/mapi68/desktop-icon-backup-manager/raw/master/images/DIBM_7.png" alt="Statistics dashboard" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Statistics dashboard</b>: backups, restores, disk usage, activity over time</div></div>
+      <div class="shot"><div class="frame"><img src="images/DIBM_1.png" alt="Desktop Icon Backup Manager main window" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Main window</b>: save or restore your layout in one click</div></div>
+      <div class="shot"><div class="frame"><img src="images/DIBM_2.png" alt="Backup Manager window with search and live diff preview" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Backup Manager</b>: browse history, search by tag, preview the diff</div></div>
+      <div class="shot"><div class="frame"><img src="images/DIBM_4.png" alt="Dark mode with Italian language and multi-monitor support" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Dark mode</b>: full multi-language support, shown here in Italian</div></div>
+      <div class="shot"><div class="frame"><img src="images/DIBM_5.png" alt="Comparison results between two saved desktop layouts" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Backup comparison</b>: added, removed, and moved icons between two snapshots</div></div>
+      <div class="shot"><div class="frame"><img src="images/DIBM_6.png" alt="Restore confirmation dialog" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Restore confirmation</b>: always confirms before applying changes</div></div>
+      <div class="shot"><div class="frame"><img src="images/DIBM_7.png" alt="Statistics dashboard" loading="lazy" onclick="openLightbox(this.src, this.alt)"><span class="zoom-badge">click to enlarge</span></div><div class="cap"><b>Statistics dashboard</b>: backups, restores, disk usage, activity over time</div></div>
     </div>
   </div>
 </section>
@@ -447,7 +459,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Get started</span>
-      <h2>Up and running in under a minute</h2>
+      <h2><img src="icon.png" class="h2-icon" alt=""><span>Up and running in under a minute</span></h2>
       <p>No installation, no external dependencies for the executable.</p>
     </div>
     <div class="steps" style="margin-bottom:40px;">
@@ -466,7 +478,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">FAQ</span>
-      <h2>Before you start</h2>
+      <h2><img src="icon.png" class="h2-icon" alt=""><span>Before you start</span></h2>
     </div>
     <details>
       <summary>Why do my desktop icons keep moving in Windows 11?</summary>

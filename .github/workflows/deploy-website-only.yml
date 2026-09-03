@@ -29,8 +29,10 @@ jobs:
 
       - name: Prepare Pages folder
         run: |
-          mkdir -p _site
+          mkdir -p _site/images
           cp -r web/* _site/
+          cp icon.png icon.ico _site/
+          cp images/* _site/images/
 
       - name: Download the currently published manual.pdf
         run: |
