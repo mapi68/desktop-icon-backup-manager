@@ -179,7 +179,10 @@
   .section-head h2{font-size:clamp(26px,3.6vw,36px); display:flex; align-items:flex-start; gap:14px;}
   .section-head h2 span{white-space:nowrap;}
   .h2-icon{width:34px; height:34px; border-radius:8px; flex-shrink:0; margin-top:6px;}
-  @media(max-width:640px){.section-head h2{font-size:clamp(19px,5.6vw,26px);}}
+  @media(max-width:640px){
+    .section-head h2{font-size:clamp(22px,6vw,26px);}
+    .section-head h2 span{white-space:normal;}
+  }
   .section-head p{color:var(--ink-dim); margin-top:14px; font-size:16px;}
 
   /* TRIGGERS */
