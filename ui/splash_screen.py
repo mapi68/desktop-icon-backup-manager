@@ -195,7 +195,7 @@ class SplashScreen(QSplashScreen):
         p.drawText(
             QRect(col_w, meta_y + 16, col_w, 17),
             Qt.AlignmentFlag.AlignHCenter,
-            "mapi68",
+            "Massimo Pissarello",
         )
 
         # 11. Loading

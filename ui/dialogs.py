@@ -90,7 +90,7 @@ def show_about_dialog(window):
         ),
         (
             QCoreApplication.translate("MainWindow", "Development:"),
-            "mapi68",
+            "Massimo Pissarello",
             "palette(text)",
         ),
     ]:
