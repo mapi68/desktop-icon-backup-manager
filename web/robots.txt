@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mapi68.github.io/desktop-icon-backup-manager/sitemap.xml

@@ -3,8 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Desktop Icon Backup Manager: pin your desktop in place</title>
+<title>Desktop Icon Backup Manager: save and restore desktop icon layout</title>
 <meta name="description" content="Save, compare, and restore Windows desktop icon layouts. Live diff preview, adaptive scaling, multi-monitor support. Free and open source.">
+<link rel="canonical" href="https://mapi68.github.io/desktop-icon-backup-manager/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#2f6fb0">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Desktop Icon Backup Manager">
+<meta property="og:title" content="Desktop Icon Backup Manager: save and restore desktop icon layout">
+<meta property="og:description" content="Stop Windows from moving your desktop icons. Save, compare and restore layouts with live diff preview and multi-monitor support. Free and open source.">
+<meta property="og:url" content="https://mapi68.github.io/desktop-icon-backup-manager/">
+<meta property="og:image" content="https://mapi68.github.io/desktop-icon-backup-manager/images/DIBM_1.png">
+<meta property="og:image:alt" content="Desktop Icon Backup Manager main window">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Desktop Icon Backup Manager: save and restore desktop icon layout">
+<meta name="twitter:description" content="Stop Windows from moving your desktop icons. Free and open source.">
+<meta name="twitter:image" content="https://mapi68.github.io/desktop-icon-backup-manager/images/DIBM_1.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Desktop Icon Backup Manager",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Windows 7, Windows 8, Windows 10, Windows 11",
+      "description": "Save, compare, and restore Windows desktop icon layouts. Live diff preview, adaptive scaling, multi-monitor support.",
+      "url": "https://mapi68.github.io/desktop-icon-backup-manager/",
+      "image": "https://mapi68.github.io/desktop-icon-backup-manager/images/DIBM_1.png",
+      "downloadUrl": "https://github.com/mapi68/desktop-icon-backup-manager/releases/latest",
+      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "isAccessibleForFree": true,
+      "inLanguage": ["en", "it", "de", "fr", "es"],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do my desktop icons keep moving in Windows 11?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It's a long-standing Windows bug Microsoft has never fixed, present from Windows 7 through the latest Windows 11 builds. Windows silently changes screen resolution when you connect a monitor, launch a game, or wake from sleep, and that scrambles icon positions." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it really free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely free, GPLv3 licensed. No ads, no telemetry, no required accounts." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it handle multiple monitors and different resolutions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, every backup records the full monitor configuration. Restoring on a different setup triggers a warning, and adaptive scaling recalculates positions proportionally when enabled." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I automate backups?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, via the command line (--backup --silent), which plugs into Windows Task Scheduler for an automatic backup on every login." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will antivirus software flag it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Some antivirus tools flag programs that interact with Explorer's memory, even when using only standard Windows APIs. The full source code is public on GitHub for independent verification." }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="icon" type="image/x-icon" href="icon.ico">
 <link rel="icon" type="image/png" sizes="1024x1024" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
@@ -330,7 +397,7 @@
       <div class="wordmark">Desktop Icon Backup Manager</div>
       <span class="eyebrow">Windows 7 · 8 · 10 · 11, free &amp; open source</span>
       <h1>Pin your icons down. <em>For good.</em></h1>
-      <p class="lead">Windows keeps knocking your desktop icons out of place: after an update, a resolution change, a monitor swap. This tool remembers exactly where everything goes, and shows you what's about to move before it moves.</p>
+      <p class="lead">Windows keeps knocking your desktop icons out of place: after an update, a resolution change, a monitor swap. This free tool lets you back up and restore your Windows desktop icon layout, and shows you what's about to move before it moves.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="https://github.com/mapi68/desktop-icon-backup-manager/releases/latest">↓ Download latest release</a>
         <a class="btn btn-ghost" href="https://mapi68.github.io/desktop-icon-backup-manager/manual.pdf">User manual (PDF)</a>
