@@ -361,6 +361,14 @@
   details[open] summary::after{content:'−';}
   details p{margin-top:13px; color:var(--ink-dim); font-size:14.5px; font-family:var(--body);}
 
+
+  /* AUTHOR */
+  .author{display:flex; align-items:center; gap:22px; max-width:640px; margin:0 auto 26px; text-align:left;}
+  .author img{width:120px; height:auto; flex-shrink:0; filter:drop-shadow(3px 4px 4px rgba(22,39,58,.22));}
+  .author-text p{font-family:var(--body); font-size:14.5px; color:var(--ink-dim);}
+  .author-text b{color:var(--ink); font-family:var(--display);}
+  @media(max-width:560px){.author{flex-direction:column; text-align:center;}}
+
   /* FOOTER */
   footer{padding:50px 0 60px; text-align:center;}
   footer p{color:var(--ink-dim); font-size:13px; font-family:var(--mono);}
@@ -575,6 +583,12 @@
 
 <footer>
   <div class="wrap">
+    <div class="author">
+      <img src="images/avatar.png" width="120" height="113" alt="Tux the penguin playing the piano, avatar of Massimo Pissarello" loading="lazy">
+      <div class="author-text">
+        <p><b>Hi, I'm Massimo Pissarello</b> (mapi68). I'm the developer behind Desktop Icon Backup Manager. It's free, open source and ad-free, and I keep it that way on purpose. If it saves you from rearranging your icons one more time, a coffee on Ko-fi is always appreciated.</p>
+      </div>
+    </div>
     <a href="https://ko-fi.com/mapi68" target="_blank" rel="noopener" style="display:inline-block; margin-bottom:18px; border-bottom:none;">
       <img src="https://img.shields.io/badge/Ko--fi-Buy_me_a_coffee-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white&labelColor=0D1117" alt="Buy me a coffee on Ko-fi" style="display:inline-block; width:auto; max-width:none;">
     </a>
